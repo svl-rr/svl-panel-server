@@ -1,0 +1,18 @@
+{
+  "author": "DRF",
+  "name": "fun",
+  "description": "fun-stuff",
+  "version": "0.0.1",
+  "repository": {
+    "url": ""
+  },
+  "engines": {
+    "node": "~0.6.8"
+  },
+  "dependencies": {
+	"connect": ">= 1.8.5",
+	"socket.io": ">=0.8.7"
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
