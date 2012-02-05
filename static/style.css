@@ -1,4 +1,15 @@
 body {background: #fdfdfd}
-div.logo {content:url("logo.png");}
-.closed {content:url("closed.png");}
-.thrown {content:url("thrown.png");}
+
+div.logo {height:100px; width:181px; padding:0; margin:0; overflow:hidden;}
+div.logo:before {content: url("whitesvl.png"); display:inline-block; font-size:0; line-height:0;}
+
+.closed {height:129px; width:350px; padding:0; margin:0; overflow:hidden;}
+.closed:before {content: url("closed.png"); display:inline-block; font-size:0; line-height:0;}
+
+.thrown {height:129px; width:350px; padding:0; margin:0; overflow:hidden;}
+.thrown:before {content: url("thrown.png"); display:inline-block; font-size:0; line-height:0;}
+
+.on {display:inline-block;}
+.off {display:none;}
+
+.light {background-image:url('holder.png'); background-repeat:no-repeat;}

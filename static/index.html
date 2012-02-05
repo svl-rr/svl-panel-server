@@ -6,17 +6,27 @@
 	<link rel="stylesheet" href="style.css" type="text/css">
 	<script src="/socket.io/socket.io.js"></script>
 	<script src="http://code.jquery.com/jquery.min.js"></script>
+
+	<style type="text/css">
+	#i1 {position:absolute; left: 600px; top: 100px;}
+	#h1 {position:absolute; left: 600px; top: 100px;}
+	</style>
+
 </head>
-<body>
+<body style="background: #444">
 
-<div class="logo">Silicon Valley Lines</div>
-<div class="turnout thrown">thrown</div>
-<div class="turnout closed">closed</div>
-<div class="turnout thrown" style="-webkit-transform: scaleX(-1);">another</div>
+<div class="logo" width="200" height="100">Silicon Valley Lines</div>
+<div class="turnout thrown"">fnord</div>
+<div class="turnout closed">fnord</div>
+<div class="turnout thrown" style="-webkit-transform: scaleX(-1);">fnord</div>
 
-<p>Hello, World.</p>
- 
+<div class="light" width="100" height="80">
+	<img id='h1' src="holder.png" alt="" />
+	<img id='i1' class="on" src="light.png" alt="" />
+</div>
+
 <script>
+	
 	$(document).ready(function() {
 		var socket = io.connect();
 		
@@ -31,6 +41,11 @@
 		$("div.turnout").click(function(event) {
 			var $target = $(event.target);
 			$target.toggleClass("thrown closed");
+			event.preventDefault();
+		});
+
+		$("div.logo").click(function(event) {
+			$("#i1").toggleClass("on off");
 			event.preventDefault();
 		});
 
