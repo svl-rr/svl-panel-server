@@ -40,7 +40,7 @@ $(document).ready(function() {
 	socket.on('update', function (data) {
 		console.log('UPDATE');
 		for (i in data) {
-			SetItemState(data[i]["name"],data[i]["state"]);
+			SetItemState(data[i]["name"],data[i]["value"]);
 		}
 	});
 
@@ -49,14 +49,14 @@ $(document).ready(function() {
 		var $target = $(event.target);
 		$target.toggleClass("thrown closed");
 		var newState = $target.hasClass('thrown') ? 'thrown' : 'closed';
-		socket.emit('set',[{name:event.target.id, state:newState}]);
+		socket.emit('set',[{name:event.target.id, value:newState}]);
 	});
 
 	$(".logo").click(function(event) {
 		event.preventDefault();
 		$("#i1").toggleClass("on off");
 		var newState = $('#i1').hasClass('on') ? 'on' : 'off';
-		socket.emit('set',[{ name:'i1', state:newState}]);
+		socket.emit('set',[{ name:'i1', value:newState}]);
 	});
 
 	$("#get-button").click(function () {

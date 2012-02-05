@@ -38,9 +38,10 @@ function ProcessSetCommand(data) {
 //	console.log("ProcessSetCommand");
 
 	for (i in data) {
-//		console.log(i + ": " + data[i].name + ' ' + data[i].state);
+//		console.log(i + ": " + data[i].name + ' ' + data[i].value);
 //		NOTE: Probably want to validate parameters before setting state
-		globalDataArray[data[i].name] = data[i].state;
+
+		globalDataArray[data[i].name] = data[i].value;
 	}
 	
 //	console.log("updated globalDataArray is:");
@@ -57,7 +58,7 @@ function ProcessGetCommand(data) {
 	
 	for (i in data) {
 //		console.log(i + ": " + data[i].name,globalDataArray[data[i].name]);
-		responseData.push({name:data[i].name,state:globalDataArray[data[i].name]});
+		responseData.push({name:data[i].name,value:globalDataArray[data[i].name]});
 	}
 
 	return responseData;
