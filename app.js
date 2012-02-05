@@ -40,14 +40,13 @@ var io = require('socket.io').listen(server)
 //	.set('log level', 1)
 	io.sockets.on('connection', function(socket) {
 		console.log('client connected');
-		socket.send('greetings');
 	
 		// log any informational message sent by clients
 		socket.on('message',function(message) {
 			console.log('CLIENT:' + message);
 		});
 	
-		// process the command and broadcast update to all other
+		// process the command and broadcast updates to all other clients
 		socket.on('set',function(data) {
 			socket.broadcast.emit('update',dataHandler.ProcessSetCommand(data));
 		});

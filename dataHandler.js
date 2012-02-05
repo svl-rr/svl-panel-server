@@ -21,14 +21,46 @@
 // ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
+// Keeping with a minimalist approach for now. All tracked state is kept in an
+// associative array— eventually, we'll probably want to create a more robust
+// data storage system, but for now we're going to limp along with a simple array
+// of named items.
+
+var globalDataArray = [];
+
+globalDataArray["i1"]="off";
+globalDataArray["t100"]="closed";
+globalDataArray["t101"]="closed";
+globalDataArray["t102"]="closed";
+
 function ProcessSetCommand(data) {
-	console.log("ProcessSetCommand");
+//	console.log("ProcessSetCommand");
+
+	for (i in data) {
+//		console.log(i + ": " + data[i].name + ' ' + data[i].state);
+//		NOTE: Probably want to validate parameters before setting state
+		globalDataArray[data[i].name] = data[i].state;
+	}
+	
+//	console.log("updated globalDataArray is:");
+//	for (i in globalDataArray) {
+//		console.log(i + ": " + globalDataArray[i]);
+//	}
 	return data;
 }
 
 function ProcessGetCommand(data) {
-	console.log("ProcessGetCommand");
-	return data;
+//	console.log("ProcessGetCommand");
+
+	var changedState = [];
+	
+	for (i in data) {
+//		console.log(i + ": " + data[i].name,globalDataArray[data[i].name]);
+		changedState.push({name:data[i].name,state:globalDataArray[data[i].name]});
+	}
+
+	return changedState;
 }
 
 exports.ProcessSetCommand = ProcessSetCommand;
