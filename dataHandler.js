@@ -53,14 +53,14 @@ function ProcessSetCommand(data) {
 function ProcessGetCommand(data) {
 //	console.log("ProcessGetCommand");
 
-	var changedState = [];
+	var responseData = [];
 	
 	for (i in data) {
 //		console.log(i + ": " + data[i].name,globalDataArray[data[i].name]);
-		changedState.push({name:data[i].name,state:globalDataArray[data[i].name]});
+		responseData.push({name:data[i].name,state:globalDataArray[data[i].name]});
 	}
 
-	return changedState;
+	return responseData;
 }
 
 exports.ProcessSetCommand = ProcessSetCommand;
