@@ -1,18 +1,25 @@
 {
-  "author": "DRF",
-  "name": "fun",
-  "description": "fun-stuff",
-  "version": "0.0.1",
+  "author": "Siicon Valley Lines Model Railroad Club",
+  "name": "PanelServer",
+  "description": "Silicon Valley Lines Control Panel Server",
+  "contributors": [ 
+    {
+      "name": "Dave Falkenburg",
+      "email": "railnerd@me.com"
+    } 
+  ],
+  "version": "0.0.2",
   "repository": {
     "url": ""
-  },
-  "engines": {
-    "node": "~0.6.8"
   },
   "dependencies": {
 	"connect": "1.8.x",
 	"socket.io": "0.8.x"
   },
+  "license": "MIT",
   "devDependencies": {},
-  "optionalDependencies": {}
+  "optionalDependencies": {},
+  "engines": {
+    "node": "~0.6.8"
+  }
 }
