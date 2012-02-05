@@ -10,8 +10,8 @@
     "node": "~0.6.8"
   },
   "dependencies": {
-	"connect": ">= 1.8.5",
-	"socket.io": ">=0.8.7"
+	"connect": "1.8.x",
+	"socket.io": "0.8.x"
   },
   "devDependencies": {},
   "optionalDependencies": {}

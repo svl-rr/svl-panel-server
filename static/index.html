@@ -16,9 +16,9 @@
 <body style="background: #444">
 
 <div class="logo" width="200" height="100">Silicon Valley Lines</div>
-<div class="turnout thrown"">fnord</div>
-<div class="turnout closed">fnord</div>
-<div class="turnout thrown" style="-webkit-transform: scaleX(-1);">fnord</div>
+<div id="t100" class="turnout thrown"">fnord</div>
+<div id="t101" class="turnout closed">fnord</div>
+<div id="t102" class="turnout thrown" style="-webkit-transform: scaleX(-1); -moz-transform: scaleX(-1);">fnord</div>
 
 <div class="light" width="100" height="80">
 	<img id='h1' src="holder.png" alt="" />
@@ -32,6 +32,11 @@
 		
 		socket.on('connect', function () {
 			console.log("connected");
+			socket.send('hello');
+		});
+
+		socket.on('message', function (data) {
+			console.log(data);
 		});
 
 		socket.on('disconnect', function () {
@@ -39,14 +44,17 @@
 		});
 
 		$("div.turnout").click(function(event) {
+			event.preventDefault();
 			var $target = $(event.target);
 			$target.toggleClass("thrown closed");
-			event.preventDefault();
+			console.log(event.target.id);
+			socket.emit('set',{name:event.target.id, state:$target.hasClass('thrown')});
 		});
 
 		$("div.logo").click(function(event) {
-			$("#i1").toggleClass("on off");
 			event.preventDefault();
+			$("#i1").toggleClass("on off");
+    		socket.emit('set', { name:'i1', state:$('#i1').hasClass('on') });
 		});
 
 	});
