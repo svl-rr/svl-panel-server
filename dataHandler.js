@@ -30,25 +30,25 @@
 var globalDataArray = [];
 
 exports.ProcessSetCommand = function ProcessSetCommand(data) {
-//	console.log("ProcessSetCommand");
+	var changedData = [];
 
 	for (i in data) {
-//		console.log(i + ": " + data[i].name + ' ' + data[i].value);
+
 //		NOTE: Probably want to validate parameters before setting state
 
-		globalDataArray[data[i].name] = data[i].value;
+		if ((globalDataArray[data[i].name] === undefined) ||
+			(globalDataArray[data[i].name] !== data[i].value)) {
+//			console.log("setting new value for "+ data[i].name + " := " + data[i].value);
+
+			globalDataArray[data[i].name] = data[i].value;
+			changedData.push(data[i]);
+		}
 	}
-	
-//	console.log("updated globalDataArray is:");
-//	for (i in globalDataArray) {
-//		console.log(i + ": " + globalDataArray[i]);
-//	}
-	return data;
+
+	return changedData;
 }
 
 exports.ProcessGetCommand = function ProcessGetCommand(data) {
-//	console.log("ProcessGetCommand");
-
 	var responseData = [];
 	
 	for (i in data) {

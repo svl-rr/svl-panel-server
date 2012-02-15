@@ -48,7 +48,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		var $target = $(event.target);
 		var newState = $target.hasClass('thrown') ? 'closed' : 'thrown';
-		socket.emit('set',[{name:event.target.id, value:newState}]);
+		socket.emit('set',[{type:'turnout', name:event.target.id, value:newState}]);
 	});
 
 	$(".logo").click(function(event) {
