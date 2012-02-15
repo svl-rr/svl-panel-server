@@ -29,16 +29,16 @@
 
 var globalDataArray = [];
 
+
+
 exports.ProcessSetCommand = function ProcessSetCommand(data) {
 	var changedData = [];
 
 	for (i in data) {
 
-//		NOTE: Probably want to validate parameters before setting state
-
-		if ((globalDataArray[data[i].name] === undefined) ||
-			(globalDataArray[data[i].name] !== data[i].value)) {
-//			console.log("setting new value for "+ data[i].name + " := " + data[i].value);
+		if (	(SetDataItemIsValid(data[i])) &&
+				(globalDataArray[data[i].name] === undefined) ||
+				(globalDataArray[data[i].name] !== data[i].value)	)	{
 
 			globalDataArray[data[i].name] = data[i].value;
 			changedData.push(data[i]);
@@ -47,6 +47,7 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 
 	return changedData;
 }
+
 
 exports.ProcessGetCommand = function ProcessGetCommand(data) {
 	var responseData = [];
@@ -57,4 +58,9 @@ exports.ProcessGetCommand = function ProcessGetCommand(data) {
 	}
 
 	return responseData;
+}
+
+
+function SetDataItemIsValid(data) {
+	return true;
 }
