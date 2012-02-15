@@ -29,12 +29,7 @@
 
 var globalDataArray = [];
 
-globalDataArray["i1"]="off";
-globalDataArray["t100"]="closed";
-globalDataArray["t101"]="closed";
-globalDataArray["t102"]="closed";
-
-function ProcessSetCommand(data) {
+exports.ProcessSetCommand = function ProcessSetCommand(data) {
 //	console.log("ProcessSetCommand");
 
 	for (i in data) {
@@ -51,7 +46,7 @@ function ProcessSetCommand(data) {
 	return data;
 }
 
-function ProcessGetCommand(data) {
+exports.ProcessGetCommand = function ProcessGetCommand(data) {
 //	console.log("ProcessGetCommand");
 
 	var responseData = [];
@@ -63,6 +58,3 @@ function ProcessGetCommand(data) {
 
 	return responseData;
 }
-
-exports.ProcessSetCommand = ProcessSetCommand;
-exports.ProcessGetCommand = ProcessGetCommand;
