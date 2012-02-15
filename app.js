@@ -48,7 +48,9 @@ var io = require('socket.io').listen(server)
 	
 		// process the command and broadcast updates to all other clients
 		socket.on('set',function(data) {
-			socket.broadcast.emit('update',dataHandler.ProcessSetCommand(data));
+			var changedState = dataHandler.ProcessSetCommand(data);
+			socket.broadcast.emit('update',changedState);
+			socket.emit('update',changedState);
 		});
 	
 		// reply to sender with response to query of existing state

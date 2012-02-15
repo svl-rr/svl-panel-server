@@ -47,8 +47,7 @@ $(document).ready(function() {
 	$(".turnout").click(function(event) {
 		event.preventDefault();
 		var $target = $(event.target);
-		$target.toggleClass("thrown closed");
-		var newState = $target.hasClass('thrown') ? 'thrown' : 'closed';
+		var newState = $target.hasClass('thrown') ? 'closed' : 'thrown';
 		socket.emit('set',[{name:event.target.id, value:newState}]);
 	});
 
