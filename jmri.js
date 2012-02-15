@@ -24,7 +24,7 @@
 var http = require('http');
 var parser = require('xml2json');
 
-function xmlioRequest(host,port,parms,callback) {
+exports.xmlioRequest = function xmlioRequest(host,port,parms,callback) {
 
 	var postData = parser.toXml(parms);
 	var postOptions = {
@@ -64,5 +64,3 @@ function xmlioRequest(host,port,parms,callback) {
 	req.write(postData);
 	req.end();
 }
-
-exports.xmlioRequest = xmlioRequest;
