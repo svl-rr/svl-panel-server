@@ -29,19 +29,31 @@
 
 var globalDataArray = [];
 
-
+var jmri = require('./jmri');
 
 exports.ProcessSetCommand = function ProcessSetCommand(data) {
 	var changedData = [];
 
 	for (i in data) {
 
-		if (	(SetDataItemIsValid(data[i])) &&
-				(globalDataArray[data[i].name] === undefined) ||
-				(globalDataArray[data[i].name] !== data[i].value)	)	{
+		if ((SetDataItemIsValid(data[i])) &&
+			(globalDataArray[data[i].name] === undefined) ||
+			(globalDataArray[data[i].name] !== data[i].value))	{
 
 			globalDataArray[data[i].name] = data[i].value;
 			changedData.push(data[i]);
+			
+			switch (data[i].type) {
+				case 'turnout':
+					var turnoutState = (data[i].value === "thrown") ? 4 : 2;
+					jmri.xmlioRequest('127.0.0.1',12080,"<xmlio><turnout name='"+data[i].name+"' set='"+turnoutState+"' /></xmlio>",function (response) {
+						console.log('got '+ response);
+	                });
+					break;
+
+				default:
+					break;
+			}
 		}
 	}
 
