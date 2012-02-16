@@ -43,18 +43,28 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 			globalDataArray[data[i].name] = data[i].value;
 			changedData.push(data[i]);
 			
-			switch (data[i].type) {
+		}
+	}
+
+	if (changedData.length > 0) {
+		var xmlRequest = "<xmlio>"
+		for (i in changedData) {
+			switch (changedData[i].type) {
 				case 'turnout':
-					var turnoutState = (data[i].value === "thrown") ? 4 : 2;
-					jmri.xmlioRequest('127.0.0.1',12080,"<xmlio><turnout name='"+data[i].name+"' set='"+turnoutState+"' /></xmlio>",function (response) {
-						console.log('got '+ response);
-	                });
+					var turnoutState = (changedData[i].value === "thrown") ? 4 : 2;
+					xmlRequest += "<turnout name='"+changedData[i].name+"' set='"+turnoutState+"' />"
 					break;
 
 				default:
 					break;
 			}
 		}
+		xmlRequest += "</xmlio>"
+		
+		console.log("JMRI REQUEST: "+xmlRequest);
+		jmri.xmlioRequest('127.0.0.1',12080,xmlRequest,function (response) {
+			console.log('JMRI RESPONSE: '+ response);
+		});
 	}
 
 	return changedData;

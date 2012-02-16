@@ -22,7 +22,6 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var http = require('http');
-var parser = require('xml2json');
 
 exports.xmlioRequest = function xmlioRequest(host,port,xml,callback) {
 
@@ -47,11 +46,8 @@ exports.xmlioRequest = function xmlioRequest(host,port,xml,callback) {
 	  });
   
 	  res.on('end',function () {
-		var jsonData = parser.toJson(responseXML.toString());
-		console.log(responseXML.toString());
-		console.log(jsonData);
 		if (typeof(callback) == 'function') {
-			callback(jsonData);
+			callback(responseXML.toString());
 		}
 	  });
 	});
