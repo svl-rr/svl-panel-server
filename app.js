@@ -58,3 +58,7 @@ var io = require('socket.io').listen(server)
 			socket.emit('update',dataHandler.ProcessGetCommand(data));
 		});
 	});
+
+dataHandler.trackLayoutState(function (response) {
+	console.log("JMRI state updated.");
+});

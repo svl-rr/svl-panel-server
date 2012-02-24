@@ -31,6 +31,24 @@ var globalDataArray = [];
 
 var jmri = require('./jmri');
 
+// Some work-in-progress routine to track JMRI state changes
+exports.trackLayoutState = function trackLayoutState(callback)
+{
+	function handleResponse(response,callback) {
+		// update and/or initialize global layout state
+		callback(response);
+		// re-queue request with new response state
+		jmri.xmlioRequest('127.0.0.1',12080,response,function (newResponse) {
+			handleResponse(newResponse,callback)
+			});
+	}
+
+	// request initial state from JMRI
+	jmri.getInitialState('127.0.0.1',12080,function (newResponse) {
+		handleResponse(newResponse,callback)
+	});
+}
+
 exports.ProcessSetCommand = function ProcessSetCommand(data) {
 	var changedData = [];
 
@@ -42,7 +60,6 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 
 			globalDataArray[data[i].name] = data[i].value;
 			changedData.push(data[i]);
-			
 		}
 	}
 
@@ -61,9 +78,7 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 		}
 		xmlRequest += "</xmlio>"
 		
-		console.log("JMRI REQUEST: "+xmlRequest);
 		jmri.xmlioRequest('127.0.0.1',12080,xmlRequest,function (response) {
-			console.log('JMRI RESPONSE: '+ response);
 		});
 	}
 
