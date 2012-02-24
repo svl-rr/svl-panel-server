@@ -33,19 +33,23 @@ var server = connect.createServer()
 	.use(connect.static(__dirname + '/static'))
 	.listen(3000)
 
+
+var	clients = [];
+
 var io = require('socket.io').listen(server)
 	.enable('browser client minification')
 	.enable('browser client etag')
 	.enable('browser client gzip')
 //	.set('log level', 1)
 	io.sockets.on('connection', function(socket) {
-		console.log('client connected');
+//		console.log('client connected:'+socket.id);
+		clients[socket.id] = socket;
 	
-		// log any informational message sent by clients
-		socket.on('message',function(message) {
-			console.log('CLIENT:' + message);
+		socket.on('disconnect',function() {
+//			console.log('client disconnected:'+socket.id);
+			delete clients[socket.id];
 		});
-	
+		
 		// process the command and broadcast updates to all other clients
 		socket.on('set',function(data) {
 			var changedState = dataHandler.ProcessSetCommand(data);
@@ -61,4 +65,7 @@ var io = require('socket.io').listen(server)
 
 dataHandler.trackLayoutState(function (response) {
 	console.log("JMRI state updated.");
+	for (var i in clients) {
+//		clients[i].emit('update',...);
+	}
 });
