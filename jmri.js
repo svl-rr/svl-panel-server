@@ -46,7 +46,7 @@ exports.xmlioRequest = function xmlioRequest(host,port,xml,callback) {
 	  });
   
 	  res.on('end',function () {
-	  	console.log('JMRI RESPONSE: '+ responseXML);
+//	  	console.log('JMRI RESPONSE: '+ responseXML);
 		if (typeof(callback) == 'function') {
 			callback(responseXML.toString());
 		}
@@ -57,15 +57,13 @@ exports.xmlioRequest = function xmlioRequest(host,port,xml,callback) {
 	  console.log('problem with request: ' + e.message);
 	});
 	
-	console.log("JMRI REQUEST: "+postData);
+//	console.log("JMRI REQUEST: "+postData);
 	req.write(postData);
 	req.end();
 }
 
 
 exports.getInitialState = function getInitialState(host,port,callback) {
-
 	var xml = "<xmlio><list><type>turnout</type></list><list><type>sensor</type></list></xmlio>"
-
-	xmlioRequest(host,port,xml,callback);
+	exports.xmlioRequest(host,port,xml,callback);
 }
