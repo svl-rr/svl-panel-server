@@ -52,7 +52,7 @@ exports.trackLayoutState = function trackLayoutState(callback)
 exports.ProcessSetCommand = function ProcessSetCommand(data) {
 	var changedData = [];
 
-	for (i in data) {
+	for (var i in data) {
 
 		if ((SetDataItemIsValid(data[i])) &&
 			(globalDataArray[data[i].name] === undefined) ||
@@ -65,7 +65,7 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 
 	if (changedData.length > 0) {
 		var xmlRequest = "<xmlio>"
-		for (i in changedData) {
+		for (var i in changedData) {
 			switch (changedData[i].type) {
 				case 'turnout':
 					var turnoutState = (changedData[i].value === "thrown") ? 4 : 2;
@@ -89,7 +89,7 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 exports.ProcessGetCommand = function ProcessGetCommand(data) {
 	var responseData = [];
 	
-	for (i in data) {
+	for (var i in data) {
 //		console.log(i + ": " + data[i].name,globalDataArray[data[i].name]);
 		responseData.push({name:data[i].name,value:globalDataArray[data[i].name]});
 	}
