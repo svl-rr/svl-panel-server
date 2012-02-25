@@ -21,6 +21,11 @@
 // ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+var util = require('util');
+var jmri = require('./jmri');
+xml2js = require("xml2js");
+var parser = new xml2js.Parser();
+
 
 // Keeping with a minimalist approach for now. All tracked state is kept in an
 // associative array— eventually, we'll probably want to create a more robust
@@ -29,14 +34,25 @@
 
 var globalDataArray = [];
 
-var jmri = require('./jmri');
 
-// Some work-in-progress routine to track JMRI state changes
+// trackLayoutState
+//
+// Establish a connection with the JMRI xmlio servlet to determine
+// the state of all sensors and turnouts. After collecting initial
+// state, this routine issues a new request back to the servlet which
+// will complete whenever there is a difference between the state passed
+// in and the previously returned layout state.
+
 exports.trackLayoutState = function trackLayoutState(callback)
 {
 	function handleResponse(response,callback) {
-		// update and/or initialize global layout state
-		callback(response);
+		// parse the xml response
+		parser.parseString(response, function (err, result) {
+			console.log(util.inspect(result, false, null));
+			// update global layout state
+			callback(result);
+		});
+
 		// re-queue request with new response state
 		jmri.xmlioRequest('127.0.0.1',12080,response,function (newResponse) {
 			handleResponse(newResponse,callback)
@@ -49,20 +65,29 @@ exports.trackLayoutState = function trackLayoutState(callback)
 	});
 }
 
+
+// ProcessSetCommand
+//
+// Handle the 'set' commands initiated by the the socket.io/websocket interface
+// NOTE: The code currently here to manipulate the global state array should be
+// moved elsewhere, as this is not the right place to be manipulating the state
+// once once we begin accepting changes from the JMRI xmlio servlet.
+
 exports.ProcessSetCommand = function ProcessSetCommand(data) {
 	var changedData = [];
 
 	for (var i in data) {
 
-		if ((SetDataItemIsValid(data[i])) &&
+		if ((DataItemIsValid(data[i])) &&
 			(globalDataArray[data[i].name] === undefined) ||
 			(globalDataArray[data[i].name] !== data[i].value))	{
-
+			
 			globalDataArray[data[i].name] = data[i].value;
 			changedData.push(data[i]);
 		}
 	}
-
+	
+	// Push turnout changes to JMRI
 	if (changedData.length > 0) {
 		var xmlRequest = "<xmlio>"
 		for (var i in changedData) {
@@ -71,20 +96,26 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 					var turnoutState = (changedData[i].value === "thrown") ? 4 : 2;
 					xmlRequest += "<turnout name='"+changedData[i].name+"' set='"+turnoutState+"' />"
 					break;
-
+					
 				default:
 					break;
 			}
 		}
 		xmlRequest += "</xmlio>"
 		
-		jmri.xmlioRequest('127.0.0.1',12080,xmlRequest,function (response) {
-		});
+		if (xmlRequest !== "<xmlio></xmlio>") {
+			jmri.xmlioRequest('127.0.0.1',12080,xmlRequest,function (response) {
+			});
+		}
 	}
-
 	return changedData;
 }
 
+
+// ProcessGetCommand
+//
+// Return the local state to clients. NOTE: For JMRI state, we most likely want to ask JMRI
+// This is currently a synchronous operation, so this may be tough.
 
 exports.ProcessGetCommand = function ProcessGetCommand(data) {
 	var responseData = [];
@@ -98,6 +129,10 @@ exports.ProcessGetCommand = function ProcessGetCommand(data) {
 }
 
 
-function SetDataItemIsValid(data) {
+// DataItemIsValid
+//
+// Check any get/set parameter for validity— for now we just are very agreeable.
+
+function DataItemIsValid(data) {
 	return true;
 }

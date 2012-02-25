@@ -22,19 +22,27 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var dataHandler = require('./dataHandler');
+var	clients = [];
+
+
+// Create an HTTP Server Using the connect framework. This server is
+// responsible for vending static content such as the HTML, JS, CSS,
+// and SVG which runs the user interface on client devices.
 
 var oneDay = 86400000;
-
 var connect = require('connect');
 var server = connect.createServer()
-	.use(connect.logger())
+//	.use(connect.logger())
 //	.use(connect.favicon(__dirname + '/static/favicon.ico'))
 //	.use(connect.static(__dirname + '/static'),{maxAge: oneDay})
 	.use(connect.static(__dirname + '/static'))
 	.listen(3000)
 
 
-var	clients = [];
+// Create a socket.io (websocket) server associated with the HTTP server.
+// Web-based clients will use this connection in order to determine layout
+// state and/or request changes. We need to track the connected clients
+// in order to deliver any out-of-band updates reported by JMRI.
 
 var io = require('socket.io').listen(server)
 	.enable('browser client minification')
@@ -42,11 +50,9 @@ var io = require('socket.io').listen(server)
 	.enable('browser client gzip')
 //	.set('log level', 1)
 	io.sockets.on('connection', function(socket) {
-//		console.log('client connected:'+socket.id);
 		clients[socket.id] = socket;
 	
 		socket.on('disconnect',function() {
-//			console.log('client disconnected:'+socket.id);
 			delete clients[socket.id];
 		});
 		
@@ -63,9 +69,14 @@ var io = require('socket.io').listen(server)
 		});
 	});
 
-dataHandler.trackLayoutState(function (response) {
-	console.log("JMRI state updated.");
+
+// Set up a callback for any unsolicited changes in layout state which don't
+// originate from the websocket interface. These will normally be sensor changes
+// caused by block occupancy detectors on the layout, but it can also be invoked
+// by other JMRI-invoked turnout changes.
+
+dataHandler.trackLayoutState(function (changedState) {
 	for (var i in clients) {
-//		clients[i].emit('update',...);
+//		clients[i].emit('update',changedState);
 	}
 });
