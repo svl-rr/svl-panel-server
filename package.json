@@ -14,7 +14,8 @@
   },
   "dependencies": {
 	"connect": "1.8.x",
-	"socket.io": "0.8.x"
+	"socket.io": "0.8.x",
+	"xml2js": "0.1.x"
   },
   "license": "MIT",
   "devDependencies": {},
