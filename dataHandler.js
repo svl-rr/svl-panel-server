@@ -128,13 +128,12 @@ exports.trackLayoutState = function trackLayoutState(callback)
 	
 		// Convert the xml response into JSON so we can deal
 		parser.parseString(response, function (err, result) {
+		
 			// Update our global state
 			var changedState = UpdateGlobalDataFromJMRI(result);
-			
-			if (changedState.length > 0) {
-				if (typeof(callback) == 'function') {
-					callback(changedState);
-				}
+
+			if (typeof(callback) == 'function') {
+				callback(changedState);
 			}
 		});
 		
