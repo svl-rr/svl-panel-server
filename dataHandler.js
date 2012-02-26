@@ -151,26 +151,32 @@ exports.trackLayoutState = function trackLayoutState(callback)
 // ProcessSetCommand
 //
 // Handle the 'set' commands initiated by the the socket.io/websocket interface
-//
-// NOTE: The code currently here to manipulate the global state array should be
-// moved elsewhere, as this is not the right place to be manipulating the state
-// once once we begin accepting changes from the JMRI xmlio servlet.
 
 exports.ProcessSetCommand = function ProcessSetCommand(data) {
 	var changedData = [];
 
+	// Update Global State from the client data
+	//
+	// NOTE: In order to avoid race conditions, we pay special attention to only
+	// deliver updates to JMRI items (e.g., turnouts) via the trackLayoutState
+	// callback mechanism.
+
 	for (var item in data) {
-		if (UpdateGlobalStateFromDataItem(data[item])) {
-			changedData.push(data[item]);
+		if (data[item].type !== 'turnout') {
+			if (UpdateGlobalStateFromDataItem(data[item])) {
+				changedData.push(data[item]);
+			}
 		}
 	}
 	
-	// Push turnout changes to JMRI via xmlioRequest
-	// NOTE: We don't care about the response here, because the other outstanding
-	// request issued in trackLayoutState will collect updates.
+	// Push all turnout changes to JMRI via xmlioRequest
+	//
+	// NOTE: We don't care about parsing the response here, because the other
+	// outstanding request issued in trackLayoutState will collect changes.
 	
 	if (data.length > 0) {
-		var xmlRequest = "<xmlio>"
+		var xmlRequest = '';
+		
 		for (var i in data) {
 			switch (data[i].type) {
 				case 'turnout':
@@ -182,10 +188,9 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 					break;
 			}
 		}
-		xmlRequest += "</xmlio>"
 		
-		if (xmlRequest !== "<xmlio></xmlio>") {
-			jmri.xmlioRequest('127.0.0.1',12080,xmlRequest,function (response) {
+		if (xmlRequest !== "") {
+			jmri.xmlioRequest('127.0.0.1',12080,"<xmlio>" + xmlRequest + "</xmlio>",function (response) {
 			});
 		}
 	}

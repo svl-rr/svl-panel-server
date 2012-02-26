@@ -48,7 +48,7 @@ var io = require('socket.io').listen(server)
 	.enable('browser client minification')
 	.enable('browser client etag')
 	.enable('browser client gzip')
-//	.set('log level', 1)
+	.set('log level', 1)
 	io.sockets.on('connection', function(socket) {
 		clients[socket.id] = socket;
 	
@@ -59,8 +59,10 @@ var io = require('socket.io').listen(server)
 		// process the command and broadcast updates to all other clients
 		socket.on('set',function(data) {
 			var changedState = dataHandler.ProcessSetCommand(data);
-			socket.broadcast.emit('update',changedState);
-			socket.emit('update',changedState);
+			if (changedState.length > 0) {
+				socket.broadcast.emit('update',changedState);
+				socket.emit('update',changedState);
+			}
 		});
 	
 		// reply to sender with response to query of existing state
@@ -76,7 +78,7 @@ var io = require('socket.io').listen(server)
 // by other JMRI-invoked turnout changes.
 
 dataHandler.trackLayoutState(function (changedState) {
-//	console.dir(changedState);
+///	console.log("result of trackLayoutState:"+JSON.stringify(changedState));
 	if (changedState.length > 0) {
 		for (var i in clients) {
 			clients[i].emit('update',changedState);
