@@ -74,7 +74,7 @@ var io = require('socket.io').listen(server)
 
 // Set up a callback for any unsolicited changes in layout state which don't
 // originate from the websocket interface. These will normally be sensor changes
-// caused by block occupancy detectors on the layout, but it can also be invoked
+// caused by block occupancy detectors on the layout, but it can also be triggered
 // by other JMRI-invoked turnout changes.
 
 dataHandler.trackLayoutState(function (changedState) {

@@ -125,22 +125,25 @@ function UpdateGlobalDataFromJMRI(response) {
 exports.trackLayoutState = function trackLayoutState(callback)
 {
 	function handleResponse(response,callback) {
-		// parse the xml response
+	
+		// Convert the xml response into JSON so we can deal
 		parser.parseString(response, function (err, result) {
-
+			// Update our global state
 			var changedState = UpdateGlobalDataFromJMRI(result);
 			
-			if (typeof(callback) == 'function') {
-				callback(changedState);
+			if (changedState.length > 0) {
+				if (typeof(callback) == 'function') {
+					callback(changedState);
+				}
 			}
 		});
-
+		
 		// re-queue request with new response state
 		jmri.xmlioRequest('127.0.0.1',12080,response,function (newResponse) {
 			handleResponse(newResponse,callback)
-			});
+		});
 	}
-
+	
 	// request initial state from JMRI
 	jmri.getInitialState('127.0.0.1',12080,function (newResponse) {
 		handleResponse(newResponse,callback)
