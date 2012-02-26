@@ -76,7 +76,10 @@ var io = require('socket.io').listen(server)
 // by other JMRI-invoked turnout changes.
 
 dataHandler.trackLayoutState(function (changedState) {
-	for (var i in clients) {
-//		clients[i].emit('update',changedState);
+	console.dir(changedState);
+	if (changedState.length > 0) {
+		for (var i in clients) {
+			clients[i].emit('update',changedState);
+		}
 	}
 });

@@ -35,6 +35,85 @@ var parser = new xml2js.Parser();
 var globalDataArray = [];
 
 
+// DataItemIsValid
+//
+// Check any get/set parameter for validity— for now we just are very agreeable.
+
+function DataItemIsValid(data) {
+	return true;
+}
+
+
+// UpdateGlobalStateFromDataItem
+//
+// Sanity check parameter and selectively update the database with new state
+// NOTE: We specifically do NOT update turnout state, as we rely on JMRI to
+// report turnout changes back via the xmlio servlet.
+
+function UpdateGlobalStateFromDataItem(item) {
+
+	if (!DataItemIsValid(item)) {
+		console.err("UpdateGlobalStateFromDataItem: bad data item!");
+		console.dir(item);
+		return false;
+	}
+
+	if (globalDataArray[item.name] === undefined)	{
+		globalDataArray[item.name] = item.value;
+		console.log("INITIALIZED: "+item.name + ":=" + item.value);
+		return true;
+	};
+	 
+	if (item.value != globalDataArray[item.name]) {
+		console.log("NEW value for "+item.name);
+		globalDataArray[item.name] = item.value;
+		return true;
+	}
+	
+	return false;
+}
+
+
+// UpdateGlobalDataFromJMRI
+//
+// Handle the response from the JMRI xmlio servlet
+
+function UpdateGlobalDataFromJMRI(response) {
+	var responseData = [];
+	
+	if (response.item !== undefined) {
+		console.log("UpdateGlobalDataFromJMRI:");
+//		console.log(util.inspect(response.item, false, null));
+		
+		var data = response.item;
+		for (var item in data) {
+		
+			switch (data[item].type) {
+				case 'turnout':
+					if (data[item].value == 4) {
+						data[item].value = 'thrown';
+					}
+					else {
+						data[item].value = 'closed';
+					}
+
+					// fall through!
+
+				case 'sensor':
+					if (UpdateGlobalStateFromDataItem(data[item])) {
+						responseData.push({name:data[item].name,value:globalDataArray[data[item].name]});
+					}
+					break;
+
+				default:
+					break;
+			}
+		}
+	}
+	return responseData;
+}
+
+
 // trackLayoutState
 //
 // Establish a connection with the JMRI xmlio servlet to determine
@@ -48,9 +127,11 @@ exports.trackLayoutState = function trackLayoutState(callback)
 	function handleResponse(response,callback) {
 		// parse the xml response
 		parser.parseString(response, function (err, result) {
-			console.log(util.inspect(result, false, null));
-			// update global layout state
-			callback(result);
+
+			var changedState = UpdateGlobalDataFromJMRI(result);
+			if (typeof(callback) == 'function') {
+				callback(changedState);
+			}
 		});
 
 		// re-queue request with new response state
@@ -69,6 +150,7 @@ exports.trackLayoutState = function trackLayoutState(callback)
 // ProcessSetCommand
 //
 // Handle the 'set' commands initiated by the the socket.io/websocket interface
+//
 // NOTE: The code currently here to manipulate the global state array should be
 // moved elsewhere, as this is not the right place to be manipulating the state
 // once once we begin accepting changes from the JMRI xmlio servlet.
@@ -76,25 +158,23 @@ exports.trackLayoutState = function trackLayoutState(callback)
 exports.ProcessSetCommand = function ProcessSetCommand(data) {
 	var changedData = [];
 
-	for (var i in data) {
-
-		if ((DataItemIsValid(data[i])) &&
-			(globalDataArray[data[i].name] === undefined) ||
-			(globalDataArray[data[i].name] !== data[i].value))	{
-			
-			globalDataArray[data[i].name] = data[i].value;
-			changedData.push(data[i]);
+	for (var item in data) {
+		if (UpdateGlobalStateFromDataItem(data[item])) {
+			changedData.push(data[item]);
 		}
 	}
 	
-	// Push turnout changes to JMRI
-	if (changedData.length > 0) {
+	// Push turnout changes to JMRI via xmlioRequest
+	// NOTE: We don't care about the response here, because the other outstanding
+	// request issued in trackLayoutState will collect updates.
+	
+	if (data.length > 0) {
 		var xmlRequest = "<xmlio>"
-		for (var i in changedData) {
-			switch (changedData[i].type) {
+		for (var i in data) {
+			switch (data[i].type) {
 				case 'turnout':
-					var turnoutState = (changedData[i].value === "thrown") ? 4 : 2;
-					xmlRequest += "<turnout name='"+changedData[i].name+"' set='"+turnoutState+"' />"
+					var turnoutState = (data[i].value === "thrown") ? 4 : 2;
+					xmlRequest += "<turnout name='"+data[i].name+"' set='"+turnoutState+"' />"
 					break;
 					
 				default:
@@ -108,6 +188,7 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 			});
 		}
 	}
+	
 	return changedData;
 }
 
@@ -126,13 +207,4 @@ exports.ProcessGetCommand = function ProcessGetCommand(data) {
 	}
 
 	return responseData;
-}
-
-
-// DataItemIsValid
-//
-// Check any get/set parameter for validity— for now we just are very agreeable.
-
-function DataItemIsValid(data) {
-	return true;
 }

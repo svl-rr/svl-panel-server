@@ -68,7 +68,6 @@ $(document).ready(function() {
 
 	$("#reset-button").click(function resetState() {
 		socket.emit('set',GetActivePanelElementsInitialState());
-		socket.emit('get',GetActivePanelElements());
 	});
 });
 
