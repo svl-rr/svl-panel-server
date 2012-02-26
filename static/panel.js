@@ -29,10 +29,6 @@ $(document).ready(function() {
 		getPanelState();
 	});
 
-	socket.on('message', function (message) {
-		console.log('SERVER:'+message);
-	});
-
 	socket.on('disconnect', function () {
 		console.log("DISCONNECTED");
 	});
@@ -49,13 +45,6 @@ $(document).ready(function() {
 		var $target = $(event.target);
 		var newState = $target.hasClass('thrown') ? 'closed' : 'thrown';
 		socket.emit('set',[{type:'turnout', name:event.target.id, value:newState}]);
-	});
-
-	$(".logo").click(function(event) {
-		event.preventDefault();
-		$("#i1").toggleClass("on off");
-		var newState = $('#i1').hasClass('on') ? 'on' : 'off';
-		socket.emit('set',[{ name:'i1', value:newState}]);
 	});
 
 	$("#get-button").click(function () {
@@ -92,7 +81,7 @@ function SetItemState(itemId,itemState) {
 			} else {
 				$(theElement).removeClass("closed").addClass("thrown");
 			}
-		} else if ($(theElement).hasClass("light")) {
+		} else if ($(theElement).hasClass("sensor")) {
 			if (itemState === "on") {
 				$(theElement).removeClass("off").addClass("on");
 			} else {

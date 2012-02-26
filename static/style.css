@@ -11,5 +11,3 @@ div.logo:before {content: url("whitesvl.png"); display:inline-block; font-size:0
 
 .on {display:inline-block;}
 .off {display:none;}
-
-.light {background-image:url('holder.png'); background-repeat:no-repeat;}
