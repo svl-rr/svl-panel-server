@@ -22,7 +22,7 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 var dataHandler = require('./dataHandler');
-var	clients = [];
+var clients = [];
 
 
 // Create an HTTP Server Using the connect framework. This server is
@@ -76,7 +76,7 @@ var io = require('socket.io').listen(server)
 // by other JMRI-invoked turnout changes.
 
 dataHandler.trackLayoutState(function (changedState) {
-	console.dir(changedState);
+//	console.dir(changedState);
 	if (changedState.length > 0) {
 		for (var i in clients) {
 			clients[i].emit('update',changedState);

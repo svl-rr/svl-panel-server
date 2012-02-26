@@ -60,13 +60,13 @@ function UpdateGlobalStateFromDataItem(item) {
 
 	if (globalDataArray[item.name] === undefined)	{
 		globalDataArray[item.name] = item.value;
-		console.log("INITIALIZED: "+item.name + ":=" + item.value);
+//		console.log("INITIALIZED: " + item.name + ":=" + item.value);
 		return true;
 	};
 	 
 	if (item.value != globalDataArray[item.name]) {
-		console.log("NEW value for "+item.name);
 		globalDataArray[item.name] = item.value;
+//		console.log("UPDATED: " + item.name + ":=" + item.value);
 		return true;
 	}
 	
@@ -82,7 +82,7 @@ function UpdateGlobalDataFromJMRI(response) {
 	var responseData = [];
 	
 	if (response.item !== undefined) {
-		console.log("UpdateGlobalDataFromJMRI:");
+//		console.log("UpdateGlobalDataFromJMRI:");
 //		console.log(util.inspect(response.item, false, null));
 		
 		var data = response.item;
@@ -129,6 +129,7 @@ exports.trackLayoutState = function trackLayoutState(callback)
 		parser.parseString(response, function (err, result) {
 
 			var changedState = UpdateGlobalDataFromJMRI(result);
+			
 			if (typeof(callback) == 'function') {
 				callback(changedState);
 			}
