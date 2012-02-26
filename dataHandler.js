@@ -96,10 +96,18 @@ function UpdateGlobalDataFromJMRI(response) {
 					else {
 						data[item].value = 'closed';
 					}
-
-					// fall through!
-
+					if (UpdateGlobalStateFromDataItem(data[item])) {
+						responseData.push({name:data[item].name,value:globalDataArray[data[item].name]});
+					}
+					break;
+					
 				case 'sensor':
+					if (data[item].value == 4) {
+						data[item].value = 'off';
+					}
+					else {
+						data[item].value = 'on';
+					}
 					if (UpdateGlobalStateFromDataItem(data[item])) {
 						responseData.push({name:data[item].name,value:globalDataArray[data[item].name]});
 					}
