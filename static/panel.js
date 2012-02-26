@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 	socket.on('update', function (data) {
 		console.log('UPDATE');
-		for (i in data) {
+		for (var i in data) {
 			SetItemState(data[i]["name"],data[i]["value"]);
 		}
 	});
