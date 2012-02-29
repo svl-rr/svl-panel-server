@@ -36,7 +36,7 @@ var server = connect.createServer()
 //	.use(connect.favicon(__dirname + '/static/favicon.ico'))
 //	.use(connect.static(__dirname + '/static'),{maxAge: oneDay})
 	.use(connect.static(__dirname + '/static'))
-	.listen(3000)
+	.listen(3000);
 
 
 // Create a socket.io (websocket) server associated with the HTTP server.
@@ -49,39 +49,39 @@ var io = require('socket.io').listen(server)
 	.enable('browser client etag')
 	.enable('browser client gzip')
 	.set('log level', 1)
-	io.sockets.on('connection', function(socket) {
+	.sockets.on('connection', function (socket) {
 		clients[socket.id] = socket;	// track the socket in clients array
-		
-		socket.on('register',function (panelName) {
-			if (panelName != null) {
-				socket.set('panelName', panelName, function(){});
-				dataHandler.registerPanel(socket,panelName);
+
+		socket.on('register', function (panelName) {
+			if (panelName !== null) {
+				socket.set('panelName', panelName, function () {});
+				dataHandler.registerPanel(socket, panelName);
 			}
 		});
-		
-		socket.on('disconnect',function() {
+
+		socket.on('disconnect', function () {
 			delete clients[socket.id];	// stop tracking the client
-			
+
 			// if the panel was registered, unregister it on disconnect
 			socket.get('panelName', function (err, panelName) {
-				if (panelName != null) {
-					dataHandler.unregisterPanel(socket,panelName);
+				if (panelName !== null) {
+					dataHandler.unregisterPanel(socket, panelName);
 				}
 			});
 		});
-		
+
 		// process the command and broadcast updates to all other clients
-		socket.on('set',function(data) {
+		socket.on('set', function (data) {
 			var changedState = dataHandler.processSetCommand(data);
 			if (changedState.length > 0) {
-				socket.broadcast.emit('update',changedState);
-				socket.emit('update',changedState);
+				socket.broadcast.emit('update', changedState);
+				socket.emit('update', changedState);
 			}
 		});
-	
+
 		// reply to sender with response to query of existing state
-		socket.on('get',function(data) {
-			socket.emit('update',dataHandler.processGetCommand(data));
+		socket.on('get', function (data) {
+			socket.emit('update', dataHandler.processGetCommand(data));
 		});
 	});
 
@@ -92,10 +92,11 @@ var io = require('socket.io').listen(server)
 // by other JMRI-invoked turnout changes.
 
 dataHandler.trackLayoutState(function (changedState) {
-///	console.log("result of trackLayoutState:"+JSON.stringify(changedState));
+	var i;
+//	console.log("result of trackLayoutState:"+JSON.stringify(changedState));
 	if (changedState.length > 0) {
-		for (var i in clients) {
-			clients[i].emit('update',changedState);
+		for (i in clients) {
+			clients[i].emit('update', changedState);
 		}
 	}
 });
