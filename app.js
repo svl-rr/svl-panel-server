@@ -96,7 +96,9 @@ dataHandler.trackLayoutState(function (changedState) {
 //	console.log("result of trackLayoutState:"+JSON.stringify(changedState));
 	if (changedState.length > 0) {
 		for (i in clients) {
-			clients[i].emit('update', changedState);
+			if (clients.hasOwnProperty(i)) {
+				clients[i].emit('update', changedState);
+			}
 		}
 	}
 });
