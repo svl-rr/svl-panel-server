@@ -50,15 +50,29 @@ var io = require('socket.io').listen(server)
 	.enable('browser client gzip')
 	.set('log level', 1)
 	io.sockets.on('connection', function(socket) {
-		clients[socket.id] = socket;
-	
+		clients[socket.id] = socket;	// track the socket in clients array
+		
+		socket.on('register',function (panelName) {
+			if (panelName != null) {
+				socket.set('panelName', panelName, function(){});
+				dataHandler.registerPanel(socket,panelName);
+			}
+		});
+		
 		socket.on('disconnect',function() {
-			delete clients[socket.id];
+			delete clients[socket.id];	// stop tracking the client
+			
+			// if the panel was registered, unregister it on disconnect
+			socket.get('panelName', function (err, panelName) {
+				if (panelName != null) {
+					dataHandler.unregisterPanel(socket,panelName);
+				}
+			});
 		});
 		
 		// process the command and broadcast updates to all other clients
 		socket.on('set',function(data) {
-			var changedState = dataHandler.ProcessSetCommand(data);
+			var changedState = dataHandler.processSetCommand(data);
 			if (changedState.length > 0) {
 				socket.broadcast.emit('update',changedState);
 				socket.emit('update',changedState);
@@ -67,7 +81,7 @@ var io = require('socket.io').listen(server)
 	
 		// reply to sender with response to query of existing state
 		socket.on('get',function(data) {
-			socket.emit('update',dataHandler.ProcessGetCommand(data));
+			socket.emit('update',dataHandler.processGetCommand(data));
 		});
 	});
 

@@ -44,16 +44,16 @@ function DataItemIsValid(data) {
 }
 
 
-// UpdateGlobalStateFromDataItem
+// updateGlobalStateFromDataItem
 //
 // Sanity check parameter and selectively update the database with new state
 // NOTE: We specifically do NOT update turnout state, as we rely on JMRI to
 // report turnout changes back via the xmlio servlet.
 
-function UpdateGlobalStateFromDataItem(item) {
+function updateGlobalStateFromDataItem(item) {
 
 	if (!DataItemIsValid(item)) {
-		console.err("UpdateGlobalStateFromDataItem: bad data item!");
+		console.err("updateGlobalStateFromDataItem: bad data item!");
 		console.dir(item);
 		return false;
 	}
@@ -74,15 +74,15 @@ function UpdateGlobalStateFromDataItem(item) {
 }
 
 
-// UpdateGlobalDataFromJMRI
+// updateGlobalDataFromJMRI
 //
 // Handle the response from the JMRI xmlio servlet
 
-function UpdateGlobalDataFromJMRI(response) {
+function updateGlobalDataFromJMRI(response) {
 	var responseData = [];
 	
 	if (response.item !== undefined) {
-//		console.log("UpdateGlobalDataFromJMRI:");
+//		console.log("updateGlobalDataFromJMRI:");
 //		console.log(util.inspect(response.item, false, null));
 		
 		var data = response.item;
@@ -96,7 +96,7 @@ function UpdateGlobalDataFromJMRI(response) {
 					else {
 						data[item].value = 'closed';
 					}
-					if (UpdateGlobalStateFromDataItem(data[item])) {
+					if (updateGlobalStateFromDataItem(data[item])) {
 						responseData.push({name:data[item].name,value:globalDataArray[data[item].name]});
 					}
 					break;
@@ -108,7 +108,7 @@ function UpdateGlobalDataFromJMRI(response) {
 					else {
 						data[item].value = 'on';
 					}
-					if (UpdateGlobalStateFromDataItem(data[item])) {
+					if (updateGlobalStateFromDataItem(data[item])) {
 						responseData.push({name:data[item].name,value:globalDataArray[data[item].name]});
 					}
 					break;
@@ -138,7 +138,7 @@ exports.trackLayoutState = function trackLayoutState(callback)
 		parser.parseString(response, function (err, result) {
 		
 			// Update our global state
-			var changedState = UpdateGlobalDataFromJMRI(result);
+			var changedState = updateGlobalDataFromJMRI(result);
 
 			if (typeof(callback) == 'function') {
 				callback(changedState);
@@ -158,11 +158,11 @@ exports.trackLayoutState = function trackLayoutState(callback)
 }
 
 
-// ProcessSetCommand
+// processSetCommand
 //
 // Handle the 'set' commands initiated by the the socket.io/websocket interface
 
-exports.ProcessSetCommand = function ProcessSetCommand(data) {
+exports.processSetCommand = function processSetCommand(data) {
 	var changedData = [];
 
 	// Update Global State from the client data
@@ -173,7 +173,7 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 
 	for (var item in data) {
 		if (data[item].type !== 'turnout') {
-			if (UpdateGlobalStateFromDataItem(data[item])) {
+			if (updateGlobalStateFromDataItem(data[item])) {
 				changedData.push(data[item]);
 			}
 		}
@@ -209,12 +209,12 @@ exports.ProcessSetCommand = function ProcessSetCommand(data) {
 }
 
 
-// ProcessGetCommand
+// processGetCommand
 //
 // Return the local state to clients. NOTE: For JMRI state, we most likely want to ask JMRI
 // This is currently a synchronous operation, so this may be tough.
 
-exports.ProcessGetCommand = function ProcessGetCommand(data) {
+exports.processGetCommand = function processGetCommand(data) {
 	var responseData = [];
 	
 	for (var i in data) {
@@ -223,4 +223,42 @@ exports.ProcessGetCommand = function ProcessGetCommand(data) {
 	}
 
 	return responseData;
+}
+
+
+
+
+var numDispatchPanels = 0;
+var SERVER_NAME_MAINLINELOCKED = "Mainline Locked";
+
+// registerPanel
+//
+// When a new client comes online, it can optionally register as a dispatcher panel
+
+exports.registerPanel = function registerPanel(socket,panelName) {
+	console.log("registerPanel "+paneName);
+	if (panelName.search("Dispatch") != -1) {
+		numDispatchPanels++;
+	}
+}
+
+
+// unregisterPanel
+//
+// If a client was registered, go ahead a check to see if it was the last dispatcher
+// panel active, and if so unlock the layout.
+
+exports.unregisterPanel = function unregisterPanel(socket,panelName) {
+	console.log("unregisterPanel "+panelName);
+	
+	if (panelName.search("Dispatch") != -1) {
+		numDispatchPanels--;
+		
+		// if the last dispatch panel was closed, be sure to unlock the mainline
+		if (numDispatchPanels == 0) {		
+			console.log("last dispatch panel closed; unlocking mainline");
+			globalDataArray[SERVER_NAME_MAINLINELOCKED] = false;
+			socket.broadcast('update',{name:SERVER_NAME_MAINLINELOCKED,value:false});
+		}
+	}
 }
