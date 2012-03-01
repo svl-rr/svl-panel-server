@@ -64,7 +64,7 @@ function updateGlobalStateFromDataItem(item) {
 		return true;
 	}
 	 
-	if (item.value != globalDataArray[item.name]) {
+	if (item.value !== globalDataArray[item.name]) {
 		globalDataArray[item.name] = item.value;
 //		console.log("UPDATED: " + item.name + ":=" + item.value);
 		return true;
@@ -80,13 +80,14 @@ function updateGlobalStateFromDataItem(item) {
 
 function updateGlobalDataFromJMRI(response) {
 	var responseData = [];
+	var data = response.item;
+	var item;
 	
-	if (response.item !== undefined) {
+	if (data !== undefined) {
 //		console.log("updateGlobalDataFromJMRI:");
 //		console.log(util.inspect(response.item, false, null));
 		
-		var data = response.item;
-		for (var item in data) {
+		for (item in data) {
 		
 			switch (data[item].type) {
 				case 'turnout':
@@ -130,8 +131,7 @@ function updateGlobalDataFromJMRI(response) {
 // will complete whenever there is a difference between the state passed
 // in and the previously returned layout state.
 
-exports.trackLayoutState = function trackLayoutState(callback)
-{
+exports.trackLayoutState = function trackLayoutState(callback) {
 	function handleResponse(response,callback) {
 	
 		// Convert the xml response into JSON so we can deal
@@ -140,20 +140,20 @@ exports.trackLayoutState = function trackLayoutState(callback)
 			// Update our global state
 			var changedState = updateGlobalDataFromJMRI(result);
 
-			if (typeof(callback) == 'function') {
+			if (typeof(callback) === 'function') {
 				callback(changedState);
 			}
 		});
 		
 		// re-queue request with new response state
 		jmri.xmlioRequest('127.0.0.1', 12080, response, function (newResponse) {
-			handleResponse(newResponse,callback)
+			handleResponse(newResponse,callback);
 		});
 	}
 	
 	// request initial state from JMRI
 	jmri.getInitialState('127.0.0.1', 12080, function (newResponse) {
-		handleResponse(newResponse,callback)
+		handleResponse(newResponse,callback);
 	});
 }
 
