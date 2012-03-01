@@ -24,11 +24,11 @@
 var http = require('http');
 
 function xmlioRequest(host,port,xml,callback) {
-	var req,
+	var	req,
 		postOptions = {host: host, port: port, path: '/xmlio', method: 'POST',
 			headers: {'Content-Type': 'text/xml', 'Content-Length': xml.length}
 		},
-	responseXML = [];
+		responseXML = [];
 
 	req = http.request(postOptions, function(res) {
 		res.setEncoding('utf8');
