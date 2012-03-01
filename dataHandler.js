@@ -92,7 +92,7 @@ function updateGlobalDataFromJMRI(response) {
 				switch (data[item].type) {
 
 					case 'turnout':
-						if (data[item].value == 4) {
+						if (Number(data[item].value) === 4) {
 							data[item].value = 'thrown';
 						}
 						else {
@@ -104,7 +104,7 @@ function updateGlobalDataFromJMRI(response) {
 						break;
 						
 					case 'sensor':
-						if (data[item].value == 4) {
+						if (Number(data[item].value) === 4) {
 							data[item].value = 'off';
 						}
 						else {
