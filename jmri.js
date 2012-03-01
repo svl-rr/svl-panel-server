@@ -23,47 +23,40 @@
 
 var http = require('http');
 
-exports.xmlioRequest = function xmlioRequest(host,port,xml,callback) {
+function xmlioRequest(host,port,xml,callback) {
+	var req,
+		postOptions = {host: host, port: port, path: '/xmlio', method: 'POST',
+			headers: {'Content-Type': 'text/xml', 'Content-Length': xml.length}
+		},
+	responseXML = [];
 
-	var postData = xml;
-	var postOptions = {
-	  host: host,
-	  port: port,
-	  path: '/xmlio',
-	  method: 'POST',
-	  headers: {
-		  'Content-Type': 'text/xml',
-		  'Content-Length': postData.length
-	  }
-	};
-
-	var responseXML = [];
-	
-	var req = http.request(postOptions, function(res) {
-	  res.setEncoding('utf8');
-	  res.on('data', function (dataChunk) {
-		  responseXML.push(dataChunk);
-	  });
-  
-	  res.on('end',function () {
-//	  	console.log('JMRI RESPONSE: '+ responseXML);
-		if (typeof(callback) == 'function') {
-			callback(responseXML.toString());
-		}
-	  });
+	req = http.request(postOptions, function(res) {
+		res.setEncoding('utf8');
+		res.on('data', function (dataChunk) {
+			responseXML.push(dataChunk);
+		});
+		res.on('end',function () {
+//			console.log('JMRI RESPONSE: ' + responseXML);
+			if (typeof(callback) === 'function') {
+				callback(responseXML.toString());
+			}
+		});
 	});
 
 	req.on('error', function(e) {
 	  console.log('problem with request: ' + e.message);
 	});
-	
-//	console.log("JMRI REQUEST: "+postData);
-	req.write(postData);
+//	console.log("JMRI REQUEST: " + xml);
+	req.write(xml);
 	req.end();
 }
 
 
-exports.getInitialState = function getInitialState(host,port,callback) {
-	var xml = "<xmlio><list><type>turnout</type></list><list><type>sensor</type></list></xmlio>"
-	exports.xmlioRequest(host,port,xml,callback);
+function getInitialState(host,port,callback) {
+	var xml = "<xmlio><list><type>turnout</type></list><list><type>sensor</type></list></xmlio>";
+	xmlioRequest(host,port,xml,callback);
 }
+
+
+exports.xmlioRequest = xmlioRequest;
+exports.getInitialState = getInitialState;
