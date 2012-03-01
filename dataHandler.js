@@ -23,7 +23,7 @@
 
 var util = require('util');
 var jmri = require('./jmri');
-xml2js = require("xml2js");
+var xml2js = require("xml2js");
 var parser = new xml2js.Parser();
 
 
@@ -35,11 +35,11 @@ var parser = new xml2js.Parser();
 var globalDataArray = [];
 
 
-// DataItemIsValid
+// dataItemIsValid
 //
 // Check any get/set parameter for validity— for now we just are very agreeable.
 
-function DataItemIsValid(data) {
+function dataItemIsValid(data) {
 	return true;
 }
 
@@ -52,7 +52,7 @@ function DataItemIsValid(data) {
 
 function updateGlobalStateFromDataItem(item) {
 
-	if (!DataItemIsValid(item)) {
+	if (!dataItemIsValid(item)) {
 		console.err("updateGlobalStateFromDataItem: bad data item!");
 		console.dir(item);
 		return false;
