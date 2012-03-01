@@ -88,34 +88,36 @@ function updateGlobalDataFromJMRI(response) {
 //		console.log(util.inspect(response.item, false, null));
 		
 		for (item in data) {
-		
-			switch (data[item].type) {
-				case 'turnout':
-					if (data[item].value == 4) {
-						data[item].value = 'thrown';
-					}
-					else {
-						data[item].value = 'closed';
-					}
-					if (updateGlobalStateFromDataItem(data[item])) {
-						responseData.push({name: data[item].name, value: globalDataArray[data[item].name]});
-					}
-					break;
-					
-				case 'sensor':
-					if (data[item].value == 4) {
-						data[item].value = 'off';
-					}
-					else {
-						data[item].value = 'on';
-					}
-					if (updateGlobalStateFromDataItem(data[item])) {
-						responseData.push({name:data[item].name,value:globalDataArray[data[item].name]});
-					}
-					break;
+			if (data.hasOwnProperty(item)) {
+				switch (data[item].type) {
 
-				default:
-					break;
+					case 'turnout':
+						if (data[item].value == 4) {
+							data[item].value = 'thrown';
+						}
+						else {
+							data[item].value = 'closed';
+						}
+						if (updateGlobalStateFromDataItem(data[item])) {
+							responseData.push({name: data[item].name, value: globalDataArray[data[item].name]});
+						}
+						break;
+						
+					case 'sensor':
+						if (data[item].value == 4) {
+							data[item].value = 'off';
+						}
+						else {
+							data[item].value = 'on';
+						}
+						if (updateGlobalStateFromDataItem(data[item])) {
+							responseData.push({name:data[item].name,value:globalDataArray[data[item].name]});
+						}
+						break;
+	
+					default:
+						break;
+				}
 			}
 		}
 	}
@@ -132,28 +134,26 @@ function updateGlobalDataFromJMRI(response) {
 // in and the previously returned layout state.
 
 exports.trackLayoutState = function trackLayoutState(callback) {
-	function handleResponse(response,callback) {
-	
-		// Convert the xml response into JSON so we can deal
-		parser.parseString(response, function (err, result) {
-		
-			// Update our global state
-			var changedState = updateGlobalDataFromJMRI(result);
 
+	function handleResponse(response, callback) {
+
+		// Convert the xml response into JSON, update state, and invoke callback
+		parser.parseString(response, function (err, result) {
+			var changedState = updateGlobalDataFromJMRI(result);
 			if (typeof(callback) === 'function') {
 				callback(changedState);
 			}
-		});
-		
-		// re-queue request with new response state
-		jmri.xmlioRequest('127.0.0.1', 12080, response, function (newResponse) {
-			handleResponse(newResponse,callback);
-		});
+
+			// re-queue request with new response state
+			jmri.xmlioRequest('127.0.0.1', 12080, response, function (newResponse) {
+				handleResponse(newResponse,callback);
+			});
+		});		
 	}
 	
 	// request initial state from JMRI
-	jmri.getInitialState('127.0.0.1', 12080, function (newResponse) {
-		handleResponse(newResponse,callback);
+	jmri.getInitialState('127.0.0.1', 12080, function (initialResponse) {
+		handleResponse(initialResponse, callback);
 	});
 }
 
