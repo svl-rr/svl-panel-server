@@ -62,7 +62,7 @@ function updateGlobalStateFromDataItem(item) {
 		globalDataArray[item.name] = item.value;
 //		console.log("INITIALIZED: " + item.name + ":=" + item.value);
 		return true;
-	};
+	}
 	 
 	if (item.value != globalDataArray[item.name]) {
 		globalDataArray[item.name] = item.value;
@@ -97,7 +97,7 @@ function updateGlobalDataFromJMRI(response) {
 						data[item].value = 'closed';
 					}
 					if (updateGlobalStateFromDataItem(data[item])) {
-						responseData.push({name:data[item].name,value:globalDataArray[data[item].name]});
+						responseData.push({name: data[item].name, value: globalDataArray[data[item].name]});
 					}
 					break;
 					
@@ -146,13 +146,13 @@ exports.trackLayoutState = function trackLayoutState(callback)
 		});
 		
 		// re-queue request with new response state
-		jmri.xmlioRequest('127.0.0.1',12080,response,function (newResponse) {
+		jmri.xmlioRequest('127.0.0.1', 12080, response, function (newResponse) {
 			handleResponse(newResponse,callback)
 		});
 	}
 	
 	// request initial state from JMRI
-	jmri.getInitialState('127.0.0.1',12080,function (newResponse) {
+	jmri.getInitialState('127.0.0.1', 12080, function (newResponse) {
 		handleResponse(newResponse,callback)
 	});
 }
@@ -191,7 +191,7 @@ exports.processSetCommand = function processSetCommand(data) {
 			switch (data[i].type) {
 				case 'turnout':
 					var turnoutState = (data[i].value === "thrown") ? 4 : 2;
-					xmlRequest += "<turnout name='"+data[i].name+"' set='"+turnoutState+"' />"
+					xmlRequest += "<turnout name='" + data[i].name + "' set='"+turnoutState+"' />"
 					break;
 					
 				default:
@@ -200,7 +200,7 @@ exports.processSetCommand = function processSetCommand(data) {
 		}
 		
 		if (xmlRequest !== "") {
-			jmri.xmlioRequest('127.0.0.1',12080,"<xmlio>" + xmlRequest + "</xmlio>",function (response) {
+			jmri.xmlioRequest('127.0.0.1', 12080, "<xmlio>" + xmlRequest + "</xmlio>", function (response) {
 			});
 		}
 	}
@@ -236,7 +236,8 @@ var SERVER_NAME_MAINLINELOCKED = "Mainline Locked";
 // When a new client comes online, it can optionally register as a dispatcher panel
 
 exports.registerPanel = function registerPanel(socket,panelName) {
-	console.log("registerPanel "+paneName);
+	console.log("registerPanel " + paneName);
+	// TODO: should guard againt client calling register multiple times.
 	if (panelName.search("Dispatch") != -1) {
 		numDispatchPanels++;
 	}
@@ -249,7 +250,7 @@ exports.registerPanel = function registerPanel(socket,panelName) {
 // panel active, and if so unlock the layout.
 
 exports.unregisterPanel = function unregisterPanel(socket,panelName) {
-	console.log("unregisterPanel "+panelName);
+	console.log("unregisterPanel " + panelName);
 	
 	if (panelName.search("Dispatch") != -1) {
 		numDispatchPanels--;
@@ -258,7 +259,7 @@ exports.unregisterPanel = function unregisterPanel(socket,panelName) {
 		if (numDispatchPanels == 0) {		
 			console.log("last dispatch panel closed; unlocking mainline");
 			globalDataArray[SERVER_NAME_MAINLINELOCKED] = false;
-			socket.broadcast('update',{name:SERVER_NAME_MAINLINELOCKED,value:false});
+			socket.broadcast('update', {name: SERVER_NAME_MAINLINELOCKED, value: false});
 		}
 	}
 }
