@@ -21,31 +21,39 @@
 // ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+"use strict";
+
 var http = require('http');
 
-function xmlioRequest(host,port,xml,callback) {
+function xmlioRequest(host, port, xml, callback) {
 	var	req,
 		postOptions = {
-			host: host, port: port, path: '/xmlio', method: 'POST',
-			headers: {'Content-Type': 'text/xml', 'Content-Length': xml.length}
+			host: host,
+			port: port,
+			path: '/xmlio',
+			method: 'POST',
+			headers: {
+				'Content-Type': 'text/xml',
+				'Content-Length': xml.length
+			}
 		},
 		responseXML = [];
 
-	req = http.request(postOptions, function(res) {
+	req = http.request(postOptions, function (res) {
 		res.setEncoding('utf8');
 		res.on('data', function (dataChunk) {
 			responseXML.push(dataChunk);
 		});
-		res.on('end',function () {
+		res.on('end', function () {
 //			console.log('JMRI RESPONSE: ' + responseXML);
-			if (typeof(callback) === 'function') {
+			if (typeof (callback) === 'function') {
 				callback(responseXML.toString());
 			}
 		});
 	});
 
-	req.on('error', function(e) {
-	  console.log('problem with request: ' + e.message);
+	req.on('error', function (e) {
+		console.log('problem with request: ' + e.message);
 	});
 //	console.log("JMRI REQUEST: " + xml);
 	req.write(xml);
@@ -53,9 +61,9 @@ function xmlioRequest(host,port,xml,callback) {
 }
 
 
-function getInitialState(host,port,callback) {
+function getInitialState(host, port, callback) {
 	var xml = "<xmlio><list><type>turnout</type></list><list><type>sensor</type></list></xmlio>";
-	xmlioRequest(host,port,xml,callback);
+	xmlioRequest(host, port, xml, callback);
 }
 
 
