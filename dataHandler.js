@@ -94,7 +94,7 @@ function updateGlobalDataFromJMRI(response) {
 							data[item].value = 'closed';
 						}
 						if (updateGlobalStateFromDataItem(data[item])) {
-							responseData.push({name: data[item].name, value: globalDataArray[data[item].name]});
+							responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name]});
 						}
 						break;
 
@@ -105,7 +105,7 @@ function updateGlobalDataFromJMRI(response) {
 							data[item].value = 'on';
 						}
 						if (updateGlobalStateFromDataItem(data[item])) {
-							responseData.push({name: data[item].name, value: globalDataArray[data[item].name]});
+							responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name]});
 						}
 						break;
 
@@ -197,8 +197,7 @@ function processSetCommand(data) {
 			}
 		}
 		if (xmlRequest !== "") {
-			jmri.xmlioRequest('127.0.0.1', 12080, "<xmlio>" + xmlRequest + "</xmlio>", function (response) {
-			});
+			jmri.xmlioRequest('127.0.0.1', 12080, "<xmlio>" + xmlRequest + "</xmlio>");
 		}
 	}
 	return changedData;
