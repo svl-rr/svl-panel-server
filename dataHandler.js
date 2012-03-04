@@ -59,12 +59,12 @@ function updateGlobalStateFromDataItem(item) {
 		return false;
 	}
 	if (globalDataArray[item.name] === undefined) {
-		globalDataArray[item.name] = item.value;
+		globalDataArray[item.name] = item;
 //		console.log("INITIALIZED: " + item.name + ":=" + item.value);
 		return true;
 	}
-	if (item.value !== globalDataArray[item.name]) {
-		globalDataArray[item.name] = item.value;
+	if (item.value !== globalDataArray[item.name].value) {
+		globalDataArray[item.name] = item;
 //		console.log("UPDATED: " + item.name + ":=" + item.value);
 		return true;
 	}
@@ -89,12 +89,12 @@ function updateGlobalDataFromJMRI(response) {
 				switch (data[item].type) {
 					case 'turnout':
 						if (Number(data[item].value) === 4) {
-							data[item].value = 'thrown';
+							data[item].value = 'R';
 						} else {
-							data[item].value = 'closed';
+							data[item].value = 'N';
 						}
 						if (updateGlobalStateFromDataItem(data[item])) {
-							responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name]});
+							responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name].value});
 						}
 						break;
 
@@ -105,7 +105,7 @@ function updateGlobalDataFromJMRI(response) {
 							data[item].value = 'on';
 						}
 						if (updateGlobalStateFromDataItem(data[item])) {
-							responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name]});
+							responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name].value});
 						}
 						break;
 
@@ -170,6 +170,7 @@ function processSetCommand(data) {
 
 	for (item in data) {
 		if (data.hasOwnProperty(item)) {
+//			console.log("SET: "+ util.inspect(data[item]));
 			if (data[item].type !== 'turnout') {
 				if (updateGlobalStateFromDataItem(data[item])) {
 					changedData.push(data[item]);
@@ -188,7 +189,7 @@ function processSetCommand(data) {
 			if (data.hasOwnProperty(item)) {
 				switch (data[item].type) {
 					case 'turnout':
-						turnoutState = (data[item].value === "thrown") ? 4 : 2;
+						turnoutState = (data[item].value === "R") ? 4 : 2;
 						xmlRequest += "<turnout name='" + data[item].name + "' set='"+ turnoutState +"' />";
 						break;
 					default:
@@ -215,8 +216,8 @@ function processGetCommand(data) {
 
 	for (item in data) {
 		if (data.hasOwnProperty(item)) {
-//			console.log(item + ": " + data[item].name,globalDataArray[data[item].name]);
-			responseData.push({name: data[item].name, value: globalDataArray[data[item].name]});
+//			console.log("GET: "+ util.inspect(data[item]));
+			responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name].value});
 		}
 	}
 
@@ -252,8 +253,8 @@ function unregisterPanel(socket, panelName) {
 		// if the last dispatch panel was closed, be sure to unlock the mainline
 		if (numDispatchPanels === 0) {
 			console.log("last dispatch panel closed; unlocking mainline");
-			globalDataArray[SERVER_NAME_MAINLINELOCKED] = false;
-			socket.broadcast('update', {name: SERVER_NAME_MAINLINELOCKED, value: false});
+			globalDataArray[SERVER_NAME_MAINLINELOCKED].value = true;
+			socket.broadcast('update', globalDataArray[SERVER_NAME_MAINLINELOCKED]);
 		}
 	}
 }

@@ -36,14 +36,14 @@ $(document).ready(function() {
 	socket.on('update', function (data) {
 		console.log('UPDATE');
 		for (var i in data) {
-			SetItemState(data[i]["name"],data[i]["value"]);
+			setItemState(data[i]["name"],data[i]["value"]);
 		}
 	});
 
 	$(".turnout").click(function(event) {
 		event.preventDefault();
 		var $target = $(event.target);
-		var newState = $target.hasClass('thrown') ? 'closed' : 'thrown';
+		var newState = $target.hasClass('N') ? 'R' : 'N';
 		socket.emit('set',[{type:'turnout', name:event.target.id, value:newState}]);
 	});
 
@@ -52,16 +52,16 @@ $(document).ready(function() {
 	});
 	
 	function getPanelState() {
-		socket.emit('get',GetActivePanelElements());
+		socket.emit('get',getActivePanelElements());
 	};
 
 	$("#reset-button").click(function resetState() {
-		socket.emit('set',GetActivePanelElementsInitialState());
+		socket.emit('set',getActivePanelElementsResetState());
 	});
 });
 
 
-//	SetItemState
+//	setItemState
 //
 //	Modify Panel Element Appearance based upon supplied id and state.
 //	This function is called in response to receiving an update message
@@ -70,16 +70,16 @@ $(document).ready(function() {
 //	Item appearance in this example is modified by manipulating CSS
 //	properties with jQuery. 
 
-function SetItemState(itemId,itemState) {
+function setItemState(itemId,itemState) {
 	var theElement = document.getElementById(itemId);
 	
 	if (theElement) {
 		console.log("Updating " + itemId + " to " + itemState);
 		if ($(theElement).hasClass("turnout")) {
-			if (itemState === "closed") {
-				$(theElement).removeClass("thrown").addClass("closed");
+			if (itemState === "N") {
+				$(theElement).removeClass("R").addClass("N");
 			} else {
-				$(theElement).removeClass("closed").addClass("thrown");
+				$(theElement).removeClass("N").addClass("R");
 			}
 		} else if ($(theElement).hasClass("sensor")) {
 			if (itemState === "on") {
