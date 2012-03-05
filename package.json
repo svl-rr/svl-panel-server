@@ -13,14 +13,14 @@
     "url": ""
   },
   "dependencies": {
-	"connect": "1.8.x",
-	"socket.io": "0.8.x",
+	"connect": "2.0.x",
+	"socket.io": "0.9.x",
 	"xml2js": "0.1.x"
   },
   "license": "MIT",
   "devDependencies": {},
   "optionalDependencies": {},
   "engines": {
-    "node": "~0.6.8"
+    "node": "0.6.x"
   }
 }

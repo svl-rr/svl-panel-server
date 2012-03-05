@@ -33,9 +33,8 @@ var clients = [];
 
 var oneDay = 86400000;
 var connect = require('connect');
-var server = connect.createServer()
-//	.use(connect.logger())
-//	.use(connect.favicon(__dirname + '/static/favicon.ico'))
+var server = connect()
+//	.use(connect.logger('dev'))
 //	.use(connect.static(__dirname + '/static'),{maxAge: oneDay})
 	.use(connect.static(__dirname + '/static'))
 	.listen(3000);
