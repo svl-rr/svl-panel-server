@@ -3,10 +3,10 @@ body {background: #888}
 div.logo {height:100px; width:181px; padding:0; margin:0; overflow:hidden;}
 div.logo:before {content: url("whitesvl.png"); display:inline-block; font-size:0; line-height:0;}
 
-.N {height:37pt; width:90pt; padding:0; margin:0; overflow:hidden;}
+.N {height:40pt; width:80pt; padding:0; margin:0; overflow:hidden;}
 .N:before {content: url("normal.svg"); display:inline-block; font-size:0; line-height:0;}
 
-.R {height:37pt; width:90pt; padding:0; margin:0; overflow:hidden;}
+.R {height:40pt; width:80pt; padding:0; margin:0; overflow:hidden;}
 .R:before {content: url("reversed.svg"); display:inline-block; font-size:0; line-height:0;}
 
 .on {display:inline-block;}
