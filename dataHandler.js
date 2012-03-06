@@ -126,6 +126,8 @@ function updateGlobalDataFromJMRI(response) {
 // state, this routine issues a new request back to the servlet which
 // will complete whenever there is a difference between the state passed
 // in and the previously returned layout state.
+//
+// NOTE: If we are running in OFFLINE mode, we log and bail out.
 
 function trackLayoutState(callback) {
 
@@ -145,10 +147,14 @@ function trackLayoutState(callback) {
 		});
 	}
 
-	// request initial state from JMRI
-	jmri.getInitialState('127.0.0.1', 12080, function (initialResponse) {
-		handleResponse(initialResponse, callback);
-	});
+	if (process.env.OFFLINE !== undefined) {
+		console.log("Running in OFFLINE mode, no JMRI transactions will occur!");
+	} else {
+		// request initial state from JMRI
+		jmri.getInitialState('127.0.0.1', 12080, function (initialResponse) {
+			handleResponse(initialResponse, callback);
+		});
+	}
 }
 
 
@@ -166,12 +172,12 @@ function processSetCommand(data) {
 	//
 	// NOTE: In order to avoid race conditions, we pay special attention to only
 	// deliver updates to JMRI items (e.g., turnouts) via the trackLayoutState
-	// callback mechanism.
+	// callback mechanism. If we're running in OFFLINE mode, we always update the state
 
 	for (item in data) {
 		if (data.hasOwnProperty(item)) {
 //			console.log("SET: "+ util.inspect(data[item]));
-			if (data[item].type !== 'turnout') {
+			if ((process.env.OFFLINE !== undefined) || (data[item].type !== 'turnout')) {
 				if (updateGlobalStateFromDataItem(data[item])) {
 					changedData.push(data[item]);
 				}
@@ -197,7 +203,7 @@ function processSetCommand(data) {
 				}
 			}
 		}
-		if (xmlRequest !== "") {
+		if ((xmlRequest !== "") && (process.env.OFFLINE === undefined)) {
 			jmri.xmlioRequest('127.0.0.1', 12080, "<xmlio>" + xmlRequest + "</xmlio>");
 		}
 	}
