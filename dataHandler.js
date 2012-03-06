@@ -217,7 +217,8 @@ function processGetCommand(data) {
 	for (item in data) {
 		if (data.hasOwnProperty(item)) {
 //			console.log("GET: "+ util.inspect(data[item]));
-			responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name].value});
+			responseData.push({type: data[item].type, name: data[item].name, value: (globalDataArray[data[item].name] === undefined ? null : globalDataArray[data[item].name].value)});
+
 		}
 	}
 
@@ -254,7 +255,7 @@ function unregisterPanel(socket, panelName) {
 		if (numDispatchPanels === 0) {
 			console.log("last dispatch panel closed; unlocking mainline");
 			globalDataArray[SERVER_NAME_MAINLINELOCKED].value = false;
-			socket.broadcast('update', globalDataArray[SERVER_NAME_MAINLINELOCKED]);
+			socket.broadcast('update', [globalDataArray[SERVER_NAME_MAINLINELOCKED]]);
 		}
 	}
 }
