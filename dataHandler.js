@@ -260,7 +260,7 @@ function unregisterPanel(socket, panelName) {
 		if (numDispatchPanels === 0) {
 			console.log("last dispatch panel closed; unlocking mainline");
 			globalDataArray[SERVER_NAME_MAINLINELOCKED].value = false;
-			socket.broadcast('update', [globalDataArray[SERVER_NAME_MAINLINELOCKED]]);
+			socket.broadcast.emit('update', [globalDataArray[SERVER_NAME_MAINLINELOCKED]]);
 		}
 	}
 }
