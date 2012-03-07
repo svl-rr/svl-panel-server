@@ -223,8 +223,7 @@ function processGetCommand(data) {
 	for (item in data) {
 		if (data.hasOwnProperty(item)) {
 //			console.log("GET: "+ util.inspect(data[item]));
-			responseData.push({type: data[item].type, name: data[item].name, value: (globalDataArray[data[item].name] === undefined ? null : globalDataArray[data[item].name].value)});
-
+			responseData.push({type: data[item].type, name: data[item].name, value: (globalDataArray[data[item].name] === undefined ? undefined : globalDataArray[data[item].name].value)});
 		}
 	}
 
