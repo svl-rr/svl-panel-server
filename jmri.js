@@ -47,7 +47,7 @@ function xmlioRequest(host, port, xml, callback) {
 		res.on('end', function () {
 //			console.log('JMRI RESPONSE: ' + responseXML);
 			if (typeof (callback) === 'function') {
-				callback(responseXML.toString());
+				callback(responseXML.join(''));
 			}
 		});
 	});
