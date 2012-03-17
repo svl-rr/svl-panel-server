@@ -23,8 +23,10 @@
 
 "use strict";
 
-var dataHandler = require('./dataHandler');
-var clients = [];
+var path = require('path'),
+	connect = require('connect'),
+	dataHandler = require('./dataHandler'),
+	clients = [];
 
 
 // Create an HTTP Server Using the connect framework. This server is
@@ -32,11 +34,11 @@ var clients = [];
 // and SVG which runs the user interface on client devices.
 
 var oneDay = 86400000;
-var connect = require('connect');
 var server = connect()
 //	.use(connect.logger('dev'))
 //	.use(connect.static(__dirname + '/static'),{maxAge: oneDay})
 	.use(connect.static(__dirname + '/static'))
+	.use(connect.directory(__dirname + '/static',{filter: customFileFilter}))
 	.listen(3000);
 
 
@@ -103,3 +105,21 @@ dataHandler.trackLayoutState(function (changedState) {
 		}
 	}
 });
+
+
+// Filter function for the connect.directory middleware. This function allows
+// us to get by without an index.html and will allow folks to navigate to panel
+// files directly. By default, we only allow the user to see SVG and HTML files.
+// This has the side effect of hiding subdirectories from the casual browser.
+
+function customFileFilter(file) {
+        switch (path.extname(file)) {
+        case '.html':
+        case '.svg':
+                return true;
+                
+        default:
+                break;
+        }
+        return false;
+}
