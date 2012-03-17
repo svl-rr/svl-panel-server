@@ -26,6 +26,7 @@
 var path = require('path'),
 	connect = require('connect'),
 	dataHandler = require('./dataHandler'),
+	fastClock = require('./fastClock'),
 	clients = [];
 
 
@@ -106,6 +107,16 @@ dataHandler.trackLayoutState(function (changedState) {
 	}
 });
 
+
+fastClock.trackFastClock(function (newTime) {
+	var i;
+//	console.log("fastClock Updated: "+newTime);
+	for (i in clients) {
+		if (clients.hasOwnProperty(i)) {
+			clients[i].emit('time', newTime);
+		}
+	}
+});
 
 // Filter function for the connect.directory middleware. This function allows
 // us to get by without an index.html and will allow folks to navigate to panel

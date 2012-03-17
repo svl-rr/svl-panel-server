@@ -40,6 +40,11 @@ $(document).ready(function() {
 		}
 	});
 
+	socket.on('time', function (newTime) {
+		console.log('TIME:'+newTime);
+		$("#clock").text(newTime);
+	});
+
 	$(".turnout").click(function(event) {
 		event.preventDefault();
 		var $target = $(event.target);
