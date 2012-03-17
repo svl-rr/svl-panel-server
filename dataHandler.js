@@ -90,8 +90,10 @@ function updateGlobalDataFromJMRI(response) {
 					case 'turnout':
 						if (Number(data[item].value) === 4) {
 							data[item].value = 'R';
-						} else {
+						} else if (Number(data[item].value) === 2) {
 							data[item].value = 'N';
+						} else {
+							data[item].value = undefined;
 						}
 						if (updateGlobalStateFromDataItem(data[item])) {
 							responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name].value});
