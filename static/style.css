@@ -1,0 +1,15 @@
+body,td {
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+	margin-left: 10px;
+	margin-right: auto;
+	border: none; padding: 1em;
+	width: auto; height: 101%;
+	color: #ffffff;
+	background-color: #808080;
+}
+a {
+	color: #ffffff;	
+}
+
+p,img { border: none; }
+li,ul { margin: 0 0 0 1em; padding: 0.25em; }

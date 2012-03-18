@@ -1,8 +1,5 @@
 body {background: #888}
 
-div.logo {height:100px; width:181px; padding:0; margin:0; overflow:hidden;}
-div.logo:before {content: url("graphics/whitesvl.png"); display:inline-block; font-size:0; line-height:0;}
-
 .N {height:40pt; width:80pt; padding:0; margin:0; overflow:hidden;}
 .N:before {content: url("graphics/normal.svg"); display:inline-block; font-size:0; line-height:0;}
 
