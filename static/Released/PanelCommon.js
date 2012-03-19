@@ -705,7 +705,7 @@ function setPanelStatus(text)
 			window.setTimeout("setPanelStatus(\"Panel Ready\")",2000)
 	
         if(socketStatus == SOCKET_CONNECTED)
-            setSVGText("panelStatus", text + " (" + socketStatus + " to " + PANEL_SERVER + ")");
+            setSVGText("panelStatus", text + " (" + socketStatus + " to " + location.host + ")");
         else
             setSVGText("panelStatus", text + " (" + socketStatus + ")");
 	}

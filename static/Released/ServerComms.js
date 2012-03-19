@@ -1,8 +1,4 @@
 var socket;
-// NOTE: We should be able to eliminate this, but for now keeping this AS IS
-var SVL_SERVER = "http://10.0.0.25:3000";
-var LOCAL_SERVER = "http://localhost:3000/";
-var PANEL_SERVER = SVL_SERVER;
 
 var SOCKET_CONNECTED = "Connected";
 var SOCKET_DISCONNECTED = "Disconnected";
@@ -56,8 +52,7 @@ function setValue(objectValue)
 
 function initSocketToServer(panelName)
 {
-//  socket = io.connect();			// <--- we should be able to do this
-    socket = io.connect(PANEL_SERVER);
+    socket = io.connect(location.host);
 
     socket.on('connect', function ()
     {
