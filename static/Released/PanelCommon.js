@@ -704,10 +704,7 @@ function setPanelStatus(text)
 		if(debugStringTimerOn && (text != "Panel Ready"))
 			window.setTimeout("setPanelStatus(\"Panel Ready\")",2000)
 	
-        if(socketStatus == SOCKET_CONNECTED)
-            setSVGText("panelStatus", text + " (" + socketStatus + " to " + location.host + ")");
-        else
-            setSVGText("panelStatus", text + " (" + socketStatus + ")");
+        setSVGText("panelStatus", text + " (" + socketStatus + ")");
 	}
 	else
 		alert("setPanelStatus(...) failed to update string to " + text);
