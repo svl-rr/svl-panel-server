@@ -52,7 +52,7 @@ function setValue(objectValue)
 
 function initSocketToServer(panelName)
 {
-    socket = io.connect(location.host);
+    socket = io.connect();
 
     socket.on('connect', function ()
     {
