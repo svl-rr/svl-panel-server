@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>clock</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<style>
+	body {color:#0f0; background:#000;}
+	h1 {font-family:monospace; font-size:100pt; text-align:center;}
+	</style>
+</head>
+<body>
+<h1><span id="clock">12:00</span></h1>
+<script>
+$(document).ready(function() {
+	var socket = io.connect();
+	socket.on('time', function (newTime) {
+		$("#clock").text(newTime);
+	});
+});
+</script>
+</body>
+</html>

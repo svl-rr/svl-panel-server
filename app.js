@@ -27,8 +27,8 @@ var path = require('path'),
 	connect = require('connect'),
 	dataHandler = require('./dataHandler'),
 	fastClock = require('./fastClock'),
-	clients = [];
-
+	clients = [],
+	currentTime = "12:00";
 
 // Create an HTTP Server Using the connect framework. This server is
 // responsible for vending static content such as the HTML, JS, CSS,
@@ -55,6 +55,7 @@ var io = require('socket.io').listen(server)
 	.set('log level', 1)
 	.sockets.on('connection', function (socket) {
 		clients[socket.id] = socket;	// track the socket in clients array
+		socket.emit('time', currentTime);	// update fast clock for client
 
 		socket.on('register', function (panelName) {
 			if (panelName !== null) {
@@ -110,10 +111,12 @@ dataHandler.trackLayoutState(function (changedState) {
 
 fastClock.trackFastClock(function (newTime) {
 	var i;
+	
+	currentTime = newTime;
 //	console.log("fastClock Updated: "+newTime);
 	for (i in clients) {
 		if (clients.hasOwnProperty(i)) {
-			clients[i].emit('time', newTime);
+			clients[i].emit('time', currentTime);
 		}
 	}
 });
