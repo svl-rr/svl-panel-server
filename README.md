@@ -5,11 +5,14 @@ A web-based control panel server which allows multiple simultaneous web clients 
 _NOTE: The program is specifically designed to work only at the [Silicon Valley Lines Model Railroad Club][]._
 
 ##How Does it work?
-The server is built upon [connect][] and [socket.io][] to create a serve control panels. Both server-side and client-side JavaScript is used to glue everything together.
-Upon launch, the code connects to the JMRI xmlIo servlet to discerns the initial state of each turnout and sensor. Subsequent updates to the layout state are obtained via long duration XmlHttpRequests.
+svl-panel-server is built upon [connect][] and [socket.io][], and works in concert with the [JMRI][] miniWebServer.
+Server-side and client-side JavaScript is used to glue everything together.
+At startup, the server connects to the JMRI server to determine the state of each turnout and sensor.
+Subsequent updates to the layout state are obtained via XmlHttpRequest.
 
-Each client establishes a [socket.io][] connection back to the server. The client sends [JSON][] messages via the connection to either look up or manipulate the layout state.
-Whenever the state of the layout changes, each connected client receives update message to keep the user interfaces in synch everywhere. 
+Each client establishes a [socket.io][] connection back to the server.
+The client sends [JSON][] messages via the connection to either look up or manipulate the layout state.
+Whenever the state of the layout changes, each connected client receives update message to keep the user interfaces in synch everywhere.
 
 ##Installing the Software
 * Install [JMRI][]
