@@ -52,9 +52,6 @@ function xmlioRequest(host, port, xml, callback) {
 		});
 	});
 
-	req.on('error', function (e) {
-		console.log('problem with request: ' + e.message);
-	});
 //	console.log("JMRI REQUEST: " + xml);
 	req.write(xml);
 	req.end();
