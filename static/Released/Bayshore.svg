@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="Bayshore.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -498,10 +498,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3397168"
-     inkscape:cx="609.28149"
+     inkscape:cx="518.96389"
      inkscape:cy="512.44707"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -553,19 +553,19 @@
      transform="translate(0,-312.24738)"
      sodipodi:insensitive="true">
     <rect
-       y="312.24738"
-       x="0"
-       height="816.58087"
-       width="1240"
-       id="rect3221"
-       style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <rect
        style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="panelBackground"
+       id="panelBackgroundSmall"
        width="1047.9579"
        height="690.11475"
        x="0"
        y="312.24738" />
+    <rect
+       y="312.24738"
+       x="0"
+       height="816.58087"
+       width="1240"
+       id="panelBackground"
+       style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1250,8 +1250,8 @@
      style="display:inline">
     <a
        xlink:href="Cavanaugh.svg"
-       transform="translate(-100,50.46618)"
-       id="cavanaughLink">
+       id="cavanaughLink"
+       transform="translate(-100,50.46618)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

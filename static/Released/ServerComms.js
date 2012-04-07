@@ -74,6 +74,11 @@ function initSocketToServer(panelName)
         socketStatus = SOCKET_DISCONNECTED;        
         handleSocketDisconnect();
     });
+    
+    socket.on('time', function (time)
+    {
+        handleSocketTime(time);
+    });
 }
 
 function serverSet(setArray)
