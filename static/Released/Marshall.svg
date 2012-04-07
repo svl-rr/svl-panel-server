@@ -24,15 +24,15 @@
      id="PanelTitle">Marshall</title>
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Marshall.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -497,15 +497,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2586501"
-     inkscape:cx="581.49982"
+     inkscape:zoom="1.0263363"
+     inkscape:cx="463.60474"
      inkscape:cy="420.72757"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="167"
+     inkscape:window-x="26"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -553,19 +553,19 @@
      transform="translate(0,-312.24738)"
      sodipodi:insensitive="true">
     <rect
-       y="312.24738"
-       x="0"
-       height="928.53143"
-       width="1410"
-       id="rect3221"
-       style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <rect
        style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="panelBackground"
+       id="panelBackgroundSmall"
        width="1047.9579"
        height="690.11475"
        x="0"
        y="312.24738" />
+    <rect
+       y="312.24738"
+       x="0"
+       height="928.53143"
+       width="1410"
+       id="panelBackground"
+       style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1161,9 +1161,9 @@
      transform="translate(0,-5.1335083e-4)">
     <a
        xlink:href="SVLTimber.svg"
-       id="a3239"
+       style="display:inline"
        transform="translate(870,302.4172)"
-       style="display:inline">
+       id="a3239">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1179,9 +1179,9 @@
     </a>
     <a
        xlink:href="NowheresYard.svg"
-       style="display:inline"
+       transform="translate(-100,312.41719)"
        id="pasoLink"
-       transform="translate(-100,312.41719)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1201,9 +1201,9 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       style="display:inline"
+       id="mountMarvelLink"
        transform="translate(640,132.41721)"
-       id="mountMarvelLink">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3126"
