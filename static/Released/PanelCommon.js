@@ -37,6 +37,8 @@ var SERVER_TYPE_SENSOR = "sensor";
 
 var SERVER_NAME_MAINLINELOCKED = "Mainline Locked";
 
+var connectedBackgroundColor = null;
+
 /* PanelTurnout([String] id, [boolean] flipBit)
  * PanelTurnout object to contain id and flipbit, which is used to invert the graphic status
  */
@@ -150,6 +152,15 @@ function init(evt)
     if(typeof dispatchInit == 'function')
 		dispatchInit(evt);
     
+    var panelBackground = svgDocument.getElementById("panelBackground");
+    if(panelBackground != null)
+    {
+        connectedBackgroundColor = getStyleSubAttribute(panelBackground, "fill");
+        
+        if(connectedBackgroundColor == null)
+           connectedBackgroundColor = 'yellow';
+    }
+    
     if(enableServerAccesses)
         initSocketToServer(getPanelTitle());
 	
@@ -166,7 +177,13 @@ function init(evt)
 function handleSocketConnect()
 {
     setPanelStatus("Panel Ready");
-        
+    
+    var panelBackground = svgDocument.getElementById("panelBackground");
+    if(panelBackground != null)
+    {
+        setStyleSubAttribute(panelBackground, "fill", connectedBackgroundColor);
+    }
+    
     // Now that we are connected, try to update all objects from the server
     updateAllObjectsFromServer();
 }
@@ -241,11 +258,25 @@ function handleSocketDataResponse(dataArray)
     setPanelStatus("Panel Updated");
 }
 
+
+/* handleSocketTime([String] time)
+ * Called by ServerComms.js file to update the svg with JMRI fast clock data.  Currently stubbed out.
+ */
+function handleSocketTime(time)
+{
+}
+
 /* handleSocketDisconnect()
  * Called by ServerComms.js file to allow the panel to clean up itself if the socket connection is lost
  */
 function handleSocketDisconnect()
 {
+    var panelBackground = svgDocument.getElementById("panelBackground");
+    if(panelBackground != null)
+    {
+        setStyleSubAttribute(panelBackground, "fill", "#700000");
+    }
+
     setPanelStatus("Panel Ready");
 }
 

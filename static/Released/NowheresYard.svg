@@ -24,15 +24,15 @@
      id="PanelTitle">Nowheres Yard</title>
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="NowheresYard.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -501,7 +501,7 @@
      inkscape:cx="632.06635"
      inkscape:cy="417.58503"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -553,19 +553,19 @@
      transform="translate(0,-312.24738)"
      sodipodi:insensitive="true">
     <rect
-       y="312.24738"
-       x="0"
-       height="928.53143"
-       width="1410"
-       id="rect3221"
-       style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none" />
-    <rect
        style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="panelBackground"
+       id="panelBackgroundSmall"
        width="1047.9579"
        height="690.11475"
        x="0"
        y="312.24738" />
+    <rect
+       y="312.24738"
+       x="0"
+       height="928.53143"
+       width="1410"
+       id="panelBackground"
+       style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1963,8 +1963,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Paso.svg"
-       transform="translate(-100,-26.000446)"
-       id="pasoLink">
+       id="pasoLink"
+       transform="translate(-100,-26.000446)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1980,8 +1980,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       id="mountMarvelLink"
-       transform="translate(1150,472.41675)">
+       transform="translate(1150,472.41675)"
+       id="mountMarvelLink">
       <text
          sodipodi:linespacing="125%"
          id="text3126"
@@ -2004,9 +2004,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Marshall.svg"
-       style="display:inline"
+       id="a3239"
        transform="translate(1100,452.4172)"
-       id="a3239">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
