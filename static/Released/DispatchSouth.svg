@@ -33,12 +33,12 @@
      id="script6" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="DispatchSouthRedirect.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -591,14 +591,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5219183"
-     inkscape:cx="753.34203"
+     inkscape:cx="409.67393"
      inkscape:cy="431.49544"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
-     inkscape:window-x="-4"
+     inkscape:window-x="-1"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -2007,7 +2007,7 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
        d="m 320,174.094 -240,0"
-       id="block470A"
+       id="block470"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
@@ -2020,7 +2020,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
-       id="block471B"
+       id="block471"
        d="m 320,194.094 -20,20 -220,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none">
       <title
@@ -2128,9 +2128,14 @@
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="path4584"
+       id="block405"
        d="m 600,294.094 -80,0"
-       style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+       style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:label="#path4584"
+       onclick="dispatchChangeToNextState(evt.target.id);">
+      <title
+         id="title3991">Unauthorized</title>
+    </path>
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 640,454.094 -280,0"
@@ -2202,8 +2207,8 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="block200"
-       d="m 430,534.094 -310,0"
+       id="block200A"
+       d="m 230,534.09403 -110,-3e-5"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none">
       <title
          id="title4462">Unauthorized</title>
@@ -2337,11 +2342,10 @@
          id="title4306">Unauthorized</title>
     </path>
     <path
-       onclick="dispatchChangeToNextState(evt.target.id);"
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="block470B"
+       id="block480"
        d="m 70,174.094 -30,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none">
       <title
@@ -2350,11 +2354,10 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:none"
        d="m 70,214.094 -30,0"
-       id="block471A"
+       id="block481"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       inkscape:label="#path3858"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       inkscape:label="#path3858">
       <title
          id="title4422">Unauthorized</title>
     </path>
@@ -2399,6 +2402,40 @@
        id="path4328"
        d="m 960,664.09403 c -53.33333,0 -26.66667,0 -80,0 l -10,-10 -10,0 10,0 10,-10 80,0"
        style="opacity:0.25;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <use
+       inkscape:label="#use4388"
+       height="740.11475"
+       width="1047.9579"
+       transform="translate(150,234.09403)"
+       id="use3988"
+       xlink:href="#turnout_0deg_normal"
+       y="0"
+       x="0">
+      <title
+         id="title3990">TO392</title>
+    </use>
+    <path
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 430,534.09403 -160,-3e-5"
+       id="block200B"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:label="#path3858"
+       onclick="dispatchChangeToNextState(evt.target.id);">
+      <title
+         id="title3994">Unauthorized</title>
+    </path>
+    <path
+       onclick="dispatchChangeToNextState(evt.target.id);"
+       inkscape:label="#path3232"
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="block203"
+       d="m 150,494.09403 60,0 20,20"
+       style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none">
+      <title
+         id="title4002">Unauthorized</title>
+    </path>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2845,17 +2882,17 @@
          sodipodi:role="line">Interchange</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="530"
-       y="280.11429"
+       style="font-size:10.05991459px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       x="540"
+       y="304.11432"
        id="text4864"
        sodipodi:linespacing="125%"
        onclick=""
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="tspan4866"
-         x="530"
-         y="280.11429">Industrial</tspan></text>
+         x="540"
+         y="304.11432">Industrial</tspan></text>
     <text
        inkscape:label="#text4498"
        onclick=""
@@ -2891,7 +2928,7 @@
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="280"
        y="520.11432"
-       id="block200TrainLabel"
+       id="block200BTrainLabel"
        sodipodi:linespacing="125%"
        onclick=""
        inkscape:label="#text4498"><tspan
@@ -3098,7 +3135,7 @@
        inkscape:label="#text4498"
        onclick=""
        sodipodi:linespacing="125%"
-       id="block471BTrainLabel"
+       id="block471TrainLabel"
        y="200.11433"
        x="180"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
@@ -3112,7 +3149,7 @@
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        x="180"
        y="160.11433"
-       id="block470ATrainLabel"
+       id="block470TrainLabel"
        sodipodi:linespacing="125%"
        onclick=""
        inkscape:label="#text4498"><tspan
@@ -3290,5 +3327,70 @@
          id="tspan4322"
          x="160.58565"
          y="433.75073">_</tspan></text>
+    <text
+       inkscape:label="#text4498"
+       onclick=""
+       sodipodi:linespacing="125%"
+       id="block480TrainLabel"
+       y="160.11433"
+       x="60"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       xml:space="preserve"><tspan
+         y="160.11433"
+         x="60"
+         id="tspan3978"
+         sodipodi:role="line">_</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       x="50"
+       y="200.11433"
+       id="block481TrainLabel"
+       sodipodi:linespacing="125%"
+       onclick=""
+       inkscape:label="#text4498"><tspan
+         sodipodi:role="line"
+         id="tspan3982"
+         x="50"
+         y="200.11433">_</tspan></text>
+    <text
+       inkscape:label="#text4498"
+       onclick=""
+       sodipodi:linespacing="125%"
+       id="block405TrainLabel"
+       y="280.11432"
+       x="560"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       xml:space="preserve"><tspan
+         y="280.11432"
+         x="560"
+         id="tspan3986"
+         sodipodi:role="line">_</tspan></text>
+    <text
+       inkscape:label="#text4498"
+       onclick=""
+       sodipodi:linespacing="125%"
+       id="text4004"
+       y="506.11432"
+       x="160"
+       style="font-size:10.05991459px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       xml:space="preserve"><tspan
+         y="506.11432"
+         x="160"
+         id="tspan4006"
+         sodipodi:role="line">Industrial</tspan></text>
+    <text
+       inkscape:label="#text4498"
+       onclick=""
+       sodipodi:linespacing="125%"
+       id="block203TrainLabel"
+       y="480.11432"
+       x="180"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       xml:space="preserve"><tspan
+         y="480.11432"
+         x="180"
+         id="tspan4010"
+         sodipodi:role="line">_</tspan></text>
   </g>
 </svg>
