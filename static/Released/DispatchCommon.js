@@ -53,7 +53,8 @@ function dispatchChangeToNextState(elemID)
 		return;
 	}
     
-    var currentState = getDispatchSegmentState(elemID);
+    var currentState = getDispatchSegmentState(DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(elemID));
+    
     if(currentState == UNAUTHORIZED_STATE)
     {
 		if((nextAuthorizationTrainID == "") || (nextAuthorizationTrainID == " "))
@@ -104,18 +105,12 @@ function dispatchChangeToNextState(elemID)
 
 function setDispatchBlockState(elemID, state, trainID)
 {
-	var elem = svgDocument.getElementById(elemID);
-	
-	if(elem == null)
-	{
-		setPanelError("Bad object ID passed to setDispatchBlockState(" + elemID + ")");
-		return;
-	}
-
 	var blockNum = getDCCAddr(elemID);
 	
+    setDispatchSegmentState(DISPATCHSEGMENT_OBJID_PREFIX + blockNum, state, trainID);
+    
 	setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum, state, trainID);
-	
+    
 	var nextSubBlock = 'A';
 	var success = setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum + nextSubBlock, state, trainID);
 	while(success)
@@ -136,9 +131,7 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
 	if(trainID != null)
         addElementTitle(elemID, trainID);
 
-    setDispatchSegmentState(elemID, state, trainID);
-
-	var lowLevelTrainID = getDispatchSegmentTrainID(elemID);
+	var lowLevelTrainID = getDispatchSegmentTrainID(DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(elemID));
 
 	var elemIDTextTrainID = elemID + "TrainLabel";
 	var elemTextTrainID = svgDocument.getElementById(elemIDTextTrainID);
@@ -213,22 +206,22 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
     return true;
 }
 
-function getDispatchSegmentState(elemID)
+function getDispatchSegmentState(blockID)
 {
     for(var i = 0; i < dispatchSegmentStates.length; i++)
     {
-        if(dispatchSegmentStates[i].name == elemID)
+        if(dispatchSegmentStates[i].name == blockID)
             return dispatchSegmentStates[i].state; 
     }
     
     return UNAUTHORIZED_STATE;
 }
 
-function setDispatchSegmentState(elemID, state, trainID)
+function setDispatchSegmentState(blockID, state, trainID)
 {
     for(var i = 0; i < dispatchSegmentStates.length; i++)
     {
-        if(dispatchSegmentStates[i].name == elemID)
+        if(dispatchSegmentStates[i].name == blockID)
         {
 			// Update the new state
             dispatchSegmentStates[i].state = state;
@@ -236,20 +229,23 @@ function setDispatchSegmentState(elemID, state, trainID)
 			// Only update trainID if it is not null
 			if(trainID != null)
 				dispatchSegmentStates[i].trainID = trainID;
-			
+            
+            serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + dispatchSegmentStates[i].trainID)]);
             return;
         }
     }
     
 	// Didn't find an entry so create a new one
-    dispatchSegmentStates.push({name:elemID, state:state, trainID:trainID});
+    dispatchSegmentStates.push({name:blockID, state:state, trainID:trainID});
+    
+    serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
 }
 
-function getDispatchSegmentTrainID(elemID)
+function getDispatchSegmentTrainID(blockID)
 {
     for(var i = 0; i < dispatchSegmentStates.length; i++)
     {
-        if(dispatchSegmentStates[i].name == elemID)
+        if(dispatchSegmentStates[i].name == blockID)
             return dispatchSegmentStates[i].trainID; 
     }
     
@@ -407,7 +403,19 @@ function getCommonDispatchStates()
         commonObjs.push(new ServerObject("s" + i, SERVER_TYPE_DISPATCH, getTrainIDText("s" + i + "Train")));
         commonObjs.push(new ServerObject("o" + i, SERVER_TYPE_DISPATCH, getTrainIDText("o" + i + "Train")));
     }
-    
+
+    var blockElements = [];    
+    var allBlockElements = getAllObjectsOfTagNameAndID("path", DISPATCHSEGMENT_OBJID_PREFIX + "\\d+[A-Z]?");
+	for(var j in allBlockElements)
+    {
+        var blockID = DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(allBlockElements[j].id);
+        if(blockElements[blockID] == undefined)
+            blockElements[blockID] = blockID;
+    }
+
+    for(var k in blockElements)
+        commonObjs.push(new ServerObject(blockElements[k], SERVER_TYPE_DISPATCH, null));
+
     return commonObjs;
 }
 
@@ -432,6 +440,17 @@ function setDispatchState(stateObj)
         return true;
     }
 
+    else if(stateObj.name.search(DISPATCHSEGMENT_OBJID_PREFIX) == 0)
+    {
+        var colonLoc = stateObj.value.search(':');
+        var preColonState = stateObj.value.substring(0, colonLoc);
+        var postColonTrainID = stateObj.value.substring(colonLoc+1);
+        
+        setDispatchBlockState(stateObj.name, preColonState, postColonTrainID);
+    
+        return true;
+    }
+
     return false;
 }
 
@@ -440,6 +459,11 @@ function getDispatchState(stateObj)
     if(stateObj.name.search("[n|s|o][1-8]") == 0)
     {
         stateObj.value = getTrainIDText(stateObj.name + "Train");
+        return stateObj;
+    }
+    else if(stateObj.name.search(DISPATCHSEGMENT_OBJID_PREFIX) == 0)
+    {
+        stateObj.value = getDispatchSegmentState(stateObj.name) + ":" + getDispatchSegmentTrainID(stateObj.name);
         return stateObj;
     }
     
