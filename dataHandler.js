@@ -60,12 +60,12 @@ function updateGlobalStateFromDataItem(item) {
 	}
 	if (globalDataArray[item.name] === undefined) {
 		globalDataArray[item.name] = item;
-//		console.log("INITIALIZED: " + item.name + ":=" + item.value);
+		//console.log("INITIALIZED: " + item.name + ":=" + item.value);
 		return true;
 	}
 	if (item.value !== globalDataArray[item.name].value) {
 		globalDataArray[item.name] = item;
-//		console.log("UPDATED: " + item.name + ":=" + item.value);
+		//console.log("UPDATED: " + item.name + ":=" + item.value);
 		return true;
 	}
 	return false;
@@ -260,12 +260,14 @@ function registerPanel(socket, panelName) {
 function unregisterPanel(socket, panelName) {
 	console.log("unregisterPanel " + panelName);
 	if (panelName.search("Dispatch") !== -1) {
-		numDispatchPanels = numDispatchPanels - 1;
+		numDispatchPanels = (numDispatchPanels > 0 ? numDispatchPanels - 1 : 0);
 		// if the last dispatch panel was closed, be sure to unlock the mainline
 		if (numDispatchPanels === 0) {
 			console.log("last dispatch panel closed; unlocking mainline");
-			globalDataArray[SERVER_NAME_MAINLINELOCKED].value = false;
-			socket.broadcast.emit('update', [globalDataArray[SERVER_NAME_MAINLINELOCKED]]);
+			if (globalDataArray[SERVER_NAME_MAINLINELOCKED] !== undefined) {
+                globalDataArray[SERVER_NAME_MAINLINELOCKED].value = false;
+                socket.broadcast.emit('update', [globalDataArray[SERVER_NAME_MAINLINELOCKED]]);
+            }
 		}
 	}
 }
