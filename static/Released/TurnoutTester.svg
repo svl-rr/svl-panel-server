@@ -23,19 +23,17 @@
   <script
      xlink:href="ServerComms.js"
      id="script3177" />
-  <title
-     id="PanelTitle">Turnout Tester</title>
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="TurnoutTester.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
-<linearGradient
+    <linearGradient
        id="linearGradient5066">
       <stop
          style="stop-color:#000000;stop-opacity:0.1882353;"
@@ -76,93 +74,6 @@
          offset="0"
          id="stop4139" />
     </linearGradient>
-    <filter
-       inkscape:collect="always"
-       id="filter4524"
-       x="0"
-       width="1"
-       y="0"
-       height="1"
-       inkscape:label="Desaturate"
-       inkscape:menu="Color"
-       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.20166101"
-         id="feGaussianBlur4526"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4802" />
-      <feColorMatrix
-         id="feColorMatrix4804"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4806" />
-      <feColorMatrix
-         id="feColorMatrix4808"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4810" />
-      <feColorMatrix
-         id="feColorMatrix4812"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4814" />
-      <feColorMatrix
-         id="feColorMatrix4816"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       id="filter4608"
-       inkscape:label="Desaturate"
-       x="0"
-       y="0"
-       width="1"
-       height="1"
-       inkscape:menu="Color"
-       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.075006995"
-         id="feGaussianBlur4610"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4826" />
-      <feColorMatrix
-         id="feColorMatrix4828"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic" />
-    </filter>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4186"
@@ -249,8 +160,7 @@
        y1="75.114258"
        x2="70.5"
        y2="75.114258" />
-     
-<marker
+    <marker
        inkscape:stockid="TriangleAuthNBMarker"
        orient="auto"
        refY="0"
@@ -630,7 +540,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Nowheres Passenger Facility</dc:title>
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>

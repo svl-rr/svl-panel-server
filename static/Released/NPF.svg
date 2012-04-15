@@ -23,16 +23,14 @@
   <script
      xlink:href="ServerComms.js"
      id="script3177" />
-  <title
-     id="PanelTitle">Nowheres Passenger Facility</title>
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="NPF.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -498,7 +496,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.17"
-     inkscape:cx="343.7945"
+     inkscape:cx="195.07655"
      inkscape:cy="340.03813"
      inkscape:document-units="px"
      inkscape:current-layer="textLayer"
@@ -542,7 +540,9 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Nowheres Passenger Facility</dc:title>
+        <dc:title></dc:title>
+        <cc:license
+           rdf:resource="" />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -800,7 +800,7 @@
        height="740.11475"
        inkscape:label="#use4384">
       <title
-         id="title3390">TO468</title>
+         id="title3390">TO</title>
     </use>
     <use
        height="740.11475"
@@ -812,7 +812,7 @@
        x="0"
        inkscape:label="#use4386">
       <title
-         id="title3392">TO467</title>
+         id="title3392">TO</title>
     </use>
     <use
        x="0"
@@ -824,7 +824,7 @@
        height="740.11475"
        inkscape:label="#use4413">
       <title
-         id="title3388">TO470</title>
+         id="title3388">TO</title>
     </use>
     <use
        height="740.11475"
@@ -836,7 +836,7 @@
        x="0"
        inkscape:label="#use4366">
       <title
-         id="title3382">TO475</title>
+         id="title3382">TO</title>
     </use>
     <use
        x="0"
@@ -848,7 +848,7 @@
        height="740.11475"
        inkscape:label="#use4397">
       <title
-         id="title3384">TO474</title>
+         id="title3384">TO</title>
     </use>
     <use
        height="740.11475"
@@ -860,7 +860,7 @@
        x="0"
        inkscape:label="#use4411">
       <title
-         id="title3386">TO472</title>
+         id="title3386">TO</title>
     </use>
     <use
        xlink:href="#turnout_0deg_normal"
@@ -872,7 +872,7 @@
        height="740.11475"
        inkscape:label="#use4376">
       <title
-         id="title3368">TO473B</title>
+         id="title3368">TO</title>
     </use>
     <use
        x="0"
@@ -884,7 +884,7 @@
        height="740.11475"
        inkscape:label="#use4415">
       <title
-         id="title3366">TO473A</title>
+         id="title3366">TO</title>
     </use>
     <use
        height="740.11475"
@@ -896,7 +896,7 @@
        x="0"
        inkscape:label="#use4417">
       <title
-         id="title3364">TO471</title>
+         id="title3364">TO</title>
     </use>
     <use
        x="0"
@@ -908,7 +908,7 @@
        height="740.11475"
        inkscape:label="#use4419">
       <title
-         id="title3362">TO469</title>
+         id="title3362">TO</title>
     </use>
     <use
        x="0"
@@ -920,7 +920,7 @@
        height="740.11475"
        inkscape:label="#use4378">
       <title
-         id="title3380">TO514B</title>
+         id="title3380">TO</title>
     </use>
     <use
        height="740.11475"
@@ -932,7 +932,7 @@
        x="0"
        inkscape:label="#use4425">
       <title
-         id="title3378">TO514A</title>
+         id="title3378">TO</title>
     </use>
     <use
        x="0"
@@ -944,7 +944,7 @@
        height="740.11475"
        inkscape:label="#use4430">
       <title
-         id="title3376">TO517</title>
+         id="title3376">TO</title>
     </use>
     <use
        x="0"
@@ -956,7 +956,7 @@
        height="740.11475"
        inkscape:label="#use4380">
       <title
-         id="title3372">TO515</title>
+         id="title3372">TO</title>
     </use>
     <use
        height="740.11475"
@@ -968,7 +968,7 @@
        x="0"
        inkscape:label="#use4382">
       <title
-         id="title3370">TO520</title>
+         id="title3370">TO</title>
     </use>
     <path
        sodipodi:nodetypes="cc"
@@ -1004,7 +1004,7 @@
        height="690.11475"
        inkscape:label="#use3928">
       <title
-         id="title3201">TO518</title>
+         id="title3201">TO</title>
     </use>
     <use
        inkscape:label="#use3928"
@@ -1016,7 +1016,7 @@
        y="0"
        x="0">
       <title
-         id="title3205">TO519</title>
+         id="title3205">TO</title>
     </use>
   </g>
   <g
@@ -1075,7 +1075,7 @@
        x="0"
        inkscape:label="#use4436">
       <title
-         id="title3352">TO494A</title>
+         id="title3352">TO</title>
     </use>
     <use
        x="0"
@@ -1087,7 +1087,7 @@
        height="740.11475"
        inkscape:label="#use4423">
       <title
-         id="title3354">TO493</title>
+         id="title3354">TO</title>
     </use>
     <use
        height="740.11475"
@@ -1099,7 +1099,7 @@
        x="0"
        inkscape:label="#use4421">
       <title
-         id="title3394">TO492</title>
+         id="title3394">TO</title>
     </use>
     <use
        height="740.11475"
@@ -1111,7 +1111,7 @@
        x="0"
        inkscape:label="#use4432">
       <title
-         id="title3358">TO508</title>
+         id="title3358">TO</title>
     </use>
     <use
        x="0"
@@ -1123,7 +1123,7 @@
        height="740.11475"
        inkscape:label="#use4434">
       <title
-         id="title3356">TO507</title>
+         id="title3356">TO</title>
     </use>
     <use
        x="0"
@@ -1135,7 +1135,7 @@
        height="740.11475"
        inkscape:label="#use4388">
       <title
-         id="title3360">TO509</title>
+         id="title3360">TO</title>
     </use>
     <path
        sodipodi:nodetypes="ccc"
@@ -1169,8 +1169,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="NowheresYard.svg"
-       id="nowheresYardSouthLeadLink"
-       transform="translate(10,69.999557)">
+       transform="translate(10,69.999557)"
+       id="nowheresYardSouthLeadLink">
       <text
          xml:space="preserve"
          style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
@@ -1185,8 +1185,8 @@
     </a>
     <a
        xlink:href="NowheresYard.svg"
-       transform="translate(550,43.999114)"
-       id="nowheresYardNorthLink">
+       id="nowheresYardNorthLink"
+       transform="translate(550,43.999114)">
       <text
          sodipodi:linespacing="125%"
          id="text3338"
@@ -1201,8 +1201,8 @@
     </a>
     <a
        xlink:href="Paso.svg"
-       id="pasoLink"
-       transform="translate(822,403.99956)">
+       transform="translate(822,403.99956)"
+       id="pasoLink">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1218,8 +1218,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       transform="translate(-150,-6.000448)"
-       id="mountMarvelLink">
+       id="mountMarvelLink"
+       transform="translate(-150,-6.000448)">
       <text
          sodipodi:linespacing="125%"
          id="text3126"
