@@ -22,15 +22,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="NowheresYard.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -496,10 +496,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.02"
-     inkscape:cx="461.47811"
+     inkscape:cx="342.85066"
      inkscape:cy="417.58503"
      inkscape:document-units="px"
-     inkscape:current-layer="backgroundLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -540,7 +540,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <cc:license
            rdf:resource="" />
       </cc:Work>
@@ -658,8 +658,7 @@
      id="industrialTrackLayer"
      inkscape:label="Industrial Track"
      transform="translate(0,-3.9797634)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 380,272.5112 -20,-20 -30,0"
@@ -1111,7 +1110,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(-1,0,0,-1,760,1032.5112)"
-       id="TO991"
+       id="TO499"
        xlink:href="#turnout_45deg_normal"
        y="0"
        x="0">
@@ -1210,7 +1209,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(1,0,0,-1,600,912.5112)"
-       id="TO985"
+       id="TO476"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1963,8 +1962,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Paso.svg"
-       transform="translate(-100,-26.000446)"
-       id="pasoLink">
+       id="pasoLink"
+       transform="translate(-100,-26.000446)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1980,8 +1979,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       id="mountMarvelLink"
-       transform="translate(1150,472.41675)">
+       transform="translate(1150,472.41675)"
+       id="mountMarvelLink">
       <text
          sodipodi:linespacing="125%"
          id="text3126"
@@ -2004,9 +2003,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Marshall.svg"
-       style="display:inline"
+       id="a3239"
        transform="translate(1100,452.4172)"
-       id="a3239">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
