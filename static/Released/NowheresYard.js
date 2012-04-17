@@ -45,7 +45,7 @@ function panelInit(evt)
     createPanelTurnout("TO502", true);
 	createPanelTurnout("TO501", true);
 	createPanelTurnout("TO500", true);
-//	createPanelTurnout("TO991", true); // not hooked up
+	createPanelTurnout("TO499", true); // to be hooked up 4/20/12
     
     // South Arrival
     createPanelTurnout("TO495", true);
@@ -54,7 +54,7 @@ function panelInit(evt)
 	createPanelTurnout("TO497", true);
 	createPanelTurnout("TO498A", true);
 	createPanelTurnout("TO498B", false);
-//    createPanelTurnout("TO985", true); // not hooked up
+    createPanelTurnout("TO476", true); // to be hooked up 4/20/12
 
     // Class Yard
     createPanelTurnout("TO491", true);

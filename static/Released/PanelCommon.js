@@ -758,10 +758,10 @@ function setPanelError(text)
  */
 function getPanelTitle()
 {
-    var panelTitle = svgDocument.getElementById("PanelTitle");
+    var panelTitle = svgDocument.getElementById("panelTitle");
     
     if(panelTitle != null)
-        return panelTitle.firstChild.nodeValue;
+        return panelTitle.firstChild.firstChild.nodeValue;
         
     return "No Title Found";
 }
