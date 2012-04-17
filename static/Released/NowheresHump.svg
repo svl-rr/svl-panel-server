@@ -22,15 +22,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
-     xlink:href="Marshall.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     xlink:href="NowheresHump.js"
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -496,10 +496,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0263363"
-     inkscape:cx="294.06967"
-     inkscape:cy="420.72757"
+     inkscape:cx="725.80562"
+     inkscape:cy="650.26485"
      inkscape:document-units="px"
-     inkscape:current-layer="backgroundLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -540,7 +540,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <cc:license
            rdf:resource="" />
       </cc:Work>
@@ -575,15 +575,15 @@
      style="display:inline">
     <text
        xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="610"
+       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+       x="700"
        y="62.511196"
        id="panelTitle"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan3823"
-         x="610"
-         y="62.511196">Marshall</tspan></text>
+         x="700"
+         y="62.511196">Nowhere's Hump (Marshall)</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="panelStatus"
@@ -598,7 +598,7 @@
          sodipodi:role="line">Panel not initialized</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 500,39.094003 -10,15 20,0 z"
+       d="m 340,37.511197 -10,15 20,0 z"
        id="leftLevelTriangle"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -607,7 +607,7 @@
        y="0"
        xlink:href="#leftLevelTriangle"
        id="rightLevelTriangle"
-       transform="translate(410,9.3749918e-8)"
+       transform="translate(720,0)"
        width="1047.9579"
        height="690.11475"
        inkscape:transform-center-x="-40"
@@ -1161,9 +1161,9 @@
      transform="translate(0,-5.1335083e-4)">
     <a
        xlink:href="SVLTimber.svg"
-       id="a3239"
+       style="display:inline"
        transform="translate(870,302.4172)"
-       style="display:inline">
+       id="a3239">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1179,9 +1179,9 @@
     </a>
     <a
        xlink:href="NowheresYard.svg"
-       style="display:inline"
+       transform="translate(-100,312.41719)"
        id="pasoLink"
-       transform="translate(-100,312.41719)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1201,9 +1201,9 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       style="display:inline"
+       id="mountMarvelLink"
        transform="translate(640,132.41721)"
-       id="mountMarvelLink">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3126"

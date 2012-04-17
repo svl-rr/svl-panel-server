@@ -22,15 +22,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="NowheresYard.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -496,10 +496,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.02"
-     inkscape:cx="342.85066"
+     inkscape:cx="771.14794"
      inkscape:cy="417.58503"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="industrialPanelLinkLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -1962,8 +1962,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Paso.svg"
-       id="pasoLink"
-       transform="translate(-100,-26.000446)">
+       transform="translate(-100,-26.000446)"
+       id="pasoLink">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1979,8 +1979,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       transform="translate(1150,472.41675)"
-       id="mountMarvelLink">
+       id="mountMarvelLink"
+       transform="translate(1150,472.41675)">
       <text
          sodipodi:linespacing="125%"
          id="text3126"
@@ -1999,25 +1999,24 @@
      inkscape:groupmode="layer"
      id="industrialPanelLinkLayer"
      inkscape:label="Industrial Panel Links"
-     transform="translate(0,-5.1335083e-4)"
-     sodipodi:insensitive="true">
+     transform="translate(0,-5.1335083e-4)">
     <a
-       xlink:href="Marshall.svg"
-       id="a3239"
+       xlink:href="NowheresHump.svg"
+       style="display:inline"
        transform="translate(1100,452.4172)"
-       style="display:inline">
+       id="a3239">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
          style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
-         x="170"
+         x="160"
          y="146.11475"
          id="text3241"
          sodipodi:linespacing="125%"><tspan
            sodipodi:role="line"
            id="tspan3243"
-           x="170"
-           y="146.11475">Marshall</tspan></text>
+           x="160"
+           y="146.11475">Hump Yard</tspan></text>
     </a>
   </g>
   <g
