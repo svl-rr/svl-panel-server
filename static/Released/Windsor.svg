@@ -20,19 +20,17 @@
   <script
      xlink:href="ServerComms.js"
      id="script3331" />
-  <title
-     id="PanelTitle">Windsor</title>
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Windsor.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -498,7 +496,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.26"
-     inkscape:cx="571.377"
+     inkscape:cx="433.28176"
      inkscape:cy="358.81101"
      inkscape:document-units="px"
      inkscape:current-layer="textLayer"
@@ -542,7 +540,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Nowheres Passenger Facility</dc:title>
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -682,7 +680,7 @@
        y="0"
        x="0">
       <title
-         id="title3284">TO982B</title>
+         id="title3284">TO</title>
     </use>
     <path
        inkscape:label="#path4221"
@@ -702,7 +700,7 @@
        x="0"
        inkscape:label="#use4382">
       <title
-         id="title3383">TO982A</title>
+         id="title3383">TO</title>
     </use>
     <path
        sodipodi:nodetypes="ccc"
@@ -722,7 +720,7 @@
        width="1047.9579"
        height="740.11475">
       <title
-         id="title3389">TO993</title>
+         id="title3389">TO</title>
     </use>
     <use
        inkscape:label="#use4430"
@@ -734,7 +732,7 @@
        y="0"
        x="0">
       <title
-         id="title3397">TO984A</title>
+         id="title3397">TO</title>
     </use>
     <path
        onclick="track12LeadPath()"
@@ -762,7 +760,7 @@
        x="0"
        inkscape:label="#use4382">
       <title
-         id="title3493">TO980</title>
+         id="title3493">TO</title>
     </use>
     <path
        sodipodi:nodetypes="cc"
@@ -780,7 +778,7 @@
        height="740.11475"
        inkscape:label="#use4434">
       <title
-         id="title3188">TO984B</title>
+         id="title3188">TO</title>
     </use>
     <use
        inkscape:label="#use4434"
@@ -792,7 +790,7 @@
        y="0"
        x="0">
       <title
-         id="title3192">TO986B</title>
+         id="title3192">TO</title>
     </use>
     <use
        x="0"
@@ -804,7 +802,7 @@
        height="740.11475"
        inkscape:label="#use4434">
       <title
-         id="title3196">TO990B</title>
+         id="title3196">TO</title>
     </use>
     <path
        onclick="track3Path()"
@@ -848,7 +846,7 @@
        height="740.11475"
        inkscape:label="#use4430">
       <title
-         id="title3208">TO986A</title>
+         id="title3208">TO</title>
     </use>
     <use
        inkscape:label="#use4430"
@@ -860,7 +858,7 @@
        y="0"
        x="0">
       <title
-         id="title3212">TO990A</title>
+         id="title3212">TO</title>
     </use>
     <use
        x="0"
@@ -872,7 +870,7 @@
        height="740.11475"
        inkscape:label="#use4430">
       <title
-         id="title3216">TO989</title>
+         id="title3216">TO</title>
     </use>
     <path
        onclick="track7Path()"
@@ -916,7 +914,7 @@
        width="1047.9579"
        height="740.11475">
       <title
-         id="title3228">TO992B</title>
+         id="title3228">TO</title>
     </use>
     <use
        height="740.11475"
@@ -928,7 +926,7 @@
        x="0"
        inkscape:label="#use4382">
       <title
-         id="title3232">TO992A</title>
+         id="title3232">TO</title>
     </use>
     <path
        onclick="track12Path()"
@@ -984,9 +982,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="NowheresYard.svg"
-       style="display:inline"
+       transform="translate(-120,298.00049)"
        id="pasoLink"
-       transform="translate(-120,298.00049)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

@@ -26,20 +26,18 @@
   <script
      xlink:href="ServerComms.js"
      id="script3094" />
-  <title
-     id="PanelTitle">Dispatch North</title>
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="DispatchNorthRedirect.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <script
      xlink:href="DispatchCommon.js"
-     id="script3208"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script3208" />
   <defs
      id="defs4">
     <linearGradient
@@ -599,8 +597,8 @@
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="149"
-     inkscape:window-y="0"
+     inkscape:window-x="12"
+     inkscape:window-y="1"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -636,7 +634,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title>Nowheres Passenger Facility</dc:title>
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -1959,7 +1957,7 @@
        x="0"
        inkscape:label="#use4436">
       <title
-         id="title3352">TO494A</title>
+         id="title3352">TO</title>
     </use>
     <use
        x="0"
@@ -1971,7 +1969,7 @@
        height="740.11475"
        inkscape:label="#use4423">
       <title
-         id="title3354">TO493</title>
+         id="title3354">TO</title>
     </use>
     <use
        height="740.11475"
@@ -1983,7 +1981,7 @@
        x="0"
        inkscape:label="#use4421">
       <title
-         id="title3394">TO492</title>
+         id="title3394">TO</title>
     </use>
     <use
        height="740.11475"
@@ -1995,7 +1993,7 @@
        x="0"
        inkscape:label="#use4432">
       <title
-         id="title3358">TO508</title>
+         id="title3358">TO</title>
     </use>
     <use
        x="0"
@@ -2007,7 +2005,7 @@
        height="740.11475"
        inkscape:label="#use4434">
       <title
-         id="title3356">TO507</title>
+         id="title3356">TO</title>
     </use>
     <use
        x="0"
@@ -2019,7 +2017,7 @@
        height="740.11475"
        inkscape:label="#use4388">
       <title
-         id="title3360">TO509</title>
+         id="title3360">TO</title>
     </use>
     <path
        sodipodi:nodetypes="ccccccc"
@@ -2043,7 +2041,7 @@
        y="0"
        x="0">
       <title
-         id="title3903">TO999</title>
+         id="title3903">TO</title>
     </use>
     <use
        x="0"
@@ -2055,7 +2053,7 @@
        height="740.11475"
        inkscape:label="#use4388">
       <title
-         id="title3909">TO995</title>
+         id="title3909">TO</title>
     </use>
     <use
        inkscape:label="#use4388"
@@ -2067,7 +2065,7 @@
        y="0"
        x="0">
       <title
-         id="title3913">TO998</title>
+         id="title3913">TO</title>
     </use>
     <use
        x="0"
@@ -2079,7 +2077,7 @@
        height="740.11475"
        inkscape:label="#use4388">
       <title
-         id="title3917">TO997</title>
+         id="title3917">TO</title>
     </use>
     <path
        sodipodi:nodetypes="cccccccc"
@@ -2097,7 +2095,7 @@
        y="0"
        x="0">
       <title
-         id="title3945">TO993</title>
+         id="title3945">TO</title>
     </use>
     <path
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -2120,7 +2118,7 @@
        height="740.11475"
        inkscape:label="#use4388">
       <title
-         id="title3978">TO992</title>
+         id="title3978">TO</title>
     </use>
     <use
        inkscape:label="#use4388"
@@ -2132,7 +2130,7 @@
        y="0"
        x="0">
       <title
-         id="title3982">TO991</title>
+         id="title3982">TO</title>
     </use>
     <path
        style="opacity:0.5;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 2;stroke-dashoffset:0"
@@ -2186,7 +2184,7 @@
        height="740.11475"
        inkscape:label="#use4388">
       <title
-         id="title4050">TO990</title>
+         id="title4050">TO</title>
     </use>
     <path
        style="opacity:0.5;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:4, 2;stroke-dashoffset:0"
@@ -2227,7 +2225,7 @@
        y="0"
        x="0">
       <title
-         id="title4080">TO450</title>
+         id="title4080">TO</title>
     </use>
     <path
        sodipodi:nodetypes="cc"
@@ -2245,7 +2243,7 @@
        height="740.11475"
        inkscape:label="#use4388">
       <title
-         id="title5259">TO996</title>
+         id="title5259">TO</title>
     </use>
     <path
        sodipodi:nodetypes="cc"
@@ -2268,7 +2266,7 @@
        y="0"
        x="0">
       <title
-         id="title5265">TO994</title>
+         id="title5265">TO</title>
     </use>
     <path
        sodipodi:nodetypes="cc"
