@@ -45,7 +45,7 @@ function panelInit(evt)
     createPanelTurnout("TO502", true);
 	createPanelTurnout("TO501", true);
 	createPanelTurnout("TO500", true);
-	createPanelTurnout("TO499", true); // to be hooked up 4/20/12
+	createPanelTurnout("TO499", true);
     
     // South Arrival
     createPanelTurnout("TO495", true);
@@ -54,7 +54,7 @@ function panelInit(evt)
 	createPanelTurnout("TO497", true);
 	createPanelTurnout("TO498A", true);
 	createPanelTurnout("TO498B", false);
-    createPanelTurnout("TO476", true); // to be hooked up 4/20/12
+    createPanelTurnout("TO476", true);
 
     // Class Yard
     createPanelTurnout("TO491", true);
@@ -416,29 +416,42 @@ function pwrReadyNorthPath()
 
 function pwrReadySouthPath()
 {
-    //addTurnoutStateChangeRequest("TO985", 'N');
+    addTurnoutStateChangeRequest("TO476", 'R');
 	
-	//executePanelStateChangeRequests();
+	executePanelStateChangeRequests();
+}
+
+function powerReadyFuelLeadPath()
+{
+    if(getTurnoutState("TO498B") == 'R')
+		addTurnoutStateChangeRequest("TO498B", 'N');
+	else
+    {
+        addTurnoutStateChangeRequest("TO495", 'N');
+        addTurnoutStateChangeRequest("TO496", 'R');
+        addTurnoutStateChangeRequest("TO497", 'R');
+        addTurnoutStateChangeRequest("TO498A", 'R');
+    }
+    
+    executePanelStateChangeRequests();
 }
 
 function cabooseTrkNorthPath()
 {
-    /*
-    addTurnoutStateChangeRequest("TO503", 'N');
-    addTurnoutStateChangeRequest("TO502", 'N');
-    addTurnoutStateChangeRequest("TO501", 'N');
-    addTurnoutStateChangeRequest("TO500", 'N');
-    addTurnoutStateChangeRequest("TO991", 'N');
+    addTurnoutStateChangeRequest("TO503", 'R');
+    addTurnoutStateChangeRequest("TO502", 'R');
+    addTurnoutStateChangeRequest("TO501", 'R');
+    addTurnoutStateChangeRequest("TO500", 'R');
+    addTurnoutStateChangeRequest("TO499", 'N');
     
 	executePanelStateChangeRequests();
-    */
 }
 
 function cabooseTrkSouthPath()
 {
-    //addTurnoutStateChangeRequest("TO985", 'N');
+    addTurnoutStateChangeRequest("TO476", 'N');
 	
-	//executePanelStateChangeRequests();
+	executePanelStateChangeRequests();
 }
 
 function classLeadPath()
@@ -447,7 +460,7 @@ function classLeadPath()
     addTurnoutStateChangeRequest("TO502", 'R');
     addTurnoutStateChangeRequest("TO501", 'R');
     addTurnoutStateChangeRequest("TO500", 'R');
-    addTurnoutStateChangeRequest("TO991", 'R');
+    addTurnoutStateChangeRequest("TO499", 'R');
     addTurnoutStateChangeRequest("TO490", 'N');
     	
 	executePanelStateChangeRequests();

@@ -22,15 +22,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="NowheresYard.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -499,7 +499,7 @@
      inkscape:cx="771.14794"
      inkscape:cy="417.58503"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialPanelLinkLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -1173,9 +1173,10 @@
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 820,612.5112 -100,0"
-       id="path3243"
+       id="powerReadyFuelLeadPath"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="powerReadyFuelLeadPath()" />
     <use
        x="0"
        y="0"
@@ -1962,8 +1963,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Paso.svg"
-       transform="translate(-100,-26.000446)"
-       id="pasoLink">
+       id="pasoLink"
+       transform="translate(-100,-26.000446)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1979,8 +1980,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       id="mountMarvelLink"
-       transform="translate(1150,472.41675)">
+       transform="translate(1150,472.41675)"
+       id="mountMarvelLink">
       <text
          sodipodi:linespacing="125%"
          id="text3126"
@@ -2002,9 +2003,9 @@
      transform="translate(0,-5.1335083e-4)">
     <a
        xlink:href="NowheresHump.svg"
-       style="display:inline"
+       id="a3239"
        transform="translate(1100,452.4172)"
-       id="a3239">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
