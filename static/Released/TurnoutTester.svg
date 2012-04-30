@@ -18,7 +18,7 @@
    sodipodi:docname="TurnoutTester.svg"
    onload="init(evt)">
   <title
-     id="title5564">Turnout Tester</title>
+     id="title1">Turnout Tester</title>
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script3" />
@@ -27,12 +27,12 @@
      id="script3177" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="TurnoutTester.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -507,7 +507,7 @@
      inkscape:window-height="1104"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
      inkscape:snap-bbox="false"

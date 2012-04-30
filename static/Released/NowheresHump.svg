@@ -18,21 +18,21 @@
    sodipodi:docname="NowheresHump.svg"
    onload="init(evt)">
   <title
-     id="title5568">Nowheres Hump (Marshall)</title>
+     id="title1">Nowheres Hump (Marshall)</title>
   <script
      xlink:href="ServerComms.js"
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="NowheresHump.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -1163,9 +1163,9 @@
      transform="translate(0,-5.1335083e-4)">
     <a
        xlink:href="SVLTimber.svg"
-       id="a3239"
+       style="display:inline"
        transform="translate(870,302.4172)"
-       style="display:inline">
+       id="a3239">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1181,9 +1181,9 @@
     </a>
     <a
        xlink:href="NowheresYard.svg"
-       style="display:inline"
+       transform="translate(-100,312.41719)"
        id="pasoLink"
-       transform="translate(-100,312.41719)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1203,9 +1203,9 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       style="display:inline"
+       id="mountMarvelLink"
        transform="translate(640,132.41721)"
-       id="mountMarvelLink">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3126"

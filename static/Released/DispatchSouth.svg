@@ -18,7 +18,7 @@
    sodipodi:docname="DispatchSouth.svg"
    onload="init(evt)">
   <title
-     id="title5572">Dispatch South</title>
+     id="title1">Dispatch South</title>
   <script
      xlink:href="DispatchCommon.js"
      id="script3268" />
@@ -33,12 +33,12 @@
      id="script6" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="DispatchSouthRedirect.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient

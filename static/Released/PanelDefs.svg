@@ -18,7 +18,7 @@
    sodipodi:docname="PanelDefs.svg"
    onload="init(evt)">
   <title
-     id="title5566">Panel Defs</title>
+     id="title1">Panel Defs</title>
   <script
      xlink:href="ServerComms.js"
      id="script3180" />
@@ -27,12 +27,12 @@
      id="script4" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="PanelDefs.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient

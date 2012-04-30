@@ -18,7 +18,7 @@
    sodipodi:docname="Bayshore.svg"
    onload="init(evt)">
   <title
-     id="title5576">Bayshore Yard</title>
+     id="title1">Bayshore Yard</title>
   <script
      xlink:href="ServerComms.js"
      id="script3331" />
@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="Bayshore.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -1252,8 +1252,8 @@
      style="display:inline">
     <a
        xlink:href="Cavanaugh.svg"
-       transform="translate(-100,50.46618)"
-       id="cavanaughLink">
+       id="cavanaughLink"
+       transform="translate(-100,50.46618)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

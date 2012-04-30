@@ -138,6 +138,12 @@ function init(evt)
 	
 	window.resizeTo(desiredWinWidth, desiredWinHeight);
     
+    // Check to see if metadata/window title and svg title text match
+    var panelSVGTextTitle = getPanelSVGTextTitle();
+    
+    if(panelSVGTextTitle != null)
+        setPanelDocumentTitle(panelSVGTextTitle);
+    
 	if(typeof panelInit == 'function')
 		panelInit(evt);
 	else
@@ -166,14 +172,6 @@ function init(evt)
 	
     updateMainlineStatus();
 	
-    // Check to see if metadata/window title and svg title text match
-    var panelMetadataTitle = getPanelMetadataTitle();
-    var panelSVGTextTitle = getPanelSVGTextTitle();
-    if(panelMetadataTitle != panelSVGTextTitle)
-    {
-        alert("Panel title (" + panelSVGTextTitle + ") does not match metadata/window title (" + panelMetadataTitle + ")!");
-    }
-                                                    
 	setPanelStatus("Panel Ready");
 }
 
@@ -797,6 +795,22 @@ function getPanelMetadataTitle()
     }
     
     return null;
+}
+
+/* [String] getPanelDocumentTitle()
+ * Returns the document title
+ */
+function getPanelDocumentTitle()
+{    
+    return getElementTitle("title1");
+}
+
+/* [String] setPanelDocumentTitle([String] newTitle)
+ * Sets the document title
+ */
+function setPanelDocumentTitle(newTitle)
+{
+    setElementTitle(svgDocument.getElementById("title1"), newTitle);
 }
 
 /* [SVGTitleElement] getElementTitle([String] elemID)
