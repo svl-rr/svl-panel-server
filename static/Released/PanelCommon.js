@@ -138,6 +138,12 @@ function init(evt)
 	
 	window.resizeTo(desiredWinWidth, desiredWinHeight);
     
+    // Check to see if metadata/window title and svg title text match
+    var panelSVGTextTitle = getPanelSVGTextTitle();
+    
+    if(panelSVGTextTitle != null)
+        setPanelDocumentTitle(panelSVGTextTitle);
+    
 	if(typeof panelInit == 'function')
 		panelInit(evt);
 	else
@@ -162,10 +168,10 @@ function init(evt)
     }
     
     if(enableServerAccesses)
-        initSocketToServer(getPanelTitle());
+        initSocketToServer(getPanelSVGTextTitle());
 	
     updateMainlineStatus();
-	                
+	
 	setPanelStatus("Panel Ready");
 }
 
@@ -753,17 +759,58 @@ function setPanelError(text)
 	debugStringTimerOn = debugStringTimerWasOn;
 }
 
-/* [String] getPanelTitle()
- * Returns the panel title as defined by the SVG file
+/* [String] getPanelSVGTextTitle()
+ * Returns the panel title as displayed by SVG text
  */
-function getPanelTitle()
+function getPanelSVGTextTitle()
 {
     var panelTitle = svgDocument.getElementById("panelTitle");
     
     if(panelTitle != null)
         return panelTitle.firstChild.firstChild.nodeValue;
         
-    return "No Title Found";
+    return "Untitled";
+}
+
+/* [String] getPanelMetadataTitle()
+ * Returns the panel title as defined by the SVG file's metadata:RDF:Work:title tag
+ */
+function getPanelMetadataTitle()
+{    
+    var elems = document.getElementsByTagName("Work");
+
+    if(elems != null)
+    {
+        for(var j = 0; j < elems.length; j++)
+        {
+            for(var i = 0; i < elems[j].childNodes.length; i++)
+            {
+                if(elems[j].childNodes[i] == '[object Element]')
+                {
+                    if((elems[j].childNodes[i].nodeName == "dc:title") && (elems[j].childNodes[i].firstChild != null))
+                        return elems[j].childNodes[i].firstChild.nodeValue;
+                }
+            }
+        }
+    }
+    
+    return null;
+}
+
+/* [String] getPanelDocumentTitle()
+ * Returns the document title
+ */
+function getPanelDocumentTitle()
+{    
+    return getElementTitle("title1");
+}
+
+/* [String] setPanelDocumentTitle([String] newTitle)
+ * Sets the document title
+ */
+function setPanelDocumentTitle(newTitle)
+{
+    setElementTitle(svgDocument.getElementById("title1"), newTitle);
 }
 
 /* [SVGTitleElement] getElementTitle([String] elemID)
