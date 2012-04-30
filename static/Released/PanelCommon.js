@@ -162,10 +162,18 @@ function init(evt)
     }
     
     if(enableServerAccesses)
-        initSocketToServer(getPanelTitle());
+        initSocketToServer(getPanelSVGTextTitle());
 	
     updateMainlineStatus();
-	                
+	
+    // Check to see if metadata/window title and svg title text match
+    var panelMetadataTitle = getPanelMetadataTitle();
+    var panelSVGTextTitle = getPanelSVGTextTitle();
+    if(panelMetadataTitle != panelSVGTextTitle)
+    {
+        alert("Panel title (" + panelSVGTextTitle + ") does not match metadata/window title (" + panelMetadataTitle + ")!");
+    }
+                                                    
 	setPanelStatus("Panel Ready");
 }
 
@@ -753,17 +761,42 @@ function setPanelError(text)
 	debugStringTimerOn = debugStringTimerWasOn;
 }
 
-/* [String] getPanelTitle()
- * Returns the panel title as defined by the SVG file
+/* [String] getPanelSVGTextTitle()
+ * Returns the panel title as displayed by SVG text
  */
-function getPanelTitle()
+function getPanelSVGTextTitle()
 {
     var panelTitle = svgDocument.getElementById("panelTitle");
     
     if(panelTitle != null)
         return panelTitle.firstChild.firstChild.nodeValue;
         
-    return "No Title Found";
+    return "Untitled";
+}
+
+/* [String] getPanelMetadataTitle()
+ * Returns the panel title as defined by the SVG file's metadata:RDF:Work:title tag
+ */
+function getPanelMetadataTitle()
+{    
+    var elems = document.getElementsByTagName("Work");
+
+    if(elems != null)
+    {
+        for(var j = 0; j < elems.length; j++)
+        {
+            for(var i = 0; i < elems[j].childNodes.length; i++)
+            {
+                if(elems[j].childNodes[i] == '[object Element]')
+                {
+                    if((elems[j].childNodes[i].nodeName == "dc:title") && (elems[j].childNodes[i].firstChild != null))
+                        return elems[j].childNodes[i].firstChild.nodeValue;
+                }
+            }
+        }
+    }
+    
+    return null;
 }
 
 /* [SVGTitleElement] getElementTitle([String] elemID)
