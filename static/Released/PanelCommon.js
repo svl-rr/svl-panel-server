@@ -144,6 +144,18 @@ function init(evt)
     if(panelSVGTextTitle != null)
         setPanelDocumentTitle(panelSVGTextTitle);
     
+    var pathItems = svgDocument.getElementsByTagName("path");
+    
+    for(var i = 0; i < pathItems.length; i++)
+    {
+        var elem = pathItems[i];
+        
+        if(elem.getAttribute('onclick') != null)
+        {
+            setStyleSubAttribute(elem, "cursor", "pointer");
+        }
+    }
+    
 	if(typeof panelInit == 'function')
 		panelInit(evt);
 	else
