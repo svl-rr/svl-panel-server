@@ -13,7 +13,7 @@
     "url": ""
   },
   "dependencies": {
-	"connect": "2.0.x",
+	"connect": "2.x.x",
 	"socket.io": "0.9.x",
 	"xml2js": "0.1.x"
   },
