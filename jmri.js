@@ -30,7 +30,7 @@ function xmlioRequest(host, port, xml, callback) {
 		postOptions = {
 			host: host,
 			port: port,
-			path: '/xmlio',
+			path: '/xmlio/',
 			method: 'POST',
 			headers: {
 				'Content-Type': 'text/xml',
@@ -50,6 +50,11 @@ function xmlioRequest(host, port, xml, callback) {
 				callback(responseXML.join(''));
 			}
 		});
+	});
+
+	req.on('error', function (e) {
+		console.log("xmlioRequest request failed!");
+		throw e;
 	});
 
 //	console.log("JMRI REQUEST: " + xml);
