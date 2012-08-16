@@ -25,7 +25,7 @@
 
 var http = require('http');
 
-function xmlioRequest(host, port, xml, callback) {
+function xmlioRequest(host, port, xml, callback, errorHandler) {
 	var	req,
 		postOptions = {
 			host: host,
@@ -53,8 +53,13 @@ function xmlioRequest(host, port, xml, callback) {
 	});
 
 	req.on('error', function (e) {
-		console.log("xmlioRequest request failed!");
-		throw e;
+		console.log("xmlioRequest request failed! "+e);
+		
+		if (typeof (errorHandler) === 'function') {
+			errorHandler(e);
+		} else {
+			throw e;
+		}
 	});
 
 //	console.log("JMRI REQUEST: " + xml);
@@ -64,8 +69,7 @@ function xmlioRequest(host, port, xml, callback) {
 
 
 function getInitialState(host, port, callback) {
-	var xml = "<xmlio><list><type>turnout</type></list><list><type>sensor</type></list></xmlio>";
-	xmlioRequest(host, port, xml, callback);
+	xmlioRequest(host, port, "<xmlio><list><type>turnout</type></list><list><type>sensor</type></list></xmlio>", callback);
 }
 
 
