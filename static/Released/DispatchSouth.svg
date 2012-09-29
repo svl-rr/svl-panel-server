@@ -33,12 +33,12 @@
      id="script6" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="DispatchSouthRedirect.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -82,93 +82,6 @@
          offset="0"
          id="stop4139" />
     </linearGradient>
-    <filter
-       inkscape:collect="always"
-       id="filter4524"
-       x="0"
-       width="1"
-       y="0"
-       height="1"
-       inkscape:label="Desaturate"
-       inkscape:menu="Color"
-       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.20166101"
-         id="feGaussianBlur4526"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4802" />
-      <feColorMatrix
-         id="feColorMatrix4804"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4806" />
-      <feColorMatrix
-         id="feColorMatrix4808"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4810" />
-      <feColorMatrix
-         id="feColorMatrix4812"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4814" />
-      <feColorMatrix
-         id="feColorMatrix4816"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic" />
-    </filter>
-    <filter
-       inkscape:collect="always"
-       id="filter4608"
-       inkscape:label="Desaturate"
-       x="0"
-       y="0"
-       width="1"
-       height="1"
-       inkscape:menu="Color"
-       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
-       color-interpolation-filters="sRGB">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="0.075006995"
-         id="feGaussianBlur4610"
-         result="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix4826" />
-      <feColorMatrix
-         id="feColorMatrix4828"
-         type="saturate"
-         values="0"
-         in="fbSourceGraphic" />
-    </filter>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4186"
@@ -360,9 +273,9 @@
          id="turnout_0deg_normalSelected"
          d="m 80,300 40,0"
          inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none;cursor:pointer"
          inkscape:connector-curvature="0"
          d="m 80,280 20,20"
          id="turnout_0deg_reverseUnselected" />
@@ -371,7 +284,7 @@
        id="turnout_0deg_reverse"
        onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          inkscape:connector-curvature="0"
          d="m 80,280 20,20 20,0"
          id="turnout_0deg_reverseSelected" />
@@ -379,7 +292,7 @@
          id="turnout_0deg_normalUnselected"
          d="m 80,300 20,0"
          inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none;cursor:pointer" />
     </symbol>
     <symbol
        id="turnout_45deg_reverse"
@@ -388,9 +301,9 @@
          id="turnout_45deg_reverseSelected"
          d="m 260,380 20,0 20,20"
          inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none;cursor:pointer"
          inkscape:connector-curvature="0"
          d="m 260,360 20,20"
          id="turnout_45deg_normalUnselected" />
@@ -399,7 +312,7 @@
        id="turnout_45deg_normal"
        onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          inkscape:connector-curvature="0"
          d="m 260,360 40,40"
          id="turnout_45deg_normalSelected" />
@@ -407,18 +320,18 @@
          id="turnout_45deg_reverseUnselected"
          d="m 260,380 20,0"
          inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none;cursor:pointer" />
     </symbol>
     <symbol
        id="ds_normal"
        onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 200,520 30,0"
          id="ds_normal_selected"
          inkscape:connector-curvature="0" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none;cursor:pointer"
          d="m 210,500 20,20"
          id="ds_normal_unselected"
          inkscape:connector-curvature="0" />
@@ -437,12 +350,12 @@
          inkscape:connector-curvature="0"
          id="ds_reverse_selected"
          d="m 210,500 20,20 2.07107,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
       <path
          inkscape:connector-curvature="0"
          id="ds_reverse_unselected"
          d="m 200,520 30,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none;cursor:pointer" />
       <use
          height="690.11475"
          width="1047.9579"
@@ -454,7 +367,7 @@
     <symbol
        id="doubleslip_guard">
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none;cursor:pointer"
          d="m 221,501 12,12 10,0"
          inkscape:connector-curvature="0"
          id="path3187" />
@@ -462,18 +375,18 @@
          id="path3189"
          inkscape:connector-curvature="0"
          d="m 210,527 7,0"
-         style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none;cursor:pointer" />
     </symbol>
     <symbol
        id="dblxovr_0deg_normal"
        onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
       <path
-         style="opacity:0.20258622;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="opacity:0.20258622;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 600,574.094 20,0 40,-40 20,0"
          id="path3963"
          inkscape:connector-curvature="0" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 600,534.094 80,0"
          id="path3965"
          inkscape:connector-curvature="0"
@@ -482,17 +395,17 @@
          inkscape:connector-curvature="0"
          id="path3967"
          d="m 600,534.094 20,0 16.46056,16.46056"
-         style="opacity:0.19827588;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="opacity:0.19827588;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          sodipodi:nodetypes="ccc" />
       <path
          inkscape:connector-curvature="0"
          id="path3969"
          d="m 600,574.094 80,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          sodipodi:nodetypes="cc" />
       <path
          sodipodi:nodetypes="ccc"
-         style="opacity:0.19827588;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="opacity:0.19827588;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 680,574.094 -20,0 -16.46056,-16.46056"
          id="path3973"
          inkscape:connector-curvature="0" />
@@ -505,22 +418,22 @@
          inkscape:connector-curvature="0"
          id="path3953"
          d="m 600,570.11475 20,0 40,-40 20,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path3959"
          d="m 600,574.094 80,0"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
       <path
          sodipodi:nodetypes="cccc"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 600,534.094 20,0 40,40 20,0"
          id="path3955"
          inkscape:connector-curvature="0" />
       <path
          sodipodi:nodetypes="cc"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 600,534.094 80,0"
          id="path3961"
          inkscape:connector-curvature="0" />
@@ -529,19 +442,19 @@
        id="dblxovr_45deg_normal"
        onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
       <path
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 740,594.094 0,25"
          id="path3916"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
       <path
          sodipodi:nodetypes="cc"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 710,624.094 60,0"
          id="path3918"
          inkscape:connector-curvature="0" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 720,574.094 70,70"
          id="path3920"
          inkscape:connector-curvature="0" />
@@ -549,13 +462,13 @@
          inkscape:connector-curvature="0"
          id="path3922"
          d="m 690,604.094 70,70"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path3924"
          d="m 740,629.094 0,25"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
     </symbol>
     <symbol
        id="dblxovr_45deg_reverse"
@@ -565,19 +478,19 @@
          inkscape:connector-curvature="0"
          id="path3122"
          d="m 720,574.094 20,20 0,60 20,20"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
       <path
          inkscape:connector-curvature="0"
          id="path3124"
          d="m 690,604.094 20,20 60,0 20,20"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
       <path
          inkscape:connector-curvature="0"
          id="path3912"
          d="m 720,574.094 70,70"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer" />
       <path
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;cursor:pointer"
          d="m 690,604.094 70,70"
          id="path3914"
          inkscape:connector-curvature="0" />
@@ -591,14 +504,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5219183"
-     inkscape:cx="295.34453"
-     inkscape:cy="504.46276"
+     inkscape:cx="646.0121"
+     inkscape:cy="550.56395"
      inkscape:document-units="px"
-     inkscape:current-layer="textLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
-     inkscape:window-x="24"
+     inkscape:window-x="126"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -1686,7 +1599,7 @@
        height="740.11475"
        width="1047.9579"
        transform="translate(520,354.094)"
-       id="TO383"
+       id="TO18"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1698,7 +1611,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(-1,0,0,-1,670,834.094)"
-       id="TO388"
+       id="TO101"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1709,7 +1622,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO389"
+       id="TO125"
        transform="matrix(1,0,0,-1,350,834.094)"
        width="1047.9579"
        height="740.11475"
@@ -1721,7 +1634,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO384"
+       id="TO19"
        transform="matrix(-1,0,0,1,480,354.094)"
        width="1047.9579"
        height="740.11475"
@@ -1733,7 +1646,7 @@
        x="0"
        y="0"
        xlink:href="#ds_reverse"
-       id="TO385"
+       id="TO129"
        transform="matrix(-1,0,0,-1,410,1134.094)"
        width="1047.9579"
        height="740.11475"
@@ -1746,7 +1659,7 @@
        height="740.11475"
        width="1047.9579"
        transform="translate(-50,94.094019)"
-       id="TO386"
+       id="TO128"
        xlink:href="#ds_reverse"
        y="0"
        x="0">
@@ -1757,7 +1670,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_45deg_reverse"
-       id="TO390"
+       id="TO127"
        transform="matrix(-1,0,0,-1,420,954.094)"
        width="1047.9579"
        height="740.11475"
@@ -1770,7 +1683,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(-1,0,0,-1,200,834.094)"
-       id="TO391"
+       id="TO126"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1782,7 +1695,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(-1,0,0,1,200,154.094)"
-       id="TO393"
+       id="TO176"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1793,7 +1706,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO392"
+       id="TO175"
        transform="translate(240,154.094)"
        width="1047.9579"
        height="740.11475"
@@ -1805,7 +1718,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO394B"
+       id="TO225B"
        transform="translate(400,34.094003)"
        width="1047.9579"
        height="740.11475"
@@ -1817,7 +1730,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO394A"
+       id="TO225A"
        transform="matrix(-1,0,0,-1,560,594.09399)"
        width="1047.9579"
        height="740.11475"
@@ -1830,7 +1743,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(1,0,0,-1,320,594.094)"
-       id="TO395A"
+       id="TO226A"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1841,7 +1754,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO395B"
+       id="TO226B"
        transform="matrix(-1,0,0,1,480,34.094003)"
        width="1047.9579"
        height="740.11475"
@@ -1854,7 +1767,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(-1,0,0,-1,160,594.094)"
-       id="TO396A"
+       id="TO250A"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1866,7 +1779,7 @@
        height="740.11475"
        width="1047.9579"
        transform="translate(0,34.094003)"
-       id="TO396B"
+       id="TO250B"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1877,7 +1790,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO397B"
+       id="TO275B"
        transform="matrix(-1,0,0,1,790,-85.90597)"
        width="1047.9579"
        height="740.11475"
@@ -1889,7 +1802,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO397A"
+       id="TO275A"
        transform="matrix(1,0,0,-1,630,474.09403)"
        width="1047.9579"
        height="740.11475"
@@ -1902,7 +1815,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(-1,0,0,-1,600,474.09403)"
-       id="TO398A"
+       id="TO325A"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1914,7 +1827,7 @@
        height="740.11475"
        width="1047.9579"
        transform="translate(440,-85.90597)"
-       id="TO398B"
+       id="TO325B"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1925,7 +1838,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO399"
+       id="TO327"
        transform="matrix(-1,0,0,1,520,-125.906)"
        width="1047.9579"
        height="740.11475"
@@ -1937,7 +1850,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO380"
+       id="TO328"
        transform="matrix(1,0,0,-1,240,474.094)"
        width="1047.9579"
        height="740.11475"
@@ -2368,7 +2281,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(1,0,0,-1,360,474.09403)"
-       id="TO381"
+       id="TO326"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -2446,12 +2359,12 @@
      transform="translate(0,-3.9797725)"
      style="opacity:1;display:inline">
     <use
-       style="display:inline;opacity:1"
+       style="display:inline"
        inkscape:label="#use4388"
        height="740.11475"
        width="1047.9579"
        transform="translate(740,274.09403)"
-       id="TO387B"
+       id="TO100B"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -2459,11 +2372,11 @@
          id="title4760">TO</title>
     </use>
     <use
-       style="display:inline;opacity:1"
+       style="display:inline"
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO387A"
+       id="TO100A"
        transform="matrix(-1,0,0,-1,900,834.09403)"
        width="1047.9579"
        height="740.11475"
