@@ -30,16 +30,16 @@
      id="script3094" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="DispatchNorthRedirect.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <script
      xlink:href="DispatchCommon.js"
-     type="application/ecmascript"
-     id="script3208" />
+     id="script3208"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -512,8 +512,8 @@
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="12"
-     inkscape:window-y="1"
+     inkscape:window-x="-12"
+     inkscape:window-y="229"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -1953,7 +1953,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(-1,0,0,1,1000,-320)"
-       id="TO999"
+       id="TO725"
        xlink:href="#dblxovr_0deg_normal"
        y="0"
        x="0">
@@ -1964,7 +1964,7 @@
        x="0"
        y="0"
        xlink:href="#dblxovr_0deg_normal"
-       id="TO995"
+       id="TO700"
        transform="matrix(-1,0,0,1,1480,-320)"
        width="1047.9579"
        height="740.11475"
@@ -1977,7 +1977,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(-1,0,0,1,550,-85.905994)"
-       id="TO998"
+       id="TO703"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -1988,7 +1988,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO997"
+       id="TO702"
        transform="translate(560,-85.905994)"
        width="1047.9579"
        height="740.11475"
@@ -2007,7 +2007,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(1,0,0,-1,190,654.094)"
-       id="TO993"
+       id="TO650"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -2029,7 +2029,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO992"
+       id="TO601"
        transform="matrix(-1,0,0,-1,500,654.094)"
        width="1047.9579"
        height="740.11475"
@@ -2042,7 +2042,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(1,0,0,-1,520,654.09401)"
-       id="TO991"
+       id="TO600"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -2095,7 +2095,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO990"
+       id="TO575"
        transform="matrix(1,0,0,-1,720,654.094)"
        width="1047.9579"
        height="740.11475"
@@ -2137,7 +2137,7 @@
        height="740.11475"
        width="1047.9579"
        transform="matrix(-1,0,0,-1,790,834.094)"
-       id="TO450"
+       id="TO329"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">
@@ -2154,7 +2154,7 @@
        x="0"
        y="0"
        xlink:href="#turnout_0deg_normal"
-       id="TO996"
+       id="TO701"
        transform="matrix(-1,0,0,1,830,-85.905994)"
        width="1047.9579"
        height="740.11475"
@@ -2178,7 +2178,7 @@
        height="740.11475"
        width="1047.9579"
        transform="translate(840,-85.905994)"
-       id="TO994"
+       id="TO651"
        xlink:href="#turnout_0deg_normal"
        y="0"
        x="0">

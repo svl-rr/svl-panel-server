@@ -1,49 +1,49 @@
 function panelInitSouth(evt)
 {
     // South Loop
-    createPanelTurnout("TO380", false);
+    createPanelTurnout("TO328", false);
     
     // Kaos
-    createPanelTurnout("TO399", false);
-    createPanelTurnout("TO381", false);
-    createPanelTurnout("TO398A", false);
-    createPanelTurnout("TO398B", false);
+    createPanelTurnout("TO327", false);
+    createPanelTurnout("TO326", false);
+    createPanelTurnout("TO325A", false);
+    createPanelTurnout("TO325B", false);
     
     // Jerico-Jacksonville
-    createPanelTurnout("TO397A", false);
-    createPanelTurnout("TO397B", false);
+    createPanelTurnout("TO275A", false);
+    createPanelTurnout("TO275B", false);
     
     // Jacksonville-Igo
-    createPanelTurnout("TO396A", false);
-    createPanelTurnout("TO396B", false);
+    createPanelTurnout("TO250A", false);
+    createPanelTurnout("TO250B", false);
     
     // Hellelujah Jct
-    createPanelTurnout("TO395A", false);
-    createPanelTurnout("TO395B", false);
-    createPanelTurnout("TO394A", false);
-    createPanelTurnout("TO394B", false);
+    createPanelTurnout("TO226A", false);
+    createPanelTurnout("TO226B", false);
+    createPanelTurnout("TO225A", false);
+    createPanelTurnout("TO225B", false);
     
     // Fryton
-    createPanelTurnout("TO393", false);
-    createPanelTurnout("TO392", false);
+    createPanelTurnout("TO176", false);
+    createPanelTurnout("TO175", false);
     
     // Dayton Jct.
-    createPanelTurnout("TO391", false);
-    createPanelTurnout("TO390", false);
+    createPanelTurnout("TO126", false);
+    createPanelTurnout("TO127", false);
     
     // S. Dayton
-    createPanelTurnout("TO389", false);
+    createPanelTurnout("TO125", false);
     
     // Cavanaugh
-    createPanelTurnout("TO388", false);
-    createPanelTurnout("TO387A", false);
-    createPanelTurnout("TO387B", false);
+    createPanelTurnout("TO101", false);
+    createPanelTurnout("TO100A", false);
+    createPanelTurnout("TO100B", false);
     
     // Dayton Jct. Doubleslip
-    createPanelTurnout("TO386", false);
-    createPanelTurnout("TO385", false);
+    createPanelTurnout("TO128", false);
+    createPanelTurnout("TO129", false);
     
     // Dodge
-    createPanelTurnout("TO384", false);
-    createPanelTurnout("TO383", false);
+    createPanelTurnout("TO19", false);
+    createPanelTurnout("TO18", false);
 }

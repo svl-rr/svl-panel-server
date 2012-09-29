@@ -1,16 +1,16 @@
 function panelInitNorth(evt)
 {
     // Paso - Victoria
-	createPanelTurnout("TO999", false);
-    createPanelTurnout("TO998", false);
-    createPanelTurnout("TO997", false);
-    createPanelTurnout("TO996", false);
-    createPanelTurnout("TO995", false);
-    createPanelTurnout("TO994", false);
-    createPanelTurnout("TO993", false);
-    createPanelTurnout("TO992", false);
-    createPanelTurnout("TO991", false);
-    createPanelTurnout("TO990", false);
+	createPanelTurnout("TO725", false);
+    createPanelTurnout("TO703", false);
+    createPanelTurnout("TO702", false);
+    createPanelTurnout("TO701", false);
+    createPanelTurnout("TO700", false);
+    createPanelTurnout("TO651", false);
+    createPanelTurnout("TO650", false);
+    createPanelTurnout("TO601", false);
+    createPanelTurnout("TO600", false);
+    createPanelTurnout("TO575", false);
 
 	// Nowheres South
 	createPanelTurnout("TO492", false);
@@ -23,7 +23,7 @@ function panelInitNorth(evt)
 	createPanelTurnout("TO509", true);
     
     // Loop North
-	createPanelTurnout("TO450", false);
+	createPanelTurnout("TO329", false);
 }
 
 function nowheresMain1SouthPath()
