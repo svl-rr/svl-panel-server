@@ -37,10 +37,17 @@ function dispatchInit(evt)
 	var textElements = getAllObjectsOfTagNameAndID("text", "block\\S*TrainLabel");
 	for(var i in textElements)
 		setSVGText(textElements[i].id, "");
-		
+    
+    textElements = getAllObjectsOfTagNameAndID("text", "[n|s|o][0-9]+Label");
+	for(var j in textElements)
+		setStyleSubAttribute(textElements[j], "cursor", "pointer");
+    
 	textElements = getAllObjectsOfTagNameAndID("text", "[n|s|o][0-9]+Train");
 	for(var j in textElements)
+    {
 		setSVGText(textElements[j].id, "");
+        setStyleSubAttribute(textElements[j], "cursor", "pointer");
+    }
 }
 
 function dispatchChangeToNextState(elemID)
