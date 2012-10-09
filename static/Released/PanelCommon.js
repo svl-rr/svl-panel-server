@@ -61,6 +61,13 @@ function PanelTurnout(id, flipBit)
     
     // Make sure title element matches the object ID
     addElementTitle(id, id);
+    
+    /*if(console != undefined)
+    {
+        console.log("Created turnout: " + id);
+        console.warn("Krikey: a warning: " + id);
+        console.error("jeepers an error");
+    }*/
 }
 
 
