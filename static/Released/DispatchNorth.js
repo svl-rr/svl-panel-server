@@ -1,16 +1,24 @@
 function panelInitNorth(evt)
 {
-    // Paso - Victoria
+    // Victoria
 	createPanelTurnout("TO725", false);
-    createPanelTurnout("TO703", false);
-    createPanelTurnout("TO702", false);
-    createPanelTurnout("TO701", false);
-    createPanelTurnout("TO700", false);
-    createPanelTurnout("TO651", false);
-    createPanelTurnout("TO650", false);
+
+    // Upton
+    createPanelTurnout("TO703", true);
+    createPanelTurnout("TO702", true);
+    createPanelTurnout("TO701", true);
+    createPanelTurnout("TO700", true);
+    
+    // Tracy
+    createPanelTurnout("TO651", true);
+    createPanelTurnout("TO650", true);
+    
+    //Silicon
     createPanelTurnout("TO601", false);
-    createPanelTurnout("TO600", false);
-    createPanelTurnout("TO575", false);
+    createPanelTurnout("TO600", true);
+
+    //Paso
+    createPanelTurnout("TO575", true);
 
 	// Nowheres South
 	createPanelTurnout("TO492", false);
