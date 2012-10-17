@@ -1,0 +1,116 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww23120\viewh21440\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\b\fs24 \cf0 SVL Soft Panel Spec\
+
+\b0 \
+
+\b Intro
+\b0 \
+\
+This panel spec documents implementation requirements and guidelines for software-based panels ("soft panels") at SVL.  It is meant to create consistency among the panels and offer others who may need to create or revise panels in the future a source of information for how things were done.\
+\
+The panels work utilizing SVG documents displayed by a web browser.  Javascript is used by the panel/SVG to toggle turnouts and select paths, allowing a common code set to be utilized by all panels.  \
+\
+
+\b Software Required\
+
+\b0 \
+Inkscape (Open Source SVG editor)\
+Modern web browser supporting SVG (Safari, Opera, Firefox are leading contenders at time of this writing though each has its own behaviors and bugs)\
+\
+Inkscape was selected the editor of choice as it is available for multiple platforms, offers an intuitive interface for editing the SVG, and provides some advanced features.  It allows direct editing of the SVG objects by hand which does come in handy from time to time.\
+\
+
+\b Panel Look And Feel
+\b0 \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ul \ulc0 Titles\ulnone \
+\
+Upper level panel titles shall be at the top of the panel and have triangles pointed up at the upper level.  Lower level panel titles shall be at the bottom of the panel and have triangles pointed down at the lower level.\
+\
+\ul Colors\
+\ulnone \
+Upper level panels shall have a gray background (#808080).  Lower level panels shall have a "green" background (#007040).  Branchline panels shall have a blue (#rrggbb) background.\
+\
+\ul Grids\ulnone \
+\
+A grid of 10 by 10 pixels shall be specified.  A major grid line spacing of 4 should also be used for track spacing\
+\
+\ul Fonts\ulnone \
+\
+A "sans serif" font shall be used.  Text items that are links to other panels shall be in italics.  Track names shall be size 16 when possible, 10 if a size reduction is required.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b \cf0 SVG Object IDs\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\b0 \cf0 \
+Inkscape will assign a element type followed by a unique number as the object ID by default.  This makes reading and editing the SVG source by hand quite difficult.  Almost all SVG objects should have a descriptive ID associated with them.\
+\
+For the panel to operate correctly, the following items are expected to be present in the document.  (Items in 
+\i italics
+\i0  represent the object ID.  *Indicates a required object.)\
+\
+\ul Scripts\ulnone \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\i \cf0 	script_common*
+\i0  -- a reference to an external script file that all panels will use.  Currently it links to "PanelCommon.js".\
+
+\i 	script_panelSpecific
+\i0  -- a reference to an external script file that this panel will use.  Panel specific paths should be implemented here.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ul Objects\
+\ulnone \
+The SVG document shall contain the following object IDs as the common panel scripts expect to find them:\ul \
+\ulnone \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\i \cf0 	mainlineLockedGroup*
+\i0  -- an SVG group containing text and/or icons indicating that the mainline has been locked and disabled by the dispatcher.  This object will be animated on screen by javascript when the main has been locked to call extra attention to why turnouts may not throw.\
+	
+\i panelStatus*
+\i0  -- a text element that the panel will use to indicate script (initialization) errors or success.  This text element should read "Panel not initialized" by default and will be replaced by "Panel Ready" after initialization.\
+
+\i 	panelTitle*
+\i0  -- a title element that the panel will use to identify itself to others (namely the server it will communicate with)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+\cf0 \ul Layers (SVG Groups)
+\b \ulnone \
+
+\b0 \
+The SVG document shall contain the following layer IDs as the common panel scripts may expect to find them:\
+\
+	
+\i backgroundLayer
+\i0  -- Contains the background for the panel\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\i \cf0 	textLayer 
+\i0 -- Contains descriptive text elements that are not immediately associated with track topology (e.g. the panel title)\
+	
+\i industrialTrackLayer* 
+\i0 -- Contains turnout and path elements that are not part of the mainline.  These elements will always be active.\
+	
+\i mainlineTrackLayer* 
+\i0 -- Contains turnout and path elements that are part of the mainline.  These elements will be disabled (and made somewhat translucent) when the dispatcher takes control of the layout for operations.\
+	
+\i mainlinePanelLinkLayer* 
+\i0 -- Contains text elements that link to other mainline panels.  These elements will be disabled (remaining opaque) when the dispatcher takes control of the layout for operations.\
+	
+\i industrialPanelLinkLayer* 
+\i0 -- Contains text elements that link to other industrial panels.  These elements will always be active.\
+	
+\i trackNameLayer 
+\i0 -- Contains text elements that name tracks.\
+\
+Additional layers are allowed and can be used by the panel specific script as required.\
+}
