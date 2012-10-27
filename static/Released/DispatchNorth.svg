@@ -30,16 +30,16 @@
      id="script3094" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="DispatchNorthRedirect.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <script
      xlink:href="DispatchCommon.js"
-     id="script3208"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script3208" />
   <defs
      id="defs4">
     <linearGradient
@@ -508,12 +508,12 @@
      inkscape:cx="400.02066"
      inkscape:cy="385.42539"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="trainListsLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="-12"
-     inkscape:window-y="229"
+     inkscape:window-x="7"
+     inkscape:window-y="9"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -1437,7 +1437,7 @@
     <text
        inkscape:label="#text4498"
        sodipodi:linespacing="125%"
-       id="block800CTrainLabel"
+       id="block800ATrainLabel"
        y="200.11478"
        x="560"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
@@ -2021,7 +2021,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path3858"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title4246">Unauthorized</title>
     </path>
@@ -2115,7 +2115,7 @@
        id="block1000C"
        d="m 800,374.094 -20,20 -60,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       onclick="dispatchChangeToNextState(evt.target.id);"
+       onclick="userClickChangeToNextState(evt.target.id);"
        inkscape:label="#path4056">
       <title
          id="title3216">Unauthorized</title>
@@ -2169,7 +2169,7 @@
        d="m 510,254.09403 -110,-3e-5"
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path5261"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title4258">Unauthorized</title>
     </path>
@@ -2198,7 +2198,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path5269"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title4260">Unauthorized</title>
     </path>
@@ -2209,7 +2209,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path5275"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title4262">Unauthorized</title>
     </path>
@@ -2220,7 +2220,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path5281"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3212">Unauthorized</title>
     </path>
@@ -2230,7 +2230,7 @@
        id="block1000B"
        d="m 860,174.094 40,0 20,20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       onclick="dispatchChangeToNextState(evt.target.id);"
+       onclick="userClickChangeToNextState(evt.target.id);"
        inkscape:label="#path5283">
       <title
          id="title3214">Unauthorized</title>
@@ -2242,7 +2242,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path5293"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3990">Unauthorized</title>
     </path>
@@ -2253,7 +2253,7 @@
        d="m 320,214.094 -180,3e-5"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path3893"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3187">Unauthorized</title>
     </path>
@@ -2264,12 +2264,12 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3189">Unauthorized</title>
     </path>
     <path
-       onclick="dispatchChangeToNextState(evt.target.id);"
+       onclick="userClickChangeToNextState(evt.target.id);"
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -2286,7 +2286,7 @@
        id="block800B"
        d="m 710,214.094 -30,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3191">Unauthorized</title>
     </path>
@@ -2297,7 +2297,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
        inkscape:label="#path3921"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3195">Unauthorized</title>
     </path>
@@ -2308,7 +2308,7 @@
        id="block800A"
        d="m 800,214.094 -50,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3193">Unauthorized</title>
     </path>
@@ -2319,7 +2319,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3217">Unauthorized</title>
     </path>
@@ -2330,7 +2330,7 @@
        id="block700A"
        d="m 270,354.094 -230,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3215">Unauthorized</title>
     </path>
@@ -2341,12 +2341,12 @@
        id="block699"
        d="m 380,354.094 -70,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3208">Unauthorized</title>
     </path>
     <path
-       onclick="dispatchChangeToNextState(evt.target.id);"
+       onclick="userClickChangeToNextState(evt.target.id);"
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -2363,7 +2363,7 @@
        d="m 600,374.094 -20,20 -140,0 -20,-20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path3986"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3211">Unauthorized</title>
     </path>
@@ -2374,7 +2374,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3209">Unauthorized</title>
     </path>
@@ -2385,7 +2385,7 @@
        id="block550B"
        d="m 960,354.094 -120,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3207">Unauthorized</title>
     </path>
@@ -2396,12 +2396,12 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3205">Unauthorized</title>
     </path>
     <path
-       onclick="dispatchChangeToNextState(evt.target.id);"
+       onclick="userClickChangeToNextState(evt.target.id);"
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -2418,7 +2418,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path3861"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3201">Unauthorized</title>
     </path>
@@ -2429,7 +2429,7 @@
        id="block490"
        d="m 670,534.09403 -150,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3221">Unauthorized</title>
     </path>
@@ -2440,7 +2440,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3223">Unauthorized</title>
     </path>
@@ -2451,7 +2451,7 @@
        id="block481"
        d="m 920,574.09403 -188.81579,0 -21.18421,-20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3225">Unauthorized</title>
     </path>
@@ -2476,7 +2476,7 @@
          id="title5351">Unauthorized</title>
     </path>
     <path
-       onclick="dispatchChangeToNextState(evt.target.id);"
+       onclick="userClickChangeToNextState(evt.target.id);"
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -2499,7 +2499,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccc" />
     <path
-       onclick="dispatchChangeToNextState(evt.target.id);"
+       onclick="userClickChangeToNextState(evt.target.id);"
        inkscape:label="#path3858"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
@@ -2516,7 +2516,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path3858"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title4252">Unauthorized</title>
     </path>
@@ -2527,7 +2527,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccc" />
     <path
-       onclick="dispatchChangeToNextState(evt.target.id);"
+       onclick="userClickChangeToNextState(evt.target.id);"
        inkscape:label="#path3858"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
@@ -2544,7 +2544,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path3858"
-       onclick="dispatchChangeToNextState(evt.target.id);">
+       onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title4254">Unauthorized</title>
     </path>

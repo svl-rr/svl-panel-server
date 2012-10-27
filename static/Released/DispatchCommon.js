@@ -1,4 +1,4 @@
-// Constant id prefix for turnout objects
+// Constant id prefix for objects
 var DISPATCHSEGMENT_OBJID_PREFIX = "block";
 
 var UNAUTHORIZED_STATE = "Unauthorized";
@@ -21,6 +21,8 @@ var AUTHORIZED_COLOR = "#00ff00";
 var OCCUPIED_COLOR = "#ff0000";
 var OOS_COLOR = "#0000ff";
 var UNAUTHORIZED_COLOR = "white";
+
+var alwaysShowTrainID = true;
 
 /* dispatchInit([Event] evt)
  * Called by PanelCommon.js to initialize dispatching separately
@@ -50,7 +52,55 @@ function dispatchInit(evt)
     }
 }
 
-function dispatchChangeToNextState(elemID)
+/* setSensorState([String] sensorID, [String] sensorState)
+ * Advances block authorization to next state in table. This is how JMRI sensor updates will enter in to 
+ */
+function setDispatchSensorState(sensorID, sensorState)
+{
+    var elemID = DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(sensorID);
+    var currentState = getDispatchSegmentState(elemID);
+    
+	if(sensorState == JMRI_SENSOR_ACTIVE)
+	{
+	    	if(currentState == AUTHORIZED_NB_STATE)
+    		{
+       			setDispatchBlockState(elemID, OCCUPIED_NB_STATE, null);
+		}
+    		else if(currentState == AUTHORIZED_SB_STATE)
+    		{
+       		 	setDispatchBlockState(elemID, OCCUPIED_SB_STATE, null);
+		}
+		else if(currentState == OCCUPIED_NB_STATE)
+		{
+			// do nothing
+		}
+		else if(currentState == OCCUPIED_SB_STATE)
+		{
+			// do nothing
+		}
+	 	else
+	    	{
+        		setDispatchBlockState(elemID, OCCUPIED_STATE, "UNAUTHORIZED TRAIN!");
+    		}
+	}
+	else if(sensorState == JMRI_SENSOR_INACTIVE)
+	{
+		if(currentState == UNAUTHORIZED_STATE)
+    		{
+		        // do nothing
+		}
+		else  // go back to unauthorized
+    		{
+	        	setDispatchBlockState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+    		}
+	}
+	else
+	{
+		setPanelError("Bad sensor state passed to setDispatchSensorState(" + elemID + ")");
+	}
+}
+
+function userClickChangeToNextState(elemID)
 {    
 	var elem = svgDocument.getElementById(elemID);
 	
@@ -77,22 +127,27 @@ function dispatchChangeToNextState(elemID)
     }
     else if(currentState == AUTHORIZED_NB_STATE)
     {
+	// only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
         setDispatchBlockState(elemID, OCCUPIED_NB_STATE, null);
     }
     else if(currentState == AUTHORIZED_SB_STATE)
     {
+	// only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
         setDispatchBlockState(elemID, OCCUPIED_SB_STATE, null);
     }
-	else if(currentState == OCCUPIED_NB_STATE)
+    else if(currentState == OCCUPIED_NB_STATE)
     {
+	// only used until sensors are implemented in the field. Click should be ignored if sensors present
         setDispatchBlockState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
     else if(currentState == OCCUPIED_SB_STATE)
     {
+	// only used until sensors are implemented in the field. Click should be ignored if sensors present
         setDispatchBlockState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
     else if(currentState == OOS_STATE)
     {
+	// only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
         setDispatchBlockState(elemID, OCCUPIED_STATE, null);
     }
     else
@@ -140,6 +195,9 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
 
 	var lowLevelTrainID = getDispatchSegmentTrainID(DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(elemID));
 
+    if((trainID != null) && (trainID != lowLevelTrainID))
+        lowLevelTrainID = trainID;
+
 	var elemIDTextTrainID = elemID + "TrainLabel";
 	var elemTextTrainID = svgDocument.getElementById(elemIDTextTrainID);
 
@@ -148,12 +206,6 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
         setStyleSubAttribute(elem, "stroke", OOS_COLOR);
         removeStyleSubAttribute(elem, "marker-start");
         removeStyleSubAttribute(elem, "marker-end");
-		
-		if((elemTextTrainID != null) && (lowLevelTrainID != null))
-		{
-			setSVGText(elemIDTextTrainID, lowLevelTrainID);
-			elemTextTrainID.setAttribute("visibility", "visible");
-		}
     }
     else if(state == AUTHORIZED_NB_STATE)
     {
@@ -172,24 +224,12 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
         setStyleSubAttribute(elem, "stroke", OCCUPIED_COLOR);
         setStyleSubAttribute(elem, "marker-end", "url(#TriangleOccupiedNBMarker)");
         removeStyleSubAttribute(elem, "marker-start");
-		
-		if((elemTextTrainID != null) && (lowLevelTrainID != null))
-		{
-			setSVGText(elemIDTextTrainID, lowLevelTrainID);
-			elemTextTrainID.setAttribute("visibility", "visible");
-		}
     }
 	else if(state == OCCUPIED_SB_STATE)
     {
         setStyleSubAttribute(elem, "stroke", OCCUPIED_COLOR);
         removeStyleSubAttribute(elem, "marker-end");
         setStyleSubAttribute(elem, "marker-start", "url(#TriangleOccupiedSBMarker)");
-		
-		if((elemTextTrainID != null) && (lowLevelTrainID != null))
-		{
-			setSVGText(elemIDTextTrainID, lowLevelTrainID);
-			elemTextTrainID.setAttribute("visibility", "visible");
-		}
     }
     else if(state == OCCUPIED_STATE)
     {
@@ -202,12 +242,16 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
         setStyleSubAttribute(elem, "stroke", UNAUTHORIZED_COLOR);
         removeStyleSubAttribute(elem, "marker-start");
         removeStyleSubAttribute(elem, "marker-end");
-		
-		if(elemTextTrainID != null)
-		{
-			setSVGText(elemIDTextTrainID, "");
-			elemTextTrainID.setAttribute("visibility", "hidden");
-		}
+    }
+
+    if((elemTextTrainID != null) && (lowLevelTrainID != null) && (lowLevelTrainID != UNAUTHORIZED_STATE) && (((state != AUTHORIZED_NB_STATE) && (state != AUTHORIZED_SB_STATE)) || alwaysShowTrainID))
+    {
+        setSVGText(elemIDTextTrainID, lowLevelTrainID);
+        elemTextTrainID.setAttribute("visibility", "visible");
+    }
+    else
+    {
+        elemTextTrainID.setAttribute("visibility", "hidden");
     }
 
     return true;
@@ -382,7 +426,9 @@ function showSelectedAuthorizationElement(whichElem)
 			selectionRect.setAttribute("x", lBBox.x - selectionRectOffset);
 			selectionRect.setAttribute("y", lBBox.y - selectionRectOffset);
 			
-			selectionRect.setAttribute("width", (rBBox.x + rBBox.width + selectionRectOffset + 1) - (lBBox.x - selectionRectOffset));
+			var width = (rBBox.x + rBBox.width + selectionRectOffset + 1) - (lBBox.x - selectionRectOffset);
+
+			selectionRect.setAttribute("width", width < 0 ? width*-1 : width);
 			selectionRect.setAttribute("height", lBBox.height + 2*selectionRectOffset);
 
             selectedNSO = whichElem;
@@ -421,7 +467,7 @@ function getCommonDispatchStates()
     }
 
     for(var k in blockElements)
-        commonObjs.push(new ServerObject(blockElements[k], SERVER_TYPE_DISPATCH, null));
+        commonObjs.push(new ServerObject(JMRI_SENSOR_OBJID_PREFIX + getDCCAddr(blockElements[k]), SERVER_TYPE_DISPATCH, null));
 
     return commonObjs;
 }
@@ -454,6 +500,13 @@ function setDispatchState(stateObj)
         var postColonTrainID = stateObj.value.substring(colonLoc+1);
         
         setDispatchBlockState(stateObj.name, preColonState, postColonTrainID);
+    
+        return true;
+    }
+
+    else if(stateObj.name.search(JMRI_SENSOR_OBJID_PREFIX) == 0)
+    {
+        setDispatchSensorState(stateObj.name, stateObj.value);
     
         return true;
     }
