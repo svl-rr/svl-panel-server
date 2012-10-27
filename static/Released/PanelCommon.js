@@ -15,8 +15,11 @@ var mainLockTimebase = Math.PI*2/mainLockMod;
 var PANEL_TURNOUT_OBJID_PREFIX = "TO";
 var JMRI_TURNOUT_OBJID_PREFIX = "NT";
 
-var PANEL_SENSOR_OBJID_PREFIX = "OD";
-var JMRI_SENSOR_OBJID_PREFIX = "NS";
+var PANEL_SENSOR_OBJID_PREFIX = "block";
+var JMRI_SENSOR_OBJID_PREFIX = "LS";
+
+var JMRI_SENSOR_ACTIVE = "ACTIVE";
+var JMRI_SENSOR_INACTIVE = "INACTIVE";
 
 // Disables 2 second setPanelStatus timer
 var debugStringTimerOn = true;
@@ -27,6 +30,7 @@ var enableServerAccesses = true;
 // Object lists
 var turnoutsOnPanel = new Array();
 var stateChangeRequests = new Array();
+var blocksOnPanel = new Array();
 //var signalsOnPanel = new Array();
 
 // Object types we can send to the server
@@ -49,7 +53,7 @@ function PanelTurnout(id, flipBit)
 	
 	this.getID=getID;
 	this.getFlipBit=getFlipBit;
-    this.getAsServerObject=getAsServerObject;
+    this.getAsServerObject= getAsServerTurnoutObject;
     
     var useElem = svgDocument.getElementById(id);
 	
@@ -87,14 +91,42 @@ function getFlipBit()
 	return this.flipBit;
 }
 
-/* [ServerObject] getAsServerObject()
+/* [ServerObject] getAsServerTurnoutObject()
  * Return PanelTurnout as a server object, preset as a get (null state)
  */
-function getAsServerObject()
+function getAsServerTurnoutObject()
 {
     var turnoutAddr = getDCCAddr(this.id);
     
     return new ServerObject(JMRI_TURNOUT_OBJID_PREFIX + turnoutAddr, SERVER_TYPE_TURNOUT, getTurnoutState(turnoutAddr));
+}
+
+/* BlockSensor([String] id)
+ * BlockSensor object to contain id
+ */
+function BlockSensor(id)
+{
+	this.id=id;
+	
+	this.getID=getID;
+    this.getAsServerObject=getAsServerSensorObject;
+        
+    // Make sure title element matches the object ID
+    //addElementTitle(id, id);
+    
+    /*if(console != undefined)
+    {
+        console.log("Created turnout: " + id);
+        console.warn("Krikey: a warning: " + id);
+        console.error("jeepers an error");
+    }*/
+}
+
+function getAsServerSensorObject()
+{
+    var sensorAddr = getDCCAddr(this.id);
+    
+    return new ServerObject(JMRI_SENSOR_OBJID_PREFIX + sensorAddr, SERVER_TYPE_SENSOR, null);
 }
 
 /* createPanelTurnout([String] id, [boolean] flipBit)
@@ -160,6 +192,12 @@ function init(evt)
         if(elem.getAttribute('onclick') != null)
         {
             setStyleSubAttribute(elem, "cursor", "pointer");
+        }
+
+	if(elem.id.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 1)
+        {
+            //setStyleSubAttribute(elem, "cursor", "crosshair");
+	    blocksOnPanel.push(new BlockSensor(elem.id));
         }
     }
     
@@ -241,6 +279,10 @@ function handleSocketDataResponse(dataArray)
             }
             else if(dataArray[i].type == SERVER_TYPE_TURNOUT)
                 setTurnoutState(dataArray[i].name, dataArray[i].value);
+	    else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setDispatchState != 'function'))
+            {
+		// setSensorState(dataArray[i].name, dataArray[i].value);
+	    }
             else
             {
                 // do nothing with object since we don't know what it is
@@ -255,7 +297,7 @@ function handleSocketDataResponse(dataArray)
                 if(localState != null)
                     undefinedItemsToUpdate.push(new ServerObject(dataArray[i].name, SERVER_TYPE_TURNOUT, localState));
             }
-            else if(dataArray[i].type == SERVER_TYPE_DISPATCH)
+	    else if(dataArray[i].type == SERVER_TYPE_DISPATCH)
             {
                 if(dataArray[i].name == SERVER_NAME_MAINLINELOCKED)
                     undefinedItemsToUpdate.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, mainlineLocked));
@@ -265,6 +307,10 @@ function handleSocketDataResponse(dataArray)
                     if(dispatchState != undefined)
                         undefinedItemsToUpdate.push(dispatchState);
                 }
+            }
+            else if(dataArray[i].type == SERVER_TYPE_SENSOR)
+            {
+                // do nothing since a sensor is a read-only object (i.e. property of the layout)
             }
             else if(typeof getPanelSpecificState == 'function')
             {
@@ -377,6 +423,17 @@ function getPanelObjectsToUpdate()
         }
     }
     
+    for(var i in blocksOnPanel)
+    {
+        var nextObject = blocksOnPanel[i].getAsServerObject();
+        
+        if(parallelGetHash[nextObject.name] == undefined)
+        {
+            parallelGetHash[nextObject.name] = nextObject;
+            serverGetArray.push(nextObject);
+        }
+    }
+
     // Also get the dispatching mode
     serverGetArray.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, mainlineLocked));
 
