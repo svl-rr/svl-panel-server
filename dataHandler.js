@@ -174,44 +174,56 @@ function processSetCommand(data) {
 		turnoutState;
 
 	// Update Global State from the client data
-	//
-	// NOTE: In order to avoid race conditions, we pay special attention to only
-	// deliver updates to JMRI items (e.g., turnouts) via the trackLayoutState
-	// callback mechanism. If we're running in OFFLINE mode, we always update the state
-
-	for (item in data) {
-		if (data.hasOwnProperty(item)) {
-//			console.log("SET: "+ util.inspect(data[item]));
-			if ((process.env.OFFLINE !== undefined) || (data[item].type !== 'turnout')) {
-				if (updateGlobalStateFromDataItem(data[item])) {
-					changedData.push(data[item]);
-				}
-			}
-		}
-	}
-
-	// Push all turnout changes to JMRI via xmlioRequest
-	//
-	// NOTE: We don't care about parsing the response here, because the other
-	// outstanding request issued in trackLayoutState will collect changes.
 
 	if (data.length > 0) {
 		for (item in data) {
 			if (data.hasOwnProperty(item)) {
+
+//				console.log("SET: "+ util.inspect(data[item]));
+				
 				switch (data[item].type) {
 					case 'turnout':
+						// NOTE: In order to avoid race conditions, we pay special attention to only
+						// deliver updates to JMRI items (e.g., turnouts) via the trackLayoutState
+						// callback mechanism. If we're running in OFFLINE mode, we always update the state
+
 						turnoutState = (data[item].value === "R") ? 4 : 2;
 						xmlRequest += "<turnout name='" + data[item].name + "' set='"+ turnoutState +"' />";
+
+						// In offline mode, manually update the data
+						if (process.env.OFFLINE !== undefined) {
+							if (updateGlobalStateFromDataItem(data[item])) {
+								changedData.push(data[item]);
+							}
+						}
 						break;
+					
+					case 'sensor':
+						if (process.env.OFFLINE === undefined) {
+							console.error('SET: ERR: Sensors are read-only in online mode: ' + util.inspect(data[item]));
+							break;
+						}
+						// fall through in offline mode
+						
 					default:
+						// Any other data item is updated in the global data unconditionally
+						if (updateGlobalStateFromDataItem(data[item])) {
+							changedData.push(data[item]);
+						}
 						break;
 				}
 			}
 		}
-		if ((xmlRequest !== "") && (process.env.OFFLINE === undefined)) {
-			jmri.xmlioRequest('127.0.0.1', 12080, "<xmlio>" + xmlRequest + "</xmlio>");
-		}
 	}
+
+	// Push any turnout changes to JMRI via xmlioRequest
+	// NOTE: We don't care about parsing the response here, because the other
+	// outstanding request issued in trackLayoutState will collect changes.
+
+	if ((xmlRequest !== "") && (process.env.OFFLINE === undefined)) {
+		jmri.xmlioRequest('127.0.0.1', 12080, "<xmlio>" + xmlRequest + "</xmlio>");
+	}
+
 	return changedData;
 }
 
