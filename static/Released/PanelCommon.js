@@ -18,8 +18,8 @@ var JMRI_TURNOUT_OBJID_PREFIX = "NT";
 var PANEL_SENSOR_OBJID_PREFIX = "block";
 var JMRI_SENSOR_OBJID_PREFIX = "LS";
 
-var JMRI_SENSOR_ACTIVE = "ACTIVE";
-var JMRI_SENSOR_INACTIVE = "INACTIVE";
+var JMRI_SENSOR_ACTIVE = "on";
+var JMRI_SENSOR_INACTIVE = "off";
 
 // Disables 2 second setPanelStatus timer
 var debugStringTimerOn = true;
@@ -279,10 +279,10 @@ function handleSocketDataResponse(dataArray)
             }
             else if(dataArray[i].type == SERVER_TYPE_TURNOUT)
                 setTurnoutState(dataArray[i].name, dataArray[i].value);
-	    else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setDispatchState != 'function'))
+            else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setDispatchState != 'function'))
             {
-		// setSensorState(dataArray[i].name, dataArray[i].value);
-	    }
+                // setSensorState(dataArray[i].name, dataArray[i].value);
+            }
             else
             {
                 // do nothing with object since we don't know what it is
@@ -297,7 +297,7 @@ function handleSocketDataResponse(dataArray)
                 if(localState != null)
                     undefinedItemsToUpdate.push(new ServerObject(dataArray[i].name, SERVER_TYPE_TURNOUT, localState));
             }
-	    else if(dataArray[i].type == SERVER_TYPE_DISPATCH)
+            else if(dataArray[i].type == SERVER_TYPE_DISPATCH)
             {
                 if(dataArray[i].name == SERVER_NAME_MAINLINELOCKED)
                     undefinedItemsToUpdate.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, mainlineLocked));

@@ -467,7 +467,7 @@ function getCommonDispatchStates()
     }
 
     for(var k in blockElements)
-        commonObjs.push(new ServerObject(JMRI_SENSOR_OBJID_PREFIX + getDCCAddr(blockElements[k]), SERVER_TYPE_DISPATCH, null));
+        commonObjs.push(new ServerObject(JMRI_SENSOR_OBJID_PREFIX + getDCCAddr(blockElements[k]), SERVER_TYPE_SENSOR, null));
 
     return commonObjs;
 }

@@ -25,7 +25,7 @@ function toggleState(whichElem)
     
     var dataToSend = new Array();
     
-    dataToSend.push(new ServerObject(textElem.id, SERVER_TYPE_DISPATCH, newState));
+    dataToSend.push(new ServerObject(textElem.id, SERVER_TYPE_SENSOR, newState));
     
     serverSet(dataToSend);
 }
