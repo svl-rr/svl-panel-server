@@ -722,14 +722,26 @@ function setSVGText(elemID, text)
 	var textItem = svgDocument.getElementById(elemID);
 		
 	if(textItem != null)
-	{		
+	{
+        var textNode = null;
+        
 		if(textItem == "[object SVGTextElement]")
-			textItem.firstChild.firstChild.nodeValue=text;
-		else if(textItem == "[object SVGTSpanElement]")
-			textItem.firstChild.nodeValue=text;
+            textNode = textItem.firstChild.firstChild;
+        else if(textItem == "[object SVGTSpanElement]")
+            textNode = textItem.firstChild;
+        
+        if(textNode != null)
+        {
+            // Following two lines workaround a problem in Safari 6
+            textNode.nodeValue=".";
+            textNode.nodeValue=". ";
+        
+            textNode.nodeValue=text;
+            return;
+        }
 	}
-	else
-		alert("setSVGText(...) failed to update string to " + text + " on element ID " + elemID);
+    
+    alert("setSVGText(...) failed to update string to " + text + " on element ID " + elemID);
 }
 
 /* setStyleSubAttribute([SVGElement] elem, [String] subAttribName, [String] subAttribValue)
