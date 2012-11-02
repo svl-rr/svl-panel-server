@@ -194,10 +194,10 @@ function init(evt)
             setStyleSubAttribute(elem, "cursor", "pointer");
         }
 
-	if(elem.id.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 1)
+        if(elem.id.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 1)
         {
             //setStyleSubAttribute(elem, "cursor", "crosshair");
-	    blocksOnPanel.push(new BlockSensor(elem.id));
+            //blocksOnPanel.push(new BlockSensor(elem.id));
         }
     }
     

@@ -268,6 +268,55 @@
          inkscape:connector-curvature="0" />
     </marker>
     <symbol
+       onclick="clickDFTurnout(evt.currentTarget.correspondingUseElement.id)"
+       id="turnout_0deg">
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
+         inkscape:connector-curvature="0"
+         d="m 80,300 40,0"
+         id="path3179" />
+      <path
+         id="path3181"
+         d="m 80,280 20,20"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
+    </symbol>
+    <symbol
+       onclick="clickDFTurnout(evt.currentTarget.correspondingUseElement.id)"
+       id="turnout_45deg">
+      <path
+         id="path3201"
+         d="m 260,360 40,40"
+         inkscape:connector-curvature="0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
+         inkscape:connector-curvature="0"
+         d="m 260,380 20,0"
+         id="path3203" />
+    </symbol>
+    <symbol
+       onclick="clickDFTurnout(evt.currentTarget.correspondingUseElement.id)"
+       id="ds">
+      <path
+         inkscape:connector-curvature="0"
+         id="path3193"
+         d="m 200,520 30,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path3195"
+         d="m 210,500 20,20"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
+      <use
+         height="690.11475"
+         width="1047.9579"
+         y="0"
+         x="0"
+         xlink:href="#doubleslip_guard"
+         id="use3197" />
+    </symbol>
+    <symbol
        id="turnout_0deg_normal"
        onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
       <path
