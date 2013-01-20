@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Cavanaugh</title>
+	<link rel="stylesheet" href="panel.css" type="text/css">
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	<script src="panel.js"></script>
+
+	<style type="text/css">
+
+	body {font-family: Trebuchet MS, Helvetica, sans-serif; color:#ffffff; background-color: #007040;}
+	
+	div#name {font-size: 200%; position: absolute; left: 290px; top: 330px}
+
+	div#NT100 {position: absolute; left: 405px; top: 201px; -webkit-transform: scaleX(-1);}
+	div#NT101 {position: absolute; left: 0px; top: 199px; -webkit-transform: scaleY(-1);}
+	div#NT102 {position: absolute; left: 250px; top: 230px; -webkit-transform: scaleY(-1);}
+	div#NT103 {position: absolute; left: 250px; top: 170px;}
+	div#NT104 {position: absolute; left: 150px; top: 40px; -webkit-transform: scaleX(-1) scaleY(-1);}
+	div#NT105 {position: absolute; left: 500px; top: 170px; -webkit-transform: scaleX(-1);}
+	div#NT106 {position: absolute; left: 95px; top: 170px; -webkit-transform: scaleX(-1);}
+	</style>
+</head>
+<body>
+
+<div id="NT100" class="crossover N"></div>
+<div id="NT101" class="turnout N"></div>
+<div id="NT106" class="turnout N"></div>
+<div id="NT102" class="turnout N"></div>
+<div id="NT103" class="turnout N"></div>
+<div id="NT104" class="turnout N"></div>
+<div id="NT105" class="turnout N"></div>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xl="http://www.w3.org/1999/xlink" version="1.1" ">
+
+// brewwery tracks
+	<text x="20" y="100" fill="white">Buzz Brewery</text>
+	<line x1="5" y1="44" x2="150" y2="44" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+	<line x1="5" y1="75" x2="150" y2="75" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+	<line x1="240" y1="44" x2="295" y2="44" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+	<line x1="295" y1="44" x2="497" y2="170" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+
+// Dayton industrial
+	<text x="10" y="150" fill="white">Dayton Industrial Spur</text>
+	<line x1="4" y1="170" x2="90" y2="170" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+
+// northbound main
+	<line x1="190" y1="203" x2="250" y2="203" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+	<line x1="340" y1="203" x2="400" y2="203" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+	<line x1="590" y1="203" x2="650" y2="203" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+
+// southbound main
+	<line x1="95" y1="234" x2="250" y2="234" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+	<line x1="340" y1="234" x2="400" y2="234" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+	<line x1="490" y1="234" x2="650" y2="234" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+
+// scrap yard
+	<text x="400" y="290" fill="white">Scrap Yard</text>
+	<line x1="340" y1="265" x2="500" y2="265" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+
+// docks
+	<text x="590" y="74" fill="white">Docks</text>
+	<line x1="344" y1="170" x2="550" y2="44" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+	<line x1="550" y1="44" x2="650" y2="44" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="10" />
+</svg>
+
+<div id="name">
+Cavanaugh
+</div>
+
+<script>
+
+function getActivePanelElements() {
+	return [
+			{type:'turnout',name:'NT100'},
+			{type:'turnout',name:'NT101'},
+			{type:'turnout',name:'NT102'},
+			{type:'turnout',name:'NT103'},
+			{type:'turnout',name:'NT104'},
+			{type:'turnout',name:'NT105'},
+			{type:'turnout',name:'NT106'}
+		];
+}
+
+function getActivePanelElementsResetState() {
+	return [
+			{type:'turnout',name:'NT100',value:'N'},
+			{type:'turnout',name:'NT101',value:'N'},
+			{type:'turnout',name:'NT102',value:'N'},
+			{type:'turnout',name:'NT103',value:'N'},
+			{type:'turnout',name:'NT104',value:'N'},
+			{type:'turnout',name:'NT105',value:'N'},
+			{type:'turnout',name:'NT106',value:'N'}
+		];
+}
+
+</script>
+</body>
+</html>

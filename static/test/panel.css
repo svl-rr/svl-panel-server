@@ -1,10 +1,16 @@
-body {background: #888}
+body {background: #888;-webkit-user-select:none;}
 
-.N {height:40pt; width:80pt; padding:0; margin:0; overflow:hidden;}
-.N:before {content: url("graphics/normal.svg"); display:inline-block; font-size:0; line-height:0;}
+.turnout.N {height:40pt; width:80pt; padding:0; margin:0; overflow:hidden;}
+.turnout.N:before {content: url("graphics/normal.svg"); display:inline-block; font-size:0; line-height:0;}
 
-.R {height:40pt; width:80pt; padding:0; margin:0; overflow:hidden;}
-.R:before {content: url("graphics/reversed.svg"); display:inline-block; font-size:0; line-height:0;}
+.turnout.R {height:40pt; width:80pt; padding:0; margin:0; overflow:hidden;}
+.turnout.R:before {content: url("graphics/reversed.svg"); display:inline-block; font-size:0; line-height:0;}
+
+.crossover.N {height:40pt; width:80pt; padding:0; margin:0; overflow:hidden;}
+.crossover.N:before {content: url("graphics/normal-x.svg"); display:inline-block; font-size:0; line-height:0;}
+
+.crossover.R {height:40pt; width:80pt; padding:0; margin:0; overflow:hidden;}
+.crossover.R:before {content: url("graphics/reversed-x.svg"); display:inline-block; font-size:0; line-height:0;}
 
 .on {display:inline-block;}
 .off {display:none;}
