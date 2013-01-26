@@ -104,49 +104,39 @@ var io = require('socket.io').listen(server)
 //
 // NOTE: If we are running in OFFLINE mode, we log and bail out.
 
-function trackLayoutState() {
-	var turnoutAndSensorTracker;
-	var changedState;
+var turnoutAndSensorTracker;
 
-	if (process.env.OFFLINE !== undefined) {
-		console.log("Running in OFFLINE mode, no JMRI transactions will occur!");
-	} else {
+if (process.env.OFFLINE !== undefined) {
+	console.log("Running in OFFLINE mode, no JMRI transactions will occur!");
+} else {
 
-		turnoutAndSensorTracker = new jmri.JMRI('127.0.0.1', 12080);
+	turnoutAndSensorTracker = new jmri.JMRI('127.0.0.1', 12080);
 
-		turnoutAndSensorTracker.on('xmlioResponse', function (response) {
+	turnoutAndSensorTracker.on('xmlioResponse', function (response) {
+		// Convert the xml response into JSON, update state, and invoke callback
+		parser.parseString(response, function (err, result) {
 
-			// Convert the xml response into JSON, update state, and invoke callback
-			parser.parseString(response, function (err, result) {
+			var i, changedState;
 
-				var i;
+			if (err) { throw err; }
 
-				if (err) { throw err; }
-				changedState = dataHandler.updateGlobalDataFromJMRI(result);
-				if (changedState.length > 0) {
-					for (i in clients) {
-						if (clients.hasOwnProperty(i)) {
-							clients[i].emit('update', changedState);
-						}
+			changedState = dataHandler.updateGlobalDataFromJMRI(result);
+			if (changedState.length > 0) {
+				for (i in clients) {
+					if (clients.hasOwnProperty(i)) {
+						clients[i].emit('update', changedState);
 					}
 				}
+			}
 
-				// re-queue request with response state
-				turnoutAndSensorTracker.xmlioRequest(response);
-			});
+			// re-queue request with response state
+			turnoutAndSensorTracker.xmlioRequest(response);
 		});
+	});
 
-		turnoutAndSensorTracker.on('error', function (e) {
-			console.log("unable to contact JMRI: "+e.message);
-		});
-
-		// request initial state from JMRI
-		turnoutAndSensorTracker.getInitialState();
-	}
+	// request initial state from JMRI
+	turnoutAndSensorTracker.getInitialState();
 }
-
-
-trackLayoutState();
 
 
 // Filter function for the connect.directory middleware. This function allows
