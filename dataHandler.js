@@ -132,33 +132,37 @@ function updateGlobalDataFromJMRI(response) {
 // NOTE: If we are running in OFFLINE mode, we log and bail out.
 
 function trackLayoutState(callback) {
-
-	function handleResponse(response, callback) {
-
-		// Convert the xml response into JSON, update state, and invoke callback
-		parser.parseString(response, function (err, result) {
-			var changedState;
-
-			if (err) { throw err; }
-			changedState = updateGlobalDataFromJMRI(result);
-			if (typeof (callback) === 'function') {
-				callback(changedState);
-			}
-
-			// re-queue request with new response state
-			jmri.xmlioRequest('127.0.0.1', 12080, response, function (newResponse) {
-				handleResponse(newResponse, callback);
-			});
-		});
-	}
+	var turnoutAndSensorTracker;
+	var changedState;
+	var cb= callback;
 
 	if (process.env.OFFLINE !== undefined) {
 		console.log("Running in OFFLINE mode, no JMRI transactions will occur!");
 	} else {
-		// request initial state from JMRI
-		jmri.getInitialState('127.0.0.1', 12080, function (initialResponse) {
-			handleResponse(initialResponse, callback);
+
+		turnoutAndSensorTracker = new jmri.JMRI('127.0.0.1', 12080);
+		
+		turnoutAndSensorTracker.on('xmlioResponse', function (response) {
+			// Convert the xml response into JSON, update state, and invoke callback
+			parser.parseString(response, function (err, result) {
+
+				if (err) { throw err; }
+				changedState = updateGlobalDataFromJMRI(result);
+				if (typeof (cb) === 'function') {
+					cb(changedState);
+				}
+
+				// re-queue request with response state
+				turnoutAndSensorTracker.xmlioRequest(response);
+			});
 		});
+
+		turnoutAndSensorTracker.on('error', function (e) {
+			console.log("unable to contact JMRI: "+e.message);
+		});
+
+		// request initial state from JMRI
+		turnoutAndSensorTracker.getInitialState();
 	}
 }
 
@@ -171,7 +175,8 @@ function processSetCommand(data) {
 	var	changedData = [],
 		item,
 		xmlRequest = "",
-		turnoutState;
+		turnoutState,
+		turnoutUpdateRequest;
 
 	// Update Global State from the client data
 
@@ -221,7 +226,8 @@ function processSetCommand(data) {
 	// outstanding request issued in trackLayoutState will collect changes.
 
 	if ((xmlRequest !== "") && (process.env.OFFLINE === undefined)) {
-		jmri.xmlioRequest('127.0.0.1', 12080, "<xmlio>" + xmlRequest + "</xmlio>");
+		turnoutUpdateRequest = new jmri.JMRI('127.0.0.1', 12080);
+		turnoutUpdateRequest.xmlioRequest("<xmlio>" + xmlRequest + "</xmlio>");
 	}
 
 	return changedData;
