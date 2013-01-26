@@ -25,8 +25,6 @@
 
 var util = require('util');
 var jmri = require('./jmri');
-var xml2js = require("xml2js");
-var parser = new xml2js.Parser();
 
 
 // Keeping with a minimalist approach for now. All tracked state is kept in an
@@ -118,52 +116,6 @@ function updateGlobalDataFromJMRI(response) {
 		}
 	}
 	return responseData;
-}
-
-
-// trackLayoutState
-//
-// Establish a connection with the JMRI xmlio servlet to determine
-// the state of all sensors and turnouts. After collecting initial
-// state, this routine issues a new request back to the servlet which
-// will complete whenever there is a difference between the state passed
-// in and the previously returned layout state.
-//
-// NOTE: If we are running in OFFLINE mode, we log and bail out.
-
-function trackLayoutState(callback) {
-	var turnoutAndSensorTracker;
-	var changedState;
-	var cb= callback;
-
-	if (process.env.OFFLINE !== undefined) {
-		console.log("Running in OFFLINE mode, no JMRI transactions will occur!");
-	} else {
-
-		turnoutAndSensorTracker = new jmri.JMRI('127.0.0.1', 12080);
-		
-		turnoutAndSensorTracker.on('xmlioResponse', function (response) {
-			// Convert the xml response into JSON, update state, and invoke callback
-			parser.parseString(response, function (err, result) {
-
-				if (err) { throw err; }
-				changedState = updateGlobalDataFromJMRI(result);
-				if (typeof (cb) === 'function') {
-					cb(changedState);
-				}
-
-				// re-queue request with response state
-				turnoutAndSensorTracker.xmlioRequest(response);
-			});
-		});
-
-		turnoutAndSensorTracker.on('error', function (e) {
-			console.log("unable to contact JMRI: "+e.message);
-		});
-
-		// request initial state from JMRI
-		turnoutAndSensorTracker.getInitialState();
-	}
 }
 
 
@@ -291,8 +243,9 @@ function unregisterPanel(socket, panelName) {
 }
 
 
-exports.trackLayoutState = trackLayoutState;
+exports.updateGlobalDataFromJMRI = updateGlobalDataFromJMRI;
 exports.processSetCommand = processSetCommand;
 exports.processGetCommand = processGetCommand;
 exports.registerPanel = registerPanel;
 exports.unregisterPanel = unregisterPanel;
+

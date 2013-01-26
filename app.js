@@ -26,6 +26,9 @@
 var path = require('path'),
 	connect = require('connect'),
 	dataHandler = require('./dataHandler'),
+	jmri = require('./jmri'),
+	xml2js = require('xml2js'),
+	parser = new xml2js.Parser(),
 	clients = [],
 	currentTime = "12:00";
 
@@ -90,22 +93,60 @@ var io = require('socket.io').listen(server)
 	});
 
 
-// Set up a callback for any unsolicited changes in layout state which don't
-// originate from the websocket interface. These will normally be sensor changes
-// caused by block occupancy detectors on the layout, but it can also be triggered
-// by other JMRI-invoked turnout changes.
 
-dataHandler.trackLayoutState(function (changedState) {
-	var i;
-//	console.log("result of trackLayoutState:"+JSON.stringify(changedState));
-	if (changedState.length > 0) {
-		for (i in clients) {
-			if (clients.hasOwnProperty(i)) {
-				clients[i].emit('update', changedState);
-			}
-		}
+// trackLayoutState
+//
+// Establish a connection with the JMRI xmlio servlet to determine
+// the state of all sensors and turnouts. After collecting initial
+// state, this routine issues a new request back to the servlet which
+// will complete whenever there is a difference between the state passed
+// in and the previously returned layout state.
+//
+// NOTE: If we are running in OFFLINE mode, we log and bail out.
+
+function trackLayoutState() {
+	var turnoutAndSensorTracker;
+	var changedState;
+
+	if (process.env.OFFLINE !== undefined) {
+		console.log("Running in OFFLINE mode, no JMRI transactions will occur!");
+	} else {
+
+		turnoutAndSensorTracker = new jmri.JMRI('127.0.0.1', 12080);
+
+		turnoutAndSensorTracker.on('xmlioResponse', function (response) {
+
+			// Convert the xml response into JSON, update state, and invoke callback
+			parser.parseString(response, function (err, result) {
+
+				var i;
+
+				if (err) { throw err; }
+				changedState = dataHandler.updateGlobalDataFromJMRI(result);
+				if (changedState.length > 0) {
+					for (i in clients) {
+						if (clients.hasOwnProperty(i)) {
+							clients[i].emit('update', changedState);
+						}
+					}
+				}
+
+				// re-queue request with response state
+				turnoutAndSensorTracker.xmlioRequest(response);
+			});
+		});
+
+		turnoutAndSensorTracker.on('error', function (e) {
+			console.log("unable to contact JMRI: "+e.message);
+		});
+
+		// request initial state from JMRI
+		turnoutAndSensorTracker.getInitialState();
 	}
-});
+}
+
+
+trackLayoutState();
 
 
 // Filter function for the connect.directory middleware. This function allows
