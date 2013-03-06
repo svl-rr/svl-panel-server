@@ -94,47 +94,57 @@ var io = require('socket.io').listen(server)
 
 
 
-// trackLayoutState
-//
 // Establish a connection with the JMRI xmlio servlet to determine
 // the state of all sensors and turnouts. After collecting initial
 // state, this routine issues a new request back to the servlet which
 // will complete whenever there is a difference between the state passed
 // in and the previously returned layout state.
-//
-// NOTE: If we are running in OFFLINE mode, we log and bail out.
 
-var turnoutAndSensorTracker;
+var	turnoutAndSensorTracker = new jmri.JMRI('127.0.0.1', 12080);
+
+turnoutAndSensorTracker.on('xmlioResponse', function (response) {
+
+	// Convert the xml response into JSON, update state, and invoke callback
+	parser.parseString(response, function (err, result) {
+
+		var i, changedState;
+
+		if (err) { throw err; }
+
+		changedState = dataHandler.updateGlobalDataFromJMRI(result);
+		if (changedState.length > 0) {
+			for (i in clients) {
+				if (clients.hasOwnProperty(i)) {
+					clients[i].emit('update', changedState);
+				}
+			}
+		}
+
+		// re-queue request with response state
+		turnoutAndSensorTracker.xmlioRequest(response);
+	});
+});
+
+turnoutAndSensorTracker.on('error', function (e) {
+	console.log("JMRI error: "+ e.message);
+	
+	// If we couldn't connect to JMRI, just bail
+	if (e.code === 'ECONNREFUSED') {
+		process.exit(1);
+	} else {
+		// Something else bad happened, but we don't care, just start over
+		console.log("Reconnecting with JMRI...");
+		turnoutAndSensorTracker.getInitialState();
+	}
+});
+
+
+// Request initial state from JMRI to get the ball rolling
+// NOTE: If we are running in OFFLINE mode, we log, and never start asking
 
 if (process.env.OFFLINE !== undefined) {
 	console.log("Running in OFFLINE mode, no JMRI transactions will occur!");
 } else {
-
-	turnoutAndSensorTracker = new jmri.JMRI('127.0.0.1', 12080);
-
-	turnoutAndSensorTracker.on('xmlioResponse', function (response) {
-		// Convert the xml response into JSON, update state, and invoke callback
-		parser.parseString(response, function (err, result) {
-
-			var i, changedState;
-
-			if (err) { throw err; }
-
-			changedState = dataHandler.updateGlobalDataFromJMRI(result);
-			if (changedState.length > 0) {
-				for (i in clients) {
-					if (clients.hasOwnProperty(i)) {
-						clients[i].emit('update', changedState);
-					}
-				}
-			}
-
-			// re-queue request with response state
-			turnoutAndSensorTracker.xmlioRequest(response);
-		});
-	});
-
-	// request initial state from JMRI
 	turnoutAndSensorTracker.getInitialState();
 }
 
