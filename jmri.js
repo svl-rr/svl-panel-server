@@ -23,55 +23,66 @@
 
 "use strict";
 
-var http = require('http');
+var	http = require('http'),
+	util = require('util'),
+	EventEmitter = require('events').EventEmitter;
 
-function xmlioRequest(host, port, xml, callback, errorHandler) {
-	var	req,
-		postOptions = {
-			host: host,
-			port: port,
-			path: '/xmlio/',
-			method: 'POST',
-			headers: {
-				'Content-Type': 'text/xml',
-				'Content-Length': xml.length
-			}
-		},
-		responseXML = [];
+function JMRI(host,port) {
+	var self = this;
+	EventEmitter.call(self);
+	self.host = host;
+	self.port = port;
+	self.req = null;
+}
+util.inherits(JMRI, EventEmitter);
 
-	req = http.request(postOptions, function (res) {
-		res.setEncoding('utf8');
-		res.on('data', function (dataChunk) {
-			responseXML.push(dataChunk);
-		});
-		res.on('end', function () {
-//			console.log('JMRI RESPONSE: ' + responseXML);
-			if (typeof (callback) === 'function') {
-				callback(responseXML.join(''));
-			}
-		});
-	});
 
-	req.on('error', function (e) {
-		console.log("xmlioRequest request failed! "+e);
+JMRI.prototype.xmlioRequest = function(xml) {
+	var self = this,
+		options = {
+			host: self.host, port: self.port,
+			path: '/xmlio/', method: 'POST',
+			headers: {'Content-Type': 'text/xml','Content-Length': xml.length}
+		};
 		
-		if (typeof (errorHandler) === 'function') {
-			errorHandler(e);
-		} else {
-			throw e;
-		}
+	self.responseXML = [];
+
+	if (self.req !== null) {
+		self.req.abort();		// aborting existing/previous request
+	}
+
+	self.req = http.request(options, function (res) {
+		res.setEncoding('utf8');
+
+		res.on('data', function (dataChunk) {
+			self.responseXML.push(dataChunk);
+		});
+
+		res.on('end', function () {
+			self.emit('xmlioResponse',self.responseXML.join(''));
+		});
 	});
 
-//	console.log("JMRI REQUEST: " + xml);
-	req.write(xml);
-	req.end();
+	self.req.on('error', function(e) {
+		self.emit('error',e);
+	});
+
+	self.emit('xmlioRequest',xml);	// debug hook
+	self.req.write(xml);
+	self.req.end();
 }
 
 
-function getInitialState(host, port, callback) {
-	xmlioRequest(host, port, "<xmlio><list><type>turnout</type></list><list><type>sensor</type></list></xmlio>", callback);
+JMRI.prototype.getInitialState = function() {
+	this.xmlioRequest("<xmlio><list><type>turnout</type></list><list><type>sensor</type></list></xmlio>");
 }
 
 
-exports.xmlioRequest = xmlioRequest;
-exports.getInitialState = getInitialState;
+JMRI.prototype.getCurrentTime = function() {
+	this.xmlioRequest("<xmlio><item><type>memory</type><name>IMCURRENTTIME</name></item></xmlio>");
+}
+
+
+module.exports = {
+	JMRI : JMRI
+};

@@ -25,8 +25,6 @@
 
 var util = require('util');
 var jmri = require('./jmri');
-var xml2js = require("xml2js");
-var parser = new xml2js.Parser();
 
 
 // Keeping with a minimalist approach for now. All tracked state is kept in an
@@ -121,48 +119,6 @@ function updateGlobalDataFromJMRI(response) {
 }
 
 
-// trackLayoutState
-//
-// Establish a connection with the JMRI xmlio servlet to determine
-// the state of all sensors and turnouts. After collecting initial
-// state, this routine issues a new request back to the servlet which
-// will complete whenever there is a difference between the state passed
-// in and the previously returned layout state.
-//
-// NOTE: If we are running in OFFLINE mode, we log and bail out.
-
-function trackLayoutState(callback) {
-
-	function handleResponse(response, callback) {
-
-		// Convert the xml response into JSON, update state, and invoke callback
-		parser.parseString(response, function (err, result) {
-			var changedState;
-
-			if (err) { throw err; }
-			changedState = updateGlobalDataFromJMRI(result);
-			if (typeof (callback) === 'function') {
-				callback(changedState);
-			}
-
-			// re-queue request with new response state
-			jmri.xmlioRequest('127.0.0.1', 12080, response, function (newResponse) {
-				handleResponse(newResponse, callback);
-			});
-		});
-	}
-
-	if (process.env.OFFLINE !== undefined) {
-		console.log("Running in OFFLINE mode, no JMRI transactions will occur!");
-	} else {
-		// request initial state from JMRI
-		jmri.getInitialState('127.0.0.1', 12080, function (initialResponse) {
-			handleResponse(initialResponse, callback);
-		});
-	}
-}
-
-
 // processSetCommand
 //
 // Handle the 'set' commands initiated by the the socket.io/websocket interface
@@ -171,7 +127,8 @@ function processSetCommand(data) {
 	var	changedData = [],
 		item,
 		xmlRequest = "",
-		turnoutState;
+		turnoutState,
+		turnoutUpdateRequest;
 
 	// Update Global State from the client data
 
@@ -221,7 +178,8 @@ function processSetCommand(data) {
 	// outstanding request issued in trackLayoutState will collect changes.
 
 	if ((xmlRequest !== "") && (process.env.OFFLINE === undefined)) {
-		jmri.xmlioRequest('127.0.0.1', 12080, "<xmlio>" + xmlRequest + "</xmlio>");
+		turnoutUpdateRequest = new jmri.JMRI('127.0.0.1', 12080);
+		turnoutUpdateRequest.xmlioRequest("<xmlio>" + xmlRequest + "</xmlio>");
 	}
 
 	return changedData;
@@ -285,8 +243,9 @@ function unregisterPanel(socket, panelName) {
 }
 
 
-exports.trackLayoutState = trackLayoutState;
+exports.updateGlobalDataFromJMRI = updateGlobalDataFromJMRI;
 exports.processSetCommand = processSetCommand;
 exports.processGetCommand = processGetCommand;
 exports.registerPanel = registerPanel;
 exports.unregisterPanel = unregisterPanel;
+
