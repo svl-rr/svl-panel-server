@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="Cavanaugh.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -547,14 +547,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="766.24008"
+     inkscape:cx="645.24008"
      inkscape:cy="392.66393"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="mainlineTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
-     inkscape:window-x="671"
+     inkscape:window-x="42"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -734,18 +734,6 @@
        x="0">
       <title
          id="title3275">TO</title>
-    </use>
-    <use
-       inkscape:label="#use4376"
-       height="740.11475"
-       width="1047.9579"
-       transform="matrix(-1,0,0,-1,320,634.0945)"
-       id="TO101"
-       y="0"
-       x="0"
-       xlink:href="#turnout_0deg_normal">
-      <title
-         id="title3272">TO</title>
     </use>
     <path
        sodipodi:nodetypes="ccc"
@@ -939,6 +927,19 @@
        d="m 160,334.0945 40,0"
        id="path4255"
        inkscape:connector-curvature="0" />
+    <use
+       style="display:inline"
+       inkscape:label="#use4376"
+       height="740.11475"
+       width="1047.9579"
+       transform="matrix(-1,0,0,-1,320,634.0945)"
+       id="TO101"
+       y="0"
+       x="0"
+       xlink:href="#turnout_0deg_normal">
+      <title
+         id="title3272">TO</title>
+    </use>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -948,8 +949,8 @@
      style="display:inline">
     <a
        xlink:href="Dayton.svg"
-       id="daytonMainLink"
-       transform="translate(-20,124.00005)">
+       transform="translate(-20,124.00005)"
+       id="daytonMainLink">
       <text
          sodipodi:linespacing="125%"
          id="text3335"
@@ -965,8 +966,8 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       transform="translate(-20,134.00005)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-20,134.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -989,9 +990,9 @@
      style="display:inline">
     <a
        xlink:href="Bayshore.svg"
-       style="display:inline"
+       id="bayshoreLink"
        transform="translate(710,164.0005)"
-       id="bayshoreLink">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3225"
