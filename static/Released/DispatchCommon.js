@@ -268,6 +268,11 @@ function setDispatchBlockState(elemID, state, trainID)
         
         if(oppositeState == UNAUTHORIZED_STATE)
         {
+            // Move clicked item to top of layer
+            var elem = svgDocument.getElementById(elemID);
+            
+            elem.parentNode.appendChild(elem);
+        
             setDispatchSegmentState(DISPATCHSEGMENT_OBJID_PREFIX + blockNum + thisRoute, state, trainID);
             setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum + thisRoute, state, trainID);
         }
