@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="Bayshore.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -546,11 +546,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.3397168"
-     inkscape:cx="389.08569"
+     inkscape:zoom="1.02"
+     inkscape:cx="510.12027"
      inkscape:cy="405.36093"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="industrialPanelLinkLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -1298,11 +1298,17 @@
      id="mainlinePanelLinkLayer"
      inkscape:label="Mainline Panel Links"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline">
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="industrialPanelLinkLayer"
+     inkscape:label="Industrial Panel Links"
+     transform="translate(0,-5.0883911e-4)">
     <a
        xlink:href="Cavanaugh.svg"
+       transform="translate(-100,50.46663)"
        id="cavanaughLink"
-       transform="translate(-100,50.46618)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1329,11 +1335,6 @@
            sodipodi:role="line">Cavanaugh</tspan></text>
     </a>
   </g>
-  <g
-     inkscape:groupmode="layer"
-     id="industrialPanelLinkLayer"
-     inkscape:label="Industrial Panel Links"
-     transform="translate(0,-5.0883911e-4)" />
   <g
      inkscape:groupmode="layer"
      id="trackNameLayer"
