@@ -1,6 +1,7 @@
 function panelInit(evt)
 {
     // Mains
+<<<<<<< HEAD
     createPanelTurnout("TO100A", true);
 	createPanelTurnout("TO100B", true);
 	createPanelTurnout("TO101", true);
@@ -11,6 +12,18 @@ function panelInit(evt)
 	createPanelTurnout("TO104", true);
 	createPanelTurnout("TO105", true);
 	createPanelTurnout("TO106", true);
+=======
+    createPanelTurnout("TO100A", false);
+	createPanelTurnout("TO100B", false);
+	createPanelTurnout("TO101", false);
+
+    // Industries
+	createPanelTurnout("TO102", false);
+    createPanelTurnout("TO103", false);
+	createPanelTurnout("TO104", false);
+	createPanelTurnout("TO105", false);
+	createPanelTurnout("TO106", false);
+>>>>>>> master
 }
 
 function buzzBeer2Path()

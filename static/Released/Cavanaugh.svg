@@ -27,12 +27,21 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
+<<<<<<< HEAD
      type="application/ecmascript"
      id="script_common" />
   <script
      xlink:href="Cavanaugh.js"
      type="application/ecmascript"
      id="script_panelSpecific" />
+=======
+     id="script_common"
+     type="application/ecmascript" />
+  <script
+     xlink:href="Cavanaugh.js"
+     id="script_panelSpecific"
+     type="application/ecmascript" />
+>>>>>>> master
   <defs
      id="defs4">
     <linearGradient
@@ -547,6 +556,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
+<<<<<<< HEAD
      inkscape:cx="766.24008"
      inkscape:cy="392.66393"
      inkscape:document-units="px"
@@ -555,6 +565,16 @@
      inkscape:window-width="1920"
      inkscape:window-height="997"
      inkscape:window-x="671"
+=======
+     inkscape:cx="645.24008"
+     inkscape:cy="392.66393"
+     inkscape:document-units="px"
+     inkscape:current-layer="mainlineTrackLayer"
+     showgrid="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="997"
+     inkscape:window-x="42"
+>>>>>>> master
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -735,6 +755,7 @@
       <title
          id="title3275">TO</title>
     </use>
+<<<<<<< HEAD
     <use
        inkscape:label="#use4376"
        height="740.11475"
@@ -747,6 +768,8 @@
       <title
          id="title3272">TO</title>
     </use>
+=======
+>>>>>>> master
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
@@ -939,6 +962,22 @@
        d="m 160,334.0945 40,0"
        id="path4255"
        inkscape:connector-curvature="0" />
+<<<<<<< HEAD
+=======
+    <use
+       style="display:inline"
+       inkscape:label="#use4376"
+       height="740.11475"
+       width="1047.9579"
+       transform="matrix(-1,0,0,-1,320,634.0945)"
+       id="TO101"
+       y="0"
+       x="0"
+       xlink:href="#turnout_0deg_normal">
+      <title
+         id="title3272">TO</title>
+    </use>
+>>>>>>> master
   </g>
   <g
      inkscape:groupmode="layer"
@@ -948,8 +987,13 @@
      style="display:inline">
     <a
        xlink:href="Dayton.svg"
+<<<<<<< HEAD
        id="daytonMainLink"
        transform="translate(-20,124.00005)">
+=======
+       transform="translate(-20,124.00005)"
+       id="daytonMainLink">
+>>>>>>> master
       <text
          sodipodi:linespacing="125%"
          id="text3335"
@@ -965,8 +1009,13 @@
     </a>
     <a
        xlink:href="Dayton.svg"
+<<<<<<< HEAD
        transform="translate(-20,134.00005)"
        id="daytonIndustrialLink">
+=======
+       id="daytonIndustrialLink"
+       transform="translate(-20,134.00005)">
+>>>>>>> master
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -989,9 +1038,15 @@
      style="display:inline">
     <a
        xlink:href="Bayshore.svg"
+<<<<<<< HEAD
        style="display:inline"
        transform="translate(710,164.0005)"
        id="bayshoreLink">
+=======
+       id="bayshoreLink"
+       transform="translate(710,164.0005)"
+       style="display:inline">
+>>>>>>> master
       <text
          sodipodi:linespacing="125%"
          id="text3225"

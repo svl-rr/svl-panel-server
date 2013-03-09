@@ -35,7 +35,7 @@ function panelInitSouth(evt)
     createPanelTurnout("TO125", false);
     
     // Cavanaugh
-    createPanelTurnout("TO101", true);
+    createPanelTurnout("TO101", false);
     createPanelTurnout("TO100A", false);
     createPanelTurnout("TO100B", false);
     

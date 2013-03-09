@@ -52,6 +52,13 @@ $(document).ready(function() {
 		socket.emit('set',[{type:'turnout', name:event.target.id, value:newState}]);
 	});
 
+	$(".crossover").click(function(event) {
+		event.preventDefault();
+		var $target = $(event.target);
+		var newState = $target.hasClass('N') ? 'R' : 'N';
+		socket.emit('set',[{type:'turnout', name:event.target.id, value:newState}]);
+	});
+
 	$("#get-button").click(function () {
 		getPanelState();
 	});
@@ -80,7 +87,7 @@ function setItemState(itemId,itemState) {
 	
 	if (theElement) {
 		console.log("Updating " + itemId + " to " + itemState);
-		if ($(theElement).hasClass("turnout")) {
+		if ($(theElement).hasClass("turnout") || $(theElement).hasClass("crossover")) {
 			if (itemState === "N") {
 				$(theElement).removeClass("R").addClass("N");
 			} else {
