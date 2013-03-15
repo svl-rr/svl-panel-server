@@ -244,14 +244,17 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
         removeStyleSubAttribute(elem, "marker-end");
     }
 
-    if((elemTextTrainID != null) && (lowLevelTrainID != null) && (lowLevelTrainID != UNAUTHORIZED_STATE) && (((state != AUTHORIZED_NB_STATE) && (state != AUTHORIZED_SB_STATE)) || alwaysShowTrainID))
+    if(elemTextTrainID != null)
     {
-        setSVGText(elemIDTextTrainID, lowLevelTrainID);
-        elemTextTrainID.setAttribute("visibility", "visible");
-    }
-    else
-    {
-        elemTextTrainID.setAttribute("visibility", "hidden");
+        if((lowLevelTrainID != null) && (lowLevelTrainID != UNAUTHORIZED_STATE) && (((state != AUTHORIZED_NB_STATE) && (state != AUTHORIZED_SB_STATE)) || alwaysShowTrainID))
+        {
+            setSVGText(elemIDTextTrainID, lowLevelTrainID);
+            elemTextTrainID.setAttribute("visibility", "visible");
+        }
+        else
+        {
+            elemTextTrainID.setAttribute("visibility", "hidden");
+        }
     }
 
     return true;
