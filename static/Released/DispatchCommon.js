@@ -101,7 +101,7 @@ function setDispatchSensorState(sensorID, sensorState)
 }
 
 function userClickChangeToNextState(elemID)
-{    
+{
 	var elem = svgDocument.getElementById(elemID);
 	
 	if(elem == null)
@@ -110,7 +110,9 @@ function userClickChangeToNextState(elemID)
 		return;
 	}
     
-    var currentState = getDispatchSegmentState(DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(elemID));
+    var blockID = DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(elemID);
+    
+    var currentState = getDispatchSegmentState(blockID);
     
     if(currentState == UNAUTHORIZED_STATE)
     {
@@ -123,48 +125,65 @@ function userClickChangeToNextState(elemID)
 		}
 
         if((nextAuthorizationTrainID != null) && (nextAuthorizationTrainID != "") && (nextAuthorizationTrainID != " "))
-			setDispatchBlockState(elemID, nextAuthorizationState, nextAuthorizationTrainID);
+			notifyServerOfNextState(blockID, nextAuthorizationState, nextAuthorizationTrainID);
     }
     else if(currentState == AUTHORIZED_NB_STATE)
     {
 	// only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
-        setDispatchBlockState(elemID, OCCUPIED_NB_STATE, null);
+        notifyServerOfNextState(blockID, OCCUPIED_NB_STATE, null);
     }
     else if(currentState == AUTHORIZED_SB_STATE)
     {
 	// only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
-        setDispatchBlockState(elemID, OCCUPIED_SB_STATE, null);
+        notifyServerOfNextState(blockID, OCCUPIED_SB_STATE, null);
     }
     else if(currentState == OCCUPIED_NB_STATE)
     {
 	// only used until sensors are implemented in the field. Click should be ignored if sensors present
-        setDispatchBlockState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
     else if(currentState == OCCUPIED_SB_STATE)
     {
 	// only used until sensors are implemented in the field. Click should be ignored if sensors present
-        setDispatchBlockState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
     else if(currentState == OOS_STATE)
     {
 	// only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
-        setDispatchBlockState(elemID, OCCUPIED_STATE, null);
+        notifyServerOfNextState(blockID, OCCUPIED_STATE, null);
     }
     else
     {
-        setDispatchBlockState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
 }
 
-/* setDispatchBlockState([String] elemID, [String] state)
- * Finds an SVG element (presumed to be an SVGUseElement) with the useElemID and sets the xlink:href attribute to match
- * the corresponding selected route (normal or reverse).  This is a high-level call in that it will set the
- * xlink:href attribute for all PanelTurnout objects whose base address matches the base address of useElemID.
- *
- * e.g. TO450, TO450A, TO450B will all be thrown to the same state regardless of which ID is passed.  This allows
- * the panel to replicate an interlocked crossover function (i.e. multiple motors on a single switch-it).
+/* notifyServerOfNextState([String] elemID, [String] state, [String] trainID)
  */
+function notifyServerOfNextState(blockID, state, trainID)
+{	
+    for(var i = 0; i < dispatchSegmentStates.length; i++)
+    {
+        if(dispatchSegmentStates[i].name == blockID)
+        {			
+			// Only update trainID if it is not null
+			if(trainID != null)
+                serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
+            else
+                serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + dispatchSegmentStates[i].trainID)]);
+            
+            return;
+        }
+    }
+    
+	// Didn't find an entry so create a new one
+    dispatchSegmentStates.push({name:blockID, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE});
+    
+    serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
+}
 
+/* setDispatchBlockState([String] elemID, [String] state, [String] trainID)
+ */
 function setDispatchBlockState(elemID, state, trainID)
 {
 	var blockNum = getDCCAddr(elemID);
@@ -284,7 +303,7 @@ function setDispatchSegmentState(blockID, state, trainID)
 			if(trainID != null)
 				dispatchSegmentStates[i].trainID = trainID;
             
-            serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + dispatchSegmentStates[i].trainID)]);
+            //serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + dispatchSegmentStates[i].trainID)]);
             return;
         }
     }
@@ -292,7 +311,7 @@ function setDispatchSegmentState(blockID, state, trainID)
 	// Didn't find an entry so create a new one
     dispatchSegmentStates.push({name:blockID, state:state, trainID:trainID});
     
-    serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
+    //serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
 }
 
 function getDispatchSegmentTrainID(blockID)
@@ -367,7 +386,6 @@ function setNextAuthorizationTrain(elemID)
 	
 	if((nextAuthorizationTrainID == "") || (nextAuthorizationTrainID == " "))
 		nextAuthorizationState = OOS_STATE;
-	
 }
 
 function getTrainIDText(trainIDElemID)
@@ -472,6 +490,9 @@ function getCommonDispatchStates()
     for(var k in blockElements)
         commonObjs.push(new ServerObject(JMRI_SENSOR_OBJID_PREFIX + getDCCAddr(blockElements[k]), SERVER_TYPE_SENSOR, null));
 
+    for(var l in blockElements)
+        commonObjs.push(new ServerObject(DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(blockElements[l]), SERVER_TYPE_DISPATCH, null));
+
     return commonObjs;
 }
 
@@ -501,6 +522,9 @@ function setDispatchState(stateObj)
         var colonLoc = stateObj.value.search(':');
         var preColonState = stateObj.value.substring(0, colonLoc);
         var postColonTrainID = stateObj.value.substring(colonLoc+1);
+        
+        if(postColonTrainID === "null")
+            postColonTrainID = null;
         
         setDispatchBlockState(stateObj.name, preColonState, postColonTrainID);
     
