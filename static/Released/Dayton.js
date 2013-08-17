@@ -19,17 +19,17 @@ function panelInit(evt)
     createPanelTurnout("TO132A", false);
     createPanelTurnout("TO132B", true);
     createPanelTurnout("TO150", false);
-	createPanelTurnout("TO164", false);
-    createPanelTurnout("TO165", false);
-	createPanelTurnout("TO166", false);
+	createPanelTurnout("TO164", true);
+    createPanelTurnout("TO165", true);
+	createPanelTurnout("TO166", true);
 	createPanelTurnout("TO167", false);
     createPanelTurnout("TO168", false);
-    createPanelTurnout("TO169", false);
-    createPanelTurnout("TO170", false);
+    createPanelTurnout("TO169", true);
+    createPanelTurnout("TO170", true);
     createPanelTurnout("TO171", false);
-    createPanelTurnout("TO172", false);
+    createPanelTurnout("TO172", true);
     createPanelTurnout("TO173", false);
-    createPanelTurnout("TO174", false);
+    createPanelTurnout("TO174", true);
 }
 
 function DPL3Path()
