@@ -554,7 +554,7 @@
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
-     inkscape:window-x="189"
+     inkscape:window-x="149"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -755,7 +755,7 @@
        inkscape:label="#use4376"
        height="740.11475"
        width="1047.9579"
-       transform="matrix(-1,0,0,1,620,-125.9055)"
+       transform="matrix(-1,0,0,1,580,-125.9055)"
        id="TO168"
        y="0"
        x="0"
@@ -802,7 +802,7 @@
        d="m 460,234.0945 80,80"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="buzzBeerLeadPath()" />
+       onclick="DaytonIndustrialLeadPath()" />
     <path
        onclick="DPL3Path()"
        inkscape:label="#path4221"
@@ -988,7 +988,7 @@
        onclick="OnthaSkidsPath()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 540,154.0945 60,-60 100,0"
+       d="m 500,154.0945 60,-60 100,0"
        id="path4026"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
@@ -997,7 +997,7 @@
        y="0"
        xlink:href="#turnout_0deg_normal"
        id="TO167"
-       transform="translate(540,-125.9055)"
+       transform="translate(500,-125.9055)"
        width="1047.9579"
        height="740.11475"
        inkscape:label="#use4380">
@@ -1056,7 +1056,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path4048"
-       d="m 620,154.0945 -60,-60 -100,0"
+       d="m 580,154.0945 -60,-60 -100,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
        onclick="WiebeWafersPath()" />
@@ -1064,10 +1064,10 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path4050"
-       d="m 460,214.0945 180,0 20,-20"
+       d="m 560,214.0945 80,0 20,-20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="slipperShipperPath()" />
+       onclick="IndRunaroundSouthPath()" />
     <path
        onclick="GoodMorningCerealPath()"
        inkscape:label="#path4221"
@@ -1087,17 +1087,17 @@
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 500,174.0945 -80,0"
+       d="m 460,174.0945 -40,0"
        id="path4056"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="arrivalMain2Path()" />
+       onclick="OnthaCRLLeadPath()" />
     <path
-       onclick="arrivalMain2Path()"
+       onclick="WiebeOnthaCRLPath()"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4058"
-       d="m 620,174.0945 -80,0"
+       d="m 580,174.0945 -80,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221" />
     <path
@@ -1122,6 +1122,22 @@
        d="m 60,414.0945 40,0"
        id="path4255"
        inkscape:connector-curvature="0" />
+    <path
+       onclick="IndRunaroundNorthPath()"
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 460,214.0945 100,0"
+       id="path3229"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3231"
+       d="m 660,174.0945 -40,0"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:label="#path4221"
+       onclick="WiebeCRLLeadPath()" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1447,24 +1463,24 @@
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="460"
+       x="420"
        y="110.1148"
        id="text4096"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="460"
+         x="420"
          y="110.1148"
          id="tspan4098">Wiebe Wafers</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4100"
        y="110.1148"
-       x="610"
+       x="570"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          id="tspan4102"
          y="110.1148"
-         x="610"
+         x="570"
          sodipodi:role="line">Ontha Skids</tspan></text>
     <text
        xml:space="preserve"
