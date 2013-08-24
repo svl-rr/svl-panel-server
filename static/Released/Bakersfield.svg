@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Bakersfield.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -498,10 +498,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.03"
-     inkscape:cx="297.09117"
+     inkscape:cx="179.61544"
      inkscape:cy="323.80176"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="industrialPanelLinkLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -689,7 +689,7 @@
        width="1047.9579"
        transform="matrix(-1,0,0,1,360,-85.905499)"
        id="TO15A"
-       xlink:href="#turnout_0deg_reverse"
+       xlink:href="#turnout_0deg_normal"
        y="0"
        x="0"
        inkscape:label="#use4382">
@@ -729,7 +729,7 @@
        width="1047.9579"
        transform="matrix(-1,0,0,-1,320,514.0945)"
        id="TO14"
-       xlink:href="#turnout_0deg_reverse"
+       xlink:href="#turnout_0deg_normal"
        y="0"
        x="0"
        inkscape:label="#use4382">
@@ -938,13 +938,13 @@
      id="industrialPanelLinkLayer"
      inkscape:label="Industrial Panel Links"
      transform="translate(0,-5.0883911e-4)"
-     sodipodi:insensitive="true"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       style="display:inline"
+       transform="translate(-140,88.000488)"
        id="daytonLink"
-       transform="translate(-140,88.000488)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
