@@ -37,7 +37,7 @@
      id="namedview4355"
      showgrid="false"
      inkscape:zoom="1.06"
-     inkscape:cx="-42.521943"
+     inkscape:cx="-46.639201"
      inkscape:cy="474.81275"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -982,7 +982,7 @@
      inkscape:groupmode="layer"
      id="layer8"
      inkscape:label="Invalid Links"
-     style="display:inline;opacity:0.5"
+     style="opacity:0.5;display:inline"
      sodipodi:insensitive="true">
     <text
        id="text4081"
@@ -1463,17 +1463,6 @@
          style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Ashgrove Quarry</tspan>
     </text>
     <circle
-       cx="396"
-       cy="36"
-       r="4.5000072"
-       id="circle4177"
-       sodipodi:cx="396"
-       sodipodi:cy="36"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffffff;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
-    <circle
        cx="301.5"
        cy="198"
        r="4.5000072"
@@ -1586,32 +1575,6 @@
          style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
     </text>
     <text
-       id="text4265"
-       style="fill:#000000;stroke:none;display:inline"
-       x="381.87729"
-       y="26.010481">
-      <tspan
-         font-size="9"
-         font-weight="500"
-         x="382.37582"
-         y="35.010479"
-         id="tspan4267"
-         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
-    </text>
-    <text
-       y="23.763433"
-       x="397.57309"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       id="text5253">
-      <tspan
-         style="font-size:12px;font-weight:bold;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
-         id="tspan5255"
-         y="34.763432"
-         x="397.57309"
-         font-weight="bold"
-         font-size="12">Bakersfield</tspan>
-    </text>
-    <text
        id="text4161"
        style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
        x="186.33676"
@@ -1653,7 +1616,8 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Valid Links"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <a
        xlink:href="Released/Bayshore.svg"
        id="a5922"
@@ -1957,5 +1921,46 @@
          id="tspan4255"
          style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
     </text>
+    <circle
+       cx="396"
+       cy="36"
+       r="4.5000072"
+       id="circle4177"
+       sodipodi:cx="396"
+       sodipodi:cy="36"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffffff;stroke:none;display:inline"
+       transform="translate(-10.663234,-4.2700512)" />
+    <text
+       id="text4265"
+       style="fill:#000000;stroke:none;display:inline"
+       x="381.87729"
+       y="26.010481">
+      <tspan
+         font-size="9"
+         font-weight="500"
+         x="382.37582"
+         y="35.010479"
+         id="tspan4267"
+         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
+    </text>
+    <a
+       xlink:href="Released/Bakersfield.svg"
+       id="a5092">
+      <text
+         id="text5253"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         x="397.57309"
+         y="23.763433">
+        <tspan
+           font-size="12"
+           font-weight="bold"
+           x="397.57309"
+           y="34.763432"
+           id="tspan5255"
+           style="font-size:12px;font-weight:bold;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Bakersfield</tspan>
+      </text>
+    </a>
   </g>
 </svg>
