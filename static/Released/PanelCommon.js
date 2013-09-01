@@ -43,6 +43,35 @@ var SERVER_NAME_MAINLINELOCKED = "Mainline Locked";
 
 var connectedBackgroundColor = null;
 
+function turnoutSegmentClicked(id)
+{
+    if(isDispatchPanel())
+        dispatchTurnoutSegmentClicked(id);
+
+    changeTurnoutRoute(id);
+}
+
+function changeTurnoutRoute(id)
+{
+    turnoutID = id.substring(0, id.length - 1);
+    turnoutSegment = id.substring(id.length - 1);
+
+    if(isTopMostOfTurnoutSegmentPair(id))
+    {
+        if((turnoutSegment == "r") || (turnoutSegment == "R"))
+            setTurnoutState(turnoutID, "n");    // toggle turnout
+        else if((turnoutSegment == "n") || (turnoutSegment == "N"))
+            setTurnoutState(turnoutID, "r");    // toggle turnout
+    }
+    else
+        setTurnoutState(turnoutID, turnoutSegment)
+}
+
+function isDispatchPanel()
+{
+    return (typeof dispatchInit == 'function');
+}
+
 /* PanelTurnout([String] id, [boolean] flipBit)
  * PanelTurnout object to contain id and flipbit, which is used to invert the graphic status
  */
@@ -212,7 +241,7 @@ function init(evt)
 	}
 
     // Allow dispatch panels to initialize themselves
-    if(typeof dispatchInit == 'function')
+    if(isDispatchPanel())
 		dispatchInit(evt);
     
     var panelBackground = svgDocument.getElementById("panelBackground");

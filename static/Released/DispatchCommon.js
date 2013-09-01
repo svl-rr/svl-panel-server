@@ -1,6 +1,7 @@
 // Constant id prefix for objects
 var DISPATCHSEGMENT_OBJID_PREFIX = "block";
 
+
 var UNAUTHORIZED_STATE = "Unauthorized";
 var AUTHORIZED_NB_STATE = "Authorized NB";
 var AUTHORIZED_SB_STATE = "Authorized SB";
@@ -52,7 +53,8 @@ function dispatchInit(evt)
     }
     
     var allBlockElements = getAllObjectsOfTagNameAndID("path", DISPATCHSEGMENT_OBJID_PREFIX + "\\d+[A-Z]?");
-	for(var j in allBlockElements)
+    
+    for(var j in allBlockElements)
     {
         var rIndex = allBlockElements[j].id.indexOf("R");
         var nIndex = allBlockElements[j].id.indexOf("N");
@@ -60,6 +62,13 @@ function dispatchInit(evt)
         var currentBlockID = DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(allBlockElements[j].id) + (rIndex != -1 ? "R" : (nIndex != -1 ? "N" : ""));
         
         dispatchSegmentStates[currentBlockID] = {name:currentBlockID, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE};
+    }
+    
+    var allTurnoutElements = getAllObjectsOfTagNameAndID("path", PANEL_TURNOUT_OBJID_PREFIX + "\\d+[A-Z]?[RrNn]");
+
+    for(var k in allTurnoutElements)
+    {    
+        dispatchSegmentStates[allTurnoutElements[k].id] = {name:allTurnoutElements[k].id, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE};
     }
 }
 
@@ -174,6 +183,20 @@ function setDispatchSensorState(sensorID, sensorState)
 	{
 		setPanelError("Bad sensor state passed to setDispatchSensorState(" + elemID + ")");
 	}
+}
+
+function dispatchTurnoutSegmentClicked(id)
+{
+    if(turnoutOccupied(id))
+    {
+        advanceTurnoutStateToUnoccupied(id);
+        return;
+    }
+    else if(turnoutAuthorized(id))
+    {
+        advanceTurnoutStateToOccupied(id);
+        return;
+    }
 }
 
 function userClickChangeToNextState(elemID)
