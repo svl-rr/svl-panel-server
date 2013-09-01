@@ -200,7 +200,7 @@ function dispatchTurnoutSegmentClicked(id)
 }
 
 function userClickChangeToNextState(elemID)
-{    
+{
 	var elem = svgDocument.getElementById(elemID);
 	
 	if(elem == null)
@@ -214,7 +214,9 @@ function userClickChangeToNextState(elemID)
     
     var currentStateID = DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(elemID) + (rIndex != -1 ? "R" : (nIndex != -1 ? "N" : ""));
     
-    var currentState = getDispatchSegmentState(currentStateID);
+    var blockID = DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(elemID);
+    
+    var currentState = getDispatchSegmentState(blockID);
     
     if(currentState == null)
     {
@@ -230,50 +232,69 @@ function userClickChangeToNextState(elemID)
 			if((returnedTrainID != null) && (returnedTrainID != "") && (returnedTrainID != " "))
 				nextAuthorizationTrainID = returnedTrainID;
 		}
-
-        if((nextAuthorizationTrainID != null) && (nextAuthorizationTrainID != "") && (nextAuthorizationTrainID != " "))
-			setDispatchBlockState(currentStateID, nextAuthorizationState, nextAuthorizationTrainID);
+    }
+    
+    if((nextAuthorizationTrainID != null) && (nextAuthorizationTrainID != "") && (nextAuthorizationTrainID != " "))
+    {
+        notifyServerOfNextState(blockID, nextAuthorizationState, nextAuthorizationTrainID);
     }
     else if(currentState == AUTHORIZED_NB_STATE)
     {
-        // only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
-        setDispatchBlockState(currentStateID, OCCUPIED_NB_STATE, null);
+    // only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
+        notifyServerOfNextState(blockID, OCCUPIED_NB_STATE, null);
     }
     else if(currentState == AUTHORIZED_SB_STATE)
     {
-        // only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
-        setDispatchBlockState(currentStateID, OCCUPIED_SB_STATE, null);
+    // only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
+        notifyServerOfNextState(blockID, OCCUPIED_SB_STATE, null);
     }
     else if(currentState == OCCUPIED_NB_STATE)
     {
-        // only used until sensors are implemented in the field. Click should be ignored if sensors present
-        setDispatchBlockState(currentStateID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+    // only used until sensors are implemented in the field. Click should be ignored if sensors present
+        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
     else if(currentState == OCCUPIED_SB_STATE)
     {
-        // only used until sensors are implemented in the field. Click should be ignored if sensors present
-        setDispatchBlockState(currentStateID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+    // only used until sensors are implemented in the field. Click should be ignored if sensors present
+        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
     else if(currentState == OOS_STATE)
     {
-        // only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
-        setDispatchBlockState(currentStateID, OCCUPIED_STATE, null);
+    // only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
+        notifyServerOfNextState(blockID, OCCUPIED_STATE, null);
     }
     else
     {
-        setDispatchBlockState(currentStateID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
 }
 
-/* setDispatchBlockState([String] elemID, [String] state)
- * Finds an SVG element (presumed to be an SVGUseElement) with the useElemID and sets the xlink:href attribute to match
- * the corresponding selected route (normal or reverse).  This is a high-level call in that it will set the
- * xlink:href attribute for all PanelTurnout objects whose base address matches the base address of useElemID.
- *
- * e.g. TO450, TO450A, TO450B will all be thrown to the same state regardless of which ID is passed.  This allows
- * the panel to replicate an interlocked crossover function (i.e. multiple motors on a single switch-it).
+/* notifyServerOfNextState([String] elemID, [String] state, [String] trainID)
  */
+function notifyServerOfNextState(blockID, state, trainID)
+{	
+    for(var i = 0; i < dispatchSegmentStates.length; i++)
+    {
+        if(dispatchSegmentStates[i].name == blockID)
+        {			
+			// Only update trainID if it is not null
+			if(trainID != null)
+                serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
+            else
+                serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + dispatchSegmentStates[i].trainID)]);
+            
+            return;
+        }
+    }
+    
+	// Didn't find an entry so create a new one
+    dispatchSegmentStates.push({name:blockID, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE});
+    
+    serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
+}
 
+/* setDispatchBlockState([String] elemID, [String] state, [String] trainID)
+ */
 function setDispatchBlockState(elemID, state, trainID)
 {
     var blockNum = getDCCAddr(elemID);
@@ -383,14 +404,17 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
         removeStyleSubAttribute(elem, "marker-end");
     }
 
-    if((elemTextTrainID != null) && (lowLevelTrainID != null) && (lowLevelTrainID != UNAUTHORIZED_STATE) && (((state != AUTHORIZED_NB_STATE) && (state != AUTHORIZED_SB_STATE)) || alwaysShowTrainID))
+    if(elemTextTrainID != null)
     {
-        setSVGText(elemIDTextTrainID, lowLevelTrainID);
-        elemTextTrainID.setAttribute("visibility", "visible");
-    }
-    else
-    {
-        elemTextTrainID.setAttribute("visibility", "hidden");
+        if((lowLevelTrainID != null) && (lowLevelTrainID != UNAUTHORIZED_STATE) && (((state != AUTHORIZED_NB_STATE) && (state != AUTHORIZED_SB_STATE)) || alwaysShowTrainID))
+        {
+            setSVGText(elemIDTextTrainID, lowLevelTrainID);
+            elemTextTrainID.setAttribute("visibility", "visible");
+        }
+        else
+        {
+            elemTextTrainID.setAttribute("visibility", "hidden");
+        }
     }
 
     return true;
@@ -406,10 +430,26 @@ function getDispatchSegmentState(blockID)
 
 function setDispatchSegmentState(blockID, state, trainID)
 {
-    var existingInfo = dispatchSegmentStates[blockID];
-    dispatchSegmentStates[blockID] = {name:blockID, state:state, trainID:(trainID == null && existingInfo != undefined ? existingInfo.trainID : trainID)};
+    for(var i = 0; i < dispatchSegmentStates.length; i++)
+    {
+        if(dispatchSegmentStates[i].name == blockID)
+        {
+			// Update the new state
+            dispatchSegmentStates[i].state = state;
+			
+			// Only update trainID if it is not null
+			if(trainID != null)
+				dispatchSegmentStates[i].trainID = trainID;
+            
+            //serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + dispatchSegmentStates[i].trainID)]);
+            return;
+        }
+    }
     
-    serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, dispatchSegmentStates[blockID].state + ":" + dispatchSegmentStates[blockID].trainID)]);
+	// Didn't find an entry so create a new one
+    dispatchSegmentStates.push({name:blockID, state:state, trainID:trainID});
+    
+    //serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
 }
 
 function getDispatchSegmentTrainID(blockID)
@@ -481,7 +521,6 @@ function setNextAuthorizationTrain(elemID)
 	
 	if((nextAuthorizationTrainID == "") || (nextAuthorizationTrainID == " "))
 		nextAuthorizationState = OOS_STATE;
-	
 }
 
 function getTrainIDText(trainIDElemID)
@@ -586,6 +625,9 @@ function getCommonDispatchStates()
     for(var k in blockElements)
         commonObjs.push(new ServerObject(JMRI_SENSOR_OBJID_PREFIX + getDCCAddr(blockElements[k]), SERVER_TYPE_SENSOR, null));
 
+    for(var l in blockElements)
+        commonObjs.push(new ServerObject(DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(blockElements[l]), SERVER_TYPE_DISPATCH, null));
+
     return commonObjs;
 }
 
@@ -615,6 +657,9 @@ function setDispatchState(stateObj)
         var colonLoc = stateObj.value.search(':');
         var preColonState = stateObj.value.substring(0, colonLoc);
         var postColonTrainID = stateObj.value.substring(colonLoc+1);
+        
+        if(postColonTrainID === "null")
+            postColonTrainID = null;
         
         setDispatchBlockState(stateObj.name, preColonState, postColonTrainID);
     

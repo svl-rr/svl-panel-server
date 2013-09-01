@@ -1,0 +1,163 @@
+function panelInit(evt)
+{
+    // Dodge Mains
+    createPanelTurnout("TO18", true);
+	createPanelTurnout("TO19", false);
+    
+    // Dayton Mains
+    createPanelTurnout("TO125", false);
+	createPanelTurnout("TO126", false);
+	createPanelTurnout("TO127", false);
+    createPanelTurnout("TO128", false);
+	createPanelTurnout("TO129", true);
+    
+    // Dayton Industries
+	createPanelTurnout("TO130A", false);
+    createPanelTurnout("TO130B", false);
+    createPanelTurnout("TO131A", false);
+    createPanelTurnout("TO131B", false);
+    createPanelTurnout("TO132A", false);
+    createPanelTurnout("TO132B", true);
+    createPanelTurnout("TO150", false);
+	createPanelTurnout("TO164", true);
+    createPanelTurnout("TO165", true);
+	createPanelTurnout("TO166", true);
+	createPanelTurnout("TO167", false);
+    createPanelTurnout("TO168", false);
+    createPanelTurnout("TO169", true);
+    createPanelTurnout("TO170", true);
+    createPanelTurnout("TO171", false);
+    createPanelTurnout("TO172", true);
+    createPanelTurnout("TO173", false);
+    createPanelTurnout("TO174", true);
+}
+
+function DPL3Path()
+{
+	addTurnoutStateChangeRequest("TO174", 'R');
+	addTurnoutStateChangeRequest("TO172", 'N');
+
+	executePanelStateChangeRequests();
+}
+
+function DPL2Path()
+{
+	addTurnoutStateChangeRequest("TO174", 'N');
+	addTurnoutStateChangeRequest("TO172", 'N');
+
+	executePanelStateChangeRequests();
+}
+
+function DPL1Path()
+{
+	addTurnoutStateChangeRequest("TO173", 'N');
+	addTurnoutStateChangeRequest("TO172", 'R');
+
+	executePanelStateChangeRequests();
+}
+
+function PeacheyBrothersPath()
+{
+	addTurnoutStateChangeRequest("TO173", 'R');
+	addTurnoutStateChangeRequest("TO172", 'R');
+
+	executePanelStateChangeRequests();
+}
+
+function DaytonIndustrialLeadPath()
+{
+	addTurnoutStateChangeRequest("TO170", 'R');
+	addTurnoutStateChangeRequest("TO171", 'R');
+
+	executePanelStateChangeRequests();
+}
+
+function IndRunaroundNorthPath()
+{
+	addTurnoutStateChangeRequest("TO170", 'N');
+	addTurnoutStateChangeRequest("TO171", 'R');
+
+	executePanelStateChangeRequests();
+}
+
+function IndRunaroundSouthPath()
+{
+	addTurnoutStateChangeRequest("TO169", 'N');
+
+	executePanelStateChangeRequests();
+}
+
+function OnthaCRLLeadPath()
+{
+	addTurnoutStateChangeRequest("TO171", 'N');
+
+	executePanelStateChangeRequests();
+}
+
+function OnthaSkidsPath()
+{
+	addTurnoutStateChangeRequest("TO168", 'R');
+
+	executePanelStateChangeRequests();
+}
+
+function WiebeOnthaCRLPath()
+{
+    addTurnoutStateChangeRequest("TO167", 'N');
+	addTurnoutStateChangeRequest("TO168", 'N');
+
+	executePanelStateChangeRequests();
+}
+
+function WiebeWafersPath()
+{
+	addTurnoutStateChangeRequest("TO167", 'R');
+
+	executePanelStateChangeRequests();
+}
+
+function WiebeCRLLeadPath()
+{
+	addTurnoutStateChangeRequest("TO169", 'R');
+
+	executePanelStateChangeRequests();
+}
+
+function WarehouseNo9Path()
+{
+	addTurnoutStateChangeRequest("TO165", 'N');
+	addTurnoutStateChangeRequest("TO166", 'R');
+
+	executePanelStateChangeRequests();
+}
+
+function CavanaughLeadPath()
+{
+	addTurnoutStateChangeRequest("TO165", 'R');
+	addTurnoutStateChangeRequest("TO166", 'R');
+
+	executePanelStateChangeRequests();
+}
+
+function MegaWattPath()
+{
+	addTurnoutStateChangeRequest("TO164", 'N');
+	addTurnoutStateChangeRequest("TO166", 'N');
+
+	executePanelStateChangeRequests();
+}
+
+function GoodMorningCerealPath()
+{
+	addTurnoutStateChangeRequest("TO164", 'R');
+	addTurnoutStateChangeRequest("TO166", 'N');
+
+	executePanelStateChangeRequests();
+}
+
+function TeamTrackPath()
+{
+	addTurnoutStateChangeRequest("TO132A", 'N');
+
+	executePanelStateChangeRequests();
+}
