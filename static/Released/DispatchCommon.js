@@ -232,11 +232,9 @@ function userClickChangeToNextState(elemID)
 			if((returnedTrainID != null) && (returnedTrainID != "") && (returnedTrainID != " "))
 				nextAuthorizationTrainID = returnedTrainID;
 		}
-    }
-    
-    if((nextAuthorizationTrainID != null) && (nextAuthorizationTrainID != "") && (nextAuthorizationTrainID != " "))
-    {
-        notifyServerOfNextState(blockID, nextAuthorizationState, nextAuthorizationTrainID);
+        
+        if((nextAuthorizationTrainID != null) && (nextAuthorizationTrainID != "") && (nextAuthorizationTrainID != " "))
+            notifyServerOfNextState(blockID, nextAuthorizationState, nextAuthorizationTrainID);
     }
     else if(currentState == AUTHORIZED_NB_STATE)
     {
@@ -422,8 +420,14 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
 
 function getDispatchSegmentState(blockID)
 {
-    if(dispatchSegmentStates[blockID] != undefined)
-        return dispatchSegmentStates[blockID].state; 
+    //if(dispatchSegmentStates[blockID] != undefined)
+    //    return dispatchSegmentStates[blockID].state;
+    
+    for(var i = 0; i < dispatchSegmentStates.length; i++)
+    {
+        if(dispatchSegmentStates[i].name == blockID)
+            return dispatchSegmentStates[i].state;
+    }
     
     return null;
 }
