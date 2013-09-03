@@ -43,20 +43,20 @@ var SERVER_NAME_MAINLINELOCKED = "Mainline Locked";
 
 var connectedBackgroundColor = null;
 
-function turnoutSegmentClicked(id)
+function turnoutSegmentClicked(elemID)
 {
     if(isDispatchPanel())
-        dispatchTurnoutSegmentClicked(id);
+        dispatchTurnoutSegmentClicked(elemID);
 
-    changeTurnoutRoute(id);
+    changeTurnoutRoute(elemID);
 }
 
-function changeTurnoutRoute(id)
+function changeTurnoutRoute(elemID)
 {
-    turnoutID = id.substring(0, id.length - 1);
-    turnoutSegment = id.substring(id.length - 1);
+    turnoutID = elemID.substring(0, elemID.length - 1);
+    turnoutSegment = elemID.substring(elemID.length - 1);
 
-    if(isTopMostOfTurnoutSegmentPair(id))
+    if(isTopMostOfTurnoutSegmentPair(elemID))
     {
         if((turnoutSegment == "r") || (turnoutSegment == "R"))
             setTurnoutState(turnoutID, "n");    // toggle turnout
@@ -75,25 +75,38 @@ function isDispatchPanel()
 /* PanelTurnout([String] id, [boolean] flipBit)
  * PanelTurnout object to contain id and flipbit, which is used to invert the graphic status
  */
-function PanelTurnout(id, flipBit)
+function PanelTurnout(normalRouteID, divergingRouteID)
 {
-	this.id=id;
-	this.flipBit=flipBit;
+    this.normalRouteID = normalRouteID;
+    this.divergingRouteID = divergingRouteID;
 	
 	this.getID=getID;
-	this.getFlipBit=getFlipBit;
     this.getAsServerObject= getAsServerTurnoutObject;
     
-    var useElem = svgDocument.getElementById(id);
+    var normalElem = svgDocument.getElementById(normalRouteID);
 	
-	if(useElem == null)
+	if(normalElem == null)
 	{
-		alert("Attempted to create a PanelTurnout object with ID " + id + " but no SVG object with that ID was found.");
+		alert("Attempted to create a PanelTurnout object with ID " + normalRouteID + " but no SVG object with that ID was found.");
+		return;
+	}
+    
+    var divergingElem = svgDocument.getElementById(divergingRouteID);
+	
+	if(divergingElem == null)
+	{
+		alert("Attempted to create a PanelTurnout object with ID " + divergingRouteID + " but no SVG object with that ID was found.");
+		return;
+	}
+    
+    if(divergingElem.parentNode != normalElem.parentNode)
+	{
+		alert("Attempted to create a PanelTurnout object with ID " + getDCCAddrAndMotorSubAddr(normalRouteID) + " but parent nodes did not match.");
 		return;
 	}
     
     // Make sure title element matches the object ID
-    addElementTitle(id, id);
+    //addElementTitle(id, id);
     
     /*if(console != undefined)
     {
@@ -109,15 +122,7 @@ function PanelTurnout(id, flipBit)
  */
 function getID()
 {
-	return this.id;
-}
-
-/* [boolean] getFlipBit()
- * Return getFlipBit field of PanelTurnout
- */
-function getFlipBit()
-{
-	return this.flipBit;
+	return getDCCAddrAndMotorSubAddr(this.normalRouteID);
 }
 
 /* [ServerObject] getAsServerTurnoutObject()
@@ -125,7 +130,7 @@ function getFlipBit()
  */
 function getAsServerTurnoutObject()
 {
-    var turnoutAddr = getDCCAddr(this.id);
+    var turnoutAddr = getDCCAddr(this.normalRouteID);
     
     return new ServerObject(JMRI_TURNOUT_OBJID_PREFIX + turnoutAddr, SERVER_TYPE_TURNOUT, getTurnoutState(turnoutAddr));
 }
@@ -163,9 +168,9 @@ function getAsServerSensorObject()
  *
  * Panel specific code should use this method to create it's list of turnouts
  */
-function createPanelTurnout(id, flipBit)
+function createPanelTurnout(normalRoute, divergingRoute)
 {
-	turnoutsOnPanel.push(new PanelTurnout(id, flipBit));
+	turnoutsOnPanel.push(new PanelTurnout(normalRoute, divergingRoute));
 }
 
 /* addTurnoutStateChangeRequest([String] id, [string] state)
@@ -227,6 +232,56 @@ function init(evt)
         {
             //setStyleSubAttribute(elem, "cursor", "crosshair");
             //blocksOnPanel.push(new BlockSensor(elem.id));
+        }
+    }
+    
+    var groupItems = svgDocument.getElementsByTagName("g");
+    
+    for(var i = 0; i < groupItems.length; i++)
+    {
+        var elem = groupItems[i];
+        
+        if(elem.childElementCount == 2)
+        {
+            if((elem.firstElementChild.nodeName == "path") && (elem.lastElementChild.nodeName == "path"))
+            {
+                var id1 = elem.firstElementChild.id;
+                var id2 = elem.lastElementChild.id;
+                
+                if(id1.length == id2.length)
+                {
+                    var base1 = id1.substring(0, id1.length - 1);
+                    var base2 = id2.substring(0, id2.length - 1);
+                    
+                    if((base1 == base2) && (base1.search("TO[\\d]+[A-M]*[.]*") == 0))
+                    {
+                        var id1route = getDCCAddrRoute(id1);
+                        var id2route = getDCCAddrRoute(id2);
+                        
+                        var legitPairFound1 = ((id1route == "R") || (id1route == "r")) && ((id2route == "N") || (id2route == "n"));
+                        var legitPairFound2 = ((id1route == "N") || (id1route == "n")) && ((id2route == "R") || (id2route == "r"));
+                        
+                        if(legitPairFound1)
+                        {                            
+                            // Make sure title element matches the object ID
+                            addElementTitle(id1, id1);
+                            addElementTitle(id2, id2);
+                            
+                            // Add the turnout to the list of known turnouts
+                            createPanelTurnout(id2, id1);
+                        }
+                        else if(legitPairFound2)
+                        {                            
+                            // Make sure title element matches the object ID
+                            addElementTitle(id1, id1);
+                            addElementTitle(id2, id2);
+                            
+                            // Add the turnout to the list of known turnouts
+                            createPanelTurnout(id1, id2);
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -981,10 +1036,19 @@ function addElementTitle(elemID, title)
     if(titleObj != null)
         setElementTitle(titleObj, title);
     else
-    {
-        alert("You found a bug! Well, incomplete code really. Have SVG document author add a title element to avoid this issue. ObjID: " + elemID);
+    {        
+        // Create the title element on the fly here.
+        var elem = svgDocument.getElementById(elemID);
+    
+        if(elem != null)
+        {
+            var titleElem = svgDocument.createElementNS(xmlns, "title");
+            var textNode = svgDocument.createTextNode(title);
+
+            titleElem.appendChild(textNode);
         
-        // figure out how to create the title element on the fly here.
+            elem.insertBefore(titleElem, elem.firstChild);
+        }
     }    
 }
 
@@ -1114,9 +1178,51 @@ function getPanelObjType(objID)
 function getDCCAddrAndMotorSubAddr(objID)
 {
 	var position = objID.search("[0-9]");
-	
-	if(position != -1)
+	var positionOfDot = objID.search("[.]");
+    
+	if((position != -1) && (positionOfDot == -1))
+    {
+        var lastChar = objID.substring(objID.length-1);
+        if((lastChar == "R") || (lastChar == "r") || (lastChar == "N") || (lastChar == "n"))
+            return objID.substring(0, objID.length-1);
+        
 		return objID.substring(position);
+    }
+    
+	if((position != -1) && (positionOfDot != -1))
+        return objID.substring(position, positionOfDot);
+	
+	return null;
+}
+
+function getDCCAddrRoute(objID)
+{
+	var positionOfDot = objID.search("[.]");
+    
+    if(positionOfDot != -1)
+    {
+        var route = objID.substring(positionOfDot+1);
+        
+        if((route == "R") || (route == "r") || (route == "N") || (route == "n"))
+            return route;
+    }
+    else
+    {
+        var dccMotorAddr = getDCCAddrAndMotorSubAddr(objID);
+        
+        if(dccMotorAddr != null)
+        {
+            var position = objID.search();
+        
+            if(position == 0)
+            {
+                var route = objID.substring(dccMotorAddr.length);
+                
+                if((route == "R") || (route == "r") || (route == "N") || (route == "n"))
+                    return route;
+            }
+        }
+    }
 	
 	return null;
 }

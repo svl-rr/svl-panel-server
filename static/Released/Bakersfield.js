@@ -1,17 +1,5 @@
 function panelInit(evt)
 {
-    createPanelTurnout("TO9", false);
-	createPanelTurnout("TO10", false);
-	createPanelTurnout("TO11", false);
-	createPanelTurnout("TO12", true);
-	createPanelTurnout("TO13", false);
-	createPanelTurnout("TO14", false);
-	createPanelTurnout("TO15A", false);
-	createPanelTurnout("TO15B", false);
-	createPanelTurnout("TO16A", false);
-	createPanelTurnout("TO16B", false);
-	createPanelTurnout("TO17A", false);
-	createPanelTurnout("TO17B", false);
 }
 
 function track1Path()
