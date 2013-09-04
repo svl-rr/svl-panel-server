@@ -60,12 +60,14 @@ function changeTurnoutRoute(elemID)
         var turnoutID = getDCCAddrAndMotorSubAddr(elemID);
         var turnoutRoute = getDCCAddrRoute(elemID);
     
-        if(isTopMostOfTurnoutSegmentPair(elemID))
+        if(panelInstance.getSVGState() == turnoutRoute)
         {
-            if((turnoutRoute == "r") || (turnoutRoute == "R"))
-                setTurnoutState(turnoutID, "n");    // toggle turnout
-            else if((turnoutRoute == "n") || (turnoutRoute == "N"))
-                setTurnoutState(turnoutID, "r");    // toggle turnout
+            if(turnoutRoute == "R")
+                setTurnoutState(turnoutID, "N");    // toggle turnout
+            else if(turnoutRoute == "N")
+                setTurnoutState(turnoutID, "R");    // toggle turnout
+            else if(turnoutRoute == null)
+                alert("Bad turnout route in changeTurnoutRoute");
         }
         else
             setTurnoutState(turnoutID, turnoutRoute);
@@ -148,9 +150,7 @@ function getSVGState()
 }
 
 function setSVGState(newRoute)
-{
-	alert("Set " + this.getInstanceID() + " to " + newRoute);
-    
+{    
     var normalElem = svgDocument.getElementById(this.normalRouteID);
     var divergingElem = svgDocument.getElementById(this.divergingRouteID);
     
@@ -161,16 +161,20 @@ function setSVGState(newRoute)
         if((newRoute == "N") || (newRoute == "n"))
         {
             // Set normal to full opacity
+            setStyleSubAttribute(normalElem, "opacity", "1.0");
             parent.appendChild(normalElem);
             
             // Set diverging to reduced opacity
+            setStyleSubAttribute(divergingElem, "opacity", "0.25");
         }
         else if((newRoute == "R") || (newRoute == "r"))
         {
             // Set diverging to full opacity
+            setStyleSubAttribute(divergingElem, "opacity", "1.0");
             parent.appendChild(divergingElem);
             
             // Set normal to reduced opacity
+            setStyleSubAttribute(normalElem, "opacity", "0.25");
         }
         else
             alert("Bad route passed to setSVGState on turnout instance " + this.getInstanceID());
@@ -1267,8 +1271,11 @@ function getDCCAddrRoute(objID)
     {
         var route = objID.substring(positionOfDot+1);
         
-        if((route == "R") || (route == "r") || (route == "N") || (route == "n"))
-            return route;
+        if((route == "R") || (route == "r"))
+            return "R";
+        
+        if((route == "N") || (route == "n"))
+            return "N";
     }
     else
     {
@@ -1282,8 +1289,11 @@ function getDCCAddrRoute(objID)
             {
                 var route = objID.substring(position + dccMotorAddr.length);
                 
-                if((route == "R") || (route == "r") || (route == "N") || (route == "n"))
-                    return route;
+                if((route == "R") || (route == "r"))
+                    return "R";
+                
+                if((route == "N") || (route == "n"))
+                    return "N";
             }
         }
     }
