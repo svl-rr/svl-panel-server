@@ -53,18 +53,23 @@ function turnoutSegmentClicked(elemID)
 
 function changeTurnoutRoute(elemID)
 {
-    var turnoutID = getDCCAddrAndMotorSubAddr(elemID);
-    var turnoutRoute = getDCCAddrRoute(elemID);
-
-    if(isTopMostOfTurnoutSegmentPair(elemID))
+    var panelInstance = getPanelTurnoutFromElemID(elemID);
+    
+    if(panelInstance != null)
     {
-        if((turnoutRoute == "r") || (turnoutRoute == "R"))
-            setTurnoutState(turnoutID, "n");    // toggle turnout
-        else if((turnoutRoute == "n") || (turnoutRoute == "N"))
-            setTurnoutState(turnoutID, "r");    // toggle turnout
+        var turnoutID = getDCCAddrAndMotorSubAddr(elemID);
+        var turnoutRoute = getDCCAddrRoute(elemID);
+    
+        if(isTopMostOfTurnoutSegmentPair(elemID))
+        {
+            if((turnoutRoute == "r") || (turnoutRoute == "R"))
+                setTurnoutState(turnoutID, "n");    // toggle turnout
+            else if((turnoutRoute == "n") || (turnoutRoute == "N"))
+                setTurnoutState(turnoutID, "r");    // toggle turnout
+        }
+        else
+            setTurnoutState(turnoutID, turnoutRoute);
     }
-    else
-        setTurnoutState(turnoutID, turnoutRoute);
 }
 
 function isDispatchPanel()
@@ -83,6 +88,8 @@ function PanelTurnout(normalRouteID, divergingRouteID)
 	this.getInstanceID=getInstanceID;
     this.getDCCID=getDCCID;
     this.getAsServerObject= getAsServerTurnoutObject;
+    this.getSVGState=getSVGState;
+    this.setSVGState=setSVGState;
     
     var normalElem = svgDocument.getElementById(normalRouteID);
 	
@@ -123,13 +130,75 @@ function PanelTurnout(normalRouteID, divergingRouteID)
     }*/
 }
 
-function getPanelTurnout(elemID)
+function getSVGState()
+{
+	var normalElem = svgDocument.getElementById(this.normalRouteID);
+    
+    if(normalElem != null)
+    {
+        var parent = normalElem.parentNode;
+        
+        if(parent.lastElementChild.id == this.normalRouteID)
+            return "N";
+        else if(parent.lastElementChild.id == this.divergingRouteID)
+            return "R";
+    }
+    
+    return null;
+}
+
+function setSVGState(newRoute)
+{
+	alert("Set " + this.getInstanceID() + " to " + newRoute);
+    
+    var normalElem = svgDocument.getElementById(this.normalRouteID);
+    var divergingElem = svgDocument.getElementById(this.divergingRouteID);
+    
+    if(normalElem != null)
+    {
+        var parent = normalElem.parentNode;
+        
+        if((newRoute == "N") || (newRoute == "n"))
+        {
+            // Set normal to full opacity
+            parent.appendChild(normalElem);
+            
+            // Set diverging to reduced opacity
+        }
+        else if((newRoute == "R") || (newRoute == "r"))
+        {
+            // Set diverging to full opacity
+            parent.appendChild(divergingElem);
+            
+            // Set normal to reduced opacity
+        }
+        else
+            alert("Bad route passed to setSVGState on turnout instance " + this.getInstanceID());
+    }
+    
+    return null;
+}
+
+function getPanelTurnoutFromElemID(elemID)
 {
     for(var i in turnoutsOnPanel)
     {
         var turnoutInstance = turnoutsOnPanel[i];
         
         if((turnoutInstance.normalRouteID == elemID) || (turnoutInstance.divergingRouteID == elemID))
+            return turnoutInstance;
+    }
+    
+    return null;
+}
+
+function getPanelTurnoutFromDCCAddr(dccAddr)
+{
+    for(var i in turnoutsOnPanel)
+    {
+        var turnoutInstance = turnoutsOnPanel[i];
+        
+        if(turnoutInstance.getDCCID() == dccAddr)
             return turnoutInstance;
     }
     
@@ -597,31 +666,15 @@ function getTurnout(id)
  */
 function setTurnoutState(useElemID, routeText)
 {
-	var setNormal = true;
-	
-	if((routeText == "N") || (routeText == "n"))
-		setNormal = true;
-	else if((routeText == "R") || (routeText == "r"))
-		setNormal = false;
-	else
-	{
-		setPanelError("Bad route parameter passed to setTurnoutState(" + useElemID + ", " + routeText + ")");
-		return;
-	}
-		
-    var turnoutAddr = PANEL_TURNOUT_OBJID_PREFIX + getDCCAddr(useElemID);
+    var dccAddr = getDCCAddr(useElemID);
     
-	setTurnoutSVGLowLevel(turnoutAddr, setNormal);
-	
-    // Attempt to set all motors A-Z
-	var nextMotor = 'A';
-	setTurnoutSVGLowLevel(turnoutAddr + nextMotor, setNormal);
-	while(nextMotor != 'Z')
-	{		
-		nextMotor = String.fromCharCode(nextMotor.charCodeAt(0) + 1);
-		
-		setTurnoutSVGLowLevel(turnoutAddr + nextMotor, setNormal);
-	}
+    for(var i in turnoutsOnPanel)
+    {
+        var turnoutInstance = turnoutsOnPanel[i];
+        
+        if(turnoutInstance.getDCCID() == dccAddr)
+            turnoutInstance.setSVGState(routeText);
+    }
 }
 
 /* [String] getTurnoutState([String] useElemID)
@@ -629,24 +682,13 @@ function setTurnoutState(useElemID, routeText)
  * or reverse) based upon the xlink:href attribute being utilized by the SVGUseElement.  It does NOT query a server for
  * turnout state. Returns null if the useElemID could not be found.
  */
-function getTurnoutState(useElemID)
-{
-	var useElem = findTurnoutSVGElement(useElemID);
-	
-    if(useElem != null)
+function getTurnoutState(dccAddr)
+{	
+    var panelTurnout = getPanelTurnoutFromDCCAddr(getDCCAddr(dccAddr));
+    
+    if(panelTurnout != null)
     {
-        var turnout = getTurnout(useElem.id);
-	
-        if(turnout != null)
-        {
-            var currentImg = getTurnoutHREFImage(useElem);
-            
-            // turnout states
-            if(currentImg.search("normal") != -1)
-                return turnout.getFlipBit() ? 'R' : 'N';
-            else if(currentImg.search("reverse") != -1)
-                return turnout.getFlipBit() ? 'N' : 'R';
-        }
+        return panelTurnout.getSVGState();
     }
 	
 	return null;
