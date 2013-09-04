@@ -53,18 +53,18 @@ function turnoutSegmentClicked(elemID)
 
 function changeTurnoutRoute(elemID)
 {
-    turnoutID = elemID.substring(0, elemID.length - 1);
-    turnoutSegment = elemID.substring(elemID.length - 1);
+    var turnoutID = getDCCAddrAndMotorSubAddr(elemID);
+    var turnoutRoute = getDCCAddrRoute(elemID);
 
     if(isTopMostOfTurnoutSegmentPair(elemID))
     {
-        if((turnoutSegment == "r") || (turnoutSegment == "R"))
+        if((turnoutRoute == "r") || (turnoutRoute == "R"))
             setTurnoutState(turnoutID, "n");    // toggle turnout
-        else if((turnoutSegment == "n") || (turnoutSegment == "N"))
+        else if((turnoutRoute == "n") || (turnoutRoute == "N"))
             setTurnoutState(turnoutID, "r");    // toggle turnout
     }
     else
-        setTurnoutState(turnoutID, turnoutSegment)
+        setTurnoutState(turnoutID, turnoutRoute);
 }
 
 function isDispatchPanel()
@@ -80,7 +80,8 @@ function PanelTurnout(normalRouteID, divergingRouteID)
     this.normalRouteID = normalRouteID;
     this.divergingRouteID = divergingRouteID;
 	
-	this.getID=getID;
+	this.getInstanceID=getInstanceID;
+    this.getDCCID=getDCCID;
     this.getAsServerObject= getAsServerTurnoutObject;
     
     var normalElem = svgDocument.getElementById(normalRouteID);
@@ -99,11 +100,17 @@ function PanelTurnout(normalRouteID, divergingRouteID)
 		return;
 	}
     
-    if(divergingElem.parentNode != normalElem.parentNode)
+    if(normalElem.parentNode != divergingElem.parentNode)
 	{
 		alert("Attempted to create a PanelTurnout object with ID " + getDCCAddrAndMotorSubAddr(normalRouteID) + " but parent nodes did not match.");
 		return;
 	}
+    
+    if(normalElem.parentNode.childElementCount != 2)
+    {
+        alert("Attempted to create a PanelTurnout object with ID " + getDCCAddrAndMotorSubAddr(normalRouteID) + " but object did not appear to be grouped properly.");
+		return;
+    }
     
     // Make sure title element matches the object ID
     //addElementTitle(id, id);
@@ -116,13 +123,30 @@ function PanelTurnout(normalRouteID, divergingRouteID)
     }*/
 }
 
+function getPanelTurnout(elemID)
+{
+    for(var i in turnoutsOnPanel)
+    {
+        var turnoutInstance = turnoutsOnPanel[i];
+        
+        if((turnoutInstance.normalRouteID == elemID) || (turnoutInstance.divergingRouteID == elemID))
+            return turnoutInstance;
+    }
+    
+    return null;
+}
 
-/* [String] getID()
+/* [String] getInstanceID()
  * Return id field of PanelTurnout
  */
-function getID()
+function getInstanceID()
 {
 	return getDCCAddrAndMotorSubAddr(this.normalRouteID);
+}
+
+function getDCCID()
+{
+	return getDCCAddr(this.normalRouteID);
 }
 
 /* [ServerObject] getAsServerTurnoutObject()
@@ -130,7 +154,7 @@ function getID()
  */
 function getAsServerTurnoutObject()
 {
-    var turnoutAddr = getDCCAddr(this.normalRouteID);
+    var turnoutAddr = this.getDCCID();
     
     return new ServerObject(JMRI_TURNOUT_OBJID_PREFIX + turnoutAddr, SERVER_TYPE_TURNOUT, getTurnoutState(turnoutAddr));
 }
@@ -163,14 +187,12 @@ function getAsServerSensorObject()
     return new ServerObject(JMRI_SENSOR_OBJID_PREFIX + sensorAddr, SERVER_TYPE_SENSOR, null);
 }
 
-/* createPanelTurnout([String] id, [boolean] flipBit)
+/* createPanelTurnout([String] normalRouteElemID, [String] divergingRouteElemID)
  * Creates a new PanelTurnout object and pushes it on to the array of turnouts used by this panel
- *
- * Panel specific code should use this method to create it's list of turnouts
  */
-function createPanelTurnout(normalRoute, divergingRoute)
+function createPanelTurnout(normalRouteElemID, divergingRouteElemID)
 {
-	turnoutsOnPanel.push(new PanelTurnout(normalRoute, divergingRoute));
+	turnoutsOnPanel.push(new PanelTurnout(normalRouteElemID, divergingRouteElemID));
 }
 
 /* addTurnoutStateChangeRequest([String] id, [string] state)
@@ -1184,7 +1206,7 @@ function getDCCAddrAndMotorSubAddr(objID)
     {
         var lastChar = objID.substring(objID.length-1);
         if((lastChar == "R") || (lastChar == "r") || (lastChar == "N") || (lastChar == "n"))
-            return objID.substring(0, objID.length-1);
+            return objID.substring(position, objID.length-1);
         
 		return objID.substring(position);
     }
@@ -1212,11 +1234,11 @@ function getDCCAddrRoute(objID)
         
         if(dccMotorAddr != null)
         {
-            var position = objID.search();
+            var position = objID.search(dccMotorAddr);
         
-            if(position == 0)
+            if(position != -1)
             {
-                var route = objID.substring(dccMotorAddr.length);
+                var route = objID.substring(position + dccMotorAddr.length);
                 
                 if((route == "R") || (route == "r") || (route == "N") || (route == "n"))
                     return route;
