@@ -60,17 +60,18 @@ function changeTurnoutRoute(elemID)
         var turnoutID = getDCCAddrAndMotorSubAddr(elemID);
         var turnoutRoute = getDCCAddrRoute(elemID);
     
+        var tempStateChangeRequests = stateChangeRequests;
+    
+        stateChangeRequests = [];
+    
         if(panelInstance.getSVGState() == turnoutRoute)
-        {
-            if(turnoutRoute == "R")
-                setTurnoutState(turnoutID, "N");    // toggle turnout
-            else if(turnoutRoute == "N")
-                setTurnoutState(turnoutID, "R");    // toggle turnout
-            else if(turnoutRoute == null)
-                alert("Bad turnout route in changeTurnoutRoute");
-        }
+            addTurnoutStateChangeRequest(turnoutID, 'T');               // toggle turnout
         else
-            setTurnoutState(turnoutID, turnoutRoute);
+            addTurnoutStateChangeRequest(turnoutID, turnoutRoute);      // set to explicit route
+        
+        executePanelStateChangeRequests();
+        
+        stateChangeRequests = tempStateChangeRequests;
     }
 }
 
@@ -122,7 +123,8 @@ function PanelTurnout(normalRouteID, divergingRouteID)
     }
     
     // Make sure title element matches the object ID
-    //addElementTitle(id, id);
+    addElementTitle(normalRouteID, normalRouteID);
+    addElementTitle(divergingRouteID, divergingRouteID);
     
     /*if(console != undefined)
     {
@@ -141,9 +143,9 @@ function getSVGState()
         var parent = normalElem.parentNode;
         
         if(parent.lastElementChild.id == this.normalRouteID)
-            return "N";
+            return 'N';
         else if(parent.lastElementChild.id == this.divergingRouteID)
-            return "R";
+            return 'R';
     }
     
     return null;
@@ -158,7 +160,7 @@ function setSVGState(newRoute)
     {
         var parent = normalElem.parentNode;
         
-        if((newRoute == "N") || (newRoute == "n"))
+        if((newRoute == 'N') || (newRoute == 'n'))
         {
             // Set normal to full opacity
             setStyleSubAttribute(normalElem, "opacity", "1.0");
@@ -167,7 +169,7 @@ function setSVGState(newRoute)
             // Set diverging to reduced opacity
             setStyleSubAttribute(divergingElem, "opacity", "0.25");
         }
-        else if((newRoute == "R") || (newRoute == "r"))
+        else if((newRoute == 'R') || (newRoute == 'r'))
         {
             // Set diverging to full opacity
             setStyleSubAttribute(divergingElem, "opacity", "1.0");
@@ -353,24 +355,14 @@ function init(evt)
                         var id1route = getDCCAddrRoute(id1);
                         var id2route = getDCCAddrRoute(id2);
                         
-                        var legitPairFound1 = ((id1route == "R") || (id1route == "r")) && ((id2route == "N") || (id2route == "n"));
-                        var legitPairFound2 = ((id1route == "N") || (id1route == "n")) && ((id2route == "R") || (id2route == "r"));
-                        
-                        if(legitPairFound1)
+                        // Unswizzle the routes
+                        if(((id1route == 'R') || (id1route == 'r')) && ((id2route == 'N') || (id2route == 'n')))
                         {                            
-                            // Make sure title element matches the object ID
-                            addElementTitle(id1, id1);
-                            addElementTitle(id2, id2);
-                            
                             // Add the turnout to the list of known turnouts
                             createPanelTurnout(id2, id1);
                         }
-                        else if(legitPairFound2)
-                        {                            
-                            // Make sure title element matches the object ID
-                            addElementTitle(id1, id1);
-                            addElementTitle(id2, id2);
-                            
+                        else if(((id1route == 'N') || (id1route == 'n')) && ((id2route == 'R') || (id2route == 'r')))
+                        {
                             // Add the turnout to the list of known turnouts
                             createPanelTurnout(id1, id2);
                         }
@@ -564,8 +556,14 @@ function executePanelStateChangeRequestsLowLevel(setArray, honorMainlineLock)
                 // Make sure panel is not locked.  If it is, don't allow set to go out to server
                 if(honorMainlineLock)
                 {
-                    if(!isMainlineTurnout(findTurnoutSVGElement(scr.name)) || !mainlineLocked)
-                        serverSetArray.push(scr);
+                    var turnoutInstance = getPanelTurnoutFromDCCAddr(getDCCAddr(scr.name));
+                    
+                    if(turnoutInstance != null)
+                    {
+                        var routeElem = svgDocument.getElementById(turnoutInstance.normalRouteID);
+                        if(!isMainlineTurnout(routeElem) || !mainlineLocked)
+                            serverSetArray.push(scr);
+                    }
                 }
                 else
                     serverSetArray.push(scr);
@@ -646,20 +644,6 @@ function updateAllObjectsFromServer()
     serverGet(getPanelObjectsToUpdate());
 }
 
-/* getTurnout([String] id)
- * Searches turnouts on the panel and returns the PanelTurnout with the provided id. Returns null if the id was not found
- */
-function getTurnout(id)
-{
-	for(var i in turnoutsOnPanel)
-	{
-		if(turnoutsOnPanel[i].getID() == id)
-			return turnoutsOnPanel[i];
-	}
-	
-	return null;
-}
-
 /* setTurnoutState([String] useElemID, [String] routeText)
  * Finds an SVG element (presumed to be an SVGUseElement) with the useElemID and sets the xlink:href attribute to match
  * the corresponding selected route (normal or reverse).  This is a high-level call in that it will set the
@@ -696,133 +680,6 @@ function getTurnoutState(dccAddr)
     }
 	
 	return null;
-}
-
-/* [SVGUseElement] findTurnoutSVGElement([String] useElemID)
- * Finds a SVG element (presumed to be an SVGUseElement associated with a turnout) with the base DCC address contained in
- * useElemID.  If that object is not found, it will attempt to find a turnout with a submotor designation (A-Z), by simply
- * appending the character to the turnout ID already tried.  Returns null if no objects found.
- */
-function findTurnoutSVGElement(useElemID)
-{
-    var turnoutAddr = PANEL_TURNOUT_OBJID_PREFIX + getDCCAddr(useElemID);
-
-	var useElem = svgDocument.getElementById(turnoutAddr);
-	
-    // If base address not found, attempt to find an element id with A-Z appended
-    var nextMotor = 'A';
-	while(useElem == null)
-	{		
-		useElem = svgDocument.getElementById(turnoutAddr + nextMotor);
-        
-        if(nextMotor == 'Z')
-            break;
-        else
-            nextMotor = String.fromCharCode(nextMotor.charCodeAt(0) + 1);
-	}
-    
-    return useElem;
-}
-
-/* [boolean] setTurnoutSVGLowLevel([String] useElemID, [boolean] setNormal)
- * Finds an SVG element (presumed to be an SVGUseElement) with the useElemID and sets the xlink:href attribute to match
- * the corresponding selected route (normal or reverse).  This is a low-level call in that it will set the
- * xlink:href attribute on only the SVGUseElement whose ID is an exact match with useElemID. Returns true if the useElemID
- * object was found or false if not.
- */
-function setTurnoutSVGLowLevel(useElemID, setNormal)
-{
-	var useElem = svgDocument.getElementById(useElemID);
-	var turnout = getTurnout(useElemID);
-	
-	if((useElem != null) && (turnout != null))
-	{
-		if(turnout.getFlipBit() == true)
-			setNormal = !setNormal;
-		
-		var currentImg = getTurnoutHREFImage(useElem);
-		
-		if(currentImg.search("turnout_0deg") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#turnout_0deg_normal");
-			else
-				setTurnoutHREFImage(useElem, "#turnout_0deg_reverse");
-		}
-		else if(currentImg.search("turnout_45deg") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#turnout_45deg_normal");
-			else
-				setTurnoutHREFImage(useElem, "#turnout_45deg_reverse");
-		}
-		else if(currentImg.search("ds_") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#ds_normal");
-			else
-				setTurnoutHREFImage(useElem, "#ds_reverse");
-		}
-		else if(currentImg.search("dblxovr_0deg") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#dblxovr_0deg_normal");
-			else
-				setTurnoutHREFImage(useElem, "#dblxovr_0deg_reverse");
-		}
-		else if(currentImg.search("dblxovr_45deg") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#dblxovr_45deg_normal");
-			else
-				setTurnoutHREFImage(useElem, "#dblxovr_45deg_reverse");
-		}
-		
-		return true;
-	}
-	
-	return false;
-}
-
-/* [String] getTurnoutHREFImage([SVGUseElement] useElem)
- * Returns the xlink:href attribute of the SVGUseElement passed in.
- */
-function getTurnoutHREFImage(useElem)
-{
-	return useElem.getAttributeNS(xlinkns, hrefAttrib);
-}
-
-/* setTurnoutHREFImage([SVGUseElement] useElem, [String] imageToUse)
- * Sets the xlink:href attribute of the SVGUseElement provided.
- */
-function setTurnoutHREFImage(useElem, imageToUse)
-{	
-	useElem.setAttributeNS(xlinkns, hrefAttrib, imageToUse);
-	
-	setPanelStatus(useElem.id + " was set to " + imageToUse);
-}
-
-/* toggleTurnout([String] useElemID)
- * Creates a turnout state request object and adds it to the change request queue.  Queue (having only the single entry)
- * is then executed. SVG symbol definition uses this function as the default onclick function for when the user clicks
- * a single turnout element on the panel.
- */
-function toggleTurnout(useElemID)
-{
-	var initialState = getTurnoutState(useElemID);
-	
-    if(initialState != null)
-    {        
-        addTurnoutStateChangeRequest(useElemID, 'T');
-        executePanelStateChangeRequests();
-	
-        if((socketStatus == SOCKET_DISCONNECTED) || !enableServerAccesses)
-            setPanelStatus(useElemID + " was toggled from " + initialState + " to " + getTurnoutState(useElemID));
-        else
-            setPanelStatus(useElemID + " sent toggle request from " + initialState + " to " + (initialState == 'N' ? 'R' : 'N'));
-    }
-    else
-        setPanelStatus("Attempt to toggle turnout " + useElemID + " failed because it could not be found.");
 }
 
 /* [Array] getAllObjectsOfTagNameAndID([String] matchTagName, [String] matchID)
@@ -1251,7 +1108,7 @@ function getDCCAddrAndMotorSubAddr(objID)
 	if((position != -1) && (positionOfDot == -1))
     {
         var lastChar = objID.substring(objID.length-1);
-        if((lastChar == "R") || (lastChar == "r") || (lastChar == "N") || (lastChar == "n"))
+        if((lastChar == 'R') || (lastChar == 'r') || (lastChar == 'N') || (lastChar == 'n'))
             return objID.substring(position, objID.length-1);
         
 		return objID.substring(position);
@@ -1271,11 +1128,11 @@ function getDCCAddrRoute(objID)
     {
         var route = objID.substring(positionOfDot+1);
         
-        if((route == "R") || (route == "r"))
-            return "R";
+        if((route == 'R') || (route == 'r'))
+            return 'R';
         
-        if((route == "N") || (route == "n"))
-            return "N";
+        if((route == 'N') || (route == 'n'))
+            return 'N';
     }
     else
     {
@@ -1289,11 +1146,11 @@ function getDCCAddrRoute(objID)
             {
                 var route = objID.substring(position + dccMotorAddr.length);
                 
-                if((route == "R") || (route == "r"))
-                    return "R";
+                if((route == 'R') || (route == 'r'))
+                    return 'R';
                 
-                if((route == "N") || (route == "n"))
-                    return "N";
+                if((route == 'N') || (route == 'n'))
+                    return 'N';
             }
         }
     }

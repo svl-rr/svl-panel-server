@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Bakersfield.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -869,11 +869,11 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <g
-       id="g3175">
+       id="g3386">
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO12R"
+         id="TO12.N"
          d="m 320,294.0945 -20,0 -20,-20"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -882,7 +882,7 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 320,314.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
-         id="TO12N"
+         id="TO12.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -1025,9 +1025,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       transform="translate(-140,88.000488)"
+       style="display:inline"
        id="daytonLink"
-       style="display:inline">
+       transform="translate(-140,88.000488)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
