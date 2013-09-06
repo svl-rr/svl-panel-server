@@ -1,35 +1,5 @@
 function panelInit(evt)
 {
-    // Dodge Mains
-    createPanelTurnout("TO18", true);
-	createPanelTurnout("TO19", false);
-    
-    // Dayton Mains
-    createPanelTurnout("TO125", false);
-	createPanelTurnout("TO126", false);
-	createPanelTurnout("TO127", false);
-    createPanelTurnout("TO128", false);
-	createPanelTurnout("TO129", true);
-    
-    // Dayton Industries
-	createPanelTurnout("TO130A", false);
-    createPanelTurnout("TO130B", false);
-    createPanelTurnout("TO131A", false);
-    createPanelTurnout("TO131B", false);
-    createPanelTurnout("TO132A", false);
-    createPanelTurnout("TO132B", true);
-    createPanelTurnout("TO150", false);
-	createPanelTurnout("TO164", true);
-    createPanelTurnout("TO165", true);
-	createPanelTurnout("TO166", true);
-	createPanelTurnout("TO167", false);
-    createPanelTurnout("TO168", false);
-    createPanelTurnout("TO169", true);
-    createPanelTurnout("TO170", true);
-    createPanelTurnout("TO171", false);
-    createPanelTurnout("TO172", true);
-    createPanelTurnout("TO173", false);
-    createPanelTurnout("TO174", true);
 }
 
 function DPL3Path()

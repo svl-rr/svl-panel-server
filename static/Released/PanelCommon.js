@@ -47,8 +47,8 @@ function turnoutSegmentClicked(elemID)
 {
     if(isDispatchPanel())
         dispatchTurnoutSegmentClicked(elemID);
-
-    changeTurnoutRoute(elemID);
+    else
+        changeTurnoutRoute(elemID);
 }
 
 function changeTurnoutRoute(elemID)
@@ -122,6 +122,9 @@ function PanelTurnout(normalRouteID, divergingRouteID)
 		return;
     }
     
+    checkOnClick(normalElem);
+    checkOnClick(divergingElem);
+    
     // Make sure title element matches the object ID
     addElementTitle(normalRouteID, normalRouteID);
     addElementTitle(divergingRouteID, divergingRouteID);
@@ -132,6 +135,24 @@ function PanelTurnout(normalRouteID, divergingRouteID)
         console.warn("Krikey: a warning: " + id);
         console.error("jeepers an error");
     }*/
+}
+
+function checkOnClick(elem)
+{
+    var onclickScript = "turnoutSegmentClicked(evt.currentTarget.id)";
+    
+    if(elem == null)
+    {
+        alert("Bad element passed to checkOnClick");
+        return;
+    }
+    
+    var attrib = elem.getAttribute("onclick");
+    if((attrib == null) || (attrib != onclickScript))
+    {
+        alert("Element " + elem.id + " does not have a proper onclick setting. This has been updated during runtime but should be fixed in svg file.");
+        elem.setAttribute("onclick", onclickScript);
+    }
 }
 
 function getSVGState()
@@ -314,24 +335,6 @@ function init(evt)
     if(panelSVGTextTitle != null)
         setPanelDocumentTitle(panelSVGTextTitle);
     
-    var pathItems = svgDocument.getElementsByTagName("path");
-    
-    for(var i = 0; i < pathItems.length; i++)
-    {
-        var elem = pathItems[i];
-        
-        if(elem.getAttribute('onclick') != null)
-        {
-            setStyleSubAttribute(elem, "cursor", "pointer");
-        }
-
-        if(elem.id.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 1)
-        {
-            //setStyleSubAttribute(elem, "cursor", "crosshair");
-            //blocksOnPanel.push(new BlockSensor(elem.id));
-        }
-    }
-    
     var groupItems = svgDocument.getElementsByTagName("g");
     
     for(var i = 0; i < groupItems.length; i++)
@@ -369,6 +372,24 @@ function init(evt)
                     }
                 }
             }
+        }
+    }
+    
+    var pathItems = svgDocument.getElementsByTagName("path");
+    
+    for(var i = 0; i < pathItems.length; i++)
+    {
+        var elem = pathItems[i];
+        
+        if(elem.getAttribute('onclick') != null)
+        {
+            setStyleSubAttribute(elem, "cursor", "pointer");
+        }
+
+        if(elem.id.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 1)
+        {
+            //setStyleSubAttribute(elem, "cursor", "crosshair");
+            //blocksOnPanel.push(new BlockSensor(elem.id));
         }
     }
     
