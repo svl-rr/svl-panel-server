@@ -9,7 +9,7 @@ function track1Path()
     addTurnoutStateChangeRequest("TO12", 'R');
     addTurnoutStateChangeRequest("TO11", 'N');
     addTurnoutStateChangeRequest("TO10", 'N');
-    addTurnoutStateChangeRequest("TO9", 'N');
+    addTurnoutStateChangeRequest("TO9", 'R');
     addTurnoutStateChangeRequest("TO15B", 'N');
     addTurnoutStateChangeRequest("TO16B", 'N');
     addTurnoutStateChangeRequest("TO17B", 'R');
@@ -24,7 +24,7 @@ function track2Path()
     addTurnoutStateChangeRequest("TO12", 'R');
     addTurnoutStateChangeRequest("TO11", 'N');
     addTurnoutStateChangeRequest("TO10", 'N');
-    addTurnoutStateChangeRequest("TO9", 'N');
+    addTurnoutStateChangeRequest("TO9", 'R');
     addTurnoutStateChangeRequest("TO15B", 'N');
     addTurnoutStateChangeRequest("TO16B", 'R');
 
@@ -38,7 +38,7 @@ function track3Path()
     addTurnoutStateChangeRequest("TO12", 'R');
     addTurnoutStateChangeRequest("TO11", 'N');
     addTurnoutStateChangeRequest("TO10", 'N');
-    addTurnoutStateChangeRequest("TO9", 'N');
+    addTurnoutStateChangeRequest("TO9", 'R');
     addTurnoutStateChangeRequest("TO15B", 'R');
 
 	executePanelStateChangeRequests();									
@@ -51,7 +51,7 @@ function track4Path()
     addTurnoutStateChangeRequest("TO12", 'R');
     addTurnoutStateChangeRequest("TO11", 'N');
     addTurnoutStateChangeRequest("TO10", 'N');
-    addTurnoutStateChangeRequest("TO9", 'R');
+    addTurnoutStateChangeRequest("TO9", 'N');
 
 	executePanelStateChangeRequests();									
 }

@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Bakersfield.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -498,7 +498,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.18"
-     inkscape:cx="500.73995"
+     inkscape:cx="398.19758"
      inkscape:cy="315.38655"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
@@ -914,14 +914,14 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 440,414.0945 -20,0 -20,-20"
-         id="TO9R"
+         id="TO9.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO9N"
+         id="TO9.R"
          d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221" />
@@ -1027,9 +1027,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       transform="translate(-140,88.000488)"
+       style="display:inline"
        id="daytonLink"
-       style="display:inline">
+       transform="translate(-140,88.000488)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
