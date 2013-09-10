@@ -185,18 +185,32 @@ function setDispatchSensorState(sensorID, sensorState)
 	}
 }
 
-function dispatchTurnoutSegmentClicked(id)
+function dispatchTurnoutSegmentClicked(elemID)
 {
-    if(turnoutOccupied(id))
+    if(turnoutOccupied(elemID))
     {
-        advanceTurnoutStateToUnoccupied(id);
+        advanceTurnoutStateToUnoccupied(elemID);
         return;
     }
-    else if(turnoutAuthorized(id))
+    else if(turnoutAuthorized(elemID))
     {
-        advanceTurnoutStateToOccupied(id);
+        advanceTurnoutStateToOccupied(elemID);
         return;
     }
+    else
+    {
+        changeTurnoutRoute(elemID);
+    }
+}
+
+function turnoutOccupied(elemID)
+{
+    return false;
+}
+
+function turnoutAuthorized(elemID)
+{
+    return false;
 }
 
 function userClickChangeToNextState(elemID)

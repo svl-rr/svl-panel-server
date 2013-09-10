@@ -4,130 +4,85 @@ function panelInit(evt)
 
 function DPL3Path()
 {
-	addTurnoutStateChangeRequest("TO174", 'R');
-	addTurnoutStateChangeRequest("TO172", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO174.R", "TO172.N"]);
 }
 
 function DPL2Path()
 {
-	addTurnoutStateChangeRequest("TO174", 'N');
-	addTurnoutStateChangeRequest("TO172", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO174.N", "TO172.N"]);
 }
 
 function DPL1Path()
 {
-	addTurnoutStateChangeRequest("TO173", 'N');
-	addTurnoutStateChangeRequest("TO172", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO173.N", "TO172.R"]);
 }
 
 function PeacheyBrothersPath()
 {
-	addTurnoutStateChangeRequest("TO173", 'R');
-	addTurnoutStateChangeRequest("TO172", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO173.R", "TO172.R"]);
 }
 
 function DaytonIndustrialLeadPath()
 {
-	addTurnoutStateChangeRequest("TO170", 'R');
-	addTurnoutStateChangeRequest("TO171", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO170.R", "TO171.R"]);	
 }
 
 function IndRunaroundNorthPath()
 {
-	addTurnoutStateChangeRequest("TO170", 'N');
-	addTurnoutStateChangeRequest("TO171", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO170.N", "TO171.R"]);	
 }
 
 function IndRunaroundSouthPath()
 {
-	addTurnoutStateChangeRequest("TO169", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO169.N"]);
 }
 
 function OnthaCRLLeadPath()
 {
-	addTurnoutStateChangeRequest("TO171", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO171.N"]);
 }
 
 function OnthaSkidsPath()
 {
-	addTurnoutStateChangeRequest("TO168", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO168.R"]);
 }
 
 function WiebeOnthaCRLPath()
 {
-    addTurnoutStateChangeRequest("TO167", 'N');
-	addTurnoutStateChangeRequest("TO168", 'N');
-
-	executePanelStateChangeRequests();
+       executePathArray(["TO167.N", "TO168.N"]);
 }
 
 function WiebeWafersPath()
 {
-	addTurnoutStateChangeRequest("TO167", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO167.R"]);
 }
 
 function WiebeCRLLeadPath()
 {
-	addTurnoutStateChangeRequest("TO169", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO169.R"]);
 }
 
 function WarehouseNo9Path()
 {
-	addTurnoutStateChangeRequest("TO165", 'N');
-	addTurnoutStateChangeRequest("TO166", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO165.N", "TO166.R"]);
 }
 
 function CavanaughLeadPath()
 {
-	addTurnoutStateChangeRequest("TO165", 'R');
-	addTurnoutStateChangeRequest("TO166", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO165.R", "TO166.R"]);
 }
 
 function MegaWattPath()
 {
-	addTurnoutStateChangeRequest("TO164", 'N');
-	addTurnoutStateChangeRequest("TO166", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO164.N", "TO166.N"]);
 }
 
 function GoodMorningCerealPath()
 {
-	addTurnoutStateChangeRequest("TO164", 'R');
-	addTurnoutStateChangeRequest("TO166", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO164.R", "TO166.N"]);
 }
 
 function TeamTrackPath()
 {
-	addTurnoutStateChangeRequest("TO132A", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO132A.N"]);
 }

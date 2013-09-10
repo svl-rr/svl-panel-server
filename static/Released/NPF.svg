@@ -547,14 +547,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.17"
-     inkscape:cx="46.358601"
+     inkscape:cx="623.44075"
      inkscape:cy="340.03813"
      inkscape:document-units="px"
-     inkscape:current-layer="textLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1104"
-     inkscape:window-x="0"
+     inkscape:window-height="1117"
+     inkscape:window-x="21"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -702,6 +702,7 @@
      id="industrialTrackLayer"
      inkscape:label="Industrial Track"
      transform="translate(0,-3.979257)"
+     style="display:inline"
      sodipodi:insensitive="true">
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:none;marker-end:none"
@@ -711,6 +712,364 @@
        sodipodi:nodetypes="cc"
        inkscape:label="#path3830"
        onclick="pass1SouthPath()" />
+    <g
+       id="g4691"
+       transform="matrix(-1,0,0,1,980,-160.0005)">
+      <g
+         transform="matrix(-1,0,0,-1,540,1108.189)"
+         id="g4675">
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="TO519.R"
+           d="m 280,574.0945 30,0"
+           style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+           inkscape:label="#path4221"
+           onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+        <path
+           inkscape:label="#path4221"
+           style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+           d="m 290,554.0945 20,20"
+           id="TO519.N"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc"
+           onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      </g>
+      <g
+         id="g4679"
+         transform="translate(-80,-40)">
+        <path
+           inkscape:label="#path4221"
+           style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+           d="m 280,574.0945 30,0"
+           id="TO518.N"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="cc"
+           onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+        <path
+           sodipodi:nodetypes="cc"
+           inkscape:connector-curvature="0"
+           id="TO518.R"
+           d="m 290,554.0945 20,20"
+           style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+           inkscape:label="#path4221"
+           onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      </g>
+      <path
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 238.96363,553.05813 -12.07274,-12.07274 -16.77574,0"
+         id="path4685"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="path4689"
+         d="m 220.70915,514.96099 12.07274,12.07274 16.77574,0"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g3199"
+       transform="translate(-390,-160.0005)">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO468.R"
+         d="m 520,534.0945 40,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,514.0945 20,20 20,0"
+         id="TO468.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g122"
+       transform="translate(-430,-160.0005)">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO467.R"
+         d="m 520,534.0945 40,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,514.0945 20,20 20,0"
+         id="TO467.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g126"
+       transform="translate(-210,-40.000497)">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO475.R"
+         d="m 520,534.0945 40,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,514.0945 20,20 20,0"
+         id="TO475.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g130"
+       transform="translate(-170,-40.000497)">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO473B.N"
+         d="m 520,534.0945 40,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,514.0945 20,20 20,0"
+         id="TO473B.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g134"
+       transform="matrix(-1,0,0,1,1170,-40.000497)">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO514B.N"
+         d="m 520,534.0945 40,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,514.0945 20,20 20,0"
+         id="TO514B.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g138"
+       transform="matrix(-1,0,0,-1,1170,868.1885)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,514.0945 20,20 20,0"
+         id="TO515.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO515.R"
+         d="m 520,534.0945 40,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <g
+       id="g142"
+       transform="matrix(1,0,0,-1,250,868.1885)">
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO520.R"
+         d="m 520,534.0945 40,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,514.0945 20,20 20,0"
+         id="TO520.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g3187"
+       transform="matrix(-1,0,0,-1,630,788.1885)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO470.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO470.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g149"
+       transform="matrix(-1,0,0,-1,670,828.1885)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO472.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO472.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g153"
+       transform="matrix(-1,0,0,-1,710,868.1885)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO474.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO474.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g157"
+       transform="translate(-210,-80.000497)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO469.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO469.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g161"
+       transform="translate(-130,-4.9690625e-4)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO471.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO471.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g165"
+       transform="translate(-90,39.999503)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO473A.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO473A.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g169"
+       transform="matrix(-1,0,0,1,1090,39.999503)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO514A.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO514A.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g173"
+       transform="matrix(-1,0,0,1,1130,-4.9690625e-4)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO517.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO517.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+    </g>
     <path
        inkscape:connector-curvature="0"
        id="pass2NorthPath"
@@ -841,186 +1200,6 @@
        id="path4223"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_0deg_reverse"
-       id="TO468"
-       transform="translate(50,74.094029)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4384">
-      <title
-         id="title3390">TO</title>
-    </use>
-    <use
-       height="740.11475"
-       width="1047.9579"
-       transform="translate(10,74.094029)"
-       id="TO467"
-       xlink:href="#turnout_0deg_reverse"
-       y="0"
-       x="0"
-       inkscape:label="#use4386">
-      <title
-         id="title3392">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_45deg_reverse"
-       id="TO470"
-       transform="translate(-70,-5.905971)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4413">
-      <title
-         id="title3388">TO</title>
-    </use>
-    <use
-       height="740.11475"
-       width="1047.9579"
-       transform="translate(230,194.09403)"
-       id="TO475"
-       xlink:href="#turnout_0deg_reverse"
-       y="0"
-       x="0"
-       inkscape:label="#use4366">
-      <title
-         id="title3382">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_45deg_reverse"
-       id="TO474"
-       transform="translate(10,74.094029)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4397">
-      <title
-         id="title3384">TO</title>
-    </use>
-    <use
-       height="740.11475"
-       width="1047.9579"
-       transform="translate(-30,34.094029)"
-       id="TO472"
-       xlink:href="#turnout_45deg_reverse"
-       y="0"
-       x="0"
-       inkscape:label="#use4411">
-      <title
-         id="title3386">TO</title>
-    </use>
-    <use
-       xlink:href="#turnout_0deg_normal"
-       x="0"
-       y="0"
-       id="TO473B"
-       transform="translate(270,194.09403)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4376">
-      <title
-         id="title3368">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_45deg_reverse"
-       id="TO473A"
-       transform="matrix(-1,0,0,-1,610,834.09403)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4415">
-      <title
-         id="title3366">TO</title>
-    </use>
-    <use
-       height="740.11475"
-       width="1047.9579"
-       transform="matrix(-1,0,0,-1,570,794.09403)"
-       id="TO471"
-       xlink:href="#turnout_45deg_reverse"
-       y="0"
-       x="0"
-       inkscape:label="#use4417">
-      <title
-         id="title3364">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_45deg_reverse"
-       id="TO469"
-       transform="matrix(-1,0,0,-1,490,714.09403)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4419">
-      <title
-         id="title3362">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_0deg_reverse"
-       id="TO514B"
-       transform="matrix(-1,0,0,1,730,194.09403)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4378">
-      <title
-         id="title3380">TO</title>
-    </use>
-    <use
-       height="740.11475"
-       width="1047.9579"
-       transform="matrix(1,0,0,-1,390,834.09403)"
-       id="TO514A"
-       xlink:href="#turnout_45deg_normal"
-       y="0"
-       x="0"
-       inkscape:label="#use4425">
-      <title
-         id="title3378">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_45deg_reverse"
-       id="TO517"
-       transform="matrix(1,0,0,-1,430,794.09403)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4430">
-      <title
-         id="title3376">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_0deg_reverse"
-       id="TO515"
-       transform="matrix(-1,0,0,-1,730,634.09403)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4380">
-      <title
-         id="title3372">TO</title>
-    </use>
-    <use
-       height="740.11475"
-       width="1047.9579"
-       transform="matrix(1,0,0,-1,690,634.09403)"
-       id="TO520"
-       xlink:href="#turnout_0deg_reverse"
-       y="0"
-       x="0"
-       inkscape:label="#use4382">
-      <title
-         id="title3370">TO</title>
-    </use>
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1033,7 +1212,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="pass3SouthPath"
-       d="m 310,414.09356 190,4.7e-4"
+       d="m 310,414.094 190,4.7e-4"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path3344"
        onclick="pass3SouthPath()" />
@@ -1045,36 +1224,13 @@
        inkscape:connector-curvature="0"
        inkscape:label="#path3346"
        onclick="pass2SouthPath()" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#ds_reverse"
-       id="TO518"
-       transform="matrix(-1,0,0,1,980,-145.90644)"
-       width="1047.9579"
-       height="690.11475"
-       inkscape:label="#use3928">
-      <title
-         id="title3201">TO</title>
-    </use>
-    <use
-       inkscape:label="#use3928"
-       height="690.11475"
-       width="1047.9579"
-       transform="matrix(1,0,0,-1,520,894.09356)"
-       id="TO519"
-       xlink:href="#ds_reverse"
-       y="0"
-       x="0">
-      <title
-         id="title3205">TO</title>
-    </use>
   </g>
   <g
      inkscape:groupmode="layer"
      id="mainlineTrackLayer"
      inkscape:label="Mainline Track"
      transform="translate(0,-3.979257)"
+     style="display:inline"
      sodipodi:insensitive="true">
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -1092,6 +1248,126 @@
        sodipodi:nodetypes="cc"
        inkscape:label="#path3861"
        onclick="main2SouthPath()" />
+    <g
+       id="g191"
+       transform="matrix(-1,0,0,-1,1310,708.1885)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO508.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO508.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g195"
+       transform="matrix(-1,0,0,-1,1270,668.1885)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO507.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO507.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g201"
+       transform="translate(-250,-120.0005)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO492.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO492.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+    </g>
+    <g
+       id="g207"
+       transform="translate(-290,-160.0005)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO493.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO493.R"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g213"
+       transform="translate(-330,-200.0005)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 440,414.0945 -20,0 -20,-20"
+         id="TO494A.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO494A.N"
+         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g219"
+       transform="matrix(0,1,1,0,475.9055,-85.905997)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,514.0945 20,20 20,0"
+         id="TO509.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO509.R"
+         d="m 520,534.0945 40,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
     <path
        style="fill:#ffffff;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM)"
        d="m 50,174.09405 20,19.99999"
@@ -1116,78 +1392,6 @@
        d="m 1010,514.09403 0,-40"
        id="path4255"
        inkscape:connector-curvature="0" />
-    <use
-       height="740.11475"
-       width="1047.9579"
-       transform="matrix(-1,0,0,-1,370,594.09403)"
-       id="TO494A"
-       xlink:href="#turnout_45deg_normal"
-       y="0"
-       x="0"
-       inkscape:label="#use4436">
-      <title
-         id="title3352">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_45deg_normal"
-       id="TO493"
-       transform="matrix(-1,0,0,-1,410,634.09403)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4423">
-      <title
-         id="title3354">TO</title>
-    </use>
-    <use
-       height="740.11475"
-       width="1047.9579"
-       transform="matrix(-1,0,0,-1,450,674.09403)"
-       id="TO492"
-       xlink:href="#turnout_45deg_reverse"
-       y="0"
-       x="0"
-       inkscape:label="#use4421">
-      <title
-         id="title3394">TO</title>
-    </use>
-    <use
-       height="740.11475"
-       width="1047.9579"
-       transform="translate(610,-85.905973)"
-       id="TO508"
-       xlink:href="#turnout_45deg_normal"
-       y="0"
-       x="0"
-       inkscape:label="#use4432">
-      <title
-         id="title3358">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_45deg_reverse"
-       id="TO507"
-       transform="translate(570,-125.90597)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4434">
-      <title
-         id="title3356">TO</title>
-    </use>
-    <use
-       x="0"
-       y="0"
-       xlink:href="#turnout_0deg_normal"
-       id="TO509"
-       transform="matrix(0,1,1,0,710,354.09403)"
-       width="1047.9579"
-       height="740.11475"
-       inkscape:label="#use4388">
-      <title
-         id="title3360">TO</title>
-    </use>
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"

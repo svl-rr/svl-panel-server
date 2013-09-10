@@ -33,6 +33,8 @@ var stateChangeRequests = new Array();
 var blocksOnPanel = new Array();
 //var signalsOnPanel = new Array();
 
+var turnoutOnclickScript = "turnoutSegmentClicked(evt.currentTarget.id)";
+
 // Object types we can send to the server
 var SERVER_TYPE_TURNOUT = "turnout";
 var SERVER_TYPE_DISPATCH = "dispatch";
@@ -122,8 +124,8 @@ function PanelTurnout(normalRouteID, divergingRouteID)
 		return;
     }
     
-    checkOnClick(normalElem);
-    checkOnClick(divergingElem);
+    checkTurnoutOnClick(normalElem);
+    checkTurnoutOnClick(divergingElem);
     
     // Make sure title element matches the object ID
     addElementTitle(normalRouteID, normalRouteID);
@@ -137,10 +139,8 @@ function PanelTurnout(normalRouteID, divergingRouteID)
     }*/
 }
 
-function checkOnClick(elem)
-{
-    var onclickScript = "turnoutSegmentClicked(evt.currentTarget.id)";
-    
+function checkTurnoutOnClick(elem)
+{    
     if(elem == null)
     {
         alert("Bad element passed to checkOnClick");
@@ -148,11 +148,13 @@ function checkOnClick(elem)
     }
     
     var attrib = elem.getAttribute("onclick");
-    if((attrib == null) || (attrib != onclickScript))
+    if((attrib == null) || (attrib != turnoutOnclickScript))
     {
         alert("Element " + elem.id + " does not have a proper onclick setting. This has been updated during runtime but should be fixed in svg file.");
-        elem.setAttribute("onclick", onclickScript);
+        elem.setAttribute("onclick", turnoutOnclickScript);
     }
+    
+    setStyleSubAttribute(elem, "cursor", "pointer");
 }
 
 function getSVGState()
@@ -291,6 +293,29 @@ function createPanelTurnout(normalRouteElemID, divergingRouteElemID)
 	turnoutsOnPanel.push(new PanelTurnout(normalRouteElemID, divergingRouteElemID));
 }
 
+/* executePathArray([Array] pathArray)
+ * Executes a (hardcoded) path where each array element is assumed to be a string that has same formatting as turnout segment IDs (TOxx[A-Z].R|N)
+ */
+
+function executePathArray(pathArray)
+{
+    if(pathArray != null)
+    {
+        for(var i in pathArray)
+        {            
+            var turnoutAddr = getDCCAddr(pathArray[i]);
+            var turnoutRoute = getDCCAddrRoute(pathArray[i]);
+            
+            if((turnoutAddr != null) && (turnoutRoute != null))
+                addTurnoutStateChangeRequest(turnoutAddr, turnoutRoute);
+            else
+                alert("A bad turnout id (" + turnoutAddr + ") or route (" + turnoutRoute + ") was passed to executePathArray.");
+        }
+        
+        executePanelStateChangeRequests();
+    }
+}
+
 /* addTurnoutStateChangeRequest([String] id, [string] state)
  * Creates a new ServerCommsObject object and pushes it on to the array of state change requests
  * Request will not be executed until executePanelStateChangeRequests is called.
@@ -369,6 +394,10 @@ function init(evt)
                             // Add the turnout to the list of known turnouts
                             createPanelTurnout(id1, id2);
                         }
+                        else
+                        {
+                            alert("Found an element that looked at lot like a turnout object but the routes did not match N or R");
+                        }
                     }
                 }
             }
@@ -381,7 +410,9 @@ function init(evt)
     {
         var elem = pathItems[i];
         
-        if(elem.getAttribute('onclick') != null)
+        var pathOnClick = elem.getAttribute('onclick');
+        
+        if((pathOnClick != null) && (pathOnClick != "") && (pathOnClick != turnoutOnclickScript))
         {
             setStyleSubAttribute(elem, "cursor", "pointer");
         }
@@ -1154,6 +1185,9 @@ function getDCCAddrRoute(objID)
         
         if((route == 'N') || (route == 'n'))
             return 'N';
+        
+        if((route == 'T') || (route == 't'))
+            return 'T';
     }
     else
     {
@@ -1172,6 +1206,9 @@ function getDCCAddrRoute(objID)
                 
                 if((route == 'N') || (route == 'n'))
                     return 'N';
+                
+                if((route == 'T') || (route == 't'))
+                    return 't';
             }
         }
     }

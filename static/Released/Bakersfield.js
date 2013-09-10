@@ -4,129 +4,60 @@ function panelInit(evt)
 
 function track1Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'R');
-	addTurnoutStateChangeRequest("TO13", 'N');
-    addTurnoutStateChangeRequest("TO12", 'R');
-    addTurnoutStateChangeRequest("TO11", 'N');
-    addTurnoutStateChangeRequest("TO10", 'N');
-    addTurnoutStateChangeRequest("TO9", 'R');
-    addTurnoutStateChangeRequest("TO15B", 'N');
-    addTurnoutStateChangeRequest("TO16B", 'N');
-    addTurnoutStateChangeRequest("TO17B", 'R');
-    
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.R", "TO13.N", "TO12.R", "TO11.N", "TO10.N", "TO9.R", "TO15B.N", "TO16B.N", "TO17B.R"]);
 }
 
 function track2Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'R');
-	addTurnoutStateChangeRequest("TO13", 'N');
-    addTurnoutStateChangeRequest("TO12", 'R');
-    addTurnoutStateChangeRequest("TO11", 'N');
-    addTurnoutStateChangeRequest("TO10", 'N');
-    addTurnoutStateChangeRequest("TO9", 'R');
-    addTurnoutStateChangeRequest("TO15B", 'N');
-    addTurnoutStateChangeRequest("TO16B", 'R');
-
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.R", "TO13.N", "TO12.R", "TO11.N", "TO10.N", "TO9.R", "TO15B.N", "TO16B.R"]);
 }
 
 function track3Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'R');
-	addTurnoutStateChangeRequest("TO13", 'N');
-    addTurnoutStateChangeRequest("TO12", 'R');
-    addTurnoutStateChangeRequest("TO11", 'N');
-    addTurnoutStateChangeRequest("TO10", 'N');
-    addTurnoutStateChangeRequest("TO9", 'R');
-    addTurnoutStateChangeRequest("TO15B", 'R');
-
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.R", "TO13.N", "TO12.R", "TO11.N", "TO10.N", "TO9.R", "TO15B.R"]);
 }
 
 function track4Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'R');
-	addTurnoutStateChangeRequest("TO13", 'N');
-    addTurnoutStateChangeRequest("TO12", 'R');
-    addTurnoutStateChangeRequest("TO11", 'N');
-    addTurnoutStateChangeRequest("TO10", 'N');
-    addTurnoutStateChangeRequest("TO9", 'N');
-
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.R", "TO13.N", "TO12.R", "TO11.N", "TO10.N", "TO9.N"]);
 }
 
 function track5Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'R');
-	addTurnoutStateChangeRequest("TO13", 'N');
-    addTurnoutStateChangeRequest("TO12", 'R');
-    addTurnoutStateChangeRequest("TO11", 'N');
-    addTurnoutStateChangeRequest("TO10", 'R');
-
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.R", "TO13.N", "TO12.R", "TO11.N", "TO10.R"]);
 }
 
 function track6Path()
-{
-	addTurnoutStateChangeRequest("TO14", 'R');
-	addTurnoutStateChangeRequest("TO13", 'N');
-    addTurnoutStateChangeRequest("TO12", 'R');
-    addTurnoutStateChangeRequest("TO11", 'R');
-
-	executePanelStateChangeRequests();									
+{    
+    executePathArray(["TO14.R", "TO13.N", "TO12.R", "TO11.R"]);
 }
 
 function track7Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'R');
-	addTurnoutStateChangeRequest("TO13", 'N');
-    addTurnoutStateChangeRequest("TO12", 'N');
-
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.R", "TO13.N", "TO12.N"]);
 }
 
 function track8Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'R');
-	addTurnoutStateChangeRequest("TO13", 'R');
-
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.R", "TO13.R"]);
 }
 
 function track9Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'N');
-	addTurnoutStateChangeRequest("TO15A", 'N');
-
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.N", "TO15A.N"]);
 }
 
 function track10Path()
-{
-	addTurnoutStateChangeRequest("TO14", 'N');
-	addTurnoutStateChangeRequest("TO15A", 'R');
-    addTurnoutStateChangeRequest("TO16A", 'R');
-    
-	executePanelStateChangeRequests();									
+{    
+    executePathArray(["TO14.N", "TO15A.R", "TO16A.R"]);
 }
 
 function track11Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'N');
-	addTurnoutStateChangeRequest("TO15A", 'R');
-    addTurnoutStateChangeRequest("TO16A", 'N');
-    addTurnoutStateChangeRequest("TO17A", 'R');
-    
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.N", "TO15A.R", "TO16A.N", "TO17A.R"]);
 }
 
 function track12Path()
 {
-	addTurnoutStateChangeRequest("TO14", 'N');
-	addTurnoutStateChangeRequest("TO15A", 'R');
-    addTurnoutStateChangeRequest("TO16A", 'N');
-    addTurnoutStateChangeRequest("TO17A", 'N');
-
-	executePanelStateChangeRequests();									
+    executePathArray(["TO14.N", "TO15A.R", "TO16A.N", "TO17A.N"]);
 }
