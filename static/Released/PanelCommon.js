@@ -126,6 +126,7 @@ function PanelTurnout(normalRouteID, divergingRouteID)
     
     checkTurnoutOnClick(normalElem);
     checkTurnoutOnClick(divergingElem);
+    checkOpacity(normalElem.parentNode);
     
     // Make sure title element matches the object ID
     addElementTitle(normalRouteID, normalRouteID);
@@ -155,6 +156,29 @@ function checkTurnoutOnClick(elem)
     }
     
     setStyleSubAttribute(elem, "cursor", "pointer");
+}
+
+function checkOpacity(parentElem)
+{
+    if((parentElem == null) || (parentElem.firstElementChild == null) || (parentElem.lastElementChild == null))
+    {
+        alert("checkOpacity was passed a null parent element or an element without the two expected children elements.");
+        return;
+    }
+    
+    var attrib = getStyleSubAttribute(parentElem.firstElementChild, "opacity");
+    
+    if((attrib == null) || (attrib != "0.25"))
+    {
+        alert("Element " + parentElem.firstElementChild.id + " does not have a proper opacity setting of 0.25 (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
+    }
+    
+    attrib = getStyleSubAttribute(parentElem.lastElementChild, "opacity");
+    
+    if((attrib != null) && (attrib != "1"))
+    {
+        alert("Element " + parentElem.lastElementChild.id + " does not have a proper opacity setting of 1 (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
+    }
 }
 
 function getSVGState()
