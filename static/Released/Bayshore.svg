@@ -546,15 +546,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4248202"
-     inkscape:cx="684.40699"
+     inkscape:zoom="0.8359833"
+     inkscape:cx="514.56099"
      inkscape:cy="512.10251"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="17"
+     inkscape:window-x="10"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -722,7 +722,8 @@
      id="industrialTrackLayer"
      inkscape:label="Industrial Track"
      transform="translate(0,-3.9797589)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <g
        id="g4691"
        transform="translate(430,-393.53387)">
@@ -746,18 +747,6 @@
            sodipodi:nodetypes="cc"
            onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
       </g>
-      <use
-         inkscape:label="#use4386"
-         x="0"
-         y="0"
-         xlink:href="#dblxovr_45deg_normal"
-         id="TO994"
-         transform="matrix(0,-1,-1,0,600,600)"
-         width="1047.9579"
-         height="740.11475">
-        <title
-           id="title3115">TO</title>
-      </use>
       <g
          id="g4679"
          transform="translate(-80,-40)">
@@ -1131,21 +1120,21 @@
     <g
        id="g3315">
       <path
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
-         inkscape:label="#path4221"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 280,260.56063 -40,0"
-         id="TO37.R"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cc" />
-      <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="TO37.N"
          d="m 280,280.56063 -20,-20 -20,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 280,260.56063 -40,0"
+         id="TO37.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
     </g>
     <g
        id="g3329">
