@@ -96,6 +96,8 @@ function PanelTurnout(normalRouteID, divergingRouteID)
     this.getSVGState=getSVGState;
     this.setSVGState=setSVGState;
     
+    this.successfullyCreated = false;
+    
     var normalElem = svgDocument.getElementById(normalRouteID);
 	
 	if(normalElem == null)
@@ -124,6 +126,8 @@ function PanelTurnout(normalRouteID, divergingRouteID)
 		return;
     }
     
+    this.successfullyCreated = true;
+    
     checkTurnoutOnClick(normalElem);
     checkTurnoutOnClick(divergingElem);
     checkOpacity(normalElem.parentNode);
@@ -131,6 +135,18 @@ function PanelTurnout(normalRouteID, divergingRouteID)
     // Make sure title element matches the object ID
     addElementTitle(normalRouteID, normalRouteID);
     addElementTitle(divergingRouteID, divergingRouteID);
+        
+    for(var i in turnoutsOnPanel)
+    {
+        var prevPanel = turnoutsOnPanel[i];
+        
+        if(prevPanel.getDCCID() == this.getDCCID())
+        {
+            var lec = svgDocument.getElementById(prevPanel.divergingRouteID).parentNode.lastElementChild;
+            if(getDCCAddrRoute(divergingElem.parentNode.lastElementChild.id) != getDCCAddrRoute(lec.id))
+                alert("Turnout instances with DCC addr " + getDCCAddr(divergingRouteID) + " do not have a consistent initial condition. This has been updated during runtime but should be fixed in svg file. ")
+        }
+    }
     
     /*if(console != undefined)
     {
@@ -314,7 +330,10 @@ function getAsServerSensorObject()
  */
 function createPanelTurnout(normalRouteElemID, divergingRouteElemID)
 {
-	turnoutsOnPanel.push(new PanelTurnout(normalRouteElemID, divergingRouteElemID));
+    var panelTurnout = new PanelTurnout(normalRouteElemID, divergingRouteElemID);
+    
+    if(panelTurnout.successfullyCreated == true)
+        turnoutsOnPanel.push(panelTurnout);
 }
 
 /* executePathArray([Array] pathArray)
