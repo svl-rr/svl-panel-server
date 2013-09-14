@@ -1,103 +1,45 @@
 function panelInitNorth(evt)
 {
-    // Victoria
-	createPanelTurnout("TO725", false);
-
-    // Upton
-    createPanelTurnout("TO703", true);
-    createPanelTurnout("TO702", true);
-    createPanelTurnout("TO701", true);
-    createPanelTurnout("TO700", true);
-    
-    // Tracy
-    createPanelTurnout("TO651", true);
-    createPanelTurnout("TO650", true);
-    
-    //Silicon
-    createPanelTurnout("TO601", false);
-    createPanelTurnout("TO600", true);
-
-    //Paso
-    createPanelTurnout("TO575", true);
-
-	// Nowheres South
-	createPanelTurnout("TO492", false);
-	createPanelTurnout("TO493", true);
-	createPanelTurnout("TO494A", false);
-	
-	// Nowheres North
-	createPanelTurnout("TO507", true);
-	createPanelTurnout("TO508", false);
-	createPanelTurnout("TO509", true);
-    
-    // Loop North
-	createPanelTurnout("TO329", false);
 }
 
 function nowheresMain1SouthPath()
 {
-	addTurnoutStateChangeRequest("TO494A", 'N');
-	addTurnoutStateChangeRequest("TO493", 'R');
-	addTurnoutStateChangeRequest("TO492", 'N');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO494A.N", "TO493.R", "TO492.N"]);
 }
 
 function nowheresMain1NorthPath()
 {
-	addTurnoutStateChangeRequest("TO508", 'N');
-	addTurnoutStateChangeRequest("TO509", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO508.N", "TO509.R"]);
 }
 
 function nowheresMain2SouthPath()
 {
-	addTurnoutStateChangeRequest("TO494A", 'N');
-	addTurnoutStateChangeRequest("TO493", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO494A.N", "TO493.N"]);
 }
 
 function nowheresMain2NorthPath()
 {
-	addTurnoutStateChangeRequest("TO507", 'N');
-	addTurnoutStateChangeRequest("TO508", 'R');
-	addTurnoutStateChangeRequest("TO509", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO507.N", "TO508.R", "TO509.R"]);
 }
 
 function nowheresYardSouthPath()
 {
-	addTurnoutStateChangeRequest("TO494A", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO494A.R"]);
 }
 
 function nowheresYardNorthPath()
 {
-	addTurnoutStateChangeRequest("TO507", 'R');
-	addTurnoutStateChangeRequest("TO508", 'R');
-	addTurnoutStateChangeRequest("TO509", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO507.R", "TO508.R", "TO509.R"]);
 }
 
 function nowheresPassSouthPath()
 {
-	addTurnoutStateChangeRequest("TO492", 'R');
-	addTurnoutStateChangeRequest("TO494A", 'N');
-	addTurnoutStateChangeRequest("TO493", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO492.R", "TO494A.N", "TO493.R"]);
 }
 
 function nowheresPassNorthPath()
 {
-	addTurnoutStateChangeRequest("TO509", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO509.N"]);
 }
 
 function nowheresPassThru()
