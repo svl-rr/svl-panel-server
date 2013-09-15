@@ -194,7 +194,7 @@
        inkscape:stockid="TriangleOccupiedNBMarker"
        orient="auto"
        refY="0"
-       refX="0.60000002"
+       refX="0.6000002"
        id="TriangleOccupiedNBMarker"
        style="overflow:visible">
       <path
@@ -208,7 +208,7 @@
        inkscape:stockid="TriangleOccupiedSBMarker"
        orient="auto"
        refY="0"
-       refX="-0.60000002"
+       refX="-0.6000002"
        id="TriangleOccupiedSBMarker"
        style="overflow:visible">
       <path
@@ -233,20 +233,6 @@
          inkscape:connector-curvature="0" />
     </marker>
     <marker
-       inkscape:stockid="StopM"
-       orient="auto"
-       refY="0"
-       refX="0"
-       id="StopM"
-       style="overflow:visible">
-      <path
-         id="path4078"
-         d="M 0,5.65 0,-5.65"
-         style="fill:none;stroke:#ffffff;stroke-width:2pt"
-         transform="scale(0.4,0.4)"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <marker
        inkscape:stockid="TriangleInM"
        orient="auto"
        refY="0"
@@ -260,284 +246,20 @@
          transform="scale(-0.25,-0.25)"
          inkscape:connector-curvature="0" />
     </marker>
-    <symbol
-       onclick="clickDFTurnout(evt.currentTarget.correspondingUseElement.id)"
-       id="turnout_0deg">
+    <marker
+       inkscape:stockid="StopM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="StopM"
+       style="overflow:visible">
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
-         inkscape:connector-curvature="0"
-         d="m 80,300 40,0"
-         id="path3179" />
-      <path
-         id="path3181"
-         d="m 80,280 20,20"
-         inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
-    </symbol>
-    <symbol
-       onclick="clickDFTurnout(evt.currentTarget.correspondingUseElement.id)"
-       id="turnout_45deg">
-      <path
-         id="path3201"
-         d="m 260,360 40,40"
-         inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
-         inkscape:connector-curvature="0"
-         d="m 260,380 20,0"
-         id="path3203" />
-    </symbol>
-    <symbol
-       onclick="clickDFTurnout(evt.currentTarget.correspondingUseElement.id)"
-       id="ds">
-      <path
-         inkscape:connector-curvature="0"
-         id="path3193"
-         d="m 200,520 30,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3195"
-         d="m 210,500 20,20"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
-      <use
-         height="690.11475"
-         width="1047.9579"
-         y="0"
-         x="0"
-         xlink:href="#doubleslip_guard"
-         id="use3197" />
-    </symbol>
-    <symbol
-       id="turnout_0deg_normal"
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
-      <path
-         id="turnout_0deg_normalSelected"
-         d="m 80,300 40,0"
-         inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
-         inkscape:connector-curvature="0"
-         d="m 80,280 20,20"
-         id="turnout_0deg_reverseUnselected" />
-    </symbol>
-    <symbol
-       id="turnout_0deg_reverse"
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0"
-         d="m 80,280 20,20 20,0"
-         id="turnout_0deg_reverseSelected" />
-      <path
-         id="turnout_0deg_normalUnselected"
-         d="m 80,300 20,0"
-         inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
-    </symbol>
-    <symbol
-       id="turnout_45deg_reverse"
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
-      <path
-         id="turnout_45deg_reverseSelected"
-         d="m 260,380 20,0 20,20"
-         inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
-         inkscape:connector-curvature="0"
-         d="m 260,360 20,20"
-         id="turnout_45deg_normalUnselected" />
-    </symbol>
-    <symbol
-       id="turnout_45deg_normal"
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0"
-         d="m 260,360 40,40"
-         id="turnout_45deg_normalSelected" />
-      <path
-         id="turnout_45deg_reverseUnselected"
-         d="m 260,380 20,0"
-         inkscape:connector-curvature="0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
-    </symbol>
-    <symbol
-       id="ds_normal"
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 200,520 30,0"
-         id="ds_normal_selected"
+         id="path4078"
+         d="M 0,5.65 0,-5.65"
+         style="fill:none;stroke:#ffffff;stroke-width:2pt"
+         transform="scale(0.4,0.4)"
          inkscape:connector-curvature="0" />
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
-         d="m 210,500 20,20"
-         id="ds_normal_unselected"
-         inkscape:connector-curvature="0" />
-      <use
-         id="ds_normal_guard"
-         xlink:href="#doubleslip_guard"
-         x="0"
-         y="0"
-         width="1047.9579"
-         height="690.11475" />
-    </symbol>
-    <symbol
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)"
-       id="ds_reverse">
-      <path
-         inkscape:connector-curvature="0"
-         id="ds_reverse_selected"
-         d="m 210,500 20,20 2.07107,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="ds_reverse_unselected"
-         d="m 200,520 30,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
-      <use
-         height="690.11475"
-         width="1047.9579"
-         y="0"
-         x="0"
-         xlink:href="#doubleslip_guard"
-         id="ds_reverse_guard" />
-    </symbol>
-    <symbol
-       id="doubleslip_guard">
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none"
-         d="m 221,501 12,12 10,0"
-         inkscape:connector-curvature="0"
-         id="path3187" />
-      <path
-         id="path3189"
-         inkscape:connector-curvature="0"
-         d="m 210,527 7,0"
-         style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0.25;stroke-dasharray:none" />
-    </symbol>
-    <symbol
-       id="dblxovr_0deg_normal"
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
-      <path
-         style="opacity:0.20258622;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 600,574.094 20,0 40,-40 20,0"
-         id="path3963"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 600,534.094 80,0"
-         id="path3965"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cc" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3967"
-         d="m 600,534.094 20,0 16.46056,16.46056"
-         style="opacity:0.19827588;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         sodipodi:nodetypes="ccc" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3969"
-         d="m 600,574.094 80,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         sodipodi:nodetypes="cc" />
-      <path
-         sodipodi:nodetypes="ccc"
-         style="opacity:0.19827588;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 680,574.094 -20,0 -16.46056,-16.46056"
-         id="path3973"
-         inkscape:connector-curvature="0" />
-    </symbol>
-    <symbol
-       id="dblxovr_0deg_reverse"
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
-      <path
-         transform="translate(0,3.979257)"
-         inkscape:connector-curvature="0"
-         id="path3953"
-         d="m 600,570.11475 20,0 40,-40 20,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="path3959"
-         d="m 600,574.094 80,0"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         sodipodi:nodetypes="cccc"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 600,534.094 20,0 40,40 20,0"
-         id="path3955"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="cc"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 600,534.094 80,0"
-         id="path3961"
-         inkscape:connector-curvature="0" />
-    </symbol>
-    <symbol
-       id="dblxovr_45deg_normal"
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
-      <path
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 740,594.094 0,25"
-         id="path3916"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cc" />
-      <path
-         sodipodi:nodetypes="cc"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 710,624.094 60,0"
-         id="path3918"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 720,574.094 70,70"
-         id="path3920"
-         inkscape:connector-curvature="0" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3922"
-         d="m 690,604.094 70,70"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="path3924"
-         d="m 740,629.094 0,25"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-    </symbol>
-    <symbol
-       id="dblxovr_45deg_reverse"
-       onclick="toggleTurnout(evt.currentTarget.correspondingUseElement.id)">
-      <path
-         sodipodi:nodetypes="cccc"
-         inkscape:connector-curvature="0"
-         id="path3122"
-         d="m 720,574.094 20,20 0,60 20,20"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3124"
-         d="m 690,604.094 20,20 60,0 20,20"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         inkscape:connector-curvature="0"
-         id="path3912"
-         d="m 720,574.094 70,70"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      <path
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 690,604.094 70,70"
-         id="path3914"
-         inkscape:connector-curvature="0" />
-    </symbol>
+    </marker>
   </defs>
   <sodipodi:namedview
      id="base"
