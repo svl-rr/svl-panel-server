@@ -1,12 +1,12 @@
 function panelInitNorth(evt)
 {
-    var panelTurnout = getPanelTurnoutFromElemID("TO725A.N");
+    var pathArray = ["TO725A.N", "TO725B.N"];
 
-    if(panelTurnout != null)
-        panelTurnout.allowMultipleNormalAuthorizations = true;
-    
-    panelTurnout = getPanelTurnoutFromElemID("TO725B.N");
-    
-    if(panelTurnout != null)
-        panelTurnout.allowMultipleNormalAuthorizations = true;
+    for(var i in pathArray)
+    {
+        var panelTurnout = getPanelTurnoutFromElemID(pathArray[i]);
+
+        if(panelTurnout != null)
+            panelTurnout.allowMultipleNormalAuthorizations = true;
+    }
 }
