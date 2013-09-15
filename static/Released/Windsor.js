@@ -1,188 +1,83 @@
 function panelInit(evt)
 {
-    createPanelTurnout("TO980", false);
-	createPanelTurnout("TO982A", true);
-	createPanelTurnout("TO982B", false);
-	createPanelTurnout("TO984A", false);
-	createPanelTurnout("TO984B", false);
-	createPanelTurnout("TO986A", false);
-	createPanelTurnout("TO986B", false);
-	createPanelTurnout("TO989", false);
-	createPanelTurnout("TO990A", true);
-	createPanelTurnout("TO990B", true);
-	createPanelTurnout("TO992A", true);
-	createPanelTurnout("TO992B", true);
-	createPanelTurnout("TO993", false);
 }
 
 function track1Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'R');
-	addTurnoutStateChangeRequest("TO982B", 'N');
-    addTurnoutStateChangeRequest("TO984B", 'N');
-    addTurnoutStateChangeRequest("TO986B", 'N');
-    addTurnoutStateChangeRequest("TO990B", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.R", "TO982B.N", "TO984B.N", "TO986B.N", "TO990B.R"]);
 }
 
 function track2Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'R');
-	addTurnoutStateChangeRequest("TO982B", 'N');
-    addTurnoutStateChangeRequest("TO984B", 'N');
-    addTurnoutStateChangeRequest("TO986B", 'N');
-    addTurnoutStateChangeRequest("TO990B", 'N');
-    
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.R", "TO982B.N", "TO984B.N", "TO986B.N", "TO990B.N"]);
 }
 
 function track3Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'R');
-	addTurnoutStateChangeRequest("TO982B", 'N');
-    addTurnoutStateChangeRequest("TO984B", 'N');
-    addTurnoutStateChangeRequest("TO986B", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.R", "TO982B.N", "TO984B.N", "TO986B.R"]);
 }
 
 function track4Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'R');
-	addTurnoutStateChangeRequest("TO982B", 'N');
-    addTurnoutStateChangeRequest("TO984B", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.R", "TO982B.N", "TO984B.R"]);
 }
 
 function track5Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'R');
-	addTurnoutStateChangeRequest("TO982B", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.R", "TO982B.R"]);
 }
 
 function track6Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.R"]);
 }
 
 function track7Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'N');
-	addTurnoutStateChangeRequest("TO984A", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.N", "TO984A.R"]);
 }
 
 function track8Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'N');
-	addTurnoutStateChangeRequest("TO984A", 'N');
-	addTurnoutStateChangeRequest("TO986A", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.N", "TO984A.N", "TO986A.R"]);
 }
 
 function track9Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'N');
-	addTurnoutStateChangeRequest("TO984A", 'N');
-	addTurnoutStateChangeRequest("TO986A", 'N');
-	addTurnoutStateChangeRequest("TO990A", 'N');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.N", "TO984A.N", "TO986A.N", "TO990A.N"]);
 }
 
 function track10Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'N');
-	addTurnoutStateChangeRequest("TO984A", 'N');
-	addTurnoutStateChangeRequest("TO986A", 'N');
-	addTurnoutStateChangeRequest("TO990A", 'R');
-	addTurnoutStateChangeRequest("TO989", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.N", "TO984A.N", "TO986A.N", "TO990A.R", "TO989.R"]);
 }
 
 function track11Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'N');
-	addTurnoutStateChangeRequest("TO984A", 'N');
-	addTurnoutStateChangeRequest("TO986A", 'N');
-	addTurnoutStateChangeRequest("TO990A", 'R');
-	addTurnoutStateChangeRequest("TO989", 'N');
-	addTurnoutStateChangeRequest("TO992B", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.N", "TO984A.N", "TO986A.N", "TO990A.R", "TO989.N", "TO992B.R"]);
 }
 
 function track12Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'N');
-	addTurnoutStateChangeRequest("TO984A", 'N');
-	addTurnoutStateChangeRequest("TO986A", 'N');
-	addTurnoutStateChangeRequest("TO990A", 'R');
-	addTurnoutStateChangeRequest("TO989", 'N');
-	addTurnoutStateChangeRequest("TO992B", 'N');
-	addTurnoutStateChangeRequest("TO993", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.N", "TO984A.N", "TO986A.N", "TO990A.R", "TO989.N", "TO992B.N", "TO993.R"]);
 }
 
 function track13Path()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'N');
-	addTurnoutStateChangeRequest("TO984A", 'N');
-	addTurnoutStateChangeRequest("TO986A", 'N');
-	addTurnoutStateChangeRequest("TO990A", 'R');
-	addTurnoutStateChangeRequest("TO989", 'N');
-	addTurnoutStateChangeRequest("TO992B", 'N');
-	addTurnoutStateChangeRequest("TO993", 'N');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.N", "TO984A.N", "TO986A.N", "TO990A.R", "TO989.N", "TO992B.N", "TO993.N"]);
 }
 
 function track14Path()
 {
-	addTurnoutStateChangeRequest("TO992A", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO992A.R"]);
 }
 
 function track11LeadPath()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'N');
-	addTurnoutStateChangeRequest("TO984A", 'N');
-	addTurnoutStateChangeRequest("TO986A", 'N');
-	addTurnoutStateChangeRequest("TO990A", 'R');
-	addTurnoutStateChangeRequest("TO989", 'N');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.N", "TO984A.N", "TO986A.N", "TO990A.R", "TO989.N"]);
 }
 
 function track12LeadPath()
 {
-	addTurnoutStateChangeRequest("TO980", 'N');
-	addTurnoutStateChangeRequest("TO982A", 'N');
-	addTurnoutStateChangeRequest("TO984A", 'N');
-	addTurnoutStateChangeRequest("TO986A", 'N');
-	addTurnoutStateChangeRequest("TO990A", 'R');
-	addTurnoutStateChangeRequest("TO989", 'N');
-	addTurnoutStateChangeRequest("TO992B", 'N');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO980.N", "TO982A.N", "TO984A.N", "TO986A.N", "TO990A.R", "TO989.N", "TO992B.N"]);
 }

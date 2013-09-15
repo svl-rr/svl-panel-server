@@ -33,6 +33,8 @@ var stateChangeRequests = new Array();
 var blocksOnPanel = new Array();
 //var signalsOnPanel = new Array();
 
+var turnoutOnclickScript = "turnoutSegmentClicked(evt.currentTarget.id)";
+
 // Object types we can send to the server
 var SERVER_TYPE_TURNOUT = "turnout";
 var SERVER_TYPE_DISPATCH = "dispatch";
@@ -43,28 +45,111 @@ var SERVER_NAME_MAINLINELOCKED = "Mainline Locked";
 
 var connectedBackgroundColor = null;
 
+function turnoutSegmentClicked(elemID)
+{
+    if(isDispatchPanel())
+        dispatchTurnoutSegmentClicked(elemID);
+    else
+        changeTurnoutRoute(elemID, true);
+}
+
+function changeTurnoutRoute(elemID, allowToggle)
+{
+    var panelInstance = getPanelTurnoutFromElemID(elemID);
+    
+    if(panelInstance != null)
+    {
+        var turnoutID = getDCCAddrAndMotorSubAddr(elemID);
+        var turnoutRoute = getDCCAddrRoute(elemID);
+    
+        var tempStateChangeRequests = stateChangeRequests;
+    
+        stateChangeRequests = [];
+    
+        if(allowToggle && (panelInstance.getSVGState() == turnoutRoute))
+            addTurnoutStateChangeRequest(turnoutID, 'T');               // toggle turnout
+        else
+            addTurnoutStateChangeRequest(turnoutID, turnoutRoute);      // set to explicit route
+        
+        executePanelStateChangeRequests();
+        
+        stateChangeRequests = tempStateChangeRequests;
+    }
+}
+
+function isDispatchPanel()
+{
+    return (typeof dispatchInit == 'function');
+}
+
 /* PanelTurnout([String] id, [boolean] flipBit)
  * PanelTurnout object to contain id and flipbit, which is used to invert the graphic status
  */
-function PanelTurnout(id, flipBit)
+function PanelTurnout(normalRouteID, divergingRouteID)
 {
-	this.id=id;
-	this.flipBit=flipBit;
+    this.normalRouteID = normalRouteID;
+    this.divergingRouteID = divergingRouteID;
 	
-	this.getID=getID;
-	this.getFlipBit=getFlipBit;
+	this.getInstanceID=getInstanceID;
+    this.getDCCID=getDCCID;
     this.getAsServerObject= getAsServerTurnoutObject;
+    this.getSVGState=getSVGState;
+    this.setSVGState=setSVGState;
+    this.doesTurnoutAllowMultipleAuthorizations=doesTurnoutAllowMultipleAuthorizations;
+    this.allowMultipleNormalAuthorizations = false;
+    this.allowMultipleReverseAuthorizations = false;
     
-    var useElem = svgDocument.getElementById(id);
+    this.successfullyCreated = false;
+    
+    var normalElem = svgDocument.getElementById(normalRouteID);
 	
-	if(useElem == null)
+	if(normalElem == null)
 	{
-		alert("Attempted to create a PanelTurnout object with ID " + id + " but no SVG object with that ID was found.");
+		alert("Attempted to create a PanelTurnout object with ID " + normalRouteID + " but no SVG object with that ID was found.");
 		return;
 	}
     
+    var divergingElem = svgDocument.getElementById(divergingRouteID);
+	
+	if(divergingElem == null)
+	{
+		alert("Attempted to create a PanelTurnout object with ID " + divergingRouteID + " but no SVG object with that ID was found.");
+		return;
+	}
+    
+    if(normalElem.parentNode != divergingElem.parentNode)
+	{
+		alert("Attempted to create a PanelTurnout object with ID " + getDCCAddrAndMotorSubAddr(normalRouteID) + " but parent nodes did not match.");
+		return;
+	}
+    
+    if(normalElem.parentNode.childElementCount != 2)
+    {
+        alert("Attempted to create a PanelTurnout object with ID " + getDCCAddrAndMotorSubAddr(normalRouteID) + " but object did not appear to be grouped properly.");
+		return;
+    }
+    
+    this.successfullyCreated = true;
+    
+    checkTurnoutOnClick(normalElem);
+    checkTurnoutOnClick(divergingElem);
+    checkOpacity(normalElem.parentNode);
+    
     // Make sure title element matches the object ID
-    addElementTitle(id, id);
+    addElementTitle(normalRouteID, normalRouteID);
+    addElementTitle(divergingRouteID, divergingRouteID);
+        
+    for(var i in turnoutsOnPanel)
+    {
+        var prevPanel = turnoutsOnPanel[i];
+        
+        if(prevPanel.getDCCID() == this.getDCCID())
+        {
+            var lec = svgDocument.getElementById(prevPanel.divergingRouteID).parentNode.lastElementChild;
+            if(getDCCAddrRoute(divergingElem.parentNode.lastElementChild.id) != getDCCAddrRoute(lec.id))
+                alert("Turnout instances with DCC addr " + getDCCAddr(divergingRouteID) + " do not have a consistent initial condition. This has been updated during runtime but should be fixed in svg file. ")
+        }
+    }
     
     /*if(console != undefined)
     {
@@ -74,21 +159,140 @@ function PanelTurnout(id, flipBit)
     }*/
 }
 
-
-/* [String] getID()
- * Return id field of PanelTurnout
- */
-function getID()
+function doesTurnoutAllowMultipleAuthorizations(elemID)
 {
-	return this.id;
+    return (getDCCAddrRoute(elemID) == 'R' ? this.allowMultipleReverseAuthorizations : this.allowMultipleNormalAuthorizations);
 }
 
-/* [boolean] getFlipBit()
- * Return getFlipBit field of PanelTurnout
- */
-function getFlipBit()
+function checkTurnoutOnClick(elem)
+{    
+    if(elem == null)
+    {
+        alert("Bad element passed to checkOnClick");
+        return;
+    }
+    
+    var attrib = elem.getAttribute("onclick");
+    if((attrib == null) || (attrib != turnoutOnclickScript))
+    {
+        alert("Element " + elem.id + " does not have a proper onclick setting. This has been updated during runtime but should be fixed in svg file.");
+        elem.setAttribute("onclick", turnoutOnclickScript);
+    }
+    
+    setStyleSubAttribute(elem, "cursor", "pointer");
+}
+
+function checkOpacity(parentElem)
 {
-	return this.flipBit;
+    if((parentElem == null) || (parentElem.firstElementChild == null) || (parentElem.lastElementChild == null))
+    {
+        alert("checkOpacity was passed a null parent element or an element without the two expected children elements.");
+        return;
+    }
+    
+    var attrib = getStyleSubAttribute(parentElem.firstElementChild, "opacity");
+    
+    if((attrib == null) || (attrib != "0.25"))
+    {
+        alert("Element " + parentElem.firstElementChild.id + " does not have a proper opacity setting of 0.25 (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
+    }
+    
+    attrib = getStyleSubAttribute(parentElem.lastElementChild, "opacity");
+    
+    if((attrib != null) && (attrib != "1"))
+    {
+        alert("Element " + parentElem.lastElementChild.id + " does not have a proper opacity setting of 1 (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
+    }
+}
+
+function getSVGState()
+{
+	var normalElem = svgDocument.getElementById(this.normalRouteID);
+    
+    if(normalElem != null)
+    {
+        var parent = normalElem.parentNode;
+        
+        if(parent.lastElementChild.id == this.normalRouteID)
+            return 'N';
+        else if(parent.lastElementChild.id == this.divergingRouteID)
+            return 'R';
+    }
+    
+    return null;
+}
+
+function setSVGState(newRoute)
+{    
+    var normalElem = svgDocument.getElementById(this.normalRouteID);
+    var divergingElem = svgDocument.getElementById(this.divergingRouteID);
+    
+    if(normalElem != null)
+    {
+        var parent = normalElem.parentNode;
+        
+        if((newRoute == 'N') || (newRoute == 'n'))
+        {
+            // Set normal to full opacity
+            setStyleSubAttribute(normalElem, "opacity", "1.0");
+            parent.appendChild(normalElem);
+            
+            // Set diverging to reduced opacity
+            setStyleSubAttribute(divergingElem, "opacity", "0.25");
+        }
+        else if((newRoute == 'R') || (newRoute == 'r'))
+        {
+            // Set diverging to full opacity
+            setStyleSubAttribute(divergingElem, "opacity", "1.0");
+            parent.appendChild(divergingElem);
+            
+            // Set normal to reduced opacity
+            setStyleSubAttribute(normalElem, "opacity", "0.25");
+        }
+        else
+            alert("Bad route passed to setSVGState on turnout instance " + this.getInstanceID());
+    }
+    
+    return null;
+}
+
+function getPanelTurnoutFromElemID(elemID)
+{
+    for(var i in turnoutsOnPanel)
+    {
+        var turnoutInstance = turnoutsOnPanel[i];
+        
+        if((turnoutInstance.normalRouteID == elemID) || (turnoutInstance.divergingRouteID == elemID))
+            return turnoutInstance;
+    }
+    
+    return null;
+}
+
+function getPanelTurnoutFromDCCAddr(dccAddr)
+{
+    for(var i in turnoutsOnPanel)
+    {
+        var turnoutInstance = turnoutsOnPanel[i];
+        
+        if(turnoutInstance.getDCCID() == dccAddr)
+            return turnoutInstance;
+    }
+    
+    return null;
+}
+
+/* [String] getInstanceID()
+ * Return id field of PanelTurnout
+ */
+function getInstanceID()
+{
+	return getDCCAddrAndMotorSubAddr(this.normalRouteID);
+}
+
+function getDCCID()
+{
+	return getDCCAddr(this.normalRouteID);
 }
 
 /* [ServerObject] getAsServerTurnoutObject()
@@ -96,7 +300,7 @@ function getFlipBit()
  */
 function getAsServerTurnoutObject()
 {
-    var turnoutAddr = getDCCAddr(this.id);
+    var turnoutAddr = this.getDCCID();
     
     return new ServerObject(JMRI_TURNOUT_OBJID_PREFIX + turnoutAddr, SERVER_TYPE_TURNOUT, getTurnoutState(turnoutAddr));
 }
@@ -129,14 +333,38 @@ function getAsServerSensorObject()
     return new ServerObject(JMRI_SENSOR_OBJID_PREFIX + sensorAddr, SERVER_TYPE_SENSOR, null);
 }
 
-/* createPanelTurnout([String] id, [boolean] flipBit)
+/* createPanelTurnout([String] normalRouteElemID, [String] divergingRouteElemID)
  * Creates a new PanelTurnout object and pushes it on to the array of turnouts used by this panel
- *
- * Panel specific code should use this method to create it's list of turnouts
  */
-function createPanelTurnout(id, flipBit)
+function createPanelTurnout(normalRouteElemID, divergingRouteElemID)
 {
-	turnoutsOnPanel.push(new PanelTurnout(id, flipBit));
+    var panelTurnout = new PanelTurnout(normalRouteElemID, divergingRouteElemID);
+    
+    if(panelTurnout.successfullyCreated == true)
+        turnoutsOnPanel.push(panelTurnout);
+}
+
+/* executePathArray([Array] pathArray)
+ * Executes a (hardcoded) path where each array element is assumed to be a string that has same formatting as turnout segment IDs (TOxx[A-Z].R|N)
+ */
+
+function executePathArray(pathArray)
+{
+    if(pathArray != null)
+    {
+        for(var i in pathArray)
+        {            
+            var turnoutAddr = getDCCAddr(pathArray[i]);
+            var turnoutRoute = getDCCAddrRoute(pathArray[i]);
+            
+            if((turnoutAddr != null) && (turnoutRoute != null))
+                addTurnoutStateChangeRequest(turnoutAddr, turnoutRoute);
+            else
+                alert("A bad turnout id (" + turnoutAddr + ") or route (" + turnoutRoute + ") was passed to executePathArray.");
+        }
+        
+        executePanelStateChangeRequests();
+    }
 }
 
 /* addTurnoutStateChangeRequest([String] id, [string] state)
@@ -183,21 +411,67 @@ function init(evt)
     if(panelSVGTextTitle != null)
         setPanelDocumentTitle(panelSVGTextTitle);
     
+    var groupItems = svgDocument.getElementsByTagName("g");
+    
+    for(var i = 0; i < groupItems.length; i++)
+    {
+        var elem = groupItems[i];
+        
+        if(elem.childElementCount == 2)
+        {
+            if((elem.firstElementChild.nodeName == "path") && (elem.lastElementChild.nodeName == "path"))
+            {
+                var id1 = elem.firstElementChild.id;
+                var id2 = elem.lastElementChild.id;
+                
+                if(id1.length == id2.length)
+                {
+                    var base1 = id1.substring(0, id1.length - 1);
+                    var base2 = id2.substring(0, id2.length - 1);
+                    
+                    if((base1 == base2) && (base1.search("TO[\\d]+[A-M]*[.]*") == 0))
+                    {
+                        var id1route = getDCCAddrRoute(id1);
+                        var id2route = getDCCAddrRoute(id2);
+                        
+                        // Unswizzle the routes
+                        if(((id1route == 'R') || (id1route == 'r')) && ((id2route == 'N') || (id2route == 'n')))
+                        {                            
+                            // Add the turnout to the list of known turnouts
+                            createPanelTurnout(id2, id1);
+                        }
+                        else if(((id1route == 'N') || (id1route == 'n')) && ((id2route == 'R') || (id2route == 'r')))
+                        {
+                            // Add the turnout to the list of known turnouts
+                            createPanelTurnout(id1, id2);
+                        }
+                        else
+                        {
+                            alert("Found an element that looked at lot like a turnout object but the routes did not match N or R");
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
     var pathItems = svgDocument.getElementsByTagName("path");
     
     for(var i = 0; i < pathItems.length; i++)
     {
         var elem = pathItems[i];
         
-        if(elem.getAttribute('onclick') != null)
+        var pathOnClick = elem.getAttribute('onclick');
+        
+        if((pathOnClick != null) && (pathOnClick != "") && (pathOnClick != turnoutOnclickScript))
         {
             setStyleSubAttribute(elem, "cursor", "pointer");
         }
 
-	if(elem.id.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 1)
+        if(elem.id.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 1)
         {
             //setStyleSubAttribute(elem, "cursor", "crosshair");
-	    blocksOnPanel.push(new BlockSensor(elem.id));
+            //blocksOnPanel.push(new BlockSensor(elem.id));
         }
     }
     
@@ -212,7 +486,7 @@ function init(evt)
 	}
 
     // Allow dispatch panels to initialize themselves
-    if(typeof dispatchInit == 'function')
+    if(isDispatchPanel())
 		dispatchInit(evt);
     
     var panelBackground = svgDocument.getElementById("panelBackground");
@@ -269,9 +543,9 @@ function handleSocketDataResponse(dataArray)
             {
                 // do nothing if panelSpecificSetState returned true (i.e. it handled the object)
             }
-            else if((typeof setDispatchState == 'function') && setDispatchState(dataArray[i]))
+            else if((typeof setDispatchObject == 'function') && setDispatchObject(dataArray[i]))
             {
-                // do nothing if setDispatchState returned true (i.e. it handled the object)
+                // do nothing if setDispatchObject returned true (i.e. it handled the object)
             }
             else if((dataArray[i].type == SERVER_TYPE_DISPATCH) && (dataArray[i].name == SERVER_NAME_MAINLINELOCKED))
             {
@@ -279,7 +553,7 @@ function handleSocketDataResponse(dataArray)
             }
             else if(dataArray[i].type == SERVER_TYPE_TURNOUT)
                 setTurnoutState(dataArray[i].name, dataArray[i].value);
-            else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setDispatchState != 'function'))
+            else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setDispatchObject != 'function'))
             {
                 // setSensorState(dataArray[i].name, dataArray[i].value);
             }
@@ -301,9 +575,9 @@ function handleSocketDataResponse(dataArray)
             {
                 if(dataArray[i].name == SERVER_NAME_MAINLINELOCKED)
                     undefinedItemsToUpdate.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, mainlineLocked));
-                else if(typeof getDispatchState == 'function')
+                else if(typeof getDispatchObject == 'function')
                 {
-                    var dispatchState = getDispatchState(dataArray[i]);
+                    var dispatchState = getDispatchObject(dataArray[i]);
                     if(dispatchState != undefined)
                         undefinedItemsToUpdate.push(dispatchState);
                 }
@@ -385,8 +659,14 @@ function executePanelStateChangeRequestsLowLevel(setArray, honorMainlineLock)
                 // Make sure panel is not locked.  If it is, don't allow set to go out to server
                 if(honorMainlineLock)
                 {
-                    if(!isMainlineTurnout(findTurnoutSVGElement(scr.name)) || !mainlineLocked)
-                        serverSetArray.push(scr);
+                    var turnoutInstance = getPanelTurnoutFromDCCAddr(getDCCAddr(scr.name));
+                    
+                    if(turnoutInstance != null)
+                    {
+                        var routeElem = svgDocument.getElementById(turnoutInstance.normalRouteID);
+                        if(!isMainlineTurnout(routeElem) || !mainlineLocked)
+                            serverSetArray.push(scr);
+                    }
                 }
                 else
                     serverSetArray.push(scr);
@@ -467,20 +747,6 @@ function updateAllObjectsFromServer()
     serverGet(getPanelObjectsToUpdate());
 }
 
-/* getTurnout([String] id)
- * Searches turnouts on the panel and returns the PanelTurnout with the provided id. Returns null if the id was not found
- */
-function getTurnout(id)
-{
-	for(var i in turnoutsOnPanel)
-	{
-		if(turnoutsOnPanel[i].getID() == id)
-			return turnoutsOnPanel[i];
-	}
-	
-	return null;
-}
-
 /* setTurnoutState([String] useElemID, [String] routeText)
  * Finds an SVG element (presumed to be an SVGUseElement) with the useElemID and sets the xlink:href attribute to match
  * the corresponding selected route (normal or reverse).  This is a high-level call in that it will set the
@@ -491,31 +757,15 @@ function getTurnout(id)
  */
 function setTurnoutState(useElemID, routeText)
 {
-	var setNormal = true;
-	
-	if((routeText == "N") || (routeText == "n"))
-		setNormal = true;
-	else if((routeText == "R") || (routeText == "r"))
-		setNormal = false;
-	else
-	{
-		setPanelError("Bad route parameter passed to setTurnoutState(" + useElemID + ", " + routeText + ")");
-		return;
-	}
-		
-    var turnoutAddr = PANEL_TURNOUT_OBJID_PREFIX + getDCCAddr(useElemID);
+    var dccAddr = getDCCAddr(useElemID);
     
-	setTurnoutSVGLowLevel(turnoutAddr, setNormal);
-	
-    // Attempt to set all motors A-Z
-	var nextMotor = 'A';
-	setTurnoutSVGLowLevel(turnoutAddr + nextMotor, setNormal);
-	while(nextMotor != 'Z')
-	{		
-		nextMotor = String.fromCharCode(nextMotor.charCodeAt(0) + 1);
-		
-		setTurnoutSVGLowLevel(turnoutAddr + nextMotor, setNormal);
-	}
+    for(var i in turnoutsOnPanel)
+    {
+        var turnoutInstance = turnoutsOnPanel[i];
+        
+        if(turnoutInstance.getDCCID() == dccAddr)
+            turnoutInstance.setSVGState(routeText);
+    }
 }
 
 /* [String] getTurnoutState([String] useElemID)
@@ -523,154 +773,16 @@ function setTurnoutState(useElemID, routeText)
  * or reverse) based upon the xlink:href attribute being utilized by the SVGUseElement.  It does NOT query a server for
  * turnout state. Returns null if the useElemID could not be found.
  */
-function getTurnoutState(useElemID)
-{
-	var useElem = findTurnoutSVGElement(useElemID);
-	
-    if(useElem != null)
+function getTurnoutState(dccAddr)
+{	
+    var panelTurnout = getPanelTurnoutFromDCCAddr(getDCCAddr(dccAddr));
+    
+    if(panelTurnout != null)
     {
-        var turnout = getTurnout(useElem.id);
-	
-        if(turnout != null)
-        {
-            var currentImg = getTurnoutHREFImage(useElem);
-            
-            // turnout states
-            if(currentImg.search("normal") != -1)
-                return turnout.getFlipBit() ? 'R' : 'N';
-            else if(currentImg.search("reverse") != -1)
-                return turnout.getFlipBit() ? 'N' : 'R';
-        }
+        return panelTurnout.getSVGState();
     }
 	
 	return null;
-}
-
-/* [SVGUseElement] findTurnoutSVGElement([String] useElemID)
- * Finds a SVG element (presumed to be an SVGUseElement associated with a turnout) with the base DCC address contained in
- * useElemID.  If that object is not found, it will attempt to find a turnout with a submotor designation (A-Z), by simply
- * appending the character to the turnout ID already tried.  Returns null if no objects found.
- */
-function findTurnoutSVGElement(useElemID)
-{
-    var turnoutAddr = PANEL_TURNOUT_OBJID_PREFIX + getDCCAddr(useElemID);
-
-	var useElem = svgDocument.getElementById(turnoutAddr);
-	
-    // If base address not found, attempt to find an element id with A-Z appended
-    var nextMotor = 'A';
-	while(useElem == null)
-	{		
-		useElem = svgDocument.getElementById(turnoutAddr + nextMotor);
-        
-        if(nextMotor == 'Z')
-            break;
-        else
-            nextMotor = String.fromCharCode(nextMotor.charCodeAt(0) + 1);
-	}
-    
-    return useElem;
-}
-
-/* [boolean] setTurnoutSVGLowLevel([String] useElemID, [boolean] setNormal)
- * Finds an SVG element (presumed to be an SVGUseElement) with the useElemID and sets the xlink:href attribute to match
- * the corresponding selected route (normal or reverse).  This is a low-level call in that it will set the
- * xlink:href attribute on only the SVGUseElement whose ID is an exact match with useElemID. Returns true if the useElemID
- * object was found or false if not.
- */
-function setTurnoutSVGLowLevel(useElemID, setNormal)
-{
-	var useElem = svgDocument.getElementById(useElemID);
-	var turnout = getTurnout(useElemID);
-	
-	if((useElem != null) && (turnout != null))
-	{
-		if(turnout.getFlipBit() == true)
-			setNormal = !setNormal;
-		
-		var currentImg = getTurnoutHREFImage(useElem);
-		
-		if(currentImg.search("turnout_0deg") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#turnout_0deg_normal");
-			else
-				setTurnoutHREFImage(useElem, "#turnout_0deg_reverse");
-		}
-		else if(currentImg.search("turnout_45deg") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#turnout_45deg_normal");
-			else
-				setTurnoutHREFImage(useElem, "#turnout_45deg_reverse");
-		}
-		else if(currentImg.search("ds_") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#ds_normal");
-			else
-				setTurnoutHREFImage(useElem, "#ds_reverse");
-		}
-		else if(currentImg.search("dblxovr_0deg") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#dblxovr_0deg_normal");
-			else
-				setTurnoutHREFImage(useElem, "#dblxovr_0deg_reverse");
-		}
-		else if(currentImg.search("dblxovr_45deg") != -1)
-		{
-			if(setNormal)
-				setTurnoutHREFImage(useElem, "#dblxovr_45deg_normal");
-			else
-				setTurnoutHREFImage(useElem, "#dblxovr_45deg_reverse");
-		}
-		
-		return true;
-	}
-	
-	return false;
-}
-
-/* [String] getTurnoutHREFImage([SVGUseElement] useElem)
- * Returns the xlink:href attribute of the SVGUseElement passed in.
- */
-function getTurnoutHREFImage(useElem)
-{
-	return useElem.getAttributeNS(xlinkns, hrefAttrib);
-}
-
-/* setTurnoutHREFImage([SVGUseElement] useElem, [String] imageToUse)
- * Sets the xlink:href attribute of the SVGUseElement provided.
- */
-function setTurnoutHREFImage(useElem, imageToUse)
-{	
-	useElem.setAttributeNS(xlinkns, hrefAttrib, imageToUse);
-	
-	setPanelStatus(useElem.id + " was set to " + imageToUse);
-}
-
-/* toggleTurnout([String] useElemID)
- * Creates a turnout state request object and adds it to the change request queue.  Queue (having only the single entry)
- * is then executed. SVG symbol definition uses this function as the default onclick function for when the user clicks
- * a single turnout element on the panel.
- */
-function toggleTurnout(useElemID)
-{
-	var initialState = getTurnoutState(useElemID);
-	
-    if(initialState != null)
-    {        
-        addTurnoutStateChangeRequest(useElemID, 'T');
-        executePanelStateChangeRequests();
-	
-        if((socketStatus == SOCKET_DISCONNECTED) || !enableServerAccesses)
-            setPanelStatus(useElemID + " was toggled from " + initialState + " to " + getTurnoutState(useElemID));
-        else
-            setPanelStatus(useElemID + " sent toggle request from " + initialState + " to " + (initialState == 'N' ? 'R' : 'N'));
-    }
-    else
-        setPanelStatus("Attempt to toggle turnout " + useElemID + " failed because it could not be found.");
 }
 
 /* [Array] getAllObjectsOfTagNameAndID([String] matchTagName, [String] matchID)
@@ -952,10 +1064,19 @@ function addElementTitle(elemID, title)
     if(titleObj != null)
         setElementTitle(titleObj, title);
     else
-    {
-        alert("You found a bug! Well, incomplete code really. Have SVG document author add a title element to avoid this issue. ObjID: " + elemID);
+    {        
+        // Create the title element on the fly here.
+        var elem = svgDocument.getElementById(elemID);
+    
+        if(elem != null)
+        {
+            var titleElem = svgDocument.createElementNS(xmlns, "title");
+            var textNode = svgDocument.createTextNode(title);
+
+            titleElem.appendChild(textNode);
         
-        // figure out how to create the title element on the fly here.
+            elem.insertBefore(titleElem, elem.firstChild);
+        }
     }    
 }
 
@@ -1085,9 +1206,63 @@ function getPanelObjType(objID)
 function getDCCAddrAndMotorSubAddr(objID)
 {
 	var position = objID.search("[0-9]");
-	
-	if(position != -1)
+	var positionOfDot = objID.search("[.]");
+    
+	if((position != -1) && (positionOfDot == -1))
+    {
+        var lastChar = objID.substring(objID.length-1);
+        if((lastChar == 'R') || (lastChar == 'r') || (lastChar == 'N') || (lastChar == 'n'))
+            return objID.substring(position, objID.length-1);
+        
 		return objID.substring(position);
+    }
+    
+	if((position != -1) && (positionOfDot != -1))
+        return objID.substring(position, positionOfDot);
+	
+	return null;
+}
+
+function getDCCAddrRoute(objID)
+{
+	var positionOfDot = objID.search("[.]");
+    
+    if(positionOfDot != -1)
+    {
+        var route = objID.substring(positionOfDot+1);
+        
+        if((route == 'R') || (route == 'r'))
+            return 'R';
+        
+        if((route == 'N') || (route == 'n'))
+            return 'N';
+        
+        if((route == 'T') || (route == 't'))
+            return 'T';
+    }
+    else
+    {
+        var dccMotorAddr = getDCCAddrAndMotorSubAddr(objID);
+        
+        if(dccMotorAddr != null)
+        {
+            var position = objID.search(dccMotorAddr);
+        
+            if(position != -1)
+            {
+                var route = objID.substring(position + dccMotorAddr.length);
+                
+                if((route == 'R') || (route == 'r'))
+                    return 'R';
+                
+                if((route == 'N') || (route == 'n'))
+                    return 'N';
+                
+                if((route == 'T') || (route == 't'))
+                    return 't';
+            }
+        }
+    }
 	
 	return null;
 }
