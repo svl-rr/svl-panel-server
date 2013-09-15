@@ -50,10 +50,10 @@ function turnoutSegmentClicked(elemID)
     if(isDispatchPanel())
         dispatchTurnoutSegmentClicked(elemID);
     else
-        changeTurnoutRoute(elemID);
+        changeTurnoutRoute(elemID, true);
 }
 
-function changeTurnoutRoute(elemID)
+function changeTurnoutRoute(elemID, allowToggle)
 {
     var panelInstance = getPanelTurnoutFromElemID(elemID);
     
@@ -66,7 +66,7 @@ function changeTurnoutRoute(elemID)
     
         stateChangeRequests = [];
     
-        if(panelInstance.getSVGState() == turnoutRoute)
+        if(allowToggle && (panelInstance.getSVGState() == turnoutRoute))
             addTurnoutStateChangeRequest(turnoutID, 'T');               // toggle turnout
         else
             addTurnoutStateChangeRequest(turnoutID, turnoutRoute);      // set to explicit route
@@ -95,6 +95,9 @@ function PanelTurnout(normalRouteID, divergingRouteID)
     this.getAsServerObject= getAsServerTurnoutObject;
     this.getSVGState=getSVGState;
     this.setSVGState=setSVGState;
+    this.doesTurnoutAllowMultipleAuthorizations=doesTurnoutAllowMultipleAuthorizations;
+    this.allowMultipleNormalAuthorizations = false;
+    this.allowMultipleReverseAuthorizations = false;
     
     this.successfullyCreated = false;
     
@@ -154,6 +157,11 @@ function PanelTurnout(normalRouteID, divergingRouteID)
         console.warn("Krikey: a warning: " + id);
         console.error("jeepers an error");
     }*/
+}
+
+function doesTurnoutAllowMultipleAuthorizations(elemID)
+{
+    return (getDCCAddrRoute(elemID) == 'R' ? this.allowMultipleReverseAuthorizations : this.allowMultipleNormalAuthorizations);
 }
 
 function checkTurnoutOnClick(elem)
@@ -535,9 +543,9 @@ function handleSocketDataResponse(dataArray)
             {
                 // do nothing if panelSpecificSetState returned true (i.e. it handled the object)
             }
-            else if((typeof setDispatchState == 'function') && setDispatchState(dataArray[i]))
+            else if((typeof setDispatchObject == 'function') && setDispatchObject(dataArray[i]))
             {
-                // do nothing if setDispatchState returned true (i.e. it handled the object)
+                // do nothing if setDispatchObject returned true (i.e. it handled the object)
             }
             else if((dataArray[i].type == SERVER_TYPE_DISPATCH) && (dataArray[i].name == SERVER_NAME_MAINLINELOCKED))
             {
@@ -545,7 +553,7 @@ function handleSocketDataResponse(dataArray)
             }
             else if(dataArray[i].type == SERVER_TYPE_TURNOUT)
                 setTurnoutState(dataArray[i].name, dataArray[i].value);
-            else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setDispatchState != 'function'))
+            else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setDispatchObject != 'function'))
             {
                 // setSensorState(dataArray[i].name, dataArray[i].value);
             }
@@ -567,9 +575,9 @@ function handleSocketDataResponse(dataArray)
             {
                 if(dataArray[i].name == SERVER_NAME_MAINLINELOCKED)
                     undefinedItemsToUpdate.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, mainlineLocked));
-                else if(typeof getDispatchState == 'function')
+                else if(typeof getDispatchObject == 'function')
                 {
-                    var dispatchState = getDispatchState(dataArray[i]);
+                    var dispatchState = getDispatchObject(dataArray[i]);
                     if(dispatchState != undefined)
                         undefinedItemsToUpdate.push(dispatchState);
                 }
