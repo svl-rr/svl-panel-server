@@ -1,225 +1,113 @@
 function panelInit(evt)
 {
-	createPanelTurnout("TO35", true);
-	createPanelTurnout("TO36", true);
-	createPanelTurnout("TO37", true);
-	createPanelTurnout("TO38", true);
-	createPanelTurnout("TO24", false);
-	createPanelTurnout("TO23A", true);
-	createPanelTurnout("TO23B", true);
-	createPanelTurnout("TO34", true);
-	createPanelTurnout("TO22", true);
-//	createPanelTurnout("TO908A", true);  // not hooked up
-//	createPanelTurnout("TO908B", true);  // not hooked up
-//	createPanelTurnout("TO909", true);  // not hooked up
-	createPanelTurnout("TO26A", true);
-	createPanelTurnout("TO26B", true);
-	createPanelTurnout("TO27A", true);
-	createPanelTurnout("TO27B", true);
-	createPanelTurnout("TO28", true);
-	createPanelTurnout("TO29", true);
-	createPanelTurnout("TO30", true);
-    createPanelTurnout("TO31", true);
-	createPanelTurnout("TO32", true);
-	createPanelTurnout("TO33", true);
-	createPanelTurnout("TO42", true);
-	createPanelTurnout("TO41", true);
-	createPanelTurnout("TO39", true);
-	createPanelTurnout("TO40", true);
-//	createPanelTurnout("TO25", true);
 }
 
 function mainSouthLeadPath()
 {
-    addTurnoutStateChangeRequest("TO35", 'N');
-    addTurnoutStateChangeRequest("TO24", 'N');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO35.N", "TO24.N"]);
 }
 
 function mainSouthPath()
 {
-    addTurnoutStateChangeRequest("TO23B", 'R');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO23B.R"]);
 }
 
 function cabooseTrkPath()
 {
-    addTurnoutStateChangeRequest("TO24", 'R');
-    addTurnoutStateChangeRequest("TO23B", 'T');
+    executePathArray(["TO24.R", "TO23B.T"]);
+}
 
-	executePanelStateChangeRequests();
+function arrivalSubLeadPath()
+{
+    executePathArray(["TO35.R", "TO36.N"]);
 }
 
 function arrivalLeadPath()
 {
-    addTurnoutStateChangeRequest("TO35", 'R');
-    addTurnoutStateChangeRequest("TO36", 'N');
-    addTurnoutStateChangeRequest("TO38", 'R');
-    addTurnoutStateChangeRequest("TO23A", 'R');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO35.R", "TO36.N", "TO38.R", "TO23A.R"]);
 }
 
 function arrivalNorthPath()
 {
-    //addTurnoutStateChangeRequest("TO23A", 'T');
-
-	//executePanelStateChangeRequests();
+    arrivalSouthPath();
 }
 
 function arrivalSouthPath()
 {
-    addTurnoutStateChangeRequest("TO34", 'R');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO34.R"]);
 }
 
 function class1NorthPath()
 {
-    addTurnoutStateChangeRequest("TO35", 'R');
-    addTurnoutStateChangeRequest("TO36", 'N');
-    addTurnoutStateChangeRequest("TO38", 'N');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO35.R", "TO36.N", "TO38.N"]);
 }
 
 function class1SouthPath()
 {
-    addTurnoutStateChangeRequest("TO34", 'N');
-    addTurnoutStateChangeRequest("TO33", 'N');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO34.N", "TO33.N"]);
 }
 
 function class2NorthPath()
 {
-    addTurnoutStateChangeRequest("TO35", 'R');
-    addTurnoutStateChangeRequest("TO36", 'R');
-    addTurnoutStateChangeRequest("TO37", 'N');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO35.R", "TO36.R", "TO37.N"]);
 }
 
 function class2SouthPath()
 {
-    addTurnoutStateChangeRequest("TO34", 'N');
-    addTurnoutStateChangeRequest("TO33", 'R');
-    addTurnoutStateChangeRequest("TO32", 'N');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO34.N", "TO33.R", "TO32.N"]);	
 }
 
 function class3NorthPath()
 {
-    addTurnoutStateChangeRequest("TO35", 'R');
-    addTurnoutStateChangeRequest("TO36", 'R');
-    addTurnoutStateChangeRequest("TO37", 'R');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO35.R", "TO36.R", "TO37.R"]);
 }
 
 function class3SouthPath()
 {
-    addTurnoutStateChangeRequest("TO34", 'N');
-    addTurnoutStateChangeRequest("TO33", 'R');
-    addTurnoutStateChangeRequest("TO32", 'R');
-    addTurnoutStateChangeRequest("TO31", 'N');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO34.N", "TO33.R", "TO32.R", "TO31.N"]);
 }
 
 function class4NorthPath()
 {
-    addTurnoutStateChangeRequest("TO39", 'R');
-    addTurnoutStateChangeRequest("TO40", 'R');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO39.R", "TO40.R"]);
 }
 
 function class4SouthPath()
 {
-    addTurnoutStateChangeRequest("TO34", 'N');
-    addTurnoutStateChangeRequest("TO33", 'R');
-    addTurnoutStateChangeRequest("TO32", 'R');
-    addTurnoutStateChangeRequest("TO31", 'R');
-    addTurnoutStateChangeRequest("TO30", 'N');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO34.N", "TO33.R", "TO32.R", "TO31.R", "TO30.N"]);
 }
 
 function class5NorthPath()
 {
-    addTurnoutStateChangeRequest("TO39", 'R');
-    addTurnoutStateChangeRequest("TO40", 'N');
-    addTurnoutStateChangeRequest("TO41", 'N');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO39.R", "TO40.N", "TO41.N"]);
 }
 
 function class5SouthPath()
 {
-    addTurnoutStateChangeRequest("TO34", 'N');
-    addTurnoutStateChangeRequest("TO33", 'R');
-    addTurnoutStateChangeRequest("TO32", 'R');
-    addTurnoutStateChangeRequest("TO31", 'R');
-    addTurnoutStateChangeRequest("TO30", 'R');
-    addTurnoutStateChangeRequest("TO29", 'N');
-    addTurnoutStateChangeRequest("TO28", 'R');
-   
-	executePanelStateChangeRequests();
+    executePathArray(["TO34.N", "TO33.R", "TO32.R", "TO31.R", "TO30.R", "TO29.N", "TO28.R"]);
 }
 
 function class6NorthPath()
 {
-    addTurnoutStateChangeRequest("TO39", 'R');
-    addTurnoutStateChangeRequest("TO40", 'N');
-    addTurnoutStateChangeRequest("TO41", 'R');
-    addTurnoutStateChangeRequest("TO42", 'N');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO39.R", "TO40.N", "TO41.R", "TO42.N"]);
 }
 
 function class6SouthPath()
 {
-    addTurnoutStateChangeRequest("TO27B", 'R');    
-
-    addTurnoutStateChangeRequest("TO34", 'N');
-    addTurnoutStateChangeRequest("TO33", 'R');
-    addTurnoutStateChangeRequest("TO32", 'R');
-    addTurnoutStateChangeRequest("TO31", 'R');
-    addTurnoutStateChangeRequest("TO30", 'R');
-    addTurnoutStateChangeRequest("TO29", 'R');
-    addTurnoutStateChangeRequest("TO28", 'N');
-   
-	executePanelStateChangeRequests();
+    executePathArray(["TO27B.R", "TO34.N", "TO33.R", "TO32.R", "TO31.R", "TO30.R", "TO29.R", "TO28.N"]);
 }
 
 function departureNorthPath()
 {
-    addTurnoutStateChangeRequest("TO39", 'R');
-    addTurnoutStateChangeRequest("TO40", 'N');
-    addTurnoutStateChangeRequest("TO41", 'R');
-    addTurnoutStateChangeRequest("TO42", 'R');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO39.R", "TO40.N", "TO41.R", "TO42.R"]);
 }
 
 function departureSouthPath()
 {
-    addTurnoutStateChangeRequest("TO26B", 'R');
-
-	executePanelStateChangeRequests();
+    executePathArray(["TO26B.R"]);
 }
 
 function mainNorthLeadPath()
 {
-    addTurnoutStateChangeRequest("TO39", 'N');
-
-	executePanelStateChangeRequests();
-}
-
-function mainNorthPath()
-{
+    executePathArray(["TO39.N", "TO25.N"]);	
 }
