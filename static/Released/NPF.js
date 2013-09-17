@@ -1,37 +1,5 @@
 function panelInit(evt)
 {
-	// Coach Yard
-    createPanelTurnout("TO467", true);
-	createPanelTurnout("TO468", true);
-	createPanelTurnout("TO470", true);
-	createPanelTurnout("TO472", true);
-	createPanelTurnout("TO474", true);
-	createPanelTurnout("TO475", true);
-
-    // South Passenger Lead
-	createPanelTurnout("TO469", true);    
-    createPanelTurnout("TO471", true);
-	createPanelTurnout("TO473A", true);
-	createPanelTurnout("TO473B", false);
-    
-    // South Mains
-	createPanelTurnout("TO492", true);
-	createPanelTurnout("TO493", true);
-	createPanelTurnout("TO494A", false);
-	
-    // North Mains
-	createPanelTurnout("TO507", true);
-	createPanelTurnout("TO508", true);
-	createPanelTurnout("TO509", true);
-	
-    // North Passenger Lead
-	createPanelTurnout("TO514A", true);
-	createPanelTurnout("TO514B", false);
-	createPanelTurnout("TO515", true);
-	createPanelTurnout("TO517", true);
-	createPanelTurnout("TO519", true);
-	createPanelTurnout("TO518", false);
-	createPanelTurnout("TO520", true);
 }
 
 function lineSouthMainsForPassenger()
@@ -48,116 +16,78 @@ function lineNorthMainsForPassenger()
 
 function main1SouthPath()
 {
-	addTurnoutStateChangeRequest("TO494A", 'N');
-	addTurnoutStateChangeRequest("TO493", 'R');
-	addTurnoutStateChangeRequest("TO492", 'N');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO494A.N", "TO493.R", "TO492.N"]);
 }
 
 function main1NorthPath()
 {
-	addTurnoutStateChangeRequest("TO508", 'N');
-	addTurnoutStateChangeRequest("TO509", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO508.N", "TO509.R"]);
 }
 
 function main2SouthPath()
 {
-	addTurnoutStateChangeRequest("TO494A", 'N');
-	addTurnoutStateChangeRequest("TO493", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO494A.N", "TO493.N"]);
 }
 
 function main2NorthPath()
 {
-	addTurnoutStateChangeRequest("TO507", 'N');
-	addTurnoutStateChangeRequest("TO508", 'R');
-	addTurnoutStateChangeRequest("TO509", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO507.N", "TO508.R", "TO509.R"]);
 }
 
 function pass1SouthPath()
 {
 	lineSouthMainsForPassenger();
 	
-	addTurnoutStateChangeRequest("TO469", 'R');
-	addTurnoutStateChangeRequest("TO471", 'R');
-	addTurnoutStateChangeRequest("TO473A", 'R');
-	
-	executePanelStateChangeRequests();
+	executePathArray(["TO469.R", "TO471.R", "TO473A.R"]);
 }
 
 function pass1NorthPath()
 {
 	pass123NorthPathToggle();
-	
-	addTurnoutStateChangeRequest("TO517", 'R');
-	addTurnoutStateChangeRequest("TO514A", 'R');
 
-	executePanelStateChangeRequests();
+	executePathArray(["TO517.R", "TO514A.R"]);
 }
 
 function pass2SouthPath()
 {
 	lineSouthMainsForPassenger();
-									
-	addTurnoutStateChangeRequest("TO469", 'R');
-	addTurnoutStateChangeRequest("TO471", 'R');
-	addTurnoutStateChangeRequest("TO473A", 'N');
 
-	executePanelStateChangeRequests();
+	executePathArray(["TO469.R", "TO471.R", "TO473A.N"]);
 }
 
 function pass2NorthPath()
 {
 	pass123NorthPathToggle();
-									
-	addTurnoutStateChangeRequest("TO517", 'R');
-	addTurnoutStateChangeRequest("TO514A", 'N');
-
-	executePanelStateChangeRequests();
+	
+	executePathArray(["TO517.R", "TO514A.N"]);
 }
 
 function pass3SouthPath()
 {
 	lineSouthMainsForPassenger();
 		
-	addTurnoutStateChangeRequest("TO469", 'R');
-	addTurnoutStateChangeRequest("TO471", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO469.R", "TO471.N"]);
 }
 
 function pass3NorthPath()
 {
 	pass123NorthPathToggle();
 	
-	addTurnoutStateChangeRequest("TO517", 'N');
-	
-	executePanelStateChangeRequests();
+	executePathArray(["TO517.N"]);
 }
 
 function pass4SouthPath()
 {
 	lineSouthMainsForPassenger();
 									
-	addTurnoutStateChangeRequest("TO469", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO469.N"]);
 }
 
 function pass4NorthPath()
 {
 	lineNorthMainsForPassenger();
 
-	addTurnoutStateChangeRequest("TO520", 'R');
-	addTurnoutStateChangeRequest("TO515", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO520.R", "TO515.R"]);
 }
 
 function pass4SwitchLeadPath()
@@ -178,71 +108,37 @@ function pass4SwitchLeadPath()
 
 function dinerServicePath()
 {
-	addTurnoutStateChangeRequest("TO470", 'R');
-	addTurnoutStateChangeRequest("TO472", 'R');
-	addTurnoutStateChangeRequest("TO474", 'R');
-	addTurnoutStateChangeRequest("TO475", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO470.R", "TO472.R", "TO474.R", "TO475.N"]);
 }
 
 function commissary2Path()
 {
-	addTurnoutStateChangeRequest("TO468", 'N');
-	addTurnoutStateChangeRequest("TO470", 'N');
-	addTurnoutStateChangeRequest("TO472", 'R');
-	addTurnoutStateChangeRequest("TO474", 'R');
-	addTurnoutStateChangeRequest("TO475", 'N');
-	
-	executePanelStateChangeRequests();
+	executePathArray(["TO468.N", "TO470.N", "TO472.R", "TO474.R", "TO475.N"]);
 }
 
 function commissary1Path()
 {
-	addTurnoutStateChangeRequest("TO467", 'N');
-	addTurnoutStateChangeRequest("TO468", 'R');
-	addTurnoutStateChangeRequest("TO470", 'N');
-	addTurnoutStateChangeRequest("TO472", 'R');
-	addTurnoutStateChangeRequest("TO474", 'R');
-	addTurnoutStateChangeRequest("TO475", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO467.N", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"]);
 }
 
 function coachServicePath()
 {
-	addTurnoutStateChangeRequest("TO467", 'R');
-	addTurnoutStateChangeRequest("TO468", 'R');
-	addTurnoutStateChangeRequest("TO470", 'N');
-	addTurnoutStateChangeRequest("TO472", 'R');
-	addTurnoutStateChangeRequest("TO474", 'R');
-	addTurnoutStateChangeRequest("TO475", 'N');
-									
-	executePanelStateChangeRequests();
+	executePathArray(["TO467.R", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"]);
 }
 
 function coachYard3Path()
 {
-	addTurnoutStateChangeRequest("TO472", 'N');
-	addTurnoutStateChangeRequest("TO474", 'R');
-	addTurnoutStateChangeRequest("TO475", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO472.N", "TO474.R", "TO475.N"]);
 }
 
 function coachYard2Path()
 {
-	addTurnoutStateChangeRequest("TO474", 'N');
-	addTurnoutStateChangeRequest("TO475", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO474.N", "TO475.N"]);
 }
 
 function coachYard1Path()
 {
-	addTurnoutStateChangeRequest("TO475", 'R');
-	
-	executePanelStateChangeRequests();
+	executePathArray(["TO475.R"]);
 }
 
 function pass123NorthPathToggle()
@@ -269,7 +165,5 @@ function switchLeadPath()
 
 function reaFacilityPath()
 {
-	addTurnoutStateChangeRequest("TO514B", 'N');
-	
-	executePanelStateChangeRequests();
+	executePathArray(["TO514B.N"]);
 }

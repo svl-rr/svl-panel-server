@@ -1,96 +1,58 @@
 function panelInit(evt)
 {
-    // Mains
-    createPanelTurnout("TO100A", false);
-	createPanelTurnout("TO100B", false);
-	createPanelTurnout("TO101", false);
-
-    // Industries
-	createPanelTurnout("TO102", false);
-    createPanelTurnout("TO103", false);
-	createPanelTurnout("TO104", false);
-	createPanelTurnout("TO105", false);
-	createPanelTurnout("TO106", false);
 }
 
 function buzzBeer2Path()
 {
-	addTurnoutStateChangeRequest("TO104", 'N');
-	addTurnoutStateChangeRequest("TO105", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO104.N", "TO105.R"]);
 }
 
 function buzzBeer1Path()
 {
-	addTurnoutStateChangeRequest("TO104", 'R');
-	addTurnoutStateChangeRequest("TO105", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO104.R", "TO105.R"]);
 }
 
 function buzzBeerLeadPath()
 {
-	addTurnoutStateChangeRequest("TO105", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO105.R"]);
 }
 
 function slipperShipperPath()
 {
-	addTurnoutStateChangeRequest("TO103", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO103.R"]);
 }
 
 function cavanaughJunkPath()
 {
-	addTurnoutStateChangeRequest("TO102", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO102.R"]);
 }
 
 function departureMain1Path()
 {
-	addTurnoutStateChangeRequest("TO105", 'N');
-	addTurnoutStateChangeRequest("TO100A", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO105.N", "TO100A.N"]);
 }
 
 function departureMain2Path()
 {
-	addTurnoutStateChangeRequest("TO103", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO103.N"]);
 }
 
 function departureMain3Path()
 {
-	addTurnoutStateChangeRequest("TO106", 'N');
-	addTurnoutStateChangeRequest("TO101", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO106.N", "TO101.N"]);
 }
 
 function daytonIndustrialPath()
 {
-	addTurnoutStateChangeRequest("TO106", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO106.R"]);
 }
 
 function arrivalMain1Path()
 {
-	addTurnoutStateChangeRequest("TO101", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO101.R"]);	
 }
 
 function arrivalMain2Path()
 {
-	addTurnoutStateChangeRequest("TO102", 'N');
-    addTurnoutStateChangeRequest("TO100B", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO102.N", "TO100B.N"]);	
 }

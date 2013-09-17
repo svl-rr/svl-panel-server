@@ -1,196 +1,118 @@
 function panelInit(evt)
 {
-	// Hump Yard
-    createPanelTurnout("TO400", true);
-	createPanelTurnout("TO401", true);
-	createPanelTurnout("TO402", true);
-	createPanelTurnout("TO403", false);
-	createPanelTurnout("TO404", true);
-	createPanelTurnout("TO405", true);
-
-    // Bowl
-	createPanelTurnout("TO410", true);    
-    createPanelTurnout("TO411", true);
-	createPanelTurnout("TO412", true);
-	createPanelTurnout("TO413", true);
-	createPanelTurnout("TO414", true);
-	createPanelTurnout("TO415", true);
-	createPanelTurnout("TO416", true);
-	createPanelTurnout("TO417", true);
-	createPanelTurnout("TO419", true);
-    
-    // Mt. Marvel
 }
 
 function class1SouthPath()
 {
-	addTurnoutStateChangeRequest("TO400", 'R');
-	addTurnoutStateChangeRequest("TO401", 'R');
+	executePathArray(["TO400.R", "TO401.R"]);										
+}
 
-	executePanelStateChangeRequests();									
+function bowlNorthLeadPath()
+{
+	executePathArray(["TO410.N"]);
 }
 
 function class1NorthPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'N');
-	addTurnoutStateChangeRequest("TO411", 'N');
-	addTurnoutStateChangeRequest("TO412", 'N');
-	addTurnoutStateChangeRequest("TO414", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.N", "TO411.N", "TO412.N", "TO414.R"]);
 }
 
 function class2SouthPath()
 {
-	addTurnoutStateChangeRequest("TO400", 'R');
-	addTurnoutStateChangeRequest("TO401", 'N');
-	addTurnoutStateChangeRequest("TO402", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO400.R", "TO401.N", "TO402.N"]);
 }
 
 function class2NorthPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'N');
-	addTurnoutStateChangeRequest("TO411", 'N');
-	addTurnoutStateChangeRequest("TO412", 'N');
-	addTurnoutStateChangeRequest("TO414", 'N');
+	executePathArray(["TO410.N", "TO411.N", "TO412.N", "TO414.N"]);
+}
 
-	executePanelStateChangeRequests();
+function class123NorthLeadPath()
+{
+	executePathArray(["TO410.N", "TO411.N"]);			
 }
 
 function class3SouthPath()
 {
-	addTurnoutStateChangeRequest("TO400", 'R');
-	addTurnoutStateChangeRequest("TO401", 'N');
-	addTurnoutStateChangeRequest("TO402", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO400.R", "TO401.N", "TO402.R"]);						
 }
 
 function class3NorthPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'N');
-	addTurnoutStateChangeRequest("TO411", 'N');
-	addTurnoutStateChangeRequest("TO412", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.N", "TO411.N", "TO412.R"]);
 }
 
 function class4SouthPath()
 {
-	addTurnoutStateChangeRequest("TO400", 'N');
-	addTurnoutStateChangeRequest("TO403", 'N');
-	addTurnoutStateChangeRequest("TO404", 'N');
+	executePathArray(["TO400.N", "TO403.N", "TO404.N"]);
+}
 
-	executePanelStateChangeRequests();
+function class456NorthLeadPath()
+{
+	executePathArray(["TO410.N", "TO411.R", "TO413.N"]);
 }
 
 function class4NorthPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'N');
-	addTurnoutStateChangeRequest("TO411", 'R');
-	addTurnoutStateChangeRequest("TO413", 'N');
-	addTurnoutStateChangeRequest("TO415", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.N", "TO411.R", "TO413.N", "TO415.R"]);
 }
 
 function class5SouthPath()
 {
-	addTurnoutStateChangeRequest("TO400", 'N');
-	addTurnoutStateChangeRequest("TO403", 'N');
-	addTurnoutStateChangeRequest("TO404", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO400.N", "TO403.N", "TO404.R"]);			
 }
 
 function class5NorthPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'N');
-	addTurnoutStateChangeRequest("TO411", 'R');
-	addTurnoutStateChangeRequest("TO413", 'N');
-	addTurnoutStateChangeRequest("TO415", 'N');
-	addTurnoutStateChangeRequest("TO417", 'R');
+	executePathArray(["TO410.N", "TO411.R", "TO413.N", "TO415.N", "TO417.R"]);
+}
 
-	executePanelStateChangeRequests();
+function class67SouthLeadPath()
+{
+	executePathArray(["TO400.N", "TO403.R"]);		
 }
 
 function class6SouthPath()
 {
-	addTurnoutStateChangeRequest("TO400", 'N');
-	addTurnoutStateChangeRequest("TO403", 'R');
-	addTurnoutStateChangeRequest("TO405", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO400.N", "TO403.R", "TO405.N"]);
 }
 
 function class6NorthPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'N');
-	addTurnoutStateChangeRequest("TO411", 'R');
-	addTurnoutStateChangeRequest("TO413", 'N');
-	addTurnoutStateChangeRequest("TO415", 'N');
-	addTurnoutStateChangeRequest("TO417", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.N", "TO411.R", "TO413.N", "TO415.N", "TO417.N"]);
 }
 
 function class7SouthPath()
 {
-	addTurnoutStateChangeRequest("TO400", 'N');
-	addTurnoutStateChangeRequest("TO403", 'R');
-	addTurnoutStateChangeRequest("TO405", 'R');
-
-	executePanelStateChangeRequests();									
+	executePathArray(["TO400.N", "TO403.R", "TO405.R"]);					
 }
 
 function class7NorthPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'N');
-	addTurnoutStateChangeRequest("TO411", 'R');
-	addTurnoutStateChangeRequest("TO413", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.N", "TO411.R", "TO413.R"]);
 }
 
 function class8Path()
 {
-	addTurnoutStateChangeRequest("TO410", 'R');
-	addTurnoutStateChangeRequest("TO416", 'R');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.R", "TO416.R"]);
 }
 
 function mmPreLeadPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'R');
-    
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.R"]);
 }
 
 function mmLeadPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'R');
-	addTurnoutStateChangeRequest("TO416", 'N');
-    
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.R", "TO416.N"]);
 }
 
 function mmPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'R');
-	addTurnoutStateChangeRequest("TO416", 'N');
-	addTurnoutStateChangeRequest("TO419", 'R');
-    
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.R", "TO416.N", "TO419.R"]);
 }
 
 function mmLumberPath()
 {
-	addTurnoutStateChangeRequest("TO410", 'R');
-	addTurnoutStateChangeRequest("TO416", 'N');
-	addTurnoutStateChangeRequest("TO419", 'N');
-
-	executePanelStateChangeRequests();
+	executePathArray(["TO410.R", "TO416.N", "TO419.N"]);
 }
