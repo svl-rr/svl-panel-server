@@ -30,16 +30,16 @@
      id="script3094" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="DispatchNorthRedirect.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <script
      xlink:href="DispatchCommon.js"
-     type="application/ecmascript"
-     id="script3208" />
+     id="script3208"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -276,7 +276,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5115134"
-     inkscape:cx="458.51957"
+     inkscape:cx="355.31175"
      inkscape:cy="452.99203"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
@@ -1706,13 +1706,13 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 560,534.0945 -20,0 -20,-20"
-         id="TO702.R"
+         id="TO702.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO702.N"
+         id="TO702.R"
          d="m 560,534.0945 -40,0"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
