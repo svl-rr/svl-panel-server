@@ -37,12 +37,12 @@
      id="namedview4355"
      showgrid="true"
      inkscape:zoom="1.4275405"
-     inkscape:cx="571.0449"
+     inkscape:cx="446.35492"
      inkscape:cy="313.46782"
      inkscape:window-x="-1"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="g3233"
      inkscape:snap-object-midpoints="true"
      inkscape:object-paths="true"
      fit-margin-top="0"
@@ -726,8 +726,8 @@
     </g>
     <a
        xlink:href="Released/Bayshore.svg"
-       id="a3256"
-       transform="translate(-200.86331,144.46043)" />
+       transform="translate(-200.86331,144.46043)"
+       id="a3256" />
     <g
        id="g3308">
       <image
@@ -793,9 +793,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Released/DispatchNorth.svg"
-       transform="translate(22.409162,-209.2281)"
+       style="display:inline"
        id="a5893"
-       style="display:inline">
+       transform="translate(22.409162,-209.2281)">
       <text
          id="text5257"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -812,9 +812,9 @@
     </a>
     <a
        xlink:href="Released/DispatchSouth.svg"
-       transform="translate(143.74388,-209.475)"
+       style="display:inline"
        id="a5897"
-       style="display:inline">
+       transform="translate(143.74388,-209.475)">
       <text
          y="709.69495"
          x="223.56503"
@@ -831,9 +831,9 @@
     </a>
     <a
        xlink:href="Released/TurnoutTester.svg"
-       transform="translate(262.55321,-210.70042)"
+       style="display:inline"
        id="a5901"
-       style="display:inline">
+       transform="translate(262.55321,-210.70042)">
       <text
          id="text5265"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1283,9 +1283,9 @@
     </text>
     <a
        xlink:href="Released/Cavanaugh.svg"
-       transform="matrix(1,0.03491,-0.17497666,0.99389152,23.319208,-47.015968)"
+       id="a3495"
        style="fill:#ffffff;fill-opacity:1;display:inline"
-       id="a3495">
+       transform="matrix(1,0.03491,-0.17497666,0.99389152,23.319208,-47.015968)">
       <text
          y="-353.68671"
          x="416.19781"
@@ -1372,20 +1372,6 @@
          font-weight="500"
          font-size="12">racy</tspan>
     </text>
-    <text
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
-       y="239.77454"
-       x="372.82379"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       id="text3435">
-      <tspan
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
-         id="tspan3437"
-         y="250.77454"
-         x="373.80231"
-         font-weight="500"
-         font-size="12">Upton</tspan>
-    </text>
     <circle
        d="m 279.00001,414 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z"
        cx="274.5"
@@ -1434,18 +1420,6 @@
        sodipodi:ry="4.5000072"
        style="fill:#ffff00;stroke:none;display:inline"
        transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-49.653115,-134.49299)" />
-    <circle
-       d="m 279.00001,414 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-18.766088,-197.78492)"
-       style="fill:#ffff00;stroke:none;display:inline"
-       sodipodi:ry="4.5000072"
-       sodipodi:rx="4.5000072"
-       sodipodi:cy="414"
-       sodipodi:cx="274.5"
-       id="circle3447"
-       r="4.5000072"
-       cy="414"
-       cx="274.5" />
     <text
        transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
        y="353.10974"
@@ -1512,32 +1486,6 @@
          font-weight="500"
          font-size="9">S</tspan>
     </text>
-    <circle
-       transform="matrix(0.96013522,0.48094885,-1.0283919,0.52637992,338.49868,-17.53036)"
-       style="fill:#ffff00;fill-opacity:1;stroke:none;display:inline"
-       sodipodi:ry="4.5000072"
-       sodipodi:rx="4.5000072"
-       sodipodi:cy="36"
-       sodipodi:cx="396"
-       id="circle3477"
-       r="4.5000072"
-       cy="36"
-       cx="396"
-       d="m 400.50001,36 c 0,2.485285 -2.01472,4.500007 -4.50001,4.500007 -2.48529,0 -4.50001,-2.014722 -4.50001,-4.500007 0,-2.485285 2.01472,-4.500007 4.50001,-4.500007 2.48529,0 4.50001,2.014722 4.50001,4.500007 z" />
-    <text
-       y="-447.75534"
-       x="292.17215"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       id="text3479"
-       transform="matrix(0.74299833,0.85841062,-1.0689025,0.11095952,0,0)">
-      <tspan
-         style="font-size:9px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
-         id="tspan3481"
-         y="-438.75534"
-         x="292.67068"
-         font-weight="500"
-         font-size="9">Victoria</tspan>
-    </text>
     <text
        id="text3487"
        style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1561,9 +1509,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Released/Bayshore.svg"
-       id="a5922"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,382.3791,401.44493)"
        style="display:inline"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,382.3791,401.44493)">
+       id="a5922">
       <text
          y="24.22995"
          x="303.33676"
@@ -1580,9 +1528,9 @@
     </a>
     <a
        xlink:href="Released/Cavanaugh.svg"
-       id="a4933"
+       transform="matrix(1,0.03491,-0.17497666,0.99389156,31.134517,-61.174592)"
        style="fill:#ffffff;fill-opacity:1;display:inline"
-       transform="matrix(1,0.03491,-0.17497666,0.99389156,31.134517,-61.174592)">
+       id="a4933">
       <text
          transform="matrix(0.88866157,0.83247253,-1.0429579,0.1482749,0,0)"
          id="text4925"
@@ -1600,9 +1548,9 @@
     </a>
     <a
        xlink:href="Released/Dayton.svg"
-       id="a5938"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,219.42248,207.00624)"
        style="display:inline"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,219.42248,207.00624)">
+       id="a5938">
       <text
          y="78.229942"
          x="397.83676"
@@ -1619,9 +1567,9 @@
     </a>
     <a
        xlink:href="Released/Dayton.svg"
-       id="a5930"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,181.95434,187.26142)"
        style="display:inline"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,181.95434,187.26142)">
+       id="a5930">
       <text
          y="78.229942"
          x="303.33676"
@@ -1744,9 +1692,9 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       transform="translate(4.6043151,4.7841725)"
+       id="a6152"
        style="display:inline"
-       id="a6152">
+       transform="translate(4.6043151,4.7841725)">
       <text
          transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
          y="346.12308"
@@ -1764,9 +1712,9 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       transform="translate(4.6043151,4.7841725)"
+       id="a6156"
        style="display:inline"
-       id="a6156">
+       transform="translate(4.6043151,4.7841725)">
       <text
          transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
          y="364.15753"
@@ -1808,9 +1756,9 @@
        d="m 306.00001,198 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       transform="translate(4.6043151,4.7841725)"
+       id="a6148"
        style="display:inline"
-       id="a6148">
+       transform="translate(4.6043151,4.7841725)">
       <text
          id="text4883"
          style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1840,9 +1788,9 @@
        d="m 400.50001,36 c 0,2.485285 -2.01472,4.500007 -4.50001,4.500007 -2.48529,0 -4.50001,-2.014722 -4.50001,-4.500007 0,-2.485285 2.01472,-4.500007 4.50001,-4.500007 2.48529,0 4.50001,2.014722 4.50001,4.500007 z" />
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       transform="translate(4.6043151,4.7841725)"
+       id="a6144"
        style="display:inline"
-       id="a6144">
+       transform="translate(4.6043151,4.7841725)">
       <text
          transform="matrix(0.97941279,0.2184725,-0.58339902,0.89088417,0,0)"
          y="195.92513"
@@ -1933,9 +1881,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Released/NPF.svg"
-       style="display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-281.85734,-149.77441)"
        id="a3235"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-281.85734,-149.77441)">
+       style="display:inline">
       <text
          y="483.22995"
          x="81.536774"
@@ -1952,9 +1900,9 @@
     </a>
     <a
        xlink:href="Released/NowheresYard.svg"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-258.0981,-139.72427)"
+       id="a3241"
        style="display:inline"
-       id="a3241">
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-258.0981,-139.72427)">
       <text
          id="text3243"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1971,9 +1919,9 @@
     </a>
     <a
        xlink:href="Released/NowheresHump.svg"
-       style="display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-277.2654,-102.34134)"
        id="a3247"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-277.2654,-102.34134)">
+       style="display:inline">
       <text
          id="text3249"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1990,9 +1938,9 @@
     </a>
     <a
        xlink:href="Released/Windsor.svg"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-44.573289,-321.48929)"
+       id="a3259"
        style="display:inline"
-       id="a3259">
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-44.573289,-321.48929)">
       <text
          id="text3261"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -2059,5 +2007,65 @@
          id="tspan3305"
          style="font-size:9px;font-weight:500;font-family:Helvetica">Y</tspan>
     </text>
+    <a
+       xlink:href="Released/Upton.svg"
+       id="a9537">
+      <text
+         id="text3435"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         x="372.82379"
+         y="239.77454"
+         transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,4.6043151,4.7841725)">
+        <tspan
+           font-size="12"
+           font-weight="500"
+           x="373.80231"
+           y="250.77454"
+           id="tspan3437"
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Upton</tspan>
+      </text>
+    </a>
+    <circle
+       d="m 279.00001,414 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-14.161773,-193.00075)"
+       style="fill:#ffff00;stroke:none;display:inline"
+       sodipodi:ry="4.5000072"
+       sodipodi:rx="4.5000072"
+       sodipodi:cy="414"
+       sodipodi:cx="274.5"
+       id="circle3447"
+       r="4.5000072"
+       cy="414"
+       cx="274.5" />
+    <a
+       xlink:href="Released/Victoria.svg"
+       id="a9541">
+      <text
+         transform="matrix(0.74299833,0.85841064,-1.0689025,0.11095952,4.6043151,4.7841725)"
+         id="text3479"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         x="292.17215"
+         y="-447.75534">
+        <tspan
+           font-size="9"
+           font-weight="500"
+           x="292.67068"
+           y="-438.75534"
+           id="tspan3481"
+           style="font-size:9px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Victoria</tspan>
+      </text>
+    </a>
+    <circle
+       transform="matrix(0.9601352,0.48094885,-1.0283919,0.52637992,343.10299,-12.746187)"
+       style="fill:#ffff00;fill-opacity:1;stroke:none;display:inline"
+       sodipodi:ry="4.5000072"
+       sodipodi:rx="4.5000072"
+       sodipodi:cy="36"
+       sodipodi:cx="396"
+       id="circle3477"
+       r="4.5000072"
+       cy="36"
+       cx="396"
+       d="m 400.50001,36 c 0,2.485285 -2.01472,4.500007 -4.50001,4.500007 -2.48529,0 -4.50001,-2.014722 -4.50001,-4.500007 0,-2.485285 2.01472,-4.500007 4.50001,-4.500007 2.48529,0 4.50001,2.014722 4.50001,4.500007 z" />
   </g>
 </svg>
