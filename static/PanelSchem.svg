@@ -36,13 +36,13 @@
      inkscape:window-height="1152"
      id="namedview4355"
      showgrid="false"
-     inkscape:zoom="1.06"
-     inkscape:cx="168.71559"
-     inkscape:cy="474.81275"
+     inkscape:zoom="1.3155765"
+     inkscape:cx="152.65775"
+     inkscape:cy="435.34984"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer7" />
+     inkscape:current-layer="layer2" />
   <metadata
      id="metadata3815">
     <dc:date>2013-08-09 17:59Z</dc:date>
@@ -717,8 +717,8 @@
     </g>
     <a
        xlink:href="Released/Bayshore.svg"
-       id="a3256"
-       transform="translate(-200.86331,144.46043)" />
+       transform="translate(-200.86331,144.46043)"
+       id="a3256" />
     <g
        id="g3308">
       <image
@@ -764,8 +764,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Released/DispatchNorth.svg"
-       id="a5893"
-       style="display:inline">
+       style="display:inline"
+       id="a5893">
       <text
          id="text5257"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -782,8 +782,8 @@
     </a>
     <a
        xlink:href="Released/DispatchSouth.svg"
-       id="a5897"
-       style="display:inline">
+       style="display:inline"
+       id="a5897">
       <text
          y="709.69495"
          x="223.56503"
@@ -800,8 +800,8 @@
     </a>
     <a
        xlink:href="Released/TurnoutTester.svg"
-       id="a5901"
-       style="display:inline">
+       style="display:inline"
+       id="a5901">
       <text
          id="text5265"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -918,6 +918,11 @@
          id="tspan4307"
          style="font-size:8px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Continuous Run Loop</tspan>
     </text>
+    <path
+       d="m 385.33677,301.72995 -9,9 -103.5,0 -9,-9"
+       id="path4155"
+       inkscape:connector-curvature="0"
+       style="opacity:0.5;fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;display:inline" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -984,214 +989,6 @@
      inkscape:label="Invalid Links"
      style="opacity:0.5;display:inline"
      sodipodi:insensitive="true">
-    <text
-       id="text4081"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="82.536774"
-       y="456.22995">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="83.532867"
-         y="467.22995"
-         id="tspan4083"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Mt. Marvel</tspan>
-    </text>
-    <text
-       id="text4089"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="111.53677"
-       y="510.22995">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="112.18521"
-         y="521.22992"
-         id="tspan4091"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Paso</tspan>
-    </text>
-    <text
-       id="text4093"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="101.53677"
-       y="537.22992">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="102.18325"
-         y="548.22992"
-         id="tspan4095"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Ravine</tspan>
-    </text>
-    <text
-       id="text4097"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="103.53677"
-       y="564.22992">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="104.18717"
-         y="575.22992"
-         id="tspan4099"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Silicon</tspan>
-    </text>
-    <text
-       id="text4101"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="109.53677"
-       y="591.22992">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="109.97622"
-         y="602.22992"
-         id="tspan4103"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">T</tspan>
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="116.86684"
-         y="602.22992"
-         id="tspan4105"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">racy</tspan>
-    </text>
-    <text
-       id="text4107"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="106.53677"
-       y="627.22992">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="107.51529"
-         y="638.22992"
-         id="tspan4109"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Upton</tspan>
-    </text>
-    <text
-       id="text4111"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="99.536766"
-       y="654.22992">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="99.734039"
-         y="665.22992"
-         id="tspan4113"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">V</tspan>
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="107.527"
-         y="665.22992"
-         id="tspan4115"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">ictoria</tspan>
-    </text>
-    <circle
-       cx="166.5"
-       cy="468"
-       r="4.5000072"
-       id="circle4201"
-       sodipodi:cx="166.5"
-       sodipodi:cy="468"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
-    <circle
-       cx="166.5"
-       cy="603"
-       r="4.5000072"
-       id="circle4209"
-       sodipodi:cx="166.5"
-       sodipodi:cy="603"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
-    <circle
-       cx="166.5"
-       cy="639"
-       r="4.5000072"
-       id="circle4213"
-       sodipodi:cx="166.5"
-       sodipodi:cy="639"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
-    <circle
-       cx="166.5"
-       cy="666"
-       r="4.5000072"
-       id="circle4217"
-       sodipodi:cx="166.5"
-       sodipodi:cy="666"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
-    <circle
-       cx="166.5"
-       cy="522"
-       r="4.5000072"
-       id="circle4273"
-       sodipodi:cx="166.5"
-       sodipodi:cy="522"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
-    <text
-       id="text4277"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="166.73676"
-       y="537.22992">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="166.73676"
-         y="548.22992"
-         id="tspan4279"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Quinn</tspan>
-    </text>
-    <circle
-       cx="220.5"
-       cy="549"
-       r="4.5000072"
-       id="circle4281"
-       sodipodi:cx="220.5"
-       sodipodi:cy="549"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffffff;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
-    <text
-       id="text4285"
-       style="fill:#000000;stroke:none;display:inline"
-       x="206.60896"
-       y="538.97205">
-      <tspan
-         font-size="9"
-         font-weight="500"
-         x="207.1075"
-         y="547.97205"
-         id="tspan4287"
-         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
-    </text>
-    <circle
-       transform="translate(-10.663234,-31.320411)"
-       style="fill:#ffff00;stroke:none;display:inline"
-       sodipodi:ry="4.5000072"
-       sodipodi:rx="4.5000072"
-       sodipodi:cy="603"
-       sodipodi:cx="166.5"
-       id="circle3832"
-       r="4.5000072"
-       cy="603"
-       cx="166.5" />
     <text
        id="text4073"
        style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1353,11 +1150,6 @@
          id="tspan4141"
          style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Carlsbad</tspan>
     </text>
-    <path
-       d="m 385.33677,301.72995 -9,9 -103.5,0 -9,-9"
-       id="path4155"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;display:inline" />
     <text
        id="text4157"
        style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1483,10 +1275,21 @@
      inkscape:label="Valid Links"
      style="display:inline"
      sodipodi:insensitive="true">
+    <circle
+       cx="220.5"
+       cy="549"
+       r="4.5000072"
+       id="circle4281"
+       sodipodi:cx="220.5"
+       sodipodi:cy="549"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffffff;stroke:none;display:inline"
+       transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Bayshore.svg"
-       id="a5922"
-       style="display:inline">
+       style="display:inline"
+       id="a5922">
       <text
          y="24.22995"
          x="303.33676"
@@ -1503,8 +1306,8 @@
     </a>
     <a
        xlink:href="Released/Cavanaugh.svg"
-       id="a5926"
-       style="display:inline">
+       style="display:inline"
+       id="a5926">
       <text
          y="51.22995"
          x="303.33676"
@@ -1521,8 +1324,8 @@
     </a>
     <a
        xlink:href="Released/Dayton.svg"
-       id="a5934"
-       style="display:inline">
+       style="display:inline"
+       id="a5934">
       <text
          y="105.22995"
          x="301.83676"
@@ -1572,8 +1375,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Dayton.svg"
-       id="a5930"
-       style="display:inline">
+       style="display:inline"
+       id="a5930">
       <text
          y="78.229942"
          x="303.33676"
@@ -1614,8 +1417,8 @@
     </text>
     <a
        xlink:href="Released/Dayton.svg"
-       id="a5938"
-       style="display:inline">
+       style="display:inline"
+       id="a5938">
       <text
          y="78.229942"
          x="397.83676"
@@ -1643,8 +1446,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/NowheresHump.svg"
-       id="a5918"
-       style="display:inline">
+       style="display:inline"
+       id="a5918">
       <text
          y="456.22995"
          x="196.83676"
@@ -1685,9 +1488,9 @@
     </text>
     <a
        xlink:href="Released/NPF.svg"
-       transform="translate(93.23741,0.5755396)"
+       style="display:inline"
        id="a5950"
-       style="display:inline">
+       transform="translate(93.23741,0.5755396)">
       <text
          id="text5952"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1704,8 +1507,8 @@
     </a>
     <a
        xlink:href="Released/NowheresYard.svg"
-       id="a5910"
-       style="display:inline">
+       style="display:inline"
+       id="a5910">
       <text
          y="484.73938"
          x="41.536774"
@@ -1746,8 +1549,8 @@
     </text>
     <a
        xlink:href="Released/Windsor.svg"
-       id="a5905"
-       style="display:inline">
+       style="display:inline"
+       id="a5905">
       <text
          y="681.22992"
          x="91.536766"
@@ -1829,8 +1632,8 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       style="display:inline"
-       id="a4781">
+       id="a4781"
+       style="display:inline">
       <text
          y="186.22995"
          x="397.83676"
@@ -1847,8 +1650,8 @@
     </a>
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       style="display:inline"
-       id="a4789">
+       id="a4789"
+       style="display:inline">
       <text
          y="213.22995"
          x="397.83676"
@@ -1887,8 +1690,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       style="display:inline"
-       id="a4785">
+       id="a4785"
+       style="display:inline">
       <text
          y="213.22995"
          x="303.33676"
@@ -1905,8 +1708,8 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       style="display:inline"
-       id="a4777">
+       id="a4777"
+       style="display:inline">
       <text
          y="186.22995"
          x="303.33676"
@@ -1990,6 +1793,235 @@
        id="circle4221"
        sodipodi:cx="396"
        sodipodi:cy="144"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="translate(-10.663234,-4.2700512)" />
+    <a
+       xlink:href="Released/Victoria.svg"
+       id="a8406">
+      <text
+         y="654.22992"
+         x="99.536766"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4111">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4113"
+           y="665.22992"
+           x="99.734039"
+           font-weight="500"
+           font-size="12">V</tspan>
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4115"
+           y="665.22992"
+           x="107.527"
+           font-weight="500"
+           font-size="12">ictoria</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/Upton.svg"
+       id="a8402">
+      <text
+         y="627.22992"
+         x="106.53677"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4107">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4109"
+           y="638.22992"
+           x="107.51529"
+           font-weight="500"
+           font-size="12">Upton</tspan>
+      </text>
+    </a>
+    <circle
+       cx="166.5"
+       cy="639"
+       r="4.5000072"
+       id="circle4213"
+       sodipodi:cx="166.5"
+       sodipodi:cy="639"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="translate(-10.663234,-4.2700512)" />
+    <circle
+       cx="166.5"
+       cy="666"
+       r="4.5000072"
+       id="circle4217"
+       sodipodi:cx="166.5"
+       sodipodi:cy="666"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="translate(-10.663234,-4.2700512)" />
+    <a
+       xlink:href="Released/Ravine_Quinn.svg"
+       id="a3254">
+      <text
+         y="537.22992"
+         x="101.53677"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4093">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4095"
+           y="548.22992"
+           x="102.18325"
+           font-weight="500"
+           font-size="12">Ravine</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/Silicon.svg"
+       id="a3258">
+      <text
+         y="564.22992"
+         x="103.53677"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4097">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4099"
+           y="575.22992"
+           x="104.18717"
+           font-weight="500"
+           font-size="12">Silicon</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/Tracy.svg"
+       id="a3262">
+      <text
+         y="591.22992"
+         x="109.53677"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4101">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4103"
+           y="602.22992"
+           x="109.97622"
+           font-weight="500"
+           font-size="12">T</tspan>
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4105"
+           y="602.22992"
+           x="116.86684"
+           font-weight="500"
+           font-size="12">racy</tspan>
+      </text>
+    </a>
+    <circle
+       transform="translate(-10.663234,-31.320411)"
+       style="fill:#ffff00;stroke:none;display:inline"
+       sodipodi:ry="4.5000072"
+       sodipodi:rx="4.5000072"
+       sodipodi:cy="603"
+       sodipodi:cx="166.5"
+       id="circle3832"
+       r="4.5000072"
+       cy="603"
+       cx="166.5" />
+    <circle
+       cx="166.5"
+       cy="603"
+       r="4.5000072"
+       id="circle4209"
+       sodipodi:cx="166.5"
+       sodipodi:cy="603"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="translate(-10.663234,-4.2700512)" />
+    <a
+       xlink:href="Released/Ravine_Quinn.svg"
+       id="a3267">
+      <text
+         y="537.22992"
+         x="166.73676"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4277">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4279"
+           y="548.22992"
+           x="166.73676"
+           font-weight="500"
+           font-size="12">Quinn</tspan>
+      </text>
+    </a>
+    <text
+       id="text4285"
+       style="fill:#000000;stroke:none;display:inline"
+       x="206.60896"
+       y="538.97205">
+      <tspan
+         font-size="9"
+         font-weight="500"
+         x="207.1075"
+         y="547.97205"
+         id="tspan4287"
+         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
+    </text>
+    <a
+       xlink:href="Released/Paso.svg"
+       id="a4880">
+      <text
+         y="510.22995"
+         x="111.53677"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4089">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4091"
+           y="521.22992"
+           x="112.18521"
+           font-weight="500"
+           font-size="12">Paso</tspan>
+      </text>
+    </a>
+    <circle
+       cx="166.5"
+       cy="522"
+       r="4.5000072"
+       id="circle4273"
+       sodipodi:cx="166.5"
+       sodipodi:cy="522"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="translate(-10.663234,-4.2700512)" />
+    <a
+       xlink:href="Released/MtMarvel.svg"
+       id="a4881">
+      <text
+         y="456.22995"
+         x="82.536774"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4081">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4083"
+           y="467.22995"
+           x="83.532867"
+           font-weight="500"
+           font-size="12">Mt. Marvel</tspan>
+      </text>
+    </a>
+    <circle
+       cx="166.5"
+       cy="468"
+       r="4.5000072"
+       id="circle4201"
+       sodipodi:cx="166.5"
+       sodipodi:cy="468"
        sodipodi:rx="4.5000072"
        sodipodi:ry="4.5000072"
        style="fill:#ffff00;stroke:none;display:inline"

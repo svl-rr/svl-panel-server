@@ -1144,14 +1144,11 @@ function updateMainlineLockGroup()
  */
 function toggleMainlineLock()
 {
-    // Actually toggle the variable
-	mainlineLocked = !mainlineLocked;
-    
     // Create new empty array
     var panelChangeRequests = new Array();
     
-    // Add mainline lock to array
-    panelChangeRequests.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, mainlineLocked));
+    // Add inverted mainline lock to array
+    panelChangeRequests.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, !mainlineLocked));
     
     // Perform update
     executePanelStateChangeRequestsLowLevel(panelChangeRequests, false);
