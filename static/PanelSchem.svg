@@ -36,13 +36,13 @@
      inkscape:window-height="1152"
      id="namedview4355"
      showgrid="false"
-     inkscape:zoom="1.6234774"
-     inkscape:cx="262.29894"
-     inkscape:cy="283.32524"
+     inkscape:zoom="1.3155765"
+     inkscape:cx="152.65775"
+     inkscape:cy="435.34984"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer7" />
+     inkscape:current-layer="layer2" />
   <metadata
      id="metadata3815">
     <dc:date>2013-08-09 17:59Z</dc:date>
@@ -717,8 +717,8 @@
     </g>
     <a
        xlink:href="Released/Bayshore.svg"
-       id="a3256"
-       transform="translate(-200.86331,144.46043)" />
+       transform="translate(-200.86331,144.46043)"
+       id="a3256" />
     <g
        id="g3308">
       <image
@@ -764,8 +764,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Released/DispatchNorth.svg"
-       id="a5893"
-       style="display:inline">
+       style="display:inline"
+       id="a5893">
       <text
          id="text5257"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -782,8 +782,8 @@
     </a>
     <a
        xlink:href="Released/DispatchSouth.svg"
-       id="a5897"
-       style="display:inline">
+       style="display:inline"
+       id="a5897">
       <text
          y="709.69495"
          x="223.56503"
@@ -800,8 +800,8 @@
     </a>
     <a
        xlink:href="Released/TurnoutTester.svg"
-       id="a5901"
-       style="display:inline">
+       style="display:inline"
+       id="a5901">
       <text
          id="text5265"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -918,6 +918,11 @@
          id="tspan4307"
          style="font-size:8px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Continuous Run Loop</tspan>
     </text>
+    <path
+       d="m 385.33677,301.72995 -9,9 -103.5,0 -9,-9"
+       id="path4155"
+       inkscape:connector-curvature="0"
+       style="opacity:0.5;fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;display:inline" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -984,30 +989,6 @@
      inkscape:label="Invalid Links"
      style="opacity:0.5;display:inline"
      sodipodi:insensitive="true">
-    <text
-       id="text4081"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="82.536774"
-       y="456.22995">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="83.532867"
-         y="467.22995"
-         id="tspan4083"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Mt. Marvel</tspan>
-    </text>
-    <circle
-       cx="166.5"
-       cy="468"
-       r="4.5000072"
-       id="circle4201"
-       sodipodi:cx="166.5"
-       sodipodi:cy="468"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
     <text
        id="text4073"
        style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1169,11 +1150,6 @@
          id="tspan4141"
          style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Carlsbad</tspan>
     </text>
-    <path
-       d="m 385.33677,301.72995 -9,9 -103.5,0 -9,-9"
-       id="path4155"
-       inkscape:connector-curvature="0"
-       style="fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;display:inline" />
     <text
        id="text4157"
        style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1312,8 +1288,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Bayshore.svg"
-       id="a5922"
-       style="display:inline">
+       style="display:inline"
+       id="a5922">
       <text
          y="24.22995"
          x="303.33676"
@@ -1330,8 +1306,8 @@
     </a>
     <a
        xlink:href="Released/Cavanaugh.svg"
-       id="a5926"
-       style="display:inline">
+       style="display:inline"
+       id="a5926">
       <text
          y="51.22995"
          x="303.33676"
@@ -1348,8 +1324,8 @@
     </a>
     <a
        xlink:href="Released/Dayton.svg"
-       id="a5934"
-       style="display:inline">
+       style="display:inline"
+       id="a5934">
       <text
          y="105.22995"
          x="301.83676"
@@ -1399,8 +1375,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Dayton.svg"
-       id="a5930"
-       style="display:inline">
+       style="display:inline"
+       id="a5930">
       <text
          y="78.229942"
          x="303.33676"
@@ -1441,8 +1417,8 @@
     </text>
     <a
        xlink:href="Released/Dayton.svg"
-       id="a5938"
-       style="display:inline">
+       style="display:inline"
+       id="a5938">
       <text
          y="78.229942"
          x="397.83676"
@@ -1470,8 +1446,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/NowheresHump.svg"
-       id="a5918"
-       style="display:inline">
+       style="display:inline"
+       id="a5918">
       <text
          y="456.22995"
          x="196.83676"
@@ -1512,9 +1488,9 @@
     </text>
     <a
        xlink:href="Released/NPF.svg"
-       transform="translate(93.23741,0.5755396)"
+       style="display:inline"
        id="a5950"
-       style="display:inline">
+       transform="translate(93.23741,0.5755396)">
       <text
          id="text5952"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1531,8 +1507,8 @@
     </a>
     <a
        xlink:href="Released/NowheresYard.svg"
-       id="a5910"
-       style="display:inline">
+       style="display:inline"
+       id="a5910">
       <text
          y="484.73938"
          x="41.536774"
@@ -1573,8 +1549,8 @@
     </text>
     <a
        xlink:href="Released/Windsor.svg"
-       id="a5905"
-       style="display:inline">
+       style="display:inline"
+       id="a5905">
       <text
          y="681.22992"
          x="91.536766"
@@ -1656,8 +1632,8 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       style="display:inline"
-       id="a4781">
+       id="a4781"
+       style="display:inline">
       <text
          y="186.22995"
          x="397.83676"
@@ -1674,8 +1650,8 @@
     </a>
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       style="display:inline"
-       id="a4789">
+       id="a4789"
+       style="display:inline">
       <text
          y="213.22995"
          x="397.83676"
@@ -1714,8 +1690,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       style="display:inline"
-       id="a4785">
+       id="a4785"
+       style="display:inline">
       <text
          y="213.22995"
          x="303.33676"
@@ -1732,8 +1708,8 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       style="display:inline"
-       id="a4777">
+       id="a4777"
+       style="display:inline">
       <text
          y="186.22995"
          x="303.33676"
@@ -2018,6 +1994,34 @@
        id="circle4273"
        sodipodi:cx="166.5"
        sodipodi:cy="522"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="translate(-10.663234,-4.2700512)" />
+    <a
+       xlink:href="Released/MtMarvel.svg"
+       id="a4881">
+      <text
+         y="456.22995"
+         x="82.536774"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4081">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4083"
+           y="467.22995"
+           x="83.532867"
+           font-weight="500"
+           font-size="12">Mt. Marvel</tspan>
+      </text>
+    </a>
+    <circle
+       cx="166.5"
+       cy="468"
+       r="4.5000072"
+       id="circle4201"
+       sodipodi:cx="166.5"
+       sodipodi:cy="468"
        sodipodi:rx="4.5000072"
        sodipodi:ry="4.5000072"
        style="fill:#ffff00;stroke:none;display:inline"
