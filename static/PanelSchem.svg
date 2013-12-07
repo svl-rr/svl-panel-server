@@ -36,13 +36,13 @@
      inkscape:window-height="1152"
      id="namedview4355"
      showgrid="false"
-     inkscape:zoom="1.3155765"
-     inkscape:cx="152.65775"
-     inkscape:cy="435.34984"
+     inkscape:zoom="2.6151272"
+     inkscape:cx="60.682863"
+     inkscape:cy="214.64669"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer2" />
+     inkscape:current-layer="layer3" />
   <metadata
      id="metadata3815">
     <dc:date>2013-08-09 17:59Z</dc:date>
@@ -717,8 +717,8 @@
     </g>
     <a
        xlink:href="Released/Bayshore.svg"
-       transform="translate(-200.86331,144.46043)"
-       id="a3256" />
+       id="a3256"
+       transform="translate(-200.86331,144.46043)" />
     <g
        id="g3308">
       <image
@@ -764,8 +764,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Released/DispatchNorth.svg"
-       style="display:inline"
-       id="a5893">
+       id="a5893"
+       style="display:inline">
       <text
          id="text5257"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -782,8 +782,8 @@
     </a>
     <a
        xlink:href="Released/DispatchSouth.svg"
-       style="display:inline"
-       id="a5897">
+       id="a5897"
+       style="display:inline">
       <text
          y="709.69495"
          x="223.56503"
@@ -800,8 +800,8 @@
     </a>
     <a
        xlink:href="Released/TurnoutTester.svg"
-       style="display:inline"
-       id="a5901">
+       id="a5901"
+       style="display:inline">
       <text
          id="text5265"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -928,8 +928,7 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="UpperLevel"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <line
        x1="155.83676"
        y1="463.72995"
@@ -938,15 +937,17 @@
        id="line4149"
        style="fill:none;stroke:#b3b3b3;stroke-width:7.91752052;stroke-linecap:butt;stroke-linejoin:miter;display:inline" />
     <path
-       d="m 155.83677,517.72995 9,9 40.5,0 18,13.5 0,45 -36,36 -18,0 -13.5,13.5"
+       d="m 159.50772,529.66054 4.41131,4.71722 46.61825,-0.61182 12.49358,17.47686 0.30591,33.98715 -36,36 -18,0 -13.5,13.5"
        id="path4011"
        inkscape:connector-curvature="0"
-       style="fill:none;stroke:#b3b3b3;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 4;display:inline" />
+       style="fill:none;stroke:#b3b3b3;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 4;display:inline"
+       sodipodi:nodetypes="cccccccc" />
     <path
-       d="m 209.83677,531.22995 0,54 -27,27 -13.5,0 -13.5,-13.5"
+       d="m 199.12983,533.98316 11.42503,12.17893 -0.71809,39.06786 -27,27 -13.5,0 -13.5,-13.5"
        id="path4013"
        inkscape:connector-curvature="0"
-       style="fill:none;stroke:#b3b3b3;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 4;display:inline" />
+       style="fill:none;stroke:#b3b3b3;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 4;display:inline"
+       sodipodi:nodetypes="cccccc" />
     <text
        transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"
        id="text4309"
@@ -965,13 +966,13 @@
        transform="matrix(0,-1,1,0,0,0)"
        id="text4313"
        style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-577.72992"
-       y="222.33676">
+       x="-584.15405"
+       y="222.64267">
       <tspan
          font-size="8"
          font-weight="500"
-         x="-577.34711"
-         y="230.33676"
+         x="-583.77124"
+         y="230.64267"
          id="tspan4315"
          style="font-size:8px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Bypass</tspan>
     </text>
@@ -1273,23 +1274,11 @@
      inkscape:groupmode="layer"
      id="layer7"
      inkscape:label="Valid Links"
-     style="display:inline"
-     sodipodi:insensitive="true">
-    <circle
-       cx="220.5"
-       cy="549"
-       r="4.5000072"
-       id="circle4281"
-       sodipodi:cx="220.5"
-       sodipodi:cy="549"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffffff;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
+     style="display:inline">
     <a
        xlink:href="Released/Bayshore.svg"
-       style="display:inline"
-       id="a5922">
+       id="a5922"
+       style="display:inline">
       <text
          y="24.22995"
          x="303.33676"
@@ -1306,8 +1295,8 @@
     </a>
     <a
        xlink:href="Released/Cavanaugh.svg"
-       style="display:inline"
-       id="a5926">
+       id="a5926"
+       style="display:inline">
       <text
          y="51.22995"
          x="303.33676"
@@ -1324,8 +1313,8 @@
     </a>
     <a
        xlink:href="Released/Dayton.svg"
-       style="display:inline"
-       id="a5934">
+       id="a5934"
+       style="display:inline">
       <text
          y="105.22995"
          x="301.83676"
@@ -1375,8 +1364,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Dayton.svg"
-       style="display:inline"
-       id="a5930">
+       id="a5930"
+       style="display:inline">
       <text
          y="78.229942"
          x="303.33676"
@@ -1417,8 +1406,8 @@
     </text>
     <a
        xlink:href="Released/Dayton.svg"
-       style="display:inline"
-       id="a5938">
+       id="a5938"
+       style="display:inline">
       <text
          y="78.229942"
          x="397.83676"
@@ -1446,8 +1435,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/NowheresHump.svg"
-       style="display:inline"
-       id="a5918">
+       id="a5918"
+       style="display:inline">
       <text
          y="456.22995"
          x="196.83676"
@@ -1488,9 +1477,9 @@
     </text>
     <a
        xlink:href="Released/NPF.svg"
-       style="display:inline"
+       transform="translate(93.23741,0.5755396)"
        id="a5950"
-       transform="translate(93.23741,0.5755396)">
+       style="display:inline">
       <text
          id="text5952"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1507,8 +1496,8 @@
     </a>
     <a
        xlink:href="Released/NowheresYard.svg"
-       style="display:inline"
-       id="a5910">
+       id="a5910"
+       style="display:inline">
       <text
          y="484.73938"
          x="41.536774"
@@ -1549,8 +1538,8 @@
     </text>
     <a
        xlink:href="Released/Windsor.svg"
-       style="display:inline"
-       id="a5905">
+       id="a5905"
+       style="display:inline">
       <text
          y="681.22992"
          x="91.536766"
@@ -1632,8 +1621,8 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       id="a4781"
-       style="display:inline">
+       style="display:inline"
+       id="a4781">
       <text
          y="186.22995"
          x="397.83676"
@@ -1650,8 +1639,8 @@
     </a>
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       id="a4789"
-       style="display:inline">
+       style="display:inline"
+       id="a4789">
       <text
          y="213.22995"
          x="397.83676"
@@ -1690,8 +1679,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       id="a4785"
-       style="display:inline">
+       style="display:inline"
+       id="a4785">
       <text
          y="213.22995"
          x="303.33676"
@@ -1708,8 +1697,8 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       id="a4777"
-       style="display:inline">
+       style="display:inline"
+       id="a4777">
       <text
          y="186.22995"
          x="303.33676"
@@ -1942,6 +1931,7 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Ravine_Quinn.svg"
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-325.1498,337.71954)"
        id="a3267">
       <text
          y="537.22992"
@@ -1957,19 +1947,6 @@
            font-size="12">Quinn</tspan>
       </text>
     </a>
-    <text
-       id="text4285"
-       style="fill:#000000;stroke:none;display:inline"
-       x="206.60896"
-       y="538.97205">
-      <tspan
-         font-size="9"
-         font-weight="500"
-         x="207.1075"
-         y="547.97205"
-         id="tspan4287"
-         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
-    </text>
     <a
        xlink:href="Released/Paso.svg"
        id="a4880">
