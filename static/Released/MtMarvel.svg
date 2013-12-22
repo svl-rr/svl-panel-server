@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="MtMarvel.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,10 +269,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.26"
-     inkscape:cx="416.34555"
+     inkscape:cx="320.3138"
      inkscape:cy="358.81101"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialPanelLinkLayer"
+     inkscape:current-layer="mainlinePanelLinkLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -839,10 +839,10 @@
      style="display:inline"
      sodipodi:insensitive="true">
     <a
-       xlink:href="Loop.svg"
-       style="display:inline"
+       xlink:href="Kaos_Kalamazoo.svg"
+       transform="translate(-196,328.00005)"
        id="pasoLink"
-       transform="translate(-196,328.00005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -858,9 +858,9 @@
     </a>
     <a
        xlink:href="NowheresYard.svg"
-       transform="translate(750,184.00005)"
+       style="display:inline"
        id="a3517"
-       style="display:inline">
+       transform="translate(750,184.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
@@ -879,10 +879,10 @@
            id="tspan3293">Yard</tspan></text>
     </a>
     <a
-       xlink:href="Loop.svg"
-       transform="translate(-196,368.00005)"
+       xlink:href="Kaos_Kalamazoo.svg"
+       style="display:inline"
        id="a3284"
-       style="display:inline">
+       transform="translate(-196,368.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3286"
@@ -906,9 +906,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvelTimber.svg"
-       transform="translate(-128.96363,169.03687)"
+       style="display:inline"
        id="a3534"
-       style="display:inline">
+       transform="translate(-128.96363,169.03687)">
       <text
          sodipodi:linespacing="125%"
          id="text3536"
