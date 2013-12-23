@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="Cavanaugh.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,10 +269,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="524.24008"
+     inkscape:cx="403.24008"
      inkscape:cy="392.66393"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -328,7 +328,7 @@
      style="display:inline">
     <rect
        style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="panelBackgroundSmall"
+       id="panelBackground"
        width="1047.9579"
        height="690.11475"
        x="0"
@@ -739,8 +739,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       id="daytonMainLink"
-       transform="translate(-20,124.00005)">
+       transform="translate(-20,124.00005)"
+       id="daytonMainLink">
       <text
          sodipodi:linespacing="125%"
          id="text3335"
@@ -756,8 +756,8 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       transform="translate(-20,134.00005)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-20,134.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -781,9 +781,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Bayshore.svg"
-       style="display:inline"
+       id="bayshoreLink"
        transform="translate(710,164.0005)"
-       id="bayshoreLink">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3225"

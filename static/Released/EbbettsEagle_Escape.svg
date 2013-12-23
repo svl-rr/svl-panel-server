@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="EbbettsEagle_Escape.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -325,7 +325,7 @@
      inkscape:cx="293.73644"
      inkscape:cy="362.19812"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -381,7 +381,7 @@
      sodipodi:insensitive="true">
     <rect
        style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="panelBackgroundSmall"
+       id="panelBackground"
        width="1047.9579"
        height="690.11475"
        x="0"
@@ -760,8 +760,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       transform="translate(-80,324.00005)"
-       id="greeleyMainLink">
+       id="greeleyMainLink"
+       transform="translate(-80,324.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -777,8 +777,8 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       id="EbbettsEagleMainLink"
-       transform="translate(820,424.00005)">
+       transform="translate(820,424.00005)"
+       id="EbbettsEagleMainLink">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -802,9 +802,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       style="display:inline"
+       transform="translate(-90,134.0005)"
        id="a3633"
-       transform="translate(-90,134.0005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -820,9 +820,9 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       transform="translate(750,404.0005)"
+       style="display:inline"
        id="a3642"
-       style="display:inline">
+       transform="translate(750,404.0005)">
       <text
          sodipodi:linespacing="125%"
          id="text3644"

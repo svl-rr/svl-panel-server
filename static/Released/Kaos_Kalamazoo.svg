@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="Kaos_Kalamazoo.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -325,7 +325,7 @@
      inkscape:cx="533.37475"
      inkscape:cy="438.511"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -381,7 +381,7 @@
      sodipodi:insensitive="true">
     <rect
        style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="panelBackgroundSmall"
+       id="panelBackground"
        width="1047.9579"
        height="690.11475"
        x="0"
@@ -993,8 +993,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvel.svg"
-       transform="translate(-50,-25.99995)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-50,-25.99995)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1010,8 +1010,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       id="a4142"
-       transform="translate(810,314.00005)">
+       transform="translate(810,314.00005)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1039,8 +1039,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       id="a3737"
-       transform="translate(-50,84.00005)">
+       transform="translate(-50,84.00005)"
+       id="a3737">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1064,9 +1064,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="JasperJct.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(620,-45.999496)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1082,9 +1082,9 @@
     </a>
     <a
        xlink:href="Klamath.svg"
-       id="a4653"
+       style="display:inline"
        transform="translate(190,8.0005043)"
-       style="display:inline">
+       id="a4653">
       <text
          sodipodi:linespacing="125%"
          id="text4655"

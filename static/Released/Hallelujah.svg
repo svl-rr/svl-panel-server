@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="Hallelujah.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -325,7 +325,7 @@
      inkscape:cx="509.31034"
      inkscape:cy="296.49194"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -381,7 +381,7 @@
      sodipodi:insensitive="true">
     <rect
        style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="panelBackgroundSmall"
+       id="panelBackground"
        width="1047.9579"
        height="690.11475"
        x="0"
@@ -851,8 +851,8 @@
      style="display:inline">
     <a
        xlink:href="Jacksonville.svg"
-       id="daytonIndustrialLink"
-       transform="translate(-90,54.000047)">
+       transform="translate(-90,54.000047)"
+       id="daytonIndustrialLink">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -868,8 +868,8 @@
     </a>
     <a
        xlink:href="Greeley_Gotham.svg"
-       transform="translate(820,334.00005)"
-       id="a4142">
+       id="a4142"
+       transform="translate(820,334.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -885,8 +885,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       transform="translate(-90,164.00005)"
-       id="a3156">
+       id="a3156"
+       transform="translate(-90,164.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -909,9 +909,9 @@
      style="display:inline">
     <a
        xlink:href="Dayton.svg"
-       id="a4148"
+       style="display:inline"
        transform="matrix(0,1,-1,0,1274.1147,22.11525)"
-       style="display:inline">
+       id="a4148">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

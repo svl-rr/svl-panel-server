@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="Greeley_Gotham.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -325,7 +325,7 @@
      inkscape:cx="445.80452"
      inkscape:cy="296.49194"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -381,7 +381,7 @@
      sodipodi:insensitive="true">
     <rect
        style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none"
-       id="panelBackgroundSmall"
+       id="panelBackground"
        width="1047.9579"
        height="690.11475"
        x="0"
@@ -841,7 +841,7 @@
        sodipodi:cy="410.11475"
        sodipodi:rx="20"
        sodipodi:ry="20"
-       d="m 1000,410.11475 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       d="m 1000,410.11475 c 0,11.04569 -8.95431,20 -20,20 -11.04569,0 -20,-8.95431 -20,-20 0,-11.0457 8.95431,-20 20,-20 11.04569,0 20,8.9543 20,20 z"
        transform="matrix(2,0,0,2,-1120,-366.13499)" />
     <path
        sodipodi:nodetypes="cccc"
@@ -1065,8 +1065,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Hallelujah.svg"
-       transform="translate(-90,54.000047)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-90,54.000047)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1082,8 +1082,8 @@
     </a>
     <a
        xlink:href="Fryton_Fremont.svg"
-       id="a4142"
-       transform="translate(820,54.000047)">
+       transform="translate(820,54.000047)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1107,9 +1107,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(790,64.000504)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
