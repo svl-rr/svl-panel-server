@@ -37,12 +37,12 @@
      id="namedview4355"
      showgrid="true"
      inkscape:zoom="1.4275405"
-     inkscape:cx="518.07915"
+     inkscape:cx="393.38917"
      inkscape:cy="313.46782"
      inkscape:window-x="-1"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3233"
+     inkscape:current-layer="g3307"
      inkscape:snap-object-midpoints="true"
      inkscape:object-paths="true"
      fit-margin-top="0"
@@ -726,8 +726,8 @@
     </g>
     <a
        xlink:href="Released/Bayshore.svg"
-       transform="translate(-200.86331,144.46043)"
-       id="a3256" />
+       id="a3256"
+       transform="translate(-200.86331,144.46043)" />
     <g
        id="g3308">
       <image
@@ -793,9 +793,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Released/DispatchNorth.svg"
-       style="display:inline"
+       transform="translate(22.409162,-209.2281)"
        id="a5893"
-       transform="translate(22.409162,-209.2281)">
+       style="display:inline">
       <text
          id="text5257"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -812,9 +812,9 @@
     </a>
     <a
        xlink:href="Released/DispatchSouth.svg"
-       style="display:inline"
+       transform="translate(143.74388,-209.475)"
        id="a5897"
-       transform="translate(143.74388,-209.475)">
+       style="display:inline">
       <text
          y="709.69495"
          x="223.56503"
@@ -831,9 +831,9 @@
     </a>
     <a
        xlink:href="Released/TurnoutTester.svg"
-       style="display:inline"
+       transform="translate(262.55321,-210.70042)"
        id="a5901"
-       transform="translate(262.55321,-210.70042)">
+       style="display:inline">
       <text
          id="text5265"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1007,48 +1007,6 @@
          style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Ashgrove Quarry</tspan>
     </text>
     <text
-       id="text4057"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-120.07794"
-       y="265.05966"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="-119.92462"
-         y="276.05966"
-         id="tspan4059"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Hallelujah (Jct.)</tspan>
-    </text>
-    <text
-       id="text4061"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-134.14796"
-       y="336.35367"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="-133.98878"
-         y="347.35367"
-         id="tspan4063"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Igo</tspan>
-    </text>
-    <text
-       id="text4065"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-26.958029"
-       y="335.39575"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="-26.804708"
-         y="346.39575"
-         id="tspan4067"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Jacksonville</tspan>
-    </text>
-    <text
        id="text4069"
        style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
        x="674.77716"
@@ -1061,34 +1019,6 @@
          y="245.7363"
          id="tspan4071"
          style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Jerico</tspan>
-    </text>
-    <text
-       id="text4073"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="14.112458"
-       y="395.36151"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="14.112458"
-         y="406.36151"
-         id="tspan4075"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Kaos (Jct.)</tspan>
-    </text>
-    <text
-       id="text4289"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-123.27546"
-       y="393.62918"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="-122.79305"
-         y="404.62918"
-         id="tspan4291"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Kalamazoo</tspan>
     </text>
     <text
        id="text4351"
@@ -1130,42 +1060,6 @@
          style="font-size:12px;font-weight:bold;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Jasper</tspan>
     </text>
     <circle
-       cx="274.5"
-       cy="252"
-       r="4.5000072"
-       id="circle4185"
-       sodipodi:cx="274.5"
-       sodipodi:cy="252"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-217.71969,77.881159)"
-       d="m 279.00001,252 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <circle
-       cx="274.5"
-       cy="279"
-       r="4.5000072"
-       id="circle4189"
-       sodipodi:cx="274.5"
-       sodipodi:cy="279"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-289.67355,148.41365)"
-       d="m 279.00001,279 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <circle
-       cx="274.5"
-       cy="306"
-       r="4.5000072"
-       id="circle4193"
-       sodipodi:cx="274.5"
-       sodipodi:cy="306"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-224.18241,97.517949)"
-       d="m 279.00001,306 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <circle
        cx="247.5"
        cy="306"
        r="4.5000072"
@@ -1192,18 +1086,6 @@
          style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
     </text>
     <circle
-       cx="274.5"
-       cy="360"
-       r="4.5000072"
-       id="circle4197"
-       sodipodi:cx="274.5"
-       sodipodi:cy="360"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffffff;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-180.32031,78.190449)"
-       d="m 279.00001,360 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <circle
        cx="234"
        cy="360"
        r="4.5000072"
@@ -1229,18 +1111,6 @@
          id="tspan4259"
          style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
     </text>
-    <circle
-       cx="274.5"
-       cy="414"
-       r="4.5000072"
-       id="circle4245"
-       sodipodi:cx="274.5"
-       sodipodi:cy="414"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-344.20882,67.107005)"
-       d="m 279.00001,414 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
     <circle
        d="m 400.50001,36 c 0,2.485285 -2.01472,4.500007 -4.50001,4.500007 -2.48529,0 -4.50001,-2.014722 -4.50001,-4.500007 0,-2.485285 2.01472,-4.500007 4.50001,-4.500007 2.48529,0 4.50001,2.014722 4.50001,4.500007 z"
        cx="396"
@@ -1283,9 +1153,9 @@
     </text>
     <a
        xlink:href="Released/Cavanaugh.svg"
-       id="a3495"
+       transform="matrix(1,0.03491,-0.17497666,0.99389152,23.319208,-47.015968)"
        style="fill:#ffffff;fill-opacity:1;display:inline"
-       transform="matrix(1,0.03491,-0.17497666,0.99389152,23.319208,-47.015968)">
+       id="a3495">
       <text
          y="-353.68671"
          x="416.19781"
@@ -1310,9 +1180,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Released/Bayshore.svg"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,382.3791,401.44493)"
+       id="a5922"
        style="display:inline"
-       id="a5922">
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,382.3791,401.44493)">
       <text
          y="24.22995"
          x="303.33676"
@@ -1329,9 +1199,9 @@
     </a>
     <a
        xlink:href="Released/Cavanaugh.svg"
-       transform="matrix(1,0.03491,-0.17497666,0.99389156,31.134517,-61.174592)"
+       id="a4933"
        style="fill:#ffffff;fill-opacity:1;display:inline"
-       id="a4933">
+       transform="matrix(1,0.03491,-0.17497666,0.99389156,31.134517,-61.174592)">
       <text
          transform="matrix(0.88866157,0.83247253,-1.0429579,0.1482749,0,0)"
          id="text4925"
@@ -1349,9 +1219,9 @@
     </a>
     <a
        xlink:href="Released/Dayton.svg"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,219.42248,207.00624)"
+       id="a5938"
        style="display:inline"
-       id="a5938">
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,219.42248,207.00624)">
       <text
          y="78.229942"
          x="397.83676"
@@ -1368,9 +1238,9 @@
     </a>
     <a
        xlink:href="Released/Dayton.svg"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,181.95434,187.26142)"
+       id="a5930"
        style="display:inline"
-       id="a5930">
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,181.95434,187.26142)">
       <text
          y="78.229942"
          x="303.33676"
@@ -1493,9 +1363,9 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       id="a6152"
+       transform="translate(4.6043151,4.7841725)"
        style="display:inline"
-       transform="translate(4.6043151,4.7841725)">
+       id="a6152">
       <text
          transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
          y="346.12308"
@@ -1513,9 +1383,9 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       id="a6156"
+       transform="translate(4.6043151,4.7841725)"
        style="display:inline"
-       transform="translate(4.6043151,4.7841725)">
+       id="a6156">
       <text
          transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
          y="364.15753"
@@ -1557,9 +1427,9 @@
        d="m 306.00001,198 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       id="a6148"
+       transform="translate(4.6043151,4.7841725)"
        style="display:inline"
-       transform="translate(4.6043151,4.7841725)">
+       id="a6148">
       <text
          id="text4883"
          style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1589,9 +1459,9 @@
        d="m 400.50001,36 c 0,2.485285 -2.01472,4.500007 -4.50001,4.500007 -2.48529,0 -4.50001,-2.014722 -4.50001,-4.500007 0,-2.485285 2.01472,-4.500007 4.50001,-4.500007 2.48529,0 4.50001,2.014722 4.50001,4.500007 z" />
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       id="a6144"
+       transform="translate(4.6043151,4.7841725)"
        style="display:inline"
-       transform="translate(4.6043151,4.7841725)">
+       id="a6144">
       <text
          transform="matrix(0.97941279,0.2184725,-0.58339902,0.89088417,0,0)"
          y="195.92513"
@@ -1673,6 +1543,160 @@
        style="fill:#ffff00;stroke:none;display:inline"
        transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,101.01537,176.98637)"
        d="m 400.50001,144 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <a
+       xlink:href="Released/Hallelujah.svg"
+       id="a3251"
+       style="display:inline"
+       transform="translate(4.6043151,4.7841725)">
+      <text
+         transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
+         y="265.05966"
+         x="-120.07794"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4057">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4059"
+           y="276.05966"
+           x="-119.92462"
+           font-weight="500"
+           font-size="12">Hallelujah (Jct.)</tspan>
+      </text>
+    </a>
+    <circle
+       cx="274.5"
+       cy="252"
+       r="4.5000072"
+       id="circle4185"
+       sodipodi:cx="274.5"
+       sodipodi:cy="252"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-213.11538,82.665332)"
+       d="m 279.00001,252 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <circle
+       cx="274.5"
+       cy="279"
+       r="4.5000072"
+       id="circle4189"
+       sodipodi:cx="274.5"
+       sodipodi:cy="279"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-285.06923,153.19782)"
+       d="m 279.00001,279 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <circle
+       cx="274.5"
+       cy="306"
+       r="4.5000072"
+       id="circle4193"
+       sodipodi:cx="274.5"
+       sodipodi:cy="306"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-219.5781,102.30212)"
+       d="m 279.00001,306 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <a
+       xlink:href="Released/Jacksonville.svg"
+       id="a4067">
+      <text
+         transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,4.6043151,4.7841725)"
+         y="336.35367"
+         x="-134.14796"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4061">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4063"
+           y="347.35367"
+           x="-133.98878"
+           font-weight="500"
+           font-size="12">Igo</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/Jacksonville.svg"
+       id="a4063">
+      <text
+         transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,4.6043151,4.7841725)"
+         y="335.39575"
+         x="-26.958029"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4065">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4067"
+           y="346.39575"
+           x="-26.804708"
+           font-weight="500"
+           font-size="12">Jacksonville</tspan>
+      </text>
+    </a>
+    <circle
+       cx="274.5"
+       cy="360"
+       r="4.5000072"
+       id="circle4197"
+       sodipodi:cx="274.5"
+       sodipodi:cy="360"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffffff;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-175.71599,82.974621)"
+       d="m 279.00001,360 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <a
+       xlink:href="Released/Kaos_Kalamazoo.svg"
+       id="a4074">
+      <text
+         transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,4.6043151,4.7841725)"
+         y="395.36151"
+         x="14.112458"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4073">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4075"
+           y="406.36151"
+           x="14.112458"
+           font-weight="500"
+           font-size="12">Kaos (Jct.)</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/Kaos_Kalamazoo.svg"
+       id="a4078"
+       style="display:inline"
+       transform="translate(4.6043151,4.7841725)">
+      <text
+         transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
+         y="393.62918"
+         x="-123.27546"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4289">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4291"
+           y="404.62918"
+           x="-122.79305"
+           font-weight="500"
+           font-size="12">Kalamazoo</tspan>
+      </text>
+    </a>
+    <circle
+       cx="274.5"
+       cy="414"
+       r="4.5000072"
+       id="circle4245"
+       sodipodi:cx="274.5"
+       sodipodi:cy="414"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-339.60451,71.891177)"
+       d="m 279.00001,414 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
   </g>
   <g
      transform="translate(4.6043148,4.7841725)"
@@ -1695,18 +1719,6 @@
          font-weight="500"
          font-size="12">Loop</tspan>
     </text>
-    <circle
-       d="m 207.00001,432 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-416.30091,13.6805)"
-       style="fill:#ffffff;stroke:none;display:inline"
-       sodipodi:ry="4.5000072"
-       sodipodi:rx="4.5000072"
-       sodipodi:cy="432"
-       sodipodi:cx="202.5"
-       id="circle3453"
-       r="4.5000072"
-       cy="432"
-       cx="202.5" />
   </g>
   <g
      style="display:inline"
@@ -1716,9 +1728,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Released/NPF.svg"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-281.85734,-149.77441)"
+       style="display:inline"
        id="a3235"
-       style="display:inline">
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-281.85734,-149.77441)">
       <text
          y="483.22995"
          x="81.536774"
@@ -1735,9 +1747,9 @@
     </a>
     <a
        xlink:href="Released/NowheresYard.svg"
-       id="a3241"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-258.0981,-139.72427)"
        style="display:inline"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-258.0981,-139.72427)">
+       id="a3241">
       <text
          id="text3243"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1754,9 +1766,9 @@
     </a>
     <a
        xlink:href="Released/NowheresHump.svg"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-277.2654,-102.34134)"
+       style="display:inline"
        id="a3247"
-       style="display:inline">
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-277.2654,-102.34134)">
       <text
          id="text3249"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1773,9 +1785,9 @@
     </a>
     <a
        xlink:href="Released/Windsor.svg"
-       id="a3259"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-44.573289,-321.48929)"
        style="display:inline"
-       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-44.573289,-321.48929)">
+       id="a3259">
       <text
          id="text3261"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1904,9 +1916,9 @@
        d="m 400.50001,36 c 0,2.485285 -2.01472,4.500007 -4.50001,4.500007 -2.48529,0 -4.50001,-2.014722 -4.50001,-4.500007 0,-2.485285 2.01472,-4.500007 4.50001,-4.500007 2.48529,0 4.50001,2.014722 4.50001,4.500007 z" />
     <a
        xlink:href="Released/Tracy.svg"
-       transform="translate(4.6043151,4.7841725)"
+       id="a3525"
        style="display:inline"
-       id="a3525">
+       transform="translate(4.6043151,4.7841725)">
       <text
          id="text3429"
          style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1973,8 +1985,8 @@
        cx="274.5" />
     <a
        xlink:href="Released/Ravine_Quinn.svg"
-       transform="translate(-17.188077,-4.4832353)"
-       id="a4349">
+       id="a4349"
+       transform="translate(-17.188077,-4.4832353)">
       <text
          id="text3459"
          style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1992,9 +2004,9 @@
     </a>
     <a
        xlink:href="Released/Ravine_Quinn.svg"
-       transform="translate(4.6043151,4.7841725)"
+       id="a4353"
        style="display:inline"
-       id="a4353">
+       transform="translate(4.6043151,4.7841725)">
       <text
          transform="matrix(0.97941279,0.2184725,-0.58339902,0.89088417,0,0)"
          y="168.5247"
@@ -2012,9 +2024,9 @@
     </a>
     <a
        xlink:href="Released/Paso.svg"
-       id="a3533"
+       transform="translate(4.6043151,4.7841725)"
        style="display:inline"
-       transform="translate(4.6043151,4.7841725)">
+       id="a3533">
       <text
          id="text3417"
          style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
