@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Upton.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,10 +269,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1822589"
-     inkscape:cx="283.52692"
+     inkscape:cx="576.0642"
      inkscape:cy="353.8371"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlinePanelLinkLayer"
+     inkscape:current-layer="mainlineTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -804,21 +804,21 @@
        id="g5554"
        transform="matrix(1,0,0,-1,-380,708.189)">
       <path
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
-         inkscape:label="#path4221"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 520,514.0945 20,20 20,0"
-         id="TO701.R"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccc" />
-      <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO701.N"
          d="m 520,534.0945 40,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,514.0945 20,20 20,0"
+         id="TO701.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
     </g>
     <g
        style="display:inline"
@@ -907,9 +907,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Tracy.svg"
-       style="display:inline"
+       transform="translate(-144.50625,349.4938)"
        id="pasoLink"
-       transform="translate(-144.50625,349.4938)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -925,9 +925,9 @@
     </a>
     <a
        xlink:href="Victoria.svg"
-       transform="translate(740,214.00005)"
+       style="display:inline"
        id="a3517"
-       style="display:inline">
+       transform="translate(740,214.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
@@ -943,9 +943,9 @@
     </a>
     <a
        xlink:href="Ravine_Quinn.svg"
-       transform="translate(-190,54.000056)"
+       style="display:inline"
        id="a5609"
-       style="display:inline">
+       transform="translate(-190,54.000056)">
       <text
          sodipodi:linespacing="125%"
          id="text5611"
@@ -973,9 +973,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Tracy.svg"
-       transform="translate(-94.50625,349.49425)"
+       style="display:inline"
        id="a3534"
-       style="display:inline">
+       transform="translate(-94.50625,349.49425)">
       <text
          sodipodi:linespacing="125%"
          id="text3536"
@@ -991,9 +991,9 @@
     </a>
     <a
        xlink:href="Victoria.svg"
-       style="display:inline"
+       transform="translate(720,234.0005)"
        id="a5512"
-       transform="translate(720,234.0005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
