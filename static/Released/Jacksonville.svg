@@ -487,7 +487,7 @@
        id="path3174"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="TimberTransferPath()" />
+       onclick="" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -502,9 +502,9 @@
        d="m 480,454.0945 -100,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="GeneralStorePath()" />
+       onclick="" />
     <path
-       onclick="EngineTTPath()"
+       onclick=""
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 1020,314.0945 -60,-60 -40,0"
@@ -518,7 +518,7 @@
        d="m 960,334.0945 0,120"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="AppleseedBoxPath()" />
+       onclick="" />
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
@@ -526,7 +526,7 @@
        d="m 40,234.0945 60,60 20,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="MidGothamPath()" />
+       onclick="" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -534,7 +534,7 @@
        id="path4060"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="GothamBranchPath()" />
+       onclick="" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -542,7 +542,7 @@
        id="path4064"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="CabooseTrackPath()" />
+       onclick="" />
     <g
        transform="translate(520,-280)"
        id="g4529"
@@ -607,7 +607,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick="WolfgangWaterPath()"
+       onclick=""
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 490,344.0945 -50,50 -20,0 -40,40"
@@ -636,7 +636,7 @@
          inkscape:label="#path4221" />
     </g>
     <path
-       onclick="TimberTransferPath()"
+       onclick=""
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3500"
@@ -644,7 +644,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221" />
     <path
-       onclick="TimberTransferPath()"
+       onclick=""
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4344"
@@ -736,7 +736,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick="GothamBranchPath()"
+       onclick=""
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3185"
@@ -813,7 +813,7 @@
        id="path3215"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="GothamBranchPath()" />
+       onclick="" />
     <g
        transform="matrix(-1,0,0,1,960,-280)"
        id="g3217"
@@ -885,7 +885,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       onclick="GothamBranchPath()"
+       onclick=""
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3238"
@@ -899,7 +899,7 @@
        id="path3240"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="TimberTransferPath()" />
+       onclick="" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -907,7 +907,7 @@
        id="path3242"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="GothamBranchPath()" />
+       onclick="" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -915,9 +915,9 @@
        id="path3244"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="TimberTransferPath()" />
+       onclick="" />
     <path
-       onclick="GothamBranchPath()"
+       onclick=""
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3246"
@@ -925,7 +925,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221" />
     <path
-       onclick="GothamBranchPath()"
+       onclick=""
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3248"
@@ -975,7 +975,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick="AppleseedBoxPath()"
+       onclick=""
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 980,334.0945 20,20 0,100"
@@ -1025,7 +1025,7 @@
          inkscape:label="#path4221" />
     </g>
     <path
-       onclick="GothamBranchPath()"
+       onclick=""
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3284"
@@ -1033,7 +1033,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221" />
     <path
-       onclick="AppleseedBoxPath()"
+       onclick=""
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 920,274.0945 20,20"
@@ -1047,9 +1047,9 @@
        d="m 810,64.0945 -90,90"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="WolfgangWaterPath()" />
+       onclick="" />
     <path
-       onclick="TimberTransferPath()"
+       onclick=""
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3296"
@@ -1063,7 +1063,7 @@
        id="path3298"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="GothamBranchPath()" />
+       onclick="" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -1071,9 +1071,9 @@
        id="path3300"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
-       onclick="GothamBranchPath()" />
+       onclick="" />
     <path
-       onclick="GothamBranchPath()"
+       onclick=""
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path4136"
@@ -1087,9 +1087,9 @@
        id="path4138"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
-       onclick="GothamBranchPath()" />
+       onclick="" />
     <path
-       onclick="GothamBranchPath()"
+       onclick=""
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path4140"
@@ -1103,7 +1103,7 @@
        id="path4142"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="GothamBranchPath()" />
+       onclick="" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1255,7 +1255,7 @@
        id="path3292"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
-       onclick="TimberTransferPath()" />
+       onclick="" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
@@ -1263,9 +1263,9 @@
        id="path3288"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="TimberTransferPath()" />
+       onclick="" />
     <path
-       onclick="TimberTransferPath()"
+       onclick=""
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3290"

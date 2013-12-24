@@ -517,9 +517,9 @@
        id="path3174"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="TimberTransferPath()" />
+       onclick="" />
     <path
-       onclick="EngineTTPath()"
+       onclick=""
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 960,454.0945 -40,40 -160,0"
@@ -533,7 +533,7 @@
        d="m 220,454.0945 -100,0 -20,-20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="MidGothamPath()" />
+       onclick="" />
     <g
        style="display:inline"
        id="g4516"
@@ -598,7 +598,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick="TimberTransferPath()"
+       onclick=""
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3500"
@@ -675,7 +675,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick="TimberTransferPath()"
+       onclick=""
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3619"
@@ -683,7 +683,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221" />
     <path
-       onclick="MidGothamPath()"
+       onclick=""
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 720,454.0945 160,0 20,-20"
@@ -697,9 +697,9 @@
        id="path3623"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="TimberTransferPath()" />
+       onclick="" />
     <path
-       onclick="TimberTransferPath()"
+       onclick=""
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3625"
