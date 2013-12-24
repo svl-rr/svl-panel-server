@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="Kaos_Kalamazoo.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -322,10 +322,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="377.1382"
+     inkscape:cx="548.89363"
      inkscape:cy="319.04317"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlineTrackLayer"
+     inkscape:current-layer="mainlinePanelLinkLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -503,12 +503,6 @@
      style="display:inline"
      sodipodi:insensitive="true">
     <path
-       inkscape:connector-curvature="0"
-       id="path3235"
-       d="m 840,154.0945 0,40"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
-       sodipodi:nodetypes="cc" />
-    <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3194"
@@ -610,14 +604,6 @@
        d="m 720,454.0945 160,0 40,-40"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221" />
-    <path
-       inkscape:label="#path4221"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 690,334.0945 110,0 40,-40 0,-60"
-       id="path3751"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc"
-       onclick="" />
     <g
        transform="matrix(1,0,0,-1,380,988.189)"
        id="g4618"
@@ -1103,6 +1089,20 @@
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
+    <path
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 690,334.0945 110,0 40,-40 0,-60"
+       id="path3751"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       onclick="" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path3235"
+       d="m 840,154.0945 0,40"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
+       sodipodi:nodetypes="cc" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1113,8 +1113,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvel.svg"
-       id="daytonIndustrialLink"
-       transform="translate(-60,10.000047)">
+       transform="translate(-60,10.000047)"
+       id="daytonIndustrialLink">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1130,8 +1130,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       transform="translate(830,324.00005)"
-       id="a4142">
+       id="a4142"
+       transform="translate(830,324.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text4593"
@@ -1147,8 +1147,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       transform="translate(-60,50.000047)"
-       id="a3737">
+       id="a3737"
+       transform="translate(-60,50.000047)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1164,8 +1164,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       id="a3192"
-       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,944.46301,540.1413)">
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,944.46301,540.1413)"
+       id="a3192">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1179,19 +1179,11 @@
            y="-73.885246"
            id="tspan3196">Jerico SB</tspan></text>
     </a>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="industrialPanelLinkLayer"
-     inkscape:label="Industrial Panel Links"
-     transform="translate(0,-5.0432739e-4)"
-     style="display:inline"
-     sodipodi:insensitive="true">
     <a
        xlink:href="JasperJct.svg"
-       id="a4148"
-       transform="translate(660,-125.9995)"
-       style="display:inline">
+       style="display:inline"
+       transform="translate(660,-125.99995)"
+       id="a4148">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1205,11 +1197,19 @@
            x="100"
            y="246.11475">Jasper Jct. (Staging)</tspan></text>
     </a>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="industrialPanelLinkLayer"
+     inkscape:label="Industrial Panel Links"
+     transform="translate(0,-5.0432739e-4)"
+     style="display:inline"
+     sodipodi:insensitive="true">
     <a
        xlink:href="Klamath.svg"
-       style="display:inline"
+       id="a4653"
        transform="translate(230,-19.999496)"
-       id="a4653">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text4655"
@@ -1225,9 +1225,9 @@
     </a>
     <a
        xlink:href="Klamath.svg"
-       id="a3692"
+       style="display:inline"
        transform="translate(580,34.000504)"
-       style="display:inline">
+       id="a3692">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
