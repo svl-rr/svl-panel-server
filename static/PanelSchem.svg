@@ -36,13 +36,13 @@
      inkscape:window-height="1152"
      id="namedview4355"
      showgrid="false"
-     inkscape:zoom="1.2126772"
-     inkscape:cx="366.54276"
-     inkscape:cy="534.81446"
+     inkscape:zoom="0.97968464"
+     inkscape:cx="-61.710261"
+     inkscape:cy="457.79073"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer7" />
+     inkscape:current-layer="layer5" />
   <metadata
      id="metadata3815">
     <dc:date>2013-08-09 17:59Z</dc:date>
@@ -717,8 +717,8 @@
     </g>
     <a
        xlink:href="Released/Bayshore.svg"
-       transform="translate(-200.86331,144.46043)"
-       id="a3256" />
+       id="a3256"
+       transform="translate(-200.86331,144.46043)" />
     <g
        id="g3308">
       <image
@@ -762,106 +762,11 @@
      inkscape:label="Other"
      style="display:inline"
      sodipodi:insensitive="true">
-    <a
-       xlink:href="Released/DispatchNorth.svg"
-       style="display:inline"
-       id="a5893"
-       transform="translate(76.25671,5.0515383)">
-      <text
-         id="text5257"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         x="59.680912"
-         y="709.69495">
-        <tspan
-           font-size="12"
-           font-weight="500"
-           x="59.997318"
-           y="720.69495"
-           id="tspan5259"
-           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Dispatch North</tspan>
-      </text>
-    </a>
-    <a
-       xlink:href="Released/DispatchSouth.svg"
-       style="display:inline"
-       id="a5897"
-       transform="translate(12.571881,5.0515383)">
-      <text
-         y="709.69495"
-         x="223.56503"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text5261">
-        <tspan
-           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
-           id="tspan5263"
-           y="720.69495"
-           x="223.88144"
-           font-weight="500"
-           font-size="12">Dispatch South</tspan>
-      </text>
-    </a>
-    <a
-       xlink:href="Released/TurnoutTester.svg"
-       style="display:inline"
-       id="a5901"
-       transform="translate(33.600012,3.7038821)">
-      <text
-         id="text5265"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         x="389.97455"
-         y="710.67346">
-        <tspan
-           font-size="12"
-           font-weight="500"
-           x="390.29095"
-           y="721.67346"
-           id="tspan5267"
-           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Turnout Tester</tspan>
-      </text>
-    </a>
     <path
        d="m 224.99881,388.89125 5.67666,5.67666 -73.12474,73.12474 -5.67666,-5.67666 z"
        id="path4019"
        style="fill:url(#linearGradient4765);stroke:none;display:inline"
        inkscape:connector-curvature="0" />
-    <a
-       xlink:href="dispatchMatrix.html"
-       id="a3556"
-       style="display:inline"
-       transform="translate(-28.8,5.0515383)">
-      <text
-         y="709.69495"
-         x="59.680912"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text3558">
-        <tspan
-           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
-           id="tspan3560"
-           y="720.69495"
-           x="59.997318"
-           font-weight="500"
-           font-size="12">Dispatch Matrix</tspan>
-      </text>
-    </a>
-    <a
-       xlink:href="panelMatrix.html"
-       transform="translate(-52.325842,4.0730227)"
-       id="a3562"
-       style="display:inline">
-      <text
-         y="710.67346"
-         x="389.97455"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text3564">
-        <tspan
-           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
-           id="tspan3566"
-           y="721.67346"
-           x="390.29095"
-           font-weight="500"
-           font-size="12">Panel Matrix</tspan>
-      </text>
-    </a>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1028,62 +933,10 @@
   </g>
   <g
      inkscape:groupmode="layer"
-     id="layer8"
+     id="layer5"
      inkscape:label="Invalid Links"
-     style="opacity:0.5;display:inline"
+     style="opacity:0.5"
      sodipodi:insensitive="true">
-    <a
-       xlink:href="Released/Klamath.svg"
-       id="a4369">
-      <text
-         y="348.22995"
-         x="157.13672"
-         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-         id="text4351">
-        <circle
-           transform="translate(-10.663234,1.5233192)"
-           style="fill:#ffffff;fill-opacity:1;stroke:none"
-           sodipodi:ry="4.5000072"
-           sodipodi:rx="4.5000072"
-           sodipodi:cy="576"
-           sodipodi:cx="166.5"
-           id="circle4345"
-           r="4.5000072"
-           cy="576"
-           cx="166.5" />
-        <tspan
-           style="font-size:12px;font-weight:bold;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
-           id="tspan4353"
-           y="359.22995"
-           x="157.79297"
-           font-weight="bold"
-           font-size="12">Klamath</tspan>
-      </text>
-    </a>
-    <circle
-       cx="234"
-       cy="360"
-       r="4.5000072"
-       id="circle4233"
-       sodipodi:cx="234"
-       sodipodi:cy="360"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffffff;stroke:none;display:inline"
-       transform="translate(-10.663234,-4.2700512)" />
-    <text
-       id="text4257"
-       style="fill:#000000;stroke:none;display:inline"
-       x="219.71899"
-       y="350.15659">
-      <tspan
-         font-size="9"
-         font-weight="500"
-         x="220.21753"
-         y="359.15659"
-         id="tspan4259"
-         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
-    </text>
     <text
        id="text4139"
        style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
@@ -1096,19 +949,6 @@
          y="62.229946"
          id="tspan4141"
          style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Carlsbad</tspan>
-    </text>
-    <text
-       id="text4069"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="276.33676"
-       y="321.22995">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="276.83188"
-         y="332.22995"
-         id="tspan4071"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Jerico</tspan>
     </text>
     <text
        id="text4077"
@@ -1127,13 +967,24 @@
   <g
      inkscape:groupmode="layer"
      id="layer7"
-     inkscape:label="Valid Links"
+     inkscape:label="Links"
      style="display:inline"
      sodipodi:insensitive="true">
+    <circle
+       cx="234"
+       cy="360"
+       r="4.5000072"
+       id="circle4233"
+       sodipodi:cx="234"
+       sodipodi:cy="360"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffffff;stroke:none;display:inline"
+       transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Bayshore.svg"
-       style="display:inline"
-       id="a5922">
+       id="a5922"
+       style="display:inline">
       <text
          y="24.22995"
          x="303.33676"
@@ -1150,8 +1001,8 @@
     </a>
     <a
        xlink:href="Released/Cavanaugh.svg"
-       style="display:inline"
-       id="a5926">
+       id="a5926"
+       style="display:inline">
       <text
          y="51.22995"
          x="303.33676"
@@ -1168,8 +1019,8 @@
     </a>
     <a
        xlink:href="Released/Dayton.svg"
-       style="display:inline"
-       id="a5934">
+       id="a5934"
+       style="display:inline">
       <text
          y="105.22995"
          x="301.83676"
@@ -1219,8 +1070,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Dayton.svg"
-       style="display:inline"
-       id="a5930">
+       id="a5930"
+       style="display:inline">
       <text
          y="78.229942"
          x="303.33676"
@@ -1261,8 +1112,8 @@
     </text>
     <a
        xlink:href="Released/Dayton.svg"
-       style="display:inline"
-       id="a5938">
+       id="a5938"
+       style="display:inline">
       <text
          y="78.229942"
          x="397.83676"
@@ -1290,8 +1141,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/NowheresHump.svg"
-       style="display:inline"
-       id="a5918">
+       id="a5918"
+       style="display:inline">
       <text
          y="456.22995"
          x="196.83676"
@@ -1332,9 +1183,9 @@
     </text>
     <a
        xlink:href="Released/NPF.svg"
-       style="display:inline"
+       transform="translate(93.23741,0.5755396)"
        id="a5950"
-       transform="translate(93.23741,0.5755396)">
+       style="display:inline">
       <text
          id="text5952"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -1351,8 +1202,8 @@
     </a>
     <a
        xlink:href="Released/NowheresYard.svg"
-       style="display:inline"
-       id="a5910">
+       id="a5910"
+       style="display:inline">
       <text
          y="484.73938"
          x="41.536774"
@@ -1393,8 +1244,8 @@
     </text>
     <a
        xlink:href="Released/Windsor.svg"
-       style="display:inline"
-       id="a5905">
+       id="a5905"
+       style="display:inline">
       <text
          y="681.22992"
          x="91.536766"
@@ -1476,8 +1327,8 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       id="a4781"
-       style="display:inline">
+       style="display:inline"
+       id="a4781">
       <text
          y="186.22995"
          x="397.83676"
@@ -1494,8 +1345,8 @@
     </a>
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       id="a4789"
-       style="display:inline">
+       style="display:inline"
+       id="a4789">
       <text
          y="213.22995"
          x="397.83676"
@@ -1534,8 +1385,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Greeley_Gotham.svg"
-       id="a4785"
-       style="display:inline">
+       style="display:inline"
+       id="a4785">
       <text
          y="213.22995"
          x="303.33676"
@@ -1552,8 +1403,8 @@
     </a>
     <a
        xlink:href="Released/Fryton_Fremont.svg"
-       id="a4777"
-       style="display:inline">
+       style="display:inline"
+       id="a4777">
       <text
          y="186.22995"
          x="303.33676"
@@ -1786,8 +1637,8 @@
        transform="translate(-10.663234,-4.2700512)" />
     <a
        xlink:href="Released/Ravine_Quinn.svg"
-       id="a3267"
-       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-325.1498,337.71954)">
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-325.1498,337.71954)"
+       id="a3267">
       <text
          y="537.22992"
          x="166.73676"
@@ -2052,8 +1903,8 @@
     </text>
     <a
        xlink:href="Released/JasperJct.svg"
-       id="a4365"
-       style="display:inline">
+       style="display:inline"
+       id="a4365">
       <text
          y="294.22995"
          x="159.13666"
@@ -2066,6 +1917,161 @@
            x="159.44135"
            font-weight="bold"
            font-size="12">Jasper Jct.</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/Klamath.svg"
+       id="a4369"
+       style="display:inline">
+      <text
+         y="348.22995"
+         x="157.13672"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4351">
+        <circle
+           transform="translate(-10.663234,1.5233192)"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:ry="4.5000072"
+           sodipodi:rx="4.5000072"
+           sodipodi:cy="576"
+           sodipodi:cx="166.5"
+           id="circle4345"
+           r="4.5000072"
+           cy="576"
+           cx="166.5" />
+        <tspan
+           style="font-size:12px;font-weight:bold;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4353"
+           y="359.22995"
+           x="157.79297"
+           font-weight="bold"
+           font-size="12">Klamath</tspan>
+      </text>
+    </a>
+    <text
+       id="text4257"
+       style="opacity:0.5;fill:#000000;stroke:none;display:inline"
+       x="219.71899"
+       y="350.15659">
+      <tspan
+         font-size="9"
+         font-weight="500"
+         x="220.21753"
+         y="359.15659"
+         id="tspan4259"
+         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
+    </text>
+    <a
+       xlink:href="Released/Jacksonville.svg"
+       id="a4906"
+       style="display:inline">
+      <text
+         y="321.22995"
+         x="276.33676"
+         style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4069">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4071"
+           y="332.22995"
+           x="276.83188"
+           font-weight="500"
+           font-size="12">Jerico</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/DispatchNorth.svg"
+       transform="translate(76.25671,5.0515383)"
+       id="a5893"
+       style="display:inline">
+      <text
+         id="text5257"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         x="59.680912"
+         y="709.69495">
+        <tspan
+           font-size="12"
+           font-weight="500"
+           x="59.997318"
+           y="720.69495"
+           id="tspan5259"
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Dispatch North</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/DispatchSouth.svg"
+       transform="translate(12.571881,5.0515383)"
+       id="a5897"
+       style="display:inline">
+      <text
+         y="709.69495"
+         x="223.56503"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text5261">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan5263"
+           y="720.69495"
+           x="223.88144"
+           font-weight="500"
+           font-size="12">Dispatch South</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/TurnoutTester.svg"
+       transform="translate(33.600012,3.7038821)"
+       id="a5901"
+       style="display:inline">
+      <text
+         id="text5265"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         x="389.97455"
+         y="710.67346">
+        <tspan
+           font-size="12"
+           font-weight="500"
+           x="390.29095"
+           y="721.67346"
+           id="tspan5267"
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Turnout Tester</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="dispatchMatrix.html"
+       transform="translate(-28.8,5.0515383)"
+       style="display:inline"
+       id="a3556">
+      <text
+         y="709.69495"
+         x="59.680912"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3558">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan3560"
+           y="720.69495"
+           x="59.997318"
+           font-weight="500"
+           font-size="12">Dispatch Matrix</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="panelMatrix.html"
+       style="display:inline"
+       id="a3562"
+       transform="translate(-52.32584,4.0730227)">
+      <text
+         y="710.67346"
+         x="389.97455"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3564">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan3566"
+           y="721.67346"
+           x="390.29095"
+           font-weight="500"
+           font-size="12">Panel Matrix</tspan>
       </text>
     </a>
   </g>
