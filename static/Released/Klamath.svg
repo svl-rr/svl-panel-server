@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="Klamath.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -322,10 +322,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="548.27604"
+     inkscape:cx="450.03014"
      inkscape:cy="354.54669"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlineTrackLayer"
+     inkscape:current-layer="mainlinePanelLinkLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
@@ -950,9 +950,9 @@
        inkscape:label="#path4221" />
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       id="a3201"
+       style="display:inline"
        transform="translate(50,220)"
-       style="display:inline">
+       id="a3201">
       <path
          inkscape:connector-curvature="0"
          id="path4651"
@@ -970,9 +970,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       style="display:inline"
+       id="a3692"
        transform="translate(-36,4.0000547)"
-       id="a3692">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -988,9 +988,9 @@
     </a>
     <a
        xlink:href="JasperJct.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(-90,194.00005)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1004,19 +1004,11 @@
            x="100"
            y="246.11475">Jasper Jct. (Staging)</tspan></text>
     </a>
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="industrialPanelLinkLayer"
-     inkscape:label="Industrial Panel Links"
-     transform="translate(0,-5.0432739e-4)"
-     style="display:inline"
-     sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       id="a4653"
-       transform="translate(840,374.0005)"
-       style="display:inline">
+       style="display:inline"
+       transform="translate(840,374.00005)"
+       id="a4653">
       <text
          sodipodi:linespacing="125%"
          id="text4655"
@@ -1031,6 +1023,13 @@
            sodipodi:role="line">Kalamazoo</tspan></text>
     </a>
   </g>
+  <g
+     inkscape:groupmode="layer"
+     id="industrialPanelLinkLayer"
+     inkscape:label="Industrial Panel Links"
+     transform="translate(0,-5.0432739e-4)"
+     style="display:inline"
+     sodipodi:insensitive="true" />
   <g
      inkscape:groupmode="layer"
      id="trackNameLayer"
