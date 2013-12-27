@@ -2,7 +2,7 @@ function panelInitSouth(evt)
 {
     var normalCrossoverPathArray = ["TO325A.N", "TO325B.N", "TO100A.N", "TO100B.N"];
 
-    var reverseCrossoverPathArray = ["TO276A.N", "TO276B.N", "TO275A.N", "TO275B.N", "TO226A.N", "TO226B.N", "TO225A.N", "TO225B.N"];
+    var reverseCrossoverPathArray = ["TO276A.N", "TO276B.N", "TO275A.N", "TO275B.N", "TO251A.N", "TO251B.N", "TO250A.N", "TO250B.N"];
 
     for(var i in normalCrossoverPathArray)
     {
