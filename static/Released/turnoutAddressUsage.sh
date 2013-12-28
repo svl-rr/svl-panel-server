@@ -23,13 +23,20 @@ mv turnoutAddressList3.tmp turnoutAddressList.tmp
 sort -d turnoutAddressList.tmp > turnoutAddressList2.tmp
 mv turnoutAddressList2.tmp turnoutAddressList.tmp
 #remove duplicates
-perl -ne 'print unless $seen{$_}++' turnoutAddressList.tmp > turnoutAddressIndivid.txt
+perl -ne 'print unless $seen{$_}++' turnoutAddressList.tmp > turnoutAddressBlockRoutes.txt
 rm turnoutAddressList.tmp
 #find unique addresses
-cp turnoutAddressIndivid.txt turnoutAddressUnique.tmp
+cp turnoutAddressBlockRoutes.txt turnoutAddressUnique.tmp
 perl -p -i -e 's/[A-Z]$//g' turnoutAddressUnique.tmp
 #remove duplicates
-perl -ne 'print unless $seen{$_}++' turnoutAddressUnique.tmp > turnoutAddressUnique.txt
+perl -ne 'print unless $seen{$_}++' turnoutAddressUnique.tmp > turnoutAddressBlockUnique.txt
 rm turnoutAddressUnique.tmp
-#more turnoutAddressIndivid.txt
-#more turnoutAddressUnique.txt
+#find layout unique
+cp turnoutAddressBlockUnique.txt turnoutAddressLayoutUnique.txt
+perl -p -i -e 's/^\w+\sTO//g' turnoutAddressLayoutUnique.txt
+sort -g turnoutAddressLayoutUnique.txt > turnoutAddressLayoutUnique.tmp
+perl -ne 'print unless $seen{$_}++' turnoutAddressLayoutUnique.tmp > turnoutAddressLayoutUnique.txt
+rm turnoutAddressLayoutUnique.tmp
+#more turnoutAddressBlockIndivid.txt
+#more turnoutAddressBlockUnique.txt
+#more turnoutAddressLayoutUnique.txt
