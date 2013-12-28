@@ -37,6 +37,6 @@ perl -p -i -e 's/^\w+\sTO//g' turnoutAddressLayoutUnique.txt
 sort -g turnoutAddressLayoutUnique.txt > turnoutAddressLayoutUnique.tmp
 perl -ne 'print unless $seen{$_}++' turnoutAddressLayoutUnique.tmp > turnoutAddressLayoutUnique.txt
 rm turnoutAddressLayoutUnique.tmp
-#more turnoutAddressBlockIndivid.txt
+#more turnoutAddressBlockRoutes.txt
 #more turnoutAddressBlockUnique.txt
 #more turnoutAddressLayoutUnique.txt
