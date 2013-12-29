@@ -40,3 +40,4 @@ rm turnoutAddressLayoutUnique.tmp
 #more turnoutAddressBlockRoutes.txt
 #more turnoutAddressBlockUnique.txt
 #more turnoutAddressLayoutUnique.txt
+wc -l turnoutAddress*.txt
