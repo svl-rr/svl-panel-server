@@ -37,12 +37,12 @@
      id="namedview4355"
      showgrid="true"
      inkscape:zoom="1.4275405"
-     inkscape:cx="518.07915"
-     inkscape:cy="313.46782"
+     inkscape:cx="558.54326"
+     inkscape:cy="342.87671"
      inkscape:window-x="-1"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g3233"
+     inkscape:current-layer="layer7"
      inkscape:snap-object-midpoints="true"
      inkscape:object-paths="true"
      fit-margin-top="0"
@@ -795,7 +795,7 @@
        xlink:href="Released/DispatchNorth.svg"
        style="display:inline"
        id="a5893"
-       transform="translate(22.409162,-209.2281)">
+       transform="translate(176.81946,-207.7091)">
       <text
          id="text5257"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -814,7 +814,7 @@
        xlink:href="Released/DispatchSouth.svg"
        style="display:inline"
        id="a5897"
-       transform="translate(143.74388,-209.475)">
+       transform="translate(172.32333,-207.7091)">
       <text
          y="709.69495"
          x="223.56503"
@@ -833,7 +833,7 @@
        xlink:href="Released/TurnoutTester.svg"
        style="display:inline"
        id="a5901"
-       transform="translate(262.55321,-210.70042)">
+       transform="translate(311.72885,-209.05676)">
       <text
          id="text5265"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -846,6 +846,44 @@
            y="721.67346"
            id="tspan5267"
            style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Turnout Tester</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="dispatchMatrix.html"
+       transform="translate(-151.31009,-207.7091)"
+       id="a3540"
+       style="display:inline">
+      <text
+         id="text3542"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         x="223.56503"
+         y="709.69495">
+        <tspan
+           font-size="12"
+           font-weight="500"
+           x="223.88144"
+           y="720.69495"
+           id="tspan3544"
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Dispatch Matrix</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="panelMatrix.html"
+       transform="translate(333.02382,-207.7091)"
+       id="a3550"
+       style="display:inline">
+      <text
+         id="text3552"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         x="223.56503"
+         y="709.69495">
+        <tspan
+           font-size="12"
+           font-weight="500"
+           x="223.88144"
+           y="720.69495"
+           id="tspan3554"
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Panel Matrix</tspan>
       </text>
     </a>
   </g>
@@ -987,325 +1025,43 @@
   </g>
   <g
      inkscape:groupmode="layer"
-     id="layer5"
-     inkscape:label="Invalid Links Lower"
-     style="opacity:0.5;display:inline"
-     transform="translate(4.6043148,4.7841725)"
+     id="layer7"
+     inkscape:label="Invalid Links"
+     style="opacity:0.5"
      sodipodi:insensitive="true">
     <text
-       id="text4157"
+       transform="matrix(0.74299834,0.85841056,-1.0689025,0.11095951,-1.0874916e-7,3.1127427e-8)"
+       id="text3497"
        style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="639.01752"
-       y="223.35272"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="639.01752"
-         y="234.35271"
-         id="tspan4159"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Ashgrove Quarry</tspan>
-    </text>
-    <text
-       id="text4057"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-120.07794"
-       y="265.05966"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="-119.92462"
-         y="276.05966"
-         id="tspan4059"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Hallelujah (Jct.)</tspan>
-    </text>
-    <text
-       id="text4061"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-134.14796"
-       y="336.35367"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="-133.98878"
-         y="347.35367"
-         id="tspan4063"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Igo</tspan>
-    </text>
-    <text
-       id="text4065"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-26.958029"
-       y="335.39575"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="-26.804708"
-         y="346.39575"
-         id="tspan4067"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Jacksonville</tspan>
-    </text>
-    <text
-       id="text4069"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="674.77716"
-       y="234.7363"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="675.27228"
-         y="245.7363"
-         id="tspan4071"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Jerico</tspan>
-    </text>
-    <text
-       id="text4073"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="14.112458"
-       y="395.36151"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="14.112458"
-         y="406.36151"
-         id="tspan4075"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Kaos (Jct.)</tspan>
-    </text>
-    <text
-       id="text4289"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-123.27546"
-       y="393.62918"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="500"
-         x="-122.79305"
-         y="404.62918"
-         id="tspan4291"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Kalamazoo</tspan>
-    </text>
-    <text
-       id="text4351"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-111.25879"
-       y="369.83057"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <circle
-         cx="166.5"
-         cy="576"
-         r="4.5000072"
-         id="circle4345"
-         sodipodi:cx="166.5"
-         sodipodi:cy="576"
-         sodipodi:rx="4.5000072"
-         sodipodi:ry="4.5000072"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         transform="translate(-10.663234,1.5233192)" />
-      <tspan
-         font-size="12"
-         font-weight="bold"
-         x="-110.60254"
-         y="380.83057"
-         id="tspan4353"
-         style="font-size:12px;font-weight:bold;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Klamath</tspan>
-    </text>
-    <text
-       id="text4161"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       x="-60.912735"
-       y="346.02985"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="12"
-         font-weight="bold"
-         x="-60.60804"
-         y="357.02985"
-         id="tspan4163"
-         style="font-size:12px;font-weight:bold;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Jasper</tspan>
-    </text>
-    <circle
-       cx="274.5"
-       cy="252"
-       r="4.5000072"
-       id="circle4185"
-       sodipodi:cx="274.5"
-       sodipodi:cy="252"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-217.71969,77.881159)"
-       d="m 279.00001,252 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <circle
-       cx="274.5"
-       cy="279"
-       r="4.5000072"
-       id="circle4189"
-       sodipodi:cx="274.5"
-       sodipodi:cy="279"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-289.67355,148.41365)"
-       d="m 279.00001,279 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <circle
-       cx="274.5"
-       cy="306"
-       r="4.5000072"
-       id="circle4193"
-       sodipodi:cx="274.5"
-       sodipodi:cy="306"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-224.18241,97.517949)"
-       d="m 279.00001,306 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <circle
-       cx="247.5"
-       cy="306"
-       r="4.5000072"
-       id="circle4237"
-       sodipodi:cx="247.5"
-       sodipodi:cy="306"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffffff;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-221.6698,113.15193)"
-       d="m 252.00001,306 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <text
-       id="text4261"
-       style="font-size:12px;fill:#000000;stroke:none;display:inline"
-       x="-75.717102"
-       y="349.28662"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
+       x="374.15451"
+       y="-409.0347">
       <tspan
          font-size="9"
          font-weight="500"
-         x="-75.218567"
-         y="358.28662"
-         id="tspan4263"
-         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
-    </text>
-    <circle
-       cx="274.5"
-       cy="360"
-       r="4.5000072"
-       id="circle4197"
-       sodipodi:cx="274.5"
-       sodipodi:cy="360"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffffff;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-180.32031,78.190449)"
-       d="m 279.00001,360 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <circle
-       cx="234"
-       cy="360"
-       r="4.5000072"
-       id="circle4233"
-       sodipodi:cx="234"
-       sodipodi:cy="360"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffffff;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-212.19218,72.263199)"
-       d="m 238.50001,360 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <text
-       id="text4257"
-       style="font-size:12px;fill:#000000;stroke:none;display:inline"
-       x="-45.684868"
-       y="371.67401"
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)">
-      <tspan
-         font-size="9"
-         font-weight="500"
-         x="-45.186333"
-         y="380.67401"
-         id="tspan4259"
-         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
-    </text>
-    <circle
-       cx="274.5"
-       cy="414"
-       r="4.5000072"
-       id="circle4245"
-       sodipodi:cx="274.5"
-       sodipodi:cy="414"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffff00;stroke:none;display:inline"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-344.20882,67.107005)"
-       d="m 279.00001,414 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-    <circle
-       d="m 400.50001,36 c 0,2.485285 -2.01472,4.500007 -4.50001,4.500007 -2.48529,0 -4.50001,-2.014722 -4.50001,-4.500007 0,-2.485285 2.01472,-4.500007 4.50001,-4.500007 2.48529,0 4.50001,2.014722 4.50001,4.500007 z"
-       cx="396"
-       cy="36"
-       r="4.5000072"
-       id="circle4917"
-       sodipodi:cx="396"
-       sodipodi:cy="36"
-       sodipodi:rx="4.5000072"
-       sodipodi:ry="4.5000072"
-       style="fill:#ffffff;stroke:none;display:inline"
-       transform="matrix(0.96013522,0.48094885,-1.0283919,0.52637992,443.02396,-75.08457)" />
-    <text
-       transform="matrix(0.9601353,0.48094896,-1.0283919,0.52637997,0,0)"
-       id="text4919"
-       style="font-size:12px;fill:#000000;stroke:none;display:inline"
-       x="548.55511"
-       y="-254.8548">
-      <tspan
-         font-size="9"
-         font-weight="500"
-         x="549.05365"
-         y="-245.8548"
-         id="tspan4921"
-         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
+         x="374.65305"
+         y="-400.03467"
+         id="tspan3499"
+         style="font-size:9px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Carlsbad</tspan>
     </text>
     <text
-       y="-522.93365"
-       x="240.18214"
-       style="font-size:12px;fill:#000000;fill-opacity:1;stroke:none;display:inline"
-       id="text4937"
-       transform="matrix(0.88866157,0.83247253,-1.0429579,0.1482749,0,0)">
+       id="text3274"
+       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+       x="-274.19003"
+       y="360.54916"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-1.0874916e-7,3.1127427e-8)">
       <tspan
-         style="font-size:9px;font-weight:500;fill:#000000;fill-opacity:1;font-family:Helvetica"
-         id="tspan4939"
-         y="-513.93365"
-         x="240.68068"
+         font-size="12"
          font-weight="500"
-         font-size="9">S</tspan>
+         x="-273.5416"
+         y="371.54913"
+         id="tspan3276"
+         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Loop</tspan>
     </text>
-    <a
-       xlink:href="Released/Cavanaugh.svg"
-       id="a3495"
-       style="fill:#ffffff;fill-opacity:1;display:inline"
-       transform="matrix(1,0.03491,-0.17497666,0.99389152,23.319208,-47.015968)">
-      <text
-         y="-353.68671"
-         x="416.19781"
-         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-         id="text3497"
-         transform="matrix(0.88866157,0.83247253,-1.0429579,0.1482749,0,0)">
-        <tspan
-           style="font-size:9px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
-           id="tspan3499"
-           y="-344.68668"
-           x="416.69635"
-           font-weight="500"
-           font-size="9">Carlsbad</tspan>
-      </text>
-    </a>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer6"
-     inkscape:label="Valid Links Lower"
+     inkscape:label="Links Lower"
      style="display:inline"
      sodipodi:insensitive="true">
     <a
@@ -1673,44 +1429,287 @@
        style="fill:#ffff00;stroke:none;display:inline"
        transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,101.01537,176.98637)"
        d="m 400.50001,144 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
-  </g>
-  <g
-     transform="translate(4.6043148,4.7841725)"
-     style="opacity:0.5;display:inline"
-     inkscape:label="Invalid Links Upper"
-     id="g3307"
-     inkscape:groupmode="layer"
-     sodipodi:insensitive="true">
-    <text
-       transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
-       y="353.10974"
-       x="-273.93378"
-       style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
-       id="text3449">
-      <tspan
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
-         id="tspan3451"
-         y="364.10974"
-         x="-273.78143"
-         font-weight="500"
-         font-size="12">Loop</tspan>
-    </text>
+    <a
+       xlink:href="Released/Hallelujah.svg"
+       transform="translate(4.6043151,4.7841725)"
+       style="display:inline"
+       id="a3251">
+      <text
+         transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
+         y="265.05966"
+         x="-120.07794"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4057">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4059"
+           y="276.05966"
+           x="-119.92462"
+           font-weight="500"
+           font-size="12">Hallelujah (Jct.)</tspan>
+      </text>
+    </a>
     <circle
-       d="m 207.00001,432 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z"
-       transform="matrix(0.82164555,-0.19820516,0.83909505,1.0146553,-416.30091,13.6805)"
-       style="fill:#ffffff;stroke:none;display:inline"
-       sodipodi:ry="4.5000072"
-       sodipodi:rx="4.5000072"
-       sodipodi:cy="432"
-       sodipodi:cx="202.5"
-       id="circle3453"
+       cx="274.5"
+       cy="252"
        r="4.5000072"
-       cy="432"
-       cx="202.5" />
+       id="circle4185"
+       sodipodi:cx="274.5"
+       sodipodi:cy="252"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-213.11538,82.665332)"
+       d="m 279.00001,252 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <circle
+       cx="274.5"
+       cy="279"
+       r="4.5000072"
+       id="circle4189"
+       sodipodi:cx="274.5"
+       sodipodi:cy="279"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-285.06923,153.19782)"
+       d="m 279.00001,279 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <circle
+       cx="274.5"
+       cy="306"
+       r="4.5000072"
+       id="circle4193"
+       sodipodi:cx="274.5"
+       sodipodi:cy="306"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-219.5781,102.30212)"
+       d="m 279.00001,306 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <a
+       xlink:href="Released/Jacksonville.svg"
+       id="a4067">
+      <text
+         transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,4.6043151,4.7841725)"
+         y="336.35367"
+         x="-134.14796"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4061">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4063"
+           y="347.35367"
+           x="-133.98878"
+           font-weight="500"
+           font-size="12">Igo</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/Jacksonville.svg"
+       id="a4063">
+      <text
+         transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,4.6043151,4.7841725)"
+         y="335.39575"
+         x="-26.958029"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4065">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4067"
+           y="346.39575"
+           x="-26.804708"
+           font-weight="500"
+           font-size="12">Jacksonville</tspan>
+      </text>
+    </a>
+    <circle
+       cx="274.5"
+       cy="360"
+       r="4.5000072"
+       id="circle4197"
+       sodipodi:cx="274.5"
+       sodipodi:cy="360"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffffff;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-175.71599,82.974621)"
+       d="m 279.00001,360 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <a
+       xlink:href="Released/Kaos_Kalamazoo.svg"
+       id="a4074">
+      <text
+         transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,4.6043151,4.7841725)"
+         y="395.36151"
+         x="14.112458"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4073">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4075"
+           y="406.36151"
+           x="14.112458"
+           font-weight="500"
+           font-size="12">Kaos (Jct.)</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="Released/Kaos_Kalamazoo.svg"
+       transform="translate(4.6043151,4.7841725)"
+       style="display:inline"
+       id="a4078">
+      <text
+         transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
+         y="393.62918"
+         x="-123.27546"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4289">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4291"
+           y="404.62918"
+           x="-122.79305"
+           font-weight="500"
+           font-size="12">Kalamazoo</tspan>
+      </text>
+    </a>
+    <circle
+       cx="274.5"
+       cy="414"
+       r="4.5000072"
+       id="circle4245"
+       sodipodi:cx="274.5"
+       sodipodi:cy="414"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffff00;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-339.60451,71.891177)"
+       d="m 279.00001,414 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <a
+       xlink:href="Released/JasperJct.svg"
+       transform="translate(4.6043151,4.7841725)"
+       style="display:inline"
+       id="a3552">
+      <text
+         transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
+         y="346.02985"
+         x="-60.912735"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4161">
+        <tspan
+           style="font-size:12px;font-weight:bold;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4163"
+           y="357.02985"
+           x="-60.60804"
+           font-weight="bold"
+           font-size="12">Jasper</tspan>
+      </text>
+    </a>
+    <circle
+       cx="247.5"
+       cy="306"
+       r="4.5000072"
+       id="circle4237"
+       sodipodi:cx="247.5"
+       sodipodi:cy="306"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffffff;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-217.06549,117.9361)"
+       d="m 252.00001,306 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <text
+       id="text4261"
+       style="font-size:12px;fill:#000000;stroke:none;display:inline"
+       x="-75.717102"
+       y="349.28662"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,4.6043151,4.7841725)">
+      <tspan
+         font-size="9"
+         font-weight="500"
+         x="-75.218567"
+         y="358.28662"
+         id="tspan4263"
+         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
+    </text>
+    <a
+       xlink:href="Released/Klamath.svg"
+       id="a4360"
+       style="display:inline"
+       transform="translate(4.6043151,4.7841725)">
+      <text
+         transform="matrix(0.82164556,-0.19820516,0.83909506,1.0146553,0,0)"
+         y="369.83057"
+         x="-111.25879"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text4351">
+        <circle
+           transform="translate(-10.663234,1.5233192)"
+           style="fill:#ffffff;fill-opacity:1;stroke:none"
+           sodipodi:ry="4.5000072"
+           sodipodi:rx="4.5000072"
+           sodipodi:cy="576"
+           sodipodi:cx="166.5"
+           id="circle4345"
+           r="4.5000072"
+           cy="576"
+           cx="166.5" />
+        <tspan
+           style="font-size:12px;font-weight:bold;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan4353"
+           y="380.83057"
+           x="-110.60254"
+           font-weight="bold"
+           font-size="12">Klamath</tspan>
+      </text>
+    </a>
+    <circle
+       cx="234"
+       cy="360"
+       r="4.5000072"
+       id="circle4233"
+       sodipodi:cx="234"
+       sodipodi:cy="360"
+       sodipodi:rx="4.5000072"
+       sodipodi:ry="4.5000072"
+       style="fill:#ffffff;stroke:none;display:inline"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,-207.58786,77.047372)"
+       d="m 238.50001,360 c 0,2.48529 -2.01472,4.50001 -4.50001,4.50001 -2.48529,0 -4.50001,-2.01472 -4.50001,-4.50001 0,-2.48529 2.01472,-4.50001 4.50001,-4.50001 2.48529,0 4.50001,2.01472 4.50001,4.50001 z" />
+    <text
+       id="text4257"
+       style="font-size:12px;fill:#000000;stroke:none;display:inline"
+       x="-45.684868"
+       y="371.67401"
+       transform="matrix(0.82164552,-0.19820516,0.83909504,1.0146553,4.6043151,4.7841725)">
+      <tspan
+         font-size="9"
+         font-weight="500"
+         x="-45.186333"
+         y="380.67401"
+         id="tspan4259"
+         style="font-size:9px;font-weight:500;font-family:Helvetica">S</tspan>
+    </text>
+    <a
+       xlink:href="Released/Jacksonville.svg"
+       id="a3263"
+       style="fill:#ffffff;fill-opacity:1;display:inline"
+       transform="matrix(1,0.03491,-0.17497666,0.99389156,-310.61151,24.875078)">
+      <text
+         y="-353.68671"
+         x="416.19781"
+         style="font-size:12px;fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+         id="text3265"
+         transform="matrix(0.88866157,0.83247253,-1.0429579,0.1482749,0,0)">
+        <tspan
+           style="font-size:9px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan3267"
+           y="-344.68668"
+           x="416.69635"
+           font-weight="500"
+           font-size="9">Jerico</tspan>
+      </text>
+    </a>
   </g>
   <g
      style="display:inline"
-     inkscape:label="Valid Links Upper"
+     inkscape:label="Links Upper"
      id="g3233"
      inkscape:groupmode="layer"
      sodipodi:insensitive="true">

@@ -429,6 +429,10 @@ function init(evt)
                     var base1 = id1.substring(0, id1.length - 1);
                     var base2 = id2.substring(0, id2.length - 1);
                     
+		    // Make sure element title is set to object id here (this is for debug purposes)
+		    addElementTitle(id1, id1);
+		    addElementTitle(id2, id2);
+
                     if((base1 == base2) && (base1.search("TO[\\d]+[A-M]*[.]*") == 0))
                     {
                         var id1route = getDCCAddrRoute(id1);
