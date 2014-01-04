@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="EbbettsEagle_Escape.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -322,10 +322,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.99907045"
-     inkscape:cx="293.73644"
+     inkscape:cx="172.62386"
      inkscape:cy="362.19812"
      inkscape:document-units="px"
-     inkscape:current-layer="backgroundLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -626,7 +626,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO184.R"
+         id="TO184A.R"
          d="m 200,574.0945 -20,0 -20,-20"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
          inkscape:label="#path4221" />
@@ -635,7 +635,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
          d="m 200,574.0945 -40,0"
-         id="TO184.N"
+         id="TO184A.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -647,14 +647,14 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
          d="m 200,574.0945 -20,0 -20,-20"
-         id="TO183.R"
+         id="TO184B.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO183.N"
+         id="TO184B.N"
          d="m 200,574.0945 -40,0"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
          inkscape:label="#path4221"
@@ -760,8 +760,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       id="greeleyMainLink"
-       transform="translate(-80,324.00005)">
+       transform="translate(-80,324.00005)"
+       id="greeleyMainLink">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -777,8 +777,8 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       transform="translate(820,424.00005)"
-       id="EbbettsEagleMainLink">
+       id="EbbettsEagleMainLink"
+       transform="translate(820,424.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -802,9 +802,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       transform="translate(-90,134.0005)"
+       style="display:inline"
        id="a3633"
-       style="display:inline">
+       transform="translate(-90,134.0005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -820,9 +820,9 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       style="display:inline"
+       transform="translate(750,404.0005)"
        id="a3642"
-       transform="translate(750,404.0005)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3644"
