@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="MtMarvel.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -268,9 +268,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.26"
-     inkscape:cx="320.3138"
-     inkscape:cy="358.81101"
+     inkscape:zoom="1.7819091"
+     inkscape:cx="760.1506"
+     inkscape:cy="363.90134"
      inkscape:document-units="px"
      inkscape:current-layer="mainlinePanelLinkLayer"
      showgrid="true"
@@ -840,9 +840,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       transform="translate(-196,328.00005)"
+       style="display:inline"
        id="pasoLink"
-       style="display:inline">
+       transform="translate(-196,328.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -857,32 +857,28 @@
            id="tspan3417">Loop (SB)</tspan></text>
     </a>
     <a
-       xlink:href="NowheresYard.svg"
-       style="display:inline"
+       xlink:href="NPF.svg"
+       transform="translate(750,184.00005)"
        id="a3517"
-       transform="translate(750,184.00005)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
-         y="116.11475"
+         y="136.11475"
          x="250"
          style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
          xml:space="preserve"
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"><tspan
-           id="tspan3521"
-           y="116.11475"
-           x="250"
-           sodipodi:role="line">Nowheres</tspan><tspan
            y="136.11475"
            x="250"
            sodipodi:role="line"
-           id="tspan3293">Yard</tspan></text>
+           id="tspan3293">Nowheres</tspan></text>
     </a>
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       style="display:inline"
+       transform="translate(-196,368.00005)"
        id="a3284"
-       transform="translate(-196,368.00005)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3286"
@@ -906,9 +902,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvelTimber.svg"
-       style="display:inline"
+       transform="translate(-128.96363,169.03687)"
        id="a3534"
-       transform="translate(-128.96363,169.03687)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3536"
