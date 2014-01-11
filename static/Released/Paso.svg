@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Paso.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,7 +269,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1822589"
-     inkscape:cx="381.95243"
+     inkscape:cx="279.60598"
      inkscape:cy="353.8371"
      inkscape:document-units="px"
      inkscape:current-layer="mainlinePanelLinkLayer"
@@ -780,12 +780,13 @@
      id="mainlinePanelLinkLayer"
      inkscape:label="Mainline Panel Links"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <a
        xlink:href="Ravine_Quinn.svg"
-       transform="translate(740,58.000056)"
+       style="display:inline"
        id="a3517"
-       style="display:inline">
+       transform="translate(740,58.000056)">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
@@ -800,10 +801,10 @@
            sodipodi:role="line">Ravine</tspan></text>
     </a>
     <a
-       xlink:href="NowheresYard.svg"
-       transform="translate(-196,62.000051)"
+       xlink:href="NPF.svg"
+       style="display:inline"
        id="a5609"
-       style="display:inline">
+       transform="translate(-196,62.000051)">
       <text
          sodipodi:linespacing="125%"
          id="text5611"

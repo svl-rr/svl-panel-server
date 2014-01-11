@@ -147,7 +147,7 @@ function PanelTurnout(normalRouteID, divergingRouteID)
         {
             var lec = svgDocument.getElementById(prevPanel.divergingRouteID).parentNode.lastElementChild;
             if(getDCCAddrRoute(divergingElem.parentNode.lastElementChild.id) != getDCCAddrRoute(lec.id))
-                alert("Turnout instances with DCC addr " + getDCCAddr(divergingRouteID) + " do not have a consistent initial condition. This has been updated during runtime but should be fixed in svg file. ")
+                alert("Multiple turnout instances with DCC addr " + getDCCAddr(divergingRouteID) + " do not have consistent initial conditions. This has been updated during runtime but should be fixed in svg file. ")
         }
     }
     
@@ -168,7 +168,7 @@ function checkTurnoutOnClick(elem)
 {    
     if(elem == null)
     {
-        alert("Bad element passed to checkOnClick");
+        alert("Bad element passed to checkTurnoutOnClick");
         return;
     }
     
@@ -192,16 +192,23 @@ function checkOpacity(parentElem)
     
     var attrib = getStyleSubAttribute(parentElem.firstElementChild, "opacity");
     
-    if((attrib == null) || (attrib != "0.25"))
+    if((attrib == null) || (attrib == "1"))
+{
+        alert("Element " + parentElem.firstElementChild.id + " is first element in turnout but does not have a proper opacity setting of 0.25 (was " + attrib + "). The element order of the .R and .N segments may be reversed. This has been updated during runtime but should be fixed in svg file.");
+}
+	else if(attrib != "0.25")
     {
-        alert("Element " + parentElem.firstElementChild.id + " does not have a proper opacity setting of 0.25 (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
+        alert("Element " + parentElem.firstElementChild.id + " is first element in turnout but does not have a proper opacity setting of 0.25 (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
     }
     
     attrib = getStyleSubAttribute(parentElem.lastElementChild, "opacity");
     
     if((attrib != null) && (attrib != "1"))
     {
-        alert("Element " + parentElem.lastElementChild.id + " does not have a proper opacity setting of 1 (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
+	if(attrib == "0.25")
+	        alert("Element " + parentElem.lastElementChild.id + " is last element in turnout but does not have a proper opacity setting of 1/null (was " + attrib + "). The element order of the .R and .N segments may be reversed. This has been updated during runtime but should be fixed in svg file.");
+	else
+		alert("Element " + parentElem.lastElementChild.id + " is last element in turnout but does not have a proper opacity setting of 1/null (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
     }
 }
 
