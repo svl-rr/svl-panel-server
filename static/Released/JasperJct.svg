@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="JasperJct.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -322,7 +322,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="591.58844"
+     inkscape:cx="493.34254"
      inkscape:cy="370.76849"
      inkscape:document-units="px"
      inkscape:current-layer="mainlineTrackLayer"
@@ -718,9 +718,9 @@
        d="m 440,94.0945 -400,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="Track11Path()" />
     <path
-       onclick=""
+       onclick="Track10Path()"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3753"
@@ -728,7 +728,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />
     <path
-       onclick=""
+       onclick="Track9Path()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 440,174.0945 -400,0"
@@ -742,9 +742,9 @@
        id="path3170"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="Track8Path()" />
     <path
-       onclick=""
+       onclick="Track7Path()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 440,254.0945 -400,0"
@@ -758,7 +758,7 @@
        id="path3174"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="Track6Path()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -766,7 +766,7 @@
        d="m 440,414.0945 -400,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="Track3Path()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -774,9 +774,9 @@
        d="m 440,494.0945 -400,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="Track1Path()" />
     <path
-       onclick=""
+       onclick="Track2Path()"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3182"
@@ -790,9 +790,9 @@
        id="path3186"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="Track4Path()" />
     <path
-       onclick=""
+       onclick="Track5Path()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 600,334.0945 -560,0"
@@ -856,7 +856,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       onclick=""
+       onclick="StorageTrackPath()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 730,494.0945 -160,0"
@@ -927,9 +927,9 @@
        id="path3256"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="KlamathLeadPath()" />
     <path
-       onclick=""
+       onclick="KaosLeadPath()"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3252"
@@ -946,9 +946,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(820,174.00005)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -964,9 +964,9 @@
     </a>
     <a
        xlink:href="Klamath.svg"
-       id="a3258"
+       style="display:inline"
        transform="translate(690,174.00005)"
-       style="display:inline">
+       id="a3258">
       <text
          sodipodi:linespacing="125%"
          id="text3260"
