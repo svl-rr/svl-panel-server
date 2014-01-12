@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="Jacksonville.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -322,10 +322,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="487.22266"
+     inkscape:cx="400.37931"
      inkscape:cy="353.62774"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -494,7 +494,8 @@
        id="path3194"
        d="m 120,274.0945 -60,-60"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="UnionCoal2Path()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -504,7 +505,7 @@
        inkscape:label="#path4221"
        onclick="" />
     <path
-       onclick=""
+       onclick="Igo3Path()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 1020,314.0945 -60,-60 -40,0"
@@ -518,7 +519,7 @@
        d="m 960,334.0945 0,120"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="Igo1Path()" />
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
@@ -526,7 +527,7 @@
        d="m 40,234.0945 60,60 20,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="UnionCoal1Path()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -534,7 +535,7 @@
        id="path4060"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="AQXchange1Path()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -542,7 +543,7 @@
        id="path4064"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="" />
+       onclick="GulfportGrain2Path()" />
     <g
        transform="translate(520,-280)"
        id="g4529"
@@ -736,7 +737,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick=""
+       onclick="KawValleyPlasticsPath()"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3185"
@@ -813,7 +814,7 @@
        id="path3215"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="GulfportGrain1Path()" />
     <g
        transform="matrix(-1,0,0,1,960,-280)"
        id="g3217"
@@ -883,9 +884,10 @@
        d="m 160,274.0945 -120,-120"
        id="path3236"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="UniversalExportsPath()" />
     <path
-       onclick=""
+       onclick="UnionCoalRampPath()"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3238"
@@ -907,7 +909,7 @@
        id="path3242"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="JacksonvilleSidingPath()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -917,7 +919,7 @@
        sodipodi:nodetypes="cc"
        onclick="" />
     <path
-       onclick=""
+       onclick="AQXchange2Path()"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3246"
@@ -975,7 +977,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick=""
+       onclick="Igo2Path()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 980,334.0945 20,20 0,100"
@@ -1047,9 +1049,9 @@
        d="m 820,54.0945 -100,100"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="AshgroveQuarry3Path()" />
     <path
-       onclick=""
+       onclick="AshgroveQuarry1Path()"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3296"
@@ -1063,7 +1065,7 @@
        id="path3298"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="AshgroveQuarry2Path()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -1282,8 +1284,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       id="daytonIndustrialLink"
-       transform="translate(-90,254.00005)">
+       transform="translate(-90,254.00005)"
+       id="daytonIndustrialLink">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1299,8 +1301,8 @@
     </a>
     <a
        xlink:href="Hallelujah.svg"
-       transform="translate(742,444.00005)"
-       id="a4142">
+       id="a4142"
+       transform="translate(742,444.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1316,8 +1318,8 @@
     </a>
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       transform="translate(-90,364.00005)"
-       id="a4205">
+       id="a4205"
+       transform="translate(-90,364.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
