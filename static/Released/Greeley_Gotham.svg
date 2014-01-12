@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="Greeley_Gotham.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -322,7 +322,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="249.31272"
+     inkscape:cx="151.06682"
      inkscape:cy="296.49194"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
@@ -715,7 +715,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO219.R"
+         id="TO219.N"
          d="m 200,574.0945 -20,0 -20,-20"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
          inkscape:label="#path4221" />
@@ -724,7 +724,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
          d="m 200,574.0945 -40,0"
-         id="TO219.N"
+         id="TO219.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -740,20 +740,20 @@
        id="g3967"
        transform="translate(200,-80)">
       <path
-         inkscape:label="#path4221"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
-         d="m 200,574.0945 -20,0 -20,-20"
-         id="TO222.N"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccc"
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
-      <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO222.R"
          d="m 200,574.0945 -40,0"
-         style="fill:none;stroke:#ffffff;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
          inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         inkscape:label="#path4221"
+         style="fill:none;stroke:#ffffff;stroke-width:7.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline"
+         d="m 200,574.0945 -20,0 -20,-20"
+         id="TO222.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <g
@@ -1065,8 +1065,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Hallelujah.svg"
-       id="daytonIndustrialLink"
-       transform="translate(-90,54.000047)">
+       transform="translate(-90,54.000047)"
+       id="daytonIndustrialLink">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1082,8 +1082,8 @@
     </a>
     <a
        xlink:href="Fryton_Fremont.svg"
-       transform="translate(820,54.000047)"
-       id="a4142">
+       id="a4142"
+       transform="translate(820,54.000047)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1107,9 +1107,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       id="a4148"
+       style="display:inline"
        transform="translate(790,64.000504)"
-       style="display:inline">
+       id="a4148">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
