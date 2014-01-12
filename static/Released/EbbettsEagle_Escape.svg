@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="EbbettsEagle_Escape.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -322,7 +322,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.99907045"
-     inkscape:cx="172.62386"
+     inkscape:cx="621.39737"
      inkscape:cy="362.19812"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
@@ -516,9 +516,9 @@
        id="path3174"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="" />
+       onclick="EscapeBranchRightPath()" />
     <path
-       onclick=""
+       onclick="RanchSpurPath()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 890,414.0945 0,-80 -40,-40 -140,0 -20,-20"
@@ -532,7 +532,7 @@
        d="m 250,254.0945 -80,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="EscapeBranchLeftPath()" />
     <g
        style="display:inline"
        id="g4516"
@@ -611,7 +611,7 @@
          sodipodi:nodetypes="cc" />
     </g>
     <path
-       onclick=""
+       onclick="BranchLeadPath()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 690,254.0945 180,0 60,60 0,100"
@@ -675,9 +675,9 @@
        id="path3477"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="CoopFeedMillPath()" />
     <path
-       onclick=""
+       onclick="FaridayFertilizerPath()"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3479"
@@ -707,7 +707,7 @@
        id="path3419"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="" />
+       onclick="EscapeSidingPath()" />
     <path
        onclick=""
        inkscape:label="#path4221"
@@ -760,8 +760,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       transform="translate(-80,324.00005)"
-       id="greeleyMainLink">
+       id="greeleyMainLink"
+       transform="translate(-80,324.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -777,8 +777,8 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       id="EbbettsEagleMainLink"
-       transform="translate(820,424.00005)">
+       transform="translate(820,424.00005)"
+       id="EbbettsEagleMainLink">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -802,9 +802,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       style="display:inline"
+       transform="translate(-90,134.0005)"
        id="a3633"
-       transform="translate(-90,134.0005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -820,9 +820,9 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       transform="translate(750,404.0005)"
+       style="display:inline"
        id="a3642"
-       style="display:inline">
+       transform="translate(750,404.0005)">
       <text
          sodipodi:linespacing="125%"
          id="text3644"
