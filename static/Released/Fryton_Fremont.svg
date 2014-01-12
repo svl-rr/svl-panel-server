@@ -27,12 +27,12 @@
      id="script5" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="Fryton_Fremont.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -322,10 +322,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="862.98098"
+     inkscape:cx="641.23995"
      inkscape:cy="341.13828"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="mainlineTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -513,11 +513,11 @@
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 640,454.0945 -380,0"
+       d="m 440,454.0945 -180,0"
        id="path3174"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="" />
+       onclick="FremontBranchLeftPath()" />
     <path
        onclick=""
        inkscape:label="#path4221"
@@ -598,11 +598,11 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick=""
+       onclick="FremontSidingLeftPath()"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3500"
-       d="m 590,414.0945 -310,0 -20,20"
+       d="m 440,414.0945 -160,0 -20,20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        inkscape:label="#path4221" />
     <path
@@ -675,7 +675,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick=""
+       onclick="FremontTeamTrackPath()"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3619"
@@ -697,9 +697,9 @@
        id="path3623"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="EAJensenShippingPath()" />
     <path
-       onclick=""
+       onclick="EAJensenReceivingPath()"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3625"
@@ -755,6 +755,22 @@
          sodipodi:nodetypes="cc"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
+    <path
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 590,414.0945 -150,0"
+       id="path3131"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       onclick="FremontSidingRightPath()" />
+    <path
+       onclick="FremontBranchRightPath()"
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3133"
+       d="m 640,454.0945 -200,0"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       inkscape:label="#path4221" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -869,8 +885,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Greeley_Gotham.svg"
-       transform="translate(-90,54.000047)"
-       id="greeleyMainLink">
+       id="greeleyMainLink"
+       transform="translate(-90,54.000047)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -886,8 +902,8 @@
     </a>
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       id="EbbettsEagleMainLink"
-       transform="translate(790,54.000047)">
+       transform="translate(790,54.000047)"
+       id="EbbettsEagleMainLink">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -911,9 +927,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Greeley_Gotham.svg"
-       style="display:inline"
+       transform="translate(-100,284.0005)"
        id="a3633"
-       transform="translate(-100,284.0005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -929,9 +945,9 @@
     </a>
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       transform="translate(780,284.0005)"
+       style="display:inline"
        id="a3642"
-       style="display:inline">
+       transform="translate(780,284.0005)">
       <text
          sodipodi:linespacing="125%"
          id="text3644"
