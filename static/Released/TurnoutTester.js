@@ -20,6 +20,10 @@ function oneAtATimeNextClick()
     var currentValue = Number(getDCCAddr(getSVGText("oneAtATimeCurrent")));
     var endValue = Number(getDCCAddr(getSVGText("oneAtATimeEnd")));
     
+    startValue = validateAddrRange(startValue);
+    currentValue = validateAddrRange(currentValue);
+    endValue = validateAddrRange(endValue);
+    
     if(endValue > startValue)
     {
         if((currentValue >= startValue) && (currentValue < endValue))
@@ -57,7 +61,7 @@ function oneAtATime(state)
 {
     addTurnoutStateChangeRequest(getDCCAddr(getSVGText("oneAtATimeCurrent")), state);
 	
-	executePanelStateChangeRequests();
+    executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
 	setPanelStatus("Done");
 }
 
@@ -89,15 +93,8 @@ function setAll(state)
     var start = Number(getDCCAddr(getSVGText("setAllStart")));
     var end = Number(getDCCAddr(getSVGText("setAllEnd")));
     
-    if(start < 0)
-        start = 0;
-    else if(start > 999)
-        start = 999;
-    
-    if(end < 0)
-        end = 0;
-    else if(end > 999)
-        end = 999;
+    start = validateAddrRange(start);
+    end = validateAddrRange(end);
     
     if(end > start)
     {
@@ -110,7 +107,7 @@ function setAll(state)
             addTurnoutStateChangeRequest("" + i, state);
     }
     
-	executePanelStateChangeRequests();
+    executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
 	setPanelStatus("Done");
 }
 
@@ -123,10 +120,17 @@ function promptAndSetField(whichObj)
         
     var value = Number(getDCCAddr(newText));
     
-    if(value < 0)
-        value = 0;
-    else if(value > 999)
-        value = 999;
+    value = validateAddrRange(value);
     
     setSVGText(whichObj, "" + value);
+}
+
+function validateAddrRange(inAddr)
+{
+    if(inAddr < 1)
+        return 1;
+    else if(inAddr > 2044)
+        return 2044;
+    else
+        return inAddr;
 }
