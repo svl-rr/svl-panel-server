@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Cookie Setup</title>
+</head>
+<body onload="">
+
+<script src="Released/PanelCommon.js"></script>
+
+<script type="text/javascript">
+
+function createTableRowForCookie(cookie, value)
+{
+    var cVal = getCookie(cookie);
+    
+    document.write("<tr>");
+    document.write("<td>" + cookie + "</td>");
+    document.write("<td>" + (cVal == "" ? ">>null<<" : cVal) + "</td>");
+    document.write((cVal == "" ? "<td colspan=" + '"2">' : "<td>") + createCreateCookieButton(cookie, value) + "</td>");
+    document.write((cVal == "" ? "" : "<td>" + createDeleteCookieButton(cookie) + "</td>"));
+    document.write("</tr>");
+}
+
+function createCreateCookieButton(cookie, value)
+{
+    return '<button type="button" onclick="setCookie(' + "'" + cookie + "'" + ', ' + "'" + value + "'" + ', 3650); location=location;">Create</button>';
+}
+
+function createDeleteCookieButton(cookie)
+{
+    return '<button type="button" onclick="deleteCookie(' + "'" + cookie + "'" + '); location=location;">Delete</button>';
+}
+
+</script>
+
+<H1>Cookie Setup</H1>
+
+<table cellspacing="10">
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th colspan="2">Actions</th>
+</tr>
+<script>
+createTableRowForCookie("fixedPanel", "true");
+</script>
+</table>
+
+<P>
+<a href="/index.html">Return to Top</a>
+
+</body>
+</html>
