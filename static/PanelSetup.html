@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Cookie Setup</title>
+	<title>Panel Setup</title>
 </head>
 <body onload="">
 
@@ -10,7 +10,7 @@
 
 <script type="text/javascript">
 
-function createTableRowForCookie(cookie, value)
+function createTableRowForCookie(cookie, value, explanation)
 {
     var cVal = getCookie(cookie);
     
@@ -19,12 +19,13 @@ function createTableRowForCookie(cookie, value)
     document.write("<td>" + (cVal == "" ? ">>null<<" : cVal) + "</td>");
     document.write((cVal == "" ? "<td colspan=" + '"2">' : "<td>") + createCreateCookieButton(cookie, value) + "</td>");
     document.write((cVal == "" ? "" : "<td>" + createDeleteCookieButton(cookie) + "</td>"));
+    document.write("<td>" + explanation + "</td>");
     document.write("</tr>");
 }
 
 function createCreateCookieButton(cookie, value)
 {
-    return '<button type="button" onclick="setCookie(' + "'" + cookie + "'" + ', ' + "'" + value + "'" + ', 3650); location=location;">Create</button>';
+    return '<button type="button" onclick="setCookie(' + "'" + cookie + "', '" + value + "', 3650" + '); location=location;">Create</button>';
 }
 
 function createDeleteCookieButton(cookie)
@@ -34,21 +35,27 @@ function createDeleteCookieButton(cookie)
 
 </script>
 
-<H1>Cookie Setup</H1>
+<H1>Panel Setup</H1>
+
+This page is used to set up device specific preferences through the use of browser cookies.
 
 <table cellspacing="10">
 <tr>
 <th>Name</th>
 <th>Value</th>
 <th colspan="2">Actions</th>
+<th>Use</th>
 </tr>
 <script>
-createTableRowForCookie("fixedPanel", "true");
+for(var i = 0; i < cookiesUsed.length; i++)
+{
+    createTableRowForCookie(cookiesUsed[i], cookiesUsedDefaults[i], "If set, this field will disable panel links. It is to be used for panels affixed to a particular location of a layout and adjacent panel browsing is not desired.");
+}
 </script>
 </table>
 
 <P>
-<a href="/index.html">Return to Top</a>
+<a href="/">Return to Top</a>
 
 </body>
 </html>

@@ -45,6 +45,9 @@ var SERVER_NAME_MAINLINELOCKED = "Mainline Locked";
 
 var connectedBackgroundColor = null;
 
+var cookiesUsed = ["fixedPanel"];
+var cookiesUsedDefaults = ["true"];
+
 function turnoutSegmentClicked(elemID)
 {
     if(isDispatchPanel())
@@ -610,7 +613,7 @@ function handleSocketDataResponse(dataArray)
         executePanelStateChangeRequestsLowLevel(undefinedItemsToUpdate, false);
     
     updateMainlineStatus();
-    
+        
     setPanelStatus("Panel Updated");
 }
 
@@ -1345,6 +1348,7 @@ function setCookie(cname,cvalue,exdays)
     var expires = "expires="+d.toGMTString();
     var path = "path=/";
     document.cookie = cname + "=" + cvalue + "; " + expires + "; " + path;
+    //document.cookie = cname + "=" + cvalue + "; " + expires + "; ";
 }
 
 function deleteCookie(cname)
