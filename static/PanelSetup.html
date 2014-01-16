@@ -10,27 +10,35 @@
 
 <script type="text/javascript">
 
-function createTableRowForCookie(cookie, value, explanation)
+function createTableRowForCookie(cookieNum)
 {
-    var cVal = getCookie(cookie);
+    var cVal = cookiesDefined[cookieNum].getCookie();
     
     document.write("<tr>");
-    document.write("<td>" + cookie + "</td>");
+    document.write("<td>" + cookiesDefined[cookieNum].name + "</td>");
     document.write("<td>" + (cVal == "" ? ">>null<<" : cVal) + "</td>");
-    document.write((cVal == "" ? "<td colspan=" + '"2">' : "<td>") + createCreateCookieButton(cookie, value) + "</td>");
-    document.write((cVal == "" ? "" : "<td>" + createDeleteCookieButton(cookie) + "</td>"));
-    document.write("<td>" + explanation + "</td>");
+    document.write((cVal == "" ? "<td colspan=" + '"2">' : "<td>") + createCreateCookieButton(cookieNum) + "</td>");
+    document.write((cVal == "" ? "" : "<td>" + createDeleteCookieButton(cookieNum) + "</td>"));
+    document.write("<td>" + cookiesDefined[cookieNum].explanation + "</td>");
     document.write("</tr>");
 }
 
-function createCreateCookieButton(cookie, value)
+function createCreateCookieButton(cookieNum)
 {
-    return '<button type="button" onclick="setCookie(' + "'" + cookie + "', '" + value + "', 3650" + '); location=location;">Create</button>';
+    var s = '<button type="button" onclick="cookiesDefined[' + cookieNum + '].setCookie(3650); location=location;">Create</button>';
+    
+    //alert(s);
+    
+    return s;
 }
 
-function createDeleteCookieButton(cookie)
+function createDeleteCookieButton(cookieNum)
 {
-    return '<button type="button" onclick="deleteCookie(' + "'" + cookie + "'" + '); location=location;">Delete</button>';
+    var s = '<button type="button" onclick="cookiesDefined[' + cookieNum + '].deleteCookie(); location=location;">Delete</button>';
+    
+    //alert(s);
+    
+    return s;
 }
 
 </script>
@@ -47,10 +55,10 @@ This page is used to set up device specific preferences through the use of brows
 <th>Use</th>
 </tr>
 <script>
-for(var i = 0; i < cookiesUsed.length; i++)
-{
-    createTableRowForCookie(cookiesUsed[i], cookiesUsedDefaults[i], "If set, this field will disable panel links. It is to be used for panels affixed to a particular location of a layout and adjacent panel browsing is not desired.");
-}
+    for(var i = 0; i < cookiesDefined.length; i++)
+    {
+        createTableRowForCookie(i);
+    }
 </script>
 </table>
 

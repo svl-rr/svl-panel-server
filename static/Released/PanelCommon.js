@@ -45,8 +45,11 @@ var SERVER_NAME_MAINLINELOCKED = "Mainline Locked";
 
 var connectedBackgroundColor = null;
 
-var cookiesUsed = ["fixedPanel"];
-var cookiesUsedDefaults = ["true"];
+var cookiesDefined = [
+    new Cookie("disableMainlinePanelLinks", "true", "If set, this field will disable panel links on the mainline link layer of a panel. It is to be used for panels affixed to a particular location of a layout and adjacent panel browsing is not desired."),
+    new Cookie("disableIndustrialPanelLinks", "true", "If set, this field will disable panel links on the industry link layer of a panel. It is to be used for panels affixed to a particular location of a layout and adjacent panel browsing is not desired."),
+    new Cookie("disablePanelLinksOnlyIfMainlineLocked", "true", "If set, this field will disable panel links (as specified by disableMainlinePanelLinks and disableIndustrialPanelLinks cookies) only when the dispatcher has locked the mainline.")
+    ];
 
 function turnoutSegmentClicked(elemID)
 {
@@ -516,7 +519,7 @@ function init(evt)
         initSocketToServer(getPanelSVGTextTitle());
 	
     updateMainlineStatus();
-	
+	    
 	setPanelStatus("Panel Ready");
 }
 
@@ -1095,34 +1098,58 @@ function addElementTitle(elemID, title)
 }
 
 /* updateMainlineStatus()
- * Sets opacity, clickability, and visibility of three layers as determined by the mainlineLocked global variable.  Will also
+ * Sets opacity, clickability, and visibility of three layers as determined by the mainlineLocked global variable as well as cookies.  Will also
  * start/stop opacity animation of lock group as appropriate
  */
 function updateMainlineStatus()
 {
 	var mainlineLockGroup = svgDocument.getElementById("mainlineLockedGroup");
 	var mainlineTrackLayer = svgDocument.getElementById("mainlineTrackLayer");
-	var mainlinePanelLinks = svgDocument.getElementById("mainlinePanelLinkLayer");
 	
 	if(mainlineLocked)
 	{
 		mainlineTrackLayer.setAttribute("style", "opacity:0.5");
 		mainlineTrackLayer.setAttribute("pointer-events", "none");
-		mainlinePanelLinks.setAttribute("pointer-events", "none");
 		mainlineLockGroup.setAttribute("visibility", "visible");
     }
 	else
 	{
 		mainlineTrackLayer.setAttribute("style", "opacity:1.0");
 		mainlineTrackLayer.setAttribute("pointer-events", "visiblePainted");
-		mainlinePanelLinks.setAttribute("pointer-events", "visiblePainted");
 		mainlineLockGroup.setAttribute("visibility", "hidden");
 	}
     
     if(typeof setDispatchMainlineLockLEDColor == 'function')
         setDispatchMainlineLockLEDColor(svgDocument.getElementById('dispatchMainlineLockedLED'), mainlineLocked == true ? "#ff0000" : "off");
 
+    var disableLayer = true;
+
+    if(cookiesDefined[2].isSet())
+        disableLayer = mainlineLocked;
+
+    disablePanelLayer("mainlinePanelLinkLayer", cookiesDefined[0].isSet() && disableLayer);
+    disablePanelLayer("industrialPanelLinkLayer", cookiesDefined[1].isSet() && disableLayer);
+
     updateMainlineLockGroup();
+}
+
+function disablePanelLayer(layerName, disable)
+{
+    var panelLinkLayer = svgDocument.getElementById(layerName);
+    
+    if(panelLinkLayer != null)
+    {
+        if(disable)
+        {
+            panelLinkLayer.setAttribute("pointer-events", "none");
+            panelLinkLayer.setAttribute("style", "opacity:0.5");
+        }
+        else
+        {
+            panelLinkLayer.setAttribute("pointer-events", "visiblePainted");
+            panelLinkLayer.setAttribute("style", "opacity:1.0");
+        }
+    }
 }
 
 /* updateMainlineLockGroup()
@@ -1329,29 +1356,48 @@ function turnoutHasMultipleMotors(objID)
 }
 
 /* Cookies */
-function getCookie(cname)
+function Cookie(cname, defaultValue, explanation)
 {
-    var name = cname + "=";
+    var cpath = "/";
+
+    this.name = cname;
+    this.defaultValue = defaultValue;
+    this.explanation = explanation;
+    this.path = "path=" + cpath;
+    
+    this.getCookie = getCookie;
+    this.setCookie = setCookie;
+    this.deleteCookie = deleteCookie;
+    
+    this.isSet = isSet;
+}
+
+function isSet()
+{
+    return this.getCookie() == this.defaultValue;
+}
+
+function getCookie()
+{
+    var cname = this.name + "=";
     var ca = document.cookie.split(';');
     for(var i=0; i<ca.length; i++)
     {
         var c = ca[i].trim();
-        if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        if (c.indexOf(cname)==0) return c.substring(cname.length,c.length);
     }
     return "";
 }
 
-function setCookie(cname,cvalue,exdays)
+function setCookie(exdays)
 {
     var d = new Date();
     d.setTime(d.getTime()+(exdays*24*60*60*1000));
     var expires = "expires="+d.toGMTString();
-    var path = "path=/";
-    document.cookie = cname + "=" + cvalue + "; " + expires + "; " + path;
-    //document.cookie = cname + "=" + cvalue + "; " + expires + "; ";
+    document.cookie = this.name + "=" + this.defaultValue + "; " + expires + "; " + this.path;
 }
 
-function deleteCookie(cname)
+function deleteCookie()
 {
-    setCookie(cname, "", -1);
+    this.setCookie(-1);
 }
