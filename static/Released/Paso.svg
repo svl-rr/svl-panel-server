@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Paso.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,10 +269,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1822589"
-     inkscape:cx="279.60598"
+     inkscape:cx="617.23341"
      inkscape:cy="353.8371"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlinePanelLinkLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -430,7 +430,7 @@
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO571A.R"
+         id="TO571A.N"
          d="m 520,574.0945 40,-40"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -440,7 +440,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 510,554.0945 30,0 20,-20"
-         id="TO571A.N"
+         id="TO571A.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
     </g>
@@ -450,7 +450,7 @@
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO572B.N"
+         id="TO572B.R"
          d="m 520,514.0945 20,20 20,0"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -460,7 +460,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,534.0945 40,0"
-         id="TO572B.R"
+         id="TO572B.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -658,13 +658,13 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,514.0945 20,20 20,0"
-         id="TO550.N"
+         id="TO550.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO550.R"
+         id="TO550.N"
          d="m 520,534.0945 40,0"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -675,7 +675,7 @@
        id="g5526"
        style="display:inline">
       <path
-         id="TO571B.R"
+         id="TO571B.N"
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          d="m 520,514.0945 20,20 20,0"
@@ -687,7 +687,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,534.0945 40,0"
-         id="TO571B.N"
+         id="TO571B.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -698,7 +698,7 @@
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO572A.N"
+         id="TO572A.R"
          d="m 520,514.0945 20,20 20,0"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -708,7 +708,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,534.0945 40,0"
-         id="TO572A.R"
+         id="TO572A.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -721,13 +721,13 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,514.0945 20,20 20,0"
-         id="TO573.N"
+         id="TO573.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO573.R"
+         id="TO573.N"
          d="m 520,534.0945 40,0"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -784,9 +784,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Ravine_Quinn.svg"
-       style="display:inline"
+       transform="translate(740,58.000056)"
        id="a3517"
-       transform="translate(740,58.000056)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
@@ -802,9 +802,9 @@
     </a>
     <a
        xlink:href="NPF.svg"
-       style="display:inline"
+       transform="translate(-196,62.000051)"
        id="a5609"
-       transform="translate(-196,62.000051)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text5611"
