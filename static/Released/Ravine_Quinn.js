@@ -2,8 +2,12 @@ function panelInit(evt)
 {
 }
 
-function track1Path()
+function QuinnReturnLoopPath()
 {
-	//executePathArray(["TO980.R", "TO982B.N", "TO984B.N", "TO986B.N", "TO990B.R"]);
+	executePathArray(["TO599.N"]);
 }
 
+function QuinnBypassPath()
+{
+	executePathArray(["TO599.R"]);
+}

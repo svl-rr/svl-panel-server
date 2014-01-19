@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Ravine_Quinn.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,7 +269,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0182338"
-     inkscape:cx="554.28252"
+     inkscape:cx="435.4493"
      inkscape:cy="376.35006"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
@@ -450,7 +450,8 @@
        d="m 450,194.0945 260,260 40,0"
        id="path3260"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       onclick="QuinnReturnLoopPath()" />
     <path
        sodipodi:nodetypes="cc"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
@@ -469,7 +470,8 @@
        d="m 750,174.0945 -300,0"
        id="path3266"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="QuinnBypassPath()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -535,9 +537,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Paso.svg"
-       transform="translate(-46,54.000059)"
+       style="display:inline"
        id="a5609"
-       style="display:inline">
+       transform="translate(-46,54.000059)">
       <text
          sodipodi:linespacing="125%"
          id="text5611"
@@ -553,9 +555,9 @@
     </a>
     <a
        xlink:href="Silicon.svg"
-       style="display:inline"
+       transform="translate(482,470.00005)"
        id="a3248"
-       transform="translate(482,470.00005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -579,9 +581,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Upton.svg"
-       transform="translate(602,56.000504)"
+       style="display:inline"
        id="a4802"
-       style="display:inline">
+       transform="translate(602,56.000504)">
       <text
          sodipodi:linespacing="125%"
          id="text4804"
@@ -597,9 +599,9 @@
     </a>
     <a
        xlink:href="Tracy.svg"
-       style="display:inline"
+       transform="translate(602,336.0005)"
        id="a4810"
-       transform="translate(602,336.0005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
