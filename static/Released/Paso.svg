@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Paso.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,7 +269,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1822589"
-     inkscape:cx="617.23341"
+     inkscape:cx="514.88696"
      inkscape:cy="353.8371"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
@@ -470,7 +470,8 @@
        id="path3511"
        d="m 240,274.09451 -20,-20 -100,-1e-5"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="ScrapYardTrack4Path()" />
     <g
        transform="matrix(1,0,0,-1,-280,848.189)"
        id="g5548">
@@ -497,7 +498,8 @@
        d="m 660,294.0945 -20,0 -20,20"
        id="path5574"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       onclick="ScrapMillTrack2Path()" />
     <g
        id="g5668"
        transform="matrix(1,0,0,-1,-240,888.189)">
@@ -524,14 +526,16 @@
        d="m 270,334.09451 -150,-1e-5"
        id="path6974"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="ScrapYardTrack2Path()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path6980"
        d="m 230,294.09451 -110,-1e-5"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="ScrapYardTrack3Path()" />
     <g
        transform="translate(-200,-160)"
        id="g4564">
@@ -558,7 +562,8 @@
        id="path4570"
        d="m 320,374.0945 -200,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="ScrapYardTrack1Path()" />
     <g
        id="g4572"
        transform="matrix(1,0,0,-1,280,868.189)">
@@ -606,7 +611,8 @@
        d="m 660,334.0945 -40,0"
        id="path4584"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="ScrapMillTrack1LeftPath()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -634,7 +640,8 @@
        id="path4610"
        d="m 800,334.0945 -40,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="ScrapMillTrack1RightPath()" />
     <path
        inkscape:label="#path4221"
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:5, 5;stroke-dashoffset:0"
@@ -736,10 +743,18 @@
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       d="m 800,354.0945 -20,20 -260,0"
+       d="m 800,354.0945 -20,20 -100,0"
        id="path5572"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       onclick="ShippingReceivingPath()" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path3114"
+       d="m 680,374.0945 -160,0"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       inkscape:label="#path4221" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -784,9 +799,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Ravine_Quinn.svg"
-       transform="translate(740,58.000056)"
+       style="display:inline"
        id="a3517"
-       style="display:inline">
+       transform="translate(740,58.000056)">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
@@ -802,9 +817,9 @@
     </a>
     <a
        xlink:href="NPF.svg"
-       transform="translate(-196,62.000051)"
+       style="display:inline"
        id="a5609"
-       style="display:inline">
+       transform="translate(-196,62.000051)">
       <text
          sodipodi:linespacing="125%"
          id="text5611"
