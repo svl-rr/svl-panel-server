@@ -269,10 +269,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1822589"
-     inkscape:cx="473.71775"
+     inkscape:cx="269.02485"
      inkscape:cy="353.8371"
      inkscape:document-units="px"
-     inkscape:current-layer="svg2"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -497,26 +497,27 @@
        id="path3511"
        d="m 680,314.0945 -20,20 -180,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="IntermodalTrack1RightPath()" />
     <g
        transform="translate(160,-260)"
        id="g5548">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,574.0945 40,-40"
+         id="TO723.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="TO723.N"
          d="m 510,554.0945 30,0 20,-20"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
-      <path
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
-         inkscape:label="#path4221"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 520,574.0945 40,-40"
-         id="TO723.R"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cc" />
     </g>
     <path
        inkscape:label="#path4221"
@@ -524,21 +525,24 @@
        d="m 300,334.0945 -40,0 -40,-40"
        id="path5574"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       onclick="LocoReadyPath()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 480,294.0945 -170,0"
        id="path5576"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="IntermodalTrack2LeftPath()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path5578"
        d="m 480,254.0945 -220,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="IntermodalTrack3LeftPath()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -625,21 +629,24 @@
        d="m 710,254.0945 -230,0"
        id="path6974"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="IntermodalTrack3RightPath()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 480,334.0945 -140,0"
        id="path6978"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="IntermodalTrack1LeftPath()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path6980"
        d="m 670,294.0945 -190,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="IntermodalTrack2RightPath()" />
   </g>
   <g
      inkscape:groupmode="layer"
