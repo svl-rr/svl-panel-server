@@ -2,8 +2,22 @@ function panelInit(evt)
 {
 }
 
-function track1Path()
+function LoggingCamp2Path()
 {
-	//executePathArray(["TO980.R", "TO982B.N", "TO984B.N", "TO986B.N", "TO990B.R"]);
+	//executePathArray(["TO.R"]);
 }
 
+function LoggingCamp1Path()
+{
+	//executePathArray(["TO.R"]);
+}
+
+function Switchback2Path()
+{
+	//executePathArray(["TO.R"]);
+}
+
+function Switchback1Path()
+{
+	//executePathArray(["TO.R"]);
+}

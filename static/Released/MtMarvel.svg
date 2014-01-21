@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="MtMarvel.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,10 +269,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.7819091"
-     inkscape:cx="760.1506"
+     inkscape:cx="451.89078"
      inkscape:cy="363.90134"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlinePanelLinkLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -537,7 +537,8 @@
        id="track6Path"
        d="m 840,174.0945 -80,80 -30,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="RIPTrackPath()" />
     <g
        style="display:inline"
        transform="matrix(-1,0,0,1,1250,-280)"
@@ -565,35 +566,40 @@
        id="path3509"
        d="m 670,294.0945 -190,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="OutboundPath()" />
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3511"
        d="m 901.03637,315.13087 -20,20 L 770,334.0945"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="SwitchLeadPath()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 590,214.0945 -150,0"
        id="path3513"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="LumberMill1Path()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 440,174.0945 140,0 20,20"
        id="path3523"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       onclick="LumberMill2Path()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 710,334.0945 -270,0"
        id="path3527"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="InboundPath()" />
     <g
        style="display:inline"
        transform="matrix(0,1,1,0,125.9055,-225.9055)"
@@ -663,7 +669,8 @@
        id="path3272"
        d="m 790,174.0945 -60,60"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="EngineHousePath()" />
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
@@ -790,7 +797,8 @@
        id="path3525"
        d="m 140,494.0945 40,0 20,-20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="MainNBPath()" />
     <path
        inkscape:connector-curvature="0"
        id="path3531"
@@ -829,7 +837,8 @@
        id="path3280"
        d="m 190,454.0945 -50,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="MainSBPath()" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -840,9 +849,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       style="display:inline"
+       transform="translate(-196,328.00005)"
        id="pasoLink"
-       transform="translate(-196,328.00005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -858,9 +867,9 @@
     </a>
     <a
        xlink:href="NPF.svg"
-       transform="translate(750,184.00005)"
+       style="display:inline"
        id="a3517"
-       style="display:inline">
+       transform="translate(750,184.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
@@ -876,9 +885,9 @@
     </a>
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       transform="translate(-196,368.00005)"
+       style="display:inline"
        id="a3284"
-       style="display:inline">
+       transform="translate(-196,368.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3286"
@@ -902,9 +911,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvelTimber.svg"
-       transform="translate(-128.96363,169.03687)"
+       style="display:inline"
        id="a3534"
-       style="display:inline">
+       transform="translate(-128.96363,169.03687)">
       <text
          sodipodi:linespacing="125%"
          id="text3536"

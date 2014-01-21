@@ -2,8 +2,39 @@ function panelInit(evt)
 {
 }
 
-function track1Path()
+function LumberMill1Path()
 {
-	//executePathArray(["TO980.R", "TO982B.N", "TO984B.N", "TO986B.N", "TO990B.R"]);
+	//executePathArray(["TO.R"]);
 }
 
+function LumberMill2Path()
+{
+}
+
+function EngineHousePath()
+{
+}
+
+function RIPTrackPath()
+{
+}
+
+function OutboundPath()
+{
+}
+
+function InboundPath()
+{
+}
+
+function SwitchLeadPath()
+{
+}
+
+function MainNBPath()
+{
+}
+
+function MainSBPath()
+{
+}
