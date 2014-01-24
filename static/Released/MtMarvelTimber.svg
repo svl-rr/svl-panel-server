@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="MtMarvelTimber.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,7 +269,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.26"
-     inkscape:cx="416.34555"
+     inkscape:cx="320.3138"
      inkscape:cy="327.06498"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
@@ -595,7 +595,8 @@
        id="path4337"
        d="m 200,334.0945 120,120 180,0 40,-40"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="Switchback1Path()" />
     <g
        style="display:inline"
        id="g4341"
@@ -623,21 +624,24 @@
        id="path4347"
        d="m 280,294.0945 0,50 50,50 200,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="Switchback2Path()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 480,314.0945 -130,0"
        id="path4349"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
+       sodipodi:nodetypes="cc"
+       onclick="LoggingCamp2Path()" />
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path4351"
        d="m 480,354.0945 -120,0 -20,-20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="LoggingCamp1Path()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
@@ -690,9 +694,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="NowheresHump.svg"
-       style="display:inline"
+       transform="translate(-48.96362,139.03688)"
        id="a3534"
-       transform="translate(-48.96362,139.03688)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3536"
@@ -712,9 +716,9 @@
     </a>
     <a
        xlink:href="NowheresHump.svg"
-       transform="translate(651.03638,169.03687)"
+       style="display:inline"
        id="a4135"
-       style="display:inline">
+       transform="translate(651.03638,169.03687)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -730,9 +734,9 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       style="display:inline"
+       transform="translate(657.03638,333.03687)"
        id="a4323"
-       transform="translate(657.03638,333.03687)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text4325"
@@ -748,9 +752,9 @@
     </a>
     <a
        xlink:href="NowheresHump.svg"
-       transform="translate(51.036377,139.03688)"
+       style="display:inline"
        id="a4543"
-       style="display:inline">
+       transform="translate(51.036377,139.03688)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
