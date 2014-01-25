@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="Silicon.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,14 +269,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3557978"
-     inkscape:cx="520.28577"
+     inkscape:cx="431.03942"
      inkscape:cy="336.34224"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="26"
+     inkscape:window-x="1"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -432,13 +432,13 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,514.0945 20,20 20,0"
-         id="TO649.R"
+         id="TO649.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO649.N"
+         id="TO649.R"
          d="m 520,534.0945 40,0"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -450,7 +450,7 @@
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO637.R"
+         id="TO637.N"
          d="m 520,514.0945 20,20 20,0"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -460,7 +460,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,534.0945 40,0"
-         id="TO637.N"
+         id="TO637.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -472,13 +472,13 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 510,554.0945 30,0 20,-20"
-         id="TO634.R"
+         id="TO634.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO634.N"
+         id="TO634.R"
          d="m 520,574.0945 40,-40"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -492,13 +492,13 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,514.0945 20,20 20,0"
-         id="TO636A.R"
+         id="TO636A.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO636A.N"
+         id="TO636A.R"
          d="m 520,534.0945 40,0"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -510,7 +510,7 @@
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO631.R"
+         id="TO631.N"
          d="m 510,554.0945 30,0 20,-20"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -520,7 +520,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,574.0945 40,-40"
-         id="TO631.N"
+         id="TO631.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -530,7 +530,7 @@
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO630.N"
+         id="TO630.R"
          d="m 520,574.0945 40,-40"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -540,7 +540,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 510,554.0945 30,0 20,-20"
-         id="TO630.R"
+         id="TO630.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
     </g>
@@ -550,7 +550,7 @@
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO636B.R"
+         id="TO636B.N"
          d="m 520,514.0945 20,20 20,0"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -560,7 +560,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,534.0945 40,0"
-         id="TO636B.N"
+         id="TO636B.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -602,7 +602,7 @@
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO635A.R"
+         id="TO635A.N"
          d="m 510,554.0945 30,0 20,-20"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -612,7 +612,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,574.0945 40,-40"
-         id="TO635A.N"
+         id="TO635A.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -624,13 +624,13 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 510,554.0945 30,0 20,-20"
-         id="TO632.R"
+         id="TO632.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO632.N"
+         id="TO632.R"
          d="m 520,574.0945 40,-40"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -643,7 +643,7 @@
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO635B.R"
+         id="TO635B.N"
          d="m 520,534.0945 40,0"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -653,7 +653,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,514.0945 20,20 20,0"
-         id="TO635B.N"
+         id="TO635B.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
     </g>
@@ -701,7 +701,7 @@
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO633.N"
+         id="TO633.R"
          d="m 520,514.0945 20,20 20,0"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"
@@ -711,7 +711,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 520,534.0945 40,0"
-         id="TO633.R"
+         id="TO633.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -905,9 +905,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Ravine_Quinn.svg"
-       transform="translate(-198,60.000061)"
+       style="display:inline"
        id="a5609"
-       style="display:inline">
+       transform="translate(-198,60.000061)">
       <text
          sodipodi:linespacing="125%"
          id="text5611"
@@ -923,9 +923,9 @@
     </a>
     <a
        xlink:href="Tracy.svg"
-       style="display:inline"
+       transform="translate(772,250.00005)"
        id="a3248"
-       transform="translate(772,250.00005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
