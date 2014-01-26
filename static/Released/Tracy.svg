@@ -269,7 +269,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1822589"
-     inkscape:cx="667.03082"
+     inkscape:cx="462.33792"
      inkscape:cy="361.36258"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
@@ -682,7 +682,8 @@
        id="path3218"
        d="m 480,434.0945 -40,0 -60,-60"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="EngineLeadPath()" />
     <g
        id="g3220"
        transform="matrix(-1,0,0,-1,1080,708.189)">
@@ -749,14 +750,16 @@
        id="path3258"
        d="m 640,214.0945 -20,-20 -100,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="IndustrialSidingRightPath()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
        d="m 180,214.0945 20,-20 120,0"
        id="path3260"
        inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+       sodipodi:nodetypes="ccc"
+       onclick="IndustrialSidingLeftPath()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"

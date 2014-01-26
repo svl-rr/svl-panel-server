@@ -269,10 +269,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.7819091"
-     inkscape:cx="564.84438"
+     inkscape:cx="633.87157"
      inkscape:cy="363.90134"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="mainlineTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -684,7 +684,8 @@
        id="path3303"
        d="m 800,394.0945 -40,-40"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="MtMarvelLeadPath()" />
     <g
        style="display:inline"
        id="g3501"
@@ -798,7 +799,7 @@
        d="m 140,494.0945 40,0 20,-20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221"
-       onclick="MainNBPath()" />
+       onclick="LoopNBPath()" />
     <path
        inkscape:connector-curvature="0"
        id="path3531"
@@ -823,7 +824,8 @@
        id="path3529"
        d="m 800,414.0945 -540,0 -20,20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       inkscape:label="#path4221" />
+       inkscape:label="#path4221"
+       onclick="MtMarvelMainPath()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
@@ -838,7 +840,7 @@
        d="m 190,454.0945 -50,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221"
-       onclick="MainSBPath()" />
+       onclick="LoopSBPath()" />
   </g>
   <g
      inkscape:groupmode="layer"
