@@ -24,15 +24,15 @@
      id="script3331" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="MtMarvelTimber.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,10 +269,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.26"
-     inkscape:cx="684.00904"
+     inkscape:cx="527.65983"
      inkscape:cy="327.06498"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -324,7 +324,7 @@
      transform="translate(0,-312.24738)"
      sodipodi:insensitive="true">
     <rect
-       style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       style="fill:#0000c4;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="panelBackground"
        width="1047.9579"
        height="690.11475"
@@ -694,9 +694,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="NowheresHump.svg"
-       style="display:inline"
+       transform="translate(-48.96362,139.03688)"
        id="a3534"
-       transform="translate(-48.96362,139.03688)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3536"
@@ -716,9 +716,9 @@
     </a>
     <a
        xlink:href="NowheresHump.svg"
-       transform="translate(651.03638,169.03687)"
+       style="display:inline"
        id="a4135"
-       style="display:inline">
+       transform="translate(651.03638,169.03687)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -734,9 +734,9 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       style="display:inline"
+       transform="translate(657.03638,333.03687)"
        id="a4323"
-       transform="translate(657.03638,333.03687)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text4325"
@@ -752,9 +752,9 @@
     </a>
     <a
        xlink:href="NowheresHump.svg"
-       transform="translate(51.036377,139.03688)"
+       style="display:inline"
        id="a4543"
-       style="display:inline">
+       transform="translate(51.036377,139.03688)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
