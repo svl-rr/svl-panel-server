@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ../user
+cd ../userPanels
 grep TO *.svg > turnoutAddressList.tmp
 #remove closing xml tags
 perl -p -i -e 's/ \/>//g' turnoutAddressList.tmp
