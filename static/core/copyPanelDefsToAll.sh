@@ -6,10 +6,10 @@ then
 	echo "$inputLib exists! Finding definitions section..."
 	awk '/<defs/,/<\/defs>/' "$inputLib" > /tmp/PanelDefs.tmp
 	
-	FILES=../user/*.svg
+	FILES=../userPanels/*.svg
 	for f in $FILES
 	do
-		if [[ "$f" != "$inputLib" ]] && [[ "$f" != "../user/index.svg" ]] && [[ "$f" != "../user/indexAlt.svg" ]];
+		if [[ "$f" != "$inputLib" ]] && [[ "$f" != "../userPanels/index.svg" ]] && [[ "$f" != "../userPanels/indexAlt.svg" ]];
 		then
 			echo "Processing $f file..."
 						
