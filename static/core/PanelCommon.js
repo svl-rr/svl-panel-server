@@ -517,7 +517,7 @@ function init(evt)
     
     if(enableServerAccesses)
         initSocketToServer(getPanelSVGTextTitle());
-	
+    
     updateMainlineStatus();
 	    
 	setPanelStatus("Panel Ready");
@@ -570,9 +570,9 @@ function handleSocketDataResponse(dataArray)
             }
             else if(dataArray[i].type == SERVER_TYPE_TURNOUT)
                 setTurnoutState(dataArray[i].name, dataArray[i].value);
-            else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setDispatchObject != 'function'))
+            else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setSensorState == 'function'))
             {
-                // setSensorState(dataArray[i].name, dataArray[i].value);
+                setSensorState(dataArray[i].name, dataArray[i].value);
             }
             else
             {
