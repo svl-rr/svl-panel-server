@@ -27,12 +27,12 @@
      id="script3177" />
   <script
      xlink:href="PanelCommon.js"
-     id="script_common"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_common" />
   <script
      xlink:href="SensorTester.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,15 +269,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.17"
-     inkscape:cx="474.62961"
+     inkscape:cx="310.0997"
      inkscape:cy="340.03813"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="3"
-     inkscape:window-y="130"
+     inkscape:window-x="356"
+     inkscape:window-y="83"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -429,15 +429,19 @@
      transform="translate(0,4.4296875e-4)">
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="210"
-       y="210.1143"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       x="290"
+       y="200.1143"
        id="text4446"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4448"
-         x="210"
-         y="210.1143">Sensor Addr:</tspan></text>
+         x="290"
+         y="200.1143">Sensor</tspan><tspan
+         sodipodi:role="line"
+         x="290"
+         y="220.1143"
+         id="tspan3080">Addr:</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="SID1"
@@ -545,14 +549,18 @@
     <text
        sodipodi:linespacing="125%"
        id="text3149"
-       y="210.11433"
-       x="350"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       y="200.1143"
+       x="370"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
-         y="210.11433"
-         x="350"
+         y="200.1143"
+         x="370"
          id="tspan3151"
-         sodipodi:role="line">State:</tspan></text>
+         sodipodi:role="line">Sensor</tspan><tspan
+         y="220.1143"
+         x="370"
+         sodipodi:role="line"
+         id="tspan3083">State:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
@@ -683,5 +691,17 @@
          id="tspan3082"
          x="700"
          y="340.11429">Click a state to toggle it (only works if server is in offline mode)</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="autoFillAddrRange"
+       y="520.11432"
+       x="300"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       xml:space="preserve"
+       onclick="autoFillAddressRange();"><tspan
+         id="tspan3089"
+         y="520.11432"
+         x="300"
+         sodipodi:role="line">Autofill Address Range</tspan></text>
   </g>
 </svg>

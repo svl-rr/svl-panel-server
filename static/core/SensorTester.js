@@ -1,6 +1,8 @@
 var SENSORTESTER_SID = "SID";
 var SENSORTESTER_STATE = "SState";
 
+var UNKNOWN_SENSOR_STATE = "--";
+
 function panelInit(evt)
 {
     for(var i = 1; i <= 8; i++)
@@ -8,7 +10,7 @@ function panelInit(evt)
         var stateElemID = SENSORTESTER_STATE + i;
         var stateElem = svgDocument.getElementById(stateElemID);
         
-        setSVGText(stateElemID, "--");
+        setSVGText(stateElemID, UNKNOWN_SENSOR_STATE);
         setStyleSubAttribute(stateElem, "cursor", "pointer");
         
         var addrElemID = SENSORTESTER_SID + i;
@@ -16,6 +18,11 @@ function panelInit(evt)
         
         setStyleSubAttribute(addrElem, "cursor", "pointer");
     }
+    
+    var autoFillElem = svgDocument.getElementById("autoFillAddrRange");
+    
+    if(autoFillElem != null)
+        setStyleSubAttribute(autoFillElem, "cursor", "pointer");
 }
 
 function getPanelSpecificStates()
@@ -32,28 +39,61 @@ function getPanelSpecificStates()
     return panelSpecificStates;
 }
 
-function setSensorAddr(whichElem)
+function autoFillAddressRange()
 {
-    var newAddr = prompt("Enter a new sensor address", getSVGText(whichElem.id));
+    var newAddr = promptForAddress("Enter start of address range:", "1");
+
+    if(newAddr != null)
+    {
+        for(var i = 1; i <= 8; i++)
+        {
+            var stateElemID = SENSORTESTER_STATE + i;
+            
+            setSVGText(stateElemID, UNKNOWN_SENSOR_STATE);
+            
+            var addrElemID = SENSORTESTER_SID + i;
+            
+            setSVGText(addrElemID, Number(newAddr.valueOf()) + (i-1));
+        }
+        
+        updateAllObjectsFromServer();
+    }
+}
+
+function promptForAddress(displayText, initialValue)
+{
+    var newAddr = prompt(displayText, initialValue);
 
     var regExResult = newAddr.match(/[1-9][0-9]*/);
 
     if(newAddr == regExResult)
     {
+        return newAddr;
+    }
+    else if((newAddr == null) || (newAddr == ""))
+    {
+        return null;
+    }
+    else
+        alert("Only enter a numeric address in this field");
+    
+    return null;
+}
+
+function setSensorAddr(whichElem)
+{
+    var newAddr = promptForAddress("Enter a new sensor address:", getSVGText(whichElem.id));
+
+    if(newAddr != null)
+    {
         setSVGText(whichElem.parentNode.id, newAddr);
         
         var i = whichElem.parentNode.id.substring(whichElem.parentNode.id.length-1);
         
-        setSVGText(SENSORTESTER_STATE + i, "--");
+        setSVGText(SENSORTESTER_STATE + i, UNKNOWN_SENSOR_STATE);
         
         updateAllObjectsFromServer();
     }
-    else if((newAddr == null) || (newAddr == ""))
-    {
-        // canceled by user
-    }
-    else
-        alert("Only enter a numeric address in this field");
 }
 
 function toggleState(whichElem)
