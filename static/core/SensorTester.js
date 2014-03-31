@@ -41,7 +41,7 @@ function getPanelSpecificStates()
 
 function autoFillAddressRange()
 {
-    var newAddr = promptForAddress("Enter start of address range:", "1");
+    var newAddr = promptForAddress("Enter start of address range:", "1", 4089);
 
     if(newAddr != null)
     {
@@ -60,7 +60,7 @@ function autoFillAddressRange()
     }
 }
 
-function promptForAddress(displayText, initialValue)
+function promptForAddress(displayText, initialValue, maxAddress)
 {
     var newAddr = prompt(displayText, initialValue);
 
@@ -68,21 +68,21 @@ function promptForAddress(displayText, initialValue)
 
     if(newAddr == regExResult)
     {
-        return newAddr;
+        if(Number(newAddr.valueOf()) <= maxAddress)
+            return newAddr;
     }
     else if((newAddr == null) || (newAddr == ""))
     {
         return null;
     }
-    else
-        alert("Only enter a numeric address in this field");
     
+    alert("Only enter a numeric address between 1 and " + maxAddress + " in this field");
     return null;
 }
 
 function setSensorAddr(whichElem)
 {
-    var newAddr = promptForAddress("Enter a new sensor address:", getSVGText(whichElem.id));
+    var newAddr = promptForAddress("Enter a new sensor address:", getSVGText(whichElem.id), 4096);
 
     if(newAddr != null)
     {
