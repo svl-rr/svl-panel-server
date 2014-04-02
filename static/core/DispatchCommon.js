@@ -561,20 +561,31 @@ function clickTrainListLabel(elemID)
 		if(currentTrainID == " ")
 			currentTrainID = "";
 	
-		var returnedTrainID = prompt("Enter a train ID or enter a single space to clear this field.", currentTrainID);
+		var returnedTrainID = prompt("Enter a train ID:", currentTrainID);
 		
-        if(returnedTrainID != null)
+        if((returnedTrainID != null) && (returnedTrainID != ""))
 		{
-			// MacOS/Safari seems to always return "" when canceled. So emulate the cancel by not doing anything if "" is returned
-			if(returnedTrainID != "")
-			{
-				if(returnedTrainID == " ")
-					returnedTrainID = "";
-			
-				setTrainIDText(trainIDElemID, returnedTrainID);
-				setNextAuthorizationTrain(trainIDElemID);
-			}
+            setTrainIDText(trainIDElemID, returnedTrainID);
+            setNextAuthorizationTrain(trainIDElemID);
 		}
+	}
+}
+
+function clickClearTrainID(target)
+{
+    var trainIDElemID = target.parentNode.id.replace("ClearTrainID", "Train");
+	
+	var trainIDElem = svgDocument.getElementById(trainIDElemID);
+	
+	if(trainIDElem == null)
+	{
+		alert("Unsupported train ID element ID " + trainIDElem + " in clearTrainID()!");
+		return;
+	}
+	else
+	{
+		setTrainIDText(trainIDElemID, "");
+        setNextAuthorizationTrain(trainIDElemID);
 	}
 }
 
@@ -639,7 +650,7 @@ function showSelectedAuthorizationElement(whichElem)
 	
 	var leftElem = svgDocument.getElementById(leftElemID);
 	var rightElem = svgDocument.getElementById(rightElemID);
-	
+    
 	if((leftElem == null) || (rightElem == null))
 	{
 		alert("Unsupported element prefix " + whichElem + " in showSelectedAuthorizationElement()!");
@@ -736,6 +747,17 @@ function setDispatchObject(object)
         if(object.name.search("[n|s|o][1-8]") == 0)
         {
             setSVGText(object.name + "Train", object.value);
+            
+            var clearElemID = object.name.substring(0,2) + "ClearTrainID";
+            var clearElem = svgDocument.getElementById(clearElemID);
+
+            if(clearElem != null)
+            {
+                if(object.value == "")
+                    clearElem.setAttribute("visibility", "hidden");
+                else
+                    clearElem.setAttribute("visibility", "visible");
+            }
             
             if(selectedNSO == object.name.substring(0,2))
             {
