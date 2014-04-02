@@ -34,8 +34,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="DispatchNorthRedirect.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <script
      xlink:href="/core/DispatchCommon.js"
      id="script3208"
@@ -290,10 +290,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.5115134"
-     inkscape:cx="355.31175"
-     inkscape:cy="452.99203"
+     inkscape:cx="374.9165"
+     inkscape:cy="215.50033"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="trainListsLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -412,77 +412,77 @@
        sodipodi:linespacing="125%"
        id="n1Label"
        y="730.11475"
-       x="10"
+       x="30"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="730.11475"
-         x="10"
+         x="30"
          id="n1LabelTSpan"
          sodipodi:role="line">N1:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="10"
+       x="30"
        y="750.11475"
        id="n2Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="n2LabelTSpan"
-         x="10"
+         x="30"
          y="750.11475">N2:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="10"
+       x="30"
        y="770.11475"
        id="n3Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="n3LabelTSpan"
-         x="10"
+         x="30"
          y="770.11475">N3:</tspan></text>
     <text
        inkscape:label="#text4498"
        sodipodi:linespacing="125%"
        id="n4Label"
        y="790.11475"
-       x="10"
+       x="30"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="790.11475"
-         x="10"
+         x="30"
          id="n4LabelTSpan"
          sodipodi:role="line">N4:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="180"
+       x="200"
        y="730.11475"
        id="n5Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="n5LabelTSpan"
-         x="180"
+         x="200"
          y="730.11475">N5:</tspan></text>
     <text
        inkscape:label="#text4498"
        sodipodi:linespacing="125%"
        id="n6Label"
        y="750.11475"
-       x="180"
+       x="200"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="750.11475"
-         x="180"
+         x="200"
          id="n6LabelTSpan"
          sodipodi:role="line">N6:</tspan></text>
     <text
@@ -490,31 +490,31 @@
        sodipodi:linespacing="125%"
        id="n7Label"
        y="770.11475"
-       x="180"
+       x="200"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="770.11475"
-         x="180"
+         x="200"
          id="n7LabelTSpan"
          sodipodi:role="line">N7:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="180"
+       x="200"
        y="790.11475"
        id="n8Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="n8LabelTSpan"
-         x="180"
+         x="200"
          y="790.11475">N8:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="40"
+       x="60"
        y="730.11475"
        id="n1Train"
        sodipodi:linespacing="125%"
@@ -522,7 +522,7 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="n1TrainTSpan"
-         x="40"
+         x="60"
          y="730.11475">Train N1</tspan></text>
     <text
        onclick="setNextAuthorizationTrain(evt.target.id);"
@@ -530,11 +530,11 @@
        sodipodi:linespacing="125%"
        id="n2Train"
        y="750.11475"
-       x="40"
+       x="60"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="750.11475"
-         x="40"
+         x="60"
          id="n2TrainTSpan"
          sodipodi:role="line">Train N2</tspan></text>
     <text
@@ -543,17 +543,17 @@
        sodipodi:linespacing="125%"
        id="n3Train"
        y="770.11475"
-       x="40"
+       x="60"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="770.11475"
-         x="40"
+         x="60"
          id="n3TrainTSpan"
          sodipodi:role="line">Train N3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="40"
+       x="60"
        y="790.11475"
        id="n4Train"
        sodipodi:linespacing="125%"
@@ -561,7 +561,7 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="n4TrainTSpan"
-         x="40"
+         x="60"
          y="790.11475">Train N4</tspan></text>
     <text
        onclick="setNextAuthorizationTrain(evt.target.id);"
@@ -569,17 +569,17 @@
        sodipodi:linespacing="125%"
        id="n5Train"
        y="730.11475"
-       x="210"
+       x="230"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="730.11475"
-         x="210"
+         x="230"
          id="n5TrainTSpan"
          sodipodi:role="line">Train N5</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="210"
+       x="230"
        y="750.11475"
        id="n6Train"
        sodipodi:linespacing="125%"
@@ -587,12 +587,12 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="n6TrainTSpan"
-         x="210"
+         x="230"
          y="750.11475">Train N6</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="210"
+       x="230"
        y="770.11475"
        id="n7Train"
        sodipodi:linespacing="125%"
@@ -600,7 +600,7 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="n7TrainTSpan"
-         x="210"
+         x="230"
          y="770.11475">Train N7</tspan></text>
     <text
        onclick="setNextAuthorizationTrain(evt.target.id);"
@@ -608,37 +608,37 @@
        sodipodi:linespacing="125%"
        id="n8Train"
        y="790.11475"
-       x="210"
+       x="230"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="790.11475"
-         x="210"
+         x="230"
          id="n8TrainTSpan"
          sodipodi:role="line">Train N8</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="370"
+       x="390"
        y="730.11475"
        id="s1Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="s1LabelTSpan"
-         x="370"
+         x="390"
          y="730.11475">S1:</tspan></text>
     <text
        inkscape:label="#text4498"
        sodipodi:linespacing="125%"
        id="s2Label"
        y="750.11475"
-       x="370"
+       x="390"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="750.11475"
-         x="370"
+         x="390"
          id="s2LabelTSpan"
          sodipodi:role="line">S2:</tspan></text>
     <text
@@ -646,77 +646,77 @@
        sodipodi:linespacing="125%"
        id="s3Label"
        y="770.11475"
-       x="370"
+       x="390"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="770.11475"
-         x="370"
+         x="390"
          id="s3LabelTSpan"
          sodipodi:role="line">S3:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="370"
+       x="390"
        y="790.11475"
        id="s4Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="s4LabelTSpan"
-         x="370"
+         x="390"
          y="790.11475">S4:</tspan></text>
     <text
        inkscape:label="#text4498"
        sodipodi:linespacing="125%"
        id="s5Label"
        y="730.11475"
-       x="540"
+       x="560"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="730.11475"
-         x="540"
+         x="560"
          id="s5LabelTSpan"
          sodipodi:role="line">S5:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="540"
+       x="560"
        y="750.11475"
        id="s6Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="s6LabelTSpan"
-         x="540"
+         x="560"
          y="750.11475">S6:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="540"
+       x="560"
        y="770.11475"
        id="s7Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="s7LabelTSpan"
-         x="540"
+         x="560"
          y="770.11475">S7:</tspan></text>
     <text
        inkscape:label="#text4498"
        sodipodi:linespacing="125%"
        id="s8Label"
        y="790.11475"
-       x="540"
+       x="560"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="790.11475"
-         x="540"
+         x="560"
          id="s8LabelTSpan"
          sodipodi:role="line">S8:</tspan></text>
     <text
@@ -725,17 +725,17 @@
        sodipodi:linespacing="125%"
        id="s1Train"
        y="730.11475"
-       x="400"
+       x="420"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="730.11475"
-         x="400"
+         x="420"
          id="s1TrainTSpan"
          sodipodi:role="line">Train S1</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="400"
+       x="420"
        y="750.11475"
        id="s2Train"
        sodipodi:linespacing="125%"
@@ -743,12 +743,12 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="s2TrainTSpan"
-         x="400"
+         x="420"
          y="750.11475">Train S2</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="400"
+       x="420"
        y="770.11475"
        id="s3Train"
        sodipodi:linespacing="125%"
@@ -756,7 +756,7 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="s3TrainTSpan"
-         x="400"
+         x="420"
          y="770.11475">Train S3</tspan></text>
     <text
        onclick="setNextAuthorizationTrain(evt.target.id);"
@@ -764,17 +764,17 @@
        sodipodi:linespacing="125%"
        id="s4Train"
        y="790.11475"
-       x="400"
+       x="420"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="790.11475"
-         x="400"
+         x="420"
          id="s4TrainTSpan"
          sodipodi:role="line">Train S4</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="570"
+       x="590"
        y="730.11475"
        id="s5Train"
        sodipodi:linespacing="125%"
@@ -782,7 +782,7 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="s5TrainTSpan"
-         x="570"
+         x="590"
          y="730.11475">Train S5</tspan></text>
     <text
        onclick="setNextAuthorizationTrain(evt.target.id);"
@@ -790,11 +790,11 @@
        sodipodi:linespacing="125%"
        id="s6Train"
        y="750.11475"
-       x="570"
+       x="590"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="750.11475"
-         x="570"
+         x="590"
          id="s6TrainTSpan"
          sodipodi:role="line">Train S6</tspan></text>
     <text
@@ -803,17 +803,17 @@
        sodipodi:linespacing="125%"
        id="s7Train"
        y="770.11475"
-       x="570"
+       x="590"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="770.11475"
-         x="570"
+         x="590"
          id="s7TrainTSpan"
          sodipodi:role="line">Train S7</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="570"
+       x="590"
        y="790.11475"
        id="s8Train"
        sodipodi:linespacing="125%"
@@ -821,7 +821,7 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="s8TrainTSpan"
-         x="570"
+         x="590"
          y="790.11475">Train S8</tspan></text>
     <text
        xml:space="preserve"
@@ -840,77 +840,77 @@
        sodipodi:linespacing="125%"
        id="o1Label"
        y="730.11475"
-       x="730"
+       x="750"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="730.11475"
-         x="730"
+         x="750"
          id="o1LabelTSpan"
          sodipodi:role="line">O1:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="730"
+       x="750"
        y="750.11475"
        id="o2Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="o2LabelTSpan"
-         x="730"
+         x="750"
          y="750.11475">O2:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="730"
+       x="750"
        y="770.11475"
        id="o3Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="o3LabelTSpan"
-         x="730"
+         x="750"
          y="770.11475">O3:</tspan></text>
     <text
        inkscape:label="#text4498"
        sodipodi:linespacing="125%"
        id="o4Label"
        y="790.11475"
-       x="730"
+       x="750"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="790.11475"
-         x="730"
+         x="750"
          id="o4LabelTSpan"
          sodipodi:role="line">O4:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="900"
+       x="920"
        y="730.11475"
        id="o5Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="o5LabelTSpan"
-         x="900"
+         x="920"
          y="730.11475">O5:</tspan></text>
     <text
        inkscape:label="#text4498"
        sodipodi:linespacing="125%"
        id="o6Label"
        y="750.11475"
-       x="900"
+       x="920"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="750.11475"
-         x="900"
+         x="920"
          id="o6LabelTSpan"
          sodipodi:role="line">O6:</tspan></text>
     <text
@@ -918,31 +918,31 @@
        sodipodi:linespacing="125%"
        id="o7Label"
        y="770.11475"
-       x="900"
+       x="920"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"
        onclick="clickTrainListLabel(evt.target.id);"><tspan
          y="770.11475"
-         x="900"
+         x="920"
          id="o7LabelTSpan"
          sodipodi:role="line">O7:</tspan></text>
     <text
        onclick="clickTrainListLabel(evt.target.id);"
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="900"
+       x="920"
        y="790.11475"
        id="o8Label"
        sodipodi:linespacing="125%"
        inkscape:label="#text4498"><tspan
          sodipodi:role="line"
          id="o8LabelTSpan"
-         x="900"
+         x="920"
          y="790.11475">O8:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="760"
+       x="780"
        y="730.11475"
        id="o1Train"
        sodipodi:linespacing="125%"
@@ -950,7 +950,7 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="o1TrainTSpan"
-         x="760"
+         x="780"
          y="730.11475">Train O1</tspan></text>
     <text
        onclick="setNextAuthorizationTrain(evt.target.id);"
@@ -958,11 +958,11 @@
        sodipodi:linespacing="125%"
        id="o2Train"
        y="750.11475"
-       x="760"
+       x="780"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="750.11475"
-         x="760"
+         x="780"
          id="o2TrainTSpan"
          sodipodi:role="line">Train O2</tspan></text>
     <text
@@ -971,17 +971,17 @@
        sodipodi:linespacing="125%"
        id="o3Train"
        y="770.11475"
-       x="760"
+       x="780"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="770.11475"
-         x="760"
+         x="780"
          id="o3TrainTSpan"
          sodipodi:role="line">Train O3</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="760"
+       x="780"
        y="790.11475"
        id="o4Train"
        sodipodi:linespacing="125%"
@@ -989,7 +989,7 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="o4TrainTSpan"
-         x="760"
+         x="780"
          y="790.11475">Train O4</tspan></text>
     <text
        onclick="setNextAuthorizationTrain(evt.target.id);"
@@ -997,17 +997,17 @@
        sodipodi:linespacing="125%"
        id="o5Train"
        y="730.11475"
-       x="930"
+       x="950"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="730.11475"
-         x="930"
+         x="950"
          id="o5TrainTSpan"
          sodipodi:role="line">Train O5</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="930"
+       x="950"
        y="750.11475"
        id="o6Train"
        sodipodi:linespacing="125%"
@@ -1015,12 +1015,12 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="o6TrainTSpan"
-         x="930"
+         x="950"
          y="750.11475">Train O6</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="930"
+       x="950"
        y="770.11475"
        id="o7Train"
        sodipodi:linespacing="125%"
@@ -1028,7 +1028,7 @@
        onclick="setNextAuthorizationTrain(evt.target.id);"><tspan
          sodipodi:role="line"
          id="o7TrainTSpan"
-         x="930"
+         x="950"
          y="770.11475">Train O7</tspan></text>
     <text
        onclick="setNextAuthorizationTrain(evt.target.id);"
@@ -1036,13 +1036,877 @@
        sodipodi:linespacing="125%"
        id="o8Train"
        y="790.11475"
-       x="930"
+       x="950"
        style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
        xml:space="preserve"><tspan
          y="790.11475"
-         x="930"
+         x="950"
          id="o8TrainTSpan"
          sodipodi:role="line">Train O8</tspan></text>
+    <g
+       id="n1ClearTrainID"
+       transform="translate(-140.40142,-5.7309921)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path3915"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4733"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4735">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4741"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4743">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(-140.40142,13.803892)"
+       id="n2ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4756"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4758"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4760">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4762"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4764">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="n3ClearTrainID"
+       transform="translate(-140.40142,33.338776)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4768"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4770"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4772">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4774"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4776">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(-140.40142,52.873659)"
+       id="n4ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4780"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4782"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4784">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4786"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4788">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(30.948646,-5.4021052)"
+       id="n5ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4793"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4795"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4797">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4799"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4801">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="n6ClearTrainID"
+       transform="translate(30.948646,14.132779)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4805"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4807"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4809">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4811"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4813">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(30.948646,33.667663)"
+       id="n7ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4817"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4819"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4821">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4823"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4825">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="n8ClearTrainID"
+       transform="translate(30.948646,53.202546)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4829"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4831"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4833">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4835"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4837">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(217.09861,-5.7309921)"
+       id="s1ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4841"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4843"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4845">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4847"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4849">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="s2ClearTrainID"
+       transform="translate(217.09861,13.803892)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4853"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4855"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4857">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4859"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4861">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(217.09861,33.338776)"
+       id="s3ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4865"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4867"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4869">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4871"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4873">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="s4ClearTrainID"
+       transform="translate(217.09861,52.873659)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4877"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4879"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4881">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4883"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4885">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="s5ClearTrainID"
+       transform="translate(388.44868,-4.7443314)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4889"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4891"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4893">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4895"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4897">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(388.44868,14.790553)"
+       id="s6ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4901"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4903"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4905">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4907"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4909">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="s7ClearTrainID"
+       transform="translate(388.44868,34.325437)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4913"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4915"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4917">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4919"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4921">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(388.44868,53.86032)"
+       id="s8ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4925"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4927"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4929">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4931"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4933">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="o1ClearTrainID"
+       transform="translate(579.53195,-5.0732183)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4937"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4939"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4941">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4943"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4945">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(579.53195,14.461666)"
+       id="o2ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4949"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4951"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4953">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4955"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4957">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="o3ClearTrainID"
+       transform="translate(579.53195,33.99655)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4961"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4963"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4965">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path4967"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4969">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(579.53195,53.531433)"
+       id="o4ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4973"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4975"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4977">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4979"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4981">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(750.88202,-4.0865576)"
+       id="o5ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path4985"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path4987"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title4989">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4991"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title4993">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="o6ClearTrainID"
+       transform="translate(750.88202,15.448327)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path4997"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path4999"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title5001">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path5003"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title5005">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       inkscape:label="#g4745"
+       onclick="clickClearTrainID(evt.target);"
+       transform="translate(750.88202,34.983211)"
+       id="o7ClearTrainID">
+      <path
+         sodipodi:type="arc"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         id="path5009"
+         sodipodi:cx="160"
+         sodipodi:cy="730.11426"
+         sodipodi:rx="8"
+         sodipodi:ry="8"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         transform="translate(-2,0.00103098)" />
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         id="path5011"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title5013">Unauthorized</title>
+      </path>
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path5015"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title5017">Unauthorized</title>
+      </path>
+    </g>
+    <g
+       id="o8ClearTrainID"
+       transform="translate(750.88202,54.518094)"
+       onclick="clickClearTrainID(evt.target);"
+       inkscape:label="#g4745">
+      <path
+         transform="translate(-2,0.00103098)"
+         d="m 168,730.11426 a 8,8 0 1 1 -16,0 8,8 0 1 1 16,0 z"
+         sodipodi:ry="8"
+         sodipodi:rx="8"
+         sodipodi:cy="730.11426"
+         sodipodi:cx="160"
+         id="path5021"
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+         sodipodi:type="arc" />
+      <path
+         inkscape:label="#path3858"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="path5023"
+         d="m 162.40336,734.38793 -9.19888,-8.0112"
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+        <title
+           id="title5025">Unauthorized</title>
+      </path>
+      <path
+         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         d="m 153.79832,734.98177 8.0112,-9.19888"
+         id="path5027"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:label="#path3858">
+        <title
+           id="title5029">Unauthorized</title>
+      </path>
+    </g>
     <rect
        style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
        id="selectedTrainIDRect"
@@ -1491,7 +2355,7 @@
          id="title3874">Click to prevent field panels from throwing mainline turnouts</title>
       <path
          transform="matrix(0,-0.90760272,0.96613997,0,13.240045,106.58183)"
-         d="m 70,75.114258 c 0,8.284271 -6.715729,15 -15,15 -8.284271,0 -15,-6.715729 -15,-15 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 z"
+         d="m 70,75.114258 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
          sodipodi:ry="15"
          sodipodi:rx="15"
          sodipodi:cy="75.114258"
@@ -1501,7 +2365,7 @@
          sodipodi:type="arc" />
       <path
          transform="matrix(0,1,-1,0,161.00155,2.007253)"
-         d="m 70,75.114258 c 0,8.284271 -6.715729,15 -15,15 -8.284271,0 -15,-6.715729 -15,-15 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 z"
+         d="m 70,75.114258 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
          sodipodi:ry="15"
          sodipodi:rx="15"
          sodipodi:cy="75.114258"
@@ -1517,7 +2381,7 @@
          sodipodi:cy="75.114258"
          sodipodi:rx="15"
          sodipodi:ry="15"
-         d="m 70,75.114258 c 0,8.284271 -6.715729,15 -15,15 -8.284271,0 -15,-6.715729 -15,-15 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 z"
+         d="m 70,75.114258 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
          transform="matrix(0.98931645,0,0,0.96265966,31.548099,-14.840681)" />
       <path
          sodipodi:type="arc"
@@ -1527,7 +2391,7 @@
          sodipodi:cy="75.114258"
          sodipodi:rx="15"
          sodipodi:ry="15"
-         d="m 70,75.114258 c 0,8.284271 -6.715729,15 -15,15 -8.284271,0 -15,-6.715729 -15,-15 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 z"
+         d="m 70,75.114258 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
          transform="matrix(0,-0.92796351,0.96613997,0,13.240045,108.00708)" />
       <path
          sodipodi:type="arc"
@@ -1537,7 +2401,7 @@
          sodipodi:cy="75.114258"
          sodipodi:rx="15"
          sodipodi:ry="15"
-         d="m 47.5,62.123877 c 0.377935,-0.218201 0.765212,-0.419805 1.160727,-0.604236"
+         d="m 47.5,62.123877 a 15,15 0 0 1 1.160727,-0.604236"
          transform="matrix(0,0.98931645,-0.96265966,0,158.42394,1.966759)"
          sodipodi:start="4.1887902"
          sodipodi:end="4.2760567"
@@ -1553,7 +2417,7 @@
          sodipodi:cy="75.114258"
          sodipodi:rx="15"
          sodipodi:ry="15"
-         d="m 69.94292,73.806921 c 0.229486,2.623031 -0.235528,5.260257 -1.348303,7.64661"
+         d="m 69.94292,73.806921 a 15,15 0 0 1 -1.348303,7.64661"
          transform="matrix(0,0.98931645,-0.96265966,0,158.27124,1.89027)" />
       <path
          sodipodi:open="true"
@@ -1566,11 +2430,11 @@
          sodipodi:cy="75.114258"
          sodipodi:rx="15"
          sodipodi:ry="15"
-         d="m 52.395277,89.886374 c -1.290954,-0.22763 -2.5465,-0.623502 -3.73455,-1.177499"
+         d="m 52.395277,89.886374 a 15,15 0 0 1 -3.73455,-1.177499"
          transform="matrix(0,0.98931645,-0.96265966,0,157.96649,2.196348)" />
       <path
          transform="matrix(0,0.98931645,-0.96265966,0,158.42393,2.34849)"
-         d="m 40.05708,76.421594 c -0.346728,-3.963109 0.895085,-7.901637 3.452254,-10.949151"
+         d="M 40.05708,76.421594 A 15,15 0 0 1 43.509334,65.472443"
          sodipodi:ry="15"
          sodipodi:rx="15"
          sodipodi:cy="75.114258"
@@ -1584,7 +2448,7 @@
     </g>
     <path
        transform="matrix(0,-0.83246189,0.83581074,0,22.935872,152.16374)"
-       d="m 70,75.114258 c 0,8.284271 -6.715729,15 -15,15 -8.284271,0 -15,-6.715729 -15,-15 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 z"
+       d="m 70,75.114258 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
        sodipodi:ry="15"
        sodipodi:rx="15"
        sodipodi:cy="75.114258"
@@ -1611,11 +2475,11 @@
          sodipodi:cy="75.114258"
          sodipodi:rx="15"
          sodipodi:ry="15"
-         d="m 70,75.114258 c 0,8.284271 -6.715729,15 -15,15 -8.284271,0 -15,-6.715729 -15,-15 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 z"
+         d="m 70,75.114258 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
          transform="matrix(-0.3770403,0.35042269,-0.21177505,-0.19682454,118.12346,47.250077)" />
       <path
          transform="matrix(-0.36941213,0.21328019,-0.11979469,-0.20749048,118.65747,66.891788)"
-         d="m 70,75.114258 c 0,8.284271 -6.715729,15 -15,15 -8.284271,0 -15,-6.715729 -15,-15 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 z"
+         d="m 70,75.114258 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
          sodipodi:ry="15"
          sodipodi:rx="15"
          sodipodi:cy="75.114258"
@@ -1631,11 +2495,11 @@
          sodipodi:cy="75.114258"
          sodipodi:rx="15"
          sodipodi:ry="15"
-         d="m 70,75.114258 c 0,8.284271 -6.715729,15 -15,15 -8.284271,0 -15,-6.715729 -15,-15 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 z"
+         d="m 70,75.114258 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
          transform="matrix(-0.21328019,0.36941213,-0.20749048,-0.11979469,119.25285,49.198242)" />
       <path
          transform="matrix(0,-0.81774044,0.81852823,0,24.195619,101.75394)"
-         d="m 70,75.114258 c 0,8.284271 -6.715729,15 -15,15 -8.284271,0 -15,-6.715729 -15,-15 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 z"
+         d="m 70,75.114258 a 15,15 0 1 1 -30,0 15,15 0 1 1 30,0 z"
          sodipodi:ry="15"
          sodipodi:rx="15"
          sodipodi:cy="75.114258"
