@@ -31,8 +31,8 @@
      id="script6" />
   <script
      xlink:href="Tracy.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,14 +283,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1822589"
-     inkscape:cx="462.33792"
+     inkscape:cx="359.99147"
      inkscape:cy="361.36258"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="textLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="-2"
+     inkscape:window-x="3"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -352,17 +352,21 @@
      transform="translate(0,-3.9797589)"
      style="display:inline"
      sodipodi:insensitive="true">
-    <text
-       xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="467.93216"
-       y="63.915104"
-       id="panelTitle"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3823"
+    <a
+       xlink:href="EbbettsEagle_Escape.svg"
+       id="a3166">
+      <text
+         sodipodi:linespacing="125%"
+         id="panelTitle"
+         y="63.915104"
          x="467.93216"
-         y="63.915104">Tracy</tspan></text>
+         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           y="63.915104"
+           x="467.93216"
+           id="tspan3823"
+           sodipodi:role="line">Tracy</tspan></text>
+    </a>
     <text
        sodipodi:linespacing="125%"
        id="panelStatus"
@@ -1059,9 +1063,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Upton.svg"
-       style="display:inline"
+       transform="translate(726,550.00005)"
        id="pasoLink"
-       transform="translate(726,550.00005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1077,9 +1081,9 @@
     </a>
     <a
        xlink:href="Silicon.svg"
-       transform="translate(-190,114.00008)"
+       style="display:inline"
        id="a5609"
-       style="display:inline">
+       transform="translate(-190,114.00008)">
       <text
          sodipodi:linespacing="125%"
          id="text5611"
@@ -1095,9 +1099,9 @@
     </a>
     <a
        xlink:href="Ravine_Quinn.svg"
-       style="display:inline"
+       transform="translate(752,116.00005)"
        id="a3248"
-       transform="translate(752,116.00005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1121,9 +1125,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Upton.svg"
-       transform="translate(676,550.0005)"
+       style="display:inline"
        id="a3534"
-       style="display:inline">
+       transform="translate(676,550.0005)">
       <text
          sodipodi:linespacing="125%"
          id="text3536"

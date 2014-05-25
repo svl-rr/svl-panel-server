@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Klamath.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,10 +283,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="520.80951"
+     inkscape:cx="422.56361"
      inkscape:cy="354.54669"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="textLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1152"
@@ -355,17 +355,21 @@
      transform="translate(0,-3.9797544)"
      style="display:inline"
      sodipodi:insensitive="true">
-    <text
-       xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="420"
-       y="654.09448"
-       id="panelTitle"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3823"
+    <a
+       xlink:href="NowheresHump.svg"
+       id="a3358">
+      <text
+         sodipodi:linespacing="125%"
+         id="panelTitle"
+         y="654.09448"
          x="420"
-         y="654.09448">Klamath</tspan></text>
+         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           y="654.09448"
+           x="420"
+           id="tspan3823"
+           sodipodi:role="line">Klamath</tspan></text>
+    </a>
     <text
        sodipodi:linespacing="125%"
        id="panelStatus"
@@ -1128,9 +1132,9 @@
        inkscape:label="#path4221" />
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       id="a3201"
+       style="display:inline"
        transform="translate(50,220)"
-       style="display:inline">
+       id="a3201">
       <path
          inkscape:connector-curvature="0"
          id="path4651"
@@ -1148,9 +1152,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       style="display:inline"
+       id="a3692"
        transform="translate(-36,4.0000547)"
-       id="a3692">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1166,9 +1170,9 @@
     </a>
     <a
        xlink:href="JasperJct.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(-90,194.00005)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1184,9 +1188,9 @@
     </a>
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       id="a4653"
+       style="display:inline"
        transform="translate(840,374.00005)"
-       style="display:inline">
+       id="a4653">
       <text
          sodipodi:linespacing="125%"
          id="text4655"

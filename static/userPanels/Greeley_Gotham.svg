@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Greeley_Gotham.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -282,11 +282,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.2581913"
-     inkscape:cx="517.64007"
+     inkscape:zoom="1.0074671"
+     inkscape:cx="397.53689"
      inkscape:cy="296.49194"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="textLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -355,17 +355,21 @@
      transform="translate(0,-3.9797544)"
      style="display:inline"
      sodipodi:insensitive="true">
-    <text
-       xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="330"
-       y="654.09448"
-       id="panelTitle"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3823"
+    <a
+       xlink:href="Ravine_Quinn.svg"
+       id="a3255">
+      <text
+         sodipodi:linespacing="125%"
+         id="panelTitle"
+         y="654.09448"
          x="330"
-         y="654.09448">Greeley/Gotham</tspan></text>
+         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           y="654.09448"
+           x="330"
+           id="tspan3823"
+           sodipodi:role="line">Greeley/Gotham</tspan></text>
+    </a>
     <text
        sodipodi:linespacing="125%"
        id="panelStatus"
@@ -805,7 +809,7 @@
        sodipodi:cy="410.11475"
        sodipodi:rx="20"
        sodipodi:ry="20"
-       d="m 1000,410.11475 a 20,20 0 1 1 -40,0 20,20 0 1 1 40,0 z"
+       d="m 1000,410.11475 c 0,11.04569 -8.95431,20 -20,20 -11.04569,0 -20,-8.95431 -20,-20 0,-11.0457 8.95431,-20 20,-20 11.04569,0 20,8.9543 20,20 z"
        transform="matrix(2,0,0,2,-1120,-366.13499)" />
     <path
        sodipodi:nodetypes="cccc"
@@ -1034,8 +1038,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Hallelujah.svg"
-       transform="translate(-90,54.000047)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-90,54.000047)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1051,8 +1055,8 @@
     </a>
     <a
        xlink:href="Fryton_Fremont.svg"
-       id="a4142"
-       transform="translate(820,54.000047)">
+       transform="translate(820,54.000047)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1076,9 +1080,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(790,64.000504)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
