@@ -31,8 +31,8 @@
      id="script6" />
   <script
      xlink:href="MtMarvel.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,10 +283,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.7819091"
-     inkscape:cx="633.87157"
-     inkscape:cy="363.90134"
+     inkscape:cx="565.96687"
+     inkscape:cy="476.14051"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlineTrackLayer"
+     inkscape:current-layer="textLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -352,17 +352,21 @@
      transform="translate(0,-3.9797589)"
      style="display:inline"
      sodipodi:insensitive="true">
-    <text
-       xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="390"
-       y="64.094505"
-       id="panelTitle"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3823"
+    <a
+       xlink:href="Kaos_Kalamazoo.svg"
+       id="a3317">
+      <text
+         sodipodi:linespacing="125%"
+         id="panelTitle"
+         y="64.094505"
          x="390"
-         y="64.094505">Mt. Marvel</tspan></text>
+         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           y="64.094505"
+           x="390"
+           id="tspan3823"
+           sodipodi:role="line">Mt. Marvel</tspan></text>
+    </a>
     <text
        sodipodi:linespacing="125%"
        id="panelStatus"
@@ -865,9 +869,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       style="display:inline"
+       transform="translate(-196,328.00005)"
        id="pasoLink"
-       transform="translate(-196,328.00005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -883,9 +887,9 @@
     </a>
     <a
        xlink:href="NPF.svg"
-       transform="translate(750,184.00005)"
+       style="display:inline"
        id="a3517"
-       style="display:inline">
+       transform="translate(750,184.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
@@ -901,9 +905,9 @@
     </a>
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       transform="translate(-196,368.00005)"
+       style="display:inline"
        id="a3284"
-       style="display:inline">
+       transform="translate(-196,368.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3286"
@@ -927,9 +931,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvelTimber.svg"
-       transform="translate(-128.96363,169.03687)"
+       style="display:inline"
        id="a3534"
-       style="display:inline">
+       transform="translate(-128.96363,169.03687)">
       <text
          sodipodi:linespacing="125%"
          id="text3536"

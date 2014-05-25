@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Dayton.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,10 +283,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.33"
-     inkscape:cx="343.18748"
-     inkscape:cy="413.38463"
+     inkscape:cx="252.21004"
+     inkscape:cy="265.34224"
      inkscape:document-units="px"
-     inkscape:current-layer="backgroundLayer"
+     inkscape:current-layer="textLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -355,17 +355,21 @@
      transform="translate(0,-3.9797544)"
      style="display:inline"
      sodipodi:insensitive="true">
-    <text
-       xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="356"
-       y="644.09448"
-       id="panelTitle"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3823"
+    <a
+       xlink:href="Upton.svg"
+       id="a4522">
+      <text
+         sodipodi:linespacing="125%"
+         id="panelTitle"
+         y="644.09448"
          x="356"
-         y="644.09448">Dayton/Dodge</tspan></text>
+         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           y="644.09448"
+           x="356"
+           id="tspan3823"
+           sodipodi:role="line">Dayton/Dodge</tspan></text>
+    </a>
     <text
        sodipodi:linespacing="125%"
        id="panelStatus"
@@ -1266,8 +1270,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       transform="translate(-90,214.00005)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-90,214.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1283,8 +1287,8 @@
     </a>
     <a
        xlink:href="Bakersfield.svg"
-       id="a4090"
-       transform="translate(830,444.00005)">
+       transform="translate(830,444.00005)"
+       id="a4090">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1300,8 +1304,8 @@
     </a>
     <a
        xlink:href="Cavanaugh.svg"
-       id="a4142"
-       transform="translate(830,214.00005)">
+       transform="translate(830,214.00005)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1325,9 +1329,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       style="display:inline"
+       transform="translate(-120,204.0005)"
        id="daytonMainLink"
-       transform="translate(-120,204.0005)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3335"
@@ -1343,9 +1347,9 @@
     </a>
     <a
        xlink:href="Hallelujah.svg"
-       style="display:inline"
+       id="a4136"
        transform="translate(-110,24.000504)"
-       id="a4136">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1362,9 +1366,9 @@
     </a>
     <a
        xlink:href="Cavanaugh.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(810,-45.999496)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

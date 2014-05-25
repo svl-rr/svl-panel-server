@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Hallelujah.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,10 +283,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="539.8248"
+     inkscape:cx="441.5789"
      inkscape:cy="296.49194"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="textLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -355,17 +355,21 @@
      transform="translate(0,-3.9797544)"
      style="display:inline"
      sodipodi:insensitive="true">
-    <text
-       xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="400"
-       y="654.09448"
-       id="panelTitle"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3823"
+    <a
+       xlink:href="Paso.svg"
+       id="a3260">
+      <text
+         sodipodi:linespacing="125%"
+         id="panelTitle"
+         y="654.09448"
          x="400"
-         y="654.09448">Hallelujah</tspan></text>
+         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           y="654.09448"
+           x="400"
+           id="tspan3823"
+           sodipodi:role="line">Hallelujah</tspan></text>
+    </a>
     <text
        sodipodi:linespacing="125%"
        id="panelStatus"
@@ -816,8 +820,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Jacksonville.svg"
-       transform="translate(-90,54.000047)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-90,54.000047)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -833,8 +837,8 @@
     </a>
     <a
        xlink:href="Greeley_Gotham.svg"
-       id="a4142"
-       transform="translate(820,334.00005)">
+       transform="translate(820,334.00005)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -850,8 +854,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       id="a3156"
-       transform="translate(-90,164.00005)">
+       transform="translate(-90,164.00005)"
+       id="a3156">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -875,9 +879,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       style="display:inline"
+       id="a4148"
        transform="matrix(0,1,-1,0,1274.1147,22.11525)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

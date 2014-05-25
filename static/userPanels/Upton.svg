@@ -31,8 +31,8 @@
      id="script6" />
   <script
      xlink:href="Upton.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,10 +283,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.1822589"
-     inkscape:cx="269.02485"
+     inkscape:cx="166.6784"
      inkscape:cy="353.8371"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="textLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -352,17 +352,21 @@
      transform="translate(0,-3.9797589)"
      style="display:inline"
      sodipodi:insensitive="true">
-    <text
-       xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="440"
-       y="64.094505"
-       id="panelTitle"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3823"
+    <a
+       xlink:href="Dayton.svg"
+       id="a3896">
+      <text
+         sodipodi:linespacing="125%"
+         id="panelTitle"
+         y="64.094505"
          x="440"
-         y="64.094505">Upton</tspan></text>
+         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           y="64.094505"
+           x="440"
+           id="tspan3823"
+           sodipodi:role="line">Upton</tspan></text>
+    </a>
     <text
        sodipodi:linespacing="125%"
        id="panelStatus"
@@ -928,9 +932,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Tracy.svg"
-       style="display:inline"
+       transform="translate(-144.50625,349.4938)"
        id="pasoLink"
-       transform="translate(-144.50625,349.4938)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -946,9 +950,9 @@
     </a>
     <a
        xlink:href="Victoria.svg"
-       transform="translate(740,214.00005)"
+       style="display:inline"
        id="a3517"
-       style="display:inline">
+       transform="translate(740,214.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
@@ -964,9 +968,9 @@
     </a>
     <a
        xlink:href="Ravine_Quinn.svg"
-       transform="translate(-190,54.000056)"
+       style="display:inline"
        id="a5609"
-       style="display:inline">
+       transform="translate(-190,54.000056)">
       <text
          sodipodi:linespacing="125%"
          id="text5611"
@@ -994,9 +998,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Tracy.svg"
-       transform="translate(-94.50625,349.49425)"
+       style="display:inline"
        id="a3534"
-       style="display:inline">
+       transform="translate(-94.50625,349.49425)">
       <text
          sodipodi:linespacing="125%"
          id="text3536"
@@ -1012,9 +1016,9 @@
     </a>
     <a
        xlink:href="Victoria.svg"
-       style="display:inline"
+       transform="translate(720,234.0005)"
        id="a5512"
-       transform="translate(720,234.0005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

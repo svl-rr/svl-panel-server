@@ -31,8 +31,8 @@
      id="script6" />
   <script
      xlink:href="Windsor.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -283,10 +283,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.26"
-     inkscape:cx="535.32518"
+     inkscape:cx="439.29343"
      inkscape:cy="358.81101"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialPanelLinkLayer"
+     inkscape:current-layer="textLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
@@ -352,17 +352,21 @@
      transform="translate(0,-3.9797589)"
      style="display:inline"
      sodipodi:insensitive="true">
-    <text
-       xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
-       x="412.06784"
-       y="62.691097"
-       id="panelTitle"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan3823"
+    <a
+       xlink:href="Bakersfield.svg"
+       id="a6861">
+      <text
+         sodipodi:linespacing="125%"
+         id="panelTitle"
+         y="62.691097"
          x="412.06784"
-         y="62.691097">Windsor</tspan></text>
+         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         xml:space="preserve"><tspan
+           y="62.691097"
+           x="412.06784"
+           id="tspan3823"
+           sodipodi:role="line">Windsor</tspan></text>
+    </a>
     <text
        sodipodi:linespacing="125%"
        id="panelStatus"
@@ -873,9 +877,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Victoria.svg"
-       transform="translate(-120,298.00049)"
+       style="display:inline"
        id="pasoLink"
-       style="display:inline">
+       transform="translate(-120,298.00049)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
