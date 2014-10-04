@@ -1,17 +1,24 @@
 // Constant id prefix for objects
-var DISPATCHSEGMENT_OBJID_PREFIX = "block";
+var DISPATCHSEGMENT_OBJID_PREFIX = "BLOCK";
 
 var UNAUTHORIZED_STATE = "Unauthorized";
 var AUTHORIZED_NB_STATE = "Authorized NB";
 var AUTHORIZED_SB_STATE = "Authorized SB";
+var AUTHORIZED_OOS_STATE = "Authorized OOS";
 var OCCUPIED_NB_STATE = "Occupied NB";
 var OCCUPIED_SB_STATE = "Occupied SB";
-var OOS_STATE = "Out of Service";
-var OOS_OCCUPIED_STATE = "Occupied";
+var OCCUPIED_OOS_STATE = "Occupied OOS";
+
+var BLOCK_AUTH = "BA";
+var TURNOUT_AUTH = "TA";
+
+var ROUTE_AUTHORIZED_NA = "N/A";
+
+var CONFLICTING_MOVEMENT_MSG = "The route selected conflicts with previously authorized movements.";
 
 var dispatchSegmentStates = new Array();
 
-var nextAuthorizationState = OOS_STATE;
+var nextAuthorizationState = AUTHORIZED_OOS_STATE;
 var nextAuthorizationTrainID = "";
 
 var selectionRect;
@@ -36,15 +43,15 @@ function dispatchInit(evt)
 	else
 		selectionRect.setAttribute("visibility", "hidden");
 		
-	var textElements = getAllObjectsOfTagNameAndID("text", "block\\S*TrainLabel");
+	var textElements = getAllObjectsOfTagNameAndID("text", DISPATCHSEGMENT_OBJID_PREFIX + "\\S*TrainLabel");
 	for(var i in textElements)
 		setSVGText(textElements[i].id, "");
     
-    textElements = getAllObjectsOfTagNameAndID("text", "[n|s|o][0-9]+Label");
+    textElements = getAllObjectsOfTagNameAndID("text", "[N|S|O][0-9]+Label");
 	for(var j in textElements)
 		setStyleSubAttribute(textElements[j], "cursor", "pointer");
     
-	textElements = getAllObjectsOfTagNameAndID("text", "[n|s|o][0-9]+Train");
+	textElements = getAllObjectsOfTagNameAndID("text", "[N|S|O][0-9]+Train");
 	for(var j in textElements)
     {
 		setSVGText(textElements[j].id, "");
@@ -55,219 +62,216 @@ function dispatchInit(evt)
     
     for(var j in allBlockElements)
     {
-        var currentBlockID = DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(allBlockElements[j].id);
+        var currentBlockID = BLOCK_AUTH + getDCCAddr(allBlockElements[j].id);
         
-        if(getDispatchSegmentLocalState(currentBlockID) == null)
-            dispatchSegmentStates.push({name:currentBlockID, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE});
+        if(getDispatchLocalAuthorization(currentBlockID) == null)
+            dispatchSegmentStates.push({name:currentBlockID, route:ROUTE_AUTHORIZED_NA, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE});
     }
 
     for(var k in turnoutsOnPanel)
     {
-        dispatchSegmentStates.push({name:turnoutsOnPanel[k].normalRouteID, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE});
-        dispatchSegmentStates.push({name:turnoutsOnPanel[k].divergingRouteID, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE});
+        dispatchSegmentStates.push({name:TURNOUT_AUTH + turnoutsOnPanel[k].getInstanceID(), route:ROUTE_AUTHORIZED_NA, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE});
     }
 }
 
-/* setDispatchSensorState([String] sensorID, [String] sensorState)
- * Advances block authorization to next state in table. This is how JMRI sensor updates will enter in to 
- */
-function setDispatchSensorState(sensorID, sensorState)
+/* Entry point from server comms for sensors */
+
+function setSensorState(sensorID, sensorState)
 {
-    var elemID = DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(sensorID);
-    var currentState = getDispatchSegmentLocalState(elemID);             // will be null if a turnout
-    var currentNState = getDispatchSegmentLocalState(elemID + "N");      // will be null if not a turnout
-    var currentRState = getDispatchSegmentLocalState(elemID + "R");      // will be null if not a turnout
-    
-	if(sensorState == JMRI_SENSOR_ACTIVE)
+	if(sensorState == "2")
+		sensorState = JMRI_SENSOR_ACTIVE;
+	else if(sensorState == "4")
+		sensorState = JMRI_SENSOR_INACTIVE;
+	else if(sensorState == "0")
+		return; 	// unknown sensor state can't be acted upon
+	else
 	{
-        // Standard block activated
-        if((currentState != null) && (currentNState == null) && (currentRState == null))
-        {
-            if(currentState == AUTHORIZED_NB_STATE)
-            {
-                setDispatchBlockState(elemID, OCCUPIED_NB_STATE, null);
-            }
-            else if(currentState == AUTHORIZED_SB_STATE)
-            {
-                setDispatchBlockState(elemID, OCCUPIED_SB_STATE, null);
-            }
-            else if(currentState == OCCUPIED_NB_STATE)
-            {
-                // do nothing
-            }
-            else if(currentState == OCCUPIED_SB_STATE)
-            {
-                // do nothing
-            }
-            else
-            {
-                setDispatchBlockState(elemID, OOS_OCCUPIED_STATE, "UNAUTHORIZED TRAIN!");
-            }
-        }
-        // Turnout block activated
-        else if((currentState == null) && (currentNState != null) && (currentRState != null))
-        {
-            if(currentNState == AUTHORIZED_NB_STATE)
-            {
-                setDispatchBlockState(elemID + "N", OCCUPIED_NB_STATE, null);
-            }
-            else if(currentNState == AUTHORIZED_SB_STATE)
-            {
-                setDispatchBlockState(elemID + "N", OCCUPIED_SB_STATE, null);
-            }
-            else if(currentRState == AUTHORIZED_NB_STATE)
-            {
-                setDispatchBlockState(elemID + "R", OCCUPIED_NB_STATE, null);
-            }
-            else if(currentRState == AUTHORIZED_SB_STATE)
-            {
-                setDispatchBlockState(elemID + "R", OCCUPIED_SB_STATE, null);
-            }
-            else if(currentNState == OCCUPIED_NB_STATE)
-            {
-                // do nothing
-            }
-            else if(currentNState == OCCUPIED_SB_STATE)
-            {
-                // do nothing
-            }
-            else if(currentRState == OCCUPIED_NB_STATE)
-            {
-                // do nothing
-            }
-            else if(currentRState == OCCUPIED_SB_STATE)
-            {
-                // do nothing
-            }
-            else
-            {
-                setDispatchBlockState(elemID + "N", OOS_OCCUPIED_STATE, "UNAUTHORIZED TRAIN!");
-                setDispatchBlockState(elemID + "R", OOS_OCCUPIED_STATE, "UNAUTHORIZED TRAIN!");
-            }
-        }
-        else
-        {
-            alert("Unexpected turnout authorization states in setDispatchSensorState()");
-        }
+		alert("Bad sensor state (" + sensorState + ") passed to setSensorState() by " + sensorID);
+		return;
+	}
+
+    var blockAuthorization = getDispatchLocalAuthorization(BLOCK_AUTH + getDCCAddr(sensorID));         // will be null if a turnout
+    var turnoutAuthorization = getDispatchLocalAuthorization(TURNOUT_AUTH + getDCCAddr(sensorID));      // will be null if not a turnout
+    
+	if(blockAuthorization != null)
+    	setDispatchSensorState(blockAuthorization.name, blockAuthorization.state, sensorID, sensorState);
+	
+	if(turnoutAuthorization != null)
+		setDispatchSensorState(turnoutAuthorization.name, turnoutAuthorization.state, sensorID, sensorState);
+		
+	if((blockAuthorization == null) && (turnoutAuthorization == null))
+		console.log("No corresponding authorization variable was found for sensor " + sensorID);
+}
+
+function setDispatchSensorState(authName, currentAuthState, sensorID, sensorState)
+{
+	if(sensorState == JMRI_SENSOR_ACTIVE)
+	{        
+		if(currentAuthState == AUTHORIZED_NB_STATE)
+		{
+			updateServerAuthorizationState(authName, null, OCCUPIED_NB_STATE, null);
+		}
+		else if(currentAuthState == AUTHORIZED_SB_STATE)
+		{
+			updateServerAuthorizationState(authName, null, OCCUPIED_SB_STATE, null);
+		}
+		else if(currentAuthState == AUTHORIZED_OOS_STATE)
+		{
+			updateServerAuthorizationState(authName, null, OCCUPIED_OOS_STATE, null);
+		}
+		else if(currentAuthState == OCCUPIED_NB_STATE)
+		{
+			// do nothing
+		}
+		else if(currentAuthState == OCCUPIED_SB_STATE)
+		{
+			// do nothing
+		}
+		else if(currentAuthState == OCCUPIED_OOS_STATE)
+		{
+			// do nothing
+		}
+		else
+		{
+			if(authName.indexOf(TURNOUT_AUTH) == 0)
+			{
+				var panelInstance = getPanelTurnoutFromDCCAddr(getDCCAddr(authName));
+		
+				if(panelInstance != null)
+					updateServerAuthorizationState(authName, panelInstance.getSVGState(), OCCUPIED_OOS_STATE, "UNAUTHORIZED TRAIN!");
+				else
+					updateServerAuthorizationState(authName, "N", OCCUPIED_OOS_STATE, "UNAUTHORIZED TRAIN!");
+			}
+			else
+				updateServerAuthorizationState(authName, null, OCCUPIED_OOS_STATE, "UNAUTHORIZED TRAIN!");
+		}
 	}
 	else if(sensorState == JMRI_SENSOR_INACTIVE)
 	{
-        // Standard block inactivated
-        if((currentState != null) && (currentNState == null) && (currentRState == null))
-        {
-            if(currentState != UNAUTHORIZED_STATE)
-            {
-                setDispatchBlockState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
-            }
-        }
-        // Turnout block inactivated
-        else if((currentState == null) && (currentNState != null) && (currentRState != null))
-        {
-            if((currentRState != UNAUTHORIZED_STATE) || (currentNState != UNAUTHORIZED_STATE))
-            {
-                setDispatchBlockState(elemID + "N", UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
-                setDispatchBlockState(elemID + "R", UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
-            }
-        }
-        else
-        {
-            alert("Unexpected turnout authorization states in setDispatchSensorState()");
-        }
-        
-	}
-	else
-	{
-		setPanelError("Bad sensor state passed to setDispatchSensorState(" + elemID + ")");
+		if(currentAuthState == OCCUPIED_NB_STATE)
+		{
+			updateServerAuthorizationState(authName, ROUTE_AUTHORIZED_NA, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+		}
+		else if(currentAuthState == OCCUPIED_SB_STATE)
+		{
+			updateServerAuthorizationState(authName, ROUTE_AUTHORIZED_NA, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+		}
+		else if(currentAuthState == OCCUPIED_OOS_STATE)
+		{
+			updateServerAuthorizationState(authName, ROUTE_AUTHORIZED_NA, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+		}
+		else
+		{
+			console.log("Unexpected sensor transition detected (" + sensorID + " changed to " + sensorState + "). Server and sensor states must not have been in sync.");
+		}        
 	}
 }
 
 function dispatchTurnoutSegmentClicked(elemID)
 {
-    var currentState = getDispatchSegmentLocalState(elemID);
+	var panelTurnout = getPanelTurnoutFromElemID(elemID);
 
-    if(currentState == OCCUPIED_NB_STATE)
-    {
-        notifyServerOfNextState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+	if(panelTurnout == null)
+	{
+		alert("PanelTurnout " + elemID + " could not be found in dispatchTurnoutSegmentClicked");
+		return;
+	}
+
+	var authorizationName = TURNOUT_AUTH + getDCCAddrAndMotorSubAddr(elemID);
+
+    var currentAuth = getDispatchLocalAuthorization(authorizationName);
+
+	if(currentAuth == null)
+	{
+		alert("dispatchTurnoutSegmentClicked could not find local authorization for elemID " + elemID);
+		return;
+	}
+
+	// Current authorized route matches item clicked
+	if(currentAuth.route == getDCCAddrRoute(elemID))
+	{
+		if(currentAuth.state == OCCUPIED_NB_STATE)
+		{
+			updateServerAuthorizationState(authorizationName, ROUTE_AUTHORIZED_NA, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+		}
+		else if(currentAuth.state == OCCUPIED_SB_STATE)
+		{
+			updateServerAuthorizationState(authorizationName, ROUTE_AUTHORIZED_NA, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+		}
+		else if(currentAuth.state == OCCUPIED_OOS_STATE)
+		{
+			updateServerAuthorizationState(authorizationName, ROUTE_AUTHORIZED_NA, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+		}
+		else if(currentAuth.state == AUTHORIZED_NB_STATE)
+		{
+			updateServerAuthorizationState(authorizationName, null, OCCUPIED_NB_STATE, null);
+		}
+		else if(currentAuth.state == AUTHORIZED_SB_STATE)
+		{
+			updateServerAuthorizationState(authorizationName, null, OCCUPIED_SB_STATE, null);
+		}
+		else if(currentAuth.state == AUTHORIZED_OOS_STATE)
+		{
+			updateServerAuthorizationState(authorizationName, null, OCCUPIED_OOS_STATE, null);
+		}
+		else
+		{
+			alert("Unexpected dispatch segment state machine error for " + authorizationName + " in dispatchTurnoutSegmentClicked: " + currentAuth.state);
+			updateServerAuthorizationState(authorizationName, ROUTE_AUTHORIZED_NA, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+		}
     }
-    else if(currentState == OCCUPIED_SB_STATE)
-    {
-        notifyServerOfNextState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
-    }
-    else if(currentState == OOS_OCCUPIED_STATE)
-    {
-        notifyServerOfNextState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
-    }
-    else if(currentState == AUTHORIZED_NB_STATE)
-    {
-        notifyServerOfNextState(elemID, OCCUPIED_NB_STATE, null);
-    }
-    else if(currentState == AUTHORIZED_SB_STATE)
-    {
-        notifyServerOfNextState(elemID, OCCUPIED_SB_STATE, null);
-    }
-    else if(currentState == OOS_STATE)
-    {
-        notifyServerOfNextState(elemID, OOS_OCCUPIED_STATE, null);
-    }
-    else if(currentState == UNAUTHORIZED_STATE)
-    {
-        var panelTurnout = getPanelTurnoutFromElemID(elemID);
-        
-        if(panelTurnout == null)
-        {
-            alert("PanelTurnout " + elemID + " could not be found in dispatchTurnoutSegmentClicked");
-            return;
-        }
-        
-        // Opposing direction being occupied or authorized will deny authorization
-        var allowAuthorization = !turnoutSegmentAuthorizedOrOccupied(true, elemID);
-        
-        // Same direction being occupied or authorized is determined by panel turnout (default is false)
-        if(allowAuthorization && turnoutSegmentAuthorizedOrOccupied(false, elemID))
-            allowAuthorization = panelTurnout.doesTurnoutAllowMultipleAuthorizations(elemID);
-        
-        if(allowAuthorization)
-        {
-            if((nextAuthorizationTrainID == "") || (nextAuthorizationTrainID == " "))
-            {
-                var returnedTrainID = prompt("Enter a train ID", "");
-            
-                if((returnedTrainID != null) && (returnedTrainID != "") && (returnedTrainID != " "))
-                    nextAuthorizationTrainID = returnedTrainID;
-            }
-            
-            if((nextAuthorizationTrainID != null) && (nextAuthorizationTrainID != "") && (nextAuthorizationTrainID != " "))
-            {
-                notifyServerOfNextState(elemID, nextAuthorizationState, nextAuthorizationTrainID);
-                changeTurnoutRoute(elemID, false);
-            }
-        }
-    }
-    else
-    {
-        alert("Unexpected dispatch segment state machine error for " + elemID + " in dispatchTurnoutSegmentClicked: " + currentState);
-        notifyServerOfNextState(elemID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
-    }
+    else if(currentAuth.state == UNAUTHORIZED_STATE)
+	{
+		// Opposing direction being occupied or authorized will deny authorization
+		var allowAuthorization = !anyTurnoutInstanceAuthorizedOrOccupied(true, elemID);
+		
+		// Same direction being occupied or authorized is determined by panel turnout (default is false)
+		if(allowAuthorization && anyTurnoutInstanceAuthorizedOrOccupied(false, elemID))
+			allowAuthorization = panelTurnout.doesTurnoutAllowMultipleAuthorizations(elemID);
+		
+		if(allowAuthorization)
+		{
+			if((nextAuthorizationTrainID == "") || (nextAuthorizationTrainID == " "))
+			{
+				var returnedTrainID = prompt("Enter a train ID", "");
+			
+				if((returnedTrainID != null) && (returnedTrainID != "") && (returnedTrainID != " "))
+					nextAuthorizationTrainID = returnedTrainID;
+			}
+			
+			if((nextAuthorizationTrainID != null) && (nextAuthorizationTrainID != "") && (nextAuthorizationTrainID != " "))
+			{
+				updateServerAuthorizationState(authorizationName, getDCCAddrRoute(elemID), nextAuthorizationState, nextAuthorizationTrainID);
+				changeTurnoutRoute(elemID, false);
+			}
+		}
+		else
+		{
+			alert(CONFLICTING_MOVEMENT_MSG);
+		}
+	}
+	else	// user clicked on a different route in turnout but it wasn't unauthorized so there is nothing to do
+	{
+		alert(CONFLICTING_MOVEMENT_MSG);
+	}
 }
 
-function turnoutSegmentAuthorizedOrOccupied(different, elemID)
+function anyTurnoutInstanceAuthorizedOrOccupied(checkOpposing, elemID)
 {
     var turnoutDirectionToCheck = getDCCAddrRoute(elemID);
     
-    if(different)
+    if(checkOpposing)
         turnoutDirectionToCheck = (turnoutDirectionToCheck == 'R' ? 'N' : 'R');
 
     for(var i = 0; i < dispatchSegmentStates.length; i++)
     {
-        if(dispatchSegmentStates[i].name.search(PANEL_TURNOUT_OBJID_PREFIX) == 0)
+        if(dispatchSegmentStates[i].name.search(TURNOUT_AUTH) == 0)
         {
 			if(getDCCAddr(elemID) == getDCCAddr(dispatchSegmentStates[i].name))
             {
-                if(getDCCAddrRoute(dispatchSegmentStates[i].name) == turnoutDirectionToCheck)
-                {
-                    var segmentState = getDispatchSegmentLocalState(dispatchSegmentStates[i].name);
-                    
-                    if(segmentState != UNAUTHORIZED_STATE)
+                if(dispatchSegmentStates[i].route == turnoutDirectionToCheck)
+                {                    
+                    if(dispatchSegmentStates[i].state != UNAUTHORIZED_STATE)
                         return true;
                 }
             }
@@ -287,41 +291,41 @@ function userClickChangeToNextState(elemID)
 		return;
 	}
     
-    var blockID = DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(elemID);
+    var blockAuthName = BLOCK_AUTH + getDCCAddr(elemID);
     
-    var currentState = getDispatchSegmentLocalState(blockID);
+    var localAuth = getDispatchLocalAuthorization(blockAuthName);
     
-    if(currentState == AUTHORIZED_NB_STATE)
+    if(localAuth.state == AUTHORIZED_NB_STATE)
     {
         // only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
-        notifyServerOfNextState(blockID, OCCUPIED_NB_STATE, null);
+        updateServerAuthorizationState(blockAuthName, null, OCCUPIED_NB_STATE, null);
     }
-    else if(currentState == AUTHORIZED_SB_STATE)
+    else if(localAuth.state == AUTHORIZED_SB_STATE)
     {
         // only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
-        notifyServerOfNextState(blockID, OCCUPIED_SB_STATE, null);
+        updateServerAuthorizationState(blockAuthName, null, OCCUPIED_SB_STATE, null);
     }
-    else if(currentState == OCCUPIED_NB_STATE)
+    else if(localAuth.state == OCCUPIED_NB_STATE)
     {
         // only used until sensors are implemented in the field. Click should be ignored if sensors present
-        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+        updateServerAuthorizationState(blockAuthName, null, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
-    else if(currentState == OCCUPIED_SB_STATE)
+    else if(localAuth.state == OCCUPIED_SB_STATE)
     {
         // only used until sensors are implemented in the field. Click should be ignored if sensors present
-        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+        updateServerAuthorizationState(blockAuthName, null, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
-    else if(currentState == OOS_STATE)
+    else if(localAuth.state == AUTHORIZED_OOS_STATE)
     {
         // only used until sensors are implemented in the field. Dispatcher must emulate train movement via radio feedback
-        notifyServerOfNextState(blockID, OOS_OCCUPIED_STATE, null);
+        updateServerAuthorizationState(blockAuthName, null, OCCUPIED_OOS_STATE, null);
     }
-    else if(currentState == OOS_OCCUPIED_STATE)
+    else if(localAuth.state == OCCUPIED_OOS_STATE)
     {
         // only used until sensors are implemented in the field. Click should be ignored if sensors present
-        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+        updateServerAuthorizationState(blockAuthName, null, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
-    else if(currentState == UNAUTHORIZED_STATE)
+    else if(localAuth.state == UNAUTHORIZED_STATE)
     {
 		if((nextAuthorizationTrainID == "") || (nextAuthorizationTrainID == " "))
 		{
@@ -332,146 +336,122 @@ function userClickChangeToNextState(elemID)
 		}
         
         if((nextAuthorizationTrainID != null) && (nextAuthorizationTrainID != "") && (nextAuthorizationTrainID != " "))
-            notifyServerOfNextState(blockID, nextAuthorizationState, nextAuthorizationTrainID);
+            updateServerAuthorizationState(blockAuthName, null, nextAuthorizationState, nextAuthorizationTrainID);
     }
     else
     {
-        alert("Unexpected dispatch segment state machine error for " + blockID + " in userClickChangeToNextState: " + currentState);
-        notifyServerOfNextState(blockID, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
+        alert("Unexpected dispatch segment state machine error for " + blockAuthName + " in userClickChangeToNextState: " + currentState);
+        updateServerAuthorizationState(blockAuthName, null, UNAUTHORIZED_STATE, UNAUTHORIZED_STATE);
     }
 }
 
-/* notifyServerOfNextState([String] elemID, [String] state, [String] trainID)
+/* updateServerAuthorizationState([String] name, [String] route, [String] state, [String] trainID)
  */
-function notifyServerOfNextState(blockID, state, trainID)
-{	
+function updateServerAuthorizationState(name, route, state, trainID)
+{
+    var newAuthString = (route == null ? ROUTE_AUTHORIZED_NA : route) + ':' + state + ':' + (trainID == null ? UNAUTHORIZED_STATE : trainID);
+
     for(var i = 0; i < dispatchSegmentStates.length; i++)
     {
-        if(dispatchSegmentStates[i].name == blockID)
-        {			
-			// Only update trainID if it is not null
-			if(trainID != null)
-                serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
-            else
-                serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + dispatchSegmentStates[i].trainID)]);
+        if(dispatchSegmentStates[i].name == name)
+        {
+        	newAuthString = (route == null ? dispatchSegmentStates[i].route : route) + ':' + state + ':' + (trainID == null ? dispatchSegmentStates[i].trainID : trainID);
+        	
+			serverSet([new ServerObject(name, SERVER_TYPE_DISPATCH, newAuthString)]);
             
             return;
         }
     }
-    
-	// Didn't find an entry so create a new one
-    dispatchSegmentStates.push({name:blockID, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE});
-    
-    serverSet([new ServerObject(blockID, SERVER_TYPE_DISPATCH, state + ":" + trainID)]);
+        
+    serverSet([new ServerObject(name, SERVER_TYPE_DISPATCH, newAuthString)]);
 }
 
-/* setDispatchBlockState([String] elemID, [String] state, [String] trainID)
+/* setDispatchAuthorization([String] elemID, [String] route, [String] state, [String] trainID)
 *  This routine sets the local state variables (only) and then updates the SVG to display that state
  */
-function setDispatchBlockState(elemID, state, trainID)
+function setDispatchAuthorization(name, route, state, trainID)
 {
-    if(elemID.search(PANEL_TURNOUT_OBJID_PREFIX) == 0)
+    if(name.search(TURNOUT_AUTH) == 0)
     {
         // This is a turnout block segment
-        setDispatchSegmentLocalState(elemID, state, trainID);
-        setDispatchSVGLowLevel(elemID, state, trainID);
-    
-        /*  Add checks before allowing the set?
-        var thisRoute = getDCCAddrRoute(elemID);
-        var oppositeRoute = (thisRoute == 'R' ? 'N' : 'R');
+        setDispatchLocalAuthorization(name, route, state, trainID);
         
-        var oppositeState = getDispatchSegmentLocalState(PANEL_TURNOUT_OBJID_PREFIX + blockNum + oppositeRoute);
-        
-        if(oppositeState == UNAUTHORIZED_STATE)
+        if(state == UNAUTHORIZED_STATE)
         {
-            // Move clicked item to top of layer
-            var elem = svgDocument.getElementById(elemID);
-            
-            elem.parentNode.appendChild(elem);
-        
-            setDispatchSegmentLocalState(elemID, state, trainID);
-            setDispatchSVGLowLevel(elemID, state, trainID);
-        }
-        else
-        {
-            alert("Turnout authorization request could not be completed because it is already authorized or occupied.");
-        }
-        */
+	        setDispatchSVGLowLevel(name.replace(TURNOUT_AUTH,PANEL_TURNOUT_OBJID_PREFIX) + ".R");
+	        setDispatchSVGLowLevel(name.replace(TURNOUT_AUTH,PANEL_TURNOUT_OBJID_PREFIX) + ".N");
+	    }
+	    else
+	    	setDispatchSVGLowLevel(name.replace(TURNOUT_AUTH,PANEL_TURNOUT_OBJID_PREFIX) + "." + route);
     }
-    else if(elemID.search(DISPATCHSEGMENT_OBJID_PREFIX) == 0)
+    else if(name.search(BLOCK_AUTH) == 0)
     {
         // This is a standard block segment
-        var blockNum = getDCCAddr(elemID);
+        var blockNum = getDCCAddr(name);
         
-        setDispatchSegmentLocalState(DISPATCHSEGMENT_OBJID_PREFIX + blockNum, state, trainID);
+        setDispatchLocalAuthorization(BLOCK_AUTH + blockNum, route, state, trainID);
     
-        setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum, state, trainID);
+        setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum);
     
         var nextSubBlock = 'A';
-        var success = setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum + nextSubBlock, state, trainID);
+        var success = setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum + nextSubBlock);
         while(success)
         {
             nextSubBlock = String.fromCharCode(nextSubBlock.charCodeAt(0) + 1);
 		
-            success = setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum + nextSubBlock, state, trainID);
+            success = setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum + nextSubBlock);
         }
     }
 }
 
-function setDispatchSVGLowLevel(elemID, state, trainID)
+function setDispatchSVGLowLevel(elemID)
 {
     var elem = svgDocument.getElementById(elemID);
 	
 	if(elem == null)
         return false;
 
-	if(trainID != null)
-        addElementTitle(elemID, trainID);
-
-    var lowLevelTrainID = null;
-
-    if(elemID.search(DISPATCHSEGMENT_OBJID_PREFIX) == 0)
-        lowLevelTrainID = getDispatchSegmentLocalTrainID(DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(elemID));
-    else if(elemID.search(PANEL_TURNOUT_OBJID_PREFIX) == 0)
-        lowLevelTrainID = getDispatchSegmentLocalTrainID(elemID);
-
-    if((trainID != null) && (trainID != lowLevelTrainID))
-        lowLevelTrainID = trainID;
+	var localAuth = null;
+	
+	if(elemID.search(DISPATCHSEGMENT_OBJID_PREFIX) == 0)
+		localAuth = getDispatchLocalAuthorization(BLOCK_AUTH + getDCCAddr(elemID));
+	else if(elemID.search(PANEL_TURNOUT_OBJID_PREFIX) == 0)
+		localAuth = getDispatchLocalAuthorization(TURNOUT_AUTH + getDCCAddrAndMotorSubAddr(elemID));
 
 	var elemIDTextTrainID = elemID + "TrainLabel";
 	var elemTextTrainID = svgDocument.getElementById(elemIDTextTrainID);
 
-    if(state == OOS_STATE)
+    if(localAuth.state == AUTHORIZED_OOS_STATE)
     {
         setStyleSubAttribute(elem, "stroke", OOS_COLOR);
         removeStyleSubAttribute(elem, "marker-start");
         removeStyleSubAttribute(elem, "marker-end");
     }
-    else if(state == AUTHORIZED_NB_STATE)
+    else if(localAuth.state == AUTHORIZED_NB_STATE)
     {
         setStyleSubAttribute(elem, "stroke", AUTHORIZED_COLOR);
         setStyleSubAttribute(elem, "marker-end", "url(#TriangleAuthNBMarker)");
         removeStyleSubAttribute(elem, "marker-start");
     }
-    else if(state == AUTHORIZED_SB_STATE)
+    else if(localAuth.state == AUTHORIZED_SB_STATE)
     {
         setStyleSubAttribute(elem, "stroke", AUTHORIZED_COLOR);
         removeStyleSubAttribute(elem, "marker-end");
         setStyleSubAttribute(elem, "marker-start", "url(#TriangleAuthSBMarker)");
     }
-	else if(state == OCCUPIED_NB_STATE)
+	else if(localAuth.state == OCCUPIED_NB_STATE)
     {
         setStyleSubAttribute(elem, "stroke", OCCUPIED_COLOR);
         setStyleSubAttribute(elem, "marker-end", "url(#TriangleOccupiedNBMarker)");
         removeStyleSubAttribute(elem, "marker-start");
     }
-	else if(state == OCCUPIED_SB_STATE)
+	else if(localAuth.state == OCCUPIED_SB_STATE)
     {
         setStyleSubAttribute(elem, "stroke", OCCUPIED_COLOR);
         removeStyleSubAttribute(elem, "marker-end");
         setStyleSubAttribute(elem, "marker-start", "url(#TriangleOccupiedSBMarker)");
     }
-    else if(state == OOS_OCCUPIED_STATE)
+    else if(localAuth.state == OCCUPIED_OOS_STATE)
     {
         setStyleSubAttribute(elem, "stroke", OCCUPIED_COLOR);
         removeStyleSubAttribute(elem, "marker-start");
@@ -486,9 +466,11 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
 
     if(elemTextTrainID != null)
     {
-        if((lowLevelTrainID != null) && (lowLevelTrainID != UNAUTHORIZED_STATE) && (((state != AUTHORIZED_NB_STATE) && (state != AUTHORIZED_SB_STATE)) || alwaysShowTrainID))
+    	addElementTitle(elemID, localAuth.trainID);
+    
+        if((localAuth.trainID != null) && (localAuth.trainID != UNAUTHORIZED_STATE) && (((localAuth.state != AUTHORIZED_NB_STATE) && (localAuth.state != AUTHORIZED_SB_STATE)) || alwaysShowTrainID))
         {
-            setSVGText(elemIDTextTrainID, lowLevelTrainID);
+            setSVGText(elemIDTextTrainID, localAuth.trainID);
             elemTextTrainID.setAttribute("visibility", "visible");
         }
         else
@@ -500,14 +482,18 @@ function setDispatchSVGLowLevel(elemID, state, trainID)
     return true;
 }
 
-function setDispatchSegmentLocalState(blockID, state, trainID)
+function setDispatchLocalAuthorization(name, route, state, trainID)
 {
     for(var i = 0; i < dispatchSegmentStates.length; i++)
     {
-        if(dispatchSegmentStates[i].name == blockID)
+        if(dispatchSegmentStates[i].name == name)
         {
 			// Update the new state
             dispatchSegmentStates[i].state = state;
+			
+			// Update the new route
+			if(route != null)
+	            dispatchSegmentStates[i].route = route;
 			
 			// Only update trainID if it is not null
 			if(trainID != null)
@@ -518,26 +504,15 @@ function setDispatchSegmentLocalState(blockID, state, trainID)
     }
     
 	// Didn't find an entry so create a new one
-    dispatchSegmentStates.push({name:blockID, state:state, trainID:trainID});
+    dispatchSegmentStates.push({name:name, route:route, state:state, trainID:trainID});
 }
 
-function getDispatchSegmentLocalState(blockID)
+function getDispatchLocalAuthorization(name)
 {
     for(var i = 0; i < dispatchSegmentStates.length; i++)
     {
-        if(dispatchSegmentStates[i].name == blockID)
-            return dispatchSegmentStates[i].state;
-    }
-    
-    return null;
-}
-
-function getDispatchSegmentLocalTrainID(blockID)
-{
-    for(var i = 0; i < dispatchSegmentStates.length; i++)
-    {
-        if(dispatchSegmentStates[i].name == blockID)
-            return dispatchSegmentStates[i].trainID;
+        if(dispatchSegmentStates[i].name == name)
+            return dispatchSegmentStates[i];
     }
     
     return null;
@@ -597,12 +572,12 @@ function setNextAuthorizationTrain(elemID)
 		return;
 	}
 
-	if(elemID.charAt(0) == "n")
+	if(elemID.charAt(0) == "N")
 		nextAuthorizationState = AUTHORIZED_NB_STATE;
-	else if(elemID.charAt(0) == "s")
+	else if(elemID.charAt(0) == "S")
 		nextAuthorizationState = AUTHORIZED_SB_STATE;
-	else if(elemID.charAt(0) == "o")
-		nextAuthorizationState = OOS_STATE;
+	else if(elemID.charAt(0) == "O")
+		nextAuthorizationState = AUTHORIZED_OOS_STATE;
 	else
 	{
 		alert("Unsupported element ID " + elemID + " in setNextAuthorizationTrain()!");
@@ -614,7 +589,7 @@ function setNextAuthorizationTrain(elemID)
 	nextAuthorizationTrainID = getTrainIDText(elemID);
 	
 	if((nextAuthorizationTrainID == "") || (nextAuthorizationTrainID == " "))
-		nextAuthorizationState = OOS_STATE;
+		nextAuthorizationState = AUTHORIZED_OOS_STATE;
 }
 
 function getTrainIDText(trainIDElemID)
@@ -687,10 +662,10 @@ function showSelectedAuthorizationElement(whichElem)
 	
 	switch(whichElem.charAt(0))
 	{
-		case "o": setStyleSubAttribute(selectionRect, "stroke", OOS_COLOR); break;
+		case "O": setStyleSubAttribute(selectionRect, "stroke", OOS_COLOR); break;
 		
-		case "n":
-		case "s": setStyleSubAttribute(selectionRect, "stroke", AUTHORIZED_COLOR); break;
+		case "N":
+		case "S": setStyleSubAttribute(selectionRect, "stroke", AUTHORIZED_COLOR); break;
 
 		default: setStyleSubAttribute(selectionRect, "stroke", UNAUTHORIZED_COLOR); break;
 	}
@@ -703,12 +678,13 @@ function showSelectedAuthorizationElement(whichElem)
 function getCommonDispatchStates()
 {
     var commonObjs = [];
+    var sensorObjs = [];
     
     for(var i = 1; i <= 8; i++)
     {
-        commonObjs.push(new ServerObject("n" + i, SERVER_TYPE_DISPATCH, getTrainIDText("n" + i + "Train")));
-        commonObjs.push(new ServerObject("s" + i, SERVER_TYPE_DISPATCH, getTrainIDText("s" + i + "Train")));
-        commonObjs.push(new ServerObject("o" + i, SERVER_TYPE_DISPATCH, getTrainIDText("o" + i + "Train")));
+        commonObjs.push(new ServerObject("N" + i, SERVER_TYPE_DISPATCH, getTrainIDText("N" + i + "Train")));
+        commonObjs.push(new ServerObject("S" + i, SERVER_TYPE_DISPATCH, getTrainIDText("S" + i + "Train")));
+        commonObjs.push(new ServerObject("O" + i, SERVER_TYPE_DISPATCH, getTrainIDText("O" + i + "Train")));
     }
 
     var blockElements = [];    
@@ -721,18 +697,30 @@ function getCommonDispatchStates()
     }
 
     for(var k in blockElements)
-        commonObjs.push(new ServerObject(JMRI_SENSOR_OBJID_PREFIX + getDCCAddr(blockElements[k]), SERVER_TYPE_SENSOR, null));
-
-    for(var l in blockElements)
-        commonObjs.push(new ServerObject(DISPATCHSEGMENT_OBJID_PREFIX + getDCCAddr(blockElements[l]), SERVER_TYPE_DISPATCH, null));
+    {
+        commonObjs.push(new ServerObject(BLOCK_AUTH + getDCCAddr(blockElements[k]), SERVER_TYPE_DISPATCH, null));
+        sensorObjs.push(new ServerObject(JMRI_SENSOR_OBJID_PREFIX + getDCCAddr(blockElements[k]), SERVER_TYPE_SENSOR, null));
+	}
 
     for(var m in turnoutsOnPanel)
     {
-        commonObjs.push(new ServerObject(turnoutsOnPanel[m].normalRouteID, SERVER_TYPE_DISPATCH, null));
-        commonObjs.push(new ServerObject(turnoutsOnPanel[m].divergingRouteID, SERVER_TYPE_DISPATCH, null));
-    }
-
-    return commonObjs;
+        commonObjs.push(new ServerObject(TURNOUT_AUTH + turnoutsOnPanel[m].getInstanceID(), SERVER_TYPE_DISPATCH, null));
+        
+        var alreadyPresent = false;
+        
+        for(var mm in sensorObjs)
+        {
+        	alreadyPresent = (sensorObjs[mm].name == JMRI_SENSOR_OBJID_PREFIX + turnoutsOnPanel[m].getDCCID());
+        	
+        	if(alreadyPresent)
+        		break;
+        }
+        
+        if(!alreadyPresent)
+        	sensorObjs.push(new ServerObject(JMRI_SENSOR_OBJID_PREFIX + turnoutsOnPanel[m].getDCCID(), SERVER_TYPE_SENSOR, null));
+	}
+		
+    return commonObjs.concat(sensorObjs);
 }
 
 /* setDispatchObject(stateObj)
@@ -744,7 +732,7 @@ function setDispatchObject(object)
     if(object.type == SERVER_TYPE_DISPATCH)
     {
         // Handle train subpanels at bottom of dispatch panel
-        if(object.name.search("[n|s|o][1-8]") == 0)
+        if(object.name.search("[N|S|O][1-8]") == 0)
         {
             setSVGText(object.name + "Train", object.value);
             
@@ -767,30 +755,24 @@ function setDispatchObject(object)
                     selectedNSO = null;
                     
                     nextAuthorizationTrainID = "";
-                    nextAuthorizationState = OOS_STATE;
+                    nextAuthorizationState = AUTHORIZED_OOS_STATE;
                 }
             }
             
             return true;
         }
         // Handle block/turnout authorization/state
-        else if((object.name.search(DISPATCHSEGMENT_OBJID_PREFIX) == 0) || (object.name.search(PANEL_TURNOUT_OBJID_PREFIX) == 0))
+        else if((object.name.search(BLOCK_AUTH) == 0) || (object.name.search(TURNOUT_AUTH) == 0))
         {
-            var colonLoc = object.value.search(':');
-            var preColonState = object.value.substring(0, colonLoc);
-            var postColonTrainID = object.value.substring(colonLoc+1);
+        	var fields = object.value.split(':');
+            var route = fields[0];
+            var state = fields[1];
+            var trainID = fields[2];
             
-            if(postColonTrainID === "null")
-                postColonTrainID = null;
+            if(trainID === "null")
+                trainID = null;
             
-            setDispatchBlockState(object.name, preColonState, postColonTrainID);
-        
-            return true;
-        }
-        // Handle sensor states
-        else if(object.name.search(JMRI_SENSOR_OBJID_PREFIX) == 0)
-        {
-            setDispatchSensorState(object.name, object.value);
+            setDispatchAuthorization(object.name, route, state, trainID);
         
             return true;
         }
@@ -805,15 +787,21 @@ function setDispatchObject(object)
 
 function getDispatchObject(object)
 {
-    if(object.name.search("[n|s|o][1-8]") == 0)
+    if(object.name.search("[N|S|O][1-8]") == 0)
     {
         object.value = getTrainIDText(object.name + "Train");
         return object;
     }
-    else if((object.name.search(DISPATCHSEGMENT_OBJID_PREFIX) == 0) || (object.name.search(PANEL_TURNOUT_OBJID_PREFIX) == 0))
+    else if((object.name.search(BLOCK_AUTH) == 0) || (object.name.search(TURNOUT_AUTH) == 0))
     {
-        object.value = getDispatchSegmentLocalState(object.name) + ":" + getDispatchSegmentLocalTrainID(object.name);
-        return object;
+    	var localAuth = getDispatchLocalAuthorization(object.name);
+    
+    	if(localAuth != null)
+    	{
+        	object.value = localAuth.route + ":" + localAuth.state + ":" + localAuth.trainID;
+        	
+	        return object;
+	    }
     }
     
     return undefined;
