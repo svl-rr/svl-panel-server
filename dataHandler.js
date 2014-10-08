@@ -77,39 +77,42 @@ function updateGlobalStateFromDataItem(item) {
 function updateGlobalDataFromJMRI(response) {
 	var responseData = [],
 		data = response.item,
-		item;
+		item,
+        serverObj;
 
 	if (data !== undefined) {
-//		console.log("updateGlobalDataFromJMRI:");
-//		console.log(util.inspect(response.item, false, null));
+		//console.log("updateGlobalDataFromJMRI:");
+		//console.log(util.inspect(response.item, false, null));
 		for (item in data) {
 			if (data.hasOwnProperty(item)) {
+            
 				switch (data[item].type) {
-					case 'turnout':
-						if (Number(data[item].value) === 4) {
-							data[item].value = 'R';
-						} else if (Number(data[item].value) === 2) {
-							data[item].value = 'N';
-						} else {
-							data[item].value = undefined;
-						}
-						if (updateGlobalStateFromDataItem(data[item])) {
-							responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name].value});
-						}
-						break;
 
-					case 'sensor':
-						if (Number(data[item].value) === 4) {
-							data[item].value = 'off';
-						} else {
-							data[item].value = 'on';
+                    case 'turnout':
+                    case 'memory':
+                    case 'sensor':
+                        serverObj = {"type":data[item].type, "name":data[item].name,"value":undefined};
+                        
+                        if(typeof data[item].value != "object")
+                            serverObj.value = data[item].value;
+                        
+                        if((serverObj.value == undefined) && (serverObj.type == 'memory'))
+                            serverObj.value = '';
+                        
+                        switch (serverObj.type)
+                        {
+                            case 'turnout':
+                                serverObj.value = (data[item].value == 4) ? 'R' : 'N';
+                                break;
+                        }
+                        
+                        if (updateGlobalStateFromDataItem(serverObj)) {
+							responseData.push(serverObj);
 						}
-						if (updateGlobalStateFromDataItem(data[item])) {
-							responseData.push({type: data[item].type, name: data[item].name, value: globalDataArray[data[item].name].value});
-						}
-						break;
+                        break;
 
 					default:
+                        console.log("don't know of data type " +  data[item].type + " in updateGlobalDataFromJMRI:");
 						break;
 				}
 			}
@@ -133,44 +136,61 @@ function processSetCommand(data) {
 	// Update Global State from the client data
 
 	if (data.length > 0) {
-		for (item in data) {
-			if (data.hasOwnProperty(item)) {
-
-//				console.log("SET: "+ util.inspect(data[item]));
-				
-				switch (data[item].type) {
-					case 'turnout':
-						// NOTE: In order to avoid race conditions, we pay special attention to only
-						// deliver updates to JMRI items (e.g., turnouts) via the trackLayoutState
-						// callback mechanism. If we're running in OFFLINE mode, we always update the state
-
-						turnoutState = (data[item].value === "R") ? 4 : 2;
-						xmlRequest += "<turnout name='" + data[item].name + "' set='"+ turnoutState +"' />";
-
-						// In offline mode, manually update the data
-						if (process.env.OFFLINE !== undefined) {
-							if (updateGlobalStateFromDataItem(data[item])) {
-								changedData.push(data[item]);
-							}
-						}
-						break;
-					
-					case 'sensor':
-						if (process.env.OFFLINE === undefined) {
-							console.error('SET: ERR: Sensors are read-only in online mode: ' + util.inspect(data[item]));
-							break;
-						}
-						// fall through in offline mode
-						
-					default:
-						// Any other data item is updated in the global data unconditionally
-						if (updateGlobalStateFromDataItem(data[item])) {
-							changedData.push(data[item]);
-						}
-						break;
-				}
-			}
-		}
+    
+        var jsonObj = JSON.parse(data);
+    
+        if(jsonObj != null)
+        {
+            var serverObj = {"type":jsonObj.type,"name":jsonObj.data.name,"value":undefined};
+            
+            switch (serverObj.type)
+            {
+                case 'turnout':
+                    serverObj.value = (jsonObj.data.state == 4) ? 'R' : 'N';
+                    break;
+                    
+                default:
+                    serverObj.value = jsonObj.data.value;
+                    break;
+            }
+                  
+            //console.log("SET: " + data);
+            //console.log("SET: " + serverObj.type + " -> " + serverObj.name + " is '" + serverObj.value + "'");
+        
+            // In offline mode, manually update the data
+            if (process.env.OFFLINE !== undefined) {
+                if (updateGlobalStateFromDataItem(serverObj)) {
+                    changedData.push(serverObj);
+                }
+            }
+            else
+            {
+                switch (serverObj.type) {
+                    
+                    case 'sensor':
+                        console.error('SET: ERR: Sensors are read-only in online mode: ' + util.inspect(serverObj));
+                        break;
+                    
+                    case 'turnout':
+                        xmlRequest += "<" + serverObj.type + " name='" + serverObj.name + "' set='" + (serverObj.value == 'R' ? 4 : 2) +"' />";
+                        if (updateGlobalStateFromDataItem(serverObj)) {
+                            changedData.push(serverObj);
+                        }
+                        break;
+                    
+                    case 'memory':
+                        xmlRequest += "<" + serverObj.type + " name='" + serverObj.name + "' set='" + serverObj.value +"' />";
+                        if (updateGlobalStateFromDataItem(serverObj)) {
+                            changedData.push(serverObj);
+                        }
+                        break;
+                    
+                    default:
+                        console.error('SET: ERR: Unknown type not allowed. ' + util.inspect(serverObj));
+                        break;
+                }
+            }
+        }
 	}
 
 	// Push any turnout changes to JMRI via xmlioRequest
@@ -179,6 +199,9 @@ function processSetCommand(data) {
 
 	if ((xmlRequest !== "") && (process.env.OFFLINE === undefined)) {
 		turnoutUpdateRequest = new jmri.JMRI('127.0.0.1', 12080);
+        
+        //console.log(xmlRequest);
+        
 		turnoutUpdateRequest.xmlioRequest("<xmlio>" + xmlRequest + "</xmlio>");
 	}
 
@@ -195,11 +218,19 @@ function processGetCommand(data) {
 	var responseData = [],
 		item;
 
-	for (item in data) {
-		if (data.hasOwnProperty(item)) {
-//			console.log("GET: "+ util.inspect(data[item]));
-			responseData.push({type: data[item].type, name: data[item].name, value: (globalDataArray[data[item].name] === undefined ? undefined : globalDataArray[data[item].name].value)});
-		}
+    var jsonObj = JSON.parse(data);
+    
+    if(jsonObj != null)
+    {
+        var foundObj = globalDataArray[jsonObj.data.name];
+        
+        if((foundObj != null) && (foundObj != undefined))
+            responseData.push(foundObj);
+        else
+            responseData.push({"type":jsonObj.type,"name":jsonObj.data.name,"value":undefined});
+        
+        //console.log("GET: " + jsonObj.type + " -> " + jsonObj.data.name + " will return value of " + responseData[0].value);
+        //console.log(responseData[0]);
 	}
 
 	return responseData;

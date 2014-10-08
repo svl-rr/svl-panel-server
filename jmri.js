@@ -74,7 +74,7 @@ JMRI.prototype.xmlioRequest = function(xml) {
 
 
 JMRI.prototype.getInitialState = function() {
-	this.xmlioRequest("<xmlio><list><type>turnout</type></list><list><type>sensor</type></list></xmlio>");
+	this.xmlioRequest("<xmlio><list><type>turnout</type></list><list><type>sensor</type></list><list><type>memory</type></list></xmlio>");
 }
 
 
