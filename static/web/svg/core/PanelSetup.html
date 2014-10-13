@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Panel Setup</title>
+</head>
+<body onload="">
+
+<script src="/web/svg/core/PanelCommon.js"></script>
+
+<script type="text/javascript">
+
+function createTableRowForCookie(cookieNum)
+{
+    var cVal = cookiesDefined[cookieNum].getCookie();
+    
+    document.write("<tr>");
+    document.write("<td>" + cookiesDefined[cookieNum].name + "</td>");
+    document.write("<td>" + (cVal == "" ? ">>null<<" : cVal) + "</td>");
+    document.write((cVal == "" ? "<td colspan=" + '"2">' : "<td>") + createCreateCookieButton(cookieNum) + "</td>");
+    document.write((cVal == "" ? "" : "<td>" + createDeleteCookieButton(cookieNum) + "</td>"));
+    document.write("<td>" + cookiesDefined[cookieNum].explanation + "</td>");
+    document.write("</tr>");
+}
+
+function createCreateCookieButton(cookieNum)
+{
+    var s = '<button type="button" onclick="cookiesDefined[' + cookieNum + '].setCookie(3650); location=location;">Create</button>';
+    
+    //alert(s);
+    
+    return s;
+}
+
+function createDeleteCookieButton(cookieNum)
+{
+    var s = '<button type="button" onclick="cookiesDefined[' + cookieNum + '].deleteCookie(); location=location;">Delete</button>';
+    
+    //alert(s);
+    
+    return s;
+}
+
+</script>
+
+<H1>Panel Setup</H1>
+
+This page is used to set up device specific preferences through the use of browser cookies.
+
+<table cellspacing="10">
+<tr>
+<th>Name</th>
+<th>Value</th>
+<th colspan="2">Actions</th>
+<th>Use</th>
+</tr>
+<script>
+    for(var i = 0; i < cookiesDefined.length; i++)
+    {
+        createTableRowForCookie(i);
+    }
+</script>
+</table>
+
+<P>
+<a href="/">Return to Top</a>
+
+</body>
+</html>
