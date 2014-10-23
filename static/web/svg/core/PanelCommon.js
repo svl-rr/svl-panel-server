@@ -35,12 +35,6 @@ var blocksOnPanel = new Array();
 
 var turnoutOnclickScript = "turnoutSegmentClicked(evt.currentTarget.id)";
 
-// Object types we can send to the server
-var SERVER_TYPE_TURNOUT = "turnout";
-var SERVER_TYPE_DISPATCH = "memory";
-var SERVER_TYPE_SENSOR = "sensor";
-//var SERVER_TYPE_SIGNAL = "signal";
-
 var SERVER_NAME_MAINLINELOCKED = "MAINLINE_LOCKED";
 
 var connectedBackgroundColor = null;
@@ -550,6 +544,12 @@ function handleSocketConnect()
  */
 function handleSocketDataResponse(dataArray)
 {
+    if(dataArray == null)
+    {
+        alert("null dataArray in handleSocketDataResponse");
+        return;
+    }
+    
     var undefinedItemsToUpdate = [];
               
     for(var i in dataArray)
@@ -1310,7 +1310,7 @@ function getDCCAddrRoute(objID)
 	return null;
 }
 
-/* [String] getDCCAddrAndMotorSubAddr([String] objID)
+/* [String] getDCCAddr([String] objID)
  * Returns the DCC address only as encoded in the object ID.  ID is assumed to be of the form: ttt###aaa,
  * where
  *     t is the object type, ### are numeric characters, and aaa is an optional alphabetic submotor address
@@ -1320,12 +1320,21 @@ function getDCCAddr(objID)
 {
 	var dccMotorAddr = getDCCAddrAndMotorSubAddr(objID);
 	
-	var position = dccMotorAddr.search("\\D");
+    if(dccMotorAddr != null)
+    {
+        var position = dccMotorAddr.search("\\D");
 	
-	if(position != -1)
-		return dccMotorAddr.substring(0, position);
+        if(position != -1)
+            return dccMotorAddr.substring(0, position);
 	
-	return dccMotorAddr;
+        return dccMotorAddr;
+    }
+    else
+    {
+        console.log(objID + " was not a valid dcc address and moter sub address.");
+    }
+    
+    return null;
 }
 
 /* [String] getMotorSubAddr([String] objID)

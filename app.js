@@ -59,28 +59,14 @@ var io = require('socket.io').listen(server)
 	.sockets.on('connection', function (socket) {
 		clients[socket.id] = socket;	// track the socket in clients array
 
-		socket.on('register', function (panelName) {
-			if (panelName !== null) {
-				socket.set('panelName', panelName, function () {});
-				dataHandler.registerPanel(socket, panelName);
-			}
-		});
-
 		socket.on('disconnect', function () {
 			delete clients[socket.id];	// stop tracking the client
-
-			// if the panel was registered, unregister it on disconnect
-			socket.get('panelName', function (err, panelName) {
-				if (panelName !== null) {
-					dataHandler.unregisterPanel(socket, panelName);
-				}
-			});
 		});
 
 		// process the command and broadcast updates to all other clients
 		socket.on('set', function (data) {
 			var changedState = dataHandler.processSetCommand(data);
-			if (changedState.length > 0) {
+			if (changedState != null) {
 				socket.broadcast.emit('update', changedState);
 				socket.emit('update', changedState);
 			}
@@ -104,10 +90,12 @@ var	turnoutAndSensorTracker = new jmri.JMRI('127.0.0.1', 12080);
 
 turnoutAndSensorTracker.on('xmlioResponse', function (response) {
 
+    //console.log(response);
+
 	// Convert the xml response into JSON, update state, and invoke callback
 	parser.parseString(response, function (err, result) {
 
-		var i, changedState;
+		var i, j, changedState;
 
 		if (err) { throw err; }
 
@@ -115,7 +103,8 @@ turnoutAndSensorTracker.on('xmlioResponse', function (response) {
 		if (changedState.length > 0) {
 			for (i in clients) {
 				if (clients.hasOwnProperty(i)) {
-					clients[i].emit('update', changedState);
+					for(j in changedState)
+						clients[i].emit('update', changedState[j]);
 				}
 			}
 		}
@@ -137,7 +126,6 @@ turnoutAndSensorTracker.on('error', function (e) {
 		turnoutAndSensorTracker.getInitialState();
 	}
 });
-
 
 // Request initial state from JMRI to get the ball rolling
 // NOTE: If we are running in OFFLINE mode, we log, and never start asking

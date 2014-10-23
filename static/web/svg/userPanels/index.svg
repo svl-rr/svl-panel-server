@@ -37,8 +37,8 @@
      id="namedview4355"
      showgrid="false"
      inkscape:zoom="1.1196396"
-     inkscape:cx="137.62278"
-     inkscape:cy="440.92723"
+     inkscape:cx="-78.5182"
+     inkscape:cy="290.87358"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -53,7 +53,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2051,7 +2051,7 @@
     </a>
     <a
        xlink:href="/web/svg/core/TurnoutTester.svg"
-       transform="translate(-108.46293,3.6770189)"
+       transform="translate(-107.74841,3.6770189)"
        id="a5901"
        style="display:inline">
       <text
@@ -2089,9 +2089,9 @@
     </a>
     <a
        xlink:href="panelMatrix.html"
-       transform="translate(-217.335,3.6770189)"
+       style="display:inline"
        id="a3562"
-       style="display:inline">
+       transform="translate(-301.64784,-500.0565)">
       <text
          y="710.67346"
          x="389.97455"
@@ -2103,7 +2103,7 @@
            y="721.67346"
            x="390.29095"
            font-weight="500"
-           font-size="12">Panel Matrix</tspan>
+           font-size="12">Full Panel Matrix</tspan>
       </text>
     </a>
     <a
@@ -2167,6 +2167,25 @@
            y="467.22995"
            id="tspan3282"
            style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Mt. Marvel Timber</tspan>
+      </text>
+    </a>
+    <a
+       style="display:inline"
+       id="a3563"
+       transform="translate(-243.50639,2.9625033)"
+       xlink:href="/web/svg/core/JMRIVariableHelper.html">
+      <text
+         y="710.67346"
+         x="389.97455"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3565">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan3567"
+           y="721.67346"
+           x="390.29095"
+           font-weight="500"
+           font-size="12">JMRI Variable Helper</tspan>
       </text>
     </a>
   </g>
