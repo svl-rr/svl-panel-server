@@ -78,29 +78,28 @@ function dispatchInit(evt)
 
 function setSensorState(sensorID, sensorState)
 {
-	if(sensorState == "2")
-		sensorState = JMRI_SENSOR_ACTIVE;
-	else if(sensorState == "4")
-		sensorState = JMRI_SENSOR_INACTIVE;
-	else if(sensorState == "0")
-		return; 	// unknown sensor state can't be acted upon
-	else
+    if(sensorState == undefined)
+		return;
+	else if((sensorState != JMRI_SENSOR_ACTIVE) && (sensorState != JMRI_SENSOR_INACTIVE))
 	{
 		alert("Bad sensor state (" + sensorState + ") passed to setSensorState() by " + sensorID);
 		return;
 	}
 
-    var blockAuthorization = getDispatchLocalAuthorization(BLOCK_AUTH + getDCCAddr(sensorID));         // will be null if a turnout
-    var turnoutAuthorization = getDispatchLocalAuthorization(TURNOUT_AUTH + getDCCAddr(sensorID));      // will be null if not a turnout
-    
-	if(blockAuthorization != null)
-    	setDispatchSensorState(blockAuthorization.name, blockAuthorization.state, sensorID, sensorState);
-	
-	if(turnoutAuthorization != null)
-		setDispatchSensorState(turnoutAuthorization.name, turnoutAuthorization.state, sensorID, sensorState);
+	if(sensorID.search(JMRI_SENSOR_OBJID_PREFIX) == 0)
+	{
+		var blockAuthorization = getDispatchLocalAuthorization(BLOCK_AUTH + getDCCAddr(sensorID));         // will be null if a turnout
+		var turnoutAuthorization = getDispatchLocalAuthorization(TURNOUT_AUTH + getDCCAddr(sensorID));      // will be null if not a turnout
 		
-	if((blockAuthorization == null) && (turnoutAuthorization == null))
-		console.log("No corresponding authorization variable was found for sensor " + sensorID);
+		if(blockAuthorization != null)
+			setDispatchSensorState(blockAuthorization.name, blockAuthorization.state, sensorID, sensorState);
+		
+		if(turnoutAuthorization != null)
+			setDispatchSensorState(turnoutAuthorization.name, turnoutAuthorization.state, sensorID, sensorState);
+			
+		if((blockAuthorization == null) && (turnoutAuthorization == null))
+			console.log("No corresponding authorization variable was found for sensor " + sensorID);
+	}
 }
 
 function setDispatchSensorState(authName, currentAuthState, sensorID, sensorState)
@@ -736,17 +735,6 @@ function setDispatchObject(object)
         {
             setSVGText(object.name + "Train", object.value);
             
-            var clearElemID = object.name.substring(0,2) + "ClearTrainID";
-            var clearElem = svgDocument.getElementById(clearElemID);
-
-            if(clearElem != null)
-            {
-                if(object.value == "")
-                    clearElem.setAttribute("visibility", "hidden");
-                else
-                    clearElem.setAttribute("visibility", "visible");
-            }
-            
             if(selectedNSO == object.name.substring(0,2))
             {
                 if((object.value == "") || (object.value == null))
@@ -757,6 +745,19 @@ function setDispatchObject(object)
                     nextAuthorizationTrainID = "";
                     nextAuthorizationState = AUTHORIZED_OOS_STATE;
                 }
+                else
+                    setNextAuthorizationTrain(selectedNSO + "Train");
+            }
+            
+            var clearElemID = object.name.substring(0,2) + "ClearTrainID";
+            var clearElem = svgDocument.getElementById(clearElemID);
+
+            if(clearElem != null)
+            {
+                if(object.value == "")
+                    clearElem.setAttribute("visibility", "hidden");
+                else
+                    clearElem.setAttribute("visibility", "visible");
             }
             
             return true;

@@ -37,7 +37,7 @@
      id="namedview4355"
      showgrid="true"
      inkscape:zoom="1.3289991"
-     inkscape:cx="404.62775"
+     inkscape:cx="386.51109"
      inkscape:cy="305.58117"
      inkscape:window-x="4"
      inkscape:window-y="0"
@@ -78,7 +78,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -795,7 +795,7 @@
        xlink:href="DispatchNorth.svg"
        style="display:inline"
        id="a5893"
-       transform="translate(144.32501,-207.78235)">
+       transform="translate(96.751346,-205.66991)">
       <text
          id="text5257"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -814,7 +814,7 @@
        xlink:href="DispatchSouth.svg"
        style="display:inline"
        id="a5897"
-       transform="translate(109.15378,-207.7091)">
+       transform="translate(45.392558,-205.90323)">
       <text
          y="709.69495"
          x="223.56503"
@@ -831,7 +831,7 @@
     </a>
     <a
        xlink:href="/web/svg/core/TurnoutTester.svg"
-       transform="translate(204.30676,-207.63879)"
+       transform="translate(242.88294,-205.79607)"
        id="a5901"
        style="display:inline">
       <text
@@ -850,7 +850,7 @@
     </a>
     <a
        xlink:href="dispatchMatrix.html"
-       transform="translate(-151.31009,-207.78235)"
+       transform="translate(-185.58026,-205.09784)"
        id="a3540"
        style="display:inline">
       <text
@@ -869,9 +869,9 @@
     </a>
     <a
        xlink:href="panelMatrix.html"
-       transform="translate(245.84421,-206.66028)"
+       style="display:inline"
        id="a3550"
-       style="display:inline">
+       transform="translate(163.41415,-206.84836)">
       <text
          id="text3552"
          style="fill:#ffffff;fill-opacity:1;stroke:none"
@@ -890,7 +890,7 @@
        xlink:href="/web/svg/core/PanelSetup.html"
        style="display:inline"
        id="a4361"
-       transform="translate(339.73157,-207.08762)">
+       transform="translate(351.0694,-204.42353)">
       <text
          y="710.67346"
          x="389.97455"
@@ -903,6 +903,25 @@
            x="390.29095"
            font-weight="500"
            font-size="12">Panel Setup</tspan>
+      </text>
+    </a>
+    <a
+       style="display:inline"
+       id="a3569"
+       transform="translate(265.86477,-205.66928)"
+       xlink:href="/web/svg/core/JMRIVariableHelper.html">
+      <text
+         y="709.69495"
+         x="223.56503"
+         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3571">
+        <tspan
+           style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica"
+           id="tspan3573"
+           y="720.69495"
+           x="223.88144"
+           font-weight="500"
+           font-size="12">JMRI Variable Helper</tspan>
       </text>
     </a>
   </g>

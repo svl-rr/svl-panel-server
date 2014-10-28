@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>JMRI SVG Variable Helper</title>
+</head>
+<body onload="initSocketInstance();">
+
+<script src="/web/svg/core/ServerComms.js"></script>
+
+<script type="text/javascript">
+
+var validServerObjs = [];
+
+function handleSocketConnect()
+{
+    getJMRIObjectsOfType(SERVER_TYPE_TURNOUT);
+    getJMRIObjectsOfType(SERVER_TYPE_SENSOR);
+    getJMRIObjectsOfType(SERVER_TYPE_DISPATCH);
+}
+
+function handleSocketDataResponse(dataArray)
+{
+    if((dataArray != null) && (dataArray.length > 0))
+    {
+        for(var i in dataArray)
+            addValidServerObj(dataArray[i]);
+        
+        processValidObjects();
+    }
+    else if(dataArray == null)
+        alert("null dataArray passed to handleSocketDataResponse");
+}
+
+function handleSocketDisconnect()
+{
+}
+
+function addValidServerObj(item)
+{
+    // Check to see if present and update value if it is
+    for(var i in validServerObjs)
+    {
+        if((validServerObjs[i].name == item.name) && (validServerObjs[i].type == item.type))
+        {
+            validServerObjs[i].value = item.value;
+            return;
+        }
+    }
+    
+    // Add object since it isn't present
+    validServerObjs.push(item);
+}
+
+function processValidObjects()
+{
+    var addrArray = [];
+    
+    for(var i in validServerObjs)
+    {
+        dccAddr = getDCCAddr(validServerObjs[i].name);
+
+        if(dccAddr != null)
+        {
+            if(addrArray[dccAddr] == undefined)
+                addrArray[dccAddr] = {"dccAddr":dccAddr};
+            
+            if(validServerObjs[i].type == SERVER_TYPE_DISPATCH)
+            {
+                if(validServerObjs[i].name.search("TA") == 0)
+                {
+                    if(addrArray[dccAddr].TA == undefined)
+                        addrArray[dccAddr].TA = validServerObjs[i].name;
+                    else
+                        addrArray[dccAddr].TA = addrArray[dccAddr].TA + "<br>" + validServerObjs[i].name;
+                }
+                
+                if(validServerObjs[i].name.search("BA") == 0)
+                    addrArray[dccAddr].BA = validServerObjs[i].name;
+            }
+            
+            if(validServerObjs[i].type == SERVER_TYPE_TURNOUT)
+                addrArray[dccAddr].turnout = validServerObjs[i].name;
+            
+            if(validServerObjs[i].type == SERVER_TYPE_SENSOR)
+                addrArray[dccAddr].sensor = validServerObjs[i].name;
+        }
+    }
+    
+    var docStr = '<table cellspacing="10">';
+    docStr += '<tr>'
+    docStr += '<th>Turnout</th>';
+    docStr += '<th>Sensor</th>';
+    docStr += '<th>Turnout<br>Authorization</th>';
+    docStr += '<th>Block<br>Authorization</th>';
+    docStr += '<th>Presumed<br>Use Case</th>';
+    docStr += '<th>Status</th>';
+    docStr += '</tr>'
+    
+    for(var j in addrArray)
+    {
+        var useCase = "";
+        var status = "";
+
+        if((addrArray[j].turnout != undefined) && (addrArray[j].sensor != undefined))
+        {
+            if((addrArray[j].TA != undefined) && (addrArray[j].BA != undefined))
+            {
+                useCase += "Turnout and block merged together and under dispatch control";
+                status = "OK";
+            }
+            else if(addrArray[j].TA != undefined)
+            {
+                useCase += "Turnout under dispatch control";
+                status = "WARNING: sensor is unrelated to turnout or BA variable is missing";
+            }
+            else if(addrArray[j].BA != undefined)
+            {
+                useCase += "Turnout under field control";
+                status = "WARNING: turnout is unrelated to sensor or TA variable is missing";
+            }
+            else
+            {
+                useCase += "Turnout under field control";
+                status = "WARNING: Sensor and turnout are unrelated or are missing TA/BA variables";
+            }
+        }
+        else if(addrArray[j].turnout != undefined)
+        {
+            useCase = "Turnout";
+            
+            if((addrArray[j].TA != undefined) && (addrArray[j].BA != undefined))
+            {
+                useCase += " and (related?) block under dispatch control";
+                status = "OK";
+            }
+            else if(addrArray[j].TA != undefined)
+            {
+                useCase += " under dispatch control";
+                status = "OK";
+            }
+            else if(addrArray[j].BA != undefined)
+            {
+                useCase += " under field control";
+                status = "WARNING: possibly missing TA variable since BA variable present or BA variable unnecessary";
+            }
+            else
+            {
+                useCase += " under field control";
+                status = "OK";
+            }
+        }
+        else if(addrArray[j].sensor != undefined)
+        {
+            useCase = "Block detection";
+            
+            if((addrArray[j].TA != undefined) && (addrArray[j].BA != undefined))
+            {
+                useCase += " with dispatch authorization";
+                status = "WARNING: No turnout exists but TA variable does";
+            }
+            else if(addrArray[j].TA != undefined)
+            {
+                useCase += " with dispatch authorization";
+                status = "WARNING: No turnout exists but TA variable does";
+            }
+            else if(addrArray[j].BA != undefined)
+            {
+                useCase += " with dispatch authorization";
+                status = "OK";
+            }
+            else
+            {
+                useCase += " only";
+                status = "OK";
+            }
+        }
+        else
+        {
+            useCase = "No hardware found";
+            status = "WARNING: Unnecessary TA/BA variable present";
+        }
+        
+        docStr += '<tr>'
+        docStr += '<td>' + undefinedCheck(addrArray[j].turnout) + '</td>';
+        docStr += '<td>' + undefinedCheck(addrArray[j].sensor) + '</td>';
+        docStr += '<td>' + undefinedCheck(addrArray[j].TA) + '</td>';
+        docStr += '<td>' + undefinedCheck(addrArray[j].BA) + '</td>';
+        docStr += '<td>' + useCase + '</td>';
+        docStr += '<td>' + status + '</td>';
+        docStr += '</tr>';
+    }
+    
+    docStr += '</table>';
+    
+    document.open("text/html","replace");
+    document.write('<H1>JMRI SVG Variable Helper</H1>');
+    document.write('This page is used to help identify unused or unmatched variables specified in the static JMRI tables.<P>');
+    
+    if(addrArray.length == 0)
+        document.write('Although this page connected to the JMRI server, no variables were found.<p>')
+    else
+        document.write(docStr);
+        
+    document.write('<a href="/web/svg/">Return to Top</a>');
+    document.close();
+    document.title = "JMRI SVG Variable Helper";
+}
+
+function undefinedCheck(x)
+{
+    return (x == undefined ? "-" : x);
+}
+
+function getDCCAddr(objID)
+{
+    var dccMotorAddr = getDCCAddrAndMotorSubAddr(objID);
+    
+    if(dccMotorAddr != null)
+    {
+        var position = dccMotorAddr.search("\\D");
+        
+        if(position != -1)
+        return dccMotorAddr.substring(0, position);
+        
+        return dccMotorAddr;
+    }
+    else
+    {
+        console.log(objID + " was not a valid dcc address and moter sub address.");
+    }
+    
+    return null;
+}
+
+function getDCCAddrAndMotorSubAddr(objID)
+{
+    var position = objID.search("[0-9]");
+    var positionOfDot = objID.search("[.]");
+    
+    if((position != -1) && (positionOfDot == -1))
+    {
+        var lastChar = objID.substring(objID.length-1);
+        if((lastChar == 'R') || (lastChar == 'r') || (lastChar == 'N') || (lastChar == 'n'))
+        return objID.substring(position, objID.length-1);
+        
+        return objID.substring(position);
+    }
+    
+    if((position != -1) && (positionOfDot != -1))
+    return objID.substring(position, positionOfDot);
+    
+    return null;
+}
+
+function setPanelStatus(x)
+{
+}
+
+var cookiesDefined = [];
+
+</script>
+
+<H1>JMRI SVG Variable Helper</H1>
+This page is used to help identify unused or unmatched variables specified in the static JMRI tables.<P>
+The script has not been able to connect to the JMRI server.<P>
+<a href="/web/svg/">Return to Top</a>
+
+</body>
+</html>

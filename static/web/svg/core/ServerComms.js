@@ -9,12 +9,22 @@ var nodeSocket = null;
 var NODE_SOCKET_PORT = 3000;
 var JMRI_SOCKET_PORT = 12080;
 
+// Object types we can send to the server
+var SERVER_TYPE_TURNOUT = "turnout";
+var SERVER_TYPE_DISPATCH = "memory";
+var SERVER_TYPE_SENSOR = "sensor";
+//var SERVER_TYPE_SIGNAL = "signal";
+
+var supportedTypes = [SERVER_TYPE_TURNOUT, SERVER_TYPE_DISPATCH, SERVER_TYPE_SENSOR];
+
 var SERVER_SET = 'set';
 var SERVER_GET = 'get';
 
 var undefinedStateMap = {"jmri":"0"};
-var normalStateMap = {"jmri":"2","svg":"N"};
-var reverseStateMap = {"jmri":"4","svg":"R"};
+var normalTurnoutStateMap = {"jmri":"2","svg":"N"};
+var reverseTurnoutStateMap = {"jmri":"4","svg":"R"};
+var onSensorStateMap = {"jmri":"2","svg":"on"};
+var offSensorStateMap = {"jmri":"4","svg":"off"};
 
 function initSocketToServer(panelName)
 {
@@ -54,13 +64,17 @@ function initJMRISocketInstance()
         handleSocketConnect();
     };
 
-    jmriSocket.onmessage = handleJSONMessage;
+    jmriSocket.onmessage = function(msg)
+    {
+        var msgObj = JSON.parse(msg.data);
+        handleSocketDataResponse(handleJSONMessage(msgObj));
+    };
     
     jmriSocket.onerror = function (e)
     {
         console.log("web socket error: " + e);
         setPanelStatus("web socket error: " + e);
-    }
+    };
 
     jmriSocket.onclose = function (e)
     {
@@ -79,25 +93,19 @@ function initNodeSocketInstance()
     nodeSocket.on('connect', function ()
     {
         socketStatus = SOCKET_CONNECTED;
-        //nodeSocket.emit('register', panelName);
         handleSocketConnect();
     });
 
     // on an response from the server, server will send array of updated elements
     // not all elements will necesarily be on this panel
-    nodeSocket.on('update', function (data)
+    nodeSocket.on('update', function(data)
     {
-        var cleanedVarNames = [];
-    
-        for(var i in data)
-        {
-            if((data[i].name.indexOf('IM') == 0) && (data[i].type == SERVER_TYPE_DISPATCH))
-                cleanedVarNames.push(new ServerObject(data[i].name.substr(2), SERVER_TYPE_DISPATCH, data[i].value));
-            else
-                cleanedVarNames.push(data[i]);
-        }
-    
-        handleSocketDataResponse(cleanedVarNames);
+        var msg = JSON.parse(data);
+        
+        if((msg != null) && (msg != undefined) && (msg.data != null) && (msg.data != undefined))
+            handleSocketDataResponse(handleJSONMessage(msg.data));
+        else
+            alert("bad node update: " + data);
     });
     
     nodeSocket.on('disconnect', function ()
@@ -105,19 +113,43 @@ function initNodeSocketInstance()
         socketStatus = SOCKET_DISCONNECTED;        
         handleSocketDisconnect();
     });
-    
-    nodeSocket.on('time', function (time)
-    {
-        handleSocketTime(time);
-    });
 }
 
-
-function handleJSONMessage(msg)
+function handleJSONMessage(msgObj)
 {
-    var msgObj = JSON.parse(msg.data);
-    var humanReadableMessage = null;
+    var serverObjs = [];
 
+    if(msgObj != null)
+    {
+        var serverItem;
+        
+    	if(msgObj.length == undefined)
+        {
+    		serverItem = handleJSONObject(msgObj);
+            
+            if(serverItem != null)
+                serverObjs.push(serverItem);
+        }
+    	else if(msgObj.length > 0)
+    	{
+    		for(var i in msgObj)
+            {
+    			serverItem = handleJSONObject(msgObj[i]);
+                
+                if(serverItem != null)
+                    serverObjs.push(serverItem);
+            }
+    	}
+    }
+    
+    return serverObjs;
+}
+
+function handleJSONObject(msgObj)
+{
+    var humanReadableMessage = null;
+    var serverObj = null;
+    
     if(msgObj != null)
     {
         if (msgObj.type == "pong")
@@ -128,61 +160,85 @@ function handleJSONMessage(msg)
         else if (msgObj.type == "hello")
         {
             humanReadableMessage = msgObj.data.railroad + " is running JMRI version " + msgObj.data.JMRI;
-            
             console.log("server hello message: " + humanReadableMessage);
+            
             setPanelStatus(humanReadableMessage);
         }
         else if (msgObj.type == "error")
         {
             humanReadableMessage = msgObj.data.message + " (code " + msgObj.data.code + ")";
-            
             console.log("server error message: " + humanReadableMessage);
+            
+            if(msgObj.data.code == "404")
+            {
+                var searchTxt = "Unable to access ";
+            
+                if(msgObj.data.message.search(searchTxt) == 0)
+                {
+                    var reducedMsg = msgObj.data.message.replace(searchTxt, "");
+                    
+                    var spaceLoc = reducedMsg.search(" ");
+                    
+                    if(spaceLoc != -1)
+                    {
+                        var type = reducedMsg.substr(0, spaceLoc);
+                        var name = reducedMsg.substr(spaceLoc + 1);
+                        
+                        if(name.charAt(name.length - 1) == ".")
+                            name = name.substr(0, name.length - 1);
+                        
+                        var jsonObj = {"type":type, "data":{"name":name}};
+                    }
+                }
+            }
+            
             setPanelStatus(humanReadableMessage);
         }
         else if(msgObj.type == "turnout")
         {
             humanReadableMessage = msgObj.data.name + " has state " + msgObj.data.state;
+            console.log("server turnout message: " + humanReadableMessage);
 
-            var serverObj;
-            
             if(msgObj.data.state == undefinedStateMap.jmri)
                 serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_TURNOUT);
-            else if(msgObj.data.state == normalStateMap.jmri)
-                serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_TURNOUT, normalStateMap.svg);
-            else if (msgObj.data.state == reverseStateMap.jmri)
-                serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_TURNOUT, reverseStateMap.svg);
-
-            console.log("server turnout message: " + humanReadableMessage);
-            handleSocketDataResponse([serverObj]);
+            else if(msgObj.data.state == normalTurnoutStateMap.jmri)
+                serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_TURNOUT, normalTurnoutStateMap.svg);
+            else if (msgObj.data.state == reverseTurnoutStateMap.jmri)
+                serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_TURNOUT, reverseTurnoutStateMap.svg);
         }
         else if(msgObj.type == "sensor")
         {
             humanReadableMessage = msgObj.data.name + " has state " + msgObj.data.state;
-        
-            console.log("server sensor message: " + humanReadableMessage);
-            handleSocketDataResponse([new ServerObject(msgObj.data.name, SERVER_TYPE_SENSOR, msgObj.data.state)]);
+        	console.log("server sensor message: " + humanReadableMessage);
+			
+			if(msgObj.data.state == undefinedStateMap.jmri)
+				serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_SENSOR);
+			else if(msgObj.data.state == onSensorStateMap.jmri)
+				serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_SENSOR, onSensorStateMap.svg);
+			else if (msgObj.data.state == offSensorStateMap.jmri)
+				serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_SENSOR, offSensorStateMap.svg);
         }
         else if(msgObj.type == "memory")
         {
             humanReadableMessage = msgObj.data.name + " has value " + msgObj.data.value;
-        
             console.log("server memory message: " + humanReadableMessage);
             
             if(msgObj.data.name.indexOf('IM') == 0)
-                handleSocketDataResponse([new ServerObject(msgObj.data.name.substr(2), SERVER_TYPE_DISPATCH, msgObj.data.value)]);
+                serverObj = new ServerObject(msgObj.data.name.substr(2), SERVER_TYPE_DISPATCH, msgObj.data.value);
             else
-                handleSocketDataResponse([new ServerObject(msgObj.data.name, SERVER_TYPE_DISPATCH, msgObj.data.value)]);
+                serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_DISPATCH, msgObj.data.value);
         }
         else
-            console.log("unknown server message: " + msg.data);
+            console.log("unknown server message: " + msgObj.data);
     }
     else
     {
-        console.log("Improper JSON server message received: " + msg.data);
-        setPanelStatus("Improper JSON server message received: " + msg.data);
+        console.log("Null JSON server message received.");
+        setPanelError("Null JSON server message received.");
     }
+    
+    return serverObj;
 }
-
 
 function ServerObject(objectName, objectType)
 {
@@ -243,6 +299,24 @@ function setValue(objectValue)
 	this.value=objectValue;
 }
 
+function getJMRIObjects()
+{
+    for(var i in supportedTypes)
+        getJMRIObjectsOfType(supportedTypes[i]);
+}
+
+function getJMRIObjectsOfType(type)
+{
+    if(type == SERVER_TYPE_DISPATCH)
+        serverSendRawJSON('{"type":"list","list":"memories"}', SERVER_GET);
+    else if(type == SERVER_TYPE_SENSOR)
+        serverSendRawJSON('{"type":"list","list":"sensors"}', SERVER_GET);
+    else if(type == SERVER_TYPE_TURNOUT)
+        serverSendRawJSON('{"type":"list","list":"turnouts"}', SERVER_GET);
+    else
+        alert("Unnsupported type (" + type + ") passed to getAllJMRIObjects()");
+}
+
 function serverSet(setArray)
 {
 	serverSend(SERVER_SET, setArray);
@@ -273,13 +347,7 @@ function serverSend(action, dataArray)
                 else if(action == SERVER_SET)
                 	jsonStr = getAsSetJSONString(dataArray[i]);
                 
-                if(jsonStr != null)
-                {
-                    if(jmriSocket != null)
-                    	jmriSocket.send(jsonStr);
-                    else if(nodeSocket != null)
-                    	nodeSocket.emit(action, jsonStr);
-                }
+                serverSendRawJSON(jsonStr, action);
             }
         }
         else
@@ -289,16 +357,38 @@ function serverSend(action, dataArray)
 	}
 }
 
+function serverSendRawJSON(jsonStr, action)
+{
+	if(socketStatus == SOCKET_CONNECTED)
+	{
+		if(jsonStr != null)
+		{
+			if(jmriSocket != null)
+			{
+				jmriSocket.send(jsonStr);
+				return;
+			}
+			else if((nodeSocket != null) && (action != null))
+			{
+				nodeSocket.emit(action, jsonStr);
+				return;
+			}
+		}
+	}
+	
+	console.log("Error: serverSendRawJSON could not complete as expected (" + jsonStr + " " + action + " " + socketStatus + ")");
+}
+
 function getAsSetJSONString(serverObj)
 {
     if(serverObj.type == SERVER_TYPE_TURNOUT)
     {
         var jmriState;
         
-        if(serverObj.value == normalStateMap.svg)
-            jmriState = normalStateMap.jmri;
-        else if(serverObj.value == reverseStateMap.svg)
-            jmriState = reverseStateMap.jmri;
+        if(serverObj.value == normalTurnoutStateMap.svg)
+            jmriState = normalTurnoutStateMap.jmri;
+        else if(serverObj.value == reverseTurnoutStateMap.svg)
+            jmriState = reverseTurnoutStateMap.jmri;
         else
             jmriState = undefinedStateMap.jmri;
     

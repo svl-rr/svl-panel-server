@@ -39,8 +39,24 @@ var globalDataArray = [];
 //
 // Check any get/set parameter for validity— for now we just are very agreeable.
 
-function dataItemIsValid(data) {
-	return true;
+function dataItemIsValid(jsonObj)
+{
+	if((jsonObj.type != undefined) && (jsonObj.data.name != undefined))
+	{
+		switch (jsonObj.type)
+		{
+			case 'turnout':
+			case 'sensor':
+				return (jsonObj.data.state != undefined);
+				break;
+				
+			case 'memory':
+				return (jsonObj.data.value != undefined);
+				break;
+		}
+	}
+	
+	return false;
 }
 
 
@@ -50,22 +66,50 @@ function dataItemIsValid(data) {
 // NOTE: We specifically do NOT update turnout state, as we rely on JMRI to
 // report turnout changes back via the xmlio servlet.
 
-function updateGlobalStateFromDataItem(item) {
-	if (!dataItemIsValid(item)) {
-		console.err("updateGlobalStateFromDataItem: bad data item!");
-		console.dir(item);
+function updateGlobalStateFromDataItem(jsonObj) {
+	if (!dataItemIsValid(jsonObj)) {
+		//console.err("updateGlobalStateFromDataItem: bad data item!");
+		//console.dir(jsonObj);
 		return false;
 	}
-	if (globalDataArray[item.name] === undefined) {
-		globalDataArray[item.name] = item;
-		//console.log("INITIALIZED: " + item.name + ":=" + item.value);
+	if (globalDataArray[jsonObj.data.name] === undefined) {
+		globalDataArray[jsonObj.data.name] = jsonObj;
+
+		switch(jsonObj.type)
+		{
+			case 'sensor':
+			case 'turnout':
+				//console.log("INITIALIZED: " + jsonObj.data.name + ":=" + jsonObj.data.state);
+				break;
+				
+			case 'memory':
+				//console.log("INITIALIZED: " + jsonObj.data.name + ":=" + jsonObj.data.value);
+				break;
+		}
+
 		return true;
 	}
-	if (item.value !== globalDataArray[item.name].value) {
-		globalDataArray[item.name] = item;
-		//console.log("UPDATED: " + item.name + ":=" + item.value);
-		return true;
+	
+	switch(jsonObj.type)
+	{
+		case 'sensor':
+		case 'turnout':
+			if (jsonObj.data.state !== globalDataArray[jsonObj.data.name].data.state) {
+				globalDataArray[jsonObj.data.name] = jsonObj;
+				//console.log("UPDATED: " + jsonObj.data.name + ":=" + jsonObj.data.state);
+				return true;
+			}
+			break;
+			
+		case 'memory':
+			if (jsonObj.data.value !== globalDataArray[jsonObj.data.name].data.value) {
+				globalDataArray[jsonObj.data.name] = jsonObj;
+				//console.log("UPDATED: " + jsonObj.data.name + ":=" + jsonObj.data.value);
+				return true;
+			}
+			break;
 	}
+	
 	return false;
 }
 
@@ -78,7 +122,7 @@ function updateGlobalDataFromJMRI(response) {
 	var responseData = [],
 		data = response.item,
 		item,
-        serverObj;
+        jsonObj;
 
 	if (data !== undefined) {
 		//console.log("updateGlobalDataFromJMRI:");
@@ -91,23 +135,30 @@ function updateGlobalDataFromJMRI(response) {
                     case 'turnout':
                     case 'memory':
                     case 'sensor':
-                        serverObj = {"type":data[item].type, "name":data[item].name,"value":undefined};
+                        jsonObj = {"type":data[item].type, "data":{"name":data[item].name}};
                         
-                        if(typeof data[item].value != "object")
-                            serverObj.value = data[item].value;
-                        
-                        if((serverObj.value == undefined) && (serverObj.type == 'memory'))
-                            serverObj.value = '';
-                        
-                        switch (serverObj.type)
+                        switch (jsonObj.type)
                         {
                             case 'turnout':
-                                serverObj.value = (data[item].value == 4) ? 'R' : 'N';
+                            case 'sensor':
+                            	if(typeof data[item].value != "object")
+                            		jsonObj.data.state = data[item].value;
+                                
+                                if(jsonObj.data.state == "1")
+                                    jsonObj.data.state = "0";
+                                    
+                                break;
+                                
+                            case 'memory':
+                                if(typeof data[item].value != "object")
+                            		jsonObj.data.value = data[item].value;
+                            	else
+                            		jsonObj.data.value = '';
                                 break;
                         }
                         
-                        if (updateGlobalStateFromDataItem(serverObj)) {
-							responseData.push(serverObj);
+                        if (updateGlobalStateFromDataItem(jsonObj)) {
+							responseData.push(emulateJMRIResponse(jsonObj));
 						}
                         break;
 
@@ -127,7 +178,7 @@ function updateGlobalDataFromJMRI(response) {
 // Handle the 'set' commands initiated by the the socket.io/websocket interface
 
 function processSetCommand(data) {
-	var	changedData = [],
+	var	changedData = null,
 		item,
 		xmlRequest = "",
 		turnoutState,
@@ -141,52 +192,43 @@ function processSetCommand(data) {
     
         if(jsonObj != null)
         {
-            var serverObj = {"type":jsonObj.type,"name":jsonObj.data.name,"value":undefined};
-            
-            switch (serverObj.type)
-            {
-                case 'turnout':
-                    serverObj.value = (jsonObj.data.state == 4) ? 'R' : 'N';
-                    break;
-                    
-                default:
-                    serverObj.value = jsonObj.data.value;
-                    break;
-            }
-                  
-            //console.log("SET: " + data);
-            //console.log("SET: " + serverObj.type + " -> " + serverObj.name + " is '" + serverObj.value + "'");
-        
+        	// check for improperly formed set command
+			if((jsonObj.data.value == undefined) && (jsonObj.data.state == undefined))
+			{
+				console.error('SET: ERR: Improperly formed set command. ' + util.inspect(jsonObj));
+				return null;
+        	}
+        	
             // In offline mode, manually update the data
             if (process.env.OFFLINE !== undefined) {
-                if (updateGlobalStateFromDataItem(serverObj)) {
-                    changedData.push(serverObj);
+                if (updateGlobalStateFromDataItem(jsonObj)) {
+                    changedData = emulateJMRIResponse(jsonObj);
                 }
             }
             else
             {
-                switch (serverObj.type) {
+                switch (jsonObj.type) {
                     
                     case 'sensor':
-                        console.error('SET: ERR: Sensors are read-only in online mode: ' + util.inspect(serverObj));
+                        console.error('SET: ERR: Sensors are read-only in online mode: ' + util.inspect(jsonObj));
                         break;
                     
                     case 'turnout':
-                        xmlRequest += "<" + serverObj.type + " name='" + serverObj.name + "' set='" + (serverObj.value == 'R' ? 4 : 2) +"' />";
-                        if (updateGlobalStateFromDataItem(serverObj)) {
-                            changedData.push(serverObj);
+                        xmlRequest += "<" + jsonObj.type + " name='" + jsonObj.data.name + "' set='" + jsonObj.data.state +"' />";
+                        if (updateGlobalStateFromDataItem(jsonObj)) {
+                            changedData = emulateJMRIResponse(jsonObj);
                         }
                         break;
                     
                     case 'memory':
-                        xmlRequest += "<" + serverObj.type + " name='" + serverObj.name + "' set='" + serverObj.value +"' />";
-                        if (updateGlobalStateFromDataItem(serverObj)) {
-                            changedData.push(serverObj);
+                        xmlRequest += "<" + jsonObj.type + " name='" + jsonObj.data.name + "' set='" + jsonObj.data.value +"' />";
+                        if (updateGlobalStateFromDataItem(jsonObj)) {
+                            changedData = emulateJMRIResponse(jsonObj);
                         }
                         break;
                     
                     default:
-                        console.error('SET: ERR: Unknown type not allowed. ' + util.inspect(serverObj));
+                        console.error('SET: ERR: Unknown type not allowed. ' + util.inspect(jsonObj));
                         break;
                 }
             }
@@ -215,19 +257,61 @@ function processSetCommand(data) {
 // This is currently a synchronous operation, so this may be tough.
 
 function processGetCommand(data) {
-	var responseData = [],
+	var responseData = null,
 		item;
 
     var jsonObj = JSON.parse(data);
     
     if(jsonObj != null)
     {
-        var foundObj = globalDataArray[jsonObj.data.name];
+        switch(jsonObj.type)
+        {
+            case "turnout":
+            case "sensor":
+            case "memory":
+                var foundObj = globalDataArray[jsonObj.data.name];
         
-        if((foundObj != null) && (foundObj != undefined))
-            responseData.push(foundObj);
-        else
-            responseData.push({"type":jsonObj.type,"name":jsonObj.data.name,"value":undefined});
+                if((foundObj != null) && (foundObj != undefined))
+                    responseData = emulateJMRIResponse(foundObj);
+                else
+                    responseData = emulateJMRINotFoundError(jsonObj);
+                break;
+                
+            case "list":
+                var objectType, foundObj = [];
+                
+                switch(jsonObj.list)
+                {
+                    case "memories":
+                        objectType = "memory";
+                        break;
+                        
+                    case "sensors":
+                        objectType = "sensor";
+                        break;
+                        
+                    case "turnouts":
+                        objectType = "turnout";
+                        break;
+                        
+                    default:
+                        responseData = emulateJMRINotFoundError(jsonObj);
+                        break;
+                }
+                
+                if(objectType != null)
+                {
+                    for(var i in globalDataArray)
+                    {
+                        if(globalDataArray[i].type == objectType)
+                            foundObj.push(globalDataArray[i]);
+                    }
+                    
+                    responseData = emulateJMRIArrayResponse(foundObj);
+                }
+                
+                break;
+        }
         
         //console.log("GET: " + jsonObj.type + " -> " + jsonObj.data.name + " will return value of " + responseData[0].value);
         //console.log(responseData[0]);
@@ -236,47 +320,52 @@ function processGetCommand(data) {
 	return responseData;
 }
 
-
-var numDispatchPanels = 0;
-var SERVER_NAME_MAINLINELOCKED = "Mainline Locked";
-
-// registerPanel
-//
-// When a new client comes online, it can optionally register as a dispatcher panel
-
-function registerPanel(socket, panelName) {
-	console.log("registerPanel " + panelName);
-	// TODO: should guard againt client calling register multiple times.
-	if (panelName.search("Dispatch") !== -1) {
-		numDispatchPanels = numDispatchPanels + 1;
-	}
+function emulateJMRIArrayResponse(objArray)
+{
+	return '{"type":"message", "data":' + getJSONObjArrayAsStr(objArray) + '}';
 }
 
-
-// unregisterPanel
-//
-// If a client was registered, go ahead a check to see if it was the last dispatcher
-// panel active, and if so unlock the layout.
-
-function unregisterPanel(socket, panelName) {
-	console.log("unregisterPanel " + panelName);
-	if (panelName.search("Dispatch") !== -1) {
-		numDispatchPanels = (numDispatchPanels > 0 ? numDispatchPanels - 1 : 0);
-		// if the last dispatch panel was closed, be sure to unlock the mainline
-		if (numDispatchPanels === 0) {
-			console.log("last dispatch panel closed; unlocking mainline");
-			if (globalDataArray[SERVER_NAME_MAINLINELOCKED] !== undefined) {
-                globalDataArray[SERVER_NAME_MAINLINELOCKED].value = false;
-                socket.broadcast.emit('update', [globalDataArray[SERVER_NAME_MAINLINELOCKED]]);
-            }
-		}
-	}
+function emulateJMRIResponse(jsonObj)
+{
+	return '{"type":"message", "data":' + getJSONObjAsStr(jsonObj) + '}';
 }
 
+function emulateJMRINotFoundError(jsonObj)
+{
+	return '{"type":"message", "data":{"type":"error", "data":{"code":"404", "message":"Unable to access ' + jsonObj.type + ' ' + jsonObj.data.name + '."}}}';
+}
+
+function getJSONObjArrayAsStr(objArray)
+{
+    var objStr = "";
+    
+    for(var i in objArray)
+    {
+        if(objStr == "")
+            objStr = getJSONObjAsStr(objArray[i]);
+        else
+            objStr += ("," + getJSONObjAsStr(objArray[i]));
+    }
+    
+    return '[' + objStr + ']';
+}
+
+function getJSONObjAsStr(jsonObj)
+{
+	var jsonStr = '{"type":"' + jsonObj.type + '","data":{"name":"' + jsonObj.data.name + '"';
+
+	if(jsonObj.data.state != undefined)
+		jsonStr += ', "state":"' + jsonObj.data.state + '"';
+	else if(jsonObj.data.value != undefined)
+		jsonStr += ', "value":"' + jsonObj.data.value + '"';
+	
+	jsonStr += '}}';
+    
+    //console.log(jsonStr);
+    
+	return jsonStr;
+}
 
 exports.updateGlobalDataFromJMRI = updateGlobalDataFromJMRI;
 exports.processSetCommand = processSetCommand;
-exports.processGetCommand = processGetCommand;
-exports.registerPanel = registerPanel;
-exports.unregisterPanel = unregisterPanel;
-
+exports.processGetCommand = processGetCommand; 
