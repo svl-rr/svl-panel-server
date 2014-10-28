@@ -735,17 +735,6 @@ function setDispatchObject(object)
         {
             setSVGText(object.name + "Train", object.value);
             
-            var clearElemID = object.name.substring(0,2) + "ClearTrainID";
-            var clearElem = svgDocument.getElementById(clearElemID);
-
-            if(clearElem != null)
-            {
-                if(object.value == "")
-                    clearElem.setAttribute("visibility", "hidden");
-                else
-                    clearElem.setAttribute("visibility", "visible");
-            }
-            
             if(selectedNSO == object.name.substring(0,2))
             {
                 if((object.value == "") || (object.value == null))
@@ -756,6 +745,19 @@ function setDispatchObject(object)
                     nextAuthorizationTrainID = "";
                     nextAuthorizationState = AUTHORIZED_OOS_STATE;
                 }
+                else
+                    setNextAuthorizationTrain(selectedNSO + "Train");
+            }
+            
+            var clearElemID = object.name.substring(0,2) + "ClearTrainID";
+            var clearElem = svgDocument.getElementById(clearElemID);
+
+            if(clearElem != null)
+            {
+                if(object.value == "")
+                    clearElem.setAttribute("visibility", "hidden");
+                else
+                    clearElem.setAttribute("visibility", "visible");
             }
             
             return true;

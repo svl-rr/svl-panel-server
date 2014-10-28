@@ -73,7 +73,7 @@ function updateGlobalStateFromDataItem(jsonObj) {
 		return false;
 	}
 	if (globalDataArray[jsonObj.data.name] === undefined) {
-		globalDataArray[jsonObj.name] = jsonObj;
+		globalDataArray[jsonObj.data.name] = jsonObj;
 
 		switch(jsonObj.type)
 		{
@@ -264,18 +264,65 @@ function processGetCommand(data) {
     
     if(jsonObj != null)
     {
-        var foundObj = globalDataArray[jsonObj.data.name];
+        switch(jsonObj.type)
+        {
+            case "turnout":
+            case "sensor":
+            case "memory":
+                var foundObj = globalDataArray[jsonObj.data.name];
         
-        if((foundObj != null) && (foundObj != undefined))
-            responseData = emulateJMRIResponse(foundObj);
-        else
-            responseData = emulateJMRINotFoundError(jsonObj);
+                if((foundObj != null) && (foundObj != undefined))
+                    responseData = emulateJMRIResponse(foundObj);
+                else
+                    responseData = emulateJMRINotFoundError(jsonObj);
+                break;
+                
+            case "list":
+                var objectType, foundObj = [];
+                
+                switch(jsonObj.list)
+                {
+                    case "memories":
+                        objectType = "memory";
+                        break;
+                        
+                    case "sensors":
+                        objectType = "sensor";
+                        break;
+                        
+                    case "turnouts":
+                        objectType = "turnout";
+                        break;
+                        
+                    default:
+                        responseData = emulateJMRINotFoundError(jsonObj);
+                        break;
+                }
+                
+                if(objectType != null)
+                {
+                    for(var i in globalDataArray)
+                    {
+                        if(globalDataArray[i].type == objectType)
+                            foundObj.push(globalDataArray[i]);
+                    }
+                    
+                    responseData = emulateJMRIArrayResponse(foundObj);
+                }
+                
+                break;
+        }
         
         //console.log("GET: " + jsonObj.type + " -> " + jsonObj.data.name + " will return value of " + responseData[0].value);
         //console.log(responseData[0]);
 	}
 
 	return responseData;
+}
+
+function emulateJMRIArrayResponse(objArray)
+{
+	return '{"type":"message", "data":' + getJSONObjArrayAsStr(objArray) + '}';
 }
 
 function emulateJMRIResponse(jsonObj)
@@ -286,6 +333,21 @@ function emulateJMRIResponse(jsonObj)
 function emulateJMRINotFoundError(jsonObj)
 {
 	return '{"type":"message", "data":{"type":"error", "data":{"code":"404", "message":"Unable to access ' + jsonObj.type + ' ' + jsonObj.data.name + '."}}}';
+}
+
+function getJSONObjArrayAsStr(objArray)
+{
+    var objStr = "";
+    
+    for(var i in objArray)
+    {
+        if(objStr == "")
+            objStr = getJSONObjAsStr(objArray[i]);
+        else
+            objStr += ("," + getJSONObjAsStr(objArray[i]));
+    }
+    
+    return '[' + objStr + ']';
 }
 
 function getJSONObjAsStr(jsonObj)
