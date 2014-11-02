@@ -25,12 +25,49 @@
 
 var path = require('path'),
 	connect = require('connect'),
-	dataHandler = require('./dataHandler'),
-	jmri = require('./jmri'),
-	xml2js = require('xml2js'),
-	parser = new xml2js.Parser(),
-	clients = [],
-	currentTime = "12:00";
+	clients = [];
+    
+var WebSocket = require('ws');
+var ws = null;
+var jmriSocketReady = false;
+var lastClientSocket;
+
+setInterval(function() {
+    if(!jmriSocketReady)
+    {
+        ws = new WebSocket('ws://127.0.0.1:12080/json/');
+
+        ws.on('open', function() {
+            jmriSocketReady = true;
+            console.log("Connection to JMRI established");
+        });
+
+        ws.on('close', function() {
+            jmriSocketReady = false;
+            console.log("Connection to JMRI closed");
+        });
+
+        ws.on('message', function(data,flags) {
+            if(lastClientSocket != null)
+            {
+                console.log("Data rebroadcast from JMRI: " + data);
+                lastClientSocket.broadcast.emit('update', data);
+                lastClientSocket.emit('update', data);
+            }
+            else
+                console.log("Data dropped from JMRI: " + data);
+        });
+        
+        ws.on('error', function(e) {
+            console.log("Error: " + e.code);
+        });
+    }
+    else
+    {
+        // Set up ping to maintain connection
+        ws.send('{"type":"ping"}');
+    }
+}, 10000);
 
 // Create an HTTP Server Using the connect framework. This server is
 // responsible for vending static content such as the HTML, JS, CSS,
@@ -58,84 +95,32 @@ var io = require('socket.io').listen(server)
 	.set('log level', 1)
 	.sockets.on('connection', function (socket) {
 		clients[socket.id] = socket;	// track the socket in clients array
+        lastClientSocket = socket;
 
 		socket.on('disconnect', function () {
 			delete clients[socket.id];	// stop tracking the client
+            if(lastClientSocket == socket)
+                lastClientSocket = null;
 		});
 
 		// process the command and broadcast updates to all other clients
 		socket.on('set', function (data) {
-			var changedState = dataHandler.processSetCommand(data);
-			if (changedState != null) {
-				socket.broadcast.emit('update', changedState);
-				socket.emit('update', changedState);
-			}
+			if(jmriSocketReady)
+            {
+                console.log("set sent to ws: " + data);
+                ws.send(data);
+            }
 		});
 
 		// reply to sender with response to query of existing state
 		socket.on('get', function (data) {
-			socket.emit('update', dataHandler.processGetCommand(data));
+            if(jmriSocketReady)
+            {
+                console.log("get sent to ws: " + data);
+                ws.send(data);
+            }
 		});
 	});
-
-
-
-// Establish a connection with the JMRI xmlio servlet to determine
-// the state of all sensors and turnouts. After collecting initial
-// state, this routine issues a new request back to the servlet which
-// will complete whenever there is a difference between the state passed
-// in and the previously returned layout state.
-
-var	turnoutAndSensorTracker = new jmri.JMRI('127.0.0.1', 12080);
-
-turnoutAndSensorTracker.on('xmlioResponse', function (response) {
-
-    //console.log(response);
-
-	// Convert the xml response into JSON, update state, and invoke callback
-	parser.parseString(response, function (err, result) {
-
-		var i, j, changedState;
-
-		if (err) { throw err; }
-
-		changedState = dataHandler.updateGlobalDataFromJMRI(result);
-		if (changedState.length > 0) {
-			for (i in clients) {
-				if (clients.hasOwnProperty(i)) {
-					for(j in changedState)
-						clients[i].emit('update', changedState[j]);
-				}
-			}
-		}
-
-		// re-queue request with response state
-		turnoutAndSensorTracker.xmlioRequest(response);
-	});
-});
-
-turnoutAndSensorTracker.on('error', function (e) {
-	console.log("JMRI error: "+ e.message);
-	
-	// If we couldn't connect to JMRI, just bail
-	if (e.code === 'ECONNREFUSED') {
-		process.exit(1);
-	} else {
-		// Something else bad happened, but we don't care, just start over
-		console.log("Reconnecting with JMRI...");
-		turnoutAndSensorTracker.getInitialState();
-	}
-});
-
-// Request initial state from JMRI to get the ball rolling
-// NOTE: If we are running in OFFLINE mode, we log, and never start asking
-
-if (process.env.OFFLINE !== undefined) {
-	console.log("Running in OFFLINE mode, no JMRI transactions will occur!");
-} else {
-	turnoutAndSensorTracker.getInitialState();
-}
-
 
 // Filter function for the connect.directory middleware. This function allows
 // us to get by without an index.html and will allow folks to navigate to panel

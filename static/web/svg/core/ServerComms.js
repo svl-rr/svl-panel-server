@@ -102,8 +102,8 @@ function initNodeSocketInstance()
     {
         var msg = JSON.parse(data);
         
-        if((msg != null) && (msg != undefined) && (msg.data != null) && (msg.data != undefined))
-            handleSocketDataResponse(handleJSONMessage(msg.data));
+        if((msg != null) && (msg != undefined))
+            handleSocketDataResponse(handleJSONMessage(msg));
         else
             alert("bad node update: " + data);
     });
@@ -229,7 +229,7 @@ function handleJSONObject(msgObj)
                 serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_DISPATCH, msgObj.data.value);
         }
         else
-            console.log("unknown server message: " + msgObj.data);
+            console.log("unknown server message: " + msgObj);
     }
     else
     {
