@@ -322,22 +322,7 @@ function processGetCommand(data) {
 
 function emulateJMRIArrayResponse(objArray)
 {
-	return '{"type":"message", "data":' + getJSONObjArrayAsStr(objArray) + '}';
-}
-
-function emulateJMRIResponse(jsonObj)
-{
-	return '{"type":"message", "data":' + getJSONObjAsStr(jsonObj) + '}';
-}
-
-function emulateJMRINotFoundError(jsonObj)
-{
-	return '{"type":"message", "data":{"type":"error", "data":{"code":"404", "message":"Unable to access ' + jsonObj.type + ' ' + jsonObj.data.name + '."}}}';
-}
-
-function getJSONObjArrayAsStr(objArray)
-{
-    var objStr = "";
+	var objStr = "";
     
     for(var i in objArray)
     {
@@ -348,6 +333,16 @@ function getJSONObjArrayAsStr(objArray)
     }
     
     return '[' + objStr + ']';
+}
+
+function emulateJMRIResponse(jsonObj)
+{
+	return getJSONObjAsStr(jsonObj);
+}
+
+function emulateJMRINotFoundError(jsonObj)
+{
+	return '{"type":"error", "data":{"code":"404", "message":"Unable to access ' + jsonObj.type + ' ' + jsonObj.data.name + '."}}';
 }
 
 function getJSONObjAsStr(jsonObj)

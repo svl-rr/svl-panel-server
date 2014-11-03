@@ -100,10 +100,10 @@ function initNodeSocketInstance()
     // not all elements will necesarily be on this panel
     nodeSocket.on('update', function(data)
     {
-        var msg = JSON.parse(data);
-        
-        if((msg != null) && (msg != undefined) && (msg.data != null) && (msg.data != undefined))
-            handleSocketDataResponse(handleJSONMessage(msg.data));
+        var msgObj = JSON.parse(data);
+                
+        if((msgObj != null) && (msgObj != undefined))
+            handleSocketDataResponse(handleJSONMessage(msgObj));
         else
             alert("bad node update: " + data);
     });
