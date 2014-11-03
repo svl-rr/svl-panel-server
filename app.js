@@ -30,7 +30,6 @@ var path = require('path'),
 var WebSocket = require('ws');
 var ws = null;
 var jmriSocketReady = false;
-var lastClientSocket;
 
 setInterval(function() {
     if(!jmriSocketReady)
@@ -48,14 +47,8 @@ setInterval(function() {
         });
 
         ws.on('message', function(data,flags) {
-            if(lastClientSocket != null)
-            {
-                console.log("Data rebroadcast from JMRI: " + data);
-                lastClientSocket.broadcast.emit('update', data);
-                lastClientSocket.emit('update', data);
-            }
-            else
-                console.log("Data dropped from JMRI: " + data);
+            console.log("Data rebroadcast from JMRI: " + data);
+            io.emit('update', data);
         });
         
         ws.on('error', function(e) {
@@ -95,19 +88,16 @@ var io = require('socket.io').listen(server)
 	.set('log level', 1)
 	.sockets.on('connection', function (socket) {
 		clients[socket.id] = socket;	// track the socket in clients array
-        lastClientSocket = socket;
 
 		socket.on('disconnect', function () {
 			delete clients[socket.id];	// stop tracking the client
-            if(lastClientSocket == socket)
-                lastClientSocket = null;
 		});
 
 		// process the command and broadcast updates to all other clients
 		socket.on('set', function (data) {
 			if(jmriSocketReady)
             {
-                console.log("set sent to ws: " + data);
+                console.log("Data (set) sent to ws: " + data);
                 ws.send(data);
             }
 		});
@@ -116,7 +106,7 @@ var io = require('socket.io').listen(server)
 		socket.on('get', function (data) {
             if(jmriSocketReady)
             {
-                console.log("get sent to ws: " + data);
+                console.log("Data (get) sent to ws: " + data);
                 ws.send(data);
             }
 		});
