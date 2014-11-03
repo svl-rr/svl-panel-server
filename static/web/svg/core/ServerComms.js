@@ -100,10 +100,10 @@ function initNodeSocketInstance()
     // not all elements will necesarily be on this panel
     nodeSocket.on('update', function(data)
     {
-        var msg = JSON.parse(data);
-        
-        if((msg != null) && (msg != undefined))
-            handleSocketDataResponse(handleJSONMessage(msg));
+        var msgObj = JSON.parse(data);
+                
+        if((msgObj != null) && (msgObj != undefined))
+            handleSocketDataResponse(handleJSONMessage(msgObj));
         else
             alert("bad node update: " + data);
     });
@@ -229,7 +229,7 @@ function handleJSONObject(msgObj)
                 serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_DISPATCH, msgObj.data.value);
         }
         else
-            console.log("unknown server message: " + msgObj);
+            console.log("unknown server message of type: " + msgObj.type);
     }
     else
     {
