@@ -229,7 +229,7 @@ function handleJSONObject(msgObj)
                 serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_DISPATCH, msgObj.data.value);
         }
         else
-            console.log("unknown server message: " + msgObj.data);
+            console.log("unknown server message of type: " + msgObj.type);
     }
     else
     {
