@@ -112,7 +112,11 @@ function initNodeSocketInstance()
     
     nodeSocket.on('nodeJMRISocketStatus', function(data)
     {
+        if((nodeJMRISocketReady == false) && (data == true))
+            handleSocketConnect();
+        
         nodeJMRISocketReady = data;
+        
         updatePanelBackground();
     });
     
