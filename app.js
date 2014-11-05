@@ -39,11 +39,13 @@ setInterval(function() {
         ws.on('open', function() {
             jmriSocketReady = true;
             console.log("Connection to JMRI established");
+            io.emit('nodeJMRISocketStatus', jmriSocketReady);
         });
 
         ws.on('close', function() {
             jmriSocketReady = false;
             console.log("Connection to JMRI closed");
+            io.emit('nodeJMRISocketStatus', jmriSocketReady);
         });
 
         ws.on('message', function(data,flags) {
@@ -53,6 +55,7 @@ setInterval(function() {
         
         ws.on('error', function(e) {
             console.log("Error: " + e.code);
+            io.emit('nodeJMRISocketStatus', jmriSocketReady);
         });
     }
     else
