@@ -31,6 +31,8 @@ var WebSocket = require('ws');
 var ws = null;
 var jmriSocketReady = false;
 
+var helloMessage = null;
+
 setInterval(function() {
     if(!jmriSocketReady)
     {
@@ -46,11 +48,26 @@ setInterval(function() {
             jmriSocketReady = false;
             console.log("Connection to JMRI closed");
             io.emit('nodeJMRISocketStatus', jmriSocketReady);
+            helloMessage = null;
         });
 
         ws.on('message', function(data,flags) {
-            console.log("Data rebroadcast from JMRI: " + data);
+            var msgObj = JSON.parse(data);
+            var logData = true;
+            
+            if(msgObj.length == undefined)
+            {
+                if(msgObj.type == "pong")
+                    logData = false;
+              
+                if(msgObj.type == "hello")
+                    helloMessage = data;
+            }
+            
             io.emit('update', data);
+            
+            if(logData == true)
+                console.log("Data rebroadcast from JMRI: " + data);
         });
         
         ws.on('error', function(e) {
@@ -95,12 +112,12 @@ var io = require('socket.io').listen(server)
 		socket.on('disconnect', function () {
 			delete clients[socket.id];	// stop tracking the client
 		});
-
+        
 		// process the command and broadcast updates to all other clients
 		socket.on('set', function (data) {
 			if(jmriSocketReady)
             {
-                console.log("Data (set) sent to ws: " + data);
+                console.log("Data (set) sent to JMRI: " + data);
                 ws.send(data);
             }
 		});
@@ -109,10 +126,13 @@ var io = require('socket.io').listen(server)
 		socket.on('get', function (data) {
             if(jmriSocketReady)
             {
-                console.log("Data (get) sent to ws: " + data);
+                console.log("Data (get) sent to JMRI: " + data);
                 ws.send(data);
             }
 		});
+        
+        if(helloMessage != null)
+            socket.emit('update', helloMessage);
 	});
 
 // Filter function for the connect.directory middleware. This function allows
