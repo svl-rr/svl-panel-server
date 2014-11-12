@@ -26,6 +26,8 @@ var reverseTurnoutStateMap = {"jmri":"4","svg":"R"};
 var onSensorStateMap = {"jmri":"2","svg":"on"};
 var offSensorStateMap = {"jmri":"4","svg":"off"};
 
+var nodeJMRISocketReady;
+
 function initSocketToServer(panelName)
 {
     document.title = "JMRI SVG Panel: " + panelName;
@@ -106,6 +108,16 @@ function initNodeSocketInstance()
             handleSocketDataResponse(handleJSONMessage(msgObj));
         else
             alert("bad node update: " + data);
+    });
+    
+    nodeSocket.on('nodeJMRISocketStatus', function(data)
+    {
+        if((nodeJMRISocketReady == false) && (data == true))
+            handleSocketConnect();
+        
+        nodeJMRISocketReady = data;
+        
+        updatePanelBackground();
     });
     
     nodeSocket.on('disconnect', function ()
