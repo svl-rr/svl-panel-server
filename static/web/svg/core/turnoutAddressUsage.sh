@@ -40,6 +40,10 @@ perl -p -i -e 's/^\w+\sTO//g' turnoutAddressLayoutUnique.txt
 sort -g turnoutAddressLayoutUnique.txt > turnoutAddressLayoutUnique.tmp
 perl -ne 'print unless $seen{$_}++' turnoutAddressLayoutUnique.tmp > turnoutAddressLayoutUnique.txt
 rm turnoutAddressLayoutUnique.tmp
+#make JMRI config file entries for each turnout found
+cp turnoutAddressLayoutUnique.txt turnouts.xml
+perl -p -i -e 's/^r\d+\n//g' turnouts.xml
+perl -p -i -e 's/(\d+)/<turnout systemName=\"NT$1\" feedback=\"DIRECT\" inverted=\"false\" automate=\"Default\">\n\t<systemName>NT$1<\/systemName>\n<\/turnout>/g' turnouts.xml
 #more turnoutAddressBlockRoutes.txt
 #more turnoutAddressBlockUnique.txt
 #more turnoutAddressLayoutUnique.txt
