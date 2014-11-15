@@ -638,13 +638,21 @@ function handleSocketTime(time)
  */
 function handleSocketDisconnect()
 {
+    updatePanelBackground();
+
+    setPanelStatus("Panel Ready");
+}
+
+function updatePanelBackground()
+{
     var panelBackground = svgDocument.getElementById("panelBackground");
     if(panelBackground != null)
     {
-        setStyleSubAttribute(panelBackground, "fill", "#700000");
+        if((socketStatus == SOCKET_DISCONNECTED) || (nodeJMRISocketReady == false))
+            setStyleSubAttribute(panelBackground, "fill", "#700000");
+        else
+            setStyleSubAttribute(panelBackground, "fill", connectedBackgroundColor);
     }
-
-    setPanelStatus("Panel Ready");
 }
 
 /* executePanelStateChangeRequests()

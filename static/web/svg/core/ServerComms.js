@@ -26,6 +26,8 @@ var reverseTurnoutStateMap = {"jmri":"4","svg":"R"};
 var onSensorStateMap = {"jmri":"2","svg":"on"};
 var offSensorStateMap = {"jmri":"4","svg":"off"};
 
+var nodeJMRISocketReady;
+
 function initSocketToServer(panelName)
 {
     document.title = "JMRI SVG Panel: " + panelName;
@@ -100,12 +102,22 @@ function initNodeSocketInstance()
     // not all elements will necesarily be on this panel
     nodeSocket.on('update', function(data)
     {
-        var msg = JSON.parse(data);
-        
-        if((msg != null) && (msg != undefined) && (msg.data != null) && (msg.data != undefined))
-            handleSocketDataResponse(handleJSONMessage(msg.data));
+        var msgObj = JSON.parse(data);
+                
+        if((msgObj != null) && (msgObj != undefined))
+            handleSocketDataResponse(handleJSONMessage(msgObj));
         else
             alert("bad node update: " + data);
+    });
+    
+    nodeSocket.on('nodeJMRISocketStatus', function(data)
+    {
+        if((nodeJMRISocketReady == false) && (data == true))
+            handleSocketConnect();
+        
+        nodeJMRISocketReady = data;
+        
+        updatePanelBackground();
     });
     
     nodeSocket.on('disconnect', function ()
@@ -229,7 +241,7 @@ function handleJSONObject(msgObj)
                 serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_DISPATCH, msgObj.data.value);
         }
         else
-            console.log("unknown server message: " + msgObj.data);
+            console.log("unknown server message of type: " + msgObj.type);
     }
     else
     {
