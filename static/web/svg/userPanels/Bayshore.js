@@ -2,34 +2,31 @@ function panelInit(evt)
 {
 }
 
-function mainSouthLeadPath()
-{
-    executePathArray(["TO35.N", "TO24.N"]);
-}
-
 function mainSouthPath()
 {
-    executePathArray(["TO23B.R"]);
+    arrivalLeadPath();
+    executePathArray(["TO24.R"]);
 }
 
 function cabooseTrkPath()
 {
-    executePathArray(["TO24.R", "TO23B.T"]);
+    executePathArray(["TO23.N"]);
 }
 
 function arrivalSubLeadPath()
 {
-    executePathArray(["TO35.R", "TO36.N"]);
+    executePathArray(["TO36.N"]);
 }
 
 function arrivalLeadPath()
 {
-    executePathArray(["TO35.R", "TO36.N", "TO38.R", "TO23A.R"]);
+    executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
 function arrivalNorthPath()
 {
-    arrivalSouthPath();
+    arrivalLeadPath();
+    executePathArray(["TO24.N"]);
 }
 
 function arrivalSouthPath()
@@ -39,7 +36,7 @@ function arrivalSouthPath()
 
 function class1NorthPath()
 {
-    executePathArray(["TO35.R", "TO36.N", "TO38.N"]);
+    executePathArray(["TO36.N", "TO38.N"]);
 }
 
 function class1SouthPath()
@@ -49,7 +46,7 @@ function class1SouthPath()
 
 function class2NorthPath()
 {
-    executePathArray(["TO35.R", "TO36.R", "TO37.N"]);
+    executePathArray(["TO36.R", "TO37.N"]);
 }
 
 function class2SouthPath()
@@ -59,7 +56,7 @@ function class2SouthPath()
 
 function class3NorthPath()
 {
-    executePathArray(["TO35.R", "TO36.R", "TO37.R"]);
+    executePathArray(["TO36.R", "TO37.R"]);
 }
 
 function class3SouthPath()
