@@ -807,12 +807,3 @@ function getDispatchObject(object)
     
     return undefined;
 }
-
-function setDispatchMainlineLockLEDColor(LED, color)
-{
-    if((LED != undefined) && (LED != null))
-    {
-        setStyleSubAttribute(LED, "fill", color == "off" ? "#808080" : color);
-        setStyleSubAttribute(LED, "stroke", color == "off" ? "#808080" : color);
-    }
-}

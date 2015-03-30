@@ -1110,6 +1110,26 @@ function addElementTitle(elemID, title)
     }    
 }
 
+/* setLEDColor([SVGElement] LED, [String] color)
+ * Sets fill and stroke of an object to provided color, unless color is "off", in which case a mid-gray is substituted
+ */
+function setLEDColor(LED, color)
+{
+    if((LED != undefined) && (LED != null))
+    {
+        setStyleSubAttribute(LED, "fill", color == "off" ? "#808080" : color);
+        setStyleSubAttribute(LED, "stroke", color == "off" ? "#808080" : color);
+    }
+}
+
+/* setLEDColorByID([String] LED, [String] color)
+ * Sets LED color by providing object ID
+ */
+function setLEDColorByID(LED, color)
+{
+    setLEDColor(svgDocument.getElementById(LED), color);
+}
+
 /* updateMainlineStatus()
  * Sets opacity, clickability, and visibility of three layers as determined by the mainlineLocked global variable as well as cookies.  Will also
  * start/stop opacity animation of lock group as appropriate
@@ -1132,8 +1152,7 @@ function updateMainlineStatus()
 		mainlineLockGroup.setAttribute("visibility", "hidden");
 	}
     
-    if(typeof setDispatchMainlineLockLEDColor == 'function')
-        setDispatchMainlineLockLEDColor(svgDocument.getElementById('dispatchMainlineLockedLED'), mainlineLocked == true ? "#ff0000" : "off");
+    setLEDColorByID('dispatchMainlineLockedLED', mainlineLocked == true ? "#ff0000" : "off");
 
     var disableLayer = true;
 
