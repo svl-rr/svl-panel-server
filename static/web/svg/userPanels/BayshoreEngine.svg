@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="BayshoreEngine.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -1047,8 +1047,8 @@
      style="display:inline">
     <a
        xlink:href="Windsor.svg"
-       transform="translate(-126,93.274866)"
-       id="a6372">
+       id="a6372"
+       transform="translate(-126,93.274866)">
       <text
          sodipodi:linespacing="125%"
          id="panelTitle"
@@ -1359,40 +1359,40 @@
     </g>
     <g
        id="g136"
-       transform="matrix(0,1,1,0,-44.0945,-369.43937)">
+       transform="matrix(0,1,1,0,-104.0945,-299.43937)">
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 440,414.0945 -20,0 -20,-20"
-         id="TO33.N"
+         id="TO804.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO33.R"
+         id="TO804.R"
          d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221" />
     </g>
     <g
        id="g140"
-       transform="matrix(1,0,0,-1,-273.05807,464.60508)">
+       transform="matrix(1,0,0,-1,-190,534.65513)">
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 440,414.0945 -20,0 -20,-20"
-         id="TO42.N"
+         id="TO803.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO42.R"
+         id="TO803.R"
          d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221" />
@@ -1519,7 +1519,7 @@
     </g>
     <g
        id="g3329"
-       transform="translate(-40,-20)">
+       transform="translate(50,-9.9999995)">
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
@@ -3979,9 +3979,9 @@
      transform="translate(0,-5.0883911e-4)">
     <a
        xlink:href="Bayshore.svg"
-       transform="translate(-109.56957,70.46663)"
+       style="display:inline"
        id="BayshoreLink"
-       style="display:inline">
+       transform="translate(-109.56957,70.46663)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
