@@ -4,12 +4,12 @@ function panelInit(evt)
 
 function IgoPropane1Path()
 {
-	executePathArray(["TO245.R", "TO252.R"]);
+	executePathArray(["TO245.R", "TO252.N"]);
 }
 
 function IgoPropane2Path()
 {
-	executePathArray(["TO245.N", "TO252.R"]);
+	executePathArray(["TO245.N", "TO252.N"]);
 }
 
 function MillPath()
