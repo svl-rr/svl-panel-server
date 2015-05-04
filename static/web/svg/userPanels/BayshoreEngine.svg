@@ -946,8 +946,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0263363"
-     inkscape:cx="546.58589"
-     inkscape:cy="497.90089"
+     inkscape:cx="477.67726"
+     inkscape:cy="411.10598"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
@@ -1592,7 +1592,7 @@
        d="m 520,260.56063 87.74886,87.72643 c 38.18268,5.82065 76.30263,12.05371 114.44464,18.13555"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="ttLead1Path();" />
     <g
        transform="matrix(-1,0,0,-1,578.23223,535.38736)"
        id="g3414">
@@ -1640,7 +1640,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
     <path
-       onclick=""
+       onclick="ttLead2Path();"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 724.63285,353.16522 611.44901,312.02101 C 594.30774,294.85916 577.15157,277.7122 560,260.56063"
@@ -1694,7 +1694,7 @@
        d="M 999.2641,143.08685 851.423,319.27709"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="setTurntableTrack(4);" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1702,7 +1702,7 @@
        d="M 906.02623,89.255914 827.36161,305.38522"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="setTurntableTrack(3);" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
