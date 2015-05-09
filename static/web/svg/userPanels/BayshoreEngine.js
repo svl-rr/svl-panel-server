@@ -20,7 +20,7 @@ function setTurntableState(id)
     
     addTurntableStateChangeRequest(id);
     
-    executePanelStateChangeRequests();
+    executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
     
     stateChangeRequests = savedStateChangeRequests;
 }
