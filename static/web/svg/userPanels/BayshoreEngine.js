@@ -30,13 +30,13 @@ function setTurntableTrack(num)
     setTurntableState('ST' + (num + 225));
 }
 
-ttLead1Path()
+function ttLead1Path()
 {
     setTurntableTrack(1);
     //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
-ttLead2Path()
+function ttLead2Path()
 {
     setTurntableTrack(2);
     //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
