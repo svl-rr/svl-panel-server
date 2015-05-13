@@ -1,4 +1,5 @@
 var JMRI_TURNTABLE_OBJID_PREFIX = "ST";
+var BAYSHORE_TURNTABLE_CONTROLLER_ADDR = 57;
 
 function panelInit(evt)
 {
@@ -27,7 +28,10 @@ function setTurntableState(id)
 
 function setTurntableTrack(num)
 {
-    setTurntableState('ST' + (num + 225));
+    if((num >= 1) && (num <= 28))
+        setTurntableState('ST' + ((BAYSHORE_TURNTABLE_CONTROLLER_ADDR - 1)*4 + num));
+    else
+        alert("Track number must be range of 1 to 28 for Walthers turntable. (" + num + " was passed.)");
 }
 
 function ttLead1Path()
