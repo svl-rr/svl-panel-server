@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="BayshoreEngine.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -1031,7 +1031,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.853482"
-     inkscape:cx="675.28794"
+     inkscape:cx="630.13397"
      inkscape:cy="535.66865"
      inkscape:document-units="px"
      inkscape:current-layer="textLayer"
@@ -1132,8 +1132,8 @@
      style="display:inline">
     <a
        xlink:href="Windsor.svg"
-       id="a6372"
-       transform="translate(-126,93.274866)">
+       transform="translate(-126,93.274866)"
+       id="a6372">
       <text
          sodipodi:linespacing="125%"
          id="panelTitle"
@@ -1242,7 +1242,7 @@
     <path
        onclick=""
        inkscape:label="#path4221"
-       style="display:inline;opacity:1;fill:none;stroke:#ffffff;stroke-width:1.06904495;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5530)"
+       style="display:inline;opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5530)"
        d="m 688.54561,320.16234 13.01142,6.08934"
        id="path3881"
        inkscape:connector-curvature="0"
@@ -1252,7 +1252,7 @@
        inkscape:connector-curvature="0"
        id="path6817"
        d="M 691.65968,379.84862 678.72055,378.1528"
-       style="display:inline;opacity:1;fill:none;stroke:#ffffff;stroke-width:1.06904495;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker6819)"
+       style="display:inline;opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker6819)"
        inkscape:label="#path4221"
        onclick="" />
   </g>
@@ -3845,9 +3845,9 @@
      transform="translate(0,-5.0883911e-4)">
     <a
        xlink:href="Bayshore.svg"
-       style="display:inline"
+       transform="translate(-109.56957,70.46663)"
        id="BayshoreLink"
-       transform="translate(-109.56957,70.46663)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
