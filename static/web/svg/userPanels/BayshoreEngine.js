@@ -38,25 +38,21 @@ function setTurntableTrack(num)
 
 function setBayshoreTurntableTrack(trackNum)
 {
-    if((trackNum >= 1) && (trackNum <= 2))
+    if(trackNum != bayshoreLastTrackNum)
     {
-        if(trackNum == bayshoreLastTrackNum)
-            trackNum = trackNum + 16;
+        setTurntableTrack(trackNum);
+    
+        bayshoreLastTrackNum = trackNum;
     }
-    else if(trackNum == bayshoreLastTrackNum)
+    else
     {
-        alert("Turntable already set to this track.  If turntable out of sync with panel, try selecting an adjacent track and then reselecting this track.");
-        return;
+        alert("Turntable should already be set to track " + trackNum + ". If turntable is out of sync with panel, try selecting an adjacent track and then reselecting track " + trackNum + ".");
     }
-    
-    setTurntableTrack(trackNum);
-    
-    bayshoreLastTrackNum = trackNum;
 }
 
 function ttLead1Path()
 {
-    setBayshoreTurntableTrack(1);
+    setBayshoreTurntableTrack(17);
     //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
