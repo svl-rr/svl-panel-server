@@ -1,6 +1,8 @@
 var JMRI_TURNTABLE_OBJID_PREFIX = "ST";
 var BAYSHORE_TURNTABLE_CONTROLLER_ADDR = 57;
 
+var bayshoreLastTrackNum = 0;
+
 function panelInit(evt)
 {
     //setLEDColorByID('dispatchMainlineLockedLED', mainlineLocked == true ? "#ff0000" : "off");
@@ -34,14 +36,32 @@ function setTurntableTrack(num)
         alert("Track number must be range of 1 to 28 for Walthers turntable. (" + num + " was passed.)");
 }
 
+function setBayshoreTurntableTrack(trackNum)
+{
+    if((trackNum >= 1) && (trackNum <= 2))
+    {
+        if(trackNum == bayshoreLastTrackNum)
+            trackNum = trackNum + 16;
+    }
+    else if(trackNum == bayshoreLastTrackNum)
+    {
+        alert("Turntable already set to this track.  If turntable out of sync with panel, try selecting an adjacent track and then reselecting this track.");
+        return;
+    }
+    
+    setTurntableTrack(trackNum);
+    
+    bayshoreLastTrackNum = trackNum;
+}
+
 function ttLead1Path()
 {
-    setTurntableTrack(1);
+    setBayshoreTurntableTrack(1);
     //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
 function ttLead2Path()
 {
-    setTurntableTrack(2);
+    setBayshoreTurntableTrack(2);
     //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }

@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="BayshoreEngine.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -946,10 +946,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0263363"
-     inkscape:cx="469.75455"
+     inkscape:cx="636.64871"
      inkscape:cy="411.10598"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1102"
@@ -1047,8 +1047,8 @@
      style="display:inline">
     <a
        xlink:href="Windsor.svg"
-       id="a6372"
-       transform="translate(-126,93.274866)">
+       transform="translate(-126,93.274866)"
+       id="a6372">
       <text
          sodipodi:linespacing="125%"
          id="panelTitle"
@@ -1412,7 +1412,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <path
-       onclick="setTurntableTrack(9);"
+       onclick="setBayshoreTurntableTrack(9);"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1110,380.56063 -230,0"
@@ -1426,9 +1426,9 @@
        d="M 1105.2904,326.72969 878.78462,366.66877"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="setTurntableTrack(8);" />
+       onclick="setBayshoreTurntableTrack(8);" />
     <path
-       onclick="setTurntableTrack(7);"
+       onclick="setBayshoreTurntableTrack(7);"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 1091.3047,274.53439 875.1754,353.19901"
@@ -1442,9 +1442,9 @@
        d="m 1068.4679,225.56063 -199.18588,115"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="setTurntableTrack(6);" />
+       onclick="setBayshoreTurntableTrack(6);" />
     <path
-       onclick="setTurntableTrack(5);"
+       onclick="setBayshoreTurntableTrack(5);"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 1037.4738,181.29647 861.28354,329.13763"
@@ -1458,7 +1458,7 @@
        d="M 999.2641,143.08685 851.423,319.27709"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="setTurntableTrack(4);" />
+       onclick="setBayshoreTurntableTrack(4);" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1466,7 +1466,7 @@
        d="M 906.02623,89.255914 827.36161,305.38522"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="setTurntableTrack(3);" />
+       onclick="setBayshoreTurntableTrack(3);" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1474,9 +1474,9 @@
        d="M 1105.2904,434.39157 878.78462,394.45249"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="setTurntableTrack(10);" />
+       onclick="setBayshoreTurntableTrack(10);" />
     <path
-       onclick="setTurntableTrack(11);"
+       onclick="setBayshoreTurntableTrack(11);"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 1091.3047,486.58687 875.1754,407.92225"
@@ -1490,9 +1490,9 @@
        d="m 1068.4679,535.56063 -199.18588,-115"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="setTurntableTrack(12);" />
+       onclick="setBayshoreTurntableTrack(12);" />
     <path
-       onclick="setTurntableTrack(13);"
+       onclick="setBayshoreTurntableTrack(13);"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 1037.4738,579.82479 861.28354,431.98363"
@@ -1506,14 +1506,14 @@
        d="M 999.2641,618.03441 851.423,441.84417"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="setTurntableTrack(14);" />
+       onclick="setBayshoreTurntableTrack(14);" />
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 954.99998,649.02851 840,449.84265"
        id="path5256"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
-       onclick="setTurntableTrack(15);" />
+       onclick="setBayshoreTurntableTrack(15);" />
     <g
        id="g5382"
        transform="matrix(0.98480775,0.17364818,-0.17364818,0.98480775,38.7478,-140.09141)">
@@ -1540,7 +1540,7 @@
          style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <path
-       onclick="setTurntableTrack(16);"
+       onclick="setBayshoreTurntableTrack(16);"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 827.36161,455.73604 78.66466,216.1293"
@@ -3744,9 +3744,9 @@
      transform="translate(0,-5.0883911e-4)">
     <a
        xlink:href="Bayshore.svg"
-       style="display:inline"
+       transform="translate(-109.56957,70.46663)"
        id="BayshoreLink"
-       transform="translate(-109.56957,70.46663)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -3770,14 +3770,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="583.12286"
-       y="35.378479"
+       x="590.9176"
+       y="23.686405"
        id="text4446"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         id="tspan4448"
-         x="583.12286"
-         y="35.378479">Note: Selecting a turntable track again will spin the turntable 180 degrees.</tspan></text>
+         x="590.9176"
+         y="23.686405"
+         id="tspan3876">Note: Tracks 1 and 2 will alternate between cab eng and non-cab end. Tracks 3-16 </tspan><tspan
+         sodipodi:role="line"
+         x="590.9176"
+         y="43.686405"
+         id="tspan3880">will align only to non-cab end. Departing locomotives currently require 180 degree spin.</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4494"
