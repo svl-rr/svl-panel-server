@@ -1030,11 +1030,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.853482"
-     inkscape:cx="630.13397"
-     inkscape:cy="535.66865"
+     inkscape:zoom="1.2680787"
+     inkscape:cx="769.88059"
+     inkscape:cy="420.82981"
      inkscape:document-units="px"
-     inkscape:current-layer="textLayer"
+     inkscape:current-layer="layer1"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1102"
@@ -1131,8 +1131,7 @@
      transform="translate(0,-3.9797589)"
      style="display:inline">
     <a
-       xlink:href="Windsor.svg"
-       transform="translate(-126,93.274866)"
+       transform="translate(-148,93.274866)"
        id="a6372">
       <text
          sodipodi:linespacing="125%"
@@ -1144,7 +1143,7 @@
            y="682.51117"
            x="477.93219"
            id="tspan3823"
-           sodipodi:role="line">Bayshore Engine Facilty</tspan></text>
+           sodipodi:role="line">Bayshore Engine Facility</tspan></text>
     </a>
     <text
        sodipodi:linespacing="125%"
@@ -1160,7 +1159,7 @@
          sodipodi:role="line">Panel not initialized</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 324,767.54882 -10,-15 20,0 z"
+       d="m 302,767.54882 -10,-15 20,0 z"
        id="leftLevelTriangle"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -1169,7 +1168,7 @@
        y="0"
        xlink:href="#leftLevelTriangle"
        id="rightLevelTriangle"
-       transform="translate(638,3.3685909e-6)"
+       transform="translate(648,3.3685909e-6)"
        width="1047.9579"
        height="690.11475"
        inkscape:transform-center-x="-40"
@@ -1616,12 +1615,12 @@
        sodipodi:nodetypes="cc"
        onclick="setBayshoreTurntableTrack(15);" />
     <g
-       id="g5382"
-       transform="matrix(0.98480775,0.17364818,-0.17364818,0.98480775,38.7478,-140.09141)">
+       id="turntableBridge"
+       transform="matrix(0.17364816,0.98480776,-0.98480776,0.17364816,1028.3625,-513.22478)">
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="path5180"
+         id="bridge"
          d="m 920,380.56063 -160,0"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
@@ -1630,14 +1629,14 @@
          r="80"
          cy="380.00003"
          cx="840"
-         id="path4132"
+         id="pit"
          style="display:inline;opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
       <rect
          y="360.56064"
          x="890"
          height="20"
          width="20"
-         id="rect5216"
+         id="cab"
          style="opacity:1;fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:5;stroke-linecap:butt;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
     </g>
     <path
@@ -1815,14 +1814,12 @@
     <g
        style="display:inline"
        id="g4112"
-       transform="translate(790.30475,275.71416)">
+       transform="translate(790.30475,275.71416)"
+       onclick="toggleTurntableTrackPower(9)">
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.03823,44.257956)"
-         id="LEDHolder"
+         id="g555"
          style="display:inline">
-        <title
-           id="title3874">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -1907,22 +1904,16 @@
       <ellipse
          cy="359.99875"
          cx="-101.72674"
-         onclick="toggleMainlineLock()"
+         onclick=""
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         id="dispatchMainlineLockedLED"
+         id="turntableTrack9PowerLED"
          transform="matrix(0,-1,1,0,0,0)"
          rx="12.486928"
-         ry="12.537161">
-        <title
-           id="title3869">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         ry="12.537161" />
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.31997,44.948525)"
          id="g5078"
          style="display:inline">
-        <title
-           id="title3872">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -1956,14 +1947,12 @@
     <g
        transform="translate(784.68405,214.07727)"
        id="g5130"
-       style="display:inline">
+       style="display:inline"
+       onclick="toggleTurntableTrackPower(8)">
       <g
          style="display:inline"
          id="g5132"
-         transform="translate(274.03823,44.257956)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5134">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.03823,44.257956)">
         <circle
            transform="matrix(0,-0.90760272,0.96613997,0,13.240045,106.58183)"
            id="circle5136"
@@ -2049,21 +2038,15 @@
          ry="12.537161"
          rx="12.486928"
          transform="matrix(0,-1,1,0,0,0)"
-         id="ellipse5152"
+         id="turntableTrack8PowerLED"
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         onclick="toggleMainlineLock()"
+         onclick=""
          cx="-101.72674"
-         cy="359.99875">
-        <title
-           id="title5154">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         cy="359.99875" />
       <g
          style="display:inline"
          id="g5156"
-         transform="translate(274.31997,44.948525)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5158">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.31997,44.948525)">
         <circle
            style="fill:url(#radialGradient5172);fill-opacity:1;stroke:none"
            id="circle5160"
@@ -2142,14 +2125,12 @@
     <g
        style="display:inline"
        id="g5276"
-       transform="translate(768.8925,156.31318)">
+       transform="translate(768.8925,156.31318)"
+       onclick="toggleTurntableTrackPower(7)">
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.03823,44.257956)"
          id="g5278"
          style="display:inline">
-        <title
-           id="title5280">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -2234,22 +2215,16 @@
       <ellipse
          cy="359.99875"
          cx="-101.72674"
-         onclick="toggleMainlineLock()"
+         onclick=""
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         id="ellipse5298"
+         id="turntableTrack7PowerLED"
          transform="matrix(0,-1,1,0,0,0)"
          rx="12.486928"
-         ry="12.537161">
-        <title
-           id="title5300">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         ry="12.537161" />
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.31997,44.948525)"
          id="g5302"
          style="display:inline">
-        <title
-           id="title5304">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -2283,14 +2258,12 @@
     <g
        transform="translate(784.68405,335.63099)"
        id="g5324"
-       style="display:inline">
+       style="display:inline"
+       onclick="toggleTurntableTrackPower(10)">
       <g
          style="display:inline"
          id="g5326"
-         transform="translate(274.03823,44.257956)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5328">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.03823,44.257956)">
         <circle
            transform="matrix(0,-0.90760272,0.96613997,0,13.240045,106.58183)"
            id="circle5330"
@@ -2376,21 +2349,15 @@
          ry="12.537161"
          rx="12.486928"
          transform="matrix(0,-1,1,0,0,0)"
-         id="ellipse5346"
+         id="turntableTrack10PowerLED"
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         onclick="toggleMainlineLock()"
+         onclick=""
          cx="-101.72674"
-         cy="359.99875">
-        <title
-           id="title5348">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         cy="359.99875" />
       <g
          style="display:inline"
          id="g5350"
-         transform="translate(274.31997,44.948525)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5352">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.31997,44.948525)">
         <circle
            style="fill:url(#radialGradient5366);fill-opacity:1;stroke:none"
            id="circle5354"
@@ -2424,14 +2391,12 @@
     <g
        style="display:inline"
        id="g5372"
-       transform="translate(768.8925,395.7273)">
+       transform="translate(768.8925,395.7273)"
+       onclick="toggleTurntableTrackPower(11)">
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.03823,44.257956)"
          id="g5374"
          style="display:inline">
-        <title
-           id="title5376">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -2516,22 +2481,16 @@
       <ellipse
          cy="359.99875"
          cx="-101.72674"
-         onclick="toggleMainlineLock()"
+         onclick=""
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         id="ellipse5394"
+         id="turntableTrack11PowerLED"
          transform="matrix(0,-1,1,0,0,0)"
          rx="12.486928"
-         ry="12.537161">
-        <title
-           id="title5396">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         ry="12.537161" />
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.31997,44.948525)"
          id="g5398"
          style="display:inline">
-        <title
-           id="title5400">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -2565,14 +2524,12 @@
     <g
        transform="translate(743.11027,449.85417)"
        id="g5420"
-       style="display:inline">
+       style="display:inline"
+       onclick="toggleTurntableTrackPower(12)">
       <g
          style="display:inline"
          id="g5422"
-         transform="translate(274.03823,44.257956)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5424">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.03823,44.257956)">
         <circle
            transform="matrix(0,-0.90760272,0.96613997,0,13.240045,106.58183)"
            id="circle5426"
@@ -2658,21 +2615,15 @@
          ry="12.537161"
          rx="12.486928"
          transform="matrix(0,-1,1,0,0,0)"
-         id="ellipse5442"
+         id="turntableTrack12PowerLED"
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         onclick="toggleMainlineLock()"
+         onclick="toggleTurntableTrackPower(12)"
          cx="-101.72674"
-         cy="359.99875">
-        <title
-           id="title5444">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         cy="359.99875" />
       <g
          style="display:inline"
          id="g5446"
-         transform="translate(274.31997,44.948525)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5448">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.31997,44.948525)">
         <circle
            style="fill:url(#radialGradient5462);fill-opacity:1;stroke:none"
            id="circle5450"
@@ -2706,14 +2657,12 @@
     <g
        style="display:inline"
        id="g5468"
-       transform="translate(708.11568,500.99596)">
+       transform="translate(708.11568,500.99596)"
+       onclick="toggleTurntableTrackPower(13)">
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.03823,44.257956)"
          id="g5470"
          style="display:inline">
-        <title
-           id="title5472">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -2798,22 +2747,16 @@
       <ellipse
          cy="359.99875"
          cx="-101.72674"
-         onclick="toggleMainlineLock()"
+         onclick="toggleTurntableTrackPower(13)"
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         id="ellipse5490"
+         id="turntableTrack13PowerLED"
          transform="matrix(0,-1,1,0,0,0)"
          rx="12.486928"
-         ry="12.537161">
-        <title
-           id="title5492">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         ry="12.537161" />
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.31997,44.948525)"
          id="g5494"
          style="display:inline">
-        <title
-           id="title5496">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -2847,14 +2790,12 @@
     <g
        transform="translate(615.00137,577.96313)"
        id="g5506"
-       style="display:inline">
+       style="display:inline"
+       onclick="toggleTurntableTrackPower(15)">
       <g
          style="display:inline"
          id="g5508"
-         transform="translate(274.03823,44.257956)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5510">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.03823,44.257956)">
         <circle
            transform="matrix(0,-0.90760272,0.96613997,0,13.240045,106.58183)"
            id="circle5512"
@@ -2940,21 +2881,15 @@
          ry="12.537161"
          rx="12.486928"
          transform="matrix(0,-1,1,0,0,0)"
-         id="ellipse5528"
+         id="turntableTrack15PowerLED"
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         onclick="toggleMainlineLock()"
+         onclick="toggleTurntableTrackPower(15)"
          cx="-101.72674"
-         cy="359.99875">
-        <title
-           id="title5530">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         cy="359.99875" />
       <g
          style="display:inline"
          id="g5532"
-         transform="translate(274.31997,44.948525)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5534">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.31997,44.948525)">
         <circle
            style="fill:url(#radialGradient5596);fill-opacity:1;stroke:none"
            id="circle5536"
@@ -2988,9 +2923,9 @@
     <g
        style="display:inline"
        id="g5544"
-       transform="translate(665.28053,543.8298)">
+       transform="translate(665.28053,543.8298)"
+       onclick="toggleTurntableTrackPower(14)">
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.03823,44.257956)"
          id="g5546"
          style="display:inline">
@@ -3080,9 +3015,9 @@
       <ellipse
          cy="359.99875"
          cx="-101.72674"
-         onclick="toggleMainlineLock()"
+         onclick="toggleTurntableTrackPower(14)"
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         id="ellipse5566"
+         id="turntableTrack14PowerLED"
          transform="matrix(0,-1,1,0,0,0)"
          rx="12.486928"
          ry="12.537161">
@@ -3090,7 +3025,6 @@
            id="title5568">Click to prevent field panels from throwing mainline turnouts</title>
       </ellipse>
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.31997,44.948525)"
          id="g5570"
          style="display:inline">
@@ -3129,14 +3063,12 @@
     <g
        transform="translate(743.11021,99.854093)"
        id="g5612"
-       style="display:inline">
+       style="display:inline"
+       onclick="toggleTurntableTrackPower(6)">
       <g
          style="display:inline"
          id="g5614"
-         transform="translate(274.03823,44.257956)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5616">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.03823,44.257956)">
         <circle
            transform="matrix(0,-0.90760272,0.96613997,0,13.240045,106.58183)"
            id="circle5618"
@@ -3222,21 +3154,15 @@
          ry="12.537161"
          rx="12.486928"
          transform="matrix(0,-1,1,0,0,0)"
-         id="ellipse5634"
+         id="turntableTrack6PowerLED"
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         onclick="toggleMainlineLock()"
+         onclick=""
          cx="-101.72674"
-         cy="359.99875">
-        <title
-           id="title5636">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         cy="359.99875" />
       <g
          style="display:inline"
          id="g5638"
-         transform="translate(274.31997,44.948525)"
-         onclick="toggleMainlineLock()">
-        <title
-           id="title5640">Click to prevent field panels from throwing mainline turnouts</title>
+         transform="translate(274.31997,44.948525)">
         <circle
            style="fill:url(#radialGradient5654);fill-opacity:1;stroke:none"
            id="circle5642"
@@ -3270,14 +3196,12 @@
     <g
        style="display:inline"
        id="g5660"
-       transform="translate(708.11686,49.878406)">
+       transform="translate(708.11686,49.878406)"
+       onclick="toggleTurntableTrackPower(5)">
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.03823,44.257956)"
          id="g5662"
          style="display:inline">
-        <title
-           id="title5664">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -3362,22 +3286,16 @@
       <ellipse
          cy="359.99875"
          cx="-101.72674"
-         onclick="toggleMainlineLock()"
+         onclick=""
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         id="ellipse5682"
+         id="turntableTrack5PowerLED"
          transform="matrix(0,-1,1,0,0,0)"
          rx="12.486928"
-         ry="12.537161">
-        <title
-           id="title5684">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         ry="12.537161" />
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.31997,44.948525)"
          id="g5686"
          style="display:inline">
-        <title
-           id="title5688">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -3411,14 +3329,13 @@
     <g
        style="display:inline"
        id="g4591"
-       transform="translate(665.28044,7.598538)">
+       transform="translate(665.28044,7.598538)"
+       onclick="toggleTurntableTrackPower(4)">
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.03823,44.257956)"
          id="g4593"
-         style="display:inline">
-        <title
-           id="title4595">Click to prevent field panels from throwing mainline turnouts</title>
+         style="display:inline"
+         onclick="">
         <circle
            r="15"
            cy="75.114258"
@@ -3503,22 +3420,17 @@
       <ellipse
          cy="359.99875"
          cx="-101.72674"
-         onclick="toggleMainlineLock()"
+         onclick=""
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         id="ellipse4613"
+         id="turntableTrack4PowerLED"
          transform="matrix(0,-1,1,0,0,0)"
          rx="12.486928"
-         ry="12.537161">
-        <title
-           id="title4615">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         ry="12.537161" />
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.31997,44.948525)"
          id="g4617"
-         style="display:inline">
-        <title
-           id="title4619">Click to prevent field panels from throwing mainline turnouts</title>
+         style="display:inline"
+         onclick="">
         <circle
            r="15"
            cy="75.114258"
@@ -3552,14 +3464,12 @@
     <g
        style="display:inline"
        id="g5223"
-       transform="translate(560.56552,76.929926)">
+       transform="translate(560.56552,76.929926)"
+       onclick="toggleRoundhouseLightsPower()">
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.03823,44.257956)"
          id="g5225"
          style="display:inline">
-        <title
-           id="title5227">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -3644,22 +3554,15 @@
       <ellipse
          cy="359.99875"
          cx="-101.72674"
-         onclick="toggleMainlineLock()"
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         id="ellipse5245"
+         id="roundhouseLightsPowerLED"
          transform="matrix(0,-1,1,0,0,0)"
          rx="12.486928"
-         ry="12.537161">
-        <title
-           id="title5247">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         ry="12.537161" />
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.31997,44.948525)"
          id="g5249"
          style="display:inline">
-        <title
-           id="title5251">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -3693,14 +3596,12 @@
     <g
        style="display:inline"
        id="g5289"
-       transform="translate(560.00127,604.85413)">
+       transform="translate(560.00127,604.85413)"
+       onclick="toggleTurntableTrackPower(16)">
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.03823,44.257956)"
          id="g5291"
          style="display:inline">
-        <title
-           id="title5293">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -3785,22 +3686,16 @@
       <ellipse
          cy="359.99875"
          cx="-101.72674"
-         onclick="toggleMainlineLock()"
+         onclick="toggleTurntableTrackPower(16)"
          style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
-         id="ellipse5311"
+         id="turntableTrack16PowerLED"
          transform="matrix(0,-1,1,0,0,0)"
          rx="12.486928"
-         ry="12.537161">
-        <title
-           id="title5313">Click to prevent field panels from throwing mainline turnouts</title>
-      </ellipse>
+         ry="12.537161" />
       <g
-         onclick="toggleMainlineLock()"
          transform="translate(274.31997,44.948525)"
          id="g5315"
          style="display:inline">
-        <title
-           id="title5317">Click to prevent field panels from throwing mainline turnouts</title>
         <circle
            r="15"
            cy="75.114258"
@@ -3882,7 +3777,7 @@
          sodipodi:role="line"
          x="590.9176"
          y="43.686405"
-         id="tspan3879">          Locomotives should enter on Track 1 and exit on Track 2.</tspan></text>
+         id="tspan3879" /></text>
     <text
        sodipodi:linespacing="125%"
        id="text4494"
@@ -4172,5 +4067,16 @@
          sodipodi:role="line"
          x="914.13367"
          y="66.734467">3</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3891"
+       y="42.612675"
+       x="634.71307"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan3896"
+         y="42.612675"
+         x="634.71307"
+         sodipodi:role="line">Locomotives should enter on Track 1 and exit on Track 2.</tspan></text>
   </g>
 </svg>
