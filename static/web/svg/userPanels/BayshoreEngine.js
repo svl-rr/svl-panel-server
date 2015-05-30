@@ -1,6 +1,6 @@
 var JMRI_TURNTABLE_OBJID_PREFIX = "ST";
 var BAYSHORE_TURNTABLE_CONTROLLER_ADDR = 57;
-var BAYSHORE_TURNTABLE_SPEED = 2; // degrees of rotation per second
+var BAYSHORE_TURNTABLE_SPEED = (360.0/105.0); // degrees of rotation per second
 
 var POWERLED_LIGHT_COLOR = "#e4e4b4";
 
@@ -67,7 +67,7 @@ function setBayshoreTurntableTrack(trackNum)
             
             var angleRad = angleDeg / 360.0 * 2.0 * Math.PI;
             
-            var a = Math.cos(angleRad);
+            var a = -Math.cos(angleRad);
             var b = Math.sin(angleRad);
             var c = -b;
             var d = a;
@@ -79,7 +79,7 @@ function setBayshoreTurntableTrack(trackNum)
             
             setTurntableTrack(trackNum);
     
-            turntableTimeToRotate = rotateDeg / BAYSHORE_TURNTABLE_SPEED + 5;
+            turntableTimeToRotate = rotateDeg / BAYSHORE_TURNTABLE_SPEED + 2;
             bayshoreLastTrackNum = trackNum;
             
             updateTurntableStatus(0);
