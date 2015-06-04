@@ -33,6 +33,9 @@ var stateChangeRequests = new Array();
 var blocksOnPanel = new Array();
 //var signalsOnPanel = new Array();
 
+var MIN_PHYSICAL_TURNOUT_ADDR = 0;
+var MAX_PHYSICAL_TURNOUT_ADDR = 767;
+
 var turnoutOnclickScript = "turnoutSegmentClicked(evt.currentTarget.id)";
 
 var SERVER_NAME_MAINLINELOCKED = "MAINLINE_LOCKED";
@@ -312,6 +315,13 @@ function getAsServerTurnoutObject()
     return new ServerObject(JMRI_TURNOUT_OBJID_PREFIX + turnoutAddr, SERVER_TYPE_TURNOUT, getTurnoutState(turnoutAddr));
 }
 
+function isPhysicalTurnout(turnoutName)
+{
+    var deviceAddr = getDCCAddr(turnoutName);
+
+    return ((turnoutName.search(JMRI_TURNOUT_OBJID_PREFIX) == 0) && (deviceAddr >= MIN_PHYSICAL_TURNOUT_ADDR) && (deviceAddr <= MAX_PHYSICAL_TURNOUT_ADDR));
+}
+
 /* BlockSensor([String] id)
  * BlockSensor object to contain id
  */
@@ -570,8 +580,10 @@ function handleSocketDataResponse(dataArray)
             {
                 mainlineLocked = (dataArray[i].value == 'true');
             }
-            else if(dataArray[i].type == SERVER_TYPE_TURNOUT)
+            else if((dataArray[i].type == SERVER_TYPE_TURNOUT) && isPhysicalTurnout(dataArray[i].name))
+            {
                 setTurnoutState(dataArray[i].name, dataArray[i].value);
+            }
             else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setSensorState == 'function'))
             {
                 setSensorState(dataArray[i].name, dataArray[i].value);
@@ -583,7 +595,11 @@ function handleSocketDataResponse(dataArray)
         }
         else
         {
-            if(dataArray[i].type == SERVER_TYPE_TURNOUT)
+            if((typeof getPanelSpecificState == 'function') && (getPanelSpecificState(dataArray[i]) != undefined))
+            {
+                undefinedItemsToUpdate.push(getPanelSpecificState(dataArray[i]));
+            }
+            else if((dataArray[i].type == SERVER_TYPE_TURNOUT) && isPhysicalTurnout(dataArray[i].name))
             {
                 var localState = getTurnoutState(dataArray[i].name);
                 
@@ -607,12 +623,6 @@ function handleSocketDataResponse(dataArray)
             else if(dataArray[i].type == SERVER_TYPE_SENSOR)
             {
                 // do nothing since a sensor is a read-only object (i.e. property of the layout)
-            }
-            else if(typeof getPanelSpecificState == 'function')
-            {
-                var panelSpecificState = getPanelSpecificState(dataArray[i]);
-                if(panelSpecificState != undefined)
-                    undefinedItemsToUpdate.push(panelSpecificState);
             }
         }
     }
