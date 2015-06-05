@@ -4,12 +4,17 @@ var BAYSHORE_TURNTABLE_SPEED = 2; //(360.0/105.0); // degrees of rotation per se
 
 var POWERLED_LIGHT_COLOR = "#e4e4b4";
 
-
 var turntableTimeToRotate = 0;
 var bayshoreLastTrackNum = 0;
 
+var turntableTrackPower = new Array();
+var roundhouseLightsPower = false;
+
 function panelInit(evt)
 {
+    for(var i = 0; i < 18; i++)
+        turntableTrackPower.push(false);
+    
     updateTurntableStatus(0);
 }
 
@@ -33,15 +38,50 @@ function setTurntableState(id)
     stateChangeRequests = savedStateChangeRequests;
 }
 
-function setTurntableTrack(num)
+function getAddrFromTrackNum(trackNum)
 {
-    if((num >= 1) && (num <= 28))
-        setTurntableState('ST' + ((BAYSHORE_TURNTABLE_CONTROLLER_ADDR - 1)*4 + num));
-    else
-        alert("Track number must be range of 1 to 28 for Walthers turntable. (" + num + " was passed.)");
+    return (((BAYSHORE_TURNTABLE_CONTROLLER_ADDR - 1)*4) + trackNum);
 }
 
-function setBayshoreTurntableTrack(trackNum)
+function getTrackNumFromAddr(addr)
+{
+    return (addr - ((BAYSHORE_TURNTABLE_CONTROLLER_ADDR - 1)*4));
+}
+
+function setPanelSpecificState(serverObject)
+{
+    if((serverObject.type == SERVER_TYPE_TURNOUT) && (serverObject.name.search(JMRI_TURNTABLE_OBJID_PREFIX) == 0))
+    {
+        var deviceAddr = getDCCAddr(serverObject.name);
+    
+        var trackNum = getTrackNumFromAddr(deviceAddr);
+    
+        updateTurntableGraphics(trackNum);
+        
+        return true;
+    }
+    
+    return false;
+}
+
+function getPanelSpecificState(serverObject)
+{
+    if((serverObject.type == SERVER_TYPE_TURNOUT) && (serverObject.name.search(JMRI_TURNTABLE_OBJID_PREFIX) == 0))
+    {
+        return undefined;
+    }
+    else if((serverObject.type == SERVER_TYPE_TURNOUT) && (serverObject.name.search(JMRI_TURNOUT_OBJID_PREFIX) == 0))
+    {
+        var deviceAddr = getDCCAddr(serverObject.name);
+        
+        if((deviceAddr > 800) && (deviceAddr < 816))
+            return 'N';
+    }
+    
+    return undefined;
+}
+
+function updateTurntableGraphics(trackNum)
 {
     if(turntableTimeToRotate > 0)
     {
@@ -77,18 +117,27 @@ function setBayshoreTurntableTrack(trackNum)
             //bridge.setAttribute("transform", "matrix(" + a + "," + b + "," + c + "," + d + "," + e + "," + f + ")");
             bridge.setAttribute("transform", transform);
             
-            setTurntableTrack(trackNum);
-    
             turntableTimeToRotate = rotateDeg / BAYSHORE_TURNTABLE_SPEED + 2;
             bayshoreLastTrackNum = trackNum;
             
             updateTurntableStatus(0);
         }
+        
+        for(var i = 1; i <= 18; i++)
+            setTurntableTrackPower(i, i == trackNum);
     }
     else
     {
         alert("Turntable should already be set to track " + trackNum + ". If turntable is out of sync with panel, try selecting an adjacent track and then reselecting track " + trackNum + ".");
     }
+}
+
+function setBayshoreTurntableTrack(trackNum)
+{
+    if((num >= 1) && (num <= 28))
+        setTurntableState('ST' + getAddrFromTrackNum(trackNum));
+    else
+        alert("Track number must be range of 1 to 28 for Walthers turntable. (" + num + " was passed.)");
 }
 
 function getTurntableTrackAngle(trackNum)
@@ -147,7 +196,7 @@ function getTurntableTrackTransform(trackNum)
 
 function updateTurntableStatus(decrementAmt)
 {
-    turntableTimeToRotate = turntableTimeToRotate - decrementAmt;
+    turntableTimeToRotate = Math.ceil(turntableTimeToRotate - decrementAmt);
 
     if(turntableTimeToRotate < 0)
         turntableTimeToRotate = 0;
@@ -193,12 +242,30 @@ function ttLead2Path()
     //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
+function setTurntableTrackPower(trackNum, powered)
+{
+    if((trackNum >= 1) && (trackNum <= 18))
+        turntableTrackPower[trackNum - 1] = powered;
+
+    if((trackNum >= 4) && (trackNum <= 16))
+    {
+        setLEDColorByID('turntableTrack' + trackNum + 'PowerLED', turntableTrackPower[trackNum - 1] == true ? POWERLED_LIGHT_COLOR : "off");
+    }
+}
+
 function toggleTurntableTrackPower(trackNum)
 {
-    setLEDColorByID('turntableTrack' + trackNum + 'PowerLED', mainlineLocked == true ? POWERLED_LIGHT_COLOR : "off");
+    if((trackNum >= 1) && (trackNum <= 18))
+        setTurntableTrackPower(trackNum, !turntableTrackPower[trackNum - 1]);
+}
+
+function setRoundhouseLightsPower(powered)
+{
+    roundhouseLightsPower = powered;
+    setLEDColorByID('roundhouseLightsPowerLED', roundhouseLightsPower == true ? POWERLED_LIGHT_COLOR : "off");
 }
 
 function toggleRoundhouseLightsPower()
 {
-    setLEDColorByID('roundhouseLightsPowerLED', mainlineLocked == true ? POWERLED_LIGHT_COLOR : "off");
+    setRoundhouseLightsPower(!roundhouseLightsPower);
 }
