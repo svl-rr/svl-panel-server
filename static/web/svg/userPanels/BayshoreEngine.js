@@ -214,7 +214,7 @@ function updateTurntableStatus(decrementAmt)
     if(turntableTimeToRotate > 0)
     {
         setSVGText('turntableStatus', "Turntable Busy");
-        setSVGText('turntableTime', "(" + turntableTimeToRotate + " sec remaining)");
+        setSVGText('turntableTime', "(~" + turntableTimeToRotate + " sec remaining)");
 
         setTimeout(function() { updateTurntableStatus(1); }, 1000);
     }
