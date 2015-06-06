@@ -54,6 +54,8 @@ function setPanelSpecificState(serverObject)
 {
     if((serverObject.type == SERVER_TYPE_TURNOUT) && (serverObject.name.search(JMRI_TURNTABLE_OBJID_PREFIX) == 0))
     {
+        console.log("setPanelSpecificState " + serverObject.name + " " + serverObject.value);
+    
         var deviceAddr = getDCCAddr(serverObject.name);
     
         var trackNum = getTrackNumFromAddr(deviceAddr);
