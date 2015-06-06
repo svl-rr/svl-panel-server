@@ -142,10 +142,10 @@ function updateTurntableGraphics(trackNum)
 
 function setBayshoreTurntableTrack(trackNum)
 {
-    if((num >= 1) && (num <= 28))
+    if((trackNum >= 1) && (trackNum <= 28))
         setTurntableState('ST' + getAddrFromTrackNum(trackNum));
     else
-        alert("Track number must be range of 1 to 28 for Walthers turntable. (" + num + " was passed.)");
+        alert("Track number must be range of 1 to 28 for Walthers turntable. (" + trackNum + " was passed.)");
 }
 
 function getTurntableTrackAngle(trackNum)
