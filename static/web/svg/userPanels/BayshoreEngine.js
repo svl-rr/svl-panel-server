@@ -4,6 +4,8 @@ var BAYSHORE_TURNTABLE_SPEED = 2; //(360.0/105.0); // degrees of rotation per se
 
 var POWERLED_LIGHT_COLOR = "#e4e4b4";
 
+var NUM_TURNTABLE_TRACKS = 16;
+
 var turntableTimeToRotate = 0;
 var bayshoreLastTrackNum = 0;
 
@@ -12,7 +14,7 @@ var roundhouseLightsPower = false;
 
 function panelInit(evt)
 {
-    for(var i = 0; i < 18; i++)
+    for(var i = 0; i < NUM_TURNTABLE_TRACKS; i++)
         turntableTrackPower.push(false);
     
     updateTurntableStatus(0);
@@ -123,8 +125,12 @@ function updateTurntableGraphics(trackNum)
             updateTurntableStatus(0);
         }
         
-        for(var i = 1; i <= 18; i++)
-            setTurntableTrackPower(i, i == trackNum);
+        var actualTrackNum = (trackNum > NUM_TURNTABLE_TRACKS ? trackNum - NUM_TURNTABLE_TRACKS : trackNum);
+        
+        for(var i = 1; i <= NUM_TURNTABLE_TRACKS; i++)
+        {
+            setTurntableTrackPower(i, i == actualTrackNum);
+        }
     }
     else
     {
@@ -219,7 +225,7 @@ function updateTurntableStatus(decrementAmt)
 
 function enableTurntableTrackEvents(drawAsEnabled)
 {
-    for(var i = 1; i <= 16; i++)
+    for(var i = 1; i <= NUM_TURNTABLE_TRACKS; i++)
     {
         var trackID = 'turntableTrack' + i + 'Path';
         
@@ -244,10 +250,10 @@ function ttLead2Path()
 
 function setTurntableTrackPower(trackNum, powered)
 {
-    if((trackNum >= 1) && (trackNum <= 18))
+    if((trackNum >= 1) && (trackNum <= NUM_TURNTABLE_TRACKS))
         turntableTrackPower[trackNum - 1] = powered;
 
-    if((trackNum >= 4) && (trackNum <= 16))
+    if((trackNum >= 4) && (trackNum <= NUM_TURNTABLE_TRACKS))
     {
         setLEDColorByID('turntableTrack' + trackNum + 'PowerLED', turntableTrackPower[trackNum - 1] == true ? POWERLED_LIGHT_COLOR : "off");
     }
@@ -255,7 +261,7 @@ function setTurntableTrackPower(trackNum, powered)
 
 function toggleTurntableTrackPower(trackNum)
 {
-    if((trackNum >= 1) && (trackNum <= 18))
+    if((trackNum >= 1) && (trackNum <= NUM_TURNTABLE_TRACKS))
         setTurntableTrackPower(trackNum, !turntableTrackPower[trackNum - 1]);
 }
 
