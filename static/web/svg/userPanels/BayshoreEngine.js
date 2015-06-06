@@ -93,57 +93,59 @@ function updateTurntableGraphics(trackNum)
         return;
     }
     
-    if(trackNum != bayshoreLastTrackNum)
+    var bridge = svgDocument.getElementById('turntableBridge');
+    
+    if(bridge != null)
     {
-        var bridge = svgDocument.getElementById('turntableBridge');
+        var angleDeg = getTurntableTrackAngle(trackNum);
+        var transform = getTurntableTrackTransform(trackNum);
         
-        if(bridge != null)
-        {
-            var angleDeg = getTurntableTrackAngle(trackNum);
-            var transform = getTurntableTrackTransform(trackNum);
-            
-            var angleOldDeg = getTurntableTrackAngle(bayshoreLastTrackNum);
-            
-            var rotateDeg = Math.abs(angleDeg - angleOldDeg);
-            
-            if(rotateDeg > 180)
-                rotateDeg = 360 - rotateDeg;
-            
-            var angleRad = angleDeg / 360.0 * 2.0 * Math.PI;
-            
-            var a = -Math.cos(angleRad);
-            var b = Math.sin(angleRad);
-            var c = -b;
-            var d = a;
-            var e = 38.7478;
-            var f = -140.09141;
+        var angleOldDeg = getTurntableTrackAngle(bayshoreLastTrackNum);
         
-            //bridge.setAttribute("transform", "matrix(" + a + "," + b + "," + c + "," + d + "," + e + "," + f + ")");
-            bridge.setAttribute("transform", transform);
-            
-            turntableTimeToRotate = rotateDeg / BAYSHORE_TURNTABLE_SPEED + 2;
-            bayshoreLastTrackNum = trackNum;
-            
-            updateTurntableStatus(0);
-        }
+        var rotateDeg = Math.abs(angleDeg - angleOldDeg);
         
-        var actualTrackNum = (trackNum > NUM_TURNTABLE_TRACKS ? trackNum - NUM_TURNTABLE_TRACKS : trackNum);
+        if(rotateDeg > 180)
+            rotateDeg = 360 - rotateDeg;
         
-        for(var i = 1; i <= NUM_TURNTABLE_TRACKS; i++)
-        {
-            setTurntableTrackPower(i, i == actualTrackNum);
-        }
+        var angleRad = angleDeg / 360.0 * 2.0 * Math.PI;
+        
+        var a = -Math.cos(angleRad);
+        var b = Math.sin(angleRad);
+        var c = -b;
+        var d = a;
+        var e = 38.7478;
+        var f = -140.09141;
+    
+        //bridge.setAttribute("transform", "matrix(" + a + "," + b + "," + c + "," + d + "," + e + "," + f + ")");
+        bridge.setAttribute("transform", transform);
+        
+        turntableTimeToRotate = rotateDeg / BAYSHORE_TURNTABLE_SPEED + 2;
+        bayshoreLastTrackNum = trackNum;
+        
+        updateTurntableStatus(0);
     }
-    else
+    
+    var actualTrackNum = (trackNum > NUM_TURNTABLE_TRACKS ? trackNum - NUM_TURNTABLE_TRACKS : trackNum);
+    
+    for(var i = 1; i <= NUM_TURNTABLE_TRACKS; i++)
     {
-        alert("Turntable should already be set to track " + trackNum + ". If turntable is out of sync with panel, try selecting an adjacent track and then reselecting track " + trackNum + ".");
+        setTurntableTrackPower(i, i == actualTrackNum);
     }
 }
 
 function setBayshoreTurntableTrack(trackNum)
 {
     if((trackNum >= 1) && (trackNum <= 28))
-        setTurntableState('ST' + getAddrFromTrackNum(trackNum));
+    {
+        if(trackNum != bayshoreLastTrackNum)
+        {
+            setTurntableState('ST' + getAddrFromTrackNum(trackNum));
+        }
+        else
+        {
+            alert("Turntable should already be set to track " + trackNum + ". If turntable is out of sync with panel, try selecting an adjacent track and then reselecting track " + trackNum + ".");
+        }
+    }
     else
         alert("Track number must be range of 1 to 28 for Walthers turntable. (" + trackNum + " was passed.)");
 }
