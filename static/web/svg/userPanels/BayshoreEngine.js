@@ -78,7 +78,7 @@ function getPanelSpecificState(serverObject)
     {
         var deviceAddr = getDCCAddr(serverObject.name);
         
-        if((deviceAddr > 800) && (deviceAddr < 816))
+        if((deviceAddr >= getAddrFromTrackNum(1) && (deviceAddr <= getAddrFromTrackNum(18)))
             return 'N';
     }
     
