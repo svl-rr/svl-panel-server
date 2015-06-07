@@ -54,8 +54,6 @@ function setPanelSpecificState(serverObject)
 {
     if((serverObject.type == SERVER_TYPE_TURNOUT) && (serverObject.name.search(JMRI_TURNTABLE_OBJID_PREFIX) == 0))
     {
-        console.log("setPanelSpecificState " + serverObject.name + " " + serverObject.value);
-    
         var deviceAddr = getDCCAddr(serverObject.name);
     
         var trackNum = getTrackNumFromAddr(deviceAddr);
@@ -63,6 +61,21 @@ function setPanelSpecificState(serverObject)
         updateTurntableGraphics(trackNum);
         
         return true;
+    }
+    else if((serverObject.type == SERVER_TYPE_TURNOUT) && (serverObject.name.search(JMRI_TURNOUT_OBJID_PREFIX) == 0))
+    {
+        var deviceAddr = getDCCAddr(serverObject.name);
+    
+        if(deviceAddr == 800)
+        {
+            displayRoundhouseLightsPower(serverObject.value == 'R');
+            return true;
+        }
+        else if((deviceAddr >= 801) && (deviceAddr <= 816))
+        {
+            displayTurntableTrackPower(deviceAddr - 800, serverObject.value == 'R');
+            return true;
+        }
     }
     
     return false;
@@ -78,7 +91,7 @@ function getPanelSpecificState(serverObject)
     {
         var deviceAddr = getDCCAddr(serverObject.name);
         
-        if((deviceAddr >= getAddrFromTrackNum(1)) && (deviceAddr <= getAddrFromTrackNum(18)))
+        if((deviceAddr >= 800) && (deviceAddr <= 816))
             return 'N';
     }
     
@@ -120,17 +133,11 @@ function updateTurntableGraphics(trackNum)
         bridge.setAttribute("transform", transform);
         
         turntableTimeToRotate = rotateDeg / BAYSHORE_TURNTABLE_SPEED + 2;
-        bayshoreLastTrackNum = trackNum;
         
         updateTurntableStatus(0);
     }
     
-    var actualTrackNum = (trackNum > NUM_TURNTABLE_TRACKS ? trackNum - NUM_TURNTABLE_TRACKS : trackNum);
-    
-    for(var i = 1; i <= NUM_TURNTABLE_TRACKS; i++)
-    {
-        setTurntableTrackPower(i, i == actualTrackNum);
-    }
+    bayshoreLastTrackNum = trackNum;
 }
 
 function setBayshoreTurntableTrack(trackNum)
@@ -139,6 +146,9 @@ function setBayshoreTurntableTrack(trackNum)
     {
         if(trackNum != bayshoreLastTrackNum)
         {
+            if(bayshoreLastTrackNum != 0)
+                setTurntableTrackPower(bayshoreLastTrackNum, false);
+        
             setTurntableState('ST' + getAddrFromTrackNum(trackNum));
         }
         else
@@ -224,6 +234,11 @@ function updateTurntableStatus(decrementAmt)
     {
         setSVGText('turntableStatus', "Turntable Ready");
         setSVGText('turntableTime', "");
+        
+        if(bayshoreLastTrackNum != 0)
+        {
+            setTurntableTrackPower(bayshoreLastTrackNum, true);
+        }
     }
 }
 
@@ -252,27 +267,55 @@ function ttLead2Path()
     //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
-function setTurntableTrackPower(trackNum, powered)
+function displayTurntableTrackPower(trackNum, powered)
 {
     if((trackNum >= 1) && (trackNum <= NUM_TURNTABLE_TRACKS))
         turntableTrackPower[trackNum - 1] = powered;
-
+    else
+        console.error("trackNum (" + trackNum + ") out of range in displayTurntableTrackPower");
+    
     if((trackNum >= 4) && (trackNum <= NUM_TURNTABLE_TRACKS))
     {
         setLEDColorByID('turntableTrack' + trackNum + 'PowerLED', turntableTrackPower[trackNum - 1] == true ? POWERLED_LIGHT_COLOR : "off");
     }
 }
 
+function setTurntableTrackPower(trackNum, powered)
+{
+    var savedStateChangeRequests = stateChangeRequests;
+
+    stateChangeRequests = [];
+    
+    addTurnoutStateChangeRequest(PANEL_TURNOUT_OBJID_PREFIX + (800 + trackNum - (trackNum > NUM_TURNTABLE_TRACKS ? NUM_TURNTABLE_TRACKS : 0)), powered ? 'R' : 'N');
+    
+    executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
+    
+    stateChangeRequests = savedStateChangeRequests;
+}
+
 function toggleTurntableTrackPower(trackNum)
 {
-    if((trackNum >= 1) && (trackNum <= NUM_TURNTABLE_TRACKS))
-        setTurntableTrackPower(trackNum, !turntableTrackPower[trackNum - 1]);
+    if(trackNum >= 1)
+        setTurntableTrackPower(trackNum, !turntableTrackPower[trackNum > NUM_TURNTABLE_TRACKS ? trackNum - NUM_TURNTABLE_TRACKS - 1: trackNum - 1]);
+}
+
+function displayRoundhouseLightsPower(powered)
+{
+    roundhouseLightsPower = powered;
+    setLEDColorByID('roundhouseLightsPowerLED', roundhouseLightsPower == true ? POWERLED_LIGHT_COLOR : "off");
 }
 
 function setRoundhouseLightsPower(powered)
 {
-    roundhouseLightsPower = powered;
-    setLEDColorByID('roundhouseLightsPowerLED', roundhouseLightsPower == true ? POWERLED_LIGHT_COLOR : "off");
+    var savedStateChangeRequests = stateChangeRequests;
+
+    stateChangeRequests = [];
+    
+    addTurnoutStateChangeRequest(PANEL_TURNOUT_OBJID_PREFIX + "800", powered ? 'R' : 'N');
+    
+    executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
+    
+    stateChangeRequests = savedStateChangeRequests;
 }
 
 function toggleRoundhouseLightsPower()
