@@ -4,6 +4,8 @@ var BAYSHORE_TURNTABLE_SPEED = 2; //(360.0/105.0); // degrees of rotation per se
 
 var POWERLED_LIGHT_COLOR = "#e4e4b4";
 
+var AUTO_POWER_TURNTABLE_TRACKS = true;
+
 var NUM_TURNTABLE_TRACKS = 16;
 
 var turntableTimeToRotate = 0;
@@ -58,7 +60,7 @@ function setPanelSpecificState(serverObject)
     
         var trackNum = getTrackNumFromAddr(deviceAddr);
     
-        updateTurntableGraphics(trackNum);
+        displayTurntableTrack(trackNum);
         
         return true;
     }
@@ -98,7 +100,7 @@ function getPanelSpecificState(serverObject)
     return undefined;
 }
 
-function updateTurntableGraphics(trackNum)
+function displayTurntableTrack(trackNum)
 {
     if(turntableTimeToRotate > 0)
     {
@@ -146,10 +148,11 @@ function setBayshoreTurntableTrack(trackNum)
     {
         if(trackNum != bayshoreLastTrackNum)
         {
-            if(bayshoreLastTrackNum != 0)
+            if((bayshoreLastTrackNum != 0) && (AUTO_POWER_TURNTABLE_TRACKS == true))
                 setTurntableTrackPower(bayshoreLastTrackNum, false);
         
             setTurntableState('ST' + getAddrFromTrackNum(trackNum));
+            //displayTurntableTrack(trackNum);
         }
         else
         {
@@ -235,7 +238,7 @@ function updateTurntableStatus(decrementAmt)
         setSVGText('turntableStatus', "Turntable Ready");
         setSVGText('turntableTime', "");
         
-        if(bayshoreLastTrackNum != 0)
+        if((bayshoreLastTrackNum != 0) && (AUTO_POWER_TURNTABLE_TRACKS == true))
         {
             setTurntableTrackPower(bayshoreLastTrackNum, true);
         }
