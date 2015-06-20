@@ -289,7 +289,7 @@ function setTurntableTrackPower(trackNum, powered)
 
     stateChangeRequests = [];
     
-    addTurnoutStateChangeRequest(PANEL_TURNOUT_OBJID_PREFIX + (800 + trackNum - (trackNum > NUM_TURNTABLE_TRACKS ? NUM_TURNTABLE_TRACKS : 0)), powered ? 'R' : 'N');
+    addTurnoutStateChangeRequest(PANEL_TURNOUT_OBJID_PREFIX + (800 + trackNum - (trackNum > NUM_TURNTABLE_TRACKS ? NUM_TURNTABLE_TRACKS : 0)), powered ? 'N' : 'R');
     
     executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
     
@@ -314,7 +314,7 @@ function setRoundhouseLightsPower(powered)
 
     stateChangeRequests = [];
     
-    addTurnoutStateChangeRequest(PANEL_TURNOUT_OBJID_PREFIX + "800", powered ? 'R' : 'N');
+    addTurnoutStateChangeRequest(PANEL_TURNOUT_OBJID_PREFIX + "800", powered ? 'N' : 'R');
     
     executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
     
