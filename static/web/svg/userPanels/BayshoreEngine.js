@@ -75,7 +75,7 @@ function setPanelSpecificState(serverObject)
         }
         else if((deviceAddr >= 801) && (deviceAddr <= 816))
         {
-            displayTurntableTrackPower(deviceAddr - 800, serverObject.value == 'R');
+            displayTurntableTrackPower(deviceAddr - 800, serverObject.value == 'N');
             return true;
         }
     }
@@ -94,7 +94,7 @@ function getPanelSpecificState(serverObject)
         var deviceAddr = getDCCAddr(serverObject.name);
         
         if((deviceAddr >= 800) && (deviceAddr <= 816))
-            return 'N';
+            return 'R';
     }
     
     return undefined;
