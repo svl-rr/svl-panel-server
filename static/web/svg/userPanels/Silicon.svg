@@ -31,8 +31,8 @@
      id="script6" />
   <script
      xlink:href="Silicon.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -283,7 +283,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3557978"
-     inkscape:cx="421.81975"
+     inkscape:cx="652.68013"
      inkscape:cy="336.34224"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
@@ -923,9 +923,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Ravine_Quinn.svg"
-       style="display:inline"
+       transform="translate(-198,60.000061)"
        id="a5609"
-       transform="translate(-198,60.000061)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text5611"
@@ -941,9 +941,9 @@
     </a>
     <a
        xlink:href="Tracy.svg"
-       transform="translate(772,250.00005)"
+       style="display:inline"
        id="a3248"
-       style="display:inline">
+       transform="translate(772,250.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -970,8 +970,7 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        sodipodi:linespacing="125%"
        id="text6505"
@@ -993,7 +992,7 @@
          sodipodi:role="line"
          x="423.03583"
          y="359.37723"
-         id="tspan3240">Ideal Cement #1</tspan></text>
+         id="tspan3240">Ideal Cement 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1006,27 +1005,16 @@
          x="520"
          y="480.11481">Bag House 2</tspan></text>
     <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="375.83115"
-       y="400.11481"
-       id="text3909"
-       sodipodi:linespacing="125%"><tspan
-         id="tspan3911"
-         sodipodi:role="line"
-         x="375.83115"
-         y="400.11481">Working Track/Industry Overflow</tspan></text>
-    <text
        sodipodi:linespacing="125%"
        id="text3913"
        y="440.11481"
-       x="750"
+       x="739.67395"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="440.11481"
-         x="750"
+         x="739.67395"
          sodipodi:role="line"
-         id="tspan3915">Team Track</tspan></text>
+         id="tspan3915">Freight House</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1037,7 +1025,7 @@
          sodipodi:role="line"
          x="444.01389"
          y="200.11481"
-         id="tspan3921">Ideal Cement #2</tspan></text>
+         id="tspan3921">Ideal Cement 2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1060,16 +1048,5 @@
          x="520"
          sodipodi:role="line"
          id="tspan3210">Bag House 1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="900"
-       y="480.11481"
-       id="text3212"
-       sodipodi:linespacing="125%"><tspan
-         id="tspan3214"
-         sodipodi:role="line"
-         x="900"
-         y="480.11481">??</tspan></text>
   </g>
 </svg>
