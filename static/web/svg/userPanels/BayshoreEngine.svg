@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="BayshoreEngine.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -1031,7 +1031,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2680787"
-     inkscape:cx="660.48141"
+     inkscape:cx="545.3466"
      inkscape:cy="357.74225"
      inkscape:document-units="px"
      inkscape:current-layer="textLayer"
@@ -1273,7 +1273,8 @@
        x="723.42639"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"
-       inkscape:label="#text4524"><tspan
+       inkscape:label="#text4524"
+       onclick="cancelTurntableTimer();"><tspan
          y="494.8591"
          x="723.42639"
          id="tspan3858"
@@ -3764,9 +3765,9 @@
      transform="translate(0,-5.0883911e-4)">
     <a
        xlink:href="Bayshore.svg"
-       style="display:inline"
+       transform="translate(-109.56957,70.46663)"
        id="BayshoreLink"
-       transform="translate(-109.56957,70.46663)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

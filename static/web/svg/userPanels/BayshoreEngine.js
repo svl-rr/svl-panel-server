@@ -325,3 +325,9 @@ function toggleRoundhouseLightsPower()
 {
     setRoundhouseLightsPower(!roundhouseLightsPower);
 }
+
+function cancelTurntableTimer()
+{
+    if(turntableTimeToRotate > 1)
+        turntableTimeToRotate = 1;
+}
