@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="BayshoreEngine.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -1031,7 +1031,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2680787"
-     inkscape:cx="545.3466"
+     inkscape:cx="719.9139"
      inkscape:cy="357.74225"
      inkscape:document-units="px"
      inkscape:current-layer="textLayer"
@@ -1239,21 +1239,21 @@
          y="151.62177"
          id="tspan5281">Lights</tspan></text>
     <path
-       onclick=""
+       onclick="track2DirectionToggle();"
        inkscape:label="#path4221"
        style="display:inline;opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker5530)"
        d="m 688.54561,320.16234 13.01142,6.08934"
-       id="path3881"
+       id="track2DirectionPath"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="path6817"
+       id="track1DirectionPath"
        d="M 691.65968,379.84862 678.72055,378.1528"
        style="display:inline;opacity:1;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#marker6819)"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="track1DirectionToggle();" />
     <text
        inkscape:label="#text4524"
        xml:space="preserve"
@@ -3765,9 +3765,9 @@
      transform="translate(0,-5.0883911e-4)">
     <a
        xlink:href="Bayshore.svg"
-       transform="translate(-109.56957,70.46663)"
+       style="display:inline"
        id="BayshoreLink"
-       style="display:inline">
+       transform="translate(-109.56957,70.46663)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

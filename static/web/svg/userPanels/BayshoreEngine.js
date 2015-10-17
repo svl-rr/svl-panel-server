@@ -14,12 +14,31 @@ var bayshoreLastTrackNum = 0;
 var turntableTrackPower = new Array();
 var roundhouseLightsPower = false;
 
+var TRACK1DIRECTIONPATH = "track1DirectionPath";
+var TRACK2DIRECTIONPATH = "track2DirectionPath";
+
+var track1DirectionDefault;
+var track2DirectionDefault;
+
+var TRACK1DIRECTIONROTATED = "m 678.72056,378.1528 12.93913,1.69582";
+var TRACK2DIRECTIONROTATED = "m 701.55703,326.25168 -13.01142,-6.08934";
+
 function panelInit(evt)
 {
     for(var i = 0; i < NUM_TURNTABLE_TRACKS; i++)
         turntableTrackPower.push(false);
     
     updateTurntableStatus(0);
+    
+    var path = svgDocument.getElementById(TRACK1DIRECTIONPATH);
+    
+    if(path != null)
+        track1DirectionDefault = path.getAttribute("d");
+
+    path = svgDocument.getElementById(TRACK2DIRECTIONPATH);
+    
+    if(path != null)
+        track2DirectionDefault = path.getAttribute("d");
 }
 
 function addTurntableStateChangeRequest(id)
@@ -260,13 +279,13 @@ function enableTurntableTrackEvents(drawAsEnabled)
 
 function ttLead1Path()
 {
-    setBayshoreTurntableTrack(17);
+    setBayshoreTurntableTrack(getTrack1LogicalTrack());
     //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
 function ttLead2Path()
 {
-    setBayshoreTurntableTrack(2);
+    setBayshoreTurntableTrack(getTrack2LogicalTrack());
     //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
@@ -330,4 +349,59 @@ function cancelTurntableTimer()
 {
     if(turntableTimeToRotate > 1)
         turntableTimeToRotate = 1;
+}
+
+function track1DirectionToggle()
+{
+    trackNDirectionToggle(TRACK1DIRECTIONPATH, track1DirectionDefault, TRACK1DIRECTIONROTATED);
+}
+
+function track2DirectionToggle()
+{
+    trackNDirectionToggle(TRACK2DIRECTIONPATH, track2DirectionDefault, TRACK2DIRECTIONROTATED);
+}
+
+function trackNDirectionToggle(elemID, defaultD, rotatedD)
+{
+    path = svgDocument.getElementById(elemID);
+    
+    if(path != null)
+    {
+        var currentDir = path.getAttribute("d");
+        
+        if(currentDir == defaultD)
+            path.setAttribute("d", rotatedD);
+        else
+            path.setAttribute("d", defaultD);
+    }
+}
+
+function getTrack1LogicalTrack()
+{
+    path = svgDocument.getElementById(TRACK1DIRECTIONPATH);
+    
+    if(path != null)
+    {
+        var currentDir = path.getAttribute("d");
+        
+        if(currentDir == track1DirectionDefault)
+            return 17;
+        else
+            return 1;
+    }
+}
+
+function getTrack2LogicalTrack()
+{
+    path = svgDocument.getElementById(TRACK2DIRECTIONPATH);
+    
+    if(path != null)
+    {
+        var currentDir = path.getAttribute("d");
+        
+        if(currentDir == track2DirectionDefault)
+            return 2;
+        else
+            return 18;
+    }
 }
