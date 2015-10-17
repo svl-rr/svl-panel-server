@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="BayshoreEngine.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -1031,10 +1031,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2680787"
-     inkscape:cx="719.9139"
-     inkscape:cy="357.74225"
+     inkscape:cx="817.30533"
+     inkscape:cy="610.09252"
      inkscape:document-units="px"
-     inkscape:current-layer="textLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1102"
@@ -1129,7 +1129,8 @@
      id="textLayer"
      inkscape:label="Text"
      transform="translate(0,-3.9797589)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <a
        transform="translate(-148,93.274866)"
        id="a6372">
@@ -1285,7 +1286,8 @@
      id="industrialTrackLayer"
      inkscape:label="Industrial Track"
      transform="translate(0,-3.9797589)"
-     style="display:inline;opacity:1">
+     style="display:inline;opacity:1"
+     sodipodi:insensitive="true">
     <g
        id="g3187"
        transform="matrix(0,1,1,0,165.9055,20.56063)">
@@ -1831,11 +1833,13 @@
      inkscape:groupmode="layer"
      id="mainlineTrackLayer"
      inkscape:label="Mainline Track"
-     transform="translate(0,-3.9797589)" />
+     transform="translate(0,-3.9797589)"
+     sodipodi:insensitive="true" />
   <g
      inkscape:groupmode="layer"
      id="layer1"
-     inkscape:label="LEDs">
+     inkscape:label="LEDs"
+     sodipodi:insensitive="true">
     <g
        style="display:inline"
        id="g4112"
@@ -3757,17 +3761,19 @@
      id="mainlinePanelLinkLayer"
      inkscape:label="Mainline Panel Links"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline" />
+     style="display:inline"
+     sodipodi:insensitive="true" />
   <g
      inkscape:groupmode="layer"
      id="industrialPanelLinkLayer"
      inkscape:label="Industrial Panel Links"
-     transform="translate(0,-5.0883911e-4)">
+     transform="translate(0,-5.0883911e-4)"
+     sodipodi:insensitive="true">
     <a
        xlink:href="Bayshore.svg"
-       style="display:inline"
+       transform="translate(-109.56957,70.46663)"
        id="BayshoreLink"
-       transform="translate(-109.56957,70.46663)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -3787,21 +3793,30 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="590.9176"
-       y="23.686405"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="797.52936"
+       y="17.377649"
        id="text4446"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="590.9176"
-         y="23.686405"
-         id="tspan3880">Note: Track 1 only aligns to cab end. Tracks 2-16 will align only to non-cab end.</tspan><tspan
+         x="797.52936"
+         y="17.377649"
+         id="tspan3880">Note: Arrows on Track 1 and 2 indicate direction of forward locomotive travel.</tspan><tspan
          sodipodi:role="line"
-         x="590.9176"
-         y="43.686405"
+         x="797.52936"
+         y="31.440149"
+         id="tspan3865">         Clicking the arrow(s) will toggle the bridge direction (i.e. entry vs exit).</tspan><tspan
+         sodipodi:role="line"
+         x="797.52936"
+         y="45.502647"
+         id="tspan3863">         Tracks 3-16 will align only to non-cab bridge end (tender closest to turntable).</tspan><tspan
+         sodipodi:role="line"
+         x="797.52936"
+         y="59.565147"
          id="tspan3879" /></text>
     <text
        sodipodi:linespacing="125%"
@@ -4092,16 +4107,5 @@
          sodipodi:role="line"
          x="914.13367"
          y="66.734467">3</tspan></text>
-    <text
-       sodipodi:linespacing="125%"
-       id="text3891"
-       y="42.612675"
-       x="634.71307"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         id="tspan3896"
-         y="42.612675"
-         x="634.71307"
-         sodipodi:role="line">Locomotives should enter on Track 1 and exit on Track 2.</tspan></text>
   </g>
 </svg>
