@@ -104,6 +104,7 @@ function setPanelSpecificState(serverObject)
     {
         if((serverObject.value >=1) && (serverObject.value <= 18))
         {
+            alert(serverObject.value);
             //displayTurntableTrack(serverObject.value);
         }
         
