@@ -81,7 +81,7 @@ function setPanelSpecificState(serverObject)
     
         var trackNum = getTrackNumFromAddr(deviceAddr);
     
-        //displayTurntableTrack(trackNum);
+        displayTurntableTrack(trackNum);
         
         return true;
     }
@@ -104,7 +104,7 @@ function setPanelSpecificState(serverObject)
     {
         if((serverObject.value >= 1) && (serverObject.value <= 18))
         {
-            displayTurntableTrack(serverObject.value);
+            //displayTurntableTrack(serverObject.value);
         }
         
         return true;
