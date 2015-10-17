@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="BayshoreEngine.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -1031,7 +1031,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2680787"
-     inkscape:cx="817.30533"
+     inkscape:cx="631.5913"
      inkscape:cy="610.09252"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
@@ -3771,9 +3771,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Bayshore.svg"
-       transform="translate(-109.56957,70.46663)"
+       style="display:inline"
        id="BayshoreLink"
-       style="display:inline">
+       transform="translate(-109.56957,70.46663)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -3798,24 +3798,24 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="797.52936"
+       x="825.91876"
        y="17.377649"
        id="text4446"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="797.52936"
+         x="825.91876"
          y="17.377649"
-         id="tspan3880">Note: Arrows on Track 1 and 2 indicate direction of forward locomotive travel.</tspan><tspan
+         id="tspan3880">Arrows on Track 1 and 2 indicate direction of forward locomotive travel.</tspan><tspan
          sodipodi:role="line"
-         x="797.52936"
+         x="825.91876"
          y="31.440149"
-         id="tspan3865">         Clicking the arrow(s) will toggle the bridge direction (i.e. entry vs exit).</tspan><tspan
+         id="tspan3865">Clicking the arrow(s) will toggle the bridge direction (i.e. entry vs exit).</tspan><tspan
          sodipodi:role="line"
-         x="797.52936"
+         x="825.91876"
          y="45.502647"
-         id="tspan3863">         Tracks 3-16 will align only to non-cab bridge end (tender closest to turntable).</tspan><tspan
+         id="tspan3863">Tracks 3-16 will align only to non-cab bridge end (tender closest to turntable).</tspan><tspan
          sodipodi:role="line"
-         x="797.52936"
+         x="825.91876"
          y="59.565147"
          id="tspan3879" /></text>
     <text
@@ -4107,5 +4107,20 @@
          sodipodi:role="line"
          x="914.13367"
          y="66.734467">3</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3858"
+       y="17.377647"
+       x="821.97577"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:11.25px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan3864"
+         y="17.377647"
+         x="825.35956"
+         sodipodi:role="line">Note: </tspan><tspan
+         id="tspan3866"
+         y="31.440147"
+         x="821.97577"
+         sodipodi:role="line" /></text>
   </g>
 </svg>
