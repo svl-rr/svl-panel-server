@@ -104,11 +104,12 @@ function setPanelSpecificState(serverObject)
     {
         var whichTrack = Number(serverObject.value);
     
-        if((whichTrack >= 1) && (whichTrack <= 18))
+        if((bayshoreLastTrackNum == 0) && (whichTrack >= 1) && (whichTrack <= 18))
         {
             displayTurntableTrack(whichTrack);
-            return true;
         }
+        
+        return true;
     }
     
     return false;
