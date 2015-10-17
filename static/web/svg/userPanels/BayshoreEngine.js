@@ -102,7 +102,9 @@ function setPanelSpecificState(serverObject)
     }
     else if((serverObject.type == SERVER_TYPE_DISPATCH) && (serverObject.name.search(JMRI_LASTBAYSHORETURNTABLETRACK) == 2))
     {
-        if((serverObject.value >=1) && (serverObject.value <= 18))
+        alert(serverObject.value);
+    
+        if((serverObject.value >= 1) && (serverObject.value <= 18))
         {
             alert(serverObject.value);
             //displayTurntableTrack(serverObject.value);
