@@ -100,7 +100,10 @@ function setPanelSpecificState(serverObject)
             return true;
         }
     }
-    else if((serverObject.type == SERVER_TYPE_DISPATCH) && (serverObject.name.search(JMRI_LASTBAYSHORETURNTABLETRACK) == 2))
+    
+    alert(serverObject.name + " search yields " + serverObject.name.search(JMRI_LASTBAYSHORETURNTABLETRACK));
+    
+    if((serverObject.type == SERVER_TYPE_DISPATCH) && (serverObject.name.search(JMRI_LASTBAYSHORETURNTABLETRACK) == 2))
     {
         alert(serverObject.value);
     
