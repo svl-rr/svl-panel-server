@@ -335,9 +335,9 @@ function setTurntableTrackPower(trackNum, powered)
 
     stateChangeRequests = [];
     
-    alert(PANEL_TURNOUT_OBJID_PREFIX + (800 + trackNum - (trackNum > NUM_TURNTABLE_TRACKS ? NUM_TURNTABLE_TRACKS : 0)));
+    var addr = (800 + trackNum - (trackNum > NUM_TURNTABLE_TRACKS ? NUM_TURNTABLE_TRACKS : 0));
     
-    addTurnoutStateChangeRequest(PANEL_TURNOUT_OBJID_PREFIX + (800 + trackNum - (trackNum > NUM_TURNTABLE_TRACKS ? NUM_TURNTABLE_TRACKS : 0)), powered ? 'N' : 'R');
+    addTurnoutStateChangeRequest(PANEL_TURNOUT_OBJID_PREFIX + addr, powered ? 'N' : 'R');
     
     executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
     
