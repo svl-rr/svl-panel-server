@@ -23,6 +23,8 @@ var track2DirectionDefault;
 var TRACK1DIRECTIONROTATED = "m 678.72056,378.1528 12.93913,1.69582";
 var TRACK2DIRECTIONROTATED = "m 701.55703,326.25168 -13.01142,-6.08934";
 
+var JMRI_LASTBAYSHORETURNTABLETRACK = "IMLASTBAYSHORETURNTABLETRACK";
+
 function panelInit(evt)
 {
     for(var i = 0; i < NUM_TURNTABLE_TRACKS; i++)
@@ -98,6 +100,15 @@ function setPanelSpecificState(serverObject)
             return true;
         }
     }
+    else if((serverObject.type == SERVER_TYPE_DISPATCH) && (serverObject.name.search(JMRI_LASTBAYSHORETURNTABLETRACK) == 0))
+    {
+        if((serverObject.value >=1) && (serverObject.value <= 18))
+        {
+            displayTurntableTrack(serverObject.value);
+        }
+        
+        return true;
+    }
     
     return false;
 }
@@ -170,6 +181,7 @@ function setBayshoreTurntableTrack(trackNum)
             if((bayshoreLastTrackNum != 0) && (AUTO_POWER_TURNTABLE_TRACKS == true))
                 setTurntableTrackPower(bayshoreLastTrackNum, false);
         
+            setTurntableMemoryState(trackNum);
             setTurntableState('ST' + getAddrFromTrackNum(trackNum));
             //displayTurntableTrack(trackNum);
         }
@@ -234,6 +246,21 @@ function getTurntableTrackTransform(trackNum)
     }
     
     return transform;
+}
+
+function setTurntableMemoryState(trackNum)
+{
+    var savedStateChangeRequests = stateChangeRequests;
+
+    stateChangeRequests = [];
+    
+    var memObj = new ServerObject(JMRI_LASTBAYSHORETURNTABLETRACK, SERVER_TYPE_DISPATCH, trackNum);
+    
+    stateChangeRequests.push(memObj);
+    
+    executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
+    
+    stateChangeRequests = savedStateChangeRequests;
 }
 
 function updateTurntableStatus(decrementAmt)
