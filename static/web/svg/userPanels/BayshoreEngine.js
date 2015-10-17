@@ -102,12 +102,13 @@ function setPanelSpecificState(serverObject)
     }
     else if((serverObject.type == SERVER_TYPE_DISPATCH) && (serverObject.name.search(JMRI_LASTBAYSHORETURNTABLETRACK) == 0))
     {
-        if((serverObject.value >= 1) && (serverObject.value <= 18))
+        var whichTrack = Number(serverObject.value);
+    
+        if((whichTrack >= 1) && (whichTrack <= 18))
         {
-            //displayTurntableTrack(serverObject.value);
+            displayTurntableTrack(whichTrack);
+            return true;
         }
-        
-        return true;
     }
     
     return false;
@@ -142,29 +143,36 @@ function displayTurntableTrack(trackNum)
     
     if(bridge != null)
     {
-        var angleDeg = getTurntableTrackAngle(trackNum);
         var transform = getTurntableTrackTransform(trackNum);
         
-        var angleOldDeg = getTurntableTrackAngle(bayshoreLastTrackNum);
+        if(bayshoreLastTrackNum > 0)
+        {
+            var angleDeg = getTurntableTrackAngle(trackNum);
+            
+            var angleOldDeg = getTurntableTrackAngle(bayshoreLastTrackNum);
+            
+            var rotateDeg = Math.abs(angleDeg - angleOldDeg);
+            
+            if(rotateDeg > 180)
+                rotateDeg = 360 - rotateDeg;
+            
+            var angleRad = angleDeg / 360.0 * 2.0 * Math.PI;
+
+            turntableTimeToRotate = rotateDeg / BAYSHORE_TURNTABLE_SPEED + 2;
+            
+            //var a = -Math.cos(angleRad);
+            //var b = Math.sin(angleRad);
+            //var c = -b;
+            //var d = a;
+            //var e = 38.7478;
+            //var f = -140.09141;
         
-        var rotateDeg = Math.abs(angleDeg - angleOldDeg);
+            //transform = "matrix(" + a + "," + b + "," + c + "," + d + "," + e + "," + f + ")";
+        }
+        else
+            turntableTimeToRotate = 0;
         
-        if(rotateDeg > 180)
-            rotateDeg = 360 - rotateDeg;
-        
-        var angleRad = angleDeg / 360.0 * 2.0 * Math.PI;
-        
-        var a = -Math.cos(angleRad);
-        var b = Math.sin(angleRad);
-        var c = -b;
-        var d = a;
-        var e = 38.7478;
-        var f = -140.09141;
-    
-        //bridge.setAttribute("transform", "matrix(" + a + "," + b + "," + c + "," + d + "," + e + "," + f + ")");
         bridge.setAttribute("transform", transform);
-        
-        turntableTimeToRotate = rotateDeg / BAYSHORE_TURNTABLE_SPEED + 2;
         
         updateTurntableStatus(0);
     }
