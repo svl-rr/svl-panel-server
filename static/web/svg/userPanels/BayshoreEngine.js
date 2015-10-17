@@ -100,11 +100,11 @@ function setPanelSpecificState(serverObject)
             return true;
         }
     }
-    else if((serverObject.type == SERVER_TYPE_DISPATCH) && (serverObject.name.search(JMRI_LASTBAYSHORETURNTABLETRACK) == 0))
+    else if((serverObject.type == SERVER_TYPE_DISPATCH) && (serverObject.name.search(JMRI_LASTBAYSHORETURNTABLETRACK) == 2))
     {
         if((serverObject.value >=1) && (serverObject.value <= 18))
         {
-            displayTurntableTrack(serverObject.value);
+            //displayTurntableTrack(serverObject.value);
         }
         
         return true;
@@ -334,6 +334,8 @@ function setTurntableTrackPower(trackNum, powered)
     var savedStateChangeRequests = stateChangeRequests;
 
     stateChangeRequests = [];
+    
+    alert(PANEL_TURNOUT_OBJID_PREFIX + (800 + trackNum - (trackNum > NUM_TURNTABLE_TRACKS ? NUM_TURNTABLE_TRACKS : 0)));
     
     addTurnoutStateChangeRequest(PANEL_TURNOUT_OBJID_PREFIX + (800 + trackNum - (trackNum > NUM_TURNTABLE_TRACKS ? NUM_TURNTABLE_TRACKS : 0)), powered ? 'N' : 'R');
     
