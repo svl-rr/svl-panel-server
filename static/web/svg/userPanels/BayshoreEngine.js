@@ -43,6 +43,11 @@ function panelInitPreSocket(evt)
         track2DirectionDefault = path.getAttribute("d");
 }
 
+function panelInitPostSocket()
+{
+    getJMRIObjectsOfType(SERVER_TYPE_DISPATCH);
+}
+
 function addTurntableStateChangeRequest(id)
 {
     var turnoutAddr = getDCCAddr(id);

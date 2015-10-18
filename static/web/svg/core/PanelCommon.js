@@ -525,6 +525,9 @@ function init(evt)
     updateMainlineStatus();
 	    
 	setPanelStatus("Panel Ready");
+    
+    if(typeof panelInitPostSocket == 'function')
+		panelInitPostSocket();
 }
 
 /* handleSocketConnect()
