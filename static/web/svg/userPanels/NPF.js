@@ -1,4 +1,4 @@
-function panelInit(evt)
+function panelInitPreSocket(evt)
 {
 }
 

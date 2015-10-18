@@ -404,7 +404,7 @@ function addTurnoutStateChangeRequest(id, state)
 /* init([Event] evt)
  * Called by each SVG file to initialize the panel.
  *
- * Each panel needs to provide a panelInit(evt) function that it uses to initialize the specifics of that panel (namely,
+ * Each panel needs to provide a panelInitPreSocket(evt) function that it uses to initialize the specifics of that panel (namely,
  * create each of the PanelTurnout objects)
  */
 function init(evt)
@@ -496,11 +496,11 @@ function init(evt)
         }
     }
     
-	if(typeof panelInit == 'function')
-		panelInit(evt);
+	if(typeof panelInitPreSocket == 'function')
+		panelInitPreSocket(evt);
 	else
 	{
-		var errorStr = "Panel could not be initialized as panelInit function could not be found";
+		var errorStr = "Panel could not be initialized as panelInitPreSocket function could not be found";
 		setPanelError(errorStr);
 		alert(errorStr);
 		return;

@@ -25,7 +25,7 @@ var TRACK2DIRECTIONROTATED = "m 701.55703,326.25168 -13.01142,-6.08934";
 
 var JMRI_LASTBAYSHORETURNTABLETRACK = "LASTBAYSHORETURNTABLETRACK";
 
-function panelInit(evt)
+function panelInitPreSocket(evt)
 {
     for(var i = 0; i < NUM_TURNTABLE_TRACKS; i++)
         turntableTrackPower.push(false);

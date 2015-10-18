@@ -1,4 +1,4 @@
-function panelInitNorth(evt)
+function panelInitPreSocketNorth(evt)
 {
     var normalCrossoverPathArray = ["TO725A.N", "TO725B.N"];
 

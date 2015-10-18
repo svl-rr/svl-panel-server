@@ -3,7 +3,7 @@ var SENSORTESTER_STATE = "SState";
 
 var UNKNOWN_SENSOR_STATE = "--";
 
-function panelInit(evt)
+function panelInitPreSocket(evt)
 {
     for(var i = 1; i <= 8; i++)
     {
