@@ -43,9 +43,13 @@ function panelInitPreSocket(evt)
         track2DirectionDefault = path.getAttribute("d");
 }
 
-function panelInitPostSocket()
+function getPanelSpecificStates()
 {
-    getJMRIObjectsOfType(SERVER_TYPE_DISPATCH);
+    var states = [];
+    
+    states.push(new ServerObject(JMRI_LASTBAYSHORETURNTABLETRACK, SERVER_TYPE_DISPATCH));
+    
+    return states;
 }
 
 function addTurntableStateChangeRequest(id)
