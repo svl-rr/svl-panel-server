@@ -207,7 +207,7 @@ function getTurntableTrackAngle(trackNum)
 {
     var angleDeg = -999;
 
-    switch(trackNum)
+    switch(Number(trackNum))
     {
         case  1:          angleDeg =  170.0; break;
         case  2:          angleDeg =  160.0; break;
@@ -234,7 +234,7 @@ function getTurntableTrackTransform(trackNum)
 {
     var transform = null;
 
-    switch(trackNum)
+    switch(Number(trackNum))
     {
         case  1:          transform = "matrix(0.98480775,0.17364818,-0.17364818,0.98480775,38.7478,-140.09141)"; break;
         case  2:          transform = "matrix(0.93969262,0.34202015,-0.34202015,0.93969262,140.62586,-264.38011)"; break;
