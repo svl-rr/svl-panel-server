@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Hallelujah.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,15 +283,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0677312"
-     inkscape:cx="512.08663"
+     inkscape:cx="403.91334"
      inkscape:cy="348.29711"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
-     inkscape:window-x="-12"
-     inkscape:window-y="4"
+     inkscape:window-x="-24"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -513,7 +513,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick="IgoPropane1Path()"
+       onclick="IgoLNG1Path()"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3500"
@@ -527,7 +527,7 @@
        id="path3162"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="IgoPropane2Path()" />
+       onclick="IgoLNG2Path()" />
     <g
        transform="matrix(-1,0,0,-1,1080,988.189)"
        id="g3164"
@@ -606,7 +606,7 @@
        id="path3193"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="MillPath()" />
+       onclick="" />
     <path
        sodipodi:nodetypes="cc"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
@@ -678,7 +678,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick="MillPath()"
+       onclick=""
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path4341"
@@ -791,7 +791,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick="MillPath()"
+       onclick=""
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path4356"
@@ -826,7 +826,7 @@
        id="path4364"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
-       onclick="MillPath()" />
+       onclick="" />
     <g
        transform="matrix(-1,0,0,-1,960,928.189)"
        style="display:inline"
@@ -897,9 +897,9 @@
        id="path4390"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
-       onclick="MillPath()" />
+       onclick="" />
     <path
-       onclick="Dayton2Path()"
+       onclick=""
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1020,414.0945 -60,0"
@@ -913,9 +913,9 @@
        d="m 940,374.0945 -130,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="Dayton2Path()" />
+       onclick="" />
     <path
-       onclick="Dayton2Path()"
+       onclick=""
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 880,294.0945 -200,0"
@@ -929,9 +929,9 @@
        d="m 980,344.0945 0,-90"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="Dayton2Path()" />
+       onclick="" />
     <path
-       onclick="Dayton2Path()"
+       onclick=""
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1000,354.0945 10,-10 0,-90"
@@ -966,7 +966,7 @@
        id="path4434"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
-       onclick="MillPath()" />
+       onclick="" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -974,7 +974,7 @@
        d="m 880,414.0945 -40,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="Dayton2Path()" />
+       onclick="" />
     <g
        style="display:inline"
        id="g3170"
@@ -1175,8 +1175,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Jacksonville.svg"
-       transform="translate(-100,54.000047)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-100,54.000047)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1192,8 +1192,8 @@
     </a>
     <a
        xlink:href="Greeley_Gotham.svg"
-       id="a4142"
-       transform="translate(818.01523,400.15891)">
+       transform="translate(818.01523,400.15891)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1209,8 +1209,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       id="a3156"
-       transform="translate(-100,164.00005)">
+       transform="translate(-100,164.00005)"
+       id="a3156">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1234,9 +1234,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       style="display:inline"
+       id="a4148"
        transform="matrix(0,1,-1,0,1274.1147,22.11525)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

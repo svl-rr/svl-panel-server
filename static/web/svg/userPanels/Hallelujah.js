@@ -2,29 +2,19 @@ function panelInitPreSocket(evt)
 {
 }
 
-function IgoPropane1Path()
+function IgoLNG1Path()
 {
 	executePathArray(["TO245.R", "TO252.N"]);
 }
 
-function IgoPropane2Path()
+function IgoLNG2Path()
 {
 	executePathArray(["TO245.N", "TO252.N"]);
-}
-
-function MillPath()
-{
-	executePathArray(["TO246.R"]);
 }
 
 function HallelujahIndLeadPath()
 {
 	executePathArray(["TO246.N"]);
-}
-
-function AcmeToolPath()
-{
-	executePathArray(["TO247.R"]);
 }
 
 function DaytonLeadPath()
