@@ -282,16 +282,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2316035"
-     inkscape:cx="300.29967"
-     inkscape:cy="296.49194"
+     inkscape:zoom="1.0677312"
+     inkscape:cx="512.08663"
+     inkscape:cy="348.29711"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-x="-12"
+     inkscape:window-y="4"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -307,7 +307,10 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     units="px">
+     units="px"
+     inkscape:snap-global="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-text-baseline="true">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -363,7 +366,7 @@
          id="panelTitle"
          y="654.09448"
          x="400"
-         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:52.33785248px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="654.09448"
            x="400"
@@ -375,7 +378,7 @@
        id="panelStatus"
        y="680.56061"
        x="20"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"
        inkscape:label="#text4524"><tspan
          y="680.56061"
@@ -403,7 +406,7 @@
        transform="translate(36,486.46663)">
       <text
          xml:space="preserve"
-         style="font-size:25.22973061px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.22973061px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          x="400"
          y="104.094"
          id="mainlineLockedText"
@@ -455,7 +458,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4048"
-       d="m 560,174.0945 -120,0"
+       d="m 460,174.0945 -90,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
        onclick="HallelujahIndLeadPath()" />
@@ -470,7 +473,7 @@
     <g
        id="g4601"
        style="display:inline"
-       transform="matrix(1,0,0,-1,40,808.189)">
+       transform="matrix(1,0,0,-1,0,808.189)">
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
@@ -491,7 +494,7 @@
     <g
        style="display:inline"
        id="g4625"
-       transform="matrix(1,0,0,-1,80,788.189)">
+       transform="matrix(1,0,0,-1,40,788.189)">
       <path
          inkscape:label="#path4221"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -514,26 +517,26 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3500"
-       d="m 200,274.0945 -60,60"
+       d="m 160,274.0945 -60,60"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 190,254.0945 -30,0 -50,50"
+       d="m 150,254.0945 -30,0 -50,50"
        id="path3162"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        onclick="IgoPropane2Path()" />
     <g
-       transform="matrix(-1,0,0,1,800,-400)"
+       transform="matrix(-1,0,0,-1,1080,988.189)"
        id="g3164"
        style="display:inline">
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO247.R"
+         id="TO227.R"
          d="m 200,574.0945 -20,0 -20,-20"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221" />
@@ -542,30 +545,9 @@
          inkscape:label="#path4221"
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 200,574.0945 -40,0"
-         id="TO247.N"
+         id="TO227.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
-    </g>
-    <g
-       style="display:inline"
-       id="g3170"
-       transform="translate(400,-400)">
-      <path
-         inkscape:label="#path4221"
-         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 200,574.0945 -20,0 -20,-20"
-         id="TO246.R"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccc"
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
-      <path
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="TO246.N"
-         d="m 200,574.0945 -40,0"
-         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="#path4221"
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <g
        transform="matrix(-1,0,0,-1,1080,728.189)"
@@ -614,21 +596,13 @@
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3189"
-       d="m 840,134.0945 -20,0 -40,40 -140,0"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:label="#path4221" />
-    <path
-       onclick="AcmeToolPath()"
-       sodipodi:nodetypes="ccc"
-       inkscape:connector-curvature="0"
-       id="path3191"
-       d="m 740,134.0945 -80,0 -20,20"
+       d="m 840,134.0945 -20,0 -80,80 -180,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 480,134.0945 60,0 20,20"
+       d="m 360,124.0945 80,0 30,30"
        id="path3193"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
@@ -661,6 +635,388 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
        onclick="Dayton2Path()" />
+    <g
+       transform="matrix(-1,0,0,-1,710,768.189)"
+       style="display:inline"
+       id="g4316">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -20,-20 -30,0"
+         id="TO247.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO247.N"
+         d="m 200,574.0945 -40,-40"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       id="g4322"
+       style="display:inline"
+       transform="translate(310,-380)">
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="TO246.N"
+         d="m 200,574.0945 -20,-20 -30,0"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         inkscape:label="#path4221"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -40,-40"
+         id="TO246.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <path
+       onclick="MillPath()"
+       sodipodi:nodetypes="ccc"
+       inkscape:connector-curvature="0"
+       id="path4341"
+       d="m 550,494.0945 70,0 20,-20"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="#path4221" />
+    <g
+       style="display:inline"
+       id="g4324"
+       transform="translate(640,-160)">
+      <path
+         inkscape:label="#path4221"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -20,0 -20,-20"
+         id="TO230.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO230.N"
+         d="m 200,574.0945 -40,0"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <g
+       id="g4332"
+       style="display:inline"
+       transform="matrix(0,-1,-1,0,1124.0945,434.0945)">
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="TO237.R"
+         d="m 200,574.0945 -20,-20 -30,0"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         inkscape:label="#path4221"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -40,-40"
+         id="TO237.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <g
+       transform="matrix(0,-1,-1,0,1144.0945,484.0945)"
+       id="g4338"
+       style="display:inline">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="TO236.R"
+         d="m 200,574.0945 -20,0 -20,-20"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -40,0"
+         id="TO236.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       transform="translate(590,-160)"
+       id="g4344"
+       style="display:inline">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="TO231.R"
+         d="m 210,574.0945 -30,0 -20,-20"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 210,574.0945 -50,0"
+         id="TO231.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       style="display:inline"
+       id="g4350"
+       transform="translate(540,-160)">
+      <path
+         inkscape:label="#path4221"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 210,574.0945 -30,0 -20,-20"
+         id="TO232.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO232.N"
+         d="m 210,574.0945 -50,0"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <path
+       onclick="MillPath()"
+       sodipodi:nodetypes="cccc"
+       inkscape:connector-curvature="0"
+       id="path4356"
+       d="m 590,324.0945 60,60 40,0 10,10"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="#path4221" />
+    <g
+       id="g4358"
+       style="display:inline"
+       transform="matrix(-1,0,0,-1,790,848.189)">
+      <path
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="TO235.R"
+         d="m 200,574.0945 -20,-20 -30,0"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         inkscape:label="#path4221"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -40,-40"
+         id="TO235.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <path
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 630,314.0945 40,40 40,0 40,40"
+       id="path4364"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       onclick="MillPath()" />
+    <g
+       transform="matrix(-1,0,0,-1,960,928.189)"
+       style="display:inline"
+       id="g4366">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -20,-20 -30,0"
+         id="TO233.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO233.N"
+         d="m 200,574.0945 -40,-40"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221" />
+    </g>
+    <g
+       transform="matrix(-1,0,0,1,1120,-160)"
+       id="g4372"
+       style="display:inline">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="TO228.R"
+         d="m 200,574.0945 -20,0 -20,-20"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -40,0"
+         id="TO228.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+    </g>
+    <g
+       transform="matrix(0,1,-1,0,1534.0945,194.0945)"
+       style="display:inline"
+       id="g4378">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -20,-20 -30,0"
+         id="TO229.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO229.N"
+         d="m 200,574.0945 -40,-40"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221" />
+    </g>
+    <path
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 570,324.0945 0,30 60,60 70,0"
+       id="path4390"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       onclick="MillPath()" />
+    <path
+       onclick="Dayton2Path()"
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1020,414.0945 -60,0"
+       id="path4394"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4396"
+       d="m 940,374.0945 -130,0"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="#path4221"
+       onclick="Dayton2Path()" />
+    <path
+       onclick="Dayton2Path()"
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 880,294.0945 -200,0"
+       id="path4398"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4400"
+       d="m 980,344.0945 0,-90"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="#path4221"
+       onclick="Dayton2Path()" />
+    <path
+       onclick="Dayton2Path()"
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 1000,354.0945 10,-10 0,-90"
+       id="path4402"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <g
+       style="display:inline"
+       id="g4428"
+       transform="matrix(-1,0,0,-1,840,868.189)">
+      <path
+         inkscape:label="#path4221"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -20,0 -20,-20"
+         id="TO234.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO234.N"
+         d="m 200,574.0945 -40,0"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <path
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 680,314.0945 10,10 40,0 30,30"
+       id="path4434"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       onclick="MillPath()" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4381"
+       d="m 880,414.0945 -40,0"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="#path4221"
+       onclick="Dayton2Path()" />
+    <g
+       style="display:inline"
+       id="g3170"
+       transform="translate(760,-120)">
+      <path
+         inkscape:label="#path4221"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -20,0 -20,-20"
+         id="TO225.R"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccc"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         sodipodi:nodetypes="cc"
+         inkscape:connector-curvature="0"
+         id="TO225.N"
+         d="m 200,574.0945 -40,0"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <g
+       transform="matrix(1,0,0,-1,480,1028.189)"
+       id="g4331"
+       style="display:inline">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         sodipodi:nodetypes="ccc"
+         inkscape:connector-curvature="0"
+         id="TO226.R"
+         d="m 200,574.0945 -20,0 -20,-20"
+         style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         inkscape:label="#path4221" />
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         inkscape:label="#path4221"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 200,574.0945 -40,0"
+         id="TO226.N"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc" />
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -672,7 +1028,7 @@
     <path
        sodipodi:nodetypes="cc"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
-       d="m 990,454.0945 -40,0"
+       d="m 1000,454.0945 -40,0"
        id="path3233"
        inkscape:connector-curvature="0" />
     <path
@@ -684,7 +1040,7 @@
     <path
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 950,454.0945 -250,0 -220,-220"
+       d="m 640,454.0945 -20,0 -210,-210"
        id="path3150"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
@@ -698,7 +1054,7 @@
        onclick=""
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 350,174.0945 -250,0"
+       d="m 270,174.0945 -170,0"
        id="path3195"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
@@ -706,22 +1062,14 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4054"
-       d="m 230,214.0945 -130,0"
-       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:label="#path4221"
-       onclick="" />
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       id="path3197"
-       d="m 320,214.0945 -40,0"
+       d="m 190,214.0945 -90,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
        onclick="" />
     <g
        style="display:inline"
        id="g4516"
-       transform="matrix(-1,0,0,1,520,-360)">
+       transform="matrix(-1,0,0,1,440,-360)">
       <path
          inkscape:label="#path4221"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -740,7 +1088,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <g
-       transform="matrix(1,0,0,-1,200,748.189)"
+       transform="matrix(1,0,0,-1,120,748.189)"
        id="g4529"
        style="display:inline">
       <path
@@ -763,7 +1111,7 @@
     <g
        style="display:inline"
        id="g4559"
-       transform="matrix(-1,0,0,-1,600,748.189)">
+       transform="matrix(-1,0,0,-1,520,748.189)">
       <path
          inkscape:label="#path4221"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -784,7 +1132,7 @@
     <g
        style="display:inline"
        id="g3493"
-       transform="translate(280,-380)">
+       transform="translate(200,-380)">
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          sodipodi:nodetypes="cc"
@@ -806,10 +1154,17 @@
        onclick=""
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 440,214.0945 -80,0"
+       d="m 360,214.0945 -80,0"
        id="path3199"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4337"
+       d="m 910,454.0945 -230,0"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="#path4221" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -820,14 +1175,14 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Jacksonville.svg"
-       transform="translate(-90,54.000047)"
+       transform="translate(-100,54.000047)"
        id="daytonIndustrialLink">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
          y="86.114754"
          x="110"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"><tspan
            id="tspan3307"
@@ -838,11 +1193,11 @@
     <a
        xlink:href="Greeley_Gotham.svg"
        id="a4142"
-       transform="translate(820,334.00005)">
+       transform="translate(818.01523,400.15891)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="110"
          y="86.114754"
          id="text4144"
@@ -855,11 +1210,11 @@
     <a
        xlink:href="Jacksonville.svg"
        id="a3156"
-       transform="translate(-90,164.00005)">
+       transform="translate(-100,164.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="110"
          y="86.114754"
          id="text3158"
@@ -885,7 +1240,7 @@
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="120"
          y="246.11475"
          id="text4150"
@@ -904,63 +1259,275 @@
      style="display:inline"
      sodipodi:insensitive="true">
     <text
-       xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="660"
-       y="120.1148"
-       id="text4104"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         x="660"
-         y="120.1148"
-         id="tspan4106">Acme Tool</tspan></text>
-    <text
        sodipodi:linespacing="125%"
        id="text4108"
-       y="120.1148"
-       x="480"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       y="110.1148"
+       x="360"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan4110"
-         y="120.1148"
-         x="480"
-         sodipodi:role="line">Mill</tspan></text>
+         y="110.1148"
+         x="360"
+         sodipodi:role="line">Switch Lead</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="720"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="780"
        y="440.11481"
        id="text3124"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="720"
+         x="780"
          y="440.11481"
-         id="tspan3126">Hallelujah (Main)</tspan></text>
+         id="tspan3126">Hallelujah Main</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
-       x="-134.43146"
-       y="321.10764"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="-162.71573"
+       y="292.82336"
        id="text3134"
        sodipodi:linespacing="125%"
        transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"><tspan
          sodipodi:role="line"
-         x="-134.43146"
-         y="321.10764"
+         x="-162.71573"
+         y="292.82336"
          id="tspan3136"
-         style="stroke-width:0.1">Propane #1</tspan></text>
+         style="stroke-width:0.1">Igo LNG #1</tspan></text>
     <text
        transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"
        sodipodi:linespacing="125%"
        id="text3138"
-       y="278.68124"
-       x="-134.43146"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       y="250.39697"
+       x="-162.71573"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan3140"
-         y="278.68124"
-         x="-134.43146"
+         y="250.39697"
+         x="-162.71573"
          sodipodi:role="line"
-         style="stroke-width:0.1">Propane #2</tspan></text>
+         style="stroke-width:0.1">Igo LNG #2</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4408"
+       y="260.11481"
+       x="780"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="260.11481"
+         x="780"
+         sodipodi:role="line"
+         id="tspan4405">Finished Paper Warehouse</tspan><tspan
+         y="280.11481"
+         x="780"
+         sodipodi:role="line"
+         id="tspan4383" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="840"
+       y="340.11481"
+       id="text4412"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="840"
+         y="340.11481"
+         id="tspan4414">Chemical</tspan><tspan
+         sodipodi:role="line"
+         x="840"
+         y="360.11481"
+         id="tspan4385">Unload</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4416"
+       y="400.11481"
+       x="980"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4418"
+         y="400.11481"
+         x="980"
+         sodipodi:role="line">Pulp</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="-290.11481"
+       y="950"
+       id="text4420"
+       sodipodi:linespacing="125%"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         x="-290.11481"
+         y="950"
+         id="tspan4422">Recycled</tspan><tspan
+         sodipodi:role="line"
+         x="-290.11481"
+         y="970"
+         id="tspan4436">Paper</tspan></text>
+    <text
+       transform="matrix(0,-1,1,0,0,0)"
+       sodipodi:linespacing="125%"
+       id="text4424"
+       y="1000"
+       x="-330.11481"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4426"
+         y="1000"
+         x="-330.11481"
+         sodipodi:role="line">Woodchips</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="990"
+       y="200.11481"
+       id="text4438"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="990"
+         y="200.11481"
+         id="tspan4440">Mine 1</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4442"
+       y="160.11481"
+       x="990"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4444"
+         y="160.11481"
+         x="990"
+         sodipodi:role="line">Mine 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:end;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="990"
+       y="120.1148"
+       id="text4446"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="990"
+         y="120.1148"
+         id="tspan4448">Hellenbegone Mine 3</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4387"
+       y="340.11481"
+       x="910"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4391"
+         y="340.11481"
+         x="910"
+         sodipodi:role="line">Power</tspan><tspan
+         y="360.11481"
+         x="912.40625"
+         sodipodi:role="line"
+         id="tspan4395">Station </tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4388"
+       y="-162.55339"
+       x="657.69049"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"
+       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"><tspan
+         id="tspan4390"
+         y="-162.55339"
+         x="657.69049"
+         sodipodi:role="line">Inbound</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="650.61938"
+       y="-197.90872"
+       id="text4392"
+       sodipodi:linespacing="125%"
+       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)"><tspan
+         sodipodi:role="line"
+         x="650.61938"
+         y="-197.90872"
+         id="tspan4394">Outbound</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="830"
+       y="280.11481"
+       id="text4390"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4396"
+         sodipodi:role="line"
+         x="830"
+         y="280.11481">Door 7</tspan><tspan
+         id="tspan4398"
+         sodipodi:role="line"
+         x="830"
+         y="300.11481" /></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4402"
+       y="280.11481"
+       x="737.59375"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="280.11481"
+         x="740"
+         sodipodi:role="line"
+         id="tspan4404">Door 4-6 </tspan><tspan
+         y="300.11481"
+         x="737.59375"
+         sodipodi:role="line"
+         id="tspan4406" /></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4395"
+       y="230.11481"
+       x="310"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4397"
+         y="230.11481"
+         x="310"
+         sodipodi:role="line">Hallelujah Jct.</tspan><tspan
+         y="250.11481"
+         x="310"
+         sodipodi:role="line"
+         id="tspan4410">(SB Main)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="80"
+       y="200.11481"
+       id="text4399"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="80"
+         y="200.11481"
+         id="tspan4401">Igo Main (SB)</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4403"
+       y="160.11481"
+       x="80"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4407"
+         y="160.11481"
+         x="80"
+         sodipodi:role="line">Igo Main (NB)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="320"
+       y="140.11481"
+       id="text4401"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="320"
+         y="140.11481"
+         id="tspan4403">Hallelujah Jct.</tspan><tspan
+         sodipodi:role="line"
+         x="320"
+         y="160.11481"
+         id="tspan4408">(NB Main)</tspan></text>
   </g>
 </svg>
