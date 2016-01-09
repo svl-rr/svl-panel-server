@@ -282,11 +282,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0677312"
-     inkscape:cx="629.59004"
-     inkscape:cy="348.29711"
+     inkscape:zoom="1.2274763"
+     inkscape:cx="537.39605"
+     inkscape:cy="255.65554"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlineTrackLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -1220,7 +1220,7 @@
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 280,374.0945 140,0 20,20"
+       d="m 300,374.0945 120,0 20,20"
        id="path4461"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
@@ -1776,25 +1776,29 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="280"
+       x="300"
        y="360.11481"
        id="text4471"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="280"
+         x="300"
          y="360.11481"
-         id="tspan4473">H. Lumber</tspan></text>
+         id="tspan4473">Dill Lumber Co.</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="60"
-       y="440.11481"
+       y="420.11481"
        id="text4479"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          x="60"
+         y="420.11481"
+         id="tspan4481">CA Coop #2</tspan><tspan
+         sodipodi:role="line"
+         x="60"
          y="440.11481"
-         id="tspan4481">H. Ind #2</tspan></text>
+         id="tspan4457" /></text>
     <text
        sodipodi:linespacing="125%"
        id="text4483"
@@ -1816,36 +1820,91 @@
          id="tspan4489"
          y="480.11481"
          x="80"
-         sodipodi:role="line">H. Ind #1</tspan></text>
+         sodipodi:role="line">CA Coop #1</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4491"
        y="380.11481"
-       x="180"
+       x="190"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
-         id="tspan4493"
-         y="380.11481"
-         x="180"
-         sodipodi:role="line">Eisen</tspan><tspan
          id="tspan4495"
+         y="380.11481"
+         x="190"
+         sodipodi:role="line">Hemet</tspan><tspan
          y="400.11481"
-         x="180"
-         sodipodi:role="line">Fruit</tspan></text>
+         x="190"
+         sodipodi:role="line"
+         id="tspan4455">Walnut</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="240"
+       x="260"
        y="380.11481"
        id="text4497"
        sodipodi:linespacing="125%"><tspan
          id="tspan4501"
          sodipodi:role="line"
-         x="240"
+         x="260"
          y="380.11481">Stephens</tspan><tspan
          sodipodi:role="line"
-         x="242.40625"
+         x="262.40625"
          y="400.11481"
          id="tspan4505">Groc. </tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4454"
+       y="440.11481"
+       x="60"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4458"
+         y="440.11481"
+         x="60"
+         sodipodi:role="line">1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="90"
+       y="440.11481"
+       id="text4462"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="90"
+         y="440.11481"
+         id="tspan4464">2</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4466"
+       y="440.11481"
+       x="120"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4468"
+         y="440.11481"
+         x="120"
+         sodipodi:role="line">3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="150"
+       y="440.11481"
+       id="text4470"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="150"
+         y="440.11481"
+         id="tspan4472">4</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4474"
+       y="440.11481"
+       x="180"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4476"
+         y="440.11481"
+         x="180"
+         sodipodi:role="line">5</tspan></text>
   </g>
 </svg>
