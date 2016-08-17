@@ -1,5 +1,7 @@
 var JMRI_TURNTABLE_OBJID_PREFIX = "ST";
 var BAYSHORE_TURNTABLE_CONTROLLER_ADDR = 57;
+var TURNTABLE_NUM_DEFAULT_POSITIONS = 0;
+
 var BAYSHORE_TURNTABLE_SPEED = 2; //(360.0/105.0); // degrees of rotation per second
 
 var POWERLED_LIGHT_COLOR = "#e4e4b4";
@@ -74,12 +76,12 @@ function setTurntableState(id)
 
 function getAddrFromTrackNum(trackNum)
 {
-    return (((BAYSHORE_TURNTABLE_CONTROLLER_ADDR - 1)*4) + trackNum);
+    return (((BAYSHORE_TURNTABLE_CONTROLLER_ADDR - 1)*4) + trackNum + TURNTABLE_NUM_DEFAULT_POSITIONS);
 }
 
 function getTrackNumFromAddr(addr)
 {
-    return (addr - ((BAYSHORE_TURNTABLE_CONTROLLER_ADDR - 1)*4));
+    return (addr - TURNTABLE_NUM_DEFAULT_POSITIONS - ((BAYSHORE_TURNTABLE_CONTROLLER_ADDR - 1)*4));
 }
 
 function setPanelSpecificState(serverObject)
