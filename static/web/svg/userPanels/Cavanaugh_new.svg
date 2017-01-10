@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Cavanaugh.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -282,13 +282,13 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2304411"
-     inkscape:cx="542.08317"
-     inkscape:cy="366.5727"
+     inkscape:zoom="1.1467976"
+     inkscape:cx="590.20236"
+     inkscape:cy="310.02525"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
-     inkscape:window-width="1935"
+     inkscape:window-width="1920"
      inkscape:window-height="1111"
      inkscape:window-x="8"
      inkscape:window-y="8"
@@ -563,15 +563,15 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 520,514.0945 20,20 20,0"
+         d="m 520,534.0945 40,0"
          id="TO105.R"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccc" />
+         sodipodi:nodetypes="cc" />
       <path
-         sodipodi:nodetypes="cc"
+         sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="TO105.N"
-         d="m 520,534.0945 40,0"
+         d="m 520,514.0945 20,20 20,0"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -692,10 +692,10 @@
        transform="matrix(-1,0,0,-1,1000,668.189)"
        id="g4305">
       <path
-         sodipodi:nodetypes="ccc"
+         sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO124.R"
-         d="m 520,514.0945 20,20 20,0"
+         d="m 520,534.0945 40,0"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -703,10 +703,10 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 520,534.0945 40,0"
+         d="m 520,514.0945 20,20 20,0"
          id="TO124.N"
          inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cc" />
+         sodipodi:nodetypes="ccc" />
     </g>
     <g
        id="g4311"
@@ -1043,8 +1043,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       id="daytonMainLink"
-       transform="translate(-60,164.00005)">
+       transform="translate(-60,164.00005)"
+       id="daytonMainLink">
       <text
          sodipodi:linespacing="125%"
          id="text3335"
@@ -1060,8 +1060,8 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       transform="translate(-50.919175,16.058702)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-50.919175,16.058702)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1085,9 +1085,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Bayshore.svg"
-       style="display:inline"
+       id="bayshoreLink"
        transform="translate(750,204.0005)"
-       id="bayshoreLink">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3225"
@@ -1124,12 +1124,12 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="790"
+       x="780"
        y="110.1148"
        id="text4498"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="790"
+         x="780"
          y="110.1148"
          id="tspan3270">Delucchi Trading Co</tspan></text>
     <text
@@ -1223,20 +1223,31 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="650"
+       x="590"
        y="110.1148"
        id="text4420"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
-         x="650"
+         x="590"
          y="110.1148"
-         id="tspan4422">????</tspan></text>
+         id="tspan4422">Idler Storage</tspan></text>
     <rect
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:2.1026299;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:2.0201416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4424"
        width="210"
-       height="130"
+       height="120.00001"
        x="720"
-       y="150.11481" />
+       y="160.11481" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text4358"
+       y="150.11481"
+       x="880"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan4360"
+         y="150.11481"
+         x="880"
+         sodipodi:role="line">Dock</tspan></text>
   </g>
 </svg>
