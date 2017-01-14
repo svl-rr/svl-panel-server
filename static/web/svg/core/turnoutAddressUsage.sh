@@ -1,6 +1,6 @@
 #!/bin/bash
 cd ../userPanels
-grep TO *.svg > turnoutAddressList.tmp
+grep 'id="TO' *.svg > turnoutAddressList.tmp
 #remove closing xml tags
 perl -p -i -e 's/ \/>//g' turnoutAddressList.tmp
 #remove individual route segment identifiers
