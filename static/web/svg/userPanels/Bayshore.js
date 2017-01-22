@@ -15,12 +15,12 @@ function cabooseTrkPath()
 
 function arrivalSubLeadPath()
 {
-    executePathArray(["TO36.N"]);
+    executePathArray(["TO35.N"]);
 }
 
 function arrivalLeadPath()
 {
-    executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
+    executePathArray(["TO35.N", "TO38.R", "TO23.R"]);
 }
 
 function arrivalNorthPath()
@@ -36,7 +36,7 @@ function arrivalSouthPath()
 
 function class1NorthPath()
 {
-    executePathArray(["TO36.N", "TO38.N"]);
+    executePathArray(["TO35.N", "TO38.N"]);
 }
 
 function class1SouthPath()
@@ -46,7 +46,7 @@ function class1SouthPath()
 
 function class2NorthPath()
 {
-    executePathArray(["TO36.R", "TO37.N"]);
+    executePathArray(["TO35.R", "TO36.N"]);
 }
 
 function class2SouthPath()
@@ -56,7 +56,7 @@ function class2SouthPath()
 
 function class3NorthPath()
 {
-    executePathArray(["TO36.R", "TO37.R"]);
+    executePathArray(["TO35.R", "TO36.R"]);
 }
 
 function class3SouthPath()

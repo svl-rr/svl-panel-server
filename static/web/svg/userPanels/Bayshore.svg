@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Bayshore.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -283,15 +283,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3622282"
-     inkscape:cx="681.60066"
+     inkscape:cx="507.98805"
      inkscape:cy="626.8971"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="-1"
-     inkscape:window-y="0"
+     inkscape:window-x="13"
+     inkscape:window-y="8"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -830,13 +830,13 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 240,260.56063 -40,0"
-         id="TO36.R"
+         id="TO35.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO36.N"
+         id="TO35.N"
          d="m 240,280.56063 -20,-20 -20,0"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
@@ -848,7 +848,7 @@
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO37.N"
+         id="TO36.N"
          d="m 280,280.56063 -20,-20 -20,0"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
@@ -858,7 +858,7 @@
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 280,260.56063 -40,0"
-         id="TO37.R"
+         id="TO36.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -1426,9 +1426,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Cavanaugh.svg"
-       transform="translate(-99.99999,90.466628)"
+       style="display:inline"
        id="cavanaughLink"
-       style="display:inline">
+       transform="translate(-99.99999,90.466628)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1456,9 +1456,9 @@
     </a>
     <a
        xlink:href="BayshoreEngine.svg"
-       style="display:inline"
+       transform="translate(610,70.466634)"
        id="a3591"
-       transform="translate(610,70.466634)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3593"
