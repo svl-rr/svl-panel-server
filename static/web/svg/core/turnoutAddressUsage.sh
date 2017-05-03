@@ -34,6 +34,14 @@ perl -p -i -e 's/[A-Z]$//g' turnoutAddressUnique.tmp
 #remove duplicates
 perl -ne 'print unless $seen{$_}++' turnoutAddressUnique.tmp > turnoutAddressBlockUnique.txt
 rm turnoutAddressUnique.tmp
+#find turnouts on dispatch panels
+grep 'Dispatch' turnoutAddressBlockUnique.txt > dispatchTurnouts.txt
+cp dispatchTurnouts.txt dispatchTurnouts.tmp
+perl -p -i -e 's/^\w+\sTO//g' dispatchTurnouts.tmp
+sort -g dispatchTurnouts.tmp > dispatchTurnouts2.tmp
+perl -ne 'print unless $seen{$_}++' dispatchTurnouts2.tmp > dispatchTurnouts.txt
+rm dispatchTurnouts.tmp
+rm dispatchTurnouts2.tmp
 #find layout unique
 cp turnoutAddressBlockUnique.txt turnoutAddressLayoutUnique.txt
 perl -p -i -e 's/^\w+\sTO//g' turnoutAddressLayoutUnique.txt
@@ -47,5 +55,8 @@ perl -p -i -e 's/(\d+)/<turnout systemName=\"NT$1\" feedback=\"DIRECT\" inverted
 #more turnoutAddressBlockRoutes.txt
 #more turnoutAddressBlockUnique.txt
 #more turnoutAddressLayoutUnique.txt
-wc -l turnoutAddress*.txt
+wc -l turnoutAddressBlockRoutes.txt
+wc -l turnoutAddressBlockUnique.txt
+wc -l turnoutAddressLayoutUnique.txt
+wc -l dispatchTurnouts.txt
 cd ../core
