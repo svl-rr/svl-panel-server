@@ -95,18 +95,13 @@ var server = connect()
 	.listen(3000);
 
 
-// Create a socket.io (websocket) server associated with the HTTP server.
-// Web-based clients will use this connection in order to determine layout
+// Create a socket.io server associated with the HTTP server.
 // state and/or request changes. We need to track the connected clients
 // in order to deliver any out-of-band updates reported by JMRI.
 
-var io = require('socket.io').listen(server)
-	.enable('browser client minification')
-	.enable('browser client etag')
-	.enable('browser client gzip')
-	.set('transports', ['websocket'])
-	.set('log level', 1)
-	.sockets.on('connection', function (socket) {
+var io = require('socket.io')(server);
+
+	io.on('connect', function (socket) {
 		clients[socket.id] = socket;	// track the socket in clients array
 
 		socket.on('disconnect', function () {
