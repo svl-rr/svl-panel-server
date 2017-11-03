@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Bayshore.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,15 +283,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3622282"
-     inkscape:cx="507.98805"
-     inkscape:cy="626.8971"
+     inkscape:cx="568.58045"
+     inkscape:cy="480.07882"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1104"
-     inkscape:window-x="13"
-     inkscape:window-y="8"
+     inkscape:window-x="-1"
+     inkscape:window-y="13"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -1390,6 +1390,14 @@
        d="m 800,180.56063 -40,0"
        id="path3589"
        inkscape:connector-curvature="0" />
+    <path
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 320,100.56063 -160,0"
+       id="path4807"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       onclick="hardestyIndustriesPath()" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1426,9 +1434,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Cavanaugh.svg"
-       style="display:inline"
+       transform="translate(-99.99999,90.466628)"
        id="cavanaughLink"
-       transform="translate(-99.99999,90.466628)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1456,9 +1464,9 @@
     </a>
     <a
        xlink:href="BayshoreEngine.svg"
-       transform="translate(610,70.466634)"
+       style="display:inline"
        id="a3591"
-       style="display:inline">
+       transform="translate(610,70.466634)">
       <text
          sodipodi:linespacing="125%"
          id="text3593"
@@ -1495,13 +1503,13 @@
        sodipodi:linespacing="125%"
        id="text4450"
        y="116.58093"
-       x="820"
+       x="850"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="116.58093"
-         x="820"
+         x="850"
          sodipodi:role="line"
-         id="tspan4454">Passenger Track</tspan></text>
+         id="tspan4454">Station Trk #2</tspan></text>
     <text
        sodipodi:linespacing="125%"
        id="text4494"
@@ -1643,13 +1651,13 @@
        sodipodi:linespacing="125%"
        id="text3214"
        y="76.580933"
-       x="840"
+       x="770"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="76.580933"
-         x="840"
+         x="770"
          id="tspan3216"
-         sodipodi:role="line">Main (NB)</tspan></text>
+         sodipodi:role="line">Main (NB)/Station Trk #1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1660,6 +1668,41 @@
          id="tspan3605"
          sodipodi:role="line"
          x="880"
-         y="196.58093">Engine Ready Track</tspan></text>
+         y="196.58093">Station Trk #4</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4799"
+       y="156.58093"
+       x="880"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"
+       transform="translate(0,-2.1960433e-6)"><tspan
+         y="156.58093"
+         x="880"
+         sodipodi:role="line"
+         id="tspan4801">Station Trk #3</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4803"
+       y="116.58093"
+       x="160"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="116.58093"
+         x="160"
+         id="tspan4805"
+         sodipodi:role="line">Hardesty Industries</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="1030"
+       y="546.58093"
+       id="text4809"
+       sodipodi:linespacing="125%"
+       inkscape:transform-center-y="44.199212"><tspan
+         id="tspan4811"
+         sodipodi:role="line"
+         x="1030"
+         y="546.58093">Main (SB)</tspan></text>
   </g>
 </svg>

@@ -108,3 +108,8 @@ function mainNorthLeadPath()
 {
     executePathArray(["TO39.N", "TO25.N"]);	
 }
+
+function hardestyIndustriesPath()
+{
+    executePathArray(["TO25.R”]);	
+}
