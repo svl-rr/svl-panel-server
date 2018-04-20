@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1047.9579"
+   height="690.11475"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   sodipodi:docname="TurnoutToggler.svg"
+   onload="init(evt)">
+  <script
+     xlink:href="TurnoutToggler.js"
+     id="script105" />
+  <title
+     id="title1">Turnout Tester</title>
+  <script
+     xlink:href="/socket.io/socket.io.js"
+     id="script3" />
+  <script
+     xlink:href="/web/svg/core/ServerComms.js"
+     id="script3177" />
+  <script
+     xlink:href="/web/svg/core/PanelCommon.js"
+     type="application/ecmascript"
+     id="script_common" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradient5066">
+      <stop
+         style="stop-color:#000000;stop-opacity:0.1882353;"
+         offset="0"
+         id="stop5068" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop5070" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4692">
+      <stop
+         id="stop4694"
+         offset="0"
+         style="stop-color:#ffffff;stop-opacity:0.75294119;" />
+      <stop
+         id="stop4696"
+         offset="1"
+         style="stop-color:#ffffff;stop-opacity:0;" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4186">
+      <stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop4188" />
+      <stop
+         style="stop-color:#000000;stop-opacity:0;"
+         offset="1"
+         id="stop4190" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4137"
+       paint="solid">
+      <stop
+         style="stop-color:#00ff00;stop-opacity:1;"
+         offset="0"
+         id="stop4139" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4186"
+       id="linearGradient4976"
+       gradientUnits="userSpaceOnUse"
+       x1="39.5"
+       y1="75.114258"
+       x2="70.5"
+       y2="75.114258" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4186"
+       id="linearGradient4978"
+       gradientUnits="userSpaceOnUse"
+       x1="39.5"
+       y1="75.114258"
+       x2="70.5"
+       y2="75.114258" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4692"
+       id="radialGradient5060"
+       gradientUnits="userSpaceOnUse"
+       cx="55"
+       cy="75.114258"
+       fx="55"
+       fy="75.114258"
+       r="15" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5066"
+       id="radialGradient5064"
+       gradientUnits="userSpaceOnUse"
+       cx="55"
+       cy="75.114258"
+       fx="55"
+       fy="75.114258"
+       r="15" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4692"
+       id="radialGradient4247"
+       gradientUnits="userSpaceOnUse"
+       cx="55"
+       cy="75.114258"
+       fx="55"
+       fy="75.114258"
+       r="15" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5066"
+       id="radialGradient4249"
+       gradientUnits="userSpaceOnUse"
+       cx="55"
+       cy="75.114258"
+       fx="55"
+       fy="75.114258"
+       r="15" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient5066"
+       id="radialGradient4251"
+       gradientUnits="userSpaceOnUse"
+       cx="55"
+       cy="75.114258"
+       fx="55"
+       fy="75.114258"
+       r="15" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4186"
+       id="linearGradient4253"
+       gradientUnits="userSpaceOnUse"
+       x1="39.5"
+       y1="75.114258"
+       x2="70.5"
+       y2="75.114258" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4186"
+       id="linearGradient4255"
+       gradientUnits="userSpaceOnUse"
+       x1="39.5"
+       y1="75.114258"
+       x2="70.5"
+       y2="75.114258" />
+    <marker
+       inkscape:stockid="TriangleAuthNBMarker"
+       orient="auto"
+       refY="0"
+       refX="0.60000002"
+       id="TriangleAuthNBMarker"
+       style="overflow:visible">
+      <path
+         id="TriangleAuthNBMarkerPath"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#00ff00;fill-rule:evenodd;stroke:#00ff00;stroke-width:1pt;marker-start:none"
+         transform="scale(0.2,0.2)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleAuthSBMarker"
+       orient="auto"
+       refY="0"
+       refX="-0.60000002"
+       id="TriangleAuthSBMarker"
+       style="overflow:visible">
+      <path
+         id="TriangleAuthSBMarkerPath"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#00ff00;fill-rule:evenodd;stroke:#00ff00;stroke-width:1pt;marker-start:none"
+         transform="scale(-0.2,-0.2)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOccupiedNBMarker"
+       orient="auto"
+       refY="0"
+       refX="0.6000002"
+       id="TriangleOccupiedNBMarker"
+       style="overflow:visible">
+      <path
+         id="TriangleOccupiedNBMarkerPath"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;marker-start:none"
+         transform="scale(0.2,0.2)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOccupiedSBMarker"
+       orient="auto"
+       refY="0"
+       refX="-0.6000002"
+       id="TriangleOccupiedSBMarker"
+       style="overflow:visible">
+      <path
+         id="TriangleOccupiedSBMarkerPath"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#ff0000;fill-rule:evenodd;stroke:#ff0000;stroke-width:1pt;marker-start:none"
+         transform="scale(-0.2,-0.2)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleOutM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleOutM"
+       style="overflow:visible">
+      <path
+         id="path4051"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;marker-start:none"
+         transform="scale(0.25,0.25)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="TriangleInM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="TriangleInM"
+       style="overflow:visible">
+      <path
+         id="path4042"
+         d="m 5.77,0 -8.65,5 0,-10 8.65,5 z"
+         style="fill:#ffffff;fill-rule:evenodd;stroke:#ffffff;stroke-width:1pt;marker-start:none"
+         transform="scale(-0.25,-0.25)"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:stockid="StopM"
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="StopM"
+       style="overflow:visible">
+      <path
+         id="path4078"
+         d="M 0,5.65 0,-5.65"
+         style="fill:none;stroke:#ffffff;stroke-width:2pt"
+         transform="scale(0.4,0.4)"
+         inkscape:connector-curvature="0" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.17"
+     inkscape:cx="434.79024"
+     inkscape:cy="408.4142"
+     inkscape:document-units="px"
+     inkscape:current-layer="trackNameLayer"
+     showgrid="true"
+     inkscape:window-width="1440"
+     inkscape:window-height="856"
+     inkscape:window-x="0"
+     inkscape:window-y="1"
+     inkscape:window-maximized="0"
+     inkscape:object-paths="false"
+     inkscape:snap-intersection-paths="false"
+     inkscape:snap-bbox="false"
+     inkscape:bbox-nodes="false"
+     inkscape:bbox-paths="false"
+     inkscape:snap-nodes="true"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:snap-grids="true"
+     objecttolerance="10000"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     units="pc">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3900"
+       empspacing="4"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       dotted="false"
+       spacingx="10"
+       spacingy="10"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Turnout Tester</dc:title>
+        <cc:license
+           rdf:resource="" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Background"
+     inkscape:groupmode="layer"
+     id="backgroundLayer"
+     transform="translate(0,-312.24686)"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       id="panelBackground"
+       width="1047.9579"
+       height="690.11475"
+       x="0"
+       y="312.24738" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="textLayer"
+     inkscape:label="Text"
+     transform="translate(0,-3.979257)"
+     style="display:inline">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+       x="320"
+       y="64.094002"
+       id="panelTitle"><tspan
+         sodipodi:role="line"
+         id="tspan3823"
+         x="320"
+         y="64.094002"
+         style="font-size:52.33785248px;line-height:1.25">Turnout Toggler</tspan></text>
+    <text
+       id="panelStatus"
+       y="674.09448"
+       x="20"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+       xml:space="preserve"
+       inkscape:label="#text4524"><tspan
+         y="674.09448"
+         x="20"
+         id="tspanPanelStatus"
+         sodipodi:role="line"
+         style="font-size:12px;line-height:1.25">Panel not initialized</tspan></text>
+    <g
+       id="mainlineLockedGroup"
+       transform="translate(10,10)">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+         x="400"
+         y="104.094"
+         id="mainlineLockedText"><tspan
+           y="104.094"
+           x="400"
+           id="tspan3321"
+           sodipodi:role="line"
+           style="font-size:25.22973061px;line-height:1.25">Mainline Locked</tspan></text>
+      <g
+         id="leftLock">
+        <rect
+           id="lockBody"
+           width="10"
+           height="10"
+           x="380"
+           y="94.094002"
+           style="fill:#ffffff;fill-opacity:1;stroke:none" />
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 382.06784,94.273904 c 0,0 -0.11993,-5.382544 2.81845,-5.322578 3.35815,-0.05997 2.9239,5.322578 2.9239,5.322578"
+           id="path4159"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccc" />
+      </g>
+      <use
+         height="690.11475"
+         width="1047.9579"
+         transform="translate(210,1.3237304e-6)"
+         id="rightLock"
+         xlink:href="#leftLock"
+         y="0"
+         x="0" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="industrialTrackLayer"
+     inkscape:label="Industrial Track"
+     transform="translate(0,-3.979257)" />
+  <g
+     inkscape:groupmode="layer"
+     id="mainlineTrackLayer"
+     inkscape:label="Mainline Track"
+     transform="translate(0,-3.979257)" />
+  <g
+     inkscape:groupmode="layer"
+     id="mainlinePanelLinkLayer"
+     inkscape:label="Mainline Panel Links"
+     transform="translate(0,4.4296875e-4)"
+     style="display:inline" />
+  <g
+     inkscape:groupmode="layer"
+     id="industrialPanelLinkLayer"
+     inkscape:label="Industrial Panel Links" />
+  <g
+     inkscape:groupmode="layer"
+     id="trackNameLayer"
+     inkscape:label="Track Names"
+     transform="translate(0,4.4296875e-4)">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="305.1282"
+       y="291.8237"
+       id="text3192"><tspan
+         sodipodi:role="line"
+         id="tspan3194"
+         x="305.1282"
+         y="291.8237"
+         style="font-size:16px;line-height:1.25">Addr</tspan></text>
+    <text
+       id="addrToToggle"
+       y="331.82373"
+       x="318.03418"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:label="#text3204"
+       onclick="addrToToggleClick()"><tspan
+         y="331.82373"
+         x="318.03418"
+         id="tspan3206"
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">0</tspan></text>
+    <text
+       id="toggleStart"
+       y="330.11429"
+       x="492.56412"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:label="#text3244"
+       onclick="toggleStartClick()"><tspan
+         y="330.11429"
+         x="492.56412"
+         id="tspan3246"
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">Start Toggling</tspan></text>
+    <text
+       onclick="toggleStopClick()"
+       inkscape:label="#text3244"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="648.97437"
+       y="330.96896"
+       id="toggleStop"><tspan
+         style="font-size:16px;line-height:1.25"
+         sodipodi:role="line"
+         id="tspan93"
+         x="648.97437"
+         y="330.96896">Stop Toggling</tspan></text>
+    <text
+       id="text99"
+       y="293.53311"
+       x="397.43588"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-size:16px;line-height:1.25"
+         y="293.53311"
+         x="397.43588"
+         id="tspan97"
+         sodipodi:role="line">Delay (s)</tspan></text>
+    <text
+       inkscape:label="#text3204"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="410.34186"
+       y="333.53314"
+       id="toggleDelay"
+       onclick="toggleDelayClick()"><tspan
+         style="font-size:16px;line-height:1.25"
+         sodipodi:role="line"
+         id="tspan101"
+         x="410.34186"
+         y="333.53314">4</tspan></text>
+    <text
+       onclick="toggleDelayClick()"
+       id="togglerStatusString"
+       y="454.90067"
+       x="333.41879"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"
+       inkscape:label="#text3204"><tspan
+         y="454.90067"
+         x="333.41879"
+         id="tspan77"
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">togglerStatusString</tspan></text>
+  </g>
+</svg>
