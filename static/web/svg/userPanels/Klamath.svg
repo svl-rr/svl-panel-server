@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Klamath.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -283,7 +283,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="513.00938"
+     inkscape:cx="321.79524"
      inkscape:cy="354.54669"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
@@ -1132,9 +1132,9 @@
        inkscape:label="#path4221" />
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       style="display:inline"
+       id="a3201"
        transform="translate(50,220)"
-       id="a3201">
+       style="display:inline">
       <path
          inkscape:connector-curvature="0"
          id="path4651"
@@ -1182,9 +1182,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       id="a3692"
+       style="display:inline"
        transform="translate(-36,4.0000547)"
-       style="display:inline">
+       id="a3692">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1200,9 +1200,9 @@
     </a>
     <a
        xlink:href="JasperJct.svg"
-       id="a4148"
+       style="display:inline"
        transform="translate(-90,194.00005)"
-       style="display:inline">
+       id="a4148">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1218,9 +1218,9 @@
     </a>
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       style="display:inline"
+       id="a4653"
        transform="translate(840,374.00005)"
-       id="a4653">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text4655"

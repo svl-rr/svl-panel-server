@@ -14,7 +14,7 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.2 r9819"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="TurnoutTester.svg"
    onload="init(evt)">
   <title
@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="TurnoutTester.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <linearGradient
@@ -269,7 +269,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.17"
-     inkscape:cx="283.71227"
+     inkscape:cx="82.430219"
      inkscape:cy="340.03813"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
@@ -338,10 +338,11 @@
      id="textLayer"
      inkscape:label="Text"
      transform="translate(0,-3.979257)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
-       style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:52.33785248px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
        x="320"
        y="64.094002"
        id="panelTitle"
@@ -355,7 +356,7 @@
        id="panelStatus"
        y="674.09448"
        x="20"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"
        inkscape:label="#text4524"><tspan
          y="674.09448"
@@ -367,7 +368,7 @@
        transform="translate(10,10)">
       <text
          xml:space="preserve"
-         style="font-size:25.22973061px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.22973061px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          x="400"
          y="104.094"
          id="mainlineLockedText"
@@ -406,30 +407,35 @@
      inkscape:groupmode="layer"
      id="industrialTrackLayer"
      inkscape:label="Industrial Track"
-     transform="translate(0,-3.979257)" />
+     transform="translate(0,-3.979257)"
+     sodipodi:insensitive="true" />
   <g
      inkscape:groupmode="layer"
      id="mainlineTrackLayer"
      inkscape:label="Mainline Track"
-     transform="translate(0,-3.979257)" />
+     transform="translate(0,-3.979257)"
+     sodipodi:insensitive="true" />
   <g
      inkscape:groupmode="layer"
      id="mainlinePanelLinkLayer"
      inkscape:label="Mainline Panel Links"
      transform="translate(0,4.4296875e-4)"
-     style="display:inline" />
+     style="display:inline"
+     sodipodi:insensitive="true" />
   <g
      inkscape:groupmode="layer"
      id="industrialPanelLinkLayer"
-     inkscape:label="Industrial Panel Links" />
+     inkscape:label="Industrial Panel Links"
+     sodipodi:insensitive="true" />
   <g
      inkscape:groupmode="layer"
      id="trackNameLayer"
      inkscape:label="Track Names"
-     transform="translate(0,4.4296875e-4)">
+     transform="translate(0,4.4296875e-4)"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="110"
        y="290.11432"
        id="text4446"
@@ -443,7 +449,7 @@
        id="text3188"
        y="290.11432"
        x="270"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="290.11432"
          x="270"
@@ -451,7 +457,7 @@
          sodipodi:role="line">End Addr</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="400"
        y="290.11429"
        id="text3192"
@@ -465,7 +471,7 @@
        id="oneAtATimeStart"
        y="330.11432"
        x="130"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"
        inkscape:label="#text3196"
        onclick="oneAtATimeStartClick()"><tspan
@@ -475,7 +481,7 @@
          sodipodi:role="line">1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="290"
        y="330.11432"
        id="oneAtATimeEnd"
@@ -491,7 +497,7 @@
        id="oneAtATimeCurrent"
        y="330.11432"
        x="430"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"
        inkscape:label="#text3204"><tspan
          y="330.11432"
@@ -500,7 +506,7 @@
          sodipodi:role="line">0</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="130"
        y="370.11429"
        id="setAllStart"
@@ -516,7 +522,7 @@
        id="setAllEnd"
        y="370.11429"
        x="290"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"
        onclick="setAllEndClick()"
        inkscape:label="#text3212"><tspan
@@ -526,7 +532,7 @@
          sodipodi:role="line">767</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="420"
        y="370.11429"
        id="text3216"
@@ -537,7 +543,7 @@
          y="370.11429">N/A</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="590"
        y="330.11432"
        id="oneAtATimeSetN"
@@ -553,7 +559,7 @@
        id="setAllN"
        y="370.11429"
        x="590"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"
        onclick="setAllNClick()"
        inkscape:label="#text3228"><tspan
@@ -566,7 +572,7 @@
        id="oneAtATimeSetR"
        y="330.11432"
        x="730"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"
        onclick="oneAtATimeSetRClick()"
        inkscape:label="#text3236"><tspan
@@ -576,7 +582,7 @@
          sodipodi:role="line">Set 'R'</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="730"
        y="370.11429"
        id="setAllR"
@@ -592,7 +598,7 @@
        id="oneAtATimeNext"
        y="330.11429"
        x="490"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"
        inkscape:label="#text3244"
        onclick="oneAtATimeNextClick()"><tspan

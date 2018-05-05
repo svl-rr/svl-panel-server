@@ -31,8 +31,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="Kaos_Kalamazoo.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,7 +283,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2316035"
-     inkscape:cx="415.30506"
+     inkscape:cx="224.09092"
      inkscape:cy="286.56518"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
@@ -353,7 +353,8 @@
      id="textLayer"
      inkscape:label="Text"
      transform="translate(0,-3.9797544)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvel.svg"
        id="a3321">
@@ -362,7 +363,7 @@
          id="panelTitle"
          y="654.09448"
          x="330"
-         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:52.33785248px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="654.09448"
            x="330"
@@ -374,7 +375,7 @@
        id="panelStatus"
        y="680.56061"
        x="20"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"
        inkscape:label="#text4524"><tspan
          y="680.56061"
@@ -402,7 +403,7 @@
        transform="translate(36,486.46663)">
       <text
          xml:space="preserve"
-         style="font-size:25.22973061px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.22973061px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          x="400"
          y="104.094"
          id="mainlineLockedText"
@@ -438,7 +439,7 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="340"
        y="674.09448"
        id="text4352"
@@ -452,7 +453,7 @@
        id="text4356"
        y="674.09448"
        x="540"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan4358"
          y="674.09448"
@@ -1090,8 +1091,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvel.svg"
-       transform="translate(-60,10.000047)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-60,10.000047)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1107,8 +1108,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       id="a4142"
-       transform="translate(830,324.00005)">
+       transform="translate(830,324.00005)"
+       id="a4142">
       <text
          sodipodi:linespacing="125%"
          id="text4593"
@@ -1124,8 +1125,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       id="a3737"
-       transform="translate(-60,50.000047)">
+       transform="translate(-60,50.000047)"
+       id="a3737">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1141,8 +1142,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,944.46301,540.1413)"
-       id="a3192">
+       id="a3192"
+       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,944.46301,540.1413)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1158,9 +1159,9 @@
     </a>
     <a
        xlink:href="JasperJct.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(660,-125.99995)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1176,9 +1177,9 @@
     </a>
     <a
        xlink:href="Klamath.svg"
-       style="display:inline"
+       id="a3692"
        transform="translate(580,34.000054)"
-       id="a3692">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1194,9 +1195,9 @@
     </a>
     <a
        xlink:href="Klamath.svg"
-       id="a4653"
+       style="display:inline"
        transform="translate(230,-19.999946)"
-       style="display:inline">
+       id="a4653">
       <text
          sodipodi:linespacing="125%"
          id="text4655"

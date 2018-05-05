@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="Hallelujah.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -283,7 +283,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2274763"
-     inkscape:cx="537.39605"
+     inkscape:cx="345.53899"
      inkscape:cy="255.65554"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
@@ -1415,8 +1415,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Jacksonville.svg"
-       id="daytonIndustrialLink"
-       transform="translate(-100,54.000047)">
+       transform="translate(-100,54.000047)"
+       id="daytonIndustrialLink">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -1432,8 +1432,8 @@
     </a>
     <a
        xlink:href="Greeley_Gotham.svg"
-       transform="translate(818.01523,400.15891)"
-       id="a4142">
+       id="a4142"
+       transform="translate(818.01523,400.15891)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1449,8 +1449,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       transform="translate(-100,164.00005)"
-       id="a3156">
+       id="a3156"
+       transform="translate(-100,164.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1474,9 +1474,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       id="a4148"
+       style="display:inline"
        transform="matrix(0,1,-1,0,1274.1147,22.11525)"
-       style="display:inline">
+       id="a4148">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

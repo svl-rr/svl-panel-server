@@ -31,8 +31,8 @@
      id="script_common" />
   <script
      xlink:href="BayshoreEngine.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -1031,7 +1031,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2680787"
-     inkscape:cx="631.5913"
+     inkscape:cx="445.87727"
      inkscape:cy="610.09252"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
@@ -3771,9 +3771,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Bayshore.svg"
-       style="display:inline"
+       transform="translate(-109.56957,70.46663)"
        id="BayshoreLink"
-       transform="translate(-109.56957,70.46663)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

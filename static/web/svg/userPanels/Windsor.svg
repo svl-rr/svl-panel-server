@@ -31,8 +31,8 @@
      id="script6" />
   <script
      xlink:href="Windsor.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,7 +283,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.26"
-     inkscape:cx="570.63927"
+     inkscape:cx="383.73451"
      inkscape:cy="358.81101"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
@@ -878,9 +878,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Victoria.svg"
-       style="display:inline"
+       transform="translate(-120,298.00049)"
        id="pasoLink"
-       transform="translate(-120,298.00049)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
