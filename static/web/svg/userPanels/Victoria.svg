@@ -14,7 +14,7 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.2 r9819"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="Victoria.svg"
    onload="init(evt)">
   <title
@@ -31,8 +31,8 @@
      id="script6" />
   <script
      xlink:href="Victoria.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -283,7 +283,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.36"
-     inkscape:cx="408.7109"
+     inkscape:cx="308.92276"
      inkscape:cy="473.02711"
      inkscape:document-units="px"
      inkscape:current-layer="textLayer"
@@ -841,13 +841,13 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Upton.svg"
-       transform="translate(-200,244.00005)"
+       style="display:inline"
        id="pasoLink"
-       style="display:inline">
+       transform="translate(-200,244.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="240"
          y="126.11475"
          id="text3120"
@@ -859,15 +859,15 @@
     </a>
     <a
        xlink:href="Windsor.svg"
-       style="display:inline"
+       transform="translate(750,98.00005)"
        id="a3517"
-       transform="translate(750,98.00005)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3519"
          y="116.11475"
          x="250"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"><tspan
            id="tspan3521"
@@ -885,9 +885,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Upton.svg"
-       style="display:inline"
+       transform="translate(-170,274.0005)"
        id="a3534"
-       transform="translate(-170,274.0005)">
+       style="display:inline">
       <text
          sodipodi:linespacing="125%"
          id="text3536"

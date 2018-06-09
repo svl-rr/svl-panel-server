@@ -37,8 +37,8 @@
      id="script_common" />
   <script
      xlink:href="DispatchSouthRedirect.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -289,7 +289,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.88"
-     inkscape:cx="390.63956"
+     inkscape:cx="265.3736"
      inkscape:cy="315.48199"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"

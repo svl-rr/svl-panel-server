@@ -14,7 +14,7 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.2 r9819"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="EbbettsEagle_Escape.svg"
    onload="init(evt)">
   <title
@@ -31,8 +31,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="EbbettsEagle_Escape.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,7 +283,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.99907045"
-     inkscape:cx="500.28479"
+     inkscape:cx="264.56568"
      inkscape:cy="362.19812"
      inkscape:document-units="px"
      inkscape:current-layer="textLayer"
@@ -691,14 +691,14 @@
      sodipodi:insensitive="true">
     <path
        inkscape:label="#path4221"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 990,414.0945 0,-160 -80,-80 -360,0"
        id="path3150"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
     <path
        sodipodi:nodetypes="cc"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        d="m 990,454.0945 0,-40"
        id="path3233"
        inkscape:connector-curvature="0" />
@@ -706,14 +706,14 @@
        inkscape:connector-curvature="0"
        id="path3332"
        d="m 70,374.0945 40,0"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3577"
        d="m 540,174.0945 -180,0 -200,200 -50,0"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
   </g>
   <g
@@ -725,8 +725,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       transform="translate(-80,324.00005)"
-       id="greeleyMainLink">
+       id="greeleyMainLink"
+       transform="translate(-80,324.00005)">
       <text
          sodipodi:linespacing="125%"
          id="text3305"
@@ -742,8 +742,8 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       id="EbbettsEagleMainLink"
-       transform="translate(820,424.00005)">
+       transform="translate(820,424.00005)"
+       id="EbbettsEagleMainLink">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -767,9 +767,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Fryton_Fremont.svg"
-       style="display:inline"
+       transform="translate(-90,134.0005)"
        id="a3633"
-       transform="translate(-90,134.0005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -785,9 +785,9 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       transform="translate(750,404.0005)"
+       style="display:inline"
        id="a3642"
-       style="display:inline">
+       transform="translate(750,404.0005)">
       <text
          sodipodi:linespacing="125%"
          id="text3644"
