@@ -1,16 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/xml/XSLT/panelfile-2-9-6.xsl"?>
+<?xml-stylesheet href="/xml/XSLT/panelfile-2-9-6.xsl" type="text/xsl"?>
 <layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-2-9-6.xsd">
   <jmriversion>
-    <major>3</major>
-    <minor>8</minor>
+    <major>4</major>
+    <minor>6</minor>
     <test>0</test>
     <modifier />
   </jmriversion>
-  <sensors class="jmri.managers.configurexml.InternalSensorManagerXml">
+  <sensors class="jmri.jmrix.internal.configurexml.InternalSensorManagerXml">
     <defaultInitialState>unknown</defaultInitialState>
     <sensor systemName="ISCLOCKRUNNING" inverted="false">
       <systemName>ISCLOCKRUNNING</systemName>
+    </sensor>
+  </sensors>
+  <sensors class="jmri.jmrix.loconet.configurexml.LnSensorManagerXml">
+    <sensor systemName="LS10" inverted="false">
+      <systemName>LS10</systemName>
+    </sensor>
+    <sensor systemName="LS11" inverted="false">
+      <systemName>LS11</systemName>
+    </sensor>
+    <sensor systemName="LS12" inverted="false">
+      <systemName>LS12</systemName>
+    </sensor>
+    <sensor systemName="LS13" inverted="false">
+      <systemName>LS13</systemName>
+    </sensor>
+    <sensor systemName="LS14" inverted="false">
+      <systemName>LS14</systemName>
+    </sensor>
+    <sensor systemName="LS15" inverted="false">
+      <systemName>LS15</systemName>
+    </sensor>
+    <sensor systemName="LS16" inverted="false">
+      <systemName>LS16</systemName>
+    </sensor>
+    <sensor systemName="LS173" inverted="false">
+      <systemName>LS173</systemName>
+    </sensor>
+    <sensor systemName="LS174" inverted="false">
+      <systemName>LS174</systemName>
+      <comment>fryton main</comment>
+    </sensor>
+    <sensor systemName="LS175" inverted="false">
+      <systemName>LS175</systemName>
+      <comment>fryton siding sw (ebbets side)</comment>
+    </sensor>
+    <sensor systemName="LS176" inverted="false">
+      <systemName>LS176</systemName>
+      <comment>fryton siding sw (greeley side)</comment>
+    </sensor>
+    <sensor systemName="LS177" inverted="false">
+      <systemName>LS177</systemName>
+      <comment>fryton siding</comment>
+    </sensor>
+    <sensor systemName="LS178" inverted="false">
+      <systemName>LS178</systemName>
+      <comment>also fryton siding sw (greeley side)</comment>
+    </sensor>
+    <sensor systemName="LS5" inverted="false">
+      <systemName>LS5</systemName>
+    </sensor>
+    <sensor systemName="LS8" inverted="false">
+      <systemName>LS8</systemName>
+    </sensor>
+    <sensor systemName="LS9" inverted="false">
+      <systemName>LS9</systemName>
     </sensor>
   </sensors>
   <turnouts class="jmri.jmrix.nce.configurexml.NceTurnoutManagerXml">
@@ -20,7 +75,7 @@
       <operation name="Sensor" class="jmri.configurexml.turnoutoperations.SensorTurnoutOperationXml" interval="300" maxtries="3" />
     </operations>
     <defaultclosedspeed>Normal</defaultclosedspeed>
-    <defaultthrownspeed>Restricted</defaultthrownspeed>
+    <defaultthrownspeed>Normal</defaultthrownspeed>
     <turnout systemName="NT10" feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT10</systemName>
     </turnout>
@@ -33,12 +88,6 @@
     <turnout systemName="NT102" feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT102</systemName>
     </turnout>
-    <turnout systemName="NT103" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>NT103</systemName>
-    </turnout>
-    <turnout systemName="NT104" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>NT104</systemName>
-    </turnout>
     <turnout systemName="NT105" feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT105</systemName>
     </turnout>
@@ -48,8 +97,41 @@
     <turnout systemName="NT11" feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT11</systemName>
     </turnout>
+    <turnout systemName="NT114" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT114</systemName>
+    </turnout>
+    <turnout systemName="NT115" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT115</systemName>
+    </turnout>
+    <turnout systemName="NT116" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT116</systemName>
+    </turnout>
+    <turnout systemName="NT117" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT117</systemName>
+    </turnout>
+    <turnout systemName="NT118" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT118</systemName>
+    </turnout>
+    <turnout systemName="NT119" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT119</systemName>
+    </turnout>
     <turnout systemName="NT12" feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT12</systemName>
+    </turnout>
+    <turnout systemName="NT120" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT120</systemName>
+    </turnout>
+    <turnout systemName="NT121" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT121</systemName>
+    </turnout>
+    <turnout systemName="NT122" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT122</systemName>
+    </turnout>
+    <turnout systemName="NT123" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT123</systemName>
+    </turnout>
+    <turnout systemName="NT124" feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT124</systemName>
     </turnout>
     <turnout systemName="NT125" feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT125</systemName>
@@ -129,8 +211,9 @@
     <turnout systemName="NT175" feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT175</systemName>
     </turnout>
-    <turnout systemName="NT176" feedback="DIRECT" inverted="false" automate="Default">
+    <turnout systemName="NT176" userName="fryton siding (greeley side)" feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT176</systemName>
+      <userName>fryton siding (greeley side)</userName>
     </turnout>
     <turnout systemName="NT177" feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT177</systemName>
@@ -1074,69 +1157,6 @@
       <systemName>NT9</systemName>
     </turnout>
   </turnouts>
-  <turnouts class="jmri.jmrix.sprog.configurexml.SprogTurnoutManagerXml">
-    <operations automate="false">
-      <operation name="NoFeedback" class="jmri.configurexml.turnoutoperations.NoFeedbackTurnoutOperationXml" interval="300" maxtries="2" />
-      <operation name="Raw" class="jmri.configurexml.turnoutoperations.RawTurnoutOperationXml" interval="300" maxtries="1" />
-      <operation name="Sensor" class="jmri.configurexml.turnoutoperations.SensorTurnoutOperationXml" interval="300" maxtries="3" />
-    </operations>
-    <defaultclosedspeed>Normal</defaultclosedspeed>
-    <defaultthrownspeed>Restricted</defaultthrownspeed>
-    <turnout systemName="ST225" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST225</systemName>
-    </turnout>
-    <turnout systemName="ST226" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST226</systemName>
-    </turnout>
-    <turnout systemName="ST227" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST227</systemName>
-    </turnout>
-    <turnout systemName="ST228" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST228</systemName>
-    </turnout>
-    <turnout systemName="ST229" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST229</systemName>
-    </turnout>
-    <turnout systemName="ST230" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST230</systemName>
-    </turnout>
-    <turnout systemName="ST231" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST231</systemName>
-    </turnout>
-    <turnout systemName="ST232" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST232</systemName>
-    </turnout>
-    <turnout systemName="ST233" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST233</systemName>
-    </turnout>
-    <turnout systemName="ST234" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST234</systemName>
-    </turnout>
-    <turnout systemName="ST235" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST235</systemName>
-    </turnout>
-    <turnout systemName="ST236" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST236</systemName>
-    </turnout>
-    <turnout systemName="ST237" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST237</systemName>
-    </turnout>
-    <turnout systemName="ST238" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST238</systemName>
-    </turnout>
-    <turnout systemName="ST239" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST239</systemName>
-    </turnout>
-    <turnout systemName="ST240" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST240</systemName>
-    </turnout>
-    <turnout systemName="ST241" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST241</systemName>
-    </turnout>
-    <turnout systemName="ST242" feedback="DIRECT" inverted="false" automate="Default">
-      <systemName>ST242</systemName>
-    </turnout>
-  </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
     <memory systemName="IMBA102" value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA102</systemName>
@@ -1306,12 +1326,11 @@
     <memory systemName="IMBA99" value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA99</systemName>
     </memory>
-    <memory systemName="IMCURRENTTIME" value="8:32 PM">
+    <memory systemName="IMCURRENTTIME" value="6:56 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory systemName="IMLASTBAYSHORETURNTABLETRACK" value="0">
       <systemName>IMLASTBAYSHORETURNTABLETRACK</systemName>
-      <comment />
     </memory>
     <memory systemName="IMMAINLINE_LOCKED" value="false">
       <systemName>IMMAINLINE_LOCKED</systemName>
@@ -1524,175 +1543,247 @@
       <systemName>IMTA725B</systemName>
     </memory>
   </memories>
-  <signalmasts class="jmri.managers.configurexml.DefaultSignalMastManagerXml" />
+  <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
+    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml" systemName="NH$1" userName="Nowheres">
+      <systemName>NH$1</systemName>
+      <userName>Nowheres</userName>
+      <useAddressOffSet>yes</useAddressOffSet>
+      <aspect defines="Dark">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Red">
+        <number>0</number>
+      </aspect>
+      <aspect defines="Yellow">
+        <number>1</number>
+      </aspect>
+      <aspect defines="Green">
+        <number>2</number>
+      </aspect>
+      <aspect defines="Lunar">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Flashing Red">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Flashing Yellow">
+        <number>4</number>
+      </aspect>
+      <aspect defines="Flashing Green">
+        <number>5</number>
+      </aspect>
+      <aspect defines="Flashing Lunar">
+        <number>30</number>
+      </aspect>
+    </signalhead>
+  </signalheads>
+  <signalmasts class="jmri.managers.configurexml.DefaultSignalMastManagerXml">
+    <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="green">
+      <systemName>IF$vsm:UP-2008:SL-1A($0001)</systemName>
+      <userName>green</userName>
+      <unlit allowed="no" />
+      <disabledAspects>
+        <disabledAspect>Advance Approach</disabledAspect>
+        <disabledAspect>Approach</disabledAspect>
+        <disabledAspect>Restricting</disabledAspect>
+        <disabledAspect>Stop</disabledAspect>
+      </disabledAspects>
+    </virtualsignalmast>
+    <dccsignalmast class="jmri.implementation.configurexml.DccSignalMastXml" userName="ebbets_pass_main_nb">
+      <systemName>NF$dsm:UP-2008:SL-1A(1)</systemName>
+      <userName>ebbets_pass_main_nb</userName>
+      <unlit allowed="no" />
+      <aspect defines="Clear">
+        <number>2</number>
+      </aspect>
+      <aspect defines="Advance Approach">
+        <number>4</number>
+      </aspect>
+      <aspect defines="Approach">
+        <number>1</number>
+      </aspect>
+      <aspect defines="Restricting">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Stop">
+        <number>0</number>
+      </aspect>
+      <aspect defines="Unlit">
+        <number>31</number>
+      </aspect>
+    </dccsignalmast>
+    <dccsignalmast class="jmri.implementation.configurexml.DccSignalMastXml" userName="fryton_main_nb_hi">
+      <systemName>NF$dsm:UP-2008:SL-1A(2002)</systemName>
+      <userName>fryton_main_nb_hi</userName>
+      <unlit allowed="no" />
+      <aspect defines="Clear">
+        <number>2</number>
+      </aspect>
+      <aspect defines="Advance Approach">
+        <number>4</number>
+      </aspect>
+      <aspect defines="Approach">
+        <number>1</number>
+      </aspect>
+      <aspect defines="Restricting">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Stop">
+        <number>0</number>
+      </aspect>
+      <aspect defines="Unlit">
+        <number>31</number>
+      </aspect>
+    </dccsignalmast>
+    <dccsignalmast class="jmri.implementation.configurexml.DccSignalMastXml" userName="fryton_main_nb_lo">
+      <systemName>NF$dsm:UP-2008:SL-1A(2003)</systemName>
+      <userName>fryton_main_nb_lo</userName>
+      <unlit allowed="no" />
+      <aspect defines="Clear">
+        <number>2</number>
+      </aspect>
+      <aspect defines="Advance Approach">
+        <number>4</number>
+      </aspect>
+      <aspect defines="Approach">
+        <number>1</number>
+      </aspect>
+      <aspect defines="Restricting">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Stop">
+        <number>0</number>
+      </aspect>
+      <aspect defines="Unlit">
+        <number>31</number>
+      </aspect>
+    </dccsignalmast>
+  </signalmasts>
   <signalgroups class="jmri.managers.configurexml.DefaultSignalGroupManagerXml" />
+  <oblocks class="jmri.jmrit.logix.configurexml.OBlockManagerXml" />
   <warrants class="jmri.jmrit.logix.configurexml.WarrantManagerXml" />
   <signalmastlogics class="jmri.managers.configurexml.DefaultSignalMastLogicManagerXml">
     <logicDelay>500</logicDelay>
   </signalmastlogics>
+  <logixs class="jmri.managers.configurexml.DefaultLogixManagerXml">
+    <logix systemName="IX:AUTO:0001" userName="always_green" enabled="yes">
+      <systemName>IX:AUTO:0001</systemName>
+      <userName>always_green</userName>
+      <logixConditional systemName="IX:AUTO:0001C1" order="0" />
+    </logix>
+  </logixs>
+  <conditionals class="jmri.managers.configurexml.DefaultConditionalManagerXml">
+    <conditional systemName="IX:AUTO:0001C1" userName="set_green_green" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0001C1</systemName>
+      <userName>set_green_green</userName>
+      <conditionalStateVariable operator="4" negated="no" type="3" systemName="NT174" dataString="" num1="0" num2="0" triggersCalc="yes" />
+      <conditionalAction option="3" type="37" systemName="green" data="-1" delay="0" string="Clear" />
+    </conditional>
+  </conditionals>
   <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Fri Jul 20 19:39:02 PDT 2012" rate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startsettime="no" startclockoption="0" />
+  <entryexitpairs class="jmri.jmrit.signalling.configurexml.EntryExitPairsXml" />
+  <entryexitpairs class="jmri.jmrit.signalling.configurexml.EntryExitPairsXml" />
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Fri Jan 08 19:26:17 PST 2016</date>
+      <date>Fri Jun 01 18:54:02 PDT 2018</date>
       <filename>JMRI program</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Fri Jan 08 19:26:18 PST 2016</date>
-      <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/UserPrefsProfileConfig.xml</filename>
-    </operation>
-    <operation>
-      <type>Load OK</type>
-      <date>Fri Jan 08 19:26:20 PST 2016</date>
-      <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/ProfileConfig.xml</filename>
-    </operation>
-    <operation>
-      <type>Load OK</type>
-      <date>Fri Jan 08 19:26:34 PST 2016</date>
-      <filename>/Users/svladmin/Library/Preferences/JMRI/svl-config.xml</filename>
+      <date>Fri Jun 01 18:54:04 PDT 2018</date>
+      <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Sun Dec 13 13:09:58 PST 2015</date>
+          <date>Thu May 24 20:05:08 PDT 2018</date>
           <filename>JMRI program</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Sun Dec 13 13:09:58 PST 2015</date>
-          <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/UserPrefsProfileConfig.xml</filename>
-        </operation>
-        <operation>
-          <type>Load OK</type>
-          <date>Sun Dec 13 13:10:01 PST 2015</date>
-          <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/ProfileConfig.xml</filename>
-        </operation>
-        <operation>
-          <type>Load OK</type>
-          <date>Sun Dec 13 13:10:15 PST 2015</date>
-          <filename>/Users/svladmin/Library/Preferences/JMRI/svl-config.xml</filename>
+          <date>Thu May 24 20:05:10 PDT 2018</date>
+          <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Fri Oct 16 19:43:59 PDT 2015</date>
+              <date>Thu May 24 19:59:41 PDT 2018</date>
               <filename>JMRI program</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Fri Oct 16 19:44:00 PDT 2015</date>
-              <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/UserPrefsProfileConfig.xml</filename>
-            </operation>
-            <operation>
-              <type>Load OK</type>
-              <date>Fri Oct 16 19:44:06 PDT 2015</date>
-              <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/ProfileConfig.xml</filename>
-            </operation>
-            <operation>
-              <type>Load OK</type>
-              <date>Fri Oct 16 19:44:21 PDT 2015</date>
-              <filename>/Users/svladmin/Library/Preferences/JMRI/svl-config.xml</filename>
+              <date>Thu May 24 19:59:42 PDT 2018</date>
+              <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Fri Oct 02 20:55:11 PDT 2015</date>
+                  <date>Thu May 24 19:44:26 PDT 2018</date>
                   <filename>JMRI program</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Fri Oct 02 20:55:11 PDT 2015</date>
-                  <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/UserPrefsProfileConfig.xml</filename>
-                </operation>
-                <operation>
-                  <type>Load OK</type>
-                  <date>Fri Oct 02 20:55:13 PDT 2015</date>
-                  <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/ProfileConfig.xml</filename>
-                </operation>
-                <operation>
-                  <type>Load OK</type>
-                  <date>Fri Oct 02 20:55:27 PDT 2015</date>
-                  <filename>/Users/svladmin/Library/Preferences/JMRI/svl-config.xml</filename>
+                  <date>Thu May 24 19:44:27 PDT 2018</date>
+                  <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Fri Jun 19 19:13:00 PDT 2015</date>
+                      <date>Sun May 20 20:16:26 PDT 2018</date>
                       <filename>JMRI program</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Fri Jun 19 19:13:01 PDT 2015</date>
-                      <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/UserPrefsProfileConfig.xml</filename>
-                    </operation>
-                    <operation>
-                      <type>Load OK</type>
-                      <date>Fri Jun 19 19:13:07 PDT 2015</date>
-                      <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/ProfileConfig.xml</filename>
-                    </operation>
-                    <operation>
-                      <type>Load OK</type>
-                      <date>Fri Jun 19 19:13:22 PDT 2015</date>
-                      <filename>/Users/svladmin/Library/Preferences/JMRI/svl-config.xml</filename>
+                      <date>Sun May 20 20:16:27 PDT 2018</date>
+                      <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Fri May 15 08:33:22 PDT 2015</date>
+                          <date>Sun May 20 20:14:29 PDT 2018</date>
                           <filename>JMRI program</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Fri May 15 08:33:22 PDT 2015</date>
-                          <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/UserPrefsProfileConfig.xml</filename>
-                        </operation>
-                        <operation>
-                          <type>Load OK</type>
-                          <date>Fri May 15 08:33:24 PDT 2015</date>
-                          <filename>/Users/svladmin/Library/Preferences/JMRI/DecoderPro/ProfileConfig.xml</filename>
-                        </operation>
-                        <operation>
-                          <type>Load OK</type>
-                          <date>Fri May 15 08:33:38 PDT 2015</date>
-                          <filename>/Users/svladmin/Library/Preferences/JMRI/svl-config.xml</filename>
+                          <date>Sun May 20 20:14:30 PDT 2018</date>
+                          <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Fri May 15 08:41:35 PDT 2015</date>
+                          <date>Sun May 20 20:15:58 PDT 2018</date>
                           <filename />
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Fri Jun 19 23:22:54 PDT 2015</date>
+                      <date>Thu May 24 19:44:01 PDT 2018</date>
                       <filename />
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Fri Oct 02 22:04:51 PDT 2015</date>
+                  <date>Thu May 24 19:59:25 PDT 2018</date>
                   <filename />
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Fri Oct 16 22:28:28 PDT 2015</date>
+              <date>Thu May 24 20:04:39 PDT 2018</date>
               <filename />
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Sun Dec 13 13:18:54 PST 2015</date>
+          <date>Thu May 24 20:08:57 PDT 2018</date>
           <filename />
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Jan 08 20:32:50 PST 2016</date>
+      <date>Fri Jun 01 18:56:10 PDT 2018</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 3.8-r26527 on Fri Jan 08 20:32:50 PST 2016 $Id: XmlFile.java 26283 2014-06-12 04:24:18Z jacobsen $-->
+  <!--Written by JMRI version 4.6-R81496dc on Fri Jun 01 18:56:10 PDT 2018 $Id$-->
 </layout-config>
-
