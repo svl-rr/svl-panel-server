@@ -30,6 +30,10 @@
      id="script_common"
      type="application/ecmascript" />
   <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     id="field_panel_common"
+     type="application/ecmascript" />
+  <script
      xlink:href="Fryton_Fremont.js"
      type="application/ecmascript"
      id="script_panelSpecific" />
@@ -786,7 +790,7 @@
     </g>
     <g
        transform="matrix(-1,0,0,1,360,-400)"
-       id="g3542"
+       id="block176"
        style="display:inline">
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
@@ -808,14 +812,14 @@
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="path3575"
+       id="block174"
        d="m 800,174.0945 -600,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="path3577"
+       id="block178"
        d="m 160,174.0945 -60,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />
@@ -823,7 +827,7 @@
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 600,134.0945 -320,0"
-       id="path3579"
+       id="block177"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path

@@ -30,6 +30,10 @@
      type="application/ecmascript"
      id="script_common" />
   <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     id="field_panel_common"
+     type="application/ecmascript" />
+  <script
      xlink:href="Greeley_Gotham.js"
      id="script_panelSpecific"
      type="application/ecmascript" />
@@ -1025,7 +1029,7 @@
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 940,174.0945 -840,0"
-       id="path3150"
+       id="block178"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
   </g>
