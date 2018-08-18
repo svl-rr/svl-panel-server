@@ -1326,7 +1326,7 @@
     <memory systemName="IMBA99" value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA99</systemName>
     </memory>
-    <memory systemName="IMCURRENTTIME" value="6:56 PM">
+    <memory systemName="IMCURRENTTIME" value="10:44 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory systemName="IMLASTBAYSHORETURNTABLETRACK" value="0">
@@ -1544,10 +1544,10 @@
     </memory>
   </memories>
   <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
-    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml" systemName="NH$1" userName="Nowheres">
-      <systemName>NH$1</systemName>
-      <userName>Nowheres</userName>
-      <useAddressOffSet>yes</useAddressOffSet>
+    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml" systemName="NH$2002" userName="fryton_main_sb_hi">
+      <systemName>NH$2002</systemName>
+      <userName>fryton_main_sb_hi</userName>
+      <useAddressOffSet>no</useAddressOffSet>
       <aspect defines="Dark">
         <number>31</number>
       </aspect>
@@ -1561,7 +1561,7 @@
         <number>2</number>
       </aspect>
       <aspect defines="Lunar">
-        <number>3</number>
+        <number>31</number>
       </aspect>
       <aspect defines="Flashing Red">
         <number>3</number>
@@ -1573,11 +1573,117 @@
         <number>5</number>
       </aspect>
       <aspect defines="Flashing Lunar">
-        <number>30</number>
+        <number>31</number>
+      </aspect>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml" systemName="NH$2003" userName="fryton_main_sb_lo">
+      <systemName>NH$2003</systemName>
+      <userName>fryton_main_sb_lo</userName>
+      <useAddressOffSet>no</useAddressOffSet>
+      <aspect defines="Dark">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Red">
+        <number>0</number>
+      </aspect>
+      <aspect defines="Yellow">
+        <number>1</number>
+      </aspect>
+      <aspect defines="Green">
+        <number>2</number>
+      </aspect>
+      <aspect defines="Lunar">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Flashing Red">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Flashing Yellow">
+        <number>4</number>
+      </aspect>
+      <aspect defines="Flashing Green">
+        <number>5</number>
+      </aspect>
+      <aspect defines="Flashing Lunar">
+        <number>31</number>
+      </aspect>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml" systemName="NH$2005" userName="hallelujah_main_nb_paper_hi">
+      <systemName>NH$2005</systemName>
+      <userName>hallelujah_main_nb_paper_hi</userName>
+      <useAddressOffSet>no</useAddressOffSet>
+      <aspect defines="Dark">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Red">
+        <number>0</number>
+      </aspect>
+      <aspect defines="Yellow">
+        <number>1</number>
+      </aspect>
+      <aspect defines="Green">
+        <number>2</number>
+      </aspect>
+      <aspect defines="Lunar">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Flashing Red">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Flashing Yellow">
+        <number>4</number>
+      </aspect>
+      <aspect defines="Flashing Green">
+        <number>5</number>
+      </aspect>
+      <aspect defines="Flashing Lunar">
+        <number>31</number>
+      </aspect>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml" systemName="NH$2006" userName="hallelujah_main_nb_paper_lo">
+      <systemName>NH$2006</systemName>
+      <userName>hallelujah_main_nb_paper_lo</userName>
+      <useAddressOffSet>no</useAddressOffSet>
+      <aspect defines="Dark">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Red">
+        <number>0</number>
+      </aspect>
+      <aspect defines="Yellow">
+        <number>1</number>
+      </aspect>
+      <aspect defines="Green">
+        <number>2</number>
+      </aspect>
+      <aspect defines="Lunar">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Flashing Red">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Flashing Yellow">
+        <number>4</number>
+      </aspect>
+      <aspect defines="Flashing Green">
+        <number>5</number>
+      </aspect>
+      <aspect defines="Flashing Lunar">
+        <number>31</number>
       </aspect>
     </signalhead>
   </signalheads>
   <signalmasts class="jmri.managers.configurexml.DefaultSignalMastManagerXml">
+    <signalmast class="jmri.implementation.configurexml.SignalHeadSignalMastXml" userName="fryton_main_sb">
+      <systemName>IF$shsm:UP-2008:SL-2AA(fryton_main_sb_hi)(fryton_main_sb_lo)</systemName>
+      <userName>fryton_main_sb</userName>
+      <unlit allowed="no" />
+    </signalmast>
+    <signalmast class="jmri.implementation.configurexml.SignalHeadSignalMastXml" userName="hallelujah_main_nb_paper">
+      <systemName>IF$shsm:UP-2008:SL-2AA(hallelujah_main_nb_paper_hi)(hallelujah_main_nb_paper_lo)</systemName>
+      <userName>hallelujah_main_nb_paper</userName>
+      <unlit allowed="no" />
+    </signalmast>
     <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml" userName="green">
       <systemName>IF$vsm:UP-2008:SL-1A($0001)</systemName>
       <userName>green</userName>
@@ -1589,75 +1695,6 @@
         <disabledAspect>Stop</disabledAspect>
       </disabledAspects>
     </virtualsignalmast>
-    <dccsignalmast class="jmri.implementation.configurexml.DccSignalMastXml" userName="ebbets_pass_main_nb">
-      <systemName>NF$dsm:UP-2008:SL-1A(1)</systemName>
-      <userName>ebbets_pass_main_nb</userName>
-      <unlit allowed="no" />
-      <aspect defines="Clear">
-        <number>2</number>
-      </aspect>
-      <aspect defines="Advance Approach">
-        <number>4</number>
-      </aspect>
-      <aspect defines="Approach">
-        <number>1</number>
-      </aspect>
-      <aspect defines="Restricting">
-        <number>3</number>
-      </aspect>
-      <aspect defines="Stop">
-        <number>0</number>
-      </aspect>
-      <aspect defines="Unlit">
-        <number>31</number>
-      </aspect>
-    </dccsignalmast>
-    <dccsignalmast class="jmri.implementation.configurexml.DccSignalMastXml" userName="fryton_main_nb_hi">
-      <systemName>NF$dsm:UP-2008:SL-1A(2002)</systemName>
-      <userName>fryton_main_nb_hi</userName>
-      <unlit allowed="no" />
-      <aspect defines="Clear">
-        <number>2</number>
-      </aspect>
-      <aspect defines="Advance Approach">
-        <number>4</number>
-      </aspect>
-      <aspect defines="Approach">
-        <number>1</number>
-      </aspect>
-      <aspect defines="Restricting">
-        <number>3</number>
-      </aspect>
-      <aspect defines="Stop">
-        <number>0</number>
-      </aspect>
-      <aspect defines="Unlit">
-        <number>31</number>
-      </aspect>
-    </dccsignalmast>
-    <dccsignalmast class="jmri.implementation.configurexml.DccSignalMastXml" userName="fryton_main_nb_lo">
-      <systemName>NF$dsm:UP-2008:SL-1A(2003)</systemName>
-      <userName>fryton_main_nb_lo</userName>
-      <unlit allowed="no" />
-      <aspect defines="Clear">
-        <number>2</number>
-      </aspect>
-      <aspect defines="Advance Approach">
-        <number>4</number>
-      </aspect>
-      <aspect defines="Approach">
-        <number>1</number>
-      </aspect>
-      <aspect defines="Restricting">
-        <number>3</number>
-      </aspect>
-      <aspect defines="Stop">
-        <number>0</number>
-      </aspect>
-      <aspect defines="Unlit">
-        <number>31</number>
-      </aspect>
-    </dccsignalmast>
   </signalmasts>
   <signalgroups class="jmri.managers.configurexml.DefaultSignalGroupManagerXml" />
   <oblocks class="jmri.jmrit.logix.configurexml.OBlockManagerXml" />
@@ -1686,104 +1723,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Fri Jun 01 18:54:02 PDT 2018</date>
+      <date>Fri Aug 17 22:26:43 PDT 2018</date>
       <filename>JMRI program</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Fri Jun 01 18:54:04 PDT 2018</date>
+      <date>Fri Aug 17 22:26:44 PDT 2018</date>
       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Thu May 24 20:05:08 PDT 2018</date>
+          <date>Fri Jun 01 18:54:02 PDT 2018</date>
           <filename>JMRI program</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Thu May 24 20:05:10 PDT 2018</date>
+          <date>Fri Jun 01 18:54:04 PDT 2018</date>
           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Thu May 24 19:59:41 PDT 2018</date>
+              <date>Thu May 24 20:05:08 PDT 2018</date>
               <filename>JMRI program</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Thu May 24 19:59:42 PDT 2018</date>
+              <date>Thu May 24 20:05:10 PDT 2018</date>
               <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Thu May 24 19:44:26 PDT 2018</date>
+                  <date>Thu May 24 19:59:41 PDT 2018</date>
                   <filename>JMRI program</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Thu May 24 19:44:27 PDT 2018</date>
+                  <date>Thu May 24 19:59:42 PDT 2018</date>
                   <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Sun May 20 20:16:26 PDT 2018</date>
+                      <date>Thu May 24 19:44:26 PDT 2018</date>
                       <filename>JMRI program</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Sun May 20 20:16:27 PDT 2018</date>
+                      <date>Thu May 24 19:44:27 PDT 2018</date>
                       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Sun May 20 20:14:29 PDT 2018</date>
+                          <date>Sun May 20 20:16:26 PDT 2018</date>
                           <filename>JMRI program</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Sun May 20 20:14:30 PDT 2018</date>
+                          <date>Sun May 20 20:16:27 PDT 2018</date>
                           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Sun May 20 20:15:58 PDT 2018</date>
+                          <date>Thu May 24 19:44:01 PDT 2018</date>
                           <filename />
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Thu May 24 19:44:01 PDT 2018</date>
+                      <date>Thu May 24 19:59:25 PDT 2018</date>
                       <filename />
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Thu May 24 19:59:25 PDT 2018</date>
+                  <date>Thu May 24 20:04:39 PDT 2018</date>
                   <filename />
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Thu May 24 20:04:39 PDT 2018</date>
+              <date>Thu May 24 20:08:57 PDT 2018</date>
               <filename />
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Thu May 24 20:08:57 PDT 2018</date>
+          <date>Fri Jun 01 18:56:10 PDT 2018</date>
           <filename />
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Jun 01 18:56:10 PDT 2018</date>
+      <date>Fri Aug 17 22:44:32 PDT 2018</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.6-R81496dc on Fri Jun 01 18:56:10 PDT 2018 $Id$-->
+  <!--Written by JMRI version 4.6-R81496dc on Fri Aug 17 22:44:32 PDT 2018 $Id$-->
 </layout-config>
