@@ -30,7 +30,7 @@ var enableServerAccesses = true;
 // Object lists
 var turnoutsOnPanel = new Array();
 var stateChangeRequests = new Array();
-var blocksOnPanel = new Array();
+var blocksOnPanel = {};
 //var signalsOnPanel = new Array();
 
 var MIN_PHYSICAL_TURNOUT_ADDR = 0;
@@ -491,7 +491,16 @@ function init(evt)
         {
             //setStyleSubAttribute(elem, "cursor", "crosshair");
             var jmriSensorName = elem.id.replace(PANEL_SENSOR_OBJID_PREFIX, "");
-            blocksOnPanel.push(new BlockSensor(jmriSensorName, SERVER_TYPE_SENSOR, null));
+            blocksOnPanel[jmriSensorName] = new BlockSensor(jmriSensorName, SERVER_TYPE_SENSOR, null);
+        }
+
+        // TODO: dedupe with above code
+        for (var classIdx = 0; classIdx < elem.classList.length; classIdx++) {
+            var clazz = elem.classList[classIdx];
+            if (clazz.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 0) {
+                var jmriSensorName = clazz.replace(PANEL_SENSOR_OBJID_PREFIX, "");
+                blocksOnPanel[jmriSensorName] = new BlockSensor(jmriSensorName, SERVER_TYPE_SENSOR, null);
+            }
         }
     }
 
@@ -742,9 +751,9 @@ function getPanelObjectsToUpdate()
         }
     }
     
-    for(var i in blocksOnPanel)
+    for(var blockName in blocksOnPanel)
     {
-        var nextObject = blocksOnPanel[i].getAsServerObject();
+        var nextObject = blocksOnPanel[blockName].getAsServerObject();
         
         if(parallelGetHash[nextObject.name] == undefined)
         {

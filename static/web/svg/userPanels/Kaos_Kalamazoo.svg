@@ -30,6 +30,10 @@
      id="script_common"
      type="application/ecmascript" />
   <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     id="field_panel_common"
+     type="application/ecmascript" />
+  <script
      xlink:href="Kaos_Kalamazoo.js"
      id="script_panelSpecific"
      type="application/ecmascript" />
@@ -861,6 +865,7 @@
        sodipodi:nodetypes="cc"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
        d="m 1000,334.0945 -30,30"
+       class="block204"
        id="path3233"
        inkscape:connector-curvature="0" />
     <path
@@ -907,6 +912,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3500"
+       class="block207"
        d="m 980,294.0945 -60,60"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />
@@ -936,6 +942,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 760,414.0945 100,0 10,-10"
        id="path4060"
+       class="block205"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        onclick="" />
@@ -1002,6 +1009,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3755"
+       class="block205"
        d="m 640,314.0945 -220,-220 -40,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />
@@ -1010,6 +1018,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4344"
+       class="block205"
        d="m 720,394.0945 -40,-40"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />
