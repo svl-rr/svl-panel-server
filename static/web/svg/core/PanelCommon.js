@@ -491,15 +491,24 @@ function init(evt)
         {
             //setStyleSubAttribute(elem, "cursor", "crosshair");
             var jmriSensorName = elem.id.replace(PANEL_SENSOR_OBJID_PREFIX, "");
+            console.log("panel monitors sensor " + jmriSensorName + " (svg id)");
             blocksOnPanel[jmriSensorName] = new BlockSensor(jmriSensorName, SERVER_TYPE_SENSOR, null);
         }
 
-        // TODO: dedupe with above code
-        for (var classIdx = 0; classIdx < elem.classList.length; classIdx++) {
-            var clazz = elem.classList[classIdx];
-            if (clazz.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 0) {
-                var jmriSensorName = clazz.replace(PANEL_SENSOR_OBJID_PREFIX, "");
-                blocksOnPanel[jmriSensorName] = new BlockSensor(jmriSensorName, SERVER_TYPE_SENSOR, null);
+        var classStr = elem.getAttribute("class");
+        if (classStr != null) {
+            var classNames = classStr.split(" ");
+            for (var classIdx in classNames) {
+                var clazz = classNames[classIdx];
+                // TODO: dedupe with above code
+                if (clazz.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 0) {
+                    var jmriSensorName = clazz.replace(PANEL_SENSOR_OBJID_PREFIX, "");
+                    if (blocksOnPanel[jmriSensorName] != undefined) {
+                        continue;
+                    }
+                    console.log("panel monitors sensor " + jmriSensorName + " (svg class)");
+                    blocksOnPanel[jmriSensorName] = new BlockSensor(jmriSensorName, SERVER_TYPE_SENSOR, null);
+                }
             }
         }
     }
