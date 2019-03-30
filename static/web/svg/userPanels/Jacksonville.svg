@@ -30,6 +30,10 @@
      type="application/ecmascript"
      id="script_common" />
   <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     id="field_panel_common"
+     type="application/ecmascript" />
+  <script
      xlink:href="Jacksonville.js"
      type="application/ecmascript"
      id="script_panelSpecific" />
@@ -1096,6 +1100,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 640,294.0945 -200,0"
        id="path3150"
+       class="block203"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
@@ -1114,6 +1119,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3158"
+       class="block202"
        d="m 680,334.0945 -280,0 -30,30"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />
