@@ -57,13 +57,31 @@ function dispatchInit(evt)
 		setSVGText(textElements[j].id, "");
         setStyleSubAttribute(textElements[j], "cursor", "pointer");
     }
-    
+
     var allBlockElements = getAllObjectsOfTagNameAndID("path", DISPATCHSEGMENT_OBJID_PREFIX + "\\d+[A-Z]?");
+
+    // blocksOnPanel is generated in PanelCommon.js.
+    for (var blockNum in blocksOnPanel) {
+    	// class block<blockNum>
+    	var className = "block" + blockNum;
+    	var elements = svgDocument.getElementsByClassName(className);
+    	for (var elementIdx in elements) {
+    		var matchedElement = elements[elementIdx];
+    		if (matchedElement.tagName != "path") {
+    			continue;
+    		}
+    		//allBlockElements.push(matchedElement);
+    	}
+    }
     
     for(var j in allBlockElements)
     {
+    	var classList = allBlockElements[j].classList;
+    	for (var c = 0; c < classList.length; c++) {
+    		var clazz = classList[c];
+    	}
         var currentBlockID = BLOCK_AUTH + getDCCAddr(allBlockElements[j].id);
-        
+
         if(getDispatchLocalAuthorization(currentBlockID) == null)
             dispatchSegmentStates.push({name:currentBlockID, route:ROUTE_AUTHORIZED_NA, state:UNAUTHORIZED_STATE, trainID:UNAUTHORIZED_STATE});
     }

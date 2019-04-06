@@ -1278,6 +1278,12 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA20</systemName>
     </memory>
+    <memory value="N/A:Occupied OOS:UNAUTHORIZED TRAIN!">
+      <systemName>IMBA202</systemName>
+    </memory>
+    <memory value="N/A:Unauthorized:Unauthorized">
+      <systemName>IMBA203</systemName>
+    </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA249</systemName>
     </memory>
@@ -1305,7 +1311,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA303</systemName>
     </memory>
-    <memory value="N/A:Authorized NB:801">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA330</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1398,7 +1404,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA99</systemName>
     </memory>
-    <memory value="7:18 PM">
+    <memory value="10:08 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="0">
@@ -1407,28 +1413,28 @@
     <memory value="false">
       <systemName>IMMAINLINE_LOCKED</systemName>
     </memory>
-    <memory value="801">
+    <memory value="">
       <systemName>IMN1</systemName>
     </memory>
-    <memory value="320">
+    <memory value="">
       <systemName>IMN2</systemName>
     </memory>
-    <memory value="235-1">
+    <memory value="">
       <systemName>IMN3</systemName>
     </memory>
-    <memory value="235-2">
+    <memory value="">
       <systemName>IMN4</systemName>
     </memory>
-    <memory value="225">
+    <memory value="">
       <systemName>IMN5</systemName>
     </memory>
-    <memory value="267">
+    <memory value="">
       <systemName>IMN6</systemName>
     </memory>
-    <memory value="550">
+    <memory value="">
       <systemName>IMN7</systemName>
     </memory>
-    <memory value="215-1">
+    <memory value="">
       <systemName>IMN8</systemName>
     </memory>
     <memory value="">
@@ -1458,19 +1464,19 @@
     <memory value="1.0">
       <systemName>IMRATEFACTOR</systemName>
     </memory>
-    <memory value="802">
+    <memory value="">
       <systemName>IMS1</systemName>
     </memory>
-    <memory value="226">
+    <memory value="">
       <systemName>IMS2</systemName>
     </memory>
-    <memory value="690">
+    <memory value="">
       <systemName>IMS3</systemName>
     </memory>
-    <memory value="444">
+    <memory value="">
       <systemName>IMS4</systemName>
     </memory>
-    <memory value="216">
+    <memory value="">
       <systemName>IMS5</systemName>
     </memory>
     <memory value="">
@@ -1482,7 +1488,7 @@
     <memory value="">
       <systemName>IMS8</systemName>
     </memory>
-    <memory value="yes">
+    <memory value="no">
       <systemName>IMSVL_DISPATCH_SIGNALING</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -2137,9 +2143,9 @@
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Mar 29 19:18:03 PDT 2019</date>
+      <date>Fri Apr 05 22:08:58 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.10+R419243e on Fri Mar 29 19:18:03 PDT 2019-->
+  <!--Written by JMRI version 4.10+R419243e on Fri Apr 05 22:08:58 PDT 2019-->
 </layout-config>
