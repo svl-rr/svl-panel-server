@@ -578,7 +578,8 @@ function handleSocketDataResponse(dataArray)
     }
     
     var undefinedItemsToUpdate = [];
-              
+
+
     for(var i in dataArray)
     {
         if(dataArray[i].value != undefined)
@@ -603,6 +604,7 @@ function handleSocketDataResponse(dataArray)
             }
             else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setSensorState == 'function'))
             {
+                console.log(dataArray[i]);
                 setSensorState(dataArray[i].name, dataArray[i].value);
             }
             else

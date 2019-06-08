@@ -30,6 +30,10 @@
      type="application/ecmascript"
      id="script_common" />
   <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     type="application/ecmascript"
+     id="script_common" />
+  <script
      xlink:href="Hallelujah.js"
      type="application/ecmascript"
      id="script_panelSpecific" />
@@ -1296,6 +1300,7 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 270,174.0945 -170,0"
        id="path3195"
+       class="igo_main_nb"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path

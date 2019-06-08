@@ -3,7 +3,7 @@
 <layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-2-9-6.xsd">
   <jmriversion>
     <major>4</major>
-    <minor>10</minor>
+    <minor>14</minor>
     <test>0</test>
     <modifier />
   </jmriversion>
@@ -11,6 +11,10 @@
     <defaultInitialState>unknown</defaultInitialState>
     <sensor inverted="false">
       <systemName>ISCLOCKRUNNING</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>ISOPENHOUSE_LOOP</systemName>
+      <userName>openhouse_loop_sensor</userName>
     </sensor>
   </sensors>
   <sensors class="jmri.jmrix.loconet.configurexml.LnSensorManagerXml">
@@ -59,7 +63,8 @@
     </sensor>
     <sensor inverted="false">
       <systemName>LS178</systemName>
-      <comment>also fryton siding sw (greeley side)</comment>
+      <userName>Greeley</userName>
+      <comment>greeley</comment>
     </sensor>
     <sensor inverted="false">
       <systemName>LS2</systemName>
@@ -138,6 +143,28 @@
     </sensor>
     <sensor inverted="false">
       <systemName>LS9</systemName>
+    </sensor>
+  </sensors>
+  <sensors class="jmri.jmrix.openlcb.configurexml.OlcbSensorManagerXml">
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.02.00.38;05.01.01.01.47.02.00.39</systemName>
+      <userName>Hallelujah</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.02.00.40;05.01.01.01.47.02.00.41</systemName>
+      <userName>Igo NB</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.02.00.42;05.01.01.01.47.02.00.43</systemName>
+      <userName>Jacksonville SB</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.02.00.44;05.01.01.01.47.02.00.45</systemName>
+      <userName>Jacksonville NB</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.02.00.46;05.01.01.01.47.02.00.47</systemName>
+      <userName>Igo SB</userName>
     </sensor>
   </sensors>
   <turnouts class="jmri.jmrix.nce.configurexml.NceTurnoutManagerXml">
@@ -1230,6 +1257,12 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
+    <memory value="5:38 PM">
+      <systemName>IMCURRENTTIME</systemName>
+    </memory>
+    <memory value="1.0">
+      <systemName>IMRATEFACTOR</systemName>
+    </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA102</systemName>
     </memory>
@@ -1278,7 +1311,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA20</systemName>
     </memory>
-    <memory value="N/A:Occupied OOS:UNAUTHORIZED TRAIN!">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA202</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1404,9 +1437,6 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA99</systemName>
     </memory>
-    <memory value="10:08 PM">
-      <systemName>IMCURRENTTIME</systemName>
-    </memory>
     <memory value="0">
       <systemName>IMLASTBAYSHORETURNTABLETRACK</systemName>
     </memory>
@@ -1460,9 +1490,6 @@
     </memory>
     <memory value="">
       <systemName>IMO8</systemName>
-    </memory>
-    <memory value="1.0">
-      <systemName>IMRATEFACTOR</systemName>
     </memory>
     <memory value="">
       <systemName>IMS1</systemName>
@@ -1625,6 +1652,70 @@
     </memory>
   </memories>
   <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
+    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml">
+      <systemName>NH$997</systemName>
+      <userName>jericho_nb_upper</userName>
+      <useAddressOffSet>no</useAddressOffSet>
+      <aspect defines="Dark">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Red">
+        <number>2</number>
+      </aspect>
+      <aspect defines="Yellow">
+        <number>1</number>
+      </aspect>
+      <aspect defines="Green">
+        <number>0</number>
+      </aspect>
+      <aspect defines="Lunar">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Flashing Red">
+        <number>5</number>
+      </aspect>
+      <aspect defines="Flashing Yellow">
+        <number>4</number>
+      </aspect>
+      <aspect defines="Flashing Green">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Flashing Lunar">
+        <number>31</number>
+      </aspect>
+    </signalhead>
+    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml">
+      <systemName>NH$998</systemName>
+      <userName>jericho_nb_lower</userName>
+      <useAddressOffSet>no</useAddressOffSet>
+      <aspect defines="Dark">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Red">
+        <number>2</number>
+      </aspect>
+      <aspect defines="Yellow">
+        <number>1</number>
+      </aspect>
+      <aspect defines="Green">
+        <number>0</number>
+      </aspect>
+      <aspect defines="Lunar">
+        <number>31</number>
+      </aspect>
+      <aspect defines="Flashing Red">
+        <number>5</number>
+      </aspect>
+      <aspect defines="Flashing Yellow">
+        <number>4</number>
+      </aspect>
+      <aspect defines="Flashing Green">
+        <number>3</number>
+      </aspect>
+      <aspect defines="Flashing Lunar">
+        <number>31</number>
+      </aspect>
+    </signalhead>
     <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml">
       <systemName>NH$2001</systemName>
       <userName>fryton_main_nb_upper</userName>
@@ -1945,70 +2036,6 @@
         <number>31</number>
       </aspect>
     </signalhead>
-    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml">
-      <systemName>NH$997</systemName>
-      <userName>jericho_nb_upper</userName>
-      <useAddressOffSet>no</useAddressOffSet>
-      <aspect defines="Dark">
-        <number>31</number>
-      </aspect>
-      <aspect defines="Red">
-        <number>2</number>
-      </aspect>
-      <aspect defines="Yellow">
-        <number>1</number>
-      </aspect>
-      <aspect defines="Green">
-        <number>0</number>
-      </aspect>
-      <aspect defines="Lunar">
-        <number>31</number>
-      </aspect>
-      <aspect defines="Flashing Red">
-        <number>5</number>
-      </aspect>
-      <aspect defines="Flashing Yellow">
-        <number>4</number>
-      </aspect>
-      <aspect defines="Flashing Green">
-        <number>3</number>
-      </aspect>
-      <aspect defines="Flashing Lunar">
-        <number>31</number>
-      </aspect>
-    </signalhead>
-    <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml">
-      <systemName>NH$998</systemName>
-      <userName>jericho_nb_lower</userName>
-      <useAddressOffSet>no</useAddressOffSet>
-      <aspect defines="Dark">
-        <number>31</number>
-      </aspect>
-      <aspect defines="Red">
-        <number>2</number>
-      </aspect>
-      <aspect defines="Yellow">
-        <number>1</number>
-      </aspect>
-      <aspect defines="Green">
-        <number>0</number>
-      </aspect>
-      <aspect defines="Lunar">
-        <number>31</number>
-      </aspect>
-      <aspect defines="Flashing Red">
-        <number>5</number>
-      </aspect>
-      <aspect defines="Flashing Yellow">
-        <number>4</number>
-      </aspect>
-      <aspect defines="Flashing Green">
-        <number>3</number>
-      </aspect>
-      <aspect defines="Flashing Lunar">
-        <number>31</number>
-      </aspect>
-    </signalhead>
   </signalheads>
   <signalmasts class="jmri.managers.configurexml.DefaultSignalMastManagerXml">
     <virtualsignalmast class="jmri.implementation.configurexml.VirtualSignalMastXml">
@@ -2025,6 +2052,66 @@
   </signalmasts>
   <signalgroups class="jmri.managers.configurexml.DefaultSignalGroupManagerXml" />
   <oblocks class="jmri.jmrit.logix.configurexml.OBlockManagerXml" />
+  <routes class="jmri.managers.configurexml.DefaultRouteManagerXml">
+    <route userName="openhouse_loop">
+      <systemName>IR:AUTO:0001</systemName>
+      <userName>openhouse_loop</userName>
+      <routeOutputTurnout systemName="NT100" state="CLOSED" />
+      <routeOutputTurnout systemName="NT101" state="THROWN" />
+      <routeOutputTurnout systemName="NT102" state="CLOSED" />
+      <routeOutputTurnout systemName="NT105" state="THROWN" />
+      <routeOutputTurnout systemName="NT116" state="CLOSED" />
+      <routeOutputTurnout systemName="NT117" state="CLOSED" />
+      <routeOutputTurnout systemName="NT118" state="CLOSED" />
+      <routeOutputTurnout systemName="NT124" state="CLOSED" />
+      <routeOutputTurnout systemName="NT125" state="CLOSED" />
+      <routeOutputTurnout systemName="NT126" state="CLOSED" />
+      <routeOutputTurnout systemName="NT150" state="CLOSED" />
+      <routeOutputTurnout systemName="NT165" state="THROWN" />
+      <routeOutputTurnout systemName="NT166" state="THROWN" />
+      <routeOutputTurnout systemName="NT167" state="CLOSED" />
+      <routeOutputTurnout systemName="NT168" state="CLOSED" />
+      <routeOutputTurnout systemName="NT169" state="THROWN" />
+      <routeOutputTurnout systemName="NT171" state="CLOSED" />
+      <routeOutputTurnout systemName="NT172" state="CLOSED" />
+      <routeOutputTurnout systemName="NT174" state="THROWN" />
+      <routeOutputTurnout systemName="NT175" state="CLOSED" />
+      <routeOutputTurnout systemName="NT176" state="THROWN" />
+      <routeOutputTurnout systemName="NT22" state="THROWN" />
+      <routeOutputTurnout systemName="NT225" state="CLOSED" />
+      <routeOutputTurnout systemName="NT226" state="CLOSED" />
+      <routeOutputTurnout systemName="NT23" state="THROWN" />
+      <routeOutputTurnout systemName="NT24" state="THROWN" />
+      <routeOutputTurnout systemName="NT246" state="CLOSED" />
+      <routeOutputTurnout systemName="NT247" state="THROWN" />
+      <routeOutputTurnout systemName="NT248" state="THROWN" />
+      <routeOutputTurnout systemName="NT25" state="CLOSED" />
+      <routeOutputTurnout systemName="NT250" state="THROWN" />
+      <routeOutputTurnout systemName="NT251" state="THROWN" />
+      <routeOutputTurnout systemName="NT252" state="THROWN" />
+      <routeOutputTurnout systemName="NT253" state="THROWN" />
+      <routeOutputTurnout systemName="NT26" state="THROWN" />
+      <routeOutputTurnout systemName="NT275" state="THROWN" />
+      <routeOutputTurnout systemName="NT276" state="THROWN" />
+      <routeOutputTurnout systemName="NT277" state="THROWN" />
+      <routeOutputTurnout systemName="NT278" state="THROWN" />
+      <routeOutputTurnout systemName="NT279" state="CLOSED" />
+      <routeOutputTurnout systemName="NT280" state="CLOSED" />
+      <routeOutputTurnout systemName="NT325" state="CLOSED" />
+      <routeOutputTurnout systemName="NT326" state="THROWN" />
+      <routeOutputTurnout systemName="NT35" state="CLOSED" />
+      <routeOutputTurnout systemName="NT350" state="THROWN" />
+      <routeOutputTurnout systemName="NT351" state="CLOSED" />
+      <routeOutputTurnout systemName="NT352" state="THROWN" />
+      <routeOutputTurnout systemName="NT353" state="THROWN" />
+      <routeOutputTurnout systemName="NT372" state="CLOSED" />
+      <routeOutputTurnout systemName="NT373" state="THROWN" />
+      <routeOutputTurnout systemName="NT374" state="THROWN" />
+      <routeOutputTurnout systemName="NT38" state="THROWN" />
+      <routeOutputTurnout systemName="NT39" state="CLOSED" />
+      <turnoutsAlignedSensor name="openhouse_loop_sensor" />
+    </route>
+  </routes>
   <warrants class="jmri.jmrit.logix.configurexml.WarrantManagerXml" />
   <signalmastlogics class="jmri.managers.configurexml.DefaultSignalMastLogicManagerXml">
     <logicDelay>500</logicDelay>
@@ -2044,108 +2131,108 @@
       <conditionalAction option="3" type="37" systemName="green" data="-1" delay="0" string="Clear" />
     </conditional>
   </conditionals>
-  <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Fri Jul 20 19:39:02 PDT 2012" rate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startsettime="no" startclockoption="0" showbutton="no" />
+  <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Fri Jul 20 19:39:02 PDT 2012" rate="1.0" startrate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startrunning="yes" startsettime="no" startclockoption="0" showbutton="no" startsetrate="yes" />
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Sun Mar 24 08:16:04 PDT 2019</date>
+      <date>Mon Jun 03 10:52:39 PDT 2019</date>
       <filename>JMRI program</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Sun Mar 24 08:16:11 PDT 2019</date>
+      <date>Mon Jun 03 10:52:43 PDT 2019</date>
       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Tue Feb 19 13:39:15 PST 2019</date>
+          <date>Sat May 25 19:39:45 PDT 2019</date>
           <filename>JMRI program</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Tue Feb 19 13:39:18 PST 2019</date>
+          <date>Sat May 25 19:39:49 PDT 2019</date>
           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Fri Feb 08 14:22:52 PST 2019</date>
+              <date>Fri May 24 21:16:09 PDT 2019</date>
               <filename>JMRI program</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Fri Feb 08 14:22:55 PST 2019</date>
+              <date>Fri May 24 21:16:12 PDT 2019</date>
               <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Fri Jan 04 13:53:51 PST 2019</date>
+                  <date>Fri May 24 21:10:58 PDT 2019</date>
                   <filename>JMRI program</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Fri Jan 04 13:53:54 PST 2019</date>
+                  <date>Fri May 24 21:11:01 PDT 2019</date>
                   <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Fri Dec 21 16:34:14 PST 2018</date>
+                      <date>Sun Mar 24 08:16:04 PDT 2019</date>
                       <filename>JMRI program</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Fri Dec 21 16:34:16 PST 2018</date>
+                      <date>Sun Mar 24 08:16:11 PDT 2019</date>
                       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Fri Dec 07 18:25:06 PST 2018</date>
+                          <date>Tue Feb 19 13:39:15 PST 2019</date>
                           <filename>JMRI program</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Fri Dec 07 18:25:08 PST 2018</date>
+                          <date>Tue Feb 19 13:39:18 PST 2019</date>
                           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Thu Dec 13 21:31:49 PST 2018</date>
+                          <date>Fri Feb 22 17:57:42 PST 2019</date>
                           <filename />
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Fri Dec 21 17:00:07 PST 2018</date>
+                      <date>Fri Apr 05 22:08:58 PDT 2019</date>
                       <filename />
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Fri Jan 11 23:30:57 PST 2019</date>
+                  <date>Fri May 24 21:15:56 PDT 2019</date>
                   <filename />
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Fri Feb 15 21:55:28 PST 2019</date>
+              <date>Fri May 24 21:24:03 PDT 2019</date>
               <filename />
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Fri Feb 22 17:57:42 PST 2019</date>
+          <date>Fri May 31 18:03:25 PDT 2019</date>
           <filename />
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Apr 05 22:08:58 PDT 2019</date>
+      <date>Fri Jun 07 17:38:44 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.10+R419243e on Fri Apr 05 22:08:58 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Fri Jun 07 17:38:44 PDT 2019-->
 </layout-config>

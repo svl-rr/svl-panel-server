@@ -6,6 +6,8 @@ function setSensorState(sensorID, sensorState)
 	// like "block123"
 	var pathId = sensorID.replace("LS", "block");
 
+	console.log("sensorID: " + sensorID);
+
 	// Some block segments may be identified by class name.
 	// This is because some panels have multi-segment blocks.
 	blockPaths = svgDocument.getElementsByClassName(pathId);
