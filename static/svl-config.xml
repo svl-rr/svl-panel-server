@@ -140,6 +140,7 @@
     </sensor>
     <sensor inverted="false">
       <systemName>LS8</systemName>
+      <userName>Greeley_HallelujahSide</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>LS9</systemName>
@@ -1257,7 +1258,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="5:38 PM">
+    <memory value="7:59 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -2135,104 +2136,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Mon Jun 03 10:52:39 PDT 2019</date>
+      <date>Fri Jun 07 19:19:11 PDT 2019</date>
       <filename>JMRI program</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Mon Jun 03 10:52:43 PDT 2019</date>
+      <date>Fri Jun 07 19:19:15 PDT 2019</date>
       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Sat May 25 19:39:45 PDT 2019</date>
+          <date>Mon Jun 03 10:52:39 PDT 2019</date>
           <filename>JMRI program</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Sat May 25 19:39:49 PDT 2019</date>
+          <date>Mon Jun 03 10:52:43 PDT 2019</date>
           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Fri May 24 21:16:09 PDT 2019</date>
+              <date>Sat May 25 19:39:45 PDT 2019</date>
               <filename>JMRI program</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Fri May 24 21:16:12 PDT 2019</date>
+              <date>Sat May 25 19:39:49 PDT 2019</date>
               <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Fri May 24 21:10:58 PDT 2019</date>
+                  <date>Fri May 24 21:16:09 PDT 2019</date>
                   <filename>JMRI program</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Fri May 24 21:11:01 PDT 2019</date>
+                  <date>Fri May 24 21:16:12 PDT 2019</date>
                   <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Sun Mar 24 08:16:04 PDT 2019</date>
+                      <date>Fri May 24 21:10:58 PDT 2019</date>
                       <filename>JMRI program</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Sun Mar 24 08:16:11 PDT 2019</date>
+                      <date>Fri May 24 21:11:01 PDT 2019</date>
                       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Tue Feb 19 13:39:15 PST 2019</date>
+                          <date>Sun Mar 24 08:16:04 PDT 2019</date>
                           <filename>JMRI program</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Tue Feb 19 13:39:18 PST 2019</date>
+                          <date>Sun Mar 24 08:16:11 PDT 2019</date>
                           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Fri Feb 22 17:57:42 PST 2019</date>
+                          <date>Fri Apr 05 22:08:58 PDT 2019</date>
                           <filename />
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Fri Apr 05 22:08:58 PDT 2019</date>
+                      <date>Fri May 24 21:15:56 PDT 2019</date>
                       <filename />
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Fri May 24 21:15:56 PDT 2019</date>
+                  <date>Fri May 24 21:24:03 PDT 2019</date>
                   <filename />
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Fri May 24 21:24:03 PDT 2019</date>
+              <date>Fri May 31 18:03:25 PDT 2019</date>
               <filename />
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Fri May 31 18:03:25 PDT 2019</date>
+          <date>Fri Jun 07 17:38:44 PDT 2019</date>
           <filename />
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Jun 07 17:38:44 PDT 2019</date>
+      <date>Fri Jun 07 19:59:57 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Fri Jun 07 17:38:44 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Fri Jun 07 19:59:57 PDT 2019-->
 </layout-config>
