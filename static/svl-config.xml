@@ -47,6 +47,7 @@
     </sensor>
     <sensor inverted="false">
       <systemName>LS174</systemName>
+      <userName>FrytonMain</userName>
       <comment>fryton main</comment>
     </sensor>
     <sensor inverted="false">
@@ -55,10 +56,12 @@
     </sensor>
     <sensor inverted="false">
       <systemName>LS176</systemName>
+      <userName>GreeleyFrytonMainSwitch</userName>
       <comment>fryton siding sw (greeley side)</comment>
     </sensor>
     <sensor inverted="false">
       <systemName>LS177</systemName>
+      <userName>FrytonSiding</userName>
       <comment>fryton siding</comment>
     </sensor>
     <sensor inverted="false">
@@ -83,10 +86,12 @@
     </sensor>
     <sensor inverted="false">
       <systemName>LS204</systemName>
+      <userName>JerichoSB</userName>
       <comment>Jericho SB (x-wired w/ 205)</comment>
     </sensor>
     <sensor inverted="false">
       <systemName>LS205</systemName>
+      <userName>KaosMain</userName>
       <comment>Kaos Jct Single Main</comment>
     </sensor>
     <sensor inverted="false">
@@ -94,6 +99,7 @@
     </sensor>
     <sensor inverted="false">
       <systemName>LS207</systemName>
+      <userName>JerichoNB</userName>
       <comment>Jericho NB</comment>
     </sensor>
     <sensor inverted="false">
@@ -1258,7 +1264,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="7:59 PM">
+    <memory value="9:36 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -2231,9 +2237,9 @@
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Jun 07 19:59:57 PDT 2019</date>
+      <date>Fri Jun 07 21:36:55 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Fri Jun 07 19:59:57 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Fri Jun 07 21:36:55 PDT 2019-->
 </layout-config>
