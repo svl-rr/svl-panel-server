@@ -72,6 +72,22 @@
       <systemName>LS8</systemName>
       <userName>Greeley</userName>
     </sensor>
+    <sensor inverted="false">
+      <systemName>LS174</systemName>
+      <userName>FrytonMain</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS177</systemName>
+      <userName>FrytonSiding</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS178</systemName>
+      <userName>Greeley_HallelujahSide</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS176</systemName>
+      <userName>GreeleyFrytonSidingSwitch</userName>
+    </sensor>
   </sensors>
   <sensors class="jmri.jmrix.openlcb.configurexml.OlcbSensorManagerXml">
     <sensor inverted="false">
@@ -1185,7 +1201,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="10:23 PM">
+    <memory value="10:38 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -2158,9 +2174,9 @@
     </operation>
     <operation>
       <type>Store</type>
-      <date>Mon Jun 17 22:23:08 PDT 2019</date>
+      <date>Mon Jun 17 22:38:17 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Mon Jun 17 22:23:08 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Mon Jun 17 22:38:17 PDT 2019-->
 </layout-config>
