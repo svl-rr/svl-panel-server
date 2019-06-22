@@ -35,6 +35,7 @@
     </sensor>
     <sensor inverted="false">
       <systemName>LS204</systemName>
+      <userName>JerichoSB</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>LS205</systemName>
@@ -87,6 +88,39 @@
     <sensor inverted="false">
       <systemName>LS176</systemName>
       <userName>GreeleyFrytonSidingSwitch</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS13</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS14</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS15</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS16</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS9</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS10</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS11</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS12</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS5</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS173</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>LS175</systemName>
     </sensor>
   </sensors>
   <sensors class="jmri.jmrix.openlcb.configurexml.OlcbSensorManagerXml">
@@ -1201,7 +1235,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="10:38 PM">
+    <memory value="10:26 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -1854,7 +1888,7 @@
     </signalhead>
     <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml">
       <systemName>NH$2007</systemName>
-      <userName>KaosA_upper</userName>
+      <userName>kalamazoo_front_to_jerico_upper</userName>
       <useAddressOffSet>no</useAddressOffSet>
       <aspect defines="Dark">
         <number>31</number>
@@ -1886,7 +1920,7 @@
     </signalhead>
     <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml">
       <systemName>NH$2008</systemName>
-      <userName>KaosA_lower</userName>
+      <userName>kalamazoo_front_to_jerico_lower</userName>
       <useAddressOffSet>no</useAddressOffSet>
       <aspect defines="Dark">
         <number>31</number>
@@ -1918,7 +1952,7 @@
     </signalhead>
     <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml">
       <systemName>NH$2009</systemName>
-      <userName>KaosB_upper</userName>
+      <userName>jerico_nb_to_kaos_upper</userName>
       <useAddressOffSet>no</useAddressOffSet>
       <aspect defines="Dark">
         <number>31</number>
@@ -1950,7 +1984,7 @@
     </signalhead>
     <signalhead class="jmri.implementation.configurexml.DccSignalHeadXml">
       <systemName>NH$2010</systemName>
-      <userName>KaosB_lower</userName>
+      <userName>jerico_nb_to_kaos_lower</userName>
       <useAddressOffSet>no</useAddressOffSet>
       <aspect defines="Dark">
         <number>31</number>
@@ -2174,9 +2208,9 @@
     </operation>
     <operation>
       <type>Store</type>
-      <date>Mon Jun 17 22:38:17 PDT 2019</date>
+      <date>Fri Jun 21 22:26:51 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Mon Jun 17 22:38:17 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Fri Jun 21 22:26:51 PDT 2019-->
 </layout-config>
