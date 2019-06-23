@@ -11,6 +11,9 @@ var mainLockCounter = 0;
 var mainLockMod = 50;
 var mainLockTimebase = Math.PI*2/mainLockMod;
 
+var SERVER_NAME_DISPATCH_SIGNALING_ENABLED = "SVL_DISPATCH_SIGNALING";
+var dispatchSignalingEnabled = false;
+
 // Constant id prefix for turnout objects
 var PANEL_TURNOUT_OBJID_PREFIX = "TO";
 var JMRI_TURNOUT_OBJID_PREFIX = "NT";
@@ -20,6 +23,9 @@ var JMRI_SENSOR_OBJID_PREFIX = "LS";
 
 var JMRI_SENSOR_ACTIVE = "on";
 var JMRI_SENSOR_INACTIVE = "off";
+
+// ??
+var SIGNALHEADS = {};
 
 // Disables 2 second setPanelStatus timer
 var debugStringTimerOn = true;
@@ -598,6 +604,30 @@ function handleSocketDataResponse(dataArray)
             {
                 mainlineLocked = (dataArray[i].value == 'true');
             }
+            else if((dataArray[i].type == SERVER_TYPE_DISPATCH) && (dataArray[i].name == SERVER_NAME_DISPATCH_SIGNALING_ENABLED))
+            {
+                dispatchSignalingEnabled = (dataArray[i].value == 'yes');
+                var bigButtonResults = svgDocument.getElementsByClassName(SERVER_NAME_DISPATCH_SIGNALING_ENABLED);
+                for (var btnIdx = 0; btnIdx < bigButtonResults.length; btnIdx++) {
+                    setStyleSubAttribute(bigButtonResults[btnIdx], 'fill', dispatchSignalingEnabled ? 'lime' : 'gray');
+                }
+            }
+            else if (dataArray[i].type == SERVER_TYPE_DISPATCH && dataArray[i].name.indexOf("IMSIGNALHEAD") != 0) {
+                // Transform "FLASHING_RED" to "red".
+                var value = dataArray[i].value.replace("FLASHING_", "").toLowerCase();
+                if (value == "dark") {
+                    value = "black";
+                } else if (value == "green") {
+                    value = "lime";
+                }
+
+                var memoryVarName = dataArray[i].name;
+                var headElements = svgDocument.getElementsByClassName(memoryVarName);
+                for (var headIdx = 0; headIdx < headElements.length; headIdx++) {
+                    var headElement = headElements[headIdx];
+                    setStyleSubAttribute(headElement, "fill", value);
+                }
+            }
             else if((dataArray[i].type == SERVER_TYPE_TURNOUT) && isPhysicalTurnout(dataArray[i].name))
             {
                 setTurnoutState(dataArray[i].name, dataArray[i].value);
@@ -609,6 +639,7 @@ function handleSocketDataResponse(dataArray)
             }
             else
             {
+                console.log("Not sure what to do with data: ", dataArray[i]);
                 // do nothing with object since we don't know what it is
             }
         }
@@ -776,6 +807,9 @@ function getPanelObjectsToUpdate()
     // Also get the dispatching mode
     serverGetArray.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH));
 
+    // And the signaling mode
+    serverGetArray.push(new ServerObject(SERVER_NAME_DISPATCH_SIGNALING_ENABLED, SERVER_TYPE_DISPATCH));
+
     // Get dispatching items if this is a dispatching panel
     if(typeof getCommonDispatchStates == 'function')
     {
@@ -791,7 +825,22 @@ function getPanelObjectsToUpdate()
         var panelSpecificStates = getPanelSpecificStates();
         
         for(var pss in panelSpecificStates)
-            serverGetArray.push(panelSpecificStates[pss]);            
+            serverGetArray.push(panelSpecificStates[pss]);      
+    }
+
+    // Also listen to updates on any "SIGNAL_*" element classes.
+    var signalHeadElements = svgDocument.getElementsByClassName('signalHead');
+    for (var shIdx = 0; shIdx < signalHeadElements.length; shIdx++) {
+        var signalHead = signalHeadElements[shIdx];
+        var classesStr = signalHead.getAttribute("class");
+        var classes = classesStr.split(" ");
+        for (var cIdx in classes) {
+            if (classes[cIdx] != 'signalHead') {
+                console.log("Watching signalHead memory var " + classes[cIdx]);
+                serverGetArray.push(new ServerObject(classes[cIdx], SERVER_TYPE_DISPATCH));
+            }
+        }
+        signalHead.setAttribute("style", "fill:black");
     }
     
     return serverGetArray;
@@ -1251,6 +1300,18 @@ function toggleMainlineLock()
     
     // Add inverted mainline lock to array
     panelChangeRequests.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, mainlineLocked ? 'false' : 'true'));
+    
+    // Perform update
+    executePanelStateChangeRequestsLowLevel(panelChangeRequests, false);
+}
+
+function toggleDispatchSignaling()
+{
+    // Create new empty array
+    var panelChangeRequests = new Array();
+    
+    // Add inverted mainline lock to array
+    panelChangeRequests.push(new ServerObject(SERVER_NAME_DISPATCH_SIGNALING_ENABLED, SERVER_TYPE_DISPATCH, dispatchSignalingEnabled ? 'no' : 'yes'));
     
     // Perform update
     executePanelStateChangeRequestsLowLevel(panelChangeRequests, false);
