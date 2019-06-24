@@ -37,8 +37,8 @@
      id="script_common" />
   <script
      xlink:href="DispatchSouthRedirect.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -336,15 +336,15 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="448.24549"
-     inkscape:cy="651.7904"
+     inkscape:zoom="4"
+     inkscape:cx="535.6147"
+     inkscape:cy="603.19082"
      inkscape:document-units="px"
-     inkscape:current-layer="textLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1036"
-     inkscape:window-x="-16"
+     inkscape:window-x="23"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -2198,11 +2198,10 @@
        onclick="toggleDispatchSignaling()"
        style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39665985;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.83137255"
        id="circle8942"
-       class='SVL_DISPATCH_SIGNALING'
+       class="SVL_DISPATCH_SIGNALING"
        transform="rotate(-90)"
        rx="12.486928"
-       ry="12.537161">
-    </ellipse>
+       ry="12.537161" />
     <g
        onclick="toggleDispatchSignaling()"
        transform="translate(766.50375,7.3263856)"
@@ -2659,6 +2658,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="BLOCK252"
+       class="sensor IgoNB"
        d="M 360,294.09401 80,294.094"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -2670,6 +2670,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="BLOCK253"
+       class="sensor IgoSB"
        d="M 360,334.094 H 120"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -2681,6 +2682,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="BLOCK179"
+       class="sensor Hallelujah"
        d="M 740,334.094 H 520"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -2747,6 +2749,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="BLOCK203"
+       class="sensor JacksonvilleNB"
        d="m 960,174.094 -210,3e-5"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -2756,6 +2759,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 960,214.094 -250,3e-5"
        id="BLOCK202"
+       class="sensor JacksonvilleSB"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
@@ -2813,6 +2817,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="BLOCK178A"
+       class="sensor Greeley"
        d="m 80,454.09399 -40,10e-6"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -4186,129 +4191,138 @@
          sodipodi:role="line"
          style="font-size:16px;line-height:1.25">_</tspan></text>
     <g
-       transform="matrix(-1.1896635,0.94500129,-0.94500129,-1.1896635,1565.3915,90.79969)"
-       id="g7490">
-      <circle
-         id="circle7486"
-         class="SIGNALHEAD_FRYTON_SIDING_TO_GREELEY signalHead"
-         cx="872.92395"
-         cy="424.56335"
-         r="2.0467861"
-         style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
-      <circle
-         style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
-         r="2.2604594"
-         cy="424.56335"
-         cx="872.92395"
-         id="circle7488" />
+       id="g724">
+      <g
+         id="g7490"
+         transform="matrix(-1.1896635,0.94500129,-0.94500129,-1.1896635,1565.3915,90.79969)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_FRYTON_SIDING_TO_GREELEY signalHead"
+           id="circle7486" />
+        <circle
+           id="circle7488"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="rotate(141.53836)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect7492"
+         width="5.25"
+         height="1"
+         x="148.0546"
+         y="-400.22214" />
+      <rect
+         y="-151.71539"
+         x="-400.97662"
+         height="1"
+         width="5.25"
+         id="rect7494"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-128.98727)" />
     </g>
-    <rect
-       y="-400.22214"
-       x="148.0546"
-       height="1"
-       width="5.25"
-       id="rect7492"
-       style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="rotate(141.53836)" />
-    <rect
-       transform="rotate(-128.98727)"
-       style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect7494"
-       width="5.25"
-       height="1"
-       x="-400.97662"
-       y="-151.71539" />
     <g
-       id="g8192"
-       transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)">
-      <circle
-         style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
-         r="2.0467861"
-         cy="424.56335"
-         cx="872.92395"
-         class="SIGNALHEAD_FRYTON_MAIN_TO_GREELEY signalHead"
-         id="circle8188" />
-      <circle
-         id="circle8190"
-         cx="872.92395"
-         cy="424.56335"
-         r="2.2604594"
-         style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+       id="g717">
+      <g
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)"
+         id="g8192">
+        <circle
+           id="circle8188"
+           class="SIGNALHEAD_FRYTON_MAIN_TO_GREELEY signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle8190" />
+      </g>
+      <rect
+         y="-440.8757"
+         x="-154.03012"
+         height="1.0001551"
+         width="13.559044"
+         id="rect8194"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)" />
+      <rect
+         transform="rotate(-90.101151)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8196"
+         width="5.25"
+         height="1"
+         x="-443.71677"
+         y="144.79631" />
     </g>
-    <rect
-       transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)"
-       style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect8194"
-       width="13.559044"
-       height="1.0001551"
-       x="-154.03012"
-       y="-440.8757" />
-    <rect
-       y="144.79631"
-       x="-443.71677"
-       height="1"
-       width="5.25"
-       id="rect8196"
-       style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="rotate(-90.101151)" />
     <g
-       transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)"
-       id="g8214">
-      <circle
-         id="circle8210"
-         class="SIGNALHEAD_GREELEY_TO_FRYTON_LOWER signalHead"
-         cx="872.92395"
-         cy="424.56335"
-         r="2.0467861"
-         style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
-      <circle
-         style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
-         r="2.2604594"
-         cy="424.56335"
-         cx="872.92395"
-         id="circle8212" />
+       id="g735">
+      <g
+         id="g8214"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_GREELEY_TO_FRYTON_LOWER signalHead"
+           id="circle8210" />
+        <circle
+           id="circle8212"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8216"
+         width="13.559044"
+         height="1.0001551"
+         x="58.630123"
+         y="462.48294" />
+      <rect
+         y="-48.984791"
+         x="460.43005"
+         height="1"
+         width="5.25"
+         id="rect8218"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(89.64714)" />
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
+         id="g8224">
+        <circle
+           id="circle8220"
+           class="SIGNALHEAD_GREELEY_TO_FRYTON_UPPER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle8222" />
+      </g>
+      <rect
+         y="464.07227"
+         x="73.068405"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect8226"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
     </g>
-    <rect
-       y="462.48294"
-       x="58.630123"
-       height="1.0001551"
-       width="13.559044"
-       id="rect8216"
-       style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)" />
-    <rect
-       transform="rotate(89.64714)"
-       style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect8218"
-       width="5.25"
-       height="1"
-       x="460.43005"
-       y="-48.984791" />
-    <g
-       id="g8224"
-       transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)">
-      <circle
-         style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
-         r="2.0467861"
-         cy="424.56335"
-         cx="872.92395"
-         class="SIGNALHEAD_GREELEY_TO_FRYTON_UPPER signalHead"
-         id="circle8220" />
-      <circle
-         id="circle8222"
-         cx="872.92395"
-         cy="424.56335"
-         r="2.2604594"
-         style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
-    </g>
-    <rect
-       transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)"
-       style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect8226"
-       width="0.87359697"
-       height="1.0000477"
-       x="73.068405"
-       y="464.07227" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -4327,5 +4341,391 @@
          x="874.38599"
          y="76.072701"
          id="tspan8918">Signal System</tspan></text>
+    <g
+       id="g746"
+       transform="rotate(-1.0020748,-642.63608,543.32505)">
+      <g
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)"
+         id="g698">
+        <circle
+           id="circle694"
+           class="SIGNALHEAD_HALLELUJAH_TO_IGO_LOWER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle696" />
+      </g>
+      <rect
+         y="-333.33649"
+         x="-566.67596"
+         height="1.0001551"
+         width="13.559044"
+         id="rect700"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)" />
+      <rect
+         transform="rotate(-89.346485)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect702"
+         width="5.25"
+         height="1"
+         x="-338.11322"
+         y="559.68488" />
+      <g
+         id="g708"
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_HALLELUJAH_TO_IGO signalHead"
+           id="circle704" />
+        <circle
+           id="circle706"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect710"
+         width="0.87359697"
+         height="1.0000477"
+         x="-541.44806"
+         y="-345.24927" />
+    </g>
+    <g
+       id="g758"
+       transform="rotate(179.76763,302.17917,390.99628)">
+      <g
+         id="g752"
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_IGO_TO_HALLELUJAH_SB_MAIN signalHead"
+           id="circle748" />
+        <circle
+           id="circle750"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect754"
+         width="13.559044"
+         height="1.0001551"
+         x="-154.03012"
+         y="-440.8757" />
+      <rect
+         y="144.79631"
+         x="-443.71677"
+         height="1"
+         width="5.25"
+         id="rect756"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-90.101151)" />
+    </g>
+    <g
+       transform="rotate(179.76763,289.96998,370.84644)"
+       id="g770">
+      <g
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)"
+         id="g764">
+        <circle
+           id="circle760"
+           class="SIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle762" />
+      </g>
+      <rect
+         y="-440.8757"
+         x="-154.03012"
+         height="1.0001551"
+         width="13.559044"
+         id="rect766"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)" />
+      <rect
+         transform="rotate(-90.101151)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect768"
+         width="5.25"
+         height="1"
+         x="-443.71677"
+         y="144.79631" />
+    </g>
+    <g
+       transform="matrix(-0.99984706,-0.01748861,-0.01748861,0.99984706,1269.5713,9.3503783)"
+       id="g790">
+      <g
+         id="g776"
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_HALLELUJAH_TO_GREELEY_LOWER signalHead"
+           id="circle772" />
+        <circle
+           id="circle774"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect778"
+         width="13.559044"
+         height="1.0001551"
+         x="-566.67596"
+         y="-333.33649" />
+      <rect
+         y="559.68488"
+         x="-338.11322"
+         height="1"
+         width="5.25"
+         id="rect780"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-89.346485)" />
+      <g
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)"
+         id="g786">
+        <circle
+           id="circle782"
+           class="SIGNALHEAD_HALLELUJAH_TO_GREELEY_UPPER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle784" />
+      </g>
+      <rect
+         y="-345.24927"
+         x="-541.44806"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect788"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)" />
+    </g>
+    <g
+       id="g822"
+       transform="rotate(-1.0020746,-653.96703,-12031.254)">
+      <g
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)"
+         id="g808">
+        <circle
+           id="circle804"
+           class="SIGNALHEAD_GREELEY_TO_HALLELUJAH_LOWER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle806" />
+      </g>
+      <rect
+         y="-333.33649"
+         x="-566.67596"
+         height="1.0001551"
+         width="13.559044"
+         id="rect810"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)" />
+      <rect
+         transform="rotate(-89.346485)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect812"
+         width="5.25"
+         height="1"
+         x="-338.11322"
+         y="559.68488" />
+      <g
+         id="g818"
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_GREELEY_TO_HALLELUJAH_UPPER signalHead"
+           id="circle814" />
+        <circle
+           id="circle816"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect820"
+         width="0.87359697"
+         height="1.0000477"
+         x="-541.44806"
+         y="-345.24927" />
+    </g>
+    <g
+       style="display:inline"
+       transform="rotate(-0.32598532,-31309.752,1143.8873)"
+       id="g2768">
+      <g
+         id="g2754"
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="signalHead SIGNALHEAD_JERICO_NB_TO_KAOS_LOWER"
+           id="circle2750" />
+        <circle
+           id="circle2752"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2756"
+         width="13.559044"
+         height="1.0001551"
+         x="-566.67596"
+         y="-333.33649" />
+      <rect
+         y="559.68488"
+         x="-338.11322"
+         height="1"
+         width="5.25"
+         id="rect2758"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-89.346485)" />
+      <g
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)"
+         id="g2764">
+        <circle
+           id="circle2760"
+           class="signalHead SIGNALHEAD_JERICO_NB_TO_KAOS_UPPER"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle2762" />
+      </g>
+      <rect
+         y="-345.24927"
+         x="-541.44806"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect2766"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)" />
+    </g>
+    <g
+       id="g3811"
+       transform="rotate(178.52431,521.68714,280.48793)"
+       style="display:inline">
+      <g
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)"
+         id="g3797">
+        <circle
+           id="circle3793"
+           class="signalHead SIGNALHEAD_KALAMAZOO_FRONT_TO_JERICO_LOWER"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle3795" />
+      </g>
+      <rect
+         y="-333.33649"
+         x="-566.67596"
+         height="1.0001551"
+         width="13.559044"
+         id="rect3799"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)" />
+      <rect
+         transform="rotate(-89.346485)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3801"
+         width="5.25"
+         height="1"
+         x="-338.11322"
+         y="559.68488" />
+      <g
+         id="g3807"
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="signalHead SIGNALHEAD_KALAMAZOO_FRONT_TO_JERICO_UPPER"
+           id="circle3803" />
+        <circle
+           id="circle3805"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3809"
+         width="0.87359697"
+         height="1.0000477"
+         x="-541.44806"
+         y="-345.24927" />
+    </g>
   </g>
 </svg>

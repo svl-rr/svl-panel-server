@@ -130,19 +130,19 @@
     </sensor>
     <sensor inverted="false">
       <systemName>MS05.01.01.01.47.02.00.40;05.01.01.01.47.02.00.41</systemName>
-      <userName>Igo NB</userName>
+      <userName>IgoNB</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>MS05.01.01.01.47.02.00.42;05.01.01.01.47.02.00.43</systemName>
-      <userName>Jacksonville SB</userName>
+      <userName>JacksonvilleSB</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>MS05.01.01.01.47.02.00.44;05.01.01.01.47.02.00.45</systemName>
-      <userName>Jacksonville NB</userName>
+      <userName>JacksonvilleNB</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>MS05.01.01.01.47.02.00.46;05.01.01.01.47.02.00.47</systemName>
-      <userName>Igo SB</userName>
+      <userName>IgoSB</userName>
     </sensor>
   </sensors>
   <turnouts class="jmri.jmrix.nce.configurexml.NceTurnoutManagerXml">
@@ -1235,7 +1235,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="2:58 PM">
+    <memory value="2:29 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -1268,7 +1268,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA17</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Occupied OOS:UNAUTHORIZED TRAIN!">
       <systemName>IMBA173</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1640,10 +1640,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_FRONT_TO_JERICO_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="DARK">
       <systemName>IMSIGNALHEAD_JERICO_NB_TO_KAOS_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="DARK">
       <systemName>IMSIGNALHEAD_JERICO_NB_TO_KAOS_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -2280,9 +2280,9 @@
     </operation>
     <operation>
       <type>Store</type>
-      <date>Sun Jun 23 14:58:58 PDT 2019</date>
+      <date>Mon Jun 24 14:29:46 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Sun Jun 23 14:58:58 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Mon Jun 24 14:29:46 PDT 2019-->
 </layout-config>

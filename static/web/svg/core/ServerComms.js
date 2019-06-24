@@ -220,7 +220,8 @@ function handleJSONObject(msgObj)
         }
         else if(msgObj.type == "sensor")
         {
-            humanReadableMessage = msgObj.data.name + " has state " + msgObj.data.state;
+            var name = msgObj.data.userName != "" ? msgObj.data.userName : msgObj.data.name;
+            humanReadableMessage = name + " has state " + msgObj.data.state;
         	console.log("server sensor message: " + humanReadableMessage);
 			
 			if(msgObj.data.state == undefinedStateMap.jmri)
@@ -229,6 +230,8 @@ function handleJSONObject(msgObj)
 				serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_SENSOR, onSensorStateMap.svg);
 			else if (msgObj.data.state == offSensorStateMap.jmri)
 				serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_SENSOR, offSensorStateMap.svg);
+
+            serverObj.userName = msgObj.data.userName;
         }
         else if(msgObj.type == "memory")
         {
@@ -252,9 +255,16 @@ function handleJSONObject(msgObj)
     return serverObj;
 }
 
+function UserNameServerObject(objectUserName, objectType) {
+    var so = new ServerObject(objectUserName, objectType);
+    so.useUserName = true;
+    return so
+}
+
 function ServerObject(objectName, objectType)
 {
 	this.name=objectName;
+    this.useUserName = false;
     this.type=objectType;
 	
     this.getName=getName;
@@ -269,6 +279,7 @@ function ServerObject(objectName, objectType)
 function ServerObject(objectName, objectType, objectValue)
 {
 	this.name=objectName;
+    this.useUserName = false;
     this.type=objectType;
 	this.value=objectValue;
 	
@@ -406,8 +417,10 @@ function getAsSetJSONString(serverObj)
     
         return '{"type":"turnout","data":{"name":"' + serverObj.name + '","state":"' + jmriState + '"}}';
     }
-    else if(serverObj.type == SERVER_TYPE_SENSOR)
-        return '{"type":"sensor","data":{"name":"' + serverObj.name + '","state":"' + serverObj.value + '"}}';
+    else if (serverObj.type == SERVER_TYPE_SENSOR) {
+        var nameField = serverObj.useUserName ? "userName" : "name";
+        return '{"type":"sensor","data":{"' + nameField + '":"' + serverObj.name + '","state":"' + serverObj.value + '"}}';
+    }
     else if(serverObj.type == SERVER_TYPE_DISPATCH)
         return '{"type":"memory","data":{"name":"IM' + serverObj.name + '","value":"' + serverObj.value + '"}}';
     

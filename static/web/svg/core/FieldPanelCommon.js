@@ -3,25 +3,50 @@ function setSensorState(sensorID, sensorState)
     if(sensorState == undefined)
 		return;
 
-	// like "block123"
-	var pathId = sensorID.replace("LS", "block");
+	// Search for any blocks with this as a class name component.
+	var elements = svgDocument.getElementsByClassName(sensorID);
+	for (var i = 0; i < elements.length; i++) {
+		var element = elements[i];
 
-	console.log("sensorID: " + sensorID);
-
-	// Some block segments may be identified by class name.
-	// This is because some panels have multi-segment blocks.
-	blockPaths = svgDocument.getElementsByClassName(pathId);
-	for (var i = 0; i < blockPaths.length; i++) {
-		var element = blockPaths[i];
-		if (sensorState == JMRI_SENSOR_ACTIVE) {
-			setStyleSubAttribute(element, "stroke", "red");
-		} else {
-			setStyleSubAttribute(element, "stroke", "white");
-		}
+		// Require the "sensor" class on this element.
+		var classesStr = element.getAttribute("class");
+        var classes = classesStr.split(" ");
+        var foundSensorClass = false;
+        for (var cIdx in classes) {
+            if (classes[cIdx] == 'sensor') {
+            	foundSensorClass = true;
+            	break;
+            }
+        }
+        if (foundSensorClass) {
+        	if (sensorState == JMRI_SENSOR_ACTIVE) {
+				setStyleSubAttribute(element, "stroke", "red");
+			} else {
+				setStyleSubAttribute(element, "stroke", "white");
+			}
+        }
 	}
 
+	if (sensorID.indexOf("LS") == 0) {
+		// like "block123"
+		var pathID = sensorID.replace("LS", "block");
+		console.log("Trying pathID ", pathID, "as a class name");
+
+		// Some block segments may be identified by class name.
+		// This is because some panels have multi-segment blocks.
+		var blockPaths = svgDocument.getElementsByClassName(pathID);
+		for (var i = 0; i < blockPaths.length; i++) {
+			var element = blockPaths[i];
+			if (sensorState == JMRI_SENSOR_ACTIVE) {
+				setStyleSubAttribute(element, "stroke", "red");
+			} else {
+				setStyleSubAttribute(element, "stroke", "white");
+			}
+		}
+	}
+	
 	// Search for any blocks with this as the ID.
-	blockElement = svgDocument.getElementById(pathId);
+	blockElement = svgDocument.getElementById(sensorID);
 
 	if (blockElement == null) {
 		return;

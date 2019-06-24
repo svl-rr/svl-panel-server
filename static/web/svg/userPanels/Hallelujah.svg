@@ -35,8 +35,8 @@
      id="script497" />
   <script
      xlink:href="Hallelujah.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -286,9 +286,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="877.83774"
-     inkscape:cy="268.08711"
+     inkscape:zoom="2.0000001"
+     inkscape:cx="813.12366"
+     inkscape:cy="308.82147"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
@@ -514,6 +514,7 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO252.R"
+         class="sensor IgoSB"
          d="m 200,574.0945 -40,0"
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
@@ -1021,6 +1022,7 @@
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 200,574.0945 -40,0"
          id="TO226.N"
+         class="sensor Hallelujah"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
@@ -1281,6 +1283,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path3332"
+       class="sensor IgoNB"
        d="m 60,174.0945 40,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
@@ -1289,6 +1292,7 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 640,454.0945 -20,0 -210,-210"
        id="path3150"
+       class="sensor Hallelujah"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <path
@@ -1296,6 +1300,7 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        d="m 60,214.0945 40,0"
        id="path3154"
+       class="sensor IgoSB"
        inkscape:connector-curvature="0" />
     <path
        onclick=""
@@ -1303,13 +1308,14 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 270,174.0945 -170,0"
        id="path3195"
-       class="igo_main_nb"
+       class="igo_main_nb sensor IgoNB"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4054"
+       class="sensor IgoSB"
        d="m 190,214.0945 -90,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
@@ -1330,6 +1336,7 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO251B.R"
+         class="sensor IgoSB"
          d="m 200,574.0945 -40,0"
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
@@ -1352,6 +1359,7 @@
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 200,574.0945 -40,0"
          id="TO251A.R"
+         class="sensor IgoNB"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -1365,6 +1373,7 @@
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 200,574.0945 -20,0 -20,-20"
          id="TO250A.N"
+         class="sensor IgoNB"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -1372,6 +1381,7 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO250A.R"
+         class="sensor IgoNB"
          d="m 200,574.0945 -40,0"
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
@@ -1386,6 +1396,7 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO250B.N"
+         class="sensor IgoSB"
          d="m 200,614.0945 -40,-40"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221" />
@@ -1395,6 +1406,7 @@
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 200,614.0945 -20,-20 -20,0"
          id="TO250B.R"
+         class="sensor IgoSB"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
     </g>
@@ -1404,12 +1416,14 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 360,214.0945 -80,0"
        id="path3199"
+       class="sensor IgoSB"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4337"
+       class="sensor Hallelujah"
        d="m 920,454.0945 -240,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
@@ -1423,8 +1437,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Jacksonville.svg"
-       transform="translate(-100,54.000047)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-100,54.000047)">
       <text
          id="text3305"
          y="86.114754"
@@ -1440,8 +1454,8 @@
     </a>
     <a
        xlink:href="Greeley_Gotham.svg"
-       id="a4142"
-       transform="translate(818.01523,400.15891)">
+       transform="translate(818.01523,400.15891)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1457,8 +1471,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       id="a3156"
-       transform="translate(-100,164.00005)">
+       transform="translate(-100,164.00005)"
+       id="a3156">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1482,9 +1496,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       style="display:inline"
+       id="a4148"
        transform="matrix(0,1,-1,0,1274.1147,22.11525)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1924,10 +1938,9 @@
          sodipodi:role="line"
          style="font-size:16px;line-height:1.25">5</tspan></text>
     <g
-       id="g5644"
-       transform="rotate(39.245482,878.68249,462.64351)">
+       id="g6679">
       <g
-         transform="matrix(1.5193178,0,0,1.5193178,-438.56832,-224.60764)"
+         transform="matrix(1.1766243,0.96118769,-0.96118769,1.1766243,293.33293,-902.94418)"
          id="g5331">
         <circle
            id="path783"
@@ -1944,20 +1957,323 @@
            id="circle785" />
       </g>
       <rect
-         y="419.92731"
-         x="878.75"
-         height="1"
-         width="5.25"
+         transform="rotate(39.245482)"
+         y="-240.2581"
+         x="975.40643"
+         height="0.96722209"
+         width="3.0547237"
          id="rect5333"
          style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1" />
       <rect
-         transform="rotate(89.474365)"
+         transform="rotate(128.71985)"
          style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1"
          id="rect5335"
          width="5.25"
          height="1"
-         x="425.84161"
-         y="-874.85608" />
+         x="-233.42929"
+         y="-977.56488" />
+    </g>
+    <g
+       style="display:inline"
+       transform="rotate(43.338251,607.36235,151.09263)"
+       id="g4542">
+      <g
+         id="g4528"
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="signalHead"
+           id="circle4524" />
+        <circle
+           id="circle4526"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4530"
+         width="13.559044"
+         height="1.0001551"
+         x="-566.67596"
+         y="-333.33649" />
+      <rect
+         y="559.68488"
+         x="-338.11322"
+         height="1"
+         width="5.25"
+         id="rect4532"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-89.346485)" />
+      <g
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)"
+         id="g4538">
+        <circle
+           id="circle4534"
+           class="signalHead SIGNALHEAD_HALLELUJAH_TO_IGO"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle4536" />
+      </g>
+      <rect
+         y="-345.24927"
+         x="-541.44806"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect4540"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)" />
+    </g>
+    <g
+       transform="rotate(179.81488,237.72104,321.04233)"
+       style="display:inline"
+       id="g6625">
+      <g
+         id="g6619"
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_IGO_TO_HALLELUJAH_SB_MAIN signalHead"
+           id="circle6615" />
+        <circle
+           id="circle6617"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect6621"
+         width="13.559044"
+         height="1.0001551"
+         x="-154.03012"
+         y="-440.8757" />
+      <rect
+         y="144.79631"
+         x="-443.71677"
+         height="1"
+         width="5.25"
+         id="rect6623"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-90.101151)" />
+    </g>
+    <g
+       id="g6667"
+       style="display:inline"
+       transform="rotate(179.81488,230.58478,310.33255)">
+      <g
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)"
+         id="g6661">
+        <circle
+           id="circle6657"
+           class="SIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle6659" />
+      </g>
+      <rect
+         y="-440.8757"
+         x="-154.03012"
+         height="1.0001551"
+         width="13.559044"
+         id="rect6663"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)" />
+      <rect
+         transform="rotate(-90.101151)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect6665"
+         width="5.25"
+         height="1"
+         x="-443.71677"
+         y="144.79631" />
+    </g>
+    <g
+       id="g6691"
+       transform="rotate(-83.798888,788.60014,608.19151)">
+      <g
+         id="g6685"
+         transform="matrix(1.1766243,0.96118769,-0.96118769,1.1766243,293.33293,-902.94418)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_HEMET_DWARF signalHead"
+           id="circle6681" />
+        <circle
+           id="circle6683"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="rect6687"
+         width="3.0547237"
+         height="0.96722209"
+         x="975.40643"
+         y="-240.2581"
+         transform="rotate(39.245482)" />
+      <rect
+         y="-977.56488"
+         x="-233.42929"
+         height="1"
+         width="5.25"
+         id="rect6689"
+         style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1"
+         transform="rotate(128.71985)" />
+    </g>
+    <g
+       id="g6711"
+       transform="rotate(-0.91494464,6965.1153,-26756.799)"
+       style="display:inline">
+      <g
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)"
+         id="g6697">
+        <circle
+           id="circle6693"
+           class="signalHead SIGNALHEAD_GREELEY_TO_HALLELUJAH_LOWER"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle6695" />
+      </g>
+      <rect
+         y="-333.33649"
+         x="-566.67596"
+         height="1.0001551"
+         width="13.559044"
+         id="rect6699"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)" />
+      <rect
+         transform="rotate(-89.346485)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect6701"
+         width="5.25"
+         height="1"
+         x="-338.11322"
+         y="559.68488" />
+      <g
+         id="g6707"
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="signalHead SIGNALHEAD_GREELEY_TO_HALLELUJAH_UPPER"
+           id="circle6703" />
+        <circle
+           id="circle6705"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect6709"
+         width="0.87359697"
+         height="1.0000477"
+         x="-541.44806"
+         y="-345.24927" />
+    </g>
+    <g
+       style="display:inline"
+       transform="matrix(-0.99985347,-0.01711882,-0.01711882,0.99985347,1456.1924,127.35335)"
+       id="g6731">
+      <g
+         id="g6717"
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="signalHead SIGNALHEAD_HALLELUJAH_TO_GREELEY_LOWER"
+           id="circle6713" />
+        <circle
+           id="circle6715"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect6719"
+         width="13.559044"
+         height="1.0001551"
+         x="-566.67596"
+         y="-333.33649" />
+      <rect
+         y="559.68488"
+         x="-338.11322"
+         height="1"
+         width="5.25"
+         id="rect6721"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-89.346485)" />
+      <g
+         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)"
+         id="g6727">
+        <circle
+           id="circle6723"
+           class="signalHead SIGNALHEAD_HALLELUJAH_TO_GREELEY_UPPER"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle6725" />
+      </g>
+      <rect
+         y="-345.24927"
+         x="-541.44806"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect6729"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)" />
     </g>
   </g>
 </svg>

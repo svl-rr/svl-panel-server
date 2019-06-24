@@ -634,8 +634,14 @@ function handleSocketDataResponse(dataArray)
             }
             else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setSensorState == 'function'))
             {
-                console.log(dataArray[i]);
-                setSensorState(dataArray[i].name, dataArray[i].value);
+                //console.log(dataArray[i]);
+                var trySystemName = true;
+                if (dataArray[i].userName != null && dataArray[i].userName != '') {
+                    trySystemName = !setSensorState(dataArray[i].userName, dataArray[i].value);
+                }
+                if (trySystemName) {
+                    setSensorState(dataArray[i].name, dataArray[i].value);                    
+                }
             }
             else
             {
@@ -836,13 +842,26 @@ function getPanelObjectsToUpdate()
         var classes = classesStr.split(" ");
         for (var cIdx in classes) {
             if (classes[cIdx] != 'signalHead') {
-                console.log("Watching signalHead memory var " + classes[cIdx]);
+                //console.log("Watching signalHead memory var " + classes[cIdx]);
                 serverGetArray.push(new ServerObject(classes[cIdx], SERVER_TYPE_DISPATCH));
             }
         }
         signalHead.setAttribute("style", "fill:black");
     }
-    
+
+    var userNameSensorElements = svgDocument.getElementsByClassName('sensor');
+    for (var sIdx = 0; sIdx < userNameSensorElements.length; sIdx++) {
+        var sensorElement = userNameSensorElements[sIdx];
+        var classesStr = sensorElement.getAttribute("class");
+        var classes = classesStr.split(" ");
+        for (var cIdx in classes) {
+            if (classes[cIdx] != 'sensor') {
+                console.log("Watching sensor with JMRI userName " + classes[cIdx], sensorElement);
+                serverGetArray.push(new UserNameServerObject(classes[cIdx], SERVER_TYPE_SENSOR));
+            }
+        }
+    }
+
     return serverGetArray;
 }
 
@@ -1510,6 +1529,9 @@ function isSet()
 
 function getCookie()
 {
+    if (document.cookie == undefined) {
+        return "";
+    }
     var cname = this.name + "=";
     var ca = document.cookie.split(';');
     for(var i=0; i<ca.length; i++)

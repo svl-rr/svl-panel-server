@@ -97,27 +97,56 @@ function dispatchInit(evt)
 function setSensorState(sensorID, sensorState)
 {
     if(sensorState == undefined)
-		return;
+		return false;
 	else if((sensorState != JMRI_SENSOR_ACTIVE) && (sensorState != JMRI_SENSOR_INACTIVE))
 	{
 		alert("Bad sensor state (" + sensorState + ") passed to setSensorState() by " + sensorID);
-		return;
+		return false;
 	}
+
+	// Could be that sensorID is a userName.
+	// If so, convert that userName into a sensorID
+	// that the dispatch panel expects.
+	var potentialUserName = sensorID;
+	var matchedElements = svgDocument.getElementsByClassName(sensorID);
+	for (var mIdx = 0; mIdx < matchedElements.length; mIdx++) {
+		var elem = matchedElements[mIdx];
+		var classesStr = elem.getAttribute("class");
+        var classes = classesStr.split(" ");
+        for (var cIdx in classes) {
+            if (classes[cIdx] == 'sensor') {
+            	// `elem` has an element ID like "BLOCK174".
+            	var elementId = elem.id;
+				// sensorID.search(...) below is looking for that suffix number (174)
+				// prefixed with JMRI_SENSOR_OBJID_PREFIX.
+
+				sensorID = JMRI_SENSOR_OBJID_PREFIX + elementId.replace(DISPATCHSEGMENT_OBJID_PREFIX, '');
+				console.log('Mapped sensor', potentialUserName, 'to element ID', elementId, 'to hacky sensorID', sensorID);
+				// TODO: remove hacky mapping once all loconet sensors are gone.
+            }
+        }
+    }
 
 	if(sensorID.search(JMRI_SENSOR_OBJID_PREFIX) == 0)
 	{
 		var blockAuthorization = getDispatchLocalAuthorization(BLOCK_AUTH + getDCCAddr(sensorID));         // will be null if a turnout
 		var turnoutAuthorization = getDispatchLocalAuthorization(TURNOUT_AUTH + getDCCAddr(sensorID));      // will be null if not a turnout
 		
-		if(blockAuthorization != null)
+		if(blockAuthorization != null) {
 			setDispatchSensorState(blockAuthorization.name, blockAuthorization.state, sensorID, sensorState);
+			return true;
+		}
 		
-		if(turnoutAuthorization != null)
+		if(turnoutAuthorization != null) {
 			setDispatchSensorState(turnoutAuthorization.name, turnoutAuthorization.state, sensorID, sensorState);
+			return true;
+		}
 			
 		if((blockAuthorization == null) && (turnoutAuthorization == null))
 			console.log("No corresponding authorization variable was found for sensor " + sensorID);
 	}
+
+	return false;
 }
 
 function setDispatchSensorState(authName, currentAuthState, sensorID, sensorState)
