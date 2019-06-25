@@ -12,7 +12,7 @@ function setSensorState(sensorID, sensorState)
 		var classesStr = element.getAttribute("class");
         var classes = classesStr.split(" ");
         var foundSensorClass = false;
-        for (var cIdx in classes) {
+        for (var cIdx = 0; cIdx < classes.length; cIdx++) {
             if (classes[cIdx] == 'sensor') {
             	foundSensorClass = true;
             	break;
@@ -44,7 +44,7 @@ function setSensorState(sensorID, sensorState)
 			setStyleSubAttribute(element, "stroke", "white");
 		}
 	}
-	
+
 	// Search for any blocks with this as the ID.
 	console.log("Trying", sensorID, "as an element ID");
 	blockElement = svgDocument.getElementById(sensorID);

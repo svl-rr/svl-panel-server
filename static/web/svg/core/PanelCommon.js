@@ -504,7 +504,7 @@ function init(evt)
         var classStr = elem.getAttribute("class");
         if (classStr != null) {
             var classNames = classStr.split(" ");
-            for (var classIdx in classNames) {
+            for (var classIdx = 0; cIdx < classes.length; cIdx++) {
                 var clazz = classNames[classIdx];
                 // TODO: dedupe with above code
                 if (clazz.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 0) {
@@ -840,7 +840,7 @@ function getPanelObjectsToUpdate()
         var signalHead = signalHeadElements[shIdx];
         var classesStr = signalHead.getAttribute("class");
         var classes = classesStr.split(" ");
-        for (var cIdx in classes) {
+        for (var cIdx = 0; cIdx < classes.length; cIdx++) {
             if (classes[cIdx] != 'signalHead') {
                 //console.log("Watching signalHead memory var " + classes[cIdx]);
                 serverGetArray.push(new ServerObject(classes[cIdx], SERVER_TYPE_DISPATCH));
@@ -854,7 +854,7 @@ function getPanelObjectsToUpdate()
         var sensorElement = userNameSensorElements[sIdx];
         var classesStr = sensorElement.getAttribute("class");
         var classes = classesStr.split(" ");
-        for (var cIdx in classes) {
+        for (var cIdx = 0; cIdx < classes.length; cIdx++) {
             if (classes[cIdx] != 'sensor') {
                 console.log("Watching sensor with JMRI userName " + classes[cIdx], sensorElement);
                 serverGetArray.push(new UserNameServerObject(classes[cIdx], SERVER_TYPE_SENSOR));
