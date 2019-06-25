@@ -504,7 +504,7 @@ function init(evt)
         var classStr = elem.getAttribute("class");
         if (classStr != null) {
             var classNames = classStr.split(" ");
-            for (var classIdx = 0; cIdx < classes.length; cIdx++) {
+            for (var classIdx = 0; classIdx < classNames.length; classIdx++) {
                 var clazz = classNames[classIdx];
                 // TODO: dedupe with above code
                 if (clazz.indexOf(PANEL_SENSOR_OBJID_PREFIX) == 0) {
