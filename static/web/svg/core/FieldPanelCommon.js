@@ -29,23 +29,24 @@ function setSensorState(sensorID, sensorState)
 
 	if (sensorID.indexOf("LS") == 0) {
 		// like "block123"
-		var pathID = sensorID.replace("LS", "block");
-		console.log("Trying pathID ", pathID, "as a class name");
+		sensorID = sensorID.replace("LS", "block");
+	}
+	console.log("Trying sensorID ", sensorID, "as a class name");
 
-		// Some block segments may be identified by class name.
-		// This is because some panels have multi-segment blocks.
-		var blockPaths = svgDocument.getElementsByClassName(pathID);
-		for (var i = 0; i < blockPaths.length; i++) {
-			var element = blockPaths[i];
-			if (sensorState == JMRI_SENSOR_ACTIVE) {
-				setStyleSubAttribute(element, "stroke", "red");
-			} else {
-				setStyleSubAttribute(element, "stroke", "white");
-			}
+	// Some block segments may be identified by class name.
+	// This is because some panels have multi-segment blocks.
+	var blockPaths = svgDocument.getElementsByClassName(sensorID);
+	for (var i = 0; i < blockPaths.length; i++) {
+		var element = blockPaths[i];
+		if (sensorState == JMRI_SENSOR_ACTIVE) {
+			setStyleSubAttribute(element, "stroke", "red");
+		} else {
+			setStyleSubAttribute(element, "stroke", "white");
 		}
 	}
 	
 	// Search for any blocks with this as the ID.
+	console.log("Trying", sensorID, "as an element ID");
 	blockElement = svgDocument.getElementById(sensorID);
 
 	if (blockElement == null) {
