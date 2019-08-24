@@ -35,8 +35,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="Kaos_Kalamazoo.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -286,14 +286,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.87087518"
-     inkscape:cx="241.72214"
-     inkscape:cy="435.39486"
+     inkscape:zoom="4.926414"
+     inkscape:cx="676.72887"
+     inkscape:cy="247.98775"
      inkscape:document-units="px"
      inkscape:current-layer="mainlinePanelLinkLayer"
      showgrid="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="997"
+     inkscape:window-width="1019"
+     inkscape:window-height="794"
      inkscape:window-x="5"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -868,7 +868,7 @@
        sodipodi:nodetypes="cc"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
        d="m 1000,334.0945 -30,30"
-       class="block204"
+       class="sensor JerichoSB"
        id="path3233"
        inkscape:connector-curvature="0" />
     <path
@@ -915,7 +915,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3500"
-       class="block207"
+       class="sensor JerichoNB"
        d="m 980,294.0945 -60,60"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />
@@ -1012,7 +1012,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3755"
-       class="block205"
+       class="sensor KaosMain"
        d="m 640,314.0945 -220,-220 -40,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />
@@ -1102,8 +1102,8 @@
      style="display:inline">
     <a
        xlink:href="MtMarvel.svg"
-       id="daytonIndustrialLink"
-       transform="translate(-60,10.000047)">
+       transform="translate(-60,10.000047)"
+       id="daytonIndustrialLink">
       <text
          id="text3305"
          y="86.114754"
@@ -1119,8 +1119,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       transform="translate(830,324.00005)"
-       id="a4142">
+       id="a4142"
+       transform="translate(830,324.00005)">
       <text
          id="text4593"
          y="-73.885246"
@@ -1136,8 +1136,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       transform="translate(-60,50.000047)"
-       id="a3737">
+       id="a3737"
+       transform="translate(-60,50.000047)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1153,8 +1153,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       id="a3192"
-       transform="rotate(-45,1124.2397,-869.99705)">
+       transform="rotate(-45,1124.2397,-869.99705)"
+       id="a3192">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1170,9 +1170,9 @@
     </a>
     <a
        xlink:href="JasperJct.svg"
-       id="a4148"
+       style="display:inline"
        transform="translate(660,-125.99995)"
-       style="display:inline">
+       id="a4148">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1188,9 +1188,9 @@
     </a>
     <a
        xlink:href="Klamath.svg"
-       id="a3692"
+       style="display:inline"
        transform="translate(580,34.000054)"
-       style="display:inline">
+       id="a3692">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1206,9 +1206,9 @@
     </a>
     <a
        xlink:href="Klamath.svg"
-       style="display:inline"
+       id="a4653"
        transform="translate(230,-19.999946)"
-       id="a4653">
+       style="display:inline">
       <text
          id="text4655"
          y="246.11475"
@@ -1222,132 +1222,6 @@
            sodipodi:role="line"
            style="font-size:16px;line-height:1.25">Klamath (Staging)</tspan></text>
     </a>
-    <g
-       style="display:inline"
-       transform="rotate(-46.16242,719.65853,-113.74002)"
-       id="g1525">
-      <g
-         id="g1511"
-         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)">
-        <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
-           r="2.0467861"
-           cy="424.56335"
-           cx="872.92395"
-           class="SIGNALHEAD_JERICHO_NB_TO_KAOS_LOWER signalHead"
-           id="circle1507" />
-        <circle
-           id="circle1509"
-           cx="872.92395"
-           cy="424.56335"
-           r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
-      </g>
-      <rect
-         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect1513"
-         width="13.559044"
-         height="1.0001551"
-         x="-566.67596"
-         y="-333.33649" />
-      <rect
-         y="559.68488"
-         x="-338.11322"
-         height="1"
-         width="5.25"
-         id="rect1515"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="rotate(-89.346485)" />
-      <g
-         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)"
-         id="g1521">
-        <circle
-           id="circle1517"
-           class="SIGNALHEAD_JERICHO_NB_TO_KAOS_UPPER signalHead"
-           cx="872.92395"
-           cy="424.56335"
-           r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
-        <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
-           r="2.2604594"
-           cy="424.56335"
-           cx="872.92395"
-           id="circle1519" />
-      </g>
-      <rect
-         y="-345.24927"
-         x="-541.44806"
-         height="1.0000477"
-         width="0.87359697"
-         id="rect1523"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)" />
-    </g>
-    <g
-       id="g1587"
-       transform="rotate(178.79182,607.29178,401.88527)"
-       style="display:inline">
-      <g
-         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)"
-         id="g1573">
-        <circle
-           id="circle1569"
-           class="SIGNALHEAD_KALAMAZOO_FRONT_TO_JERICO_LOWER signalHead"
-           cx="872.92395"
-           cy="424.56335"
-           r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
-        <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
-           r="2.2604594"
-           cy="424.56335"
-           cx="872.92395"
-           id="circle1571" />
-      </g>
-      <rect
-         y="-333.33649"
-         x="-566.67596"
-         height="1.0001551"
-         width="13.559044"
-         id="rect1575"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)" />
-      <rect
-         transform="rotate(-89.346485)"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect1577"
-         width="5.25"
-         height="1"
-         x="-338.11322"
-         y="559.68488" />
-      <g
-         id="g1583"
-         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)">
-        <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
-           r="2.0467861"
-           cy="424.56335"
-           cx="872.92395"
-           class="SIGNALHEAD_KALAMAZOO_FRONT_TO_JERICO_UPPER signalHead"
-           id="circle1579" />
-        <circle
-           id="circle1581"
-           cx="872.92395"
-           cy="424.56335"
-           r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
-      </g>
-      <rect
-         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect1585"
-         width="0.87359697"
-         height="1.0000477"
-         x="-541.44806"
-         y="-345.24927" />
-    </g>
     <rect
        id="rect1589"
        width="16.075798"
@@ -1356,78 +1230,15 @@
        y="294.53574"
        style="fill:#ffffff;fill-opacity:0.29441624;stroke-width:1.84544313" />
     <g
-       style="display:inline"
-       transform="rotate(178.79182,607.75767,371.31408)"
-       id="g2466">
-      <g
-         id="g2452"
-         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)">
-        <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
-           r="2.0467861"
-           cy="424.56335"
-           cx="872.92395"
-           class="SIGNALHEAD_HALLELUJAH_TO_IGO_LOWER signalHead"
-           id="circle2448" />
-        <circle
-           id="circle2450"
-           cx="872.92395"
-           cy="424.56335"
-           r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
-      </g>
-      <rect
-         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2454"
-         width="13.559044"
-         height="1.0001551"
-         x="-566.67596"
-         y="-333.33649" />
-      <rect
-         y="559.68488"
-         x="-338.11322"
-         height="1"
-         width="5.25"
-         id="rect2456"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="rotate(-89.346485)" />
-      <g
-         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)"
-         id="g2462">
-        <circle
-           id="circle2458"
-           class="signalHead"
-           cx="872.92395"
-           cy="424.56335"
-           r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
-        <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
-           r="2.2604594"
-           cy="424.56335"
-           cx="872.92395"
-           id="circle2460" />
-      </g>
-      <rect
-         y="-345.24927"
-         x="-541.44806"
-         height="1.0000477"
-         width="0.87359697"
-         id="rect2464"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)" />
-    </g>
-    <g
-       id="g2486"
-       transform="rotate(178.79182,428.26813,220.00625)"
+       id="g5281"
+       transform="rotate(-44.026716,721.02811,-137.59388)"
        style="display:inline">
       <g
          transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)"
-         id="g2472">
+         id="g5267">
         <circle
-           id="circle2468"
-           class="signalHead"
+           id="circle5263"
+           class="signalHead SIGNALHEAD_JERICHO_TO_KAOS_REAR_LOWER"
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
@@ -1437,36 +1248,36 @@
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
-           id="circle2470" />
+           id="circle5265" />
       </g>
       <rect
          y="-333.33649"
          x="-566.67596"
          height="1.0001551"
          width="13.559044"
-         id="rect2474"
+         id="rect5269"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)" />
       <rect
          transform="rotate(-89.346485)"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2476"
+         id="rect5271"
          width="5.25"
          height="1"
          x="-338.11322"
          y="559.68488" />
       <g
-         id="g2482"
+         id="g5277"
          transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)">
         <circle
            style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
-           class="signalHead"
-           id="circle2478" />
+           class="signalHead SIGNALHEAD_JERICHO_TO_KAOS_REAR_UPPER"
+           id="circle5273" />
         <circle
-           id="circle2480"
+           id="circle5275"
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
@@ -1475,55 +1286,55 @@
       <rect
          transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2484"
+         id="rect5279"
          width="0.87359697"
          height="1.0000477"
          x="-541.44806"
          y="-345.24927" />
     </g>
     <g
+       id="g5343"
        style="display:inline"
-       transform="rotate(178.79182,422.08434,228.87349)"
-       id="g2506">
+       transform="rotate(135.20624,521.47449,611.61519)">
       <g
-         id="g2492"
-         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)">
+         id="g5329"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
         <circle
            style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
-           class="SIGNALHEAD_HALLELUJAH_TO_IGO_LOWER signalHead"
-           id="circle2488" />
+           class="SIGNALHEAD_JERICHO_TO_KAOS_FRONT_LOWER signalHead"
+           id="circle5325" />
         <circle
-           id="circle2490"
+           id="circle5327"
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
            style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
       </g>
       <rect
-         transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)"
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect2494"
+         id="rect5331"
          width="13.559044"
          height="1.0001551"
-         x="-566.67596"
-         y="-333.33649" />
+         x="58.630123"
+         y="462.48294" />
       <rect
-         y="559.68488"
-         x="-338.11322"
+         y="-48.984791"
+         x="460.43005"
          height="1"
          width="5.25"
-         id="rect2496"
+         id="rect5333"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="rotate(-89.346485)" />
+         transform="rotate(89.64714)" />
       <g
-         transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)"
-         id="g2502">
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
+         id="g5339">
         <circle
-           id="circle2498"
-           class="signalHead"
+           id="circle5335"
+           class="SIGNALHEAD_JERICHO_TO_KAOS_FRONT_UPPER signalHead"
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
@@ -1533,16 +1344,308 @@
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
-           id="circle2500" />
+           id="circle5337" />
       </g>
       <rect
-         y="-345.24927"
-         x="-541.44806"
+         y="464.07227"
+         x="73.068405"
          height="1.0000477"
          width="0.87359697"
-         id="rect2504"
+         id="rect5341"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)" />
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
+    </g>
+    <g
+       transform="rotate(-179.98813,400.29494,391.42826)"
+       style="display:inline"
+       id="g5405"
+       inkscape:transform-center-x="1.5847008"
+       inkscape:transform-center-y="-1.2605732">
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)"
+         id="g5391">
+        <circle
+           id="circle5387"
+           class="SIGNALHEAD_JASPER_TO_KAOS_LOWER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle5389" />
+      </g>
+      <rect
+         y="462.48294"
+         x="58.630123"
+         height="1.0001551"
+         width="13.559044"
+         id="rect5393"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)" />
+      <rect
+         transform="rotate(89.64714)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5395"
+         width="5.25"
+         height="1"
+         x="460.43005"
+         y="-48.984791" />
+      <g
+         id="g5401"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_JASPER_TO_KAOS_UPPER signalHead"
+           id="circle5397" />
+        <circle
+           id="circle5399"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5403"
+         width="0.87359697"
+         height="1.0000477"
+         x="73.068405"
+         y="464.07227" />
+    </g>
+    <g
+       id="g5467"
+       style="display:inline"
+       transform="matrix(0.99997546,-0.00700555,-0.00700555,-0.99997546,600.06956,863.35609)">
+      <g
+         id="g5453"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_LOWER signalHead"
+           id="circle5449" />
+        <circle
+           id="circle5451"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5455"
+         width="13.559044"
+         height="1.0001551"
+         x="58.630123"
+         y="462.48294" />
+      <rect
+         y="-48.984791"
+         x="460.43005"
+         height="1"
+         width="5.25"
+         id="rect5457"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(89.64714)" />
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
+         id="g5463">
+        <circle
+           id="circle5459"
+           class="SIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_UPPER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle5461" />
+      </g>
+      <rect
+         y="464.07227"
+         x="73.068405"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect5465"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
+    </g>
+    <g
+       id="g5591"
+       style="display:inline"
+       transform="matrix(0.99998087,-0.00618558,-0.00618558,-0.99998087,251.30557,543.63506)">
+      <g
+         id="g5577"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_LOOP_TO_KAOS_REAR_LOWER signalHead"
+           id="circle5573" />
+        <circle
+           id="circle5575"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5579"
+         width="13.559044"
+         height="1.0001551"
+         x="58.630123"
+         y="462.48294" />
+      <rect
+         y="-48.984791"
+         x="460.43005"
+         height="1"
+         width="5.25"
+         id="rect5581"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(89.64714)" />
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
+         id="g5587">
+        <circle
+           id="circle5583"
+           class="SIGNALHEAD_LOOP_TO_KAOS_REAR_UPPER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle5585" />
+      </g>
+      <rect
+         y="464.07227"
+         x="73.068405"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect5589"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
+    </g>
+    <g
+       transform="matrix(0.99998087,-0.00618558,-0.00618558,-0.99998087,237.52633,583.53745)"
+       style="display:inline"
+       id="g5653">
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)"
+         id="g5639">
+        <circle
+           id="circle5635"
+           class="SIGNALHEAD_LOOP_TO_KAOS_FRONT_LOWER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle5637" />
+      </g>
+      <rect
+         y="462.48294"
+         x="58.630123"
+         height="1.0001551"
+         width="13.559044"
+         id="rect5641"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)" />
+      <rect
+         transform="rotate(89.64714)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5643"
+         width="5.25"
+         height="1"
+         x="460.43005"
+         y="-48.984791" />
+      <g
+         id="g5649"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_LOOP_TO_KAOS_FRONT_UPPER signalHead"
+           id="circle5645" />
+        <circle
+           id="circle5647"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5651"
+         width="0.87359697"
+         height="1.0000477"
+         x="73.068405"
+         y="464.07227" />
+    </g>
+    <g
+       style="display:inline"
+       transform="rotate(-179.91991,398.93107,450.1541)"
+       id="g6602">
+      <g
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)"
+         id="g6596">
+        <circle
+           id="circle6592"
+           class="SIGNALHEAD_KALAMAZOO_TO_KAOS_FRONT signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle6594" />
+      </g>
+      <rect
+         y="-440.8757"
+         x="-154.03012"
+         height="1.0001551"
+         width="13.559044"
+         id="rect6598"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)" />
+      <rect
+         transform="rotate(-90.101151)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect6600"
+         width="5.25"
+         height="1"
+         x="-443.71677"
+         y="144.79631" />
     </g>
   </g>
   <g

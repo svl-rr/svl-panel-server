@@ -31,19 +31,7 @@
       <systemName>LS203</systemName>
     </sensor>
     <sensor inverted="false">
-      <systemName>LS204</systemName>
-      <userName>JerichoSB</userName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS205</systemName>
-      <userName>KaosMain</userName>
-    </sensor>
-    <sensor inverted="false">
       <systemName>LS206</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS207</systemName>
-      <userName>JerichoNB</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>LS208</systemName>
@@ -143,6 +131,18 @@
     <sensor inverted="false">
       <systemName>MS05.01.01.01.47.09.00.42;05.01.01.01.47.09.00.43</systemName>
       <userName>JacksonvilleSB</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.0C.00.42;05.01.01.01.47.0C.00.43</systemName>
+      <userName>JerichoSB</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.0C.00.46;05.01.01.01.47.0C.00.47</systemName>
+      <userName>JerichoNB</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.0C.00.44;05.01.01.01.47.0C.00.45</systemName>
+      <userName>KaosMain</userName>
     </sensor>
   </sensors>
   <turnouts class="jmri.jmrix.nce.configurexml.NceTurnoutManagerXml">
@@ -1235,7 +1235,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="7:10 PM">
+    <memory value="10:20 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -1682,7 +1682,7 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_NB_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1694,7 +1694,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_UPPER</systemName>
     </memory>
     <memory value="YELLOW">
@@ -1721,7 +1721,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1735,6 +1735,21 @@
     </memory>
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_UPPER</systemName>
+    </memory>
+    <memory value="RED">
+      <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_UPPER</systemName>
+    </memory>
+    <memory value="YELLOW">
+      <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_LOWER</systemName>
+    </memory>
+    <memory value="GREEN">
+      <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_FRONT</systemName>
+    </memory>
+    <memory value="RED">
+      <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_LOWER</systemName>
+    </memory>
+    <memory value="GREEN">
+      <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
   </memories>
   <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
@@ -1965,104 +1980,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Fri Aug 09 16:43:51 PDT 2019</date>
+      <date>Sat Aug 10 02:35:40 PDT 2019</date>
       <filename>JMRI program</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Fri Aug 09 16:44:00 PDT 2019</date>
+      <date>Sat Aug 10 02:35:56 PDT 2019</date>
       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Sat Jul 27 02:44:07 PDT 2019</date>
+          <date>Fri Aug 09 16:43:51 PDT 2019</date>
           <filename>JMRI program</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Sat Jul 27 02:44:17 PDT 2019</date>
+          <date>Fri Aug 09 16:44:00 PDT 2019</date>
           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Fri Jul 26 13:46:30 PDT 2019</date>
+              <date>Sat Jul 27 02:44:07 PDT 2019</date>
               <filename>JMRI program</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Fri Jul 26 13:46:34 PDT 2019</date>
+              <date>Sat Jul 27 02:44:17 PDT 2019</date>
               <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Sat Jun 22 21:21:13 PDT 2019</date>
+                  <date>Fri Jul 26 13:46:30 PDT 2019</date>
                   <filename>JMRI program</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Sat Jun 22 21:21:16 PDT 2019</date>
+                  <date>Fri Jul 26 13:46:34 PDT 2019</date>
                   <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Mon Jun 17 22:17:16 PDT 2019</date>
+                      <date>Sat Jun 22 21:21:13 PDT 2019</date>
                       <filename>JMRI program</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Mon Jun 17 22:17:21 PDT 2019</date>
+                      <date>Sat Jun 22 21:21:16 PDT 2019</date>
                       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Sat Jun 15 17:45:32 PDT 2019</date>
+                          <date>Mon Jun 17 22:17:16 PDT 2019</date>
                           <filename>JMRI program</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Sat Jun 15 17:45:39 PDT 2019</date>
+                          <date>Mon Jun 17 22:17:21 PDT 2019</date>
                           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Mon Jun 17 22:12:27 PDT 2019</date>
+                          <date>Fri Jun 21 22:26:51 PDT 2019</date>
                           <filename />
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Fri Jun 21 22:26:51 PDT 2019</date>
+                      <date>Mon Jun 24 14:29:46 PDT 2019</date>
                       <filename />
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Mon Jun 24 14:29:46 PDT 2019</date>
+                  <date>Fri Jul 26 19:05:21 PDT 2019</date>
                   <filename />
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Fri Jul 26 19:05:21 PDT 2019</date>
+              <date>Fri Aug 02 21:03:32 PDT 2019</date>
               <filename />
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Fri Aug 02 21:03:32 PDT 2019</date>
+          <date>Fri Aug 09 19:10:27 PDT 2019</date>
           <filename />
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Aug 09 19:10:27 PDT 2019</date>
+      <date>Fri Aug 23 22:20:08 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Fri Aug 09 19:10:27 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Fri Aug 23 22:20:08 PDT 2019-->
 </layout-config>
