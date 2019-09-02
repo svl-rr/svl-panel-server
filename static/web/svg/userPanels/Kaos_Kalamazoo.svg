@@ -874,6 +874,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path3332"
+       class="sensor LoopOuter"
        d="m 140,94.0945 40,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
        sodipodi:nodetypes="cc" />
@@ -882,6 +883,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
        d="m 140,134.0945 40,0"
        id="path3735"
+       class="sensor LoopInner"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
@@ -974,6 +976,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4048"
+       class="sensor LoopOuter"
        d="m 330,94.0945 -150,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221"
@@ -1004,6 +1007,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3753"
+       class="sensor LoopInner"
        d="m 180,134.0945 140,0 10,-10"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        inkscape:label="#path4221" />

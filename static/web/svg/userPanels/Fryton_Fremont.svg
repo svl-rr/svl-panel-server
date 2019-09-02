@@ -35,8 +35,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="Fryton_Fremont.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -286,14 +286,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="6.9670015"
-     inkscape:cx="212.0666"
-     inkscape:cy="540.90066"
+     inkscape:zoom="9.852828"
+     inkscape:cx="798.67243"
+     inkscape:cy="540.9611"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="997"
+     inkscape:window-width="875"
+     inkscape:window-height="929"
      inkscape:window-x="6"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -779,6 +779,7 @@
          inkscape:label="#path4221"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 200,574.0945 -20,0 -20,-20"
+         class="sensor EbbetsFrytonSwitch"
          id="TO175.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
@@ -787,6 +788,7 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO175.N"
+         class="sensor EbbetsFrytonSwitch"
          d="m 200,574.0945 -40,0"
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221" />
@@ -857,8 +859,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Greeley_Gotham.svg"
-       transform="translate(-90,54.000047)"
-       id="greeleyMainLink">
+       id="greeleyMainLink"
+       transform="translate(-90,54.000047)">
       <text
          id="text3305"
          y="86.114754"
@@ -874,8 +876,8 @@
     </a>
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       id="EbbettsEagleMainLink"
-       transform="translate(790,54.000047)">
+       transform="translate(790,54.000047)"
+       id="EbbettsEagleMainLink">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -899,9 +901,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Greeley_Gotham.svg"
-       style="display:inline"
+       transform="translate(-100,284.0005)"
        id="a3633"
-       transform="translate(-100,284.0005)">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -917,9 +919,9 @@
     </a>
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       transform="translate(780,284.0005)"
+       style="display:inline"
        id="a3642"
-       style="display:inline">
+       transform="translate(780,284.0005)">
       <text
          id="text3644"
          y="86.114754"
@@ -1166,6 +1168,145 @@
          id="rect1615"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          transform="rotate(-90.101151)" />
+    </g>
+    <g
+       id="g3364"
+       style="display:inline"
+       transform="matrix(-0.99541051,-0.09569696,-0.09569696,0.99541051,954.33917,-243.25362)">
+      <g
+         id="g3358"
+         transform="matrix(-1.1896635,0.94500129,-0.94500129,-1.1896635,1565.3915,90.79969)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_FRYTON_SIDING_TO_EBBETS signalHead"
+           id="circle3354" />
+        <circle
+           id="circle3356"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="rotate(141.53836)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3360"
+         width="5.25"
+         height="1"
+         x="148.0546"
+         y="-400.22214" />
+      <rect
+         y="-151.71539"
+         x="-400.97662"
+         height="1"
+         width="5.25"
+         id="rect3362"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-128.98727)" />
+    </g>
+    <g
+       style="display:inline"
+       transform="matrix(-1,0,0,1,920.13613,-260.37617)"
+       id="g3407">
+      <g
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)"
+         id="g3401">
+        <circle
+           id="circle3397"
+           class="SIGNALHEAD_FRYTON_MAIN_TO_EBBETS signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle3399" />
+      </g>
+      <rect
+         y="-440.8757"
+         x="-154.03012"
+         height="1.0001551"
+         width="13.559044"
+         id="rect3403"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)" />
+      <rect
+         transform="rotate(-90.101151)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3405"
+         width="5.25"
+         height="1"
+         x="-443.71677"
+         y="144.79631" />
+    </g>
+    <g
+       id="g3457"
+       style="display:inline"
+       transform="matrix(-1,0,0,1,914.17361,-302.6202)">
+      <g
+         id="g3443"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_EBBETS_TO_FRYTON_LOWER signalHead"
+           id="circle3439" />
+        <circle
+           id="circle3441"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3445"
+         width="13.559044"
+         height="1.0001551"
+         x="58.630123"
+         y="462.48294" />
+      <rect
+         y="-48.984791"
+         x="460.43005"
+         height="1"
+         width="5.25"
+         id="rect3447"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(89.64714)" />
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
+         id="g3453">
+        <circle
+           id="circle3449"
+           class="SIGNALHEAD_EBBETS_TO_FRYTON_UPPER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle3451" />
+      </g>
+      <rect
+         y="464.07227"
+         x="73.068405"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect3455"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
     </g>
   </g>
 </svg>

@@ -336,16 +336,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.12"
-     inkscape:cx="460.89217"
-     inkscape:cy="570.91102"
+     inkscape:zoom="2.56"
+     inkscape:cx="392.29299"
+     inkscape:cy="328.33967"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
-     inkscape:window-width="842"
-     inkscape:window-height="868"
-     inkscape:window-x="1058"
-     inkscape:window-y="7"
+     inkscape:window-width="1117"
+     inkscape:window-height="873"
+     inkscape:window-x="722"
+     inkscape:window-y="11"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -2692,6 +2692,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:none"
        d="M 320,174.094 H 80"
        id="BLOCK331"
+       class="sensor LoopOuter"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
@@ -2705,6 +2706,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="BLOCK332"
+       class="sensor LoopInner"
        d="m 320,194.094 -20,20 H 80"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:none">
       <title
@@ -3393,7 +3395,7 @@
          x="850"
          id="tspan4076"
          sodipodi:role="line"
-         style="font-size:16px;line-height:1.25">Greely</tspan></text>
+         style="font-size:16px;line-height:1.25">Greeley</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -5573,6 +5575,144 @@
          id="rect5705"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          transform="rotate(-90.101151)" />
+    </g>
+    <g
+       id="g1794"
+       transform="matrix(-1,0,0,1,440.988,19.323452)">
+      <g
+         id="g1788"
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_FRYTON_MAIN_TO_EBBETS signalHead"
+           id="circle1784" />
+        <circle
+           id="circle1786"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1790"
+         width="13.559044"
+         height="1.0001551"
+         x="-154.03012"
+         y="-440.8757" />
+      <rect
+         y="144.79631"
+         x="-443.71677"
+         height="1"
+         width="5.25"
+         id="rect1792"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-90.101151)" />
+    </g>
+    <g
+       transform="matrix(-1,0,0,1,431.64577,20.611972)"
+       style="display:inline"
+       id="g1806">
+      <g
+         transform="matrix(-1.1896635,0.94500129,-0.94500129,-1.1896635,1565.3915,90.79969)"
+         id="g1800">
+        <circle
+           id="circle1796"
+           class="SIGNALHEAD_FRYTON_SIDING_TO_EBBETS signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle1798" />
+      </g>
+      <rect
+         y="-400.22214"
+         x="148.0546"
+         height="1"
+         width="5.25"
+         id="rect1802"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(141.53836)" />
+      <rect
+         transform="rotate(-128.98727)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1804"
+         width="5.25"
+         height="1"
+         x="-400.97662"
+         y="-151.71539" />
+    </g>
+    <g
+       transform="matrix(-1,0,0,1,435.02964,-22.459612)"
+       style="display:inline"
+       id="g1856">
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)"
+         id="g1842">
+        <circle
+           id="circle1838"
+           class="SIGNALHEAD_EBBETS_TO_FRYTON_LOWER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle1840" />
+      </g>
+      <rect
+         y="462.48294"
+         x="58.630123"
+         height="1.0001551"
+         width="13.559044"
+         id="rect1844"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)" />
+      <rect
+         transform="rotate(89.64714)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1846"
+         width="5.25"
+         height="1"
+         x="460.43005"
+         y="-48.984791" />
+      <g
+         id="g1852"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_EBBETS_TO_FRYTON_UPPER signalHead"
+           id="circle1848" />
+        <circle
+           id="circle1850"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1854"
+         width="0.87359697"
+         height="1.0000477"
+         x="73.068405"
+         y="464.07227" />
     </g>
   </g>
 </svg>

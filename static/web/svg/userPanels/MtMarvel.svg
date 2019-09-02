@@ -27,6 +27,10 @@
      type="application/ecmascript"
      id="script_common" />
   <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     type="application/ecmascript"
+     id="script_common" />
+  <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
@@ -815,6 +819,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3525"
+       class="sensor LoopInner"
        d="m 140,494.0945 40,0 20,-20"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
@@ -822,6 +827,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path3531"
+       class="sensor LoopOuter"
        d="m 100,454.0945 40,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
@@ -830,6 +836,7 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        d="m 100,494.0945 40,0"
        id="path4255"
+       class="sensor LoopInner"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
@@ -841,6 +848,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3529"
+       class="sensor MtMarvell"
        d="m 800,414.0945 -540,0 -20,20"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
@@ -856,6 +864,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3280"
+       class="sensor LoopOuter"
        d="m 190,454.0945 -50,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
