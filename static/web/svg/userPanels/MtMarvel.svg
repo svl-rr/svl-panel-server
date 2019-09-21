@@ -819,7 +819,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3525"
-       class="sensor LoopInner"
+       class="sensor LoopOuter"
        d="m 140,494.0945 40,0 20,-20"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
@@ -827,7 +827,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path3531"
-       class="sensor LoopOuter"
+       class="sensor LoopInner"
        d="m 100,454.0945 40,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
@@ -836,7 +836,7 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        d="m 100,494.0945 40,0"
        id="path4255"
-       class="sensor LoopInner"
+       class="sensor LoopOuter"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
@@ -864,7 +864,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3280"
-       class="sensor LoopOuter"
+       class="sensor LoopInner"
        d="m 190,454.0945 -50,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
