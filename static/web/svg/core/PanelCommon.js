@@ -548,6 +548,25 @@ function init(evt)
     updateMainlineStatus();
 	    
 	setPanelStatus("Panel Ready");
+
+    window.setTimeout("handleFlashingSignals(true)", 1000);
+}
+
+function handleFlashingSignals(flashOn) {
+    var headElements = svgDocument.getElementsByClassName("flashing");
+    for (var headIdx = 0; headIdx < headElements.length; headIdx++) {
+        var headElement = headElements[headIdx];
+        if (flashOn) {
+            setStyleSubAttribute(headElement, "display", "none");
+        } else {
+            setStyleSubAttribute(headElement, "display", "");
+        }
+    }
+    if (flashOn) {
+        window.setTimeout("handleFlashingSignals(false)", 1000);
+    } else {
+        window.setTimeout("handleFlashingSignals(true)", 1000);
+    }
 }
 
 /* handleSocketConnect()
@@ -626,6 +645,14 @@ function handleSocketDataResponse(dataArray)
                 for (var headIdx = 0; headIdx < headElements.length; headIdx++) {
                     var headElement = headElements[headIdx];
                     setStyleSubAttribute(headElement, "fill", value);
+                    var classesStr = headElement.getAttribute("class");
+                    if (dataArray[i].value.indexOf("FLASHING_") == 0) {
+                        headElement.setAttribute("class", classesStr + " flashing");
+                    } else {
+                        // If it was in the middle of a flash, the head may have display=none.
+                        setStyleSubAttribute(headElement, "display", "");
+                        headElement.setAttribute("class", classesStr.replace(" flashing", ""));
+                    }
                 }
             }
             else if((dataArray[i].type == SERVER_TYPE_TURNOUT) && isPhysicalTurnout(dataArray[i].name))
