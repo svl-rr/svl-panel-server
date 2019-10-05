@@ -35,8 +35,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="Fryton_Fremont.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -286,16 +286,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="9.852828"
-     inkscape:cx="798.67243"
-     inkscape:cy="540.9611"
+     inkscape:zoom="2.463207"
+     inkscape:cx="966.65883"
+     inkscape:cy="477.2868"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="875"
      inkscape:window-height="929"
-     inkscape:window-x="6"
-     inkscape:window-y="0"
+     inkscape:window-x="708"
+     inkscape:window-y="12"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -861,8 +861,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Greeley_Gotham.svg"
-       id="greeleyMainLink"
-       transform="translate(-90,54.000047)">
+       transform="translate(-90,54.000047)"
+       id="greeleyMainLink">
       <text
          id="text3305"
          y="86.114754"
@@ -878,8 +878,8 @@
     </a>
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       transform="translate(790,54.000047)"
-       id="EbbettsEagleMainLink">
+       id="EbbettsEagleMainLink"
+       transform="translate(790,54.000047)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -903,9 +903,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Greeley_Gotham.svg"
-       transform="translate(-100,284.0005)"
+       style="display:inline"
        id="a3633"
-       style="display:inline">
+       transform="translate(-100,284.0005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -921,9 +921,9 @@
     </a>
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       style="display:inline"
+       transform="translate(780,284.0005)"
        id="a3642"
-       transform="translate(780,284.0005)">
+       style="display:inline">
       <text
          id="text3644"
          y="86.114754"
@@ -1309,6 +1309,69 @@
          id="rect3455"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
+    </g>
+    <g
+       transform="translate(942.02822,-280.5562)"
+       style="display:inline"
+       id="g4857">
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)"
+         id="g4843">
+        <circle
+           id="circle4839"
+           class="SIGNALHEAD_EBBETTS_TO_EAGLE_LOWER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle4841" />
+      </g>
+      <rect
+         y="462.48294"
+         x="58.630123"
+         height="1.0001551"
+         width="13.559044"
+         id="rect4845"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)" />
+      <rect
+         transform="rotate(89.64714)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4847"
+         width="5.25"
+         height="1"
+         x="460.43005"
+         y="-48.984791" />
+      <g
+         id="g4853"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_EBBETTS_TO_EAGLE_UPPER signalHead"
+           id="circle4849" />
+        <circle
+           id="circle4851"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4855"
+         width="0.87359697"
+         height="1.0000477"
+         x="73.068405"
+         y="464.07227" />
     </g>
   </g>
 </svg>
