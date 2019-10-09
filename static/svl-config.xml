@@ -157,6 +157,10 @@
       <systemName>MS05.01.01.01.47.0C.00.3C;05.01.01.01.47.0C.00.3D</systemName>
       <userName>MtMarvell</userName>
     </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.08.00.46;05.01.01.01.47.08.00.47</systemName>
+      <userName>EbbettsPass</userName>
+    </sensor>
   </sensors>
   <turnouts class="jmri.jmrix.nce.configurexml.NceTurnoutManagerXml">
     <operations automate="false">
@@ -1248,16 +1252,16 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="10:19 PM">
+    <memory value="3:44 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
       <systemName>IMRATEFACTOR</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:380-2">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA102</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:380-2">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA130</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1272,7 +1276,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA134</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:380-2">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA150</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1281,19 +1285,19 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA17</systemName>
     </memory>
-    <memory value="N/A:Occupied SB:380-2">
+    <memory value="N/A:Occupied NB:802">
       <systemName>IMBA173</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized NB:802">
       <systemName>IMBA174</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA177</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized NB:802">
       <systemName>IMBA178</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized NB:802">
       <systemName>IMBA179</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1311,7 +1315,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA249</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized NB:802">
       <systemName>IMBA252</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1347,7 +1351,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA335</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:226">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA448</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1425,7 +1429,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA98</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:380-2">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA99</systemName>
     </memory>
     <memory value="17">
@@ -1434,7 +1438,7 @@
     <memory value="false">
       <systemName>IMMAINLINE_LOCKED</systemName>
     </memory>
-    <memory value="">
+    <memory value="802">
       <systemName>IMN1</systemName>
     </memory>
     <memory value="">
@@ -1482,7 +1486,7 @@
     <memory value="">
       <systemName>IMO8</systemName>
     </memory>
-    <memory value="380-2">
+    <memory value="801">
       <systemName>IMS1</systemName>
     </memory>
     <memory value="">
@@ -1491,7 +1495,7 @@
     <memory value="">
       <systemName>IMS3</systemName>
     </memory>
-    <memory value="226">
+    <memory value="">
       <systemName>IMS4</systemName>
     </memory>
     <memory value="">
@@ -1512,16 +1516,16 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA100A</systemName>
     </memory>
-    <memory value="N:Authorized SB:380-2">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA100B</systemName>
     </memory>
-    <memory value="R:Authorized SB:380-2">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA101</systemName>
     </memory>
-    <memory value="N:Authorized SB:380-2">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA125</systemName>
     </memory>
-    <memory value="N:Authorized SB:380-2">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA126</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1545,16 +1549,16 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA19</systemName>
     </memory>
-    <memory value="N:Authorized SB:380-2">
+    <memory value="N:Authorized NB:802">
       <systemName>IMTA250A</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA250B</systemName>
     </memory>
-    <memory value="R:Authorized SB:380-2">
+    <memory value="R:Authorized NB:802">
       <systemName>IMTA251A</systemName>
     </memory>
-    <memory value="R:Authorized SB:380-2">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA251B</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1569,19 +1573,19 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA276B</systemName>
     </memory>
-    <memory value="R:Authorized SB:226">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA325A</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA325B</systemName>
     </memory>
-    <memory value="N:Authorized SB:226">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA326</systemName>
     </memory>
-    <memory value="R:Authorized SB:226">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA327</systemName>
     </memory>
-    <memory value="R:Authorized SB:226">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA328</systemName>
     </memory>
     <memory value="R:Authorized SB:226">
@@ -1653,10 +1657,10 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_NB</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_SB_MAIN</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN</systemName>
     </memory>
     <memory value="RED">
@@ -1665,13 +1669,13 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_GREEN">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1686,7 +1690,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_FRYTON_SIDING_TO_GREELEY</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_GREELEY</systemName>
     </memory>
     <memory value="RED">
@@ -1695,13 +1699,13 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_NB_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_FRONT</systemName>
     </memory>
     <memory value="RED">
@@ -1722,13 +1726,13 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_NB_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_FRONT</systemName>
     </memory>
     <memory value="RED">
@@ -1743,10 +1747,10 @@
     <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_UPPER</systemName>
     </memory>
     <memory value="YELLOW">
@@ -1767,13 +1771,13 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_EBBETS</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_FRYTON_SIDING_TO_EBBETS</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_EBBETS_TO_FRYTON_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETS_TO_FRYTON_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1794,10 +1798,10 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_EBBETTS_TO_EAGLE_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_LOWER</systemName>
     </memory>
   </memories>
@@ -2124,9 +2128,9 @@
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Oct 04 22:19:45 PDT 2019</date>
+      <date>Wed Oct 09 15:44:05 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Fri Oct 04 22:19:45 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Wed Oct 09 15:44:05 PDT 2019-->
 </layout-config>
