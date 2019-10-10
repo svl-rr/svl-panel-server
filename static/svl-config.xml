@@ -1252,7 +1252,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="3:44 PM">
+    <memory value="5:26 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -1285,19 +1285,19 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA17</systemName>
     </memory>
-    <memory value="N/A:Occupied NB:802">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA173</systemName>
     </memory>
-    <memory value="N/A:Authorized NB:802">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA174</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Occupied OOS:UNAUTHORIZED TRAIN!">
       <systemName>IMBA177</systemName>
     </memory>
-    <memory value="N/A:Authorized NB:802">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA178</systemName>
     </memory>
-    <memory value="N/A:Authorized NB:802">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA179</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1315,7 +1315,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA249</systemName>
     </memory>
-    <memory value="N/A:Authorized NB:802">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA252</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1333,7 +1333,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA301</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized NB:802">
       <systemName>IMBA302</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1549,13 +1549,13 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA19</systemName>
     </memory>
-    <memory value="N:Authorized NB:802">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA250A</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA250B</systemName>
     </memory>
-    <memory value="R:Authorized NB:802">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA251A</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1657,10 +1657,10 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_NB</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_SB_MAIN</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN</systemName>
     </memory>
     <memory value="RED">
@@ -1669,19 +1669,19 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1699,19 +1699,19 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_NB_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_FRONT</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_UPPER</systemName>
     </memory>
     <memory value="YELLOW">
@@ -1726,19 +1726,19 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_NB_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_FRONT</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1747,19 +1747,19 @@
     <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_FRONT</systemName>
     </memory>
     <memory value="RED">
@@ -1768,7 +1768,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_EBBETS</systemName>
     </memory>
     <memory value="RED">
@@ -1780,10 +1780,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETS_TO_FRYTON_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1798,11 +1798,17 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_EBBETTS_TO_EAGLE_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_LOWER</systemName>
+    </memory>
+    <memory value="YELLOW">
+      <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_UPPER</systemName>
+    </memory>
+    <memory value="RED">
+      <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_LOWER</systemName>
     </memory>
   </memories>
   <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
@@ -2128,9 +2134,9 @@
     </operation>
     <operation>
       <type>Store</type>
-      <date>Wed Oct 09 15:44:05 PDT 2019</date>
+      <date>Wed Oct 09 17:26:03 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Wed Oct 09 15:44:05 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Wed Oct 09 17:26:03 PDT 2019-->
 </layout-config>
