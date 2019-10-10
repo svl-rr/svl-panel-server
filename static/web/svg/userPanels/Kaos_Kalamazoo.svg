@@ -35,8 +35,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="Kaos_Kalamazoo.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -286,9 +286,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.926414"
-     inkscape:cx="676.72887"
-     inkscape:cy="247.98775"
+     inkscape:zoom="2.463207"
+     inkscape:cx="950.08248"
+     inkscape:cy="303.95808"
      inkscape:document-units="px"
      inkscape:current-layer="mainlinePanelLinkLayer"
      showgrid="true"
@@ -1106,8 +1106,8 @@
      style="display:inline">
     <a
        xlink:href="MtMarvel.svg"
-       transform="translate(-60,10.000047)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-60,10.000047)">
       <text
          id="text3305"
          y="86.114754"
@@ -1123,8 +1123,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       id="a4142"
-       transform="translate(830,324.00005)">
+       transform="translate(830,324.00005)"
+       id="a4142">
       <text
          id="text4593"
          y="-73.885246"
@@ -1140,8 +1140,8 @@
     </a>
     <a
        xlink:href="MtMarvel.svg"
-       id="a3737"
-       transform="translate(-60,50.000047)">
+       transform="translate(-60,50.000047)"
+       id="a3737">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1157,8 +1157,8 @@
     </a>
     <a
        xlink:href="Jacksonville.svg"
-       transform="rotate(-45,1124.2397,-869.99705)"
-       id="a3192">
+       id="a3192"
+       transform="rotate(-45,1124.2397,-869.99705)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1174,9 +1174,9 @@
     </a>
     <a
        xlink:href="JasperJct.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(660,-125.99995)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1192,9 +1192,9 @@
     </a>
     <a
        xlink:href="Klamath.svg"
-       style="display:inline"
+       id="a3692"
        transform="translate(580,34.000054)"
-       id="a3692">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1210,9 +1210,9 @@
     </a>
     <a
        xlink:href="Klamath.svg"
-       id="a4653"
+       style="display:inline"
        transform="translate(230,-19.999946)"
-       style="display:inline">
+       id="a4653">
       <text
          id="text4655"
          y="246.11475"
@@ -1299,7 +1299,7 @@
     <g
        id="g5343"
        style="display:inline"
-       transform="rotate(135.20624,521.47449,611.61519)">
+       transform="rotate(135.20624,540.02243,604.0614)">
       <g
          id="g5329"
          transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
