@@ -37,8 +37,8 @@
      id="script_common" />
   <script
      xlink:href="DispatchSouthRedirect.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -336,9 +336,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.56"
-     inkscape:cx="593.85549"
-     inkscape:cy="329.90217"
+     inkscape:zoom="14.481547"
+     inkscape:cx="443.11168"
+     inkscape:cy="652.36798"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
@@ -5352,69 +5352,6 @@
          transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
     </g>
     <g
-       id="g905"
-       style="display:inline"
-       transform="rotate(135.70794,321.18771,374.90841)">
-      <g
-         id="g891"
-         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
-        <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
-           r="2.0467861"
-           cy="424.56335"
-           cx="872.92395"
-           class="SIGNALHEAD_JASPER_TO_KAOS_LOWER signalHead"
-           id="circle887" />
-        <circle
-           id="circle889"
-           cx="872.92395"
-           cy="424.56335"
-           r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
-      </g>
-      <rect
-         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="rect893"
-         width="13.559044"
-         height="1.0001551"
-         x="58.630123"
-         y="462.48294" />
-      <rect
-         y="-48.984791"
-         x="460.43005"
-         height="1"
-         width="5.25"
-         id="rect895"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="rotate(89.64714)" />
-      <g
-         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
-         id="g901">
-        <circle
-           id="circle897"
-           class="SIGNALHEAD_JASPER_TO_KAOS_UPPER signalHead"
-           cx="872.92395"
-           cy="424.56335"
-           r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
-        <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
-           r="2.2604594"
-           cy="424.56335"
-           cx="872.92395"
-           id="circle899" />
-      </g>
-      <rect
-         y="464.07227"
-         x="73.068405"
-         height="1.0000477"
-         width="0.87359697"
-         id="rect903"
-         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
-    </g>
-    <g
        transform="rotate(-179.64559,321.05239,340.53787)"
        style="display:inline"
        id="g925">
@@ -5840,6 +5777,44 @@
          id="rect1146"
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
+    </g>
+    <g
+       id="g3937"
+       transform="rotate(96.608772,806.18378,75.787819)"
+       style="display:inline">
+      <g
+         id="g3931"
+         transform="matrix(1.1766243,0.96118769,-0.96118769,1.1766243,293.33293,-902.94418)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_JASPER_DWARF signalHead"
+           id="circle3927" />
+        <circle
+           id="circle3929"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="rect3933"
+         width="3.0547237"
+         height="0.96722209"
+         x="975.40643"
+         y="-240.2581"
+         transform="rotate(39.245482)" />
+      <rect
+         y="-977.56488"
+         x="-233.42929"
+         height="1"
+         width="5.25"
+         id="rect3935"
+         style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1"
+         transform="rotate(128.71985)" />
     </g>
   </g>
 </svg>

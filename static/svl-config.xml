@@ -1252,7 +1252,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="5:26 PM">
+    <memory value="5:37 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -1714,7 +1714,7 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1744,7 +1744,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1809,6 +1809,9 @@
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_LOWER</systemName>
+    </memory>
+    <memory value="RED">
+      <systemName>IMSIGNALHEAD_JASPER_DWARF</systemName>
     </memory>
   </memories>
   <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
@@ -2134,9 +2137,9 @@
     </operation>
     <operation>
       <type>Store</type>
-      <date>Wed Oct 09 17:26:03 PDT 2019</date>
+      <date>Wed Oct 09 17:37:23 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Wed Oct 09 17:26:03 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Wed Oct 09 17:37:23 PDT 2019-->
 </layout-config>
