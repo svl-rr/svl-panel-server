@@ -37,8 +37,8 @@
      id="script_common" />
   <script
      xlink:href="DispatchSouthRedirect.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -336,9 +336,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="14.481547"
-     inkscape:cx="443.11168"
-     inkscape:cy="652.36798"
+     inkscape:zoom="5.12"
+     inkscape:cx="112.03195"
+     inkscape:cy="289.68987"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
@@ -2845,6 +2845,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="BLOCK150B"
+       class="sensor Eagle"
        d="M 960,454.094 H 640"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -5815,6 +5816,69 @@
          id="rect3935"
          style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1"
          transform="rotate(128.71985)" />
+    </g>
+    <g
+       id="g8029"
+       style="display:inline"
+       transform="translate(7.7437985,78.126328)">
+      <g
+         id="g8015"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_EAGLE_TO_DAYTON_LOWER signalHead"
+           id="circle8011" />
+        <circle
+           id="circle8013"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect8017"
+         width="13.559044"
+         height="1.0001551"
+         x="58.630123"
+         y="462.48294" />
+      <rect
+         y="-48.984791"
+         x="460.43005"
+         height="1"
+         width="5.25"
+         id="rect8019"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(89.64714)" />
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
+         id="g8025">
+        <circle
+           id="circle8021"
+           class="SIGNALHEAD_EAGLE_TO_DAYTON_UPPER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle8023" />
+      </g>
+      <rect
+         y="464.07227"
+         x="73.068405"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect8027"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
     </g>
   </g>
 </svg>

@@ -14,7 +14,7 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="MtMarvel.svg"
    onload="init(evt)">
   <title
@@ -29,14 +29,14 @@
   <script
      xlink:href="/web/svg/core/FieldPanelCommon.js"
      type="application/ecmascript"
-     id="script_common" />
+     id="script1990" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
      xlink:href="MtMarvel.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -286,14 +286,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.7819091"
-     inkscape:cx="323.53026"
-     inkscape:cy="476.14051"
+     inkscape:zoom="3.5638182"
+     inkscape:cx="238.99631"
+     inkscape:cy="241.17781"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1104"
+     inkscape:window-height="1036"
      inkscape:window-x="-7"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
@@ -312,7 +312,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      units="px"
-     inkscape:snap-text-baseline="true">
+     inkscape:snap-text-baseline="true"
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -321,8 +322,10 @@
        enabled="true"
        snapvisiblegridlinesonly="true"
        dotted="false"
-       spacingx="10px"
-       spacingy="10px" />
+       spacingx="10"
+       spacingy="10"
+       originx="0"
+       originy="0" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -361,29 +364,29 @@
        xlink:href="Kaos_Kalamazoo.svg"
        id="a3317">
       <text
-         sodipodi:linespacing="125%"
          id="panelTitle"
          y="64.094505"
          x="390"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:52.33785248px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="64.094505"
            x="390"
            id="tspan3823"
-           sodipodi:role="line">Mt. Marvel</tspan></text>
+           sodipodi:role="line"
+           style="font-size:52.33785248px;line-height:1.25">Mt. Marvel</tspan></text>
     </a>
     <text
-       sodipodi:linespacing="125%"
        id="panelStatus"
        y="672.51117"
        x="20"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"
        inkscape:label="#text4524"><tspan
          y="672.51117"
          x="20"
          id="tspanPanelStatus"
-         sodipodi:role="line">Panel not initialized</tspan></text>
+         sodipodi:role="line"
+         style="font-size:12px;line-height:1.25">Panel not initialized</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 302.06784,39.273905 -10,15 20,0 z"
@@ -405,15 +408,15 @@
        transform="translate(30,5.019e-4)">
       <text
          xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:25.22973061px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          x="400"
          y="104.094"
-         id="mainlineLockedText"
-         sodipodi:linespacing="125%"><tspan
+         id="mainlineLockedText"><tspan
            y="104.094"
            x="400"
            id="tspan3321"
-           sodipodi:role="line">Mainline Locked</tspan></text>
+           sodipodi:role="line"
+           style="font-size:25.22973061px;line-height:1.25">Mainline Locked</tspan></text>
       <g
          id="leftLock">
         <rect
@@ -879,57 +882,57 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       transform="translate(-196,328.00005)"
+       style="display:inline"
        id="pasoLink"
-       style="display:inline">
+       transform="translate(-196,328.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="240"
          y="126.11475"
-         id="text3120"
-         sodipodi:linespacing="125%"><tspan
+         id="text3120"><tspan
            sodipodi:role="line"
            x="240"
            y="126.11475"
-           id="tspan3417">Loop (SB)</tspan></text>
+           id="tspan3417"
+           style="font-size:16px;line-height:1.25">Loop (SB)</tspan></text>
     </a>
     <a
        xlink:href="NPF.svg"
-       style="display:inline"
+       transform="translate(750,184.00005)"
        id="a3517"
-       transform="translate(750,184.00005)">
+       style="display:inline">
       <text
-         sodipodi:linespacing="125%"
          id="text3519"
          y="136.11475"
          x="250"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"><tspan
            y="136.11475"
            x="250"
            sodipodi:role="line"
-           id="tspan3293">Nowheres</tspan></text>
+           id="tspan3293"
+           style="font-size:16px;line-height:1.25">Nowheres</tspan></text>
     </a>
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       style="display:inline"
+       transform="translate(-196,368.00005)"
        id="a3284"
-       transform="translate(-196,368.00005)">
+       style="display:inline">
       <text
-         sodipodi:linespacing="125%"
          id="text3286"
          y="126.11475"
          x="240"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"><tspan
            id="tspan3288"
            y="126.11475"
            x="240"
-           sodipodi:role="line">Loop (NB)</tspan></text>
+           sodipodi:role="line"
+           style="font-size:16px;line-height:1.25">Loop (NB)</tspan></text>
     </a>
   </g>
   <g
@@ -941,21 +944,21 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvelTimber.svg"
-       style="display:inline"
+       transform="translate(-128.96363,169.03687)"
        id="a3534"
-       transform="translate(-128.96363,169.03687)">
+       style="display:inline">
       <text
-         sodipodi:linespacing="125%"
          id="text3536"
          y="126.11475"
          x="234"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"><tspan
            id="tspan3538"
            y="126.11475"
            x="234"
-           sodipodi:role="line"> Mt. Marvel Timber</tspan></text>
+           sodipodi:role="line"
+           style="font-size:16px;line-height:1.25"> Mt. Marvel Timber</tspan></text>
     </a>
   </g>
   <g
@@ -963,90 +966,149 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
-       sodipodi:linespacing="125%"
        id="text3547"
        y="160.11481"
        x="440"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="160.11481"
          x="440"
          sodipodi:role="line"
-         id="tspan3549">Lumber Mill 2</tspan></text>
+         id="tspan3549"
+         style="font-size:16px;line-height:1.25">Lumber Mill 2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="440"
        y="200.11481"
-       id="text3551"
-       sodipodi:linespacing="125%"><tspan
+       id="text3551"><tspan
          id="tspan3553"
          sodipodi:role="line"
          x="440"
-         y="200.11481">Lumber Mill 1</tspan></text>
+         y="200.11481"
+         style="font-size:16px;line-height:1.25">Lumber Mill 1</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text3555"
        y="400.11481"
        x="510"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="400.11481"
          x="510"
          sodipodi:role="line"
-         id="tspan3557">Mt. Marvel Main</tspan></text>
+         id="tspan3557"
+         style="font-size:16px;line-height:1.25">Mt. Marvel Main</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="780"
        y="320.11481"
-       id="text3559"
-       sodipodi:linespacing="125%"><tspan
+       id="text3559"><tspan
          id="tspan3561"
          sodipodi:role="line"
          x="780"
-         y="320.11481">Switch Lead</tspan></text>
+         y="320.11481"
+         style="font-size:16px;line-height:1.25">Switch Lead</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="332.259"
        y="670.367"
        id="text3295"
-       sodipodi:linespacing="125%"
-       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"><tspan
+       transform="rotate(-45)"><tspan
          id="tspan3297"
          sodipodi:role="line"
          x="332.259"
          y="670.367"
-         style="stroke-width:0.1">Engine House</tspan></text>
+         style="font-size:16px;line-height:1.25;stroke-width:0.1">Engine House</tspan></text>
     <text
-       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"
-       sodipodi:linespacing="125%"
+       transform="rotate(-45)"
        id="text3299"
        y="707.18799"
        x="367.61435"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.1"
+         style="font-size:16px;line-height:1.25;stroke-width:0.1"
          y="707.18799"
          x="367.61435"
          sodipodi:role="line"
          id="tspan3301">Caboose Track</tspan></text>
     <text
-       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"
-       sodipodi:linespacing="125%"
+       transform="rotate(-45)"
        id="text3383"
        y="364.94827"
        x="-192.41423"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:125%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.1"
+         style="font-size:16px;line-height:1.25;stroke-width:0.1"
          y="364.94827"
          x="-192.41423"
          sodipodi:role="line"
          id="tspan3385">Freight Depot</tspan></text>
+    <g
+       id="g2201"
+       style="display:inline"
+       transform="matrix(-0.71907237,0.6949352,0.6949352,0.71907237,-44.180701,47.469105)">
+      <g
+         id="g2187"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_MTMARVELL_TO_LOOP_LOWER signalHead"
+           id="circle2183" />
+        <circle
+           id="circle2185"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect2189"
+         width="13.559044"
+         height="1.0001551"
+         x="58.630123"
+         y="462.48294" />
+      <rect
+         y="-48.984791"
+         x="460.43005"
+         height="1"
+         width="5.25"
+         id="rect2191"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(89.64714)" />
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
+         id="g2197">
+        <circle
+           id="circle2193"
+           class="SIGNALHEAD_MTMARVELL_TO_LOOP_UPPER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle2195" />
+      </g>
+      <rect
+         y="464.07227"
+         x="73.068405"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect2199"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
+    </g>
   </g>
 </svg>

@@ -14,7 +14,7 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
    sodipodi:docname="Dayton.svg"
    onload="init(evt)">
   <title
@@ -30,9 +30,13 @@
      type="application/ecmascript"
      id="script_common" />
   <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     id="field_panel_common"
+     type="application/ecmascript" />
+  <script
      xlink:href="Dayton.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -282,9 +286,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.33"
-     inkscape:cx="75.142371"
-     inkscape:cy="265.34224"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="337.96955"
+     inkscape:cy="425.70283"
      inkscape:document-units="px"
      inkscape:current-layer="textLayer"
      showgrid="true"
@@ -307,7 +311,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     units="px">
+     units="px"
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -316,8 +321,10 @@
        enabled="true"
        snapvisiblegridlinesonly="true"
        dotted="false"
-       spacingx="10px"
-       spacingy="10px" />
+       spacingx="10"
+       spacingy="10"
+       originx="0"
+       originy="0" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -353,38 +360,37 @@
      id="textLayer"
      inkscape:label="Text"
      transform="translate(0,-3.9797544)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="Upton.svg"
        id="a4522">
       <text
-         sodipodi:linespacing="125%"
          id="panelTitle"
          y="644.09448"
          x="356"
-         style="font-size:52.33785248px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Bold"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Bold';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          xml:space="preserve"><tspan
            y="644.09448"
            x="356"
            id="tspan3823"
-           sodipodi:role="line">Dayton/Dodge</tspan></text>
+           sodipodi:role="line"
+           style="font-size:52.33785248px;line-height:1.25">Dayton/Dodge</tspan></text>
     </a>
     <text
-       sodipodi:linespacing="125%"
        id="panelStatus"
        y="680.56061"
        x="20"
-       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"
        inkscape:label="#text4524"><tspan
          y="680.56061"
          x="20"
          id="tspanPanelStatus"
-         sodipodi:role="line">Panel not initialized</tspan></text>
+         sodipodi:role="line"
+         style="font-size:12px;line-height:1.25">Panel not initialized</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 318.06781,642.32341 -10,-15 20,0 z"
+       d="m 318.06781,642.32341 -10,-15 h 20 z"
        id="leftLevelTriangle"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -403,15 +409,15 @@
        transform="translate(36,486.46663)">
       <text
          xml:space="preserve"
-         style="font-size:25.22973061px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
          x="400"
          y="104.094"
-         id="mainlineLockedText"
-         sodipodi:linespacing="125%"><tspan
+         id="mainlineLockedText"><tspan
            y="104.094"
            x="400"
            id="tspan3321"
-           sodipodi:role="line">Mainline Locked</tspan></text>
+           sodipodi:role="line"
+           style="font-size:25.22973061px;line-height:1.25">Mainline Locked</tspan></text>
       <g
          id="leftLock">
         <rect
@@ -436,6 +442,183 @@
          xlink:href="#leftLock"
          y="0"
          x="0" />
+    </g>
+    <g
+       transform="translate(32.642073,-119.22819)"
+       style="display:inline"
+       id="g5381">
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)"
+         id="g5367">
+        <circle
+           id="circle5363"
+           class="SIGNALHEAD_EAGLE_TO_DAYTON_LOWER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle5365" />
+      </g>
+      <rect
+         y="462.48294"
+         x="58.630123"
+         height="1.0001551"
+         width="13.559044"
+         id="rect5369"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)" />
+      <rect
+         transform="rotate(89.64714)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5371"
+         width="5.25"
+         height="1"
+         x="460.43005"
+         y="-48.984791" />
+      <g
+         id="g5377"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_EAGLE_TO_DAYTON_UPPER signalHead"
+           id="circle5373" />
+        <circle
+           id="circle5375"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect5379"
+         width="0.87359697"
+         height="1.0000477"
+         x="73.068405"
+         y="464.07227" />
+    </g>
+    <g
+       transform="matrix(0.99999478,0.00323095,0.00323095,-0.99999478,21.149497,764.63118)"
+       style="display:inline"
+       id="g1554">
+      <g
+         id="g1548"
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_DAYTON_MAIN_TO_EAGLE signalHead"
+           id="circle1544" />
+        <circle
+           id="circle1546"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1550"
+         width="13.559044"
+         height="1.0001551"
+         x="-154.03012"
+         y="-440.8757" />
+      <rect
+         y="144.79631"
+         x="-443.71677"
+         height="1"
+         width="5.25"
+         id="rect1552"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(-90.101151)" />
+    </g>
+    <g
+       id="g1596"
+       style="display:inline"
+       transform="matrix(0.99999478,0.00323095,0.00323095,-0.99999478,51.555088,804.58271)">
+      <g
+         transform="matrix(-1.5192761,-0.01125588,0.01125588,-1.5192761,1449.7931,1095.5135)"
+         id="g1590">
+        <circle
+           id="circle1586"
+           class="SIGNALHEAD_DAYTON_INTERCHANGE_TO_EAGLE signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle1588" />
+      </g>
+      <rect
+         y="-440.8757"
+         x="-154.03012"
+         height="1.0001551"
+         width="13.559044"
+         id="rect1592"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(-0.99999589,-0.00286853,0.01913124,-0.99981698,0,0)" />
+      <rect
+         transform="rotate(-90.101151)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect1594"
+         width="5.25"
+         height="1"
+         x="-443.71677"
+         y="144.79631" />
+    </g>
+    <g
+       style="display:inline"
+       transform="rotate(-39.325604,519.26821,1483.5209)"
+       id="g1608">
+      <g
+         transform="matrix(1.1766243,0.96118769,-0.96118769,1.1766243,293.33293,-902.94418)"
+         id="g1602">
+        <circle
+           id="circle1598"
+           class="SIGNALHEAD_BRANCH_TO_DAYTON signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle1600" />
+      </g>
+      <rect
+         transform="rotate(39.245482)"
+         y="-240.2581"
+         x="975.40643"
+         height="0.96722209"
+         width="3.0547237"
+         id="rect1604"
+         style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1" />
+      <rect
+         transform="rotate(128.71985)"
+         style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="rect1606"
+         width="5.25"
+         height="1"
+         x="-233.42929"
+         y="-977.56488" />
     </g>
   </g>
   <g
@@ -1072,6 +1255,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path3332"
+       class="sensor Eagle"
        d="m 60,334.0945 40,0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
        sodipodi:nodetypes="cc" />
@@ -1270,54 +1454,54 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       transform="translate(-90,214.00005)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-90,214.00005)">
       <text
-         sodipodi:linespacing="125%"
          id="text3305"
          y="86.114754"
          x="110"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"><tspan
            id="tspan3307"
            y="86.114754"
            x="110"
-           sodipodi:role="line">Eagle (Main)</tspan></text>
+           sodipodi:role="line"
+           style="font-size:16px;line-height:1.25">Eagle (Main)</tspan></text>
     </a>
     <a
        xlink:href="Bakersfield.svg"
-       id="a4090"
-       transform="translate(830,444.00005)">
+       transform="translate(830,444.00005)"
+       id="a4090">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="110"
          y="86.114754"
-         id="text4092"
-         sodipodi:linespacing="125%"><tspan
+         id="text4092"><tspan
            sodipodi:role="line"
            x="110"
            y="86.114754"
-           id="tspan4094">Bakersfield</tspan></text>
+           id="tspan4094"
+           style="font-size:16px;line-height:1.25">Bakersfield</tspan></text>
     </a>
     <a
        xlink:href="Cavanaugh.svg"
-       id="a4142"
-       transform="translate(830,214.00005)">
+       transform="translate(830,214.00005)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="80"
          y="86.114754"
-         id="text4144"
-         sodipodi:linespacing="125%"><tspan
+         id="text4144"><tspan
            sodipodi:role="line"
            x="80"
            y="86.114754"
-           id="tspan4146">Cavanaugh (Main)</tspan></text>
+           id="tspan4146"
+           style="font-size:16px;line-height:1.25">Cavanaugh (Main)</tspan></text>
     </a>
   </g>
   <g
@@ -1329,58 +1513,58 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       style="display:inline"
+       transform="translate(-120,204.0005)"
        id="daytonMainLink"
-       transform="translate(-120,204.0005)">
+       style="display:inline">
       <text
-         sodipodi:linespacing="125%"
          id="text3335"
          y="246.11475"
          x="130"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          xml:space="preserve"
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"><tspan
            y="246.11475"
            x="130"
            id="tspan3337"
-           sodipodi:role="line">Escape (Branch)</tspan></text>
+           sodipodi:role="line"
+           style="font-size:16px;line-height:1.25">Escape (Branch)</tspan></text>
     </a>
     <a
        xlink:href="Hallelujah.svg"
-       style="display:inline"
+       id="a4136"
        transform="translate(-110,24.000504)"
-       id="a4136">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="-146.11475"
          y="140"
          id="text4138"
-         sodipodi:linespacing="125%"
-         transform="matrix(0,-1,1,0,0,0)"><tspan
+         transform="rotate(-90)"><tspan
            sodipodi:role="line"
            id="tspan4140"
            x="-146.11475"
-           y="140">Hallelujah</tspan></text>
+           y="140"
+           style="font-size:16px;line-height:1.25">Hallelujah</tspan></text>
     </a>
     <a
        xlink:href="Cavanaugh.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(810,-45.999496)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
-         style="font-size:16px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS Italic"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS Italic';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="130"
          y="246.11475"
-         id="text4150"
-         sodipodi:linespacing="125%"><tspan
+         id="text4150"><tspan
            sodipodi:role="line"
            id="tspan4152"
            x="130"
-           y="246.11475">Cavanaugh</tspan></text>
+           y="246.11475"
+           style="font-size:16px;line-height:1.25">Cavanaugh</tspan></text>
     </a>
   </g>
   <g
@@ -1392,157 +1576,157 @@
      sodipodi:insensitive="true">
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="680"
        y="470.11481"
-       id="text3266"
-       sodipodi:linespacing="125%"><tspan
+       id="text3266"><tspan
          id="tspan3268"
          sodipodi:role="line"
          x="680"
-         y="470.11481">Dodge Siding</tspan></text>
+         y="470.11481"
+         style="font-size:16px;line-height:1.25">Dodge Siding</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text3274"
        y="110.11481"
        x="100"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan3276"
          y="110.11481"
          x="100"
-         sodipodi:role="line">Dayton Power &amp; Light 3</tspan></text>
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">Dayton Power &amp; Light 3</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="100"
        y="150.11481"
-       id="text3278"
-       sodipodi:linespacing="125%"><tspan
+       id="text3278"><tspan
          sodipodi:role="line"
          x="100"
          y="150.11481"
-         id="tspan3280">Dayton Power &amp; Light 2</tspan></text>
+         id="tspan3280"
+         style="font-size:16px;line-height:1.25">Dayton Power &amp; Light 2</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="420"
        y="110.1148"
-       id="text4096"
-       sodipodi:linespacing="125%"><tspan
+       id="text4096"><tspan
          sodipodi:role="line"
          x="420"
          y="110.1148"
-         id="tspan4098">Wiebe Wafers</tspan></text>
+         id="tspan4098"
+         style="font-size:16px;line-height:1.25">Wiebe Wafers</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text4100"
        y="110.1148"
        x="570"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan4102"
          y="110.1148"
          x="570"
-         sodipodi:role="line">Ontha Skids</tspan></text>
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">Ontha Skids</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="810"
        y="150.11481"
-       id="text4104"
-       sodipodi:linespacing="125%"><tspan
+       id="text4104"><tspan
          sodipodi:role="line"
          x="810"
          y="150.11481"
-         id="tspan4106">Warehouse #9</tspan></text>
+         id="tspan4106"
+         style="font-size:16px;line-height:1.25">Warehouse #9</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text4108"
        y="230.11481"
        x="810"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan4110"
          y="230.11481"
          x="810"
-         sodipodi:role="line">Meg-A-Watt</tspan></text>
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">Meg-A-Watt</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="810"
        y="270.11481"
-       id="text4112"
-       sodipodi:linespacing="125%"><tspan
+       id="text4112"><tspan
          sodipodi:role="line"
          x="810"
          y="270.11481"
-         id="tspan4114">Good Morning Cereal</tspan></text>
+         id="tspan4114"
+         style="font-size:16px;line-height:1.25">Good Morning Cereal</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text4116"
        y="190.11481"
        x="100"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan4118"
          y="190.11481"
          x="100"
-         sodipodi:role="line">Dayton Power &amp; Light 1</tspan></text>
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">Dayton Power &amp; Light 1</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="130"
        y="230.11481"
-       id="text4120"
-       sodipodi:linespacing="125%"><tspan
+       id="text4120"><tspan
          sodipodi:role="line"
          x="130"
          y="230.11481"
-         id="tspan4122">Peachey Brothers</tspan></text>
+         id="tspan4122"
+         style="font-size:16px;line-height:1.25">Peachey Brothers</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text4124"
        y="430.11481"
        x="840"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan4126"
          y="430.11481"
          x="840"
-         sodipodi:role="line">Team Track</tspan></text>
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">Team Track</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text4132"
        y="390.11481"
        x="590"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan4134"
          y="390.11481"
          x="590"
-         sodipodi:role="line">Dayton Interchange</tspan></text>
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">Dayton Interchange</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text3227"
        y="430.11481"
        x="480"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          y="430.11481"
          x="480"
          sodipodi:role="line"
-         id="tspan3229">Dayton Siding</tspan></text>
+         id="tspan3229"
+         style="font-size:16px;line-height:1.25">Dayton Siding</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="310"
        y="390.11481"
-       id="text3231"
-       sodipodi:linespacing="125%"><tspan
+       id="text3231"><tspan
          sodipodi:role="line"
          x="310"
          y="390.11481"
-         id="tspan3233">Dayton Interchange</tspan></text>
+         id="tspan3233"
+         style="font-size:16px;line-height:1.25">Dayton Interchange</tspan></text>
   </g>
 </svg>
