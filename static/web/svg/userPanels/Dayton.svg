@@ -35,8 +35,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="Dayton.js"
-     id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript"
+     id="script_panelSpecific" />
   <defs
      id="defs4">
     <marker
@@ -286,9 +286,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="337.96955"
-     inkscape:cy="425.70283"
+     inkscape:zoom="2.8284272"
+     inkscape:cx="319.24426"
+     inkscape:cy="306.74485"
      inkscape:document-units="px"
      inkscape:current-layer="textLayer"
      showgrid="true"
@@ -619,6 +619,132 @@
          height="1"
          x="-233.42929"
          y="-977.56488" />
+    </g>
+    <g
+       id="g286"
+       style="display:inline"
+       transform="matrix(-0.70946458,-0.7047411,-0.7047411,0.70946458,619.93422,162.77896)">
+      <g
+         id="g272"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_BAKERSFIELD_TO_EAGLE_LOWER signalHead"
+           id="circle268" />
+        <circle
+           id="circle270"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect274"
+         width="13.559044"
+         height="1.0001551"
+         x="58.630123"
+         y="462.48294" />
+      <rect
+         y="-48.984791"
+         x="460.43005"
+         height="1"
+         width="5.25"
+         id="rect276"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(89.64714)" />
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
+         id="g282">
+        <circle
+           id="circle278"
+           class="SIGNALHEAD_BAKERSFIELD_TO_EAGLE_UPPER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle280" />
+      </g>
+      <rect
+         y="464.07227"
+         x="73.068405"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect284"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
+    </g>
+    <g
+       id="g306"
+       style="display:inline"
+       transform="matrix(-1,0,0,1,322.10491,-38.618019)">
+      <g
+         id="g292"
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_DAYTON_SIDING_TO_EAGLE_LOWER signalHead"
+           id="circle288" />
+        <circle
+           id="circle290"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect294"
+         width="13.559044"
+         height="1.0001551"
+         x="58.630123"
+         y="462.48294" />
+      <rect
+         y="-48.984791"
+         x="460.43005"
+         height="1"
+         width="5.25"
+         id="rect296"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="rotate(89.64714)" />
+      <g
+         transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)"
+         id="g302">
+        <circle
+           id="circle298"
+           class="SIGNALHEAD_DAYTON_SIDING_TO_EAGLE_UPPER signalHead"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.0467861"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+        <circle
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           r="2.2604594"
+           cy="424.56335"
+           cx="872.92395"
+           id="circle300" />
+      </g>
+      <rect
+         y="464.07227"
+         x="73.068405"
+         height="1.0000477"
+         width="0.87359697"
+         id="rect304"
+         style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
     </g>
   </g>
   <g
@@ -1454,8 +1580,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       id="daytonIndustrialLink"
-       transform="translate(-90,214.00005)">
+       transform="translate(-90,214.00005)"
+       id="daytonIndustrialLink">
       <text
          id="text3305"
          y="86.114754"
@@ -1471,8 +1597,8 @@
     </a>
     <a
        xlink:href="Bakersfield.svg"
-       transform="translate(830,444.00005)"
-       id="a4090">
+       id="a4090"
+       transform="translate(830,444.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1488,8 +1614,8 @@
     </a>
     <a
        xlink:href="Cavanaugh.svg"
-       transform="translate(830,214.00005)"
-       id="a4142">
+       id="a4142"
+       transform="translate(830,214.00005)">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1513,9 +1639,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       transform="translate(-120,204.0005)"
+       style="display:inline"
        id="daytonMainLink"
-       style="display:inline">
+       transform="translate(-120,204.0005)">
       <text
          id="text3335"
          y="246.11475"
@@ -1531,9 +1657,9 @@
     </a>
     <a
        xlink:href="Hallelujah.svg"
-       id="a4136"
+       style="display:inline"
        transform="translate(-110,24.000504)"
-       style="display:inline">
+       id="a4136">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1550,9 +1676,9 @@
     </a>
     <a
        xlink:href="Cavanaugh.svg"
-       id="a4148"
+       style="display:inline"
        transform="translate(810,-45.999496)"
-       style="display:inline">
+       id="a4148">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"

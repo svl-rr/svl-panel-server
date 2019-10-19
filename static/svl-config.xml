@@ -1276,7 +1276,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="5:28 PM">
+    <memory value="9:43 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -1309,7 +1309,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA17</systemName>
     </memory>
-    <memory value="N/A:Occupied OOS:UNAUTHORIZED TRAIN!">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA173</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1681,10 +1681,10 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_NB</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_SB_MAIN</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN</systemName>
     </memory>
     <memory value="RED">
@@ -1693,19 +1693,19 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_GREEN">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1714,7 +1714,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_FRYTON_SIDING_TO_GREELEY</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_GREELEY</systemName>
     </memory>
     <memory value="RED">
@@ -1729,16 +1729,16 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_FRONT</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_LOWER</systemName>
     </memory>
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1753,10 +1753,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_FRONT</systemName>
     </memory>
     <memory value="RED">
@@ -1768,10 +1768,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_LOWER</systemName>
     </memory>
     <memory value="YELLOW">
@@ -1780,34 +1780,34 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_FRONT</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_EBBETS</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_FRYTON_SIDING_TO_EBBETS</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_EBBETS_TO_FRYTON_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETS_TO_FRYTON_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1819,28 +1819,28 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETTS_TO_EAGLE_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETTS_TO_EAGLE_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JASPER_DWARF</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_DAYTON_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_EAGLE_TO_DAYTON_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1849,14 +1849,29 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_DAYTON_INTERCHANGE_TO_EAGLE</systemName>
     </memory>
-    <memory>
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_BRANCH_TO_DAYTON</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_LOWER</systemName>
+    </memory>
+    <memory value="GREEN">
+      <systemName>IMSIGNALHEAD_DAYTON_SIDING_TO_EAGLE_UPPER</systemName>
+    </memory>
+    <memory value="RED">
+      <systemName>IMSIGNALHEAD_DAYTON_SIDING_TO_EAGLE_LOWER</systemName>
+    </memory>
+    <memory value="RED">
+      <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_UPPER</systemName>
+    </memory>
+    <memory value="RED">
+      <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_LOWER</systemName>
+    </memory>
+    <memory value="RED">
+      <systemName>IMSIGNALHEAD_BRANCH_TO_DAYTON</systemName>
     </memory>
   </memories>
   <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
@@ -2149,104 +2164,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Thu Oct 17 17:04:00 PDT 2019</date>
+      <date>Fri Oct 18 18:52:08 PDT 2019</date>
       <filename>JMRI program</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Thu Oct 17 17:04:04 PDT 2019</date>
+      <date>Fri Oct 18 18:52:11 PDT 2019</date>
       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Thu Oct 17 16:53:39 PDT 2019</date>
+          <date>Thu Oct 17 17:04:00 PDT 2019</date>
           <filename>JMRI program</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Thu Oct 17 16:53:42 PDT 2019</date>
+          <date>Thu Oct 17 17:04:04 PDT 2019</date>
           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Thu Oct 17 16:43:34 PDT 2019</date>
+              <date>Thu Oct 17 16:53:39 PDT 2019</date>
               <filename>JMRI program</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Thu Oct 17 16:43:38 PDT 2019</date>
+              <date>Thu Oct 17 16:53:42 PDT 2019</date>
               <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Thu Oct 17 16:34:57 PDT 2019</date>
+                  <date>Thu Oct 17 16:43:34 PDT 2019</date>
                   <filename>JMRI program</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Thu Oct 17 16:35:00 PDT 2019</date>
+                  <date>Thu Oct 17 16:43:38 PDT 2019</date>
                   <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Thu Oct 17 14:57:29 PDT 2019</date>
+                      <date>Thu Oct 17 16:34:57 PDT 2019</date>
                       <filename>JMRI program</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Thu Oct 17 14:57:32 PDT 2019</date>
+                      <date>Thu Oct 17 16:35:00 PDT 2019</date>
                       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Fri Sep 27 18:54:09 PDT 2019</date>
+                          <date>Thu Oct 17 14:57:29 PDT 2019</date>
                           <filename>JMRI program</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Fri Sep 27 18:54:18 PDT 2019</date>
+                          <date>Thu Oct 17 14:57:32 PDT 2019</date>
                           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Thu Oct 10 17:36:47 PDT 2019</date>
+                          <date>Thu Oct 17 16:29:17 PDT 2019</date>
                           <filename />
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Thu Oct 17 16:29:17 PDT 2019</date>
+                      <date>Thu Oct 17 16:40:57 PDT 2019</date>
                       <filename />
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Thu Oct 17 16:40:57 PDT 2019</date>
+                  <date>Thu Oct 17 16:53:13 PDT 2019</date>
                   <filename />
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Thu Oct 17 16:53:13 PDT 2019</date>
+              <date>Thu Oct 17 16:59:56 PDT 2019</date>
               <filename />
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Thu Oct 17 16:59:56 PDT 2019</date>
+          <date>Thu Oct 17 17:44:00 PDT 2019</date>
           <filename />
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Thu Oct 17 17:28:22 PDT 2019</date>
+      <date>Fri Oct 18 21:43:27 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Thu Oct 17 17:28:22 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Fri Oct 18 21:43:27 PDT 2019-->
 </layout-config>
