@@ -1276,7 +1276,7 @@
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="9:43 PM">
+    <memory value="10:05 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -1303,10 +1303,10 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA150</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized OOS:block">
       <systemName>IMBA16</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized OOS:block">
       <systemName>IMBA17</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1324,7 +1324,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA179</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized OOS:block">
       <systemName>IMBA19</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1348,7 +1348,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA277</systemName>
     </memory>
-    <memory value="N/A:Occupied SB:256">
+    <memory value="N/A:Authorized SB:420">
       <systemName>IMBA278</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1378,7 +1378,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA448</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized NB:7510">
       <systemName>IMBA449</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1462,16 +1462,16 @@
     <memory value="false">
       <systemName>IMMAINLINE_LOCKED</systemName>
     </memory>
-    <memory value="802">
+    <memory value="hls">
       <systemName>IMN1</systemName>
     </memory>
-    <memory value="">
+    <memory value="8020">
       <systemName>IMN2</systemName>
     </memory>
-    <memory value="">
+    <memory value="7510">
       <systemName>IMN3</systemName>
     </memory>
-    <memory value="">
+    <memory value="220">
       <systemName>IMN4</systemName>
     </memory>
     <memory value="">
@@ -1480,16 +1480,16 @@
     <memory value="">
       <systemName>IMN6</systemName>
     </memory>
-    <memory value="">
+    <memory value="373">
       <systemName>IMN7</systemName>
     </memory>
-    <memory value="">
+    <memory value="370">
       <systemName>IMN8</systemName>
     </memory>
     <memory value="svlmow1">
       <systemName>IMO1</systemName>
     </memory>
-    <memory value="">
+    <memory value="block">
       <systemName>IMO2</systemName>
     </memory>
     <memory value="">
@@ -1510,7 +1510,7 @@
     <memory value="">
       <systemName>IMO8</systemName>
     </memory>
-    <memory value="801">
+    <memory value="">
       <systemName>IMS1</systemName>
     </memory>
     <memory value="">
@@ -1519,13 +1519,13 @@
     <memory value="">
       <systemName>IMS3</systemName>
     </memory>
-    <memory value="">
+    <memory value="370">
       <systemName>IMS4</systemName>
     </memory>
-    <memory value="">
+    <memory value="340">
       <systemName>IMS5</systemName>
     </memory>
-    <memory value="">
+    <memory value="420">
       <systemName>IMS6</systemName>
     </memory>
     <memory value="">
@@ -1573,13 +1573,13 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA19</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N:Authorized NB:7510">
       <systemName>IMTA250A</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA250B</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="R:Authorized NB:7510">
       <systemName>IMTA251A</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1591,28 +1591,28 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA275B</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="R:Authorized NB:7510">
       <systemName>IMTA276A</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA276B</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N:Authorized NB:7510">
       <systemName>IMTA325A</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA325B</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N:Authorized NB:7510">
       <systemName>IMTA326</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="R:Authorized NB:7510">
       <systemName>IMTA327</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N:Authorized NB:7510">
       <systemName>IMTA328</systemName>
     </memory>
-    <memory value="R:Authorized SB:226">
+    <memory value="N:Authorized NB:7510">
       <systemName>IMTA329</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1705,7 +1705,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1732,10 +1732,10 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_FRONT</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_UPPER</systemName>
     </memory>
     <memory value="YELLOW">
@@ -1762,7 +1762,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1777,10 +1777,10 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
     <memory value="GREEN">
@@ -1789,10 +1789,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_EBBETS</systemName>
     </memory>
     <memory value="RED">
@@ -1807,7 +1807,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1819,7 +1819,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETTS_TO_EAGLE_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_EBBETTS_TO_EAGLE_UPPER</systemName>
     </memory>
     <memory value="GREEN">
@@ -1828,37 +1828,37 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JASPER_DWARF</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_EAGLE_TO_DAYTON_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_DAYTON_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_DAYTON_MAIN_TO_EAGLE</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_DAYTON_INTERCHANGE_TO_EAGLE</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_BRANCH_TO_DAYTON</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="FLASHING_GREEN">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_DAYTON_SIDING_TO_EAGLE_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1867,11 +1867,11 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_LOWER</systemName>
     </memory>
     <memory value="RED">
-      <systemName>IMSIGNALHEAD_BRANCH_TO_DAYTON</systemName>
+      <systemName>IMSIGNALHEAD_JACKSONVILLE_SIDING_TO_IGO_DWARF</systemName>
     </memory>
   </memories>
   <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
@@ -2164,104 +2164,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Fri Oct 18 18:52:08 PDT 2019</date>
+      <date>Thu Oct 24 20:39:00 PDT 2019</date>
       <filename>JMRI program</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Fri Oct 18 18:52:11 PDT 2019</date>
+      <date>Thu Oct 24 20:39:08 PDT 2019</date>
       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Thu Oct 17 17:04:00 PDT 2019</date>
+          <date>Fri Oct 18 18:52:08 PDT 2019</date>
           <filename>JMRI program</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Thu Oct 17 17:04:04 PDT 2019</date>
+          <date>Fri Oct 18 18:52:11 PDT 2019</date>
           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Thu Oct 17 16:53:39 PDT 2019</date>
+              <date>Thu Oct 17 17:04:00 PDT 2019</date>
               <filename>JMRI program</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Thu Oct 17 16:53:42 PDT 2019</date>
+              <date>Thu Oct 17 17:04:04 PDT 2019</date>
               <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Thu Oct 17 16:43:34 PDT 2019</date>
+                  <date>Thu Oct 17 16:53:39 PDT 2019</date>
                   <filename>JMRI program</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Thu Oct 17 16:43:38 PDT 2019</date>
+                  <date>Thu Oct 17 16:53:42 PDT 2019</date>
                   <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Thu Oct 17 16:34:57 PDT 2019</date>
+                      <date>Thu Oct 17 16:43:34 PDT 2019</date>
                       <filename>JMRI program</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Thu Oct 17 16:35:00 PDT 2019</date>
+                      <date>Thu Oct 17 16:43:38 PDT 2019</date>
                       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Thu Oct 17 14:57:29 PDT 2019</date>
+                          <date>Thu Oct 17 16:34:57 PDT 2019</date>
                           <filename>JMRI program</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Thu Oct 17 14:57:32 PDT 2019</date>
+                          <date>Thu Oct 17 16:35:00 PDT 2019</date>
                           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Thu Oct 17 16:29:17 PDT 2019</date>
+                          <date>Thu Oct 17 16:40:57 PDT 2019</date>
                           <filename />
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Thu Oct 17 16:40:57 PDT 2019</date>
+                      <date>Thu Oct 17 16:53:13 PDT 2019</date>
                       <filename />
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Thu Oct 17 16:53:13 PDT 2019</date>
+                  <date>Thu Oct 17 16:59:56 PDT 2019</date>
                   <filename />
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Thu Oct 17 16:59:56 PDT 2019</date>
+              <date>Thu Oct 17 17:44:00 PDT 2019</date>
               <filename />
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Thu Oct 17 17:44:00 PDT 2019</date>
+          <date>Fri Oct 18 21:43:27 PDT 2019</date>
           <filename />
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Oct 18 21:43:27 PDT 2019</date>
+      <date>Fri Nov 01 22:05:29 PDT 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Fri Oct 18 21:43:27 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Fri Nov 01 22:05:29 PDT 2019-->
 </layout-config>

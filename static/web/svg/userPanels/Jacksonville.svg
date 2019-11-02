@@ -35,8 +35,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="Jacksonville.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -286,16 +286,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.99999999"
-     inkscape:cx="613.17176"
-     inkscape:cy="448.28678"
+     inkscape:zoom="5.6568542"
+     inkscape:cx="648.29861"
+     inkscape:cy="408.0814"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1306"
      inkscape:window-height="937"
-     inkscape:window-x="-27"
-     inkscape:window-y="14"
+     inkscape:window-x="373"
+     inkscape:window-y="17"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -312,7 +312,7 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      units="px"
-     inkscape:snap-global="true">
+     inkscape:snap-global="false">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -1278,8 +1278,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       transform="translate(-90,254.00005)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-90,254.00005)">
       <text
          id="text3305"
          y="86.114754"
@@ -1295,8 +1295,8 @@
     </a>
     <a
        xlink:href="Hallelujah.svg"
-       id="a4142"
-       transform="translate(742,444.00005)">
+       transform="translate(742,444.00005)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1312,8 +1312,8 @@
     </a>
     <a
        xlink:href="Kaos_Kalamazoo.svg"
-       id="a4205"
-       transform="translate(-90,364.00005)">
+       transform="translate(-90,364.00005)"
+       id="a4205">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -2035,6 +2035,44 @@
          height="1.0000477"
          x="73.068405"
          y="464.07227" />
+    </g>
+    <g
+       id="g1069"
+       transform="rotate(-38.771773,520.48583,749.59736)"
+       style="display:inline">
+      <g
+         id="g1063"
+         transform="matrix(1.1766243,0.96118769,-0.96118769,1.1766243,293.33293,-902.94418)">
+        <circle
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           r="2.0467861"
+           cy="424.56335"
+           cx="872.92395"
+           class="SIGNALHEAD_JACKSONVILLE_SIDING_TO_IGO_DWARF signalHead"
+           id="circle1059" />
+        <circle
+           id="circle1061"
+           cx="872.92395"
+           cy="424.56335"
+           r="2.2604594"
+           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+      </g>
+      <rect
+         style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1"
+         id="rect1065"
+         width="3.0547237"
+         height="0.96722209"
+         x="975.40643"
+         y="-240.2581"
+         transform="rotate(39.245482)" />
+      <rect
+         y="-977.56488"
+         x="-233.42929"
+         height="1"
+         width="5.25"
+         id="rect1067"
+         style="fill:#0c0000;fill-opacity:1;stroke:none;stroke-opacity:1"
+         transform="rotate(128.71985)" />
     </g>
   </g>
 </svg>
