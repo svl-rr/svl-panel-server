@@ -1257,26 +1257,38 @@
     <turnout feedback="DIRECT" inverted="false" automate="NoFeedback">
       <systemName>NT1001</systemName>
       <userName>MtMarvellToLoopLower1</userName>
-      <comment>C=Up T=Down</comment>
     </turnout>
     <turnout feedback="DIRECT" inverted="false" automate="NoFeedback">
       <systemName>NT1002</systemName>
       <userName>MtMarvellToLoopLower2</userName>
-      <comment>C=Down T=Up</comment>
     </turnout>
     <turnout feedback="DIRECT" inverted="false" automate="NoFeedback">
       <systemName>NT1003</systemName>
       <userName>MtMarvellToLoopUpper1</userName>
-      <comment>C=Up T=Down</comment>
     </turnout>
     <turnout feedback="DIRECT" inverted="false" automate="NoFeedback">
       <systemName>NT1004</systemName>
       <userName>MtMarvellToLoopUpper2</userName>
-      <comment>C=Down T=Up</comment>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="NoFeedback">
+      <systemName>NT1005</systemName>
+      <userName>LoopToMtMarvellInner1</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="NoFeedback">
+      <systemName>NT1006</systemName>
+      <userName>LoopToMtMarvellInner2</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="NoFeedback">
+      <systemName>NT1007</systemName>
+      <userName>LoopToMtMarvellOuter1</userName>
+    </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="NoFeedback">
+      <systemName>NT1008</systemName>
+      <userName>LoopToMtMarvellOuter2</userName>
     </turnout>
   </turnouts>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
-    <memory value="10:05 PM">
+    <memory value="7:05 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="1.0">
@@ -1735,13 +1747,13 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_UPPER</systemName>
     </memory>
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1762,7 +1774,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1777,13 +1789,13 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_FRONT</systemName>
     </memory>
     <memory value="RED">
@@ -1807,13 +1819,13 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_LOWER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_FRONT_TO_KAOS_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_LOOP_FRONT_TO_KAOS_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1831,7 +1843,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1849,13 +1861,13 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_DAYTON_INTERCHANGE_TO_EAGLE</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_BRANCH_TO_DAYTON</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1867,11 +1879,17 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_LOWER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_SIDING_TO_IGO_DWARF</systemName>
+    </memory>
+    <memory value="YELLOW">
+      <systemName>IMSIGNALHEAD_LOOP_INNER_TO_MTMARVELL</systemName>
+    </memory>
+    <memory value="RED">
+      <systemName>IMSIGNALHEAD_LOOP_OUTER_TO_MTMARVELL</systemName>
     </memory>
   </memories>
   <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
@@ -2103,6 +2121,22 @@
       <logixConditional systemName="IX:AUTO:0003C2" order="1" />
       <logixConditional systemName="IX:AUTO:0003C3" order="2" />
     </logix>
+    <logix userName="signal_mtmarvell_inner" enabled="yes">
+      <systemName>IX:AUTO:0004</systemName>
+      <userName>signal_mtmarvell_inner</userName>
+      <logixConditional systemName="IX:AUTO:0004C1" order="0" />
+      <logixConditional systemName="IX:AUTO:0004C2" order="1" />
+      <logixConditional systemName="IX:AUTO:0004C3" order="2" />
+      <logixConditional systemName="IX:AUTO:0004C4" order="3" />
+    </logix>
+    <logix userName="signal_mtmarvell_outer" enabled="yes">
+      <systemName>IX:AUTO:0005</systemName>
+      <userName>signal_mtmarvell_outer</userName>
+      <logixConditional systemName="IX:AUTO:0005C1" order="0" />
+      <logixConditional systemName="IX:AUTO:0005C2" order="1" />
+      <logixConditional systemName="IX:AUTO:0005C3" order="2" />
+      <logixConditional systemName="IX:AUTO:0005C4" order="3" />
+    </logix>
   </logixs>
   <conditionals class="jmri.managers.configurexml.DefaultConditionalManagerXml">
     <conditional systemName="IX:AUTO:0001C1" userName="set_green_green" antecedent="R1" logicType="1" triggerOnChange="yes">
@@ -2159,109 +2193,165 @@
       <conditionalAction option="1" type="2" systemName="MtMarvellToLoopLower1" data="2" delay="0" string="" />
       <conditionalAction option="1" type="2" systemName="MtMarvellToLoopLower2" data="4" delay="0" string="" />
     </conditional>
+    <conditional systemName="IX:AUTO:0004C1" userName="green" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0004C1</systemName>
+      <userName>green</userName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="IMSIGNALHEAD_LOOP_INNER_TO_MTMARVELL" dataString="GREEN" num1="3" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellInner1" data="2" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellInner2" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0004C2" userName="yellow" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0004C2</systemName>
+      <userName>yellow</userName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="IMSIGNALHEAD_LOOP_INNER_TO_MTMARVELL" dataString="YELLOW" num1="3" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellInner1" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellInner2" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0004C3" userName="red" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0004C3</systemName>
+      <userName>red</userName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="IMSIGNALHEAD_LOOP_INNER_TO_MTMARVELL" dataString="RED" num1="3" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellInner1" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellInner2" data="2" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0004C4" userName="dark" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0004C4</systemName>
+      <userName>dark</userName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="IMSIGNALHEAD_LOOP_INNER_TO_MTMARVELL" dataString="DARK" num1="3" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellInner1" data="2" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellInner2" data="2" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0005C1" userName="green" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0005C1</systemName>
+      <userName>green</userName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="IMSIGNALHEAD_LOOP_OUTER_TO_MTMARVELL" dataString="GREEN" num1="3" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellOuter1" data="2" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellOuter2" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0005C2" userName="yellow" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0005C2</systemName>
+      <userName>yellow</userName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="IMSIGNALHEAD_LOOP_OUTER_TO_MTMARVELL" dataString="YELLOW" num1="3" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellOuter1" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellOuter2" data="4" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0005C3" userName="red" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0005C3</systemName>
+      <userName>red</userName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="IMSIGNALHEAD_LOOP_OUTER_TO_MTMARVELL" dataString="RED" num1="3" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellOuter1" data="4" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellOuter2" data="2" delay="0" string="" />
+    </conditional>
+    <conditional systemName="IX:AUTO:0005C4" userName="dark" antecedent="R1" logicType="1" triggerOnChange="yes">
+      <systemName>IX:AUTO:0005C4</systemName>
+      <userName>dark</userName>
+      <conditionalStateVariable operator="4" negated="no" type="9" systemName="IMSIGNALHEAD_LOOP_OUTER_TO_MTMARVELL" dataString="DARK" num1="3" num2="0" triggersCalc="yes" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellOuter1" data="2" delay="0" string="" />
+      <conditionalAction option="1" type="2" systemName="LoopToMtMarvellOuter2" data="2" delay="0" string="" />
+    </conditional>
   </conditionals>
   <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Fri Jul 20 19:39:02 PDT 2012" rate="1.0" startrate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startrunning="yes" startsettime="no" startclockoption="0" showbutton="no" startsetrate="yes" />
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Thu Oct 24 20:39:00 PDT 2019</date>
+      <date>Fri Nov 22 17:09:25 PST 2019</date>
       <filename>JMRI program</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Thu Oct 24 20:39:08 PDT 2019</date>
+      <date>Fri Nov 22 17:09:28 PST 2019</date>
       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Fri Oct 18 18:52:08 PDT 2019</date>
+          <date>Thu Oct 24 20:39:00 PDT 2019</date>
           <filename>JMRI program</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Fri Oct 18 18:52:11 PDT 2019</date>
+          <date>Thu Oct 24 20:39:08 PDT 2019</date>
           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Thu Oct 17 17:04:00 PDT 2019</date>
+              <date>Fri Oct 18 18:52:08 PDT 2019</date>
               <filename>JMRI program</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Thu Oct 17 17:04:04 PDT 2019</date>
+              <date>Fri Oct 18 18:52:11 PDT 2019</date>
               <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Thu Oct 17 16:53:39 PDT 2019</date>
+                  <date>Thu Oct 17 17:04:00 PDT 2019</date>
                   <filename>JMRI program</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Thu Oct 17 16:53:42 PDT 2019</date>
+                  <date>Thu Oct 17 17:04:04 PDT 2019</date>
                   <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Thu Oct 17 16:43:34 PDT 2019</date>
+                      <date>Thu Oct 17 16:53:39 PDT 2019</date>
                       <filename>JMRI program</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Thu Oct 17 16:43:38 PDT 2019</date>
+                      <date>Thu Oct 17 16:53:42 PDT 2019</date>
                       <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Thu Oct 17 16:34:57 PDT 2019</date>
+                          <date>Thu Oct 17 16:43:34 PDT 2019</date>
                           <filename>JMRI program</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Thu Oct 17 16:35:00 PDT 2019</date>
+                          <date>Thu Oct 17 16:43:38 PDT 2019</date>
                           <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Thu Oct 17 16:40:57 PDT 2019</date>
+                          <date>Thu Oct 17 16:53:13 PDT 2019</date>
                           <filename />
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Thu Oct 17 16:53:13 PDT 2019</date>
+                      <date>Thu Oct 17 16:59:56 PDT 2019</date>
                       <filename />
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Thu Oct 17 16:59:56 PDT 2019</date>
+                  <date>Thu Oct 17 17:44:00 PDT 2019</date>
                   <filename />
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Thu Oct 17 17:44:00 PDT 2019</date>
+              <date>Fri Oct 18 21:43:27 PDT 2019</date>
               <filename />
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Fri Oct 18 21:43:27 PDT 2019</date>
+          <date>Fri Nov 01 22:05:29 PDT 2019</date>
           <filename />
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Nov 01 22:05:29 PDT 2019</date>
+      <date>Fri Nov 22 19:05:04 PST 2019</date>
       <filename />
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.14+Rd060e0b on Fri Nov 01 22:05:29 PDT 2019-->
+  <!--Written by JMRI version 4.14+Rd060e0b on Fri Nov 22 19:05:04 PST 2019-->
 </layout-config>
