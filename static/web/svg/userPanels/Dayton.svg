@@ -35,8 +35,8 @@
      type="application/ecmascript" />
   <script
      xlink:href="Dayton.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -286,11 +286,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284272"
-     inkscape:cx="319.24426"
-     inkscape:cy="306.74485"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="514.36041"
+     inkscape:cy="300.89627"
      inkscape:document-units="px"
-     inkscape:current-layer="textLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
@@ -1580,8 +1580,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       transform="translate(-90,214.00005)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-90,214.00005)">
       <text
          id="text3305"
          y="86.114754"
@@ -1597,8 +1597,8 @@
     </a>
     <a
        xlink:href="Bakersfield.svg"
-       id="a4090"
-       transform="translate(830,444.00005)">
+       transform="translate(830,444.00005)"
+       id="a4090">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1614,8 +1614,8 @@
     </a>
     <a
        xlink:href="Cavanaugh.svg"
-       id="a4142"
-       transform="translate(830,214.00005)">
+       transform="translate(830,214.00005)"
+       id="a4142">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1639,9 +1639,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
-       style="display:inline"
+       transform="translate(-120,204.0005)"
        id="daytonMainLink"
-       transform="translate(-120,204.0005)">
+       style="display:inline">
       <text
          id="text3335"
          y="246.11475"
@@ -1657,9 +1657,9 @@
     </a>
     <a
        xlink:href="Hallelujah.svg"
-       style="display:inline"
+       id="a4136"
        transform="translate(-110,24.000504)"
-       id="a4136">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1676,9 +1676,9 @@
     </a>
     <a
        xlink:href="Cavanaugh.svg"
-       style="display:inline"
+       id="a4148"
        transform="translate(810,-45.999496)"
-       id="a4148">
+       style="display:inline">
       <text
          onclick="alert(getElementByID(&quot;panelStatus&quot;)"
          xml:space="preserve"
@@ -1776,7 +1776,7 @@
          y="230.11481"
          x="810"
          sodipodi:role="line"
-         style="font-size:16px;line-height:1.25">Meg-A-Watt</tspan></text>
+         style="font-size:16px;line-height:1.25">Meg-A-Watt 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1787,7 +1787,7 @@
          x="810"
          y="270.11481"
          id="tspan4114"
-         style="font-size:16px;line-height:1.25">Good Morning Cereal</tspan></text>
+         style="font-size:16px;line-height:1.25">Meg-A-Watt 2</tspan></text>
     <text
        id="text4116"
        y="190.11481"
@@ -1820,7 +1820,7 @@
          y="430.11481"
          x="840"
          sodipodi:role="line"
-         style="font-size:16px;line-height:1.25">Team Track</tspan></text>
+         style="font-size:16px;line-height:1.25">Meg-A-Watt Storage</tspan></text>
     <text
        id="text4132"
        y="390.11481"
@@ -1848,7 +1848,8 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="310"
        y="390.11481"
-       id="text3231"><tspan
+       id="text3231"
+       inkscape:label="text3231"><tspan
          sodipodi:role="line"
          x="310"
          y="390.11481"
