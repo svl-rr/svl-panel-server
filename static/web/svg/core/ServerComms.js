@@ -56,7 +56,7 @@ function initJMRISocketInstance()
     
     jmriSocket.onopen = function ()
     {
-        console.log("connected!");
+        console.log("connected via JMRI Socket!");
 
         // Set up ping to maintain connection
         setInterval(function() { jmriSocket.send('{"type":"ping"}'); }, 10000);
@@ -80,7 +80,7 @@ function initJMRISocketInstance()
 
     jmriSocket.onclose = function (e)
     {
-        console.log("disconnected "+ e.code);
+        console.log("disconnected from JMRI socket "+ e.code);
         
         socketStatus = SOCKET_DISCONNECTED;
         
@@ -94,12 +94,14 @@ function initNodeSocketInstance()
 
     nodeSocket.on('connect', function ()
     {
+        console.log("connected via Node socket");
+
         socketStatus = SOCKET_CONNECTED;
         handleSocketConnect();
     });
 
     // on an response from the server, server will send array of updated elements
-    // not all elements will necesarily be on this panel
+    // not all elements will necessarily be on this panel
     nodeSocket.on('update', function(data)
     {
         var msgObj = JSON.parse(data);
@@ -122,6 +124,8 @@ function initNodeSocketInstance()
     
     nodeSocket.on('disconnect', function ()
     {
+        console.log("disconnected from Node socket");
+
         socketStatus = SOCKET_DISCONNECTED;        
         handleSocketDisconnect();
     });
@@ -220,8 +224,7 @@ function handleJSONObject(msgObj)
         }
         else if(msgObj.type == "sensor")
         {
-            var name = msgObj.data.userName != "" ? msgObj.data.userName : msgObj.data.name;
-            humanReadableMessage = name + " has state " + msgObj.data.state;
+            humanReadableMessage = msgObj.data.name + " has state " + msgObj.data.state;
         	console.log("server sensor message: " + humanReadableMessage);
 			
 			if(msgObj.data.state == undefinedStateMap.jmri)
@@ -230,8 +233,6 @@ function handleJSONObject(msgObj)
 				serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_SENSOR, onSensorStateMap.svg);
 			else if (msgObj.data.state == offSensorStateMap.jmri)
 				serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_SENSOR, offSensorStateMap.svg);
-
-            serverObj.userName = msgObj.data.userName;
         }
         else if(msgObj.type == "memory")
         {
@@ -255,16 +256,9 @@ function handleJSONObject(msgObj)
     return serverObj;
 }
 
-function UserNameServerObject(objectUserName, objectType) {
-    var so = new ServerObject(objectUserName, objectType);
-    so.useUserName = true;
-    return so
-}
-
 function ServerObject(objectName, objectType)
 {
 	this.name=objectName;
-    this.useUserName = false;
     this.type=objectType;
 	
     this.getName=getName;
@@ -279,7 +273,6 @@ function ServerObject(objectName, objectType)
 function ServerObject(objectName, objectType, objectValue)
 {
 	this.name=objectName;
-    this.useUserName = false;
     this.type=objectType;
 	this.value=objectValue;
 	
@@ -331,11 +324,11 @@ function getJMRIObjects()
 function getJMRIObjectsOfType(type)
 {
     if(type == SERVER_TYPE_DISPATCH)
-        serverSendRawJSON('{"type":"list","list":"memories"}', SERVER_GET);
+        serverSendRawJSON('{"type":"list","list":"memories", "method":"get"}', SERVER_GET);
     else if(type == SERVER_TYPE_SENSOR)
-        serverSendRawJSON('{"type":"list","list":"sensors"}', SERVER_GET);
+        serverSendRawJSON('{"type":"list","list":"sensors", "method":"get"}', SERVER_GET);
     else if(type == SERVER_TYPE_TURNOUT)
-        serverSendRawJSON('{"type":"list","list":"turnouts"}', SERVER_GET);
+        serverSendRawJSON('{"type":"list","list":"turnouts", "method":"get"}', SERVER_GET);
     else
         alert("Unnsupported type (" + type + ") passed to getAllJMRIObjects()");
 }
@@ -415,14 +408,12 @@ function getAsSetJSONString(serverObj)
         else
             jmriState = undefinedStateMap.jmri;
     
-        return '{"type":"turnout","data":{"name":"' + serverObj.name + '","state":"' + jmriState + '"}}';
+        return '{"type":"turnout","data":{"name":"' + serverObj.name + '","state":"' + jmriState + '"}, "method":"post"}';
     }
-    else if (serverObj.type == SERVER_TYPE_SENSOR) {
-        var nameField = serverObj.useUserName ? "userName" : "name";
-        return '{"type":"sensor","data":{"' + nameField + '":"' + serverObj.name + '","state":"' + serverObj.value + '"}}';
-    }
+    else if(serverObj.type == SERVER_TYPE_SENSOR)
+        return '{"type":"sensor","data":{"name":"' + serverObj.name + '","state":"' + serverObj.value + '"}, "method":"post"}';
     else if(serverObj.type == SERVER_TYPE_DISPATCH)
-        return '{"type":"memory","data":{"name":"IM' + serverObj.name + '","value":"' + serverObj.value + '"}}';
+        return '{"type":"memory","data":{"name":"IM' + serverObj.name + '","value":"' + serverObj.value + '"}, "method":"post"}';
     
     return null;
 }
@@ -430,11 +421,11 @@ function getAsSetJSONString(serverObj)
 function getAsGetJSONString(serverObj)
 {
     if(serverObj.type == SERVER_TYPE_TURNOUT)
-        return '{"type":"turnout","data":{"name":"' + serverObj.name + '"}}';
+        return '{"type":"turnout","data":{"name":"' + serverObj.name + '"}, "method":"get"}';
     else if(serverObj.type == SERVER_TYPE_SENSOR)
-        return '{"type":"sensor","data":{"name":"' + serverObj.name + '"}}';
+        return '{"type":"sensor","data":{"name":"' + serverObj.name + '"}, "method":"get"}';
     else if(serverObj.type == SERVER_TYPE_DISPATCH)
-        return '{"type":"memory","data":{"name":"IM' + serverObj.name + '"}}';
+        return '{"type":"memory","data":{"name":"IM' + serverObj.name + '"}, "method":"get"}';
     
     return null;
 }
