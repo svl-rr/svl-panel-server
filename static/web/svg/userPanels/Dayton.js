@@ -19,7 +19,12 @@ function DPL1Path()
 
 function PeacheyBrothersPath()
 {
-	executePathArray(["TO173.R", "TO172.R"]);
+	executePathArray(["T0163.R", "TO173.R", "TO172.R"]);
+}
+
+function GamerAndThronesPath()
+{
+	executePathArray(["T0163.N", "TO173.R", "TO172.R"]);
 }
 
 function DaytonIndustrialLeadPath()
