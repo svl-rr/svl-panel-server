@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
-
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -14,25 +12,25 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
    sodipodi:docname="Cavanaugh.svg"
    onload="init(evt)">
   <title
      id="title1">Cavanaugh</title>
   <script
-     xlink:href="/web/svg/core/ServerComms.js"
+     xlink:href="file:///web/svg/core/ServerComms.js"
      id="script3331" />
   <script
-     xlink:href="/socket.io/socket.io.js"
+     xlink:href="file:///socket.io/socket.io.js"
      id="script5" />
   <script
-     xlink:href="/web/svg/core/PanelCommon.js"
-     type="application/ecmascript"
-     id="script_common" />
+     xlink:href="file:///web/svg/core/PanelCommon.js"
+     id="script_common"
+     type="application/ecmascript" />
   <script
      xlink:href="Cavanaugh.js"
-     type="application/ecmascript"
-     id="script_panelSpecific" />
+     id="script_panelSpecific"
+     type="application/ecmascript" />
   <defs
      id="defs4">
     <marker
@@ -283,15 +281,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.6218167"
-     inkscape:cx="402.96703"
-     inkscape:cy="324.84152"
+     inkscape:cx="397.4177"
+     inkscape:cy="290.92893"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
-     inkscape:window-width="1920"
+     inkscape:window-width="1792"
      inkscape:window-height="1036"
      inkscape:window-x="8"
-     inkscape:window-y="8"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -310,7 +308,8 @@
      units="px"
      inkscape:snap-bbox-midpoints="false"
      inkscape:object-nodes="true"
-     inkscape:snap-text-baseline="true">
+     inkscape:snap-text-baseline="true"
+     inkscape:document-rotation="0">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -373,7 +372,7 @@
            x="420"
            id="tspan3823"
            sodipodi:role="line"
-           style="font-size:52.33785248px;line-height:1.25">Cavanaugh</tspan></text>
+           style="font-size:52.3379px;line-height:1.25">Cavanaugh</tspan></text>
     </a>
     <text
        id="panelStatus"
@@ -416,7 +415,7 @@
            x="400"
            id="tspan3321"
            sodipodi:role="line"
-           style="font-size:25.22973061px;line-height:1.25">Mainline Locked</tspan></text>
+           style="font-size:25.2297px;line-height:1.25">Mainline Locked</tspan></text>
       <g
          id="leftLock">
         <rect
@@ -458,26 +457,6 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        onclick="cavanaughJunkPath()" />
-    <g
-       id="g3187"
-       transform="matrix(-1,0,0,1,760,-200)">
-      <path
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
-         inkscape:label="#path4221"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 440,414.0945 h -20 l -20,-20"
-         id="TO115.R"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="ccc" />
-      <path
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
-         sodipodi:nodetypes="cc"
-         inkscape:connector-curvature="0"
-         id="TO115.N"
-         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="#path4221" />
-    </g>
     <g
        id="g3199"
        transform="rotate(180,540,454.0945)">
@@ -606,18 +585,10 @@
        onclick="buzzBeer2Path()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 280,274.0945 -20,20 H 120"
+       d="m 400,153.97975 -60,60 H 210"
        id="path3251"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
-    <path
-       onclick="buzzBeer1Path()"
-       inkscape:label="#path4221"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 280,254.0945 H 120"
-       id="path3258"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
     <path
        onclick="departureMain2Path()"
        sodipodi:nodetypes="cc"
@@ -679,7 +650,7 @@
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3315"
-       d="m 440,354.0945 -20,-20 H 320"
+       d="m 440,354.0945 -20,-20 -140,-0.11475"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
     <path
@@ -870,26 +841,6 @@
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
-    <g
-       transform="matrix(-1,0,0,1,720,-160)"
-       id="g4363">
-      <path
-         sodipodi:nodetypes="ccc"
-         inkscape:connector-curvature="0"
-         id="TO114.R"
-         d="m 440,414.0945 h -20 l -20,-20"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         inkscape:label="#path4221"
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
-      <path
-         inkscape:label="#path4221"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
-         id="TO114.N"
-         inkscape:connector-curvature="0"
-         sodipodi:nodetypes="cc"
-         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
-    </g>
     <path
        onclick="slipperShipperPath()"
        inkscape:label="#path4221"
@@ -962,22 +913,6 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
        onclick="buzzBeer1Path()" />
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       id="path4396"
-       d="M 320,214.0945 H 160"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       inkscape:label="#path4221"
-       onclick="buzzBeer1Path()" />
-    <path
-       onclick="buzzBeer1Path()"
-       inkscape:label="#path4221"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 400,154.0945 -40,40"
-       id="path4398"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
@@ -1065,8 +1000,8 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Dayton.svg"
-       id="daytonMainLink"
-       transform="translate(-60,164.00005)">
+       transform="translate(-60,164.00005)"
+       id="daytonMainLink">
       <text
          id="text3335"
          y="246.11475"
@@ -1082,8 +1017,8 @@
     </a>
     <a
        xlink:href="Dayton.svg"
-       transform="translate(-50.919175,16.058702)"
-       id="daytonIndustrialLink">
+       id="daytonIndustrialLink"
+       transform="translate(-50.919175,16.058702)">
       <text
          id="text3305"
          y="86.114754"
@@ -1107,9 +1042,9 @@
      sodipodi:insensitive="true">
     <a
        xlink:href="Bayshore.svg"
-       style="display:inline"
+       id="bayshoreLink"
        transform="translate(750,204.0005)"
-       id="bayshoreLink">
+       style="display:inline">
       <text
          id="text3225"
          y="136.11475"
@@ -1141,7 +1076,8 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.4327394e-5)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1164,28 +1100,6 @@
          x="560"
          y="470.11481"
          style="font-size:16px;line-height:1.25">Cavanaugh Junk</tspan></text>
-    <text
-       id="text3274"
-       y="270.11481"
-       x="120"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         id="tspan3276"
-         y="270.11481"
-         x="120"
-         sodipodi:role="line"
-         style="font-size:16px;line-height:1.25">Malt Manufacturing</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="120"
-       y="310.11481"
-       id="text3278"><tspan
-         sodipodi:role="line"
-         x="120"
-         y="310.11481"
-         id="tspan3280"
-         style="font-size:16px;line-height:1.25">Barley Brewing</tspan></text>
     <text
        id="text4400"
        y="270.11481"
@@ -1222,25 +1136,25 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="160"
-       y="230.11481"
+       x="210"
+       y="230.00006"
        id="text4412"><tspan
          sodipodi:role="line"
-         x="160"
-         y="230.11481"
+         x="210"
+         y="230.00006"
          id="tspan4414"
-         style="font-size:16px;line-height:1.25">Hops Hackery</tspan></text>
+         style="font-size:16px;line-height:1.25">Elsinore Brewery 2</tspan></text>
     <text
        id="text4416"
-       y="350.11481"
-       x="320"
+       y="350.00006"
+       x="280"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan4418"
-         y="350.11481"
-         x="320"
+         y="350.00006"
+         x="280"
          sodipodi:role="line"
-         style="font-size:16px;line-height:1.25">Buzz Beer</tspan></text>
+         style="font-size:16px;line-height:1.25">Elsinore Brewery 1</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1253,7 +1167,7 @@
          id="tspan4422"
          style="font-size:16px;line-height:1.25">Idler Storage</tspan></text>
     <rect
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:2.0201416;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:2.02014;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4424"
        width="210"
        height="120.00001"
