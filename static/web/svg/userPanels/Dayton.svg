@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1047.9579"
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    sodipodi:docname="Dayton.svg"
-   onload="init(evt)">
+   onload="init(evt)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
      id="title1">Dayton</title>
   <script
@@ -285,14 +285,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4096164"
-     inkscape:cx="494.06498"
-     inkscape:cy="331.08574"
+     inkscape:cx="411.81416"
+     inkscape:cy="330.9411"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1792"
      inkscape:window-height="997"
-     inkscape:window-x="-2"
+     inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -312,7 +312,8 @@
      units="px"
      inkscape:snap-global="true"
      inkscape:document-rotation="0"
-     inkscape:lockguides="false">
+     inkscape:lockguides="false"
+     inkscape:pagecheckerboard="0">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
