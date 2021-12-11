@@ -31,6 +31,9 @@ var WebSocket = require('ws');
 var ws = null;
 var jmriSocketReady = false;
 
+var startupDate = new Date();
+var startupTime = startupDate.getTime();
+
 var helloMessage = null;
 
 setInterval(function() {
@@ -67,7 +70,12 @@ setInterval(function() {
             io.emit('update', data);
             
             if(logData == true)
-                console.log("Data rebroadcast from JMRI: " + data);
+            {
+                var broadcastDate = new Date();
+                var broadcastTime = (broadcastDate.getTime() - startupTime)/1000;
+      
+                console.log("All clients @ " + broadcastTime + "; Data rebroadcast from JMRI: " + data);
+            }
         });
         
         ws.on('error', function(e) {
@@ -102,9 +110,17 @@ var server = connect()
 var io = require('socket.io')(server);
 
 	io.on('connect', function (socket) {
+        var connectDate = new Date();
+        var connectTime = (connectDate.getTime() - startupTime)/1000;
+
 		clients[socket.id] = socket;	// track the socket in clients array
+        console.log("Client " + socket.id + " @ " + connectTime + "; Connected");
 
 		socket.on('disconnect', function () {
+            var disconnectDate = new Date();
+            var disconnectTime = (disconnectDate.getTime() - startupTime)/1000;
+      
+            console.log("Client " + socket.id + " @ " + disconnectTime + "; Disconnected");
 			delete clients[socket.id];	// stop tracking the client
 		});
         
@@ -112,7 +128,10 @@ var io = require('socket.io')(server);
 		socket.on('set', function (data) {
 			if(jmriSocketReady)
             {
-                console.log("Data (set) sent to JMRI: " + data);
+                var setDate = new Date();
+                var setTime = (setDate.getTime() - startupTime)/1000;
+
+                console.log("Client " + socket.id + " @ " + setTime + "; Set sent to JMRI: " + data);
                 ws.send(data);
             }
 		});
@@ -121,7 +140,10 @@ var io = require('socket.io')(server);
 		socket.on('get', function (data) {
             if(jmriSocketReady)
             {
-                console.log("Data (get) sent to JMRI: " + data);
+                var getDate = new Date();
+                var getTime = (getDate.getTime() - startupTime)/1000;
+
+                console.log("Client " + socket.id + " @ " + getTime + "; Get sent to JMRI: " + data);
                 ws.send(data);
             }
 		});
