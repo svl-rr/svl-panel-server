@@ -2,24 +2,14 @@ function panelInitPreSocket(evt)
 {
 }
 
-function buzzBeer2Path()
+function elsinoreBrewery2Path()
 {
-	executePathArray(["TO104.N", "TO105.R"]);
+	executePathArray(["TO118.R"]);
 }
 
-function buzzBeer1Path()
+function continuousRunLeadPath()
 {
-	executePathArray(["TO104.R", "TO105.R"]);
-}
-
-function buzzBeerLeadPath()
-{
-	executePathArray(["TO105.R"]);
-}
-
-function slipperShipperPath()
-{
-	executePathArray(["TO103.R"]);
+	executePathArray(["TO105.R", "T0124.N"]);
 }
 
 function cavanaughJunkPath()
@@ -42,7 +32,7 @@ function departureMain3Path()
 	executePathArray(["TO106.N", "TO101.N"]);
 }
 
-function daytonIndustrialPath()
+function elsinoreBrewery1Path()
 {
 	executePathArray(["TO106.R"]);
 }

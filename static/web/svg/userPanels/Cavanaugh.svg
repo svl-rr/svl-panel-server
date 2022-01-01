@@ -281,8 +281,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.6218167"
-     inkscape:cx="293.80632"
-     inkscape:cy="291.03166"
+     inkscape:cx="404.79297"
+     inkscape:cy="281.16618"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
@@ -581,9 +581,9 @@
        d="m 480,154.0945 200,200"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="buzzBeerLeadPath()" />
+       onclick="continuousRunLeadPath()" />
     <path
-       onclick="buzzBeer2Path()"
+       onclick="elsinoreBrewery2Path()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 400,153.97975 -60,60 H 210"
@@ -647,7 +647,7 @@
        sodipodi:nodetypes="ccc"
        onclick="arrivalMain1Path()" />
     <path
-       onclick="daytonIndustrialPath()"
+       onclick="elsinoreBrewery1Path()"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
        id="path3315"
