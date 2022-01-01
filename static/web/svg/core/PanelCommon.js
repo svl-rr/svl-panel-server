@@ -243,33 +243,40 @@ function setSVGState(newRoute)
     var normalElem = svgDocument.getElementById(this.normalRouteID);
     var divergingElem = svgDocument.getElementById(this.divergingRouteID);
     
-    if(normalElem != null)
+    if((normalElem != null) && (divergingElem != null))
     {
         var parent = normalElem.parentNode;
+        var newSelElem = null;
+        var nonSelElem = null;
         
         if((newRoute == 'N') || (newRoute == 'n'))
         {
-            // Set normal to full opacity
-            setStyleSubAttribute(normalElem, "opacity", "1.0");
-            parent.appendChild(normalElem);
-            
-            // Set diverging to reduced opacity
-            setStyleSubAttribute(divergingElem, "opacity", "0.25");
+            newSelElem = normalElem;
+            nonSelElem = divergingElem;
         }
         else if((newRoute == 'R') || (newRoute == 'r'))
         {
-            // Set diverging to full opacity
-            setStyleSubAttribute(divergingElem, "opacity", "1.0");
-            parent.appendChild(divergingElem);
-            
-            // Set normal to reduced opacity
-            setStyleSubAttribute(normalElem, "opacity", "0.25");
+            newSelElem = divergingElem;
+            nonSelElem = normalElem;
         }
         else
+        {
             alert("Bad route passed to setSVGState on turnout instance " + this.getInstanceID());
+            return;
+        }
+        
+        // Set selected route to full opacity
+        setStyleSubAttribute(newSelElem, "opacity", "1.0");
+        // Set non selected route to reduced opacity
+        setStyleSubAttribute(nonSelElem, "opacity", "0.25");
+        
+        newSelElem.setAttribute("pointer-events", "none");
+        nonSelElem.setAttribute("pointer-events", "none");
+        parent.appendChild(nonSelElem);
+        parent.appendChild(newSelElem);
+        newSelElem.setAttribute("pointer-events", "visiblePainted");
+        nonSelElem.setAttribute("pointer-events", "visiblePainted");
     }
-    
-    return null;
 }
 
 function getPanelTurnoutFromElemID(elemID)
