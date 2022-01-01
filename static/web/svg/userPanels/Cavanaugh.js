@@ -9,7 +9,7 @@ function elsinoreBrewery2Path()
 
 function continuousRunLeadPath()
 {
-	executePathArray(["TO105.R", "T0124.N"]);
+	executePathArray(["TO105.R", "TO124.N"]);
 }
 
 function cavanaughJunkPath()
