@@ -2,21 +2,21 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1047.9579"
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    sodipodi:docname="Kaos_Kalamazoo.svg"
-   onload="init(evt)">
+   onload="init(evt)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
      id="title1">Kaos/Kalamazoo</title>
   <script
@@ -286,16 +286,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.4835007"
-     inkscape:cx="678.57322"
-     inkscape:cy="395.48845"
+     inkscape:zoom="1.2316035"
+     inkscape:cx="388.92387"
+     inkscape:cy="272.4091"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlinePanelLinkLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
-     inkscape:window-width="1019"
-     inkscape:window-height="794"
+     inkscape:window-width="1533"
+     inkscape:window-height="945"
      inkscape:window-x="5"
-     inkscape:window-y="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -312,7 +312,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      units="px"
-     inkscape:snap-global="false">
+     inkscape:snap-global="false"
+     inkscape:pagecheckerboard="0">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -375,7 +376,7 @@
            x="330"
            id="tspan3823"
            sodipodi:role="line"
-           style="font-size:52.33785248px;line-height:1.25">Kaos/Kalamazoo</tspan></text>
+           style="font-size:52.3379px;line-height:1.25">Kalamazoo/Kaos</tspan></text>
     </a>
     <text
        id="panelStatus"
@@ -391,7 +392,7 @@
          style="font-size:12px;line-height:1.25">Panel not initialized</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 278.06781,642.32341 -10,-15 20,0 z"
+       d="m 278.06781,642.32341 -10,-15 h 20 z"
        id="leftLevelTriangle"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -418,7 +419,7 @@
            x="400"
            id="tspan3321"
            sodipodi:role="line"
-           style="font-size:25.22973061px;line-height:1.25">Mainline Locked</tspan></text>
+           style="font-size:25.2297px;line-height:1.25">Mainline Locked</tspan></text>
       <g
          id="leftLock">
         <rect
@@ -438,7 +439,7 @@
       <use
          height="690.11475"
          width="1047.9579"
-         transform="translate(210,1.3237304e-6)"
+         transform="translate(210)"
          id="rightLock"
          xlink:href="#leftLock"
          y="0"
@@ -447,23 +448,23 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="340"
-       y="674.09448"
+       x="640.04523"
+       y="673.71838"
        id="text4352"><tspan
          sodipodi:role="line"
-         x="340"
-         y="674.09448"
+         x="640.04523"
+         y="673.71838"
          id="tspan4354"
          style="font-size:16px;line-height:1.25">(Back/Main)</tspan></text>
     <text
        id="text4356"
-       y="674.09448"
-       x="540"
+       y="672.47058"
+       x="329.70505"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        xml:space="preserve"><tspan
          id="tspan4358"
-         y="674.09448"
-         x="540"
+         y="672.47058"
+         x="329.70505"
          sodipodi:role="line"
          style="font-size:16px;line-height:1.25">(Front/Industrial)</tspan></text>
   </g>
@@ -1103,7 +1104,8 @@
      id="mainlinePanelLinkLayer"
      inkscape:label="Mainline Panel Links"
      transform="translate(0,-5.4327394e-5)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <a
        xlink:href="MtMarvel.svg"
        transform="translate(-60,10.000047)"
@@ -1232,7 +1234,7 @@
        height="207.26277"
        x="694.12933"
        y="294.53574"
-       style="fill:#ffffff;fill-opacity:0.29441624;stroke-width:1.84544313" />
+       style="fill:#ffffff;fill-opacity:0.294416;stroke-width:1.84544" />
     <g
        id="g5281"
        transform="rotate(-44.026716,721.02811,-137.59388)"
@@ -1246,9 +1248,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
@@ -1274,7 +1276,7 @@
          id="g5277"
          transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1843.1751,1013.5806)">
         <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
@@ -1285,7 +1287,7 @@
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1" />
       </g>
       <rect
          transform="matrix(-0.99998139,0.006101,0.01851294,-0.99982862,0,0)"
@@ -1304,7 +1306,7 @@
          id="g5329"
          transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
         <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
@@ -1315,7 +1317,7 @@
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1" />
       </g>
       <rect
          transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
@@ -1342,9 +1344,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
@@ -1367,7 +1369,7 @@
          id="g5453"
          transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
         <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
@@ -1378,7 +1380,7 @@
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1" />
       </g>
       <rect
          transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
@@ -1405,9 +1407,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
@@ -1430,7 +1432,7 @@
          id="g5577"
          transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
         <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
@@ -1441,7 +1443,7 @@
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1" />
       </g>
       <rect
          transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
@@ -1468,9 +1470,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
@@ -1498,9 +1500,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
@@ -1526,7 +1528,7 @@
          id="g5649"
          transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1247.117,-186.2717)">
         <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
@@ -1537,7 +1539,7 @@
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1" />
       </g>
       <rect
          transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)"
@@ -1561,9 +1563,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
@@ -1599,9 +1601,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
@@ -1637,7 +1639,8 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.4327394e-5)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1648,7 +1651,7 @@
          x="360"
          y="400.11481"
          id="tspan4106"
-         style="font-size:16px;line-height:1.25">RailEx</tspan></text>
+         style="font-size:16px;line-height:1.25">RailEx Lead</tspan></text>
     <text
        id="text4108"
        y="440.11481"
@@ -1706,5 +1709,27 @@
          x="682.48022"
          y="511.68649"
          id="tspan2444">Main St</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="156.57675"
+       y="461.82297"
+       id="text3169"><tspan
+         sodipodi:role="line"
+         x="156.57675"
+         y="461.82297"
+         id="tspan3167"
+         style="font-size:16px;line-height:1.25">RailEx 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="156.57675"
+       y="491.05316"
+       id="text3583"><tspan
+         sodipodi:role="line"
+         x="156.57675"
+         y="491.05316"
+         id="tspan3581"
+         style="font-size:16px;line-height:1.25">RailEx 1</tspan></text>
   </g>
 </svg>
