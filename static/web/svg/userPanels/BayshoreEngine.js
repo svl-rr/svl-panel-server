@@ -326,14 +326,14 @@ function enableTurntableTrackEvents(drawAsEnabled)
 
 function ttLead1Path()
 {
+    ttTrack1Ladder();
     setBayshoreTurntableTrack(getTrack1LogicalTrack());
-    //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
 function ttLead2Path()
 {
+    ttTrack2Ladder();
     setBayshoreTurntableTrack(getTrack2LogicalTrack());
-    //executePathArray(["TO36.N", "TO38.R", "TO23.R"]);
 }
 
 function displayTurntableTrackPower(trackNum, powered)
@@ -453,4 +453,69 @@ function getTrack2LogicalTrack()
         else
             return 18;
     }
+}
+
+function engineStorage1Ladder()
+{
+    executePathArray(["TO50.N", "TO51.N"]);
+}
+
+function dieselShed1Ladder()
+{
+    executePathArray(["TO50.N", "TO51.R", "TO52.N"]);
+}
+
+function dieselShed2Ladder()
+{
+    executePathArray(["TO50.N", "TO51.R", "TO52.R"]);
+}
+
+function dieselShed3Ladder()
+{
+    executePathArray(["TO50.R", "TO53.N", "TO54.N"]);
+}
+
+function engineStorage2Ladder()
+{
+    executePathArray(["TO50.R", "TO53.N", "TO54.R"]);
+}
+
+function oilTrackLadder()
+{
+    executePathArray(["TO50.R", "TO53.R", "TO55.N", "TO56.R", "TO57.N"]);
+}
+
+function cabooseTrackLadder()
+{
+    executePathArray(["TO50.R", "TO53.R", "TO55.N", "TO56.R", "TO57.R"]);
+}
+
+function unnamedLowerSpurLadder()
+{
+    executePathArray(["TO50.R", "TO53.R", "TO55.N", "TO56.N"]);
+}
+
+function ttTrack1Ladder()
+{
+    executePathArray(["TO50.R", "TO53.R", "TO55.R", "TO58.R", "TO60.N"]);
+}
+
+function ttTrack2Ladder()
+{
+    executePathArray(["TO50.R", "TO53.R", "TO55.R", "TO58.R", "TO60.R", "TO61.N"]);
+}
+
+function coalTippleLadder()
+{
+    executePathArray(["TO50.R", "TO53.R", "TO55.R", "TO58.R", "TO60.R", "TO61.R"]);
+}
+
+function unnamedMiddleSpurLadder()
+{
+    executePathArray(["TO50.R", "TO53.R", "TO55.R", "TO58.N", "TO59.N"]);
+}
+
+function unnamedUpperSpurLadder()
+{
+    executePathArray(["TO50.R", "TO53.R", "TO55.R", "TO58.N", "TO59.R"]);
 }

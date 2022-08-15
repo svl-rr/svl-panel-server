@@ -2,6 +2,28 @@ function panelInitPreSocket(evt)
 {
 }
 
+function FrytonSidingLeftPath()
+{
+	executePathArray(["TO178.R"]);
+}
+
+function FrytonSidingRightPath()
+{
+	executePathArray(["TO177.R"]);
+}
+
+function FrytonStorageLeftPath()
+{
+	executePathArray(["TO178.N"]);
+}
+
+function FrytonStorageRightPath()
+{
+	executePathArray(["TO177.N"]);
+}
+
+
+
 function EAJensenShippingPath()
 {
 	executePathArray(["TO192.N", "TO191.N", "TO190.N"]);
@@ -35,4 +57,9 @@ function FremontBranchLeftPath()
 function FremontTeamTrackPath()
 {
 	executePathArray(["TO194B.N"]);
+}
+
+function ParkfieldGravelPath()
+{
+	executePathArray(["TO194B.R"]);
 }

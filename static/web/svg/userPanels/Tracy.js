@@ -60,16 +60,19 @@ function EngineRunaroundPath()
 function EngineServicingPath()
 {
     executePathArray(["TO690.N"]);
+    EngineLeadPath();
 }
 
 function EngineRunaroundPath()
 {
     executePathArray(["TO690.R", "TO691.R"]);
+    EngineLeadPath();
 }
 
 function EngineReadyPath()
 {
     executePathArray(["TO690.R", "TO691.N"]);
+    EngineLeadPath();
 }
 
 function REASpurPath()

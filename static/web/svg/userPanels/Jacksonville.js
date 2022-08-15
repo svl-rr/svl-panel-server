@@ -5,16 +5,29 @@ function panelInitPreSocket(evt)
 function AshgroveQuarry3Path()
 {
 	executePathArray(["TO298.N", "TO299.R"]);
+	AshgroveQuarryLeadPath();
 }
 
 function AshgroveQuarry2Path()
 {
 	executePathArray(["TO298.N", "TO299.N"]);
+	AshgroveQuarryLeadPath();
 }
 
 function AshgroveQuarry1Path()
 {
 	executePathArray(["TO298.R"]);
+	AshgroveQuarryLeadPath();
+}
+
+function AshgroveQuarryLeadPath()
+{
+	executePathArray(["TO297.R"]);
+}
+
+function AQXchangeLeadPath()
+{
+	executePathArray(["TO297.N"]);
 }
 
 function AQXchange2Path()
@@ -65,16 +78,24 @@ function JacksonvilleSidingPath()
 function UniversalExportsPath()
 {
 	executePathArray(["TO323.R", "TO322.N"]);
+    UnionCoalUniversalExportsPreLeadPath();
 }
 
 function UnionCoal2Path()
 {
 	executePathArray(["TO324.R", "TO323.N", "TO322.N"]);
+    UnionCoalUniversalExportsPreLeadPath();
 }
 
 function UnionCoal1Path()
 {
 	executePathArray(["TO324.N", "TO323.N", "TO322.N"]);
+    UnionCoalUniversalExportsPreLeadPath();
+}
+
+function UnionCoalUniversalExportsPreLeadPath()
+{
+	executePathArray(["TO322.N"]);
 }
 
 function UnionCoalRampPath()

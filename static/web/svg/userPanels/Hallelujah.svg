@@ -284,13 +284,13 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.1476306"
-     inkscape:cx="369.89254"
-     inkscape:cy="290.59873"
+     inkscape:zoom="0.93303299"
+     inkscape:cx="585.7242"
+     inkscape:cy="317.78083"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
-     inkscape:window-width="1792"
+     inkscape:window-width="1309"
      inkscape:window-height="997"
      inkscape:window-x="6"
      inkscape:window-y="25"
@@ -476,7 +476,7 @@
        id="path4060"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="Dayton1Path()" />
+       onclick="HellenbegoneMine1Path()" />
     <g
        id="g4601"
        style="display:inline"
@@ -600,7 +600,7 @@
          sodipodi:nodetypes="cc" />
     </g>
     <path
-       onclick="DaytonLeadPath()"
+       onclick="HellenbegoneLeadPath()"
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path3189"
@@ -614,7 +614,7 @@
        id="path3193"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="HemetGrowersPath()" />
     <path
        sodipodi:nodetypes="cc"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
@@ -642,7 +642,7 @@
        d="M 960,174.0945 H 930"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="Dayton2Path()" />
+       onclick="HellenbegoneMine2Path()" />
     <g
        transform="rotate(180,355,384.0945)"
        style="display:inline"
@@ -799,7 +799,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
-       onclick=""
+       onclick="PaperPlantOutboundPath()"
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
        id="path4356"
@@ -834,7 +834,7 @@
        id="path4364"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
-       onclick="" />
+       onclick="PaperPlantRunaroundPath()" />
     <g
        transform="rotate(180,480,464.0945)"
        style="display:inline"
@@ -905,9 +905,9 @@
        id="path4390"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
-       onclick="" />
+       onclick="PaperPlantInboundPath()" />
     <path
-       onclick=""
+       onclick="PaperPlantPulpPath()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 1020,414.0945 H 960"
@@ -921,9 +921,9 @@
        d="M 940,374.0945 H 810"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="PaperPlantChemUnloadPowerStationPath()" />
     <path
-       onclick=""
+       onclick="PaperPlantDoors4Thru7Path()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 880,294.0945 H 680"
@@ -937,9 +937,9 @@
        d="m 980,344.0945 v -90"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="PaperPlantRecycledPaperPath()" />
     <path
-       onclick=""
+       onclick="PaperPlantWoodchipsPath()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 1000,354.0945 10,-10 v -90"
@@ -974,7 +974,7 @@
        id="path4434"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
-       onclick="" />
+       onclick="PaperPlantMainPath()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1195,7 +1195,7 @@
          sodipodi:nodetypes="cc" />
     </g>
     <path
-       onclick=""
+       onclick="HemetCACoop2PreLeadPath()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 470,454.0945 H 360"
@@ -1209,9 +1209,9 @@
        d="M 520,494.0945 H 400"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="HemetTeamTrackPreLeadPath()" />
     <path
-       onclick=""
+       onclick="HemetWalnutStephensGrocPreLeadPath()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 430,414.0945 H 360"
@@ -1219,7 +1219,7 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
-       onclick=""
+       onclick="HemetTeamTrackPath()"
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 360,494.0945 H 240"
@@ -1233,7 +1233,7 @@
        id="path4461"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="HemetDillLumberPath()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1249,7 +1249,7 @@
        d="M 200,454.0945 H 60"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="HemetCACoop2Path()" />
     <path
        inkscape:label="#path4221"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1257,7 +1257,7 @@
        id="path4467"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
-       onclick="" />
+       onclick="HemetCACoop1Path()" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1265,7 +1265,7 @@
        d="M 320,414.0945 H 160"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
-       onclick="" />
+       onclick="HemetWalnutStephensGrocPath()" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1277,20 +1277,20 @@
     <path
        sodipodi:nodetypes="cc"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
-       d="m 1000,454.0945 -30,0"
+       d="M 1000,454.0945 H 970"
        id="path3233"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
        id="path3332"
        class="sensor IgoNB"
-       d="m 60,174.0945 40,0"
+       d="m 60,174.0945 h 40"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
     <path
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 640,454.0945 -20,0 -210,-210"
+       d="m 640,454.0945 h -20 l -210,-210"
        id="path3150"
        class="sensor Hallelujah"
        inkscape:connector-curvature="0"
@@ -1298,7 +1298,7 @@
     <path
        sodipodi:nodetypes="cc"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
-       d="m 60,214.0945 40,0"
+       d="m 60,214.0945 h 40"
        id="path3154"
        class="sensor IgoSB"
        inkscape:connector-curvature="0" />
@@ -1306,7 +1306,7 @@
        onclick=""
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 270,174.0945 -170,0"
+       d="M 270,174.0945 H 100"
        id="path3195"
        class="igo_main_nb sensor IgoNB"
        inkscape:connector-curvature="0"
@@ -1316,7 +1316,7 @@
        inkscape:connector-curvature="0"
        id="path4054"
        class="sensor IgoSB"
-       d="m 190,214.0945 -90,0"
+       d="M 190,214.0945 H 100"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
        onclick="" />
@@ -1327,7 +1327,7 @@
       <path
          inkscape:label="#path4221"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 200,574.0945 -20,0 -20,-20"
+         d="m 200,574.0945 h -20 l -20,-20"
          id="TO251B.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc"
@@ -1337,7 +1337,7 @@
          inkscape:connector-curvature="0"
          id="TO251B.R"
          class="sensor IgoSB"
-         d="m 200,574.0945 -40,0"
+         d="M 200,574.0945 H 160"
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -1350,14 +1350,14 @@
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="TO251A.N"
-         d="m 200,574.0945 -20,0 -20,-20"
+         d="m 200,574.0945 h -20 l -20,-20"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
       <path
          inkscape:label="#path4221"
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 200,574.0945 -40,0"
+         d="M 200,574.0945 H 160"
          id="TO251A.R"
          class="sensor IgoNB"
          inkscape:connector-curvature="0"
@@ -1367,11 +1367,11 @@
     <g
        style="display:inline"
        id="g4559"
-       transform="matrix(-1,0,0,-1,520,748.189)">
+       transform="rotate(180,260,374.0945)">
       <path
          inkscape:label="#path4221"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 200,574.0945 -20,0 -20,-20"
+         d="m 200,574.0945 h -20 l -20,-20"
          id="TO250A.N"
          class="sensor IgoNB"
          inkscape:connector-curvature="0"
@@ -1382,7 +1382,7 @@
          inkscape:connector-curvature="0"
          id="TO250A.R"
          class="sensor IgoNB"
-         d="m 200,574.0945 -40,0"
+         d="M 200,574.0945 H 160"
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -1404,7 +1404,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 200,614.0945 -20,-20 -20,0"
+         d="m 200,614.0945 -20,-20 h -20"
          id="TO250B.R"
          class="sensor IgoSB"
          inkscape:connector-curvature="0"
@@ -1414,7 +1414,7 @@
        onclick=""
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="m 360,214.0945 -80,0"
+       d="M 360,214.0945 H 280"
        id="path3199"
        class="sensor IgoSB"
        inkscape:connector-curvature="0"
@@ -1424,7 +1424,7 @@
        inkscape:connector-curvature="0"
        id="path4337"
        class="sensor Hallelujah"
-       d="m 920,454.0945 -240,0"
+       d="M 920,454.0945 H 680"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
   </g>
