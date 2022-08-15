@@ -2,21 +2,21 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1047.9579"
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r13725"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    sodipodi:docname="PanelDefs.svg"
-   onload="init(evt)">
+   onload="init(evt)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
      id="title1">Panel Defs</title>
   <script
@@ -282,16 +282,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4088798"
-     inkscape:cx="390.3035"
-     inkscape:cy="317.89831"
+     inkscape:zoom="0.9983453"
+     inkscape:cx="549.40911"
+     inkscape:cy="326.0395"
      inkscape:document-units="px"
      inkscape:current-layer="industrialTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1151"
+     inkscape:window-height="1027"
      inkscape:window-x="0"
-     inkscape:window-y="1"
+     inkscape:window-y="25"
      inkscape:window-maximized="1"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -307,7 +307,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     units="pc">
+     units="pc"
+     inkscape:pagecheckerboard="0">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -360,7 +361,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 520,514.0945 20,20 20,0"
+         d="m 520,514.0945 20,20 h 20"
          id="TO01.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
@@ -368,19 +369,19 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO01.N"
-         d="m 520,534.0945 40,0"
+         d="m 520,534.0945 h 40"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <g
        id="g3187"
-       transform="matrix(-1,0,0,-1,600,868.1885)">
+       transform="rotate(180,300,434.09425)">
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 440,414.0945 -20,0 -20,-20"
+         d="m 440,414.0945 h -20 l -20,-20"
          id="TO02.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
@@ -397,7 +398,7 @@
        id="g4691"
        transform="translate(137.21811,-92.939727)">
       <g
-         transform="matrix(-1,0,0,-1,540,1108.189)"
+         transform="rotate(180,270,554.0945)"
          id="g4675">
         <path
            inkscape:label="#path4221"
@@ -411,7 +412,7 @@
            sodipodi:nodetypes="cc"
            inkscape:connector-curvature="0"
            id="TO03.R"
-           d="m 280,574.0945 30,0"
+           d="m 280,574.0945 h 30"
            style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            inkscape:label="#path4221"
            onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -422,7 +423,7 @@
         <path
            inkscape:label="#path4221"
            style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 280,574.0945 30,0"
+           d="m 280,574.0945 h 30"
            id="TO04.N"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cc"
@@ -439,7 +440,7 @@
       <path
          inkscape:label="#path4221"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 238.96363,553.05813 -12.07274,-12.07274 -16.77574,0"
+         d="M 238.96363,553.05813 226.89089,540.98539 H 210.11515"
          id="path4685"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
@@ -447,18 +448,18 @@
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="path4689"
-         d="m 220.70915,514.96099 12.07274,12.07274 16.77574,0"
+         d="m 220.70915,514.96099 12.07274,12.07274 h 16.77574"
          style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221" />
     </g>
     <g
-       transform="matrix(-1,0,0,-1,1315,858.18847)"
+       transform="rotate(180,657.5,429.09424)"
        id="g3337">
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
          id="TO05A.N"
-         d="m 445,414.0945 -25,0 -10,-10"
+         d="m 445,414.0945 h -25 l -10,-10"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -478,7 +479,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 490,424.0945 -9.99997,-10 -60.00003,0 -10,-10"
+         d="m 490,424.0945 -9.99997,-10 H 420 l -10,-10"
          id="TO05B.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccc" />
@@ -518,7 +519,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 480,364.0945 -20,0 -40,40 -20,0"
+         d="m 480,364.0945 h -20 l -40,40 h -20"
          id="TO06A.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccc" />
@@ -538,7 +539,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 490,424.0945 3e-5,-20 -40,-40 0,-20"
+         d="m 490,424.0945 3e-5,-20 -40,-40 v -20"
          id="TO06B.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cccc" />
@@ -552,13 +553,13 @@
          inkscape:label="#path4221" />
     </g>
     <g
-       transform="matrix(-1,0,0,-1,1030,958.18847)"
+       transform="rotate(180,515,479.09424)"
        id="g459">
       <path
          sodipodi:nodetypes="cccc"
          inkscape:connector-curvature="0"
          id="TO07A.R"
-         d="m 480,494.09447 20,0 40,40.00003 20,0"
+         d="m 480,494.09447 h 20 l 40,40.00003 h 20"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -566,7 +567,7 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 520,534.0945 40,0"
+         d="m 520,534.0945 h 40"
          id="TO07A.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
@@ -578,7 +579,7 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO07B.R"
-         d="m 560,534.0945 0,0"
+         d="m 560,534.0945 v 0"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -586,103 +587,103 @@
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         d="m 560,534.0945 -40,0"
+         d="M 560,534.0945 H 520"
          id="TO07B.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc" />
     </g>
     <text
-       sodipodi:linespacing="125%"
        id="text3992"
        y="384.09399"
        x="460"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="384.09399"
          x="460"
          id="tspan3994"
-         sodipodi:role="line">Crossover</tspan></text>
+         sodipodi:role="line"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">Crossover</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="panelTitle"
        y="114.094"
        x="360"
-       style="font-style:normal;font-weight:normal;font-size:68.56484222px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="114.094"
          x="360"
          id="tspan4042"
-         sodipodi:role="line">Panel Defs</tspan></text>
+         sodipodi:role="line"
+         style="font-size:68.5648px;line-height:1.25;font-family:sans-serif">Panel Defs</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="panelStatus"
        y="654.09399"
        x="40"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"
        inkscape:label="#text3075"><tspan
          y="654.09399"
          x="40"
          id="tspan3077"
-         sodipodi:role="line">This is an example document.</tspan></text>
+         sodipodi:role="line"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">This is an example document.</tspan></text>
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
-       d="m 100,214.094 40,0 0,0"
+       d="m 100,214.094 h 40 v 0"
        id="path3045"
        inkscape:connector-curvature="0" />
     <text
-       sodipodi:linespacing="125%"
        id="text4205"
        y="184.09401"
        x="60"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="184.09401"
          x="60"
          sodipodi:role="line"
-         id="tspan4209">#triangleInM marker</tspan></text>
+         id="tspan4209"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">#triangleInM marker</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path4213"
-       d="m 250,214.094 40,0 0,0"
+       d="m 250,214.094 h 40 v 0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#TriangleOutM)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        x="220"
        y="184.09401"
-       id="text4587"
-       sodipodi:linespacing="125%"><tspan
+       id="text4587"><tspan
          id="tspan4589"
          sodipodi:role="line"
          x="220"
-         y="184.09401">#triangleOutM marker</tspan></text>
+         y="184.09401"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">#triangleOutM marker</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path4591"
-       d="m 450,214.094 40,0 0,0"
+       d="m 450,214.094 h 40 v 0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#StopM)" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        x="390"
        y="184.09401"
-       id="text4779"
-       sodipodi:linespacing="125%"><tspan
+       id="text4779"><tspan
          id="tspan4781"
          sodipodi:role="line"
          x="390"
-         y="184.09401">End of Track marker (#StopM)</tspan></text>
+         y="184.09401"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">End of Track marker (#StopM)</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path3062"
-       d="m 80,414.094 60,0 20,20"
+       d="m 80,414.094 h 60 l 20,20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
        sodipodi:nodetypes="ccc"
        onclick="path3click()" />
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
-       d="m 80,454.094 80,0 0,0"
+       d="m 80,454.094 h 80 v 0"
        id="path4036"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
@@ -690,137 +691,137 @@
     <path
        inkscape:connector-curvature="0"
        id="path4038"
-       d="m 80,494.094 120,0 0,0"
+       d="m 80,494.094 h 120 v 0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
        sodipodi:nodetypes="ccc"
        onclick="path1click()" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        x="100"
        y="384.09399"
-       id="text4041"
-       sodipodi:linespacing="125%"><tspan
+       id="text4041"><tspan
          sodipodi:role="line"
          id="tspan4043"
          x="100"
-         y="384.09399">Path Examples</tspan></text>
+         y="384.09399"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">Path Examples</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text3121"
        y="384.09399"
        x="610"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="384.09399"
          x="610"
          id="tspan3123"
-         sodipodi:role="line">Double Crossover</tspan></text>
+         sodipodi:role="line"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">Double Crossover</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text3133"
        y="384.09399"
        x="340"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="384.09399"
          x="340"
          id="tspan3135"
-         sodipodi:role="line">Doubleslip</tspan></text>
+         sodipodi:role="line"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">Doubleslip</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        x="800"
        y="384.09399"
-       id="text3221"
-       sodipodi:linespacing="125%"><tspan
+       id="text3221"><tspan
          sodipodi:role="line"
          id="tspan3223"
          x="800"
-         y="384.09399">Double Crossover (45deg)</tspan></text>
+         y="384.09399"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">Double Crossover (45deg)</tspan></text>
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleOccupiedSBMarker);marker-end:none"
-       d="m 670,214.094 -40,0 0,0"
+       d="m 670,214.094 h -40 v 0"
        id="path3225"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
        id="path3227"
-       d="m 710,214.094 -40,0 0,0"
+       d="m 710,214.094 h -40 v 0"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleAuthSBMarker);marker-end:none" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        x="630"
        y="194.09401"
-       id="text3147"
-       sodipodi:linespacing="125%"><tspan
+       id="text3147"><tspan
          id="tspan3149"
          sodipodi:role="line"
          x="630"
-         y="194.09401">#TriangleAuthSBMarker</tspan></text>
+         y="194.09401"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">#TriangleAuthSBMarker</tspan></text>
     <path
        inkscape:connector-curvature="0"
        id="path8815"
-       d="m 900,214.094 -40,0"
+       d="M 900,214.094 H 860"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#TriangleOccupiedNBMarker)"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:url(#TriangleAuthNBMarker)"
-       d="m 940,214.094 -40,0"
+       d="M 940,214.094 H 900"
        id="path8817"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <text
-       sodipodi:linespacing="125%"
        id="text12117"
        y="184.09401"
        x="590"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="184.09401"
          x="590"
          sodipodi:role="line"
-         id="tspan12121">#TriangleOccupiedSBMarker</tspan></text>
+         id="tspan12121"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">#TriangleOccupiedSBMarker</tspan></text>
     <text
-       sodipodi:linespacing="125%"
        id="text12125"
        y="194.09401"
        x="850"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="194.09401"
          x="850"
          sodipodi:role="line"
-         id="tspan12127">#TriangleAuthNBMarker</tspan></text>
+         id="tspan12127"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">#TriangleAuthNBMarker</tspan></text>
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        x="810"
        y="184.09401"
-       id="text12129"
-       sodipodi:linespacing="125%"><tspan
+       id="text12129"><tspan
          id="tspan12131"
          sodipodi:role="line"
          x="810"
-         y="184.09401">#TriangleOccupiedNBMarker</tspan></text>
+         y="184.09401"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">#TriangleOccupiedNBMarker</tspan></text>
     <path
        onclick="path3click()"
        sodipodi:nodetypes="ccccccc"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-mid:url(#StopS)"
-       d="m 440,294.094 20,0 20,0 20,0 20,0 20,0 20,0"
+       d="m 440,294.094 h 20 20 20 20 20 20"
        id="path3098"
        inkscape:connector-curvature="0" />
     <text
-       sodipodi:linespacing="125%"
        id="text4760"
        y="324.09399"
        x="410"
-       style="font-style:normal;font-weight:normal;font-size:10.57528591px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none"
        xml:space="preserve"><tspan
          y="324.09399"
          x="410"
          sodipodi:role="line"
-         id="tspan4762">Narrow Gauge marker (#StopS)</tspan></text>
+         id="tspan4762"
+         style="font-size:10.5753px;line-height:1.25;font-family:sans-serif">Narrow Gauge marker (#StopS)</tspan></text>
   </g>
 </svg>

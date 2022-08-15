@@ -2,21 +2,21 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1047.9579"
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    sodipodi:docname="MtMarvel.svg"
-   onload="init(evt)">
+   onload="init(evt)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
      id="title1">Mt. Marvel</title>
   <script
@@ -286,16 +286,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.5638182"
-     inkscape:cx="238.99631"
-     inkscape:cy="241.17781"
+     inkscape:zoom="1.017006"
+     inkscape:cx="510.81313"
+     inkscape:cy="343.6558"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="mainlineTrackLayer"
      showgrid="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1036"
+     inkscape:window-height="1027"
      inkscape:window-x="-7"
-     inkscape:window-y="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -313,7 +313,8 @@
      fit-margin-bottom="0"
      units="px"
      inkscape:snap-text-baseline="true"
-     inkscape:snap-global="false">
+     inkscape:snap-global="false"
+     inkscape:pagecheckerboard="0">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -373,7 +374,7 @@
            x="390"
            id="tspan3823"
            sodipodi:role="line"
-           style="font-size:52.33785248px;line-height:1.25">Mt. Marvel</tspan></text>
+           style="font-size:52.3379px;line-height:1.25">Mt. Marvel</tspan></text>
     </a>
     <text
        id="panelStatus"
@@ -416,7 +417,7 @@
            x="400"
            id="tspan3321"
            sodipodi:role="line"
-           style="font-size:25.22973061px;line-height:1.25">Mainline Locked</tspan></text>
+           style="font-size:25.2297px;line-height:1.25">Mainline Locked</tspan></text>
       <g
          id="leftLock">
         <rect
@@ -966,7 +967,8 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <text
        id="text3547"
        y="160.11481"
@@ -1055,7 +1057,7 @@
          id="g2187"
          transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
         <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
@@ -1066,7 +1068,7 @@
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1" />
       </g>
       <rect
          transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
@@ -1093,9 +1095,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"

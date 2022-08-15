@@ -2,21 +2,21 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="1047.9579"
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="0.92.2 5c3e80d, 2017-08-06"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    sodipodi:docname="Greeley_Gotham.svg"
-   onload="init(evt)">
+   onload="init(evt)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
      id="title1">Greeley/Gotham</title>
   <script
@@ -286,16 +286,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="16.119474"
-     inkscape:cx="968.5414"
-     inkscape:cy="505.90764"
+     inkscape:zoom="0.9983453"
+     inkscape:cx="615.5185"
+     inkscape:cy="506.33784"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="997"
      inkscape:window-x="-2"
-     inkscape:window-y="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -311,7 +311,8 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     units="px">
+     units="px"
+     inkscape:pagecheckerboard="0">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -374,7 +375,7 @@
            x="330"
            id="tspan3823"
            sodipodi:role="line"
-           style="font-size:52.33785248px;line-height:1.25">Greeley/Gotham</tspan></text>
+           style="font-size:52.3379px;line-height:1.25">Greeley/Gotham</tspan></text>
     </a>
     <text
        id="panelStatus"
@@ -417,7 +418,7 @@
            x="400"
            id="tspan3321"
            sodipodi:role="line"
-           style="font-size:25.22973061px;line-height:1.25">Mainline Locked</tspan></text>
+           style="font-size:25.2297px;line-height:1.25">Mainline Locked</tspan></text>
       <g
          id="leftLock">
         <rect
@@ -1108,7 +1109,8 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.4327394e-5)"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1225,7 +1227,7 @@
          id="g7284"
          transform="matrix(-1.5189961,-0.03126533,0.03126533,-1.5189961,1851.3044,1013.6492)">
         <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
@@ -1236,7 +1238,7 @@
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1" />
       </g>
       <rect
          transform="matrix(-0.99987136,-0.01603926,0.0322982,-0.99947828,0,0)"
@@ -1263,9 +1265,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"
@@ -1288,7 +1290,7 @@
          id="g1507"
          transform="matrix(1.5193109,0.00458139,-0.00458139,1.5193109,-1255.2462,-186.19754)">
         <circle
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1"
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1"
            r="2.0467861"
            cy="424.56335"
            cx="872.92395"
@@ -1299,7 +1301,7 @@
            cx="872.92395"
            cy="424.56335"
            r="2.2604594"
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1" />
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1" />
       </g>
       <rect
          transform="matrix(0.99999884,-0.00152461,-0.01473873,0.99989138,0,0)"
@@ -1326,9 +1328,9 @@
            cx="872.92395"
            cy="424.56335"
            r="2.0467861"
-           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.40935722;stroke-opacity:1" />
+           style="fill:#d00000;fill-opacity:1;stroke:none;stroke-width:0.409357;stroke-opacity:1" />
         <circle
-           style="fill:none;stroke:#000000;stroke-width:0.4520919;stroke-opacity:1"
+           style="fill:none;stroke:#000000;stroke-width:0.452092;stroke-opacity:1"
            r="2.2604594"
            cy="424.56335"
            cx="872.92395"

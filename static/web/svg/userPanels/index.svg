@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    viewBox="28 4 492 725"
    width="41pc"
    height="725pt"
    id="svg3813"
-   inkscape:version="0.91 r13725"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    sodipodi:docname="index.svg"
-   onload="init(evt)">
+   onload="init(evt)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <script
      xlink:href="index.js"
      id="script3236" />
@@ -33,16 +32,18 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:window-width="1920"
-     inkscape:window-height="1151"
+     inkscape:window-height="1027"
      id="namedview4355"
      showgrid="false"
-     inkscape:zoom="1.1196396"
-     inkscape:cx="-219.12579"
-     inkscape:cy="296.04575"
-     inkscape:window-x="5"
-     inkscape:window-y="122"
+     inkscape:zoom="0.97035431"
+     inkscape:cx="225.17548"
+     inkscape:cy="414.79694"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer7" />
+     inkscape:current-layer="layer7"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="pc" />
   <metadata
      id="metadata3815">
     <dc:date>2013-08-09 17:59Z</dc:date>
@@ -89,7 +90,7 @@
     </marker>
     <linearGradient
        id="linearGradient4137"
-       osb:paint="solid">
+       inkscape:swatch="solid">
       <stop
          style="stop-color:#000000;stop-opacity:1;"
          offset="0"
@@ -429,16 +430,14 @@
       <text
          y="442.52332"
          x="376.83676"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text3975">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3975"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan3977"
            y="453.52332"
            x="377.14536"
            font-weight="500"
-           font-size="12">Railroad South</tspan>
-      </text>
+           font-size="12">Railroad South</tspan></text>
       <line
          style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-start:url(#FilledArrow_Marker_2);marker-end:url(#FilledArrow_Marker)"
          id="line3979"
@@ -449,16 +448,14 @@
       <text
          y="511.02332"
          x="378.33676"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text3981">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3981"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan3983"
            y="522.02332"
            x="378.65317"
            font-weight="500"
-           font-size="12">Railroad North</tspan>
-      </text>
+           font-size="12">Railroad North</tspan></text>
     </g>
     <g
        id="g5991">
@@ -505,29 +502,25 @@
       <text
          y="545.31671"
          x="371.34909"
-         style="fill:#000000;stroke:none"
-         id="text3907">
-        <tspan
+         style="line-height:0%;fill:#000000;stroke:none"
+         id="text3907"><tspan
            style="font-weight:bold;font-size:9px;font-family:Helvetica"
            id="tspan3909"
            y="554.31671"
            x="371.8486"
            font-weight="bold"
-           font-size="9">Legend</tspan>
-      </text>
+           font-size="9">Legend</tspan></text>
       <text
          y="598.55505"
          x="340.5408"
-         style="fill:#000000;stroke:none"
-         id="text3935">
-        <tspan
+         style="line-height:0%;fill:#000000;stroke:none"
+         id="text3935"><tspan
            style="font-weight:500;font-size:9px;font-family:Helvetica"
            id="tspan3937"
            y="607.55505"
            x="340.5408"
            font-weight="500"
-           font-size="9">Hidden track</tspan>
-      </text>
+           font-size="9">Hidden track</tspan></text>
       <line
          style="fill:none;stroke:#408000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
          id="line3939"
@@ -545,16 +538,14 @@
       <text
          y="639.75269"
          x="318.54346"
-         style="fill:#000000;stroke:none"
-         id="text3945">
-        <tspan
+         style="line-height:0%;fill:#000000;stroke:none"
+         id="text3945"><tspan
            style="font-weight:500;font-size:9px;font-family:Helvetica"
            id="tspan3947"
            y="648.75269"
            x="319.04199"
            font-weight="500"
-           font-size="9">S</tspan>
-      </text>
+           font-size="9">S</tspan></text>
       <circle
          transform="translate(-37.959209,-12.495974)"
          style="fill:#ffff00;stroke:none"
@@ -565,42 +556,36 @@
       <text
          y="653.50403"
          x="318.54346"
-         style="fill:#000000;stroke:none"
-         id="text3953">
-        <tspan
+         style="line-height:0%;fill:#000000;stroke:none"
+         id="text3953"><tspan
            style="font-weight:500;font-size:9px;font-family:Helvetica"
            id="tspan3955"
            y="662.50403"
            x="319.04199"
            font-weight="500"
-           font-size="9">Y</tspan>
-      </text>
+           font-size="9">Y</tspan></text>
       <text
          y="640.00403"
          x="340.5408"
-         style="fill:#000000;stroke:none"
-         id="text3957">
-        <tspan
+         style="line-height:0%;fill:#000000;stroke:none"
+         id="text3957"><tspan
            style="font-weight:bold;font-size:9px;font-family:Helvetica"
            id="tspan3959"
            y="649.00403"
            x="340.5408"
            font-weight="bold"
-           font-size="9">Staging yard</tspan>
-      </text>
+           font-size="9">Staging yard</tspan></text>
       <text
          y="653.50403"
          x="340.5408"
-         style="fill:#000000;stroke:none"
-         id="text3961">
-        <tspan
+         style="line-height:0%;fill:#000000;stroke:none"
+         id="text3961"><tspan
            style="font-weight:bold;font-size:9px;font-family:Helvetica"
            id="tspan3963"
            y="662.50403"
            x="340.5408"
            font-weight="bold"
-           font-size="9">Operational yard</tspan>
-      </text>
+           font-size="9">Operational yard</tspan></text>
       <line
          style="fill:none;stroke:#408000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
          id="line3965"
@@ -618,16 +603,14 @@
       <text
          y="626.50403"
          x="340.5408"
-         style="fill:#000000;stroke:none"
-         id="text3971">
-        <tspan
+         style="line-height:0%;fill:#000000;stroke:none"
+         id="text3971"><tspan
            style="font-weight:500;font-size:9px;font-family:Helvetica"
            id="tspan3973"
            y="635.50403"
            x="340.5408"
            font-weight="500"
-           font-size="9">Station with industrial switching</tspan>
-      </text>
+           font-size="9">Station with industrial switching</tspan></text>
       <line
          style="fill:none;stroke:#408000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
          id="line3991"
@@ -645,55 +628,47 @@
       <text
          y="611.00403"
          x="340.5408"
-         style="fill:#000000;stroke:none"
-         id="text3997">
-        <tspan
+         style="line-height:0%;fill:#000000;stroke:none"
+         id="text3997"><tspan
            style="font-weight:500;font-size:9px;font-family:Helvetica"
            id="tspan3999"
            y="620.00403"
            x="340.5408"
            font-weight="500"
-           font-size="9">Junction/station (w/o switching)</tspan>
-      </text>
+           font-size="9">Junction/station (w/o switching)</tspan></text>
       <text
          id="text5202"
-         style="fill:#000000;stroke:none"
+         style="line-height:0%;fill:#000000;stroke:none"
          x="340.07428"
-         y="557.82117">
-        <tspan
+         y="557.82117"><tspan
            font-size="9"
            font-weight="500"
            x="340.07428"
            y="566.82117"
            id="tspan5204"
-           style="font-weight:500;font-size:9px;font-family:Helvetica">Upper Level Trackage/Panel</tspan>
-      </text>
+           style="font-weight:500;font-size:9px;font-family:Helvetica">Upper Level Trackage/Panel</tspan></text>
       <text
          y="571.81665"
          x="340.5408"
-         style="fill:#000000;stroke:none"
-         id="text5206">
-        <tspan
+         style="line-height:0%;fill:#000000;stroke:none"
+         id="text5206"><tspan
            style="font-weight:500;font-size:9px;font-family:Helvetica"
            id="tspan5208"
            y="580.81665"
            x="340.5408"
            font-weight="500"
-           font-size="9">Lower Level Trackage/Panel</tspan>
-      </text>
+           font-size="9">Lower Level Trackage/Panel</tspan></text>
       <text
          id="text5210"
-         style="fill:#000000;stroke:none"
+         style="line-height:0%;fill:#000000;stroke:none"
          x="340.5408"
-         y="585.34564">
-        <tspan
+         y="585.34564"><tspan
            font-size="9"
            font-weight="500"
            x="340.5408"
            y="594.34564"
            id="tspan5212"
-           style="font-weight:500;font-size:9px;font-family:Helvetica">Branchline Trackage/Panel</tspan>
-      </text>
+           style="font-weight:500;font-size:9px;font-family:Helvetica">Branchline Trackage/Panel</tspan></text>
     </g>
     <a
        xlink:href="Bayshore.svg"
@@ -710,30 +685,26 @@
          y="24.371092" />
       <text
          id="text3278"
-         style="font-size:33.7231102px;fill:#ffffff;fill-opacity:1;stroke:none"
+         style="font-size:33.7231px;line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
          x="81.486511"
-         y="134.7784">
-        <tspan
+         y="134.7784"><tspan
            font-size="12"
            font-weight="bold"
            x="81.486511"
            y="165.69125"
            id="tspan3280"
-           style="font-weight:bold;font-size:33.7231102px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Panel</tspan>
-      </text>
+           style="font-weight:bold;font-size:33.7231px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Panel</tspan></text>
       <text
          y="167.00862"
          x="73.428963"
-         style="font-size:33.7231102px;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text3284">
-        <tspan
-           style="font-weight:bold;font-size:33.7231102px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
+         style="font-size:33.7231px;line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3284"><tspan
+           style="font-weight:bold;font-size:33.7231px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan3286"
            y="197.92146"
            x="73.428963"
            font-weight="bold"
-           font-size="12">Server</tspan>
-      </text>
+           font-size="12">Server</tspan></text>
     </g>
   </g>
   <g
@@ -762,7 +733,7 @@
        y1="292.3876"
        x1="236.83676" />
     <path
-       d="m 236.83677,295.32995 -13.5,18 0,63 13.5,18 0,22.5"
+       d="m 236.83677,295.32995 -13.5,18 v 63 l 13.5,18 v 22.5"
        id="path4017"
        inkscape:connector-curvature="0"
        style="display:inline;fill:none;stroke:#408000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 4" />
@@ -774,7 +745,7 @@
        id="line4021"
        style="display:inline;fill:none;stroke:#408000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter" />
     <path
-       d="m 290.83677,25.329949 0,189.000001 -27,27 0,108"
+       d="M 290.83677,25.329949 V 214.32995 l -27,27 v 108"
        id="path4005"
        inkscape:connector-curvature="0"
        style="display:inline;fill:none;stroke:#408000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter" />
@@ -798,17 +769,17 @@
        id="line4349"
        style="display:inline;fill:none;stroke:#408000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none" />
     <path
-       d="m 290.83677,52.329949 -27,19.5 0,169.500001"
+       d="m 290.83677,52.329949 -27,19.5 V 241.32995"
        id="path4027"
        inkscape:connector-curvature="0"
        style="display:inline;fill:none;stroke:#408000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 4" />
     <path
-       d="m 385.33677,218.82995 0,-85.5 -13.5,-13.5 -67.5,0 -13.5,-13.5"
+       d="m 385.33677,218.82995 v -85.5 l -13.5,-13.5 h -67.5 l -13.5,-13.5"
        id="path4153"
        inkscape:connector-curvature="0"
        style="display:inline;fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter" />
     <path
-       d="m 385.33677,79.329949 -13.5,13.500001 -67.5,0 -13.5,13.5"
+       d="m 385.33677,79.329949 -13.5,13.500001 h -67.5 l -13.5,13.5"
        id="path4151"
        inkscape:connector-curvature="0"
        style="display:inline;fill:none;stroke:#408000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter" />
@@ -818,7 +789,7 @@
        x2="385.33676"
        y2="79.329948"
        id="line4025"
-       style="display:inline;fill:none;stroke:#0000ff;stroke-width:2.04198384;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4.08396791, 4.08396791;stroke-opacity:1" />
+       style="display:inline;fill:none;stroke:#0000ff;stroke-width:2.04198;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4.08397, 4.08397;stroke-opacity:1" />
     <circle
        cx="301.5"
        cy="27"
@@ -827,21 +798,19 @@
        style="display:inline;fill:none;stroke:#408000;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter"
        transform="translate(-10.663234,-10.670051)" />
     <text
-       transform="matrix(0,-1,1,0,0,0)"
+       transform="rotate(-90)"
        id="text4305"
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
        x="-190.77292"
-       y="251.80176">
-      <tspan
+       y="251.80176"><tspan
          font-size="8"
          font-weight="500"
          x="-190.46823"
          y="259.80176"
          id="tspan4307"
-         style="font-weight:500;font-size:8px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Continuous Run Loop</tspan>
-    </text>
+         style="font-weight:500;font-size:8px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Continuous Run Loop</tspan></text>
     <path
-       d="m 385.33677,295.32995 -9,9 -103.5,0 -9,-9"
+       d="m 385.33677,295.32995 -9,9 h -103.5 l -9,-9"
        id="path4155"
        inkscape:connector-curvature="0"
        style="display:inline;opacity:0.5;fill:none;stroke:#0000ff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter" />
@@ -858,47 +827,43 @@
        x2="155.83676"
        y2="682.12213"
        id="line4149"
-       style="display:inline;fill:none;stroke:#b3b3b3;stroke-width:7.91752052;stroke-linecap:butt;stroke-linejoin:miter" />
+       style="display:inline;fill:none;stroke:#b3b3b3;stroke-width:7.91752;stroke-linecap:butt;stroke-linejoin:miter" />
     <path
-       d="m 159.50772,523.26054 4.41131,4.71722 46.61825,-0.61182 12.49358,17.47686 0.30591,33.98715 -36,36 -18,0 -13.5,13.5"
+       d="m 159.50772,523.26054 4.41131,4.71722 46.61825,-0.61182 12.49358,17.47686 0.30591,33.98715 -36,36 h -18 l -13.5,13.5"
        id="path4011"
        inkscape:connector-curvature="0"
        style="display:inline;fill:none;stroke:#b3b3b3;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 4"
        sodipodi:nodetypes="cccccccc" />
     <path
-       d="m 199.12983,527.58316 11.42503,12.17893 -0.71809,39.06786 -27,27 -13.5,0 -13.5,-13.5"
+       d="m 199.12983,527.58316 11.42503,12.17893 -0.71809,39.06786 -27,27 h -13.5 l -13.5,-13.5"
        id="path4013"
        inkscape:connector-curvature="0"
        style="display:inline;fill:none;stroke:#b3b3b3;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:4, 4"
        sodipodi:nodetypes="cccccc" />
     <text
-       transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"
+       transform="rotate(-45)"
        id="text4309"
-       style="font-size:12px;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="font-size:12px;line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
        x="-289.93323"
-       y="566.3952">
-      <tspan
+       y="566.3952"><tspan
          font-size="8"
          font-weight="500"
          x="-289.60706"
          y="574.3952"
          id="tspan4311"
-         style="font-weight:500;font-size:8px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Quinn</tspan>
-    </text>
+         style="font-weight:500;font-size:8px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Quinn</tspan></text>
     <text
-       transform="matrix(0,-1,1,0,0,0)"
+       transform="rotate(-90)"
        id="text4313"
-       style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+       style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
        x="-577.75415"
-       y="222.64267">
-      <tspan
+       y="222.64267"><tspan
          font-size="8"
          font-weight="500"
          x="-577.37134"
          y="230.64267"
          id="tspan4315"
-         style="font-weight:500;font-size:8px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Bypass</tspan>
-    </text>
+         style="font-weight:500;font-size:8px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Bypass</tspan></text>
     <line
        x1="182.83676"
        y1="457.32993"
@@ -915,30 +880,26 @@
      sodipodi:insensitive="true">
     <text
        id="text4139"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+       style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
        x="397.83676"
-       y="44.829956">
-      <tspan
+       y="44.829956"><tspan
          font-size="12"
          font-weight="500"
          x="397.83676"
          y="55.829952"
          id="tspan4141"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Carlsbad</tspan>
-    </text>
+         style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Carlsbad</tspan></text>
     <text
        id="text4077"
-       style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline"
+       style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
        x="145.83676"
-       y="413.82993">
-      <tspan
+       y="413.82993"><tspan
          font-size="12"
          font-weight="500"
          x="145.98911"
          y="424.82993"
          id="tspan4079"
-         style="font-size:12px;font-weight:500;fill:#ffffff;fill-opacity:1;font-family:Helvetica">Loop</tspan>
-    </text>
+         style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Loop</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -961,16 +922,14 @@
       <text
          y="24.22995"
          x="303.33676"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4029">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4029"><tspan
            style="font-weight:bold;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4031"
            y="35.22995"
            x="303.33676"
            font-weight="bold"
-           font-size="12">Bayshore</tspan>
-      </text>
+           font-size="12">Bayshore</tspan></text>
     </a>
     <a
        xlink:href="Cavanaugh.svg"
@@ -980,16 +939,14 @@
       <text
          y="51.22995"
          x="303.33676"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4033">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4033"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4035"
            y="62.229946"
            x="303.33676"
            font-weight="500"
-           font-size="12">Cavanaugh</tspan>
-      </text>
+           font-size="12">Cavanaugh</tspan></text>
     </a>
     <a
        xlink:href="Dayton.svg"
@@ -999,16 +956,14 @@
       <text
          y="105.22995"
          x="301.83676"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4037">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4037"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4039"
            y="116.22995"
            x="302.81332"
            font-weight="500"
-           font-size="12">Dayton Jct.</tspan>
-      </text>
+           font-size="12">Dayton Jct.</tspan></text>
     </a>
     <circle
        cx="301.5"
@@ -1039,16 +994,14 @@
       <text
          y="78.229942"
          x="303.33676"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4301">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4301"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4303"
            y="89.229942"
            x="303.33676"
            font-weight="500"
-           font-size="12">Dayton</tspan>
-      </text>
+           font-size="12">Dayton</tspan></text>
     </a>
     <circle
        cx="301.5"
@@ -1059,17 +1012,15 @@
        transform="translate(-10.663234,-10.670051)" />
     <text
        id="text4333"
-       style="display:inline;fill:#000000;stroke:none"
+       style="line-height:0%;display:inline;fill:#000000;stroke:none"
        x="287.68231"
-       y="19.75659">
-      <tspan
+       y="19.75659"><tspan
          font-size="9"
          font-weight="500"
          x="288.18085"
          y="28.75659"
          id="tspan4335"
-         style="font-weight:500;font-size:9px;font-family:Helvetica">Y</tspan>
-    </text>
+         style="font-weight:500;font-size:9px;font-family:Helvetica">Y</tspan></text>
     <a
        xlink:href="Dayton.svg"
        id="a5938"
@@ -1078,16 +1029,14 @@
       <text
          y="78.229942"
          x="397.83676"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4135">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4135"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4137"
            y="89.229942"
            x="397.83676"
            font-weight="500"
-           font-size="12">Dodge</tspan>
-      </text>
+           font-size="12">Dodge</tspan></text>
     </a>
     <circle
        cx="396"
@@ -1104,16 +1053,14 @@
       <text
          y="456.22995"
          x="196.83676"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4293">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4293"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4295"
            y="467.22995"
            x="197.15317"
            font-weight="500"
-           font-size="12">Nowheres Hump</tspan>
-      </text>
+           font-size="12">Nowheres Hump</tspan></text>
     </a>
     <circle
        cx="193.5"
@@ -1124,17 +1071,15 @@
        transform="translate(-10.663234,-10.670051)" />
     <text
        id="text4341"
-       style="display:inline;fill:#000000;stroke:none"
+       style="line-height:0%;display:inline;fill:#000000;stroke:none"
        x="179.60896"
-       y="451.74884">
-      <tspan
+       y="451.74884"><tspan
          font-size="9"
          font-weight="500"
          x="180.1075"
          y="460.74884"
          id="tspan4343"
-         style="font-weight:500;font-size:9px;font-family:Helvetica">Y</tspan>
-    </text>
+         style="font-weight:500;font-size:9px;font-family:Helvetica">Y</tspan></text>
     <a
        xlink:href="NPF.svg"
        transform="translate(93.23741,-5.8244604)"
@@ -1142,17 +1087,15 @@
        style="display:inline">
       <text
          id="text5952"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
          x="81.536774"
-         y="483.22995">
-        <tspan
+         y="483.22995"><tspan
            font-size="12"
            font-weight="bold"
            x="82.185211"
            y="494.22995"
            id="tspan5954"
-           style="font-weight:bold;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Nowheres Passenger</tspan>
-      </text>
+           style="font-weight:bold;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Nowheres Passenger</tspan></text>
     </a>
     <a
        xlink:href="NowheresYard.svg"
@@ -1162,16 +1105,14 @@
       <text
          y="484.73938"
          x="41.536774"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4085">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4085"><tspan
            style="font-weight:bold;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4087"
            y="495.73938"
            x="42.185211"
            font-weight="bold"
-           font-size="12">Nowheres Yard</tspan>
-      </text>
+           font-size="12">Nowheres Yard</tspan></text>
     </a>
     <circle
        cx="166.5"
@@ -1182,17 +1123,15 @@
        transform="translate(-10.663234,-10.670051)" />
     <text
        id="text4269"
-       style="display:inline;fill:#000000;stroke:none"
+       style="line-height:0%;display:inline;fill:#000000;stroke:none"
        x="152.60896"
-       y="478.72647">
-      <tspan
+       y="478.72647"><tspan
          font-size="9"
          font-weight="500"
          x="153.1075"
          y="487.72647"
          id="tspan4271"
-         style="font-weight:500;font-size:9px;font-family:Helvetica">Y</tspan>
-    </text>
+         style="font-weight:500;font-size:9px;font-family:Helvetica">Y</tspan></text>
     <a
        xlink:href="Windsor.svg"
        id="a5905"
@@ -1201,16 +1140,14 @@
       <text
          y="681.22992"
          x="91.536766"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4117">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4117"><tspan
            style="font-weight:bold;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4119"
            y="692.22992"
            x="91.648102"
            font-weight="bold"
-           font-size="12">Windsor</tspan>
-      </text>
+           font-size="12">Windsor</tspan></text>
     </a>
     <circle
        cx="166.5"
@@ -1221,17 +1158,15 @@
        transform="translate(-10.663234,-10.670051)" />
     <text
        id="text4253"
-       style="display:inline;fill:#000000;stroke:none"
+       style="line-height:0%;display:inline;fill:#000000;stroke:none"
        x="152.45453"
-       y="676.72662">
-      <tspan
+       y="676.72662"><tspan
          font-size="9"
          font-weight="500"
          x="152.95306"
          y="685.72662"
          id="tspan4255"
-         style="font-weight:500;font-size:9px;font-family:Helvetica">S</tspan>
-    </text>
+         style="font-weight:500;font-size:9px;font-family:Helvetica">S</tspan></text>
     <circle
        cx="396"
        cy="36"
@@ -1241,34 +1176,30 @@
        transform="translate(-10.663234,-10.670051)" />
     <text
        id="text4265"
-       style="display:inline;fill:#000000;stroke:none"
+       style="line-height:0%;display:inline;fill:#000000;stroke:none"
        x="381.87729"
-       y="19.610479">
-      <tspan
+       y="19.610479"><tspan
          font-size="9"
          font-weight="500"
          x="382.37582"
          y="28.610479"
          id="tspan4267"
-         style="font-weight:500;font-size:9px;font-family:Helvetica">S</tspan>
-    </text>
+         style="font-weight:500;font-size:9px;font-family:Helvetica">S</tspan></text>
     <a
        xlink:href="Bakersfield.svg"
        id="a5092"
        transform="translate(0,-6.4)">
       <text
          id="text5253"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
          x="397.57309"
-         y="23.763433">
-        <tspan
+         y="23.763433"><tspan
            font-size="12"
            font-weight="bold"
            x="397.57309"
            y="34.763432"
            id="tspan5255"
-           style="font-weight:bold;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Bakersfield</tspan>
-      </text>
+           style="font-weight:bold;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Bakersfield</tspan></text>
     </a>
     <a
        xlink:href="Fryton_Fremont.svg"
@@ -1278,16 +1209,14 @@
       <text
          y="186.22995"
          x="397.83676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4127">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4127"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4129"
            y="197.22995"
            x="397.83676"
            font-weight="500"
-           font-size="12">Fremont</tspan>
-      </text>
+           font-size="12">Fremont</tspan></text>
     </a>
     <a
        xlink:href="Greeley_Gotham.svg"
@@ -1297,16 +1226,14 @@
       <text
          y="213.22995"
          x="397.83676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4131">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4131"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4133"
            y="224.22995"
            x="397.83676"
            font-weight="500"
-           font-size="12">Gotham Springs</tspan>
-      </text>
+           font-size="12">Gotham Springs</tspan></text>
     </a>
     <circle
        cx="396"
@@ -1330,16 +1257,14 @@
       <text
          y="213.22995"
          x="303.33676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4053">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4053"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4055"
            y="224.22995"
            x="303.33676"
            font-weight="500"
-           font-size="12">Greeley</tspan>
-      </text>
+           font-size="12">Greeley</tspan></text>
     </a>
     <a
        xlink:href="Fryton_Fremont.svg"
@@ -1349,16 +1274,14 @@
       <text
          y="186.22995"
          x="303.33676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4049">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4049"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4051"
            y="197.22995"
            x="303.33676"
            font-weight="500"
-           font-size="12">Fryton</tspan>
-      </text>
+           font-size="12">Fryton</tspan></text>
     </a>
     <circle
        cx="301.5"
@@ -1374,16 +1297,14 @@
       <text
          y="132.22995"
          x="303.33676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4041">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4041"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4043"
            y="143.22995"
            x="303.33676"
            font-weight="500"
-           font-size="12">Eagle</tspan>
-      </text>
+           font-size="12">Eagle</tspan></text>
     </a>
     <a
        xlink:href="EbbettsEagle_Escape.svg"
@@ -1392,16 +1313,14 @@
       <text
          y="159.22995"
          x="303.33676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4045">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4045"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4047"
            y="170.22995"
            x="303.33676"
            font-weight="500"
-           font-size="12">Ebbetts Pass</tspan>
-      </text>
+           font-size="12">Ebbetts Pass</tspan></text>
     </a>
     <a
        xlink:href="EbbettsEagle_Escape.svg"
@@ -1410,16 +1329,14 @@
       <text
          y="132.22995"
          x="397.83676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4123">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4123"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4125"
            y="143.22995"
            x="397.83676"
            font-weight="500"
-           font-size="12">Escape</tspan>
-      </text>
+           font-size="12">Escape</tspan></text>
     </a>
     <circle
        cx="396"
@@ -1435,23 +1352,20 @@
       <text
          y="654.22992"
          x="99.536766"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4111">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4111"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4113"
            y="665.22992"
            x="99.734039"
            font-weight="500"
-           font-size="12">V</tspan>
-        <tspan
+           font-size="12">V</tspan><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4115"
            y="665.22992"
            x="107.527"
            font-weight="500"
-           font-size="12">ictoria</tspan>
-      </text>
+           font-size="12">ictoria</tspan></text>
     </a>
     <a
        xlink:href="Upton.svg"
@@ -1460,16 +1374,14 @@
       <text
          y="627.22992"
          x="106.53677"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4107">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4107"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4109"
            y="638.22992"
            x="107.51529"
            font-weight="500"
-           font-size="12">Upton</tspan>
-      </text>
+           font-size="12">Upton</tspan></text>
     </a>
     <circle
        cx="166.5"
@@ -1492,16 +1404,14 @@
       <text
          y="537.22992"
          x="101.53677"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4093">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4093"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4095"
            y="548.22992"
            x="102.18325"
            font-weight="500"
-           font-size="12">Ravine</tspan>
-      </text>
+           font-size="12">Ravine</tspan></text>
     </a>
     <a
        xlink:href="Silicon.svg"
@@ -1510,16 +1420,14 @@
       <text
          y="564.22992"
          x="103.53677"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4097">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4097"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4099"
            y="575.22992"
            x="104.18717"
            font-weight="500"
-           font-size="12">Silicon</tspan>
-      </text>
+           font-size="12">Silicon</tspan></text>
     </a>
     <a
        xlink:href="Tracy.svg"
@@ -1528,23 +1436,20 @@
       <text
          y="591.22992"
          x="109.53677"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4101">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4101"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4103"
            y="602.22992"
            x="109.97622"
            font-weight="500"
-           font-size="12">T</tspan>
-        <tspan
+           font-size="12">T</tspan><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4105"
            y="602.22992"
            x="116.86684"
            font-weight="500"
-           font-size="12">racy</tspan>
-      </text>
+           font-size="12">racy</tspan></text>
     </a>
     <circle
        transform="translate(-10.663234,-37.720411)"
@@ -1567,16 +1472,14 @@
       <text
          y="537.22992"
          x="166.73676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4277">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4277"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4279"
            y="548.22992"
            x="166.73676"
            font-weight="500"
-           font-size="12">Quinn</tspan>
-      </text>
+           font-size="12">Quinn</tspan></text>
     </a>
     <a
        xlink:href="Paso.svg"
@@ -1585,16 +1488,14 @@
       <text
          y="510.22995"
          x="111.53677"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4089">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4089"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4091"
            y="521.22992"
            x="112.18521"
            font-weight="500"
-           font-size="12">Paso</tspan>
-      </text>
+           font-size="12">Paso</tspan></text>
     </a>
     <circle
        cx="166.5"
@@ -1610,16 +1511,14 @@
       <text
          y="456.22995"
          x="82.536774"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4081">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4081"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4083"
            y="467.22995"
            x="83.532867"
            font-weight="500"
-           font-size="12">Mt. Marvel</tspan>
-      </text>
+           font-size="12">Mt. Marvel</tspan></text>
     </a>
     <circle
        cx="166.5"
@@ -1635,16 +1534,14 @@
       <text
          y="240.22995"
          x="276.33676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4057">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4057"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4059"
            y="251.22995"
            x="276.49008"
            font-weight="500"
-           font-size="12">Hallelujah (Jct.)</tspan>
-      </text>
+           font-size="12">Hallelujah (Jct.)</tspan></text>
     </a>
     <circle
        cx="274.5"
@@ -1660,16 +1557,14 @@
       <text
          y="267.22995"
          x="276.33676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4061">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4061"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4063"
            y="278.22995"
            x="276.49594"
            font-weight="500"
-           font-size="12">Igo</tspan>
-      </text>
+           font-size="12">Igo</tspan></text>
     </a>
     <circle
        cx="274.5"
@@ -1685,16 +1580,14 @@
       <text
          y="294.22995"
          x="276.33676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4065">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4065"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4067"
            y="305.22995"
            x="276.49008"
            font-weight="500"
-           font-size="12">Jacksonville</tspan>
-      </text>
+           font-size="12">Jacksonville</tspan></text>
     </a>
     <circle
        cx="396"
@@ -1710,16 +1603,14 @@
       <text
          y="294.22995"
          x="397.83676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4157">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4157"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4159"
            y="305.22995"
            x="397.83676"
            font-weight="500"
-           font-size="12">Ashgrove Quarry</tspan>
-      </text>
+           font-size="12">Ashgrove Quarry</tspan></text>
     </a>
     <a
        xlink:href="Kaos_Kalamazoo.svg"
@@ -1728,16 +1619,14 @@
       <text
          y="348.22995"
          x="274.83676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4073">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4073"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4075"
            y="359.22995"
            x="274.83676"
            font-weight="500"
-           font-size="12">Kaos (Jct.)</tspan>
-      </text>
+           font-size="12">Kaos (Jct.)</tspan></text>
     </a>
     <circle
        cx="274.5"
@@ -1760,16 +1649,14 @@
       <text
          y="402.22995"
          x="277.33676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4289">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4289"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4291"
            y="413.22995"
            x="277.81918"
            font-weight="500"
-           font-size="12">Kalamazoo</tspan>
-      </text>
+           font-size="12">Kalamazoo</tspan></text>
     </a>
     <circle
        cx="274.5"
@@ -1787,17 +1674,15 @@
        transform="translate(-10.663234,-10.670051)" />
     <text
        id="text4261"
-       style="display:inline;fill:#000000;stroke:none"
+       style="line-height:0%;display:inline;fill:#000000;stroke:none"
        x="233.45453"
-       y="289.57205">
-      <tspan
+       y="289.57205"><tspan
          font-size="9"
          font-weight="500"
          x="233.95306"
          y="298.57205"
          id="tspan4263"
-         style="font-weight:500;font-size:9px;font-family:Helvetica">S</tspan>
-    </text>
+         style="font-weight:500;font-size:9px;font-family:Helvetica">S</tspan></text>
     <a
        xlink:href="JasperJct.svg"
        style="display:inline"
@@ -1806,16 +1691,14 @@
       <text
          y="294.22995"
          x="159.13666"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4161">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4161"><tspan
            style="font-weight:bold;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4163"
            y="305.22995"
            x="159.44135"
            font-weight="bold"
-           font-size="12">Jasper Jct.</tspan>
-      </text>
+           font-size="12">Jasper Jct.</tspan></text>
     </a>
     <a
        xlink:href="Klamath.svg"
@@ -1825,37 +1708,32 @@
       <text
          y="348.22995"
          x="157.13672"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4351">
-        <circle
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4351"><circle
            transform="translate(-10.663234,1.5233192)"
            style="fill:#ffffff;fill-opacity:1;stroke:none"
            id="circle4345"
            r="4.5000072"
            cy="576"
-           cx="166.5" />
-        <tspan
+           cx="166.5" /><tspan
            style="font-weight:bold;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4353"
            y="359.22995"
            x="157.79297"
            font-weight="bold"
-           font-size="12">Klamath</tspan>
-      </text>
+           font-size="12">Klamath</tspan></text>
     </a>
     <text
        id="text4257"
-       style="display:inline;opacity:0.5;fill:#000000;stroke:none"
+       style="line-height:0%;display:inline;opacity:0.5;fill:#000000;stroke:none"
        x="219.71899"
-       y="343.75656">
-      <tspan
+       y="343.75656"><tspan
          font-size="9"
          font-weight="500"
          x="220.21753"
          y="352.75656"
          id="tspan4259"
-         style="font-weight:500;font-size:9px;font-family:Helvetica">S</tspan>
-    </text>
+         style="font-weight:500;font-size:9px;font-family:Helvetica">S</tspan></text>
     <a
        xlink:href="Jacksonville.svg"
        id="a4906"
@@ -1864,16 +1742,14 @@
       <text
          y="321.22995"
          x="276.33676"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text4069">
-        <tspan
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text4069"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan4071"
            y="332.22995"
            x="276.83188"
            font-weight="500"
-           font-size="12">Jerico</tspan>
-      </text>
+           font-size="12">Jerico</tspan></text>
     </a>
     <a
        xlink:href="DispatchNorth.svg"
@@ -1882,17 +1758,15 @@
        style="display:inline">
       <text
          id="text5257"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
          x="59.680912"
-         y="709.69495">
-        <tspan
+         y="709.69495"><tspan
            font-size="12"
            font-weight="500"
            x="59.997318"
            y="720.69495"
            id="tspan5259"
-           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Dispatch North</tspan>
-      </text>
+           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Dispatch North</tspan></text>
     </a>
     <a
        xlink:href="DispatchSouth.svg"
@@ -1902,16 +1776,14 @@
       <text
          y="709.69495"
          x="223.56503"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text5261">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text5261"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan5263"
            y="720.69495"
            x="223.88144"
            font-weight="500"
-           font-size="12">Dispatch South</tspan>
-      </text>
+           font-size="12">Dispatch South</tspan></text>
     </a>
     <a
        xlink:href="/web/svg/core/TurnoutTester.svg"
@@ -1920,17 +1792,15 @@
        style="display:inline">
       <text
          id="text5265"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
          x="389.97455"
-         y="710.67346">
-        <tspan
+         y="710.67346"><tspan
            font-size="12"
            font-weight="500"
            x="390.29095"
            y="721.67346"
            id="tspan5267"
-           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Turnout Tester</tspan>
-      </text>
+           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Turnout Tester</tspan></text>
     </a>
     <a
        xlink:href="dispatchMatrix.html"
@@ -1940,16 +1810,14 @@
       <text
          y="709.69495"
          x="59.680912"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text3558">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3558"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan3560"
            y="720.69495"
            x="59.997318"
            font-weight="500"
-           font-size="12">Dispatch Matrix</tspan>
-      </text>
+           font-size="12">Dispatch Matrix</tspan></text>
     </a>
     <a
        xlink:href="panelMatrix.html"
@@ -1959,16 +1827,14 @@
       <text
          y="710.67346"
          x="389.97455"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text3564">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3564"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan3566"
            y="721.67346"
            x="390.29095"
            font-weight="500"
-           font-size="12">Full Panel Matrix</tspan>
-      </text>
+           font-size="12">Full Panel Matrix</tspan></text>
     </a>
     <a
        xlink:href="/web/svg/core/PanelSetup.html"
@@ -1978,60 +1844,52 @@
       <text
          y="710.67346"
          x="389.97455"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text3551">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3551"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan3553"
            y="721.67346"
            x="390.29095"
            font-weight="500"
-           font-size="12">Panel Setup</tspan>
-      </text>
+           font-size="12">Panel Setup</tspan></text>
     </a>
     <text
        y="694.1073"
        x="52.072163"
-       style="fill:#ffffff;fill-opacity:1;stroke:none"
-       id="text3562">
-      <tspan
+       style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+       id="text3562"><tspan
          style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
          id="tspan3564"
          y="705.1073"
          x="52.388569"
          font-weight="500"
-         font-size="12">Dispatch Links:</tspan>
-    </text>
+         font-size="12">Dispatch Links:</tspan></text>
     <text
        y="713.15808"
        x="60.746967"
-       style="fill:#ffffff;fill-opacity:1;stroke:none"
-       id="text3568">
-      <tspan
+       style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+       id="text3568"><tspan
          style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
          id="tspan3570"
          y="724.15808"
          x="61.063374"
          font-weight="500"
-         font-size="12">Utility Links:</tspan>
-    </text>
+         font-size="12">Utility Links:</tspan></text>
     <a
        xlink:href="MtMarvelTimber.svg"
        transform="translate(-37.869329,-19.261281)"
        id="a3278">
       <text
          id="text3280"
-         style="display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
+         style="line-height:0%;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
          x="82.536774"
-         y="456.22995">
-        <tspan
+         y="456.22995"><tspan
            font-size="12"
            font-weight="500"
            x="83.532867"
            y="467.22995"
            id="tspan3282"
-           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Mt. Marvel Timber</tspan>
-      </text>
+           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Mt. Marvel Timber</tspan></text>
     </a>
     <a
        style="display:inline"
@@ -2041,16 +1899,14 @@
       <text
          y="710.67346"
          x="389.97455"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
-         id="text3565">
-        <tspan
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
+         id="text3565"><tspan
            style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1"
            id="tspan3567"
            y="721.67346"
            x="390.29095"
            font-weight="500"
-           font-size="12">JMRI Variable Helper</tspan>
-      </text>
+           font-size="12">JMRI Variable Helper</tspan></text>
     </a>
     <a
        xlink:href="turnoutAddressBlockUnique.txt"
@@ -2059,17 +1915,15 @@
        transform="translate(-337.37363,-481.47909)">
       <text
          id="text4485"
-         style="fill:#ffffff;fill-opacity:1;stroke:none"
+         style="line-height:0%;fill:#ffffff;fill-opacity:1;stroke:none"
          x="389.97455"
-         y="710.67346">
-        <tspan
+         y="710.67346"><tspan
            font-size="12"
            font-weight="500"
            x="390.29095"
            y="721.67346"
            id="tspan4487"
-           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Turnout Addresses By Block</tspan>
-      </text>
+           style="font-weight:500;font-size:12px;font-family:Helvetica;fill:#ffffff;fill-opacity:1">Turnout Addresses By Block</tspan></text>
     </a>
   </g>
 </svg>
