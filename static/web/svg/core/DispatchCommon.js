@@ -1,6 +1,11 @@
 // Constant id prefix for objects
 var DISPATCHSEGMENT_OBJID_PREFIX = "BLOCK";
 
+var SELECTION_MIRRORING_ON = "Selection Mirroring: On";
+var SELECTION_MIRRORING_OFF = "Selection Mirroring: Off";
+var MIRRORED_TRAIN_SELECTION = "MIRRORED_TRAIN_SELECTION";
+var SELECTION_MIRRORING_TEXTID = "SelectionMirroring";
+
 var UNAUTHORIZED_STATE = "Unauthorized";
 var AUTHORIZED_NB_STATE = "Authorized NB";
 var AUTHORIZED_SB_STATE = "Authorized SB";
@@ -587,7 +592,7 @@ function clickTrainListLabel(elemID)
         if((returnedTrainID != null) && (returnedTrainID != ""))
 		{
             setTrainIDText(trainIDElemID, returnedTrainID);
-            setNextAuthorizationTrain(trainIDElemID);
+            setNextAuthorizationTrain(trainIDElemID, true);
 		}
 	}
 }
@@ -606,11 +611,11 @@ function clickClearTrainID(target)
 	else
 	{
 		setTrainIDText(trainIDElemID, "");
-        setNextAuthorizationTrain(trainIDElemID);
+        setNextAuthorizationTrain(trainIDElemID, true);
 	}
 }
 
-function setNextAuthorizationTrain(elemID)
+function setNextAuthorizationTrain(elemID, notifyServer)
 {
 	if(elemID.search("Train") != 2)
 	{
@@ -636,6 +641,44 @@ function setNextAuthorizationTrain(elemID)
 	
 	if((nextAuthorizationTrainID == "") || (nextAuthorizationTrainID == " "))
 		nextAuthorizationState = AUTHORIZED_OOS_STATE;
+  
+    if(notifyServer && getSelectionMirroringEnabled())
+        setServerMirroredSelection(selectedNSO);
+}
+
+function getSelectionMirroringEnabled()
+{
+    return getSVGText(SELECTION_MIRRORING_TEXTID) == SELECTION_MIRRORING_ON;
+}
+
+function toggleSelectionMirroringEnabled()
+{
+    if(getSelectionMirroringEnabled())
+        setSVGText(SELECTION_MIRRORING_TEXTID, SELECTION_MIRRORING_OFF);
+    else
+        setSVGText(SELECTION_MIRRORING_TEXTID, SELECTION_MIRRORING_ON);
+}
+
+function setServerMirroredSelection(newSelection)
+{
+    //alert("setServerMirroredSelection(" + newSelection + ")");
+
+    var tempStateChangeRequests = stateChangeRequests;
+    
+    stateChangeRequests = new Array();
+    
+    stateChangeRequests.push(new ServerObject(MIRRORED_TRAIN_SELECTION, SERVER_TYPE_DISPATCH, newSelection));
+    
+    if(stateChangeRequests.length > 0)
+        executePanelStateChangeRequests();
+    
+    stateChangeRequests = tempStateChangeRequests;
+}
+
+function updateMirroredSelection(newSelection)
+{
+    if(newSelection != selectedNSO)
+        setNextAuthorizationTrain(newSelection + "Train", false);
 }
 
 function getTrainIDText(trainIDElemID)
@@ -793,7 +836,7 @@ function setDispatchObject(object)
                     nextAuthorizationState = AUTHORIZED_OOS_STATE;
                 }
                 else
-                    setNextAuthorizationTrain(selectedNSO + "Train");
+                    setNextAuthorizationTrain(selectedNSO + "Train", true);
             }
             
             var clearElemID = object.name.substring(0,2) + "ClearTrainID";
@@ -822,6 +865,14 @@ function setDispatchObject(object)
             
             setDispatchAuthorization(object.name, route, state, trainID);
         
+            return true;
+        }
+        // Handle selected train mirroring
+        else if(object.name.search(MIRRORED_TRAIN_SELECTION) == 0)
+        {
+            if(getSelectionMirroringEnabled())
+                updateMirroredSelection(object.value);
+            
             return true;
         }
     }

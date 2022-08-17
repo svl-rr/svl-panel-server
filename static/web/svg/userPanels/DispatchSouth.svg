@@ -337,14 +337,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.97"
-     inkscape:cx="291.75258"
-     inkscape:cy="290.20619"
+     inkscape:cx="819.58763"
+     inkscape:cy="547.93814"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="trainListsLayer"
      showgrid="true"
      inkscape:window-width="1117"
      inkscape:window-height="873"
-     inkscape:window-x="722"
+     inkscape:window-x="675"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
@@ -417,8 +417,8 @@
      id="trainListsLayer"
      inkscape:label="TrainLists"
      transform="translate(0,-0.00103098)"
-     sodipodi:insensitive="true"
-     style="display:inline">
+     style="display:inline"
+     sodipodi:insensitive="true">
     <path
        transform="translate(0,-3.979257)"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1901,6 +1901,19 @@
            id="title5029">Unauthorized</title>
       </path>
     </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="855.91754"
+       y="684.34155"
+       id="SelectionMirroring"
+       inkscape:label="#text4498"
+       onclick="toggleSelectionMirroringEnabled()"><tspan
+         sodipodi:role="line"
+         id="tspan5272"
+         x="855.91754"
+         y="684.34155"
+         style="font-size:16px;line-height:1.25">Selection Mirroring: Off</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"

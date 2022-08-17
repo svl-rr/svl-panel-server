@@ -290,12 +290,12 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9983453"
-     inkscape:cx="444.23508"
-     inkscape:cy="397.15718"
+     inkscape:cx="678.62292"
+     inkscape:cy="409.17707"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="trainListsLayer"
      showgrid="true"
-     inkscape:window-width="1920"
+     inkscape:window-width="1792"
      inkscape:window-height="1027"
      inkscape:window-x="0"
      inkscape:window-y="25"
@@ -366,8 +366,8 @@
      sodipodi:insensitive="true">
     <path
        transform="translate(0,-3.979257)"
-       style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       d="m 1050,694.094 -1050,0"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 1050,694.094 H 0"
        id="path3216"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -377,11 +377,11 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4022"
-       d="m 720,800.11475 0,-110"
-       style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+       d="m 720,800.11475 v -110"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     <path
-       style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       d="m 360,800.11475 0,-110"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 360,800.11475 v -110"
        id="path4025"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -1051,28 +1051,25 @@
        transform="translate(-140.40142,-5.7309921)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path3915"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4733"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4735">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4741"
          inkscape:connector-curvature="0"
@@ -1087,18 +1084,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(-140.40142,13.803892)"
        id="N2ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4756"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4758"
          inkscape:connector-curvature="0"
@@ -1113,7 +1107,7 @@
          inkscape:connector-curvature="0"
          id="path4762"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4764">Unauthorized</title>
       </path>
@@ -1123,28 +1117,25 @@
        transform="translate(-140.40142,33.338776)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4768"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4770"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4772">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4774"
          inkscape:connector-curvature="0"
@@ -1159,18 +1150,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(-140.40142,52.873659)"
        id="N4ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4780"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4782"
          inkscape:connector-curvature="0"
@@ -1185,7 +1173,7 @@
          inkscape:connector-curvature="0"
          id="path4786"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4788">Unauthorized</title>
       </path>
@@ -1195,18 +1183,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(30.948646,-5.4021052)"
        id="N5ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4793"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4795"
          inkscape:connector-curvature="0"
@@ -1221,7 +1206,7 @@
          inkscape:connector-curvature="0"
          id="path4799"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4801">Unauthorized</title>
       </path>
@@ -1231,28 +1216,25 @@
        transform="translate(30.948646,14.132779)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4805"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4807"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4809">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4811"
          inkscape:connector-curvature="0"
@@ -1267,18 +1249,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(30.948646,33.667663)"
        id="N7ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4817"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4819"
          inkscape:connector-curvature="0"
@@ -1293,7 +1272,7 @@
          inkscape:connector-curvature="0"
          id="path4823"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4825">Unauthorized</title>
       </path>
@@ -1303,28 +1282,25 @@
        transform="translate(30.948646,53.202546)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4829"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4831"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4833">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4835"
          inkscape:connector-curvature="0"
@@ -1339,18 +1315,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(217.09861,-5.7309921)"
        id="S1ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4841"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4843"
          inkscape:connector-curvature="0"
@@ -1365,7 +1338,7 @@
          inkscape:connector-curvature="0"
          id="path4847"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4849">Unauthorized</title>
       </path>
@@ -1375,28 +1348,25 @@
        transform="translate(217.09861,13.803892)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4853"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4855"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4857">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4859"
          inkscape:connector-curvature="0"
@@ -1411,18 +1381,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(217.09861,33.338776)"
        id="S3ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4865"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4867"
          inkscape:connector-curvature="0"
@@ -1437,7 +1404,7 @@
          inkscape:connector-curvature="0"
          id="path4871"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4873">Unauthorized</title>
       </path>
@@ -1447,28 +1414,25 @@
        transform="translate(217.09861,52.873659)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4877"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4879"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4881">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4883"
          inkscape:connector-curvature="0"
@@ -1483,28 +1447,25 @@
        transform="translate(388.44868,-4.7443314)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4889"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4891"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4893">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4895"
          inkscape:connector-curvature="0"
@@ -1519,18 +1480,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(388.44868,14.790553)"
        id="S6ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4901"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4903"
          inkscape:connector-curvature="0"
@@ -1545,7 +1503,7 @@
          inkscape:connector-curvature="0"
          id="path4907"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4909">Unauthorized</title>
       </path>
@@ -1555,28 +1513,25 @@
        transform="translate(388.44868,34.325437)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4913"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4915"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4917">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4919"
          inkscape:connector-curvature="0"
@@ -1591,18 +1546,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(388.44868,53.86032)"
        id="S8ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4925"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4927"
          inkscape:connector-curvature="0"
@@ -1617,7 +1569,7 @@
          inkscape:connector-curvature="0"
          id="path4931"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4933">Unauthorized</title>
       </path>
@@ -1627,28 +1579,25 @@
        transform="translate(579.53195,-5.0732183)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4937"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4939"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4941">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4943"
          inkscape:connector-curvature="0"
@@ -1663,18 +1612,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(579.53195,14.461666)"
        id="O2ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4949"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4951"
          inkscape:connector-curvature="0"
@@ -1689,7 +1635,7 @@
          inkscape:connector-curvature="0"
          id="path4955"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4957">Unauthorized</title>
       </path>
@@ -1699,28 +1645,25 @@
        transform="translate(579.53195,33.99655)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4961"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4963"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4965">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path4967"
          inkscape:connector-curvature="0"
@@ -1735,18 +1678,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(579.53195,53.531433)"
        id="O4ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4973"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4975"
          inkscape:connector-curvature="0"
@@ -1761,7 +1701,7 @@
          inkscape:connector-curvature="0"
          id="path4979"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4981">Unauthorized</title>
       </path>
@@ -1771,18 +1711,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(750.88202,-4.0865576)"
        id="O5ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path4985"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path4987"
          inkscape:connector-curvature="0"
@@ -1797,7 +1734,7 @@
          inkscape:connector-curvature="0"
          id="path4991"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title4993">Unauthorized</title>
       </path>
@@ -1807,28 +1744,25 @@
        transform="translate(750.88202,15.448327)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path4997"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path4999"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title5001">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path5003"
          inkscape:connector-curvature="0"
@@ -1843,18 +1777,15 @@
        onclick="clickClearTrainID(evt.target);"
        transform="translate(750.88202,34.983211)"
        id="O7ClearTrainID">
-      <path
-         sodipodi:type="arc"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+      <circle
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
          id="path5009"
-         sodipodi:cx="160"
-         sodipodi:cy="730.11426"
-         sodipodi:rx="8"
-         sodipodi:ry="8"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         transform="translate(-2,0.00103098)" />
+         transform="translate(-2,0.00103098)"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
          id="path5011"
          inkscape:connector-curvature="0"
@@ -1869,7 +1800,7 @@
          inkscape:connector-curvature="0"
          id="path5015"
          d="m 153.79832,734.98177 8.0112,-9.19888"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title5017">Unauthorized</title>
       </path>
@@ -1879,28 +1810,25 @@
        transform="translate(750.88202,54.518094)"
        onclick="clickClearTrainID(evt.target);"
        inkscape:label="#g4745">
-      <path
+      <circle
          transform="translate(-2,0.00103098)"
-         d="m 168,730.11426 a 8,8 0 0 1 -8,8 8,8 0 0 1 -8,-8 8,8 0 0 1 8,-8 8,8 0 0 1 8,8 z"
-         sodipodi:ry="8"
-         sodipodi:rx="8"
-         sodipodi:cy="730.11426"
-         sodipodi:cx="160"
          id="path5021"
-         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-         sodipodi:type="arc" />
+         style="fill:#ff0000;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         cx="160"
+         cy="730.11426"
+         r="8" />
       <path
          inkscape:label="#path3858"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="path5023"
          d="m 162.40336,734.38793 -9.19888,-8.0112"
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline">
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
         <title
            id="title5025">Unauthorized</title>
       </path>
       <path
-         style="fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 153.79832,734.98177 8.0112,-9.19888"
          id="path5027"
          inkscape:connector-curvature="0"
@@ -1911,7 +1839,7 @@
       </path>
     </g>
     <rect
-       style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       style="fill:none;stroke:#00ff00;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="selectedTrainIDRect"
        width="50"
        height="10"
@@ -2291,6 +2219,19 @@
          id="tspan3564"
          sodipodi:role="line"
          style="font-size:16px;line-height:1.25">_</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="857.07794"
+       y="684.07166"
+       id="SelectionMirroring"
+       inkscape:label="#text4498"
+       onclick="toggleSelectionMirroringEnabled()"><tspan
+         sodipodi:role="line"
+         id="tspan674"
+         x="857.07794"
+         y="684.07166"
+         style="font-size:16px;line-height:1.25">Selection Mirroring: Off</tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
