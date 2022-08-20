@@ -615,7 +615,7 @@ function clickClearTrainID(target)
 	}
 }
 
-function setNextAuthorizationTrain(elemID, notifyServer)
+function setNextAuthorizationTrain(elemID, notifyServer = true)
 {
 	if(elemID.search("Train") != 2)
 	{
@@ -635,7 +635,9 @@ function setNextAuthorizationTrain(elemID, notifyServer)
 		return;
 	}
 	
-	showSelectedAuthorizationElement(elemID.substring(0, 2));
+	var selectedElement = elemID.substring(0, 2);
+
+	showSelectedAuthorizationElement(selectedElement);
 	
 	nextAuthorizationTrainID = getTrainIDText(elemID);
 	
@@ -643,7 +645,7 @@ function setNextAuthorizationTrain(elemID, notifyServer)
 		nextAuthorizationState = AUTHORIZED_OOS_STATE;
   
     if(notifyServer && getSelectionMirroringEnabled())
-        setServerMirroredSelection(selectedNSO);
+        setServerMirroredSelection(selectedElement);
 }
 
 function getSelectionMirroringEnabled()
@@ -677,8 +679,7 @@ function setServerMirroredSelection(newSelection)
 
 function updateMirroredSelection(newSelection)
 {
-    if(newSelection != selectedNSO)
-        setNextAuthorizationTrain(newSelection + "Train", false);
+    setNextAuthorizationTrain(newSelection + "Train", false);
 }
 
 function getTrainIDText(trainIDElemID)
