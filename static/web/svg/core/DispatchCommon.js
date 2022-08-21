@@ -650,7 +650,7 @@ function setNextAuthorizationTrain(elemID, notifyServer = true)
 
 function getSelectionMirroringEnabled()
 {
-    return getSVGText(SELECTION_MIRRORING_TEXTID) == SELECTION_MIRRORING_ON;
+	return (svgDocument.getElementById(SELECTION_MIRRORING_TEXTID) != null) && (getSVGText(SELECTION_MIRRORING_TEXTID) == SELECTION_MIRRORING_ON);
 }
 
 function toggleSelectionMirroringEnabled()
