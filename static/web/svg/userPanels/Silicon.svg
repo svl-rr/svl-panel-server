@@ -6,7 +6,7 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="Silicon.svg"
    onload="init(evt)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -283,15 +283,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.3557978"
-     inkscape:cx="479.05374"
-     inkscape:cy="336.70212"
+     inkscape:cx="456.55776"
+     inkscape:cy="337.4397"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1792"
-     inkscape:window-height="1067"
+     inkscape:window-height="1033"
      inkscape:window-x="1"
-     inkscape:window-y="25"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -308,7 +308,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      units="px"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -351,8 +353,7 @@
      id="textLayer"
      inkscape:label="Text"
      transform="translate(0,-3.9797589)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="Fryton_Fremont.svg"
        id="a3287">
@@ -382,7 +383,7 @@
          style="font-size:12px;line-height:1.25">Panel not initialized</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 330,39.094505 -10,15 20,0 z"
+       d="m 330,39.094505 -10,15 h 20 z"
        id="leftLevelTriangle"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -391,7 +392,7 @@
        y="0"
        xlink:href="#leftLevelTriangle"
        id="rightLevelTriangle"
-       transform="translate(410,9.6250034e-8)"
+       transform="translate(410)"
        width="1047.9579"
        height="690.11475"
        inkscape:transform-center-x="-40"
@@ -429,12 +430,20 @@
       <use
          height="690.11475"
          width="1047.9579"
-         transform="translate(210,1.3237304e-6)"
+         transform="translate(210)"
          id="rightLock"
          xlink:href="#leftLock"
          y="0"
          x="0" />
     </g>
+    <text
+       xml:space="preserve"
+       style="fill:#000000"
+       x="772.97662"
+       y="440.62305"
+       id="text412"><tspan
+         sodipodi:role="line"
+         id="tspan410"></tspan></text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -971,8 +980,7 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        id="text6505"
        y="240.11481"
@@ -1016,7 +1024,7 @@
          x="703.5329"
          sodipodi:role="line"
          id="tspan3915"
-         style="font-size:16px;line-height:1.25">Aggregate Delivery</tspan></text>
+         style="font-size:16px;line-height:1.25">Reed's Aggregate Delivery</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1050,5 +1058,23 @@
          sodipodi:role="line"
          id="tspan3210"
          style="font-size:16px;line-height:1.25">Bag House 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="fill:#000000"
+       x="753.06213"
+       y="476.47229"
+       id="text466"><tspan
+         sodipodi:role="line"
+         id="tspan464"></tspan></text>
+    <text
+       xml:space="preserve"
+       style="fill:#000000"
+       x="750.84943"
+       y="493.43646"
+       id="text470"><tspan
+         sodipodi:role="line"
+         id="tspan468"
+         x="750.84943"
+         y="493.43646">Restricted Speed</tspan></text>
   </g>
 </svg>
