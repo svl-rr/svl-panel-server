@@ -283,7 +283,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.0182338"
-     inkscape:cx="73.656954"
+     inkscape:cx="19.150808"
      inkscape:cy="377.1236"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
@@ -340,8 +340,7 @@
      inkscape:label="Background"
      inkscape:groupmode="layer"
      id="backgroundLayer"
-     transform="translate(0,-312.24738)"
-     sodipodi:insensitive="true">
+     transform="translate(0,-312.24738)">
     <rect
        style="fill:#808080;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="panelBackground"
@@ -355,8 +354,7 @@
      id="textLayer"
      inkscape:label="Text"
      transform="translate(0,-3.9797589)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="Greeley_Gotham.svg"
        id="a3251">
@@ -386,7 +384,7 @@
          style="font-size:12px;line-height:1.25">Panel not initialized</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.5px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 330,39.094505 -10,15 20,0 z"
+       d="m 330,39.094505 -10,15 h 20 z"
        id="leftLevelTriangle"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
@@ -395,7 +393,7 @@
        y="0"
        xlink:href="#leftLevelTriangle"
        id="rightLevelTriangle"
-       transform="translate(410,9.6250034e-8)"
+       transform="translate(410)"
        width="1047.9579"
        height="690.11475"
        inkscape:transform-center-x="-40"
@@ -433,7 +431,7 @@
       <use
          height="690.11475"
          width="1047.9579"
-         transform="translate(210,1.3237304e-6)"
+         transform="translate(210)"
          id="rightLock"
          xlink:href="#leftLock"
          y="0"
@@ -445,16 +443,15 @@
      id="industrialTrackLayer"
      inkscape:label="Industrial Track"
      transform="translate(0,-3.9797589)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <g
        id="g3175"
-       transform="matrix(-1,0,0,-1,970,708.189)">
+       transform="rotate(180,485,354.0945)">
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 520,514.0945 20,20 20,0"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 520,514.0945 20,20 h 20"
          id="TO599.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
@@ -462,35 +459,35 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO599.R"
-         d="m 520,534.0945 40,0"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,534.0945 h 40"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
     <path
        inkscape:label="#path4221"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="m 450,194.0945 260,260 40,0"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 450,194.0945 260,260 h 40"
        id="path3260"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        onclick="QuinnReturnLoopPath()" />
     <path
        sodipodi:nodetypes="cc"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
-       d="m 790,454.0945 -40,0"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
+       d="M 790,454.0945 H 750"
        id="path4808"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
        id="path4800"
-       d="m 790,174.0945 -40,0"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
+       d="M 790,174.0945 H 750"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
     <path
        inkscape:label="#path4221"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       d="m 750,174.0945 -300,0"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 750,174.0945 H 450"
        id="path3266"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
@@ -499,8 +496,8 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4818"
-       d="m 410,174.0945 -80,0"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="M 410,174.0945 H 330"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
   </g>
   <g
@@ -508,17 +505,16 @@
      id="mainlineTrackLayer"
      inkscape:label="Mainline Track"
      transform="translate(0,-3.9797589)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <path
        inkscape:connector-curvature="0"
        id="path5607"
-       d="m 250,174.0945 40,0"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
+       d="m 250,174.0945 h 40"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-start:url(#TriangleInM);display:inline"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        d="m 700,564.0945 -30,-30"
        id="path3240"
        inkscape:connector-curvature="0" />
@@ -527,25 +523,25 @@
        inkscape:connector-curvature="0"
        id="path4798"
        d="m 670,534.0945 -330,-330"
-       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
     <g
        style="display:inline"
        id="g5554"
-       transform="matrix(-1,0,0,-1,850,708.189)">
+       transform="rotate(180,425,354.0945)">
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO575.N"
-         d="m 520,534.0945 40,0"
-         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         d="m 520,534.0945 h 40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          inkscape:label="#path4221"
-         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         d="m 520,514.0945 20,20 20,0"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 520,514.0945 20,20 h 20"
          id="TO575.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
@@ -556,8 +552,7 @@
      id="mainlinePanelLinkLayer"
      inkscape:label="Mainline Panel Links"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="Paso.svg"
        style="display:inline"
@@ -600,8 +595,7 @@
      id="industrialPanelLinkLayer"
      inkscape:label="Industrial Panel Links"
      transform="translate(0,-5.0883911e-4)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="Upton.svg"
        style="display:inline"
@@ -644,8 +638,7 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -680,6 +673,6 @@
          y="-197.90872"
          x="594.0509"
          sodipodi:role="line"
-         id="tspan3095">Quinn  Loop</tspan></text>
+         id="tspan3095">Quinn  Wye</tspan></text>
   </g>
 </svg>
