@@ -4,7 +4,7 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="Dayton.svg"
    onload="init(evt)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -37,6 +37,22 @@
      type="application/ecmascript" />
   <defs
      id="defs4">
+    <linearGradient
+       id="linearGradient4581"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#a50000;stop-opacity:1;"
+         offset="0"
+         id="stop4579" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3439"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3437" />
+    </linearGradient>
     <marker
        inkscape:stockid="StopS"
        orient="auto"
@@ -285,16 +301,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4096164"
-     inkscape:cx="670.74986"
-     inkscape:cy="423.16477"
+     inkscape:cx="649.46747"
+     inkscape:cy="219.20857"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlineTrackLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
-     inkscape:window-width="1305"
-     inkscape:window-height="997"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1001"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
      inkscape:snap-bbox="false"
@@ -313,7 +329,9 @@
      inkscape:snap-global="true"
      inkscape:document-rotation="0"
      inkscape:lockguides="false"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="0"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -346,7 +364,6 @@
      inkscape:groupmode="layer"
      id="backgroundLayer"
      transform="translate(0,-312.24738)"
-     sodipodi:insensitive="true"
      style="display:inline">
     <rect
        style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none"
@@ -355,14 +372,20 @@
        height="690.11475"
        x="0"
        y="312.24738" />
+    <rect
+       style="fill:none;stroke:#a50000;stroke-opacity:1"
+       id="rect3589"
+       width="212.11444"
+       height="85.838959"
+       x="757.65295"
+       y="510.17358" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="textLayer"
      inkscape:label="Text"
      transform="translate(0,-3.9797544)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="Upton.svg"
        id="a4522">
@@ -754,8 +777,7 @@
      id="industrialTrackLayer"
      inkscape:label="Industrial Track"
      transform="translate(0,-3.9797544)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1373,8 +1395,7 @@
      id="mainlineTrackLayer"
      inkscape:label="Mainline Track"
      transform="translate(0,-3.9797544)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <path
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1625,8 +1646,7 @@
      id="mainlinePanelLinkLayer"
      inkscape:label="Mainline Panel Links"
      transform="translate(0,-5.4327394e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
        id="daytonIndustrialLink"
@@ -1684,8 +1704,7 @@
      id="industrialPanelLinkLayer"
      inkscape:label="Industrial Panel Links"
      transform="translate(0,-5.0432739e-4)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
        transform="translate(-120,204.0005)"
@@ -1747,8 +1766,7 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.4327394e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1825,7 +1843,12 @@
          y="230.11481"
          x="810"
          sodipodi:role="line"
-         style="font-size:16px;line-height:1.25">Meg-A-Watt 2</tspan></text>
+         style="font-size:16px;line-height:1.25">Meg-A-Watt</tspan><tspan
+         y="238.98528"
+         x="810"
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25"
+         id="tspan498" /></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1836,7 +1859,12 @@
          x="810"
          y="270.11481"
          id="tspan4114"
-         style="font-size:16px;line-height:1.25">Meg-A-Watt 1</tspan></text>
+         style="font-size:16px;line-height:1.25">Meg-A-Watt</tspan><tspan
+         sodipodi:role="line"
+         x="810"
+         y="278.98526"
+         style="font-size:16px;line-height:1.25"
+         id="tspan550" /></text>
     <text
        id="text4116"
        y="190.11481"
@@ -1914,5 +1942,12 @@
          y="291.4111"
          id="tspan297"
          style="font-size:16px;line-height:1.25">Gamer &amp; Thrones</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1"
+       id="rect604"
+       width="207.14856"
+       height="103.57428"
+       x="764.03766"
+       y="190.12271" />
   </g>
 </svg>
