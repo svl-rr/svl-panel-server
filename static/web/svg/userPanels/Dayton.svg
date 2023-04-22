@@ -301,8 +301,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4096164"
-     inkscape:cx="649.46747"
-     inkscape:cy="219.20857"
+     inkscape:cx="600.51798"
+     inkscape:cy="219.56328"
      inkscape:document-units="px"
      inkscape:current-layer="backgroundLayer"
      showgrid="true"
@@ -372,13 +372,6 @@
        height="690.11475"
        x="0"
        y="312.24738" />
-    <rect
-       style="fill:none;stroke:#a50000;stroke-opacity:1"
-       id="rect3589"
-       width="212.11444"
-       height="85.838959"
-       x="757.65295"
-       y="510.17358" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -1215,6 +1208,13 @@
          sodipodi:nodetypes="cc"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
     </g>
+    <rect
+       style="display:inline;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ffff00;stroke-width:1.61498;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4424"
+       width="223.17459"
+       height="72.165092"
+       x="745.38342"
+       y="205.55051" />
     <g
        style="display:inline"
        id="g4589"
