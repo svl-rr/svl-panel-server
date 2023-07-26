@@ -25,6 +25,8 @@
 
 var path = require('path'),
 	connect = require('connect'),
+    serveStatic = require('serve-static'),
+    serveIndex = require('serve-index'),
 	clients = [];
     
 var WebSocket = require('ws');
@@ -97,9 +99,8 @@ setInterval(function() {
 var oneDay = 86400000;
 var server = connect()
 //	.use(connect.logger('dev'))
-//	.use(connect.static(__dirname + '/static'),{maxAge: oneDay})
-	.use(connect.static(__dirname + '/static'))
-	.use(connect.directory(__dirname + '/static',{filter: customFileFilter}))
+	.use(serveStatic(__dirname + '/static'))
+	.use(serveIndex(__dirname + '/static',{filter: customFileFilter}))
 	.listen(3000);
 
 

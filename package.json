@@ -2,25 +2,25 @@
   "author": "Siicon Valley Lines Model Railroad Club",
   "name": "PanelServer",
   "description": "Silicon Valley Lines Control Panel Server",
-  "contributors": [ 
+  "contributors": [
     {
       "name": "Railnerd",
       "email": "railnerd@me.com"
-    } 
+    }
   ],
   "version": "0.0.2",
   "repository": {
     "url": ""
   },
   "dependencies": {
-	"connect": "3.x.x",
-	"socket.io": "1.x.x",
-	"xml2js": "0.1.x"
+    "connect": "3.x.x",
+    "serve-index": "^1.9.1",
+    "serve-static": "^1.15.0",
+    "socket.io": "^4.7.1",
+    "xml2js": "^0.6.1"
   },
   "license": "MIT",
-  "devDependencies": {},
-  "optionalDependencies": {},
   "engines": {
-    "node": "0.6.x"
+    "node": "v18.16.0"
   }
 }
