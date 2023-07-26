@@ -23,7 +23,7 @@ Launch JMRI and start the miniWebServer before running via:
 
 ##Software License
 
-Copyright (c) 2011-2012 Silicon Valley Lines Model Railroad Club
+Copyright (c) 2011-2023 Silicon Valley Lines Model Railroad Club
 
 This software is released under the "The MIT License":
 
