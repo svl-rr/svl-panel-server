@@ -27,9 +27,9 @@ function setSensorState(sensorID, sensorState)
         }
 	}
 
-	if (sensorID.indexOf("LS") == 0) {
+	if (sensorID.indexOf("IS") == 0) {
 		// like "block123"
-		sensorID = sensorID.replace("LS", "block");
+		sensorID = sensorID.replace("IS", "block");
 	}
 	console.log("Trying sensorID ", sensorID, "as a class name");
 

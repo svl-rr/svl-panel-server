@@ -1,0 +1,1 @@
+Placeholder for notes for adding sensors to panels that do not have it.
