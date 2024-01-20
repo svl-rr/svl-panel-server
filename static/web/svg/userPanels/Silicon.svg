@@ -27,6 +27,10 @@
      id="script_common"
      type="application/ecmascript" />
   <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     id="field_panel_common"
+     type="application/ecmascript" />
+  <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
@@ -865,6 +869,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path5621"
+       class="sensor SiliconMain"
        d="m 500,254.0945 -180,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
@@ -878,6 +883,7 @@
     <path
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       class="sensor SiliconMain"
        d="m 920,274.09449 -20,-19.99999 -170,0"
        id="path3266"
        inkscape:connector-curvature="0"
@@ -886,6 +892,7 @@
     <path
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       class="sensor SiliconMain"
        d="m 280,254.0945 -140,0"
        id="path3270"
        inkscape:connector-curvature="0"
@@ -895,6 +902,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3184"
+       class="sensor SiliconSiding"
        d="m 500,294.0945 -320,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
@@ -903,6 +911,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path3198"
+       class="sensor SiliconSiding"
        d="m 910,294.0945 -90,0"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221"
@@ -910,6 +919,7 @@
     <path
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       class="sensor SiliconSiding"
        d="m 780,294.0945 -280,0"
        id="path3129"
        inkscape:connector-curvature="0"
@@ -919,6 +929,7 @@
        onclick="SiliconMainMidRightPath()"
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       class="sensor SiliconMain"
        d="m 690,254.0945 -190,0"
        id="path3131"
        inkscape:connector-curvature="0"
