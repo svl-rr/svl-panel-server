@@ -26,6 +26,10 @@
      xlink:href="/web/svg/core/PanelCommon.js"
      id="script_common"
      type="application/ecmascript" />
+      <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     id="field_panel_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
@@ -282,11 +286,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.0182338"
-     inkscape:cx="19.150808"
-     inkscape:cy="377.1236"
+     inkscape:zoom="2.0364676"
+     inkscape:cx="562.24808"
+     inkscape:cy="265.9016"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="mainlinePanelLinkLayer"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1027"
@@ -453,12 +457,14 @@
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 520,514.0945 20,20 h 20"
          id="TO599.N"
+         class="sensor QuinnWyeAR"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO599.R"
+         class="sensor QuinnBypass"
          d="m 520,534.0945 h 40"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
@@ -469,6 +475,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 450,194.0945 260,260 h 40"
        id="path3260"
+       class="sensor QuinnWyeAR"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        onclick="QuinnReturnLoopPath()" />
@@ -489,6 +496,7 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 750,174.0945 H 450"
        id="path3266"
+       class="sensor QuinnBypass"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        onclick="QuinnBypassPath()" />
@@ -496,6 +504,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4818"
+       class="sensor QuinnBypass"
        d="M 410,174.0945 H 330"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
@@ -515,14 +524,15 @@
     <path
        sodipodi:nodetypes="cc"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
-       d="m 700,564.0945 -30,-30"
+       d="m 689.74822,553.8391 -30,-30"
        id="path3240"
        inkscape:connector-curvature="0" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4798"
-       d="m 670,534.0945 -330,-330"
+       class="sensor RavineMain"
+       d="m 659.93056,524.02506 -330,-330"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
     <g
@@ -543,6 +553,7 @@
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 520,514.0945 20,20 h 20"
          id="TO575.R"
+         class="sensor RavineMain"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
     </g>
@@ -573,7 +584,7 @@
     </a>
     <a
        xlink:href="Silicon.svg"
-       transform="translate(482,470.00005)"
+       transform="translate(474.6343,465.08959)"
        id="a3248"
        style="display:inline">
       <text

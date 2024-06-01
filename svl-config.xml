@@ -1,129 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet href="/xml/XSLT/panelfile-4-19-2.xsl" type="text/xsl"?>
-<layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-4-19-2.xsd">
+<?xml-stylesheet href="/xml/XSLT/panelfile-5-5-5.xsl" type="text/xsl"?>
+<layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-5-5-5.xsd">
   <jmriversion>
-    <major>4</major>
-    <minor>22</minor>
-    <test>0</test>
+    <major>5</major>
+    <minor>7</minor>
+    <test>4</test>
     <modifier />
   </jmriversion>
-  <sensors class="jmri.jmrix.internal.configurexml.InternalSensorManagerXml">
-    <defaultInitialState>unknown</defaultInitialState>
-    <sensor inverted="false">
-      <systemName>ISCLOCKRUNNING</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>ISOPENHOUSE_LOOP</systemName>
-      <userName>openhouse_loop_sensor</userName>
-    </sensor>
-  </sensors>
-  <sensors class="jmri.jmrix.loconet.configurexml.LnSensorManagerXml">
-    <sensor inverted="false">
-      <systemName>LS5</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS8</systemName>
-      <userName>Greeley</userName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS9</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS10</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS11</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS12</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS13</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS14</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS15</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS16</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS173</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS174</systemName>
-      <userName>FrytonMain</userName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS175</systemName>
-      <userName>EbbetsFrytonSwitch</userName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS176</systemName>
-      <userName>GreeleyFrytonSidingSwitch</userName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS177</systemName>
-      <userName>FrytonSiding</userName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS178</systemName>
-      <userName>Greeley_HallelujahSide</userName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS200</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS201</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS202</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS203</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS206</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS208</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS209</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS210</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS211</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS212</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS213</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS214</systemName>
-    </sensor>
-    <sensor inverted="false">
-      <systemName>LS215</systemName>
-    </sensor>
-  </sensors>
   <sensors class="jmri.jmrix.openlcb.configurexml.OlcbSensorManagerXml">
     <sensor inverted="false">
-      <systemName>MS05.01.01.01.47.02.00.38;05.01.01.01.47.02.00.39</systemName>
-      <userName>Hallelujah</userName>
+      <systemName>MS02.01.57.10.05.AA.05.6D</systemName>
+      <userName>TESTIT.Direct Lamp Control.Lamp(2).Lamp Off</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS02.01.57.10.06.B4.00.07;02.01.57.10.06.B4.00.06</systemName>
+      <userName>BayshoreSingle2</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS02.01.57.10.06.B4.05.96;02.01.57.10.06.B4.05.97</systemName>
+      <userName>BayshoreSingle</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>MS05.01.01.01.47.02.00.40;05.01.01.01.47.02.00.41</systemName>
       <userName>IgoNB</userName>
     </sensor>
     <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.02.00.44;05.01.01.01.47.02.00.45</systemName>
+      <userName>Hallelujah</userName>
+    </sensor>
+    <sensor inverted="false">
       <systemName>MS05.01.01.01.47.02.00.46;05.01.01.01.47.02.00.47</systemName>
       <userName>IgoSB</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.06.00.38;05.01.01.01.47.06.00.39</systemName>
+      <userName>Greeley</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.06.00.3A;05.01.01.01.47.06.00.3B</systemName>
+      <userName>Greeley_HallelujahSide</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.06.00.42;05.01.01.01.47.06.00.43</systemName>
+      <userName>FrytonSiding</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.06.00.44;05.01.01.01.47.06.00.45</systemName>
+      <userName>FrytonMain</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.06.00.46;05.01.01.01.47.06.00.47</systemName>
+      <userName>GreeleyFrytonSidingSwitch</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS05.01.01.01.47.08.00.44;05.01.01.01.47.08.00.45</systemName>
+      <userName>EbbetsFrytonSwitch</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>MS05.01.01.01.47.08.00.46;05.01.01.01.47.08.00.47</systemName>
@@ -166,6 +97,29 @@
       <userName>Eagle</userName>
     </sensor>
   </sensors>
+  <sensors class="jmri.jmrix.internal.configurexml.InternalSensorManagerXml">
+    <defaultInitialState>unknown</defaultInitialState>
+    <sensor inverted="false">
+      <systemName>ISCLOCKRUNNING</systemName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>ISOPENHOUSE_LOOP</systemName>
+      <userName>openhouse_loop_sensor</userName>
+    </sensor>
+  </sensors>
+  <turnouts class="jmri.jmrix.openlcb.configurexml.OlcbTurnoutManagerXml">
+    <operations automate="false">
+      <operation name="NoFeedback" class="jmri.configurexml.turnoutoperations.NoFeedbackTurnoutOperationXml" interval="750" maxtries="5" />
+      <operation name="Raw" class="jmri.configurexml.turnoutoperations.RawTurnoutOperationXml" interval="300" maxtries="1" />
+      <operation name="Sensor" class="jmri.configurexml.turnoutoperations.SensorTurnoutOperationXml" interval="300" maxtries="3" />
+    </operations>
+    <defaultclosedspeed>Normal</defaultclosedspeed>
+    <defaultthrownspeed>Normal</defaultthrownspeed>
+    <turnout feedback="MONITORING" inverted="false" automate="Off">
+      <systemName>MT00.00.00.00.00.00.00.11;00.00.00.00.00.00.00.12</systemName>
+      <userName>NT999</userName>
+    </turnout>
+  </turnouts>
   <turnouts class="jmri.jmrix.nce.configurexml.NceTurnoutManagerXml">
     <operations automate="false">
       <operation name="NoFeedback" class="jmri.configurexml.turnoutoperations.NoFeedbackTurnoutOperationXml" interval="750" maxtries="5" />
@@ -1060,6 +1014,10 @@
     <turnout feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT637</systemName>
     </turnout>
+    <turnout feedback="DIRECT" inverted="false" automate="Off">
+      <systemName>NT638</systemName>
+      <userName>Hill Propane</userName>
+    </turnout>
     <turnout feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT648</systemName>
     </turnout>
@@ -1333,10 +1291,10 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA173</systemName>
     </memory>
-    <memory value="N/A:Authorized NB:666">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA174</systemName>
     </memory>
-    <memory value="N/A:Authorized NB:666">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA177</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1354,7 +1312,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA249</systemName>
     </memory>
-    <memory value="N/A:Authorized NB:323">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA252</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1363,7 +1321,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA277</systemName>
     </memory>
-    <memory value="N/A:Occupied SB:161">
+    <memory value="N/A:Authorized NB:103BAYKLM">
       <systemName>IMBA278</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1378,10 +1336,10 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA303</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:946">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA330</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:946">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA331</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1393,10 +1351,10 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA448</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:946">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA449</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized SB:880NOWMRV">
       <systemName>IMBA450</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1465,25 +1423,25 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA726</systemName>
     </memory>
-    <memory value="8:34 PM">
+    <memory value="9:33 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
-    <memory value="2">
+    <memory value="17">
       <systemName>IMLASTBAYSHORETURNTABLETRACK</systemName>
     </memory>
     <memory value="false">
       <systemName>IMMAINLINE_LOCKED</systemName>
     </memory>
-    <memory value="N2">
+    <memory value="S2">
       <systemName>IMMIRRORED_TRAIN_SELECTION</systemName>
     </memory>
-    <memory value="">
+    <memory value="3PATHFINDER">
       <systemName>IMN1</systemName>
     </memory>
-    <memory value="323">
+    <memory value="">
       <systemName>IMN2</systemName>
     </memory>
-    <memory value="666">
+    <memory value="220BAYHEMHAL">
       <systemName>IMN3</systemName>
     </memory>
     <memory value="">
@@ -1522,19 +1480,19 @@
     <memory value="">
       <systemName>IMO7</systemName>
     </memory>
-    <memory value="">
+    <memory value="DISPATCH">
       <systemName>IMO8</systemName>
     </memory>
     <memory value="1.0">
       <systemName>IMRATEFACTOR</systemName>
     </memory>
-    <memory value="">
+    <memory value="376NOWBAK">
       <systemName>IMS1</systemName>
     </memory>
-    <memory value="">
+    <memory value="17GT">
       <systemName>IMS2</systemName>
     </memory>
-    <memory value="">
+    <memory value="880NOWMRV">
       <systemName>IMS3</systemName>
     </memory>
     <memory value="">
@@ -1543,13 +1501,13 @@
     <memory value="">
       <systemName>IMS5</systemName>
     </memory>
-    <memory value="946">
+    <memory value="">
       <systemName>IMS6</systemName>
     </memory>
     <memory value="">
       <systemName>IMS7</systemName>
     </memory>
-    <memory value="">
+    <memory value="148WINJAS">
       <systemName>IMS8</systemName>
     </memory>
     <memory value="RED">
@@ -1582,13 +1540,13 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETS_TO_FRYTON_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_EBBETS_TO_FRYTON_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1606,37 +1564,37 @@
     <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_EBBETS</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_GREELEY</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_FRYTON_SIDING_TO_EBBETS</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_SIDING_TO_GREELEY</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_PAPERMILL_DWARF</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1645,10 +1603,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_HEMET_DWARF</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_SB_MAIN</systemName>
     </memory>
     <memory value="RED">
@@ -1684,13 +1642,13 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1702,7 +1660,7 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_NB_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_FRONT</systemName>
     </memory>
     <memory value="RED">
@@ -1720,7 +1678,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1729,7 +1687,7 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_KALAMAZOO_FRONT_TO_JERICO_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_FRONT</systemName>
     </memory>
     <memory value="RED">
@@ -1744,10 +1702,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_FRONT_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_INNER_TO_MTMARVELL</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_LOOP_OUTER_TO_MTMARVELL</systemName>
     </memory>
     <memory value="YELLOW">
@@ -1756,10 +1714,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_UPPER</systemName>
     </memory>
     <memory value="AMTK 161">
@@ -2102,6 +2060,9 @@
       <systemName>IMWTVIDEOURL:10</systemName>
     </memory>
     <memory value="">
+      <systemName>IMWTVIDEOURL:71</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:103</systemName>
     </memory>
     <memory value="">
@@ -2137,8 +2098,20 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:621</systemName>
     </memory>
+    <memory>
+      <systemName>IMWTVIDEOURL:627</systemName>
+    </memory>
+    <memory>
+      <systemName>IMWTVIDEOURL:647</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:695</systemName>
+    </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:715</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:727</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:728</systemName>
@@ -2156,6 +2129,9 @@
       <systemName>IMWTVIDEOURL:801</systemName>
     </memory>
     <memory value="">
+      <systemName>IMWTVIDEOURL:803</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:824</systemName>
     </memory>
     <memory value="">
@@ -2165,13 +2141,34 @@
       <systemName>IMWTVIDEOURL:911</systemName>
     </memory>
     <memory value="">
+      <systemName>IMWTVIDEOURL:1003</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:1224</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:1243</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:1325</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:1507</systemName>
     </memory>
     <memory value="">
+      <systemName>IMWTVIDEOURL:1508</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:1545</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:1667</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:1753</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:1755</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:1859</systemName>
@@ -2180,7 +2177,16 @@
       <systemName>IMWTVIDEOURL:1910</systemName>
     </memory>
     <memory value="">
+      <systemName>IMWTVIDEOURL:1914</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:2022</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:2399</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:2438</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:2792</systemName>
@@ -2191,7 +2197,7 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:2916</systemName>
     </memory>
-    <memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:3014</systemName>
     </memory>
     <memory value="">
@@ -2199,6 +2205,9 @@
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:3384</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:3631</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:3751</systemName>
@@ -2215,6 +2224,9 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:4033</systemName>
     </memory>
+    <memory value="http://layout.siliconvalleylines.com:30003/stream/video.mjpeg">
+      <systemName>IMWTVIDEOURL:4106</systemName>
+    </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:4321</systemName>
     </memory>
@@ -2226,6 +2238,9 @@
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:4802</systemName>
+    </memory>
+    <memory value="http://layout.siliconvalleylines.com:30008/stream/video.mjpeg">
+      <systemName>IMWTVIDEOURL:4805</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:4837</systemName>
@@ -2246,6 +2261,9 @@
       <systemName>IMWTVIDEOURL:5355</systemName>
     </memory>
     <memory value="">
+      <systemName>IMWTVIDEOURL:5380</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:5502</systemName>
     </memory>
     <memory value="">
@@ -2257,14 +2275,20 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:6334</systemName>
     </memory>
-    <memory value="">
+    <memory value="http://layout.siliconvalleylines.com:30008/stream/video.mjpeg">
       <systemName>IMWTVIDEOURL:6504</systemName>
     </memory>
     <memory>
       <systemName>IMWTVIDEOURL:6574</systemName>
     </memory>
-    <memory value="http://layout.siliconvalleylines.com:30007/stream/video.mjpeg">
+    <memory value="">
+      <systemName>IMWTVIDEOURL:6652</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:7021</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:7602</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:7603</systemName>
@@ -2319,6 +2343,9 @@
     </memory>
     <memory value="http://layout.siliconvalleylines.com:30011/stream/video.mjpeg">
       <systemName>IMWTVIDEOURL:camera11</systemName>
+    </memory>
+    <memory value="http://layout.siliconvalleylines.com:30007/stream/video.mjpeg">
+      <systemName>IMWVIDEOURL:1545</systemName>
     </memory>
   </memories>
   <signalheads class="jmri.managers.configurexml.AbstractSignalHeadManagerXml">
@@ -2467,6 +2494,114 @@
         <disabledAspect>Stop</disabledAspect>
       </disabledAspects>
     </virtualsignalmast>
+    <olcbsignalmast class="jmri.jmrix.openlcb.configurexml.OlcbSignalMastXml">
+      <systemName>MF$olm:SPTCO-1969:SL-1-G($0006)</systemName>
+      <userName>jasper_to_kaos_dwarf</userName>
+      <lit>
+        <lit>00.00.00.00.00.00.00.00</lit>
+        <notlit>00.00.00.00.00.00.00.00</notlit>
+      </lit>
+      <held>
+        <held>00.00.00.00.00.00.00.00</held>
+        <notheld>00.00.00.00.00.00.00.00</notheld>
+      </held>
+      <aspect defines="Block Signal Green">
+        <event>05.01.01.01.47.0C.00.23</event>
+      </aspect>
+      <aspect defines="Approach Signal Yellow">
+        <event>05.01.01.01.47.0C.00.24</event>
+      </aspect>
+      <aspect defines="Approach Medium - Flashing Yellow">
+        <event>05.01.01.01.47.0C.00.27</event>
+      </aspect>
+      <aspect defines="Restricting">
+        <event>05.01.01.01.47.0C.00.25</event>
+      </aspect>
+      <aspect defines="Unlit">
+        <event>05.01.01.01.47.0C.00.29</event>
+      </aspect>
+    </olcbsignalmast>
+    <olcbsignalmast class="jmri.jmrix.openlcb.configurexml.OlcbSignalMastXml">
+      <systemName>MF$olm:SPTCO-1969:SL-2-A($0004)</systemName>
+      <userName>TM1</userName>
+      <lit>
+        <lit>00.00.00.00.00.00.00.00</lit>
+        <notlit>00.00.00.00.00.00.00.00</notlit>
+      </lit>
+      <held>
+        <held>00.00.00.00.00.00.00.00</held>
+        <notheld>00.00.00.00.00.00.00.00</notheld>
+      </held>
+      <aspect defines="Block Signal Green">
+        <event>02.01.57.10.05.AA.04.70</event>
+      </aspect>
+      <aspect defines="Block Signal Green for Diverging Route">
+        <event>02.01.57.10.05.AA.04.73</event>
+      </aspect>
+      <aspect defines="Block Signal Yellow over Green">
+        <event>02.01.57.10.05.AA.04.76</event>
+      </aspect>
+      <aspect defines="Approach Signal Yellow">
+        <event>02.01.57.10.05.AA.04.79</event>
+      </aspect>
+      <aspect defines="Approach Medium - Flashing Yellow">
+        <event>02.01.57.10.05.AA.04.7C</event>
+      </aspect>
+      <aspect defines="Home Signal Yellow for Diverging Route">
+        <event>02.01.57.10.05.AA.04.7F</event>
+      </aspect>
+      <aspect defines="Restricting">
+        <event>02.01.57.10.05.AA.04.82</event>
+      </aspect>
+      <aspect defines="Home Signal Red">
+        <event>02.01.57.10.05.AA.04.85</event>
+      </aspect>
+      <aspect defines="Unlit">
+        <event />
+      </aspect>
+      <disabledAspects>
+        <disabledAspect>Unlit</disabledAspect>
+      </disabledAspects>
+    </olcbsignalmast>
+    <olcbsignalmast class="jmri.jmrix.openlcb.configurexml.OlcbSignalMastXml">
+      <systemName>MF$olm:SPTCO-1969:SL-2-A($0005)</systemName>
+      <userName>TM2</userName>
+      <lit>
+        <lit>00.00.00.00.00.00.00.00</lit>
+        <notlit>00.00.00.00.00.00.00.00</notlit>
+      </lit>
+      <held>
+        <held>00.00.00.00.00.00.00.00</held>
+        <notheld>00.00.00.00.00.00.00.00</notheld>
+      </held>
+      <aspect defines="Block Signal Green">
+        <event>02.01.57.10.05.AA.04.90</event>
+      </aspect>
+      <aspect defines="Block Signal Green for Diverging Route">
+        <event>02.01.57.10.05.AA.04.93</event>
+      </aspect>
+      <aspect defines="Block Signal Yellow over Green">
+        <event>02.01.57.10.05.AA.04.96</event>
+      </aspect>
+      <aspect defines="Approach Signal Yellow">
+        <event>00.00.00.00.00.00.00.00</event>
+      </aspect>
+      <aspect defines="Approach Medium - Flashing Yellow">
+        <event>00.00.00.00.00.00.00.00</event>
+      </aspect>
+      <aspect defines="Home Signal Yellow for Diverging Route">
+        <event>00.00.00.00.00.00.00.00</event>
+      </aspect>
+      <aspect defines="Restricting">
+        <event>00.00.00.00.00.00.00.00</event>
+      </aspect>
+      <aspect defines="Home Signal Red">
+        <event>00.00.00.00.00.00.00.00</event>
+      </aspect>
+      <aspect defines="Unlit">
+        <event>00.00.00.00.00.00.00.00</event>
+      </aspect>
+    </olcbsignalmast>
   </signalmasts>
   <routes class="jmri.managers.configurexml.DefaultRouteManagerXml">
     <route userName="openhouse_loop">
@@ -2526,6 +2661,62 @@
       <routeOutputTurnout systemName="NT38" state="THROWN" />
       <routeOutputTurnout systemName="NT39" state="CLOSED" />
       <turnoutsAlignedSensor name="openhouse_loop_sensor" />
+    </route>
+    <route userName="Ops Startup">
+      <systemName>IO:AUTO:0002</systemName>
+      <userName>Ops Startup</userName>
+      <routeOutputTurnout systemName="NT22" state="CLOSED" />
+      <routeOutputTurnout systemName="NT23" state="THROWN" />
+      <routeOutputTurnout systemName="NT24" state="CLOSED" />
+      <routeOutputTurnout systemName="NT25" state="THROWN" />
+      <routeOutputTurnout systemName="NT26" state="CLOSED" />
+      <routeOutputTurnout systemName="NT35" state="THROWN" />
+      <routeOutputTurnout systemName="NT39" state="CLOSED" />
+      <routeOutputTurnout systemName="NT101" state="THROWN" />
+      <routeOutputTurnout systemName="NT105" state="CLOSED" />
+      <routeOutputTurnout systemName="NT125" state="CLOSED" />
+      <routeOutputTurnout systemName="NT126" state="CLOSED" />
+      <routeOutputTurnout systemName="NT175" state="CLOSED" />
+      <routeOutputTurnout systemName="fryton siding (greeley side)" state="CLOSED" />
+      <routeOutputTurnout systemName="NT225" state="CLOSED" />
+      <routeOutputTurnout systemName="NT250" state="CLOSED" />
+      <routeOutputTurnout systemName="NT251" state="CLOSED" />
+      <routeOutputTurnout systemName="NT252" state="CLOSED" />
+      <routeOutputTurnout systemName="NT275" state="CLOSED" />
+      <routeOutputTurnout systemName="NT276" state="CLOSED" />
+      <routeOutputTurnout systemName="NT277" state="THROWN" />
+      <routeOutputTurnout systemName="NT278" state="THROWN" />
+      <routeOutputTurnout systemName="NT279" state="CLOSED" />
+      <routeOutputTurnout systemName="NT280" state="CLOSED" />
+      <routeOutputTurnout systemName="NT325" state="CLOSED" />
+      <routeOutputTurnout systemName="NT326" state="CLOSED" />
+      <routeOutputTurnout systemName="NT327" state="THROWN" />
+      <routeOutputTurnout systemName="NT328" state="CLOSED" />
+      <routeOutputTurnout systemName="NT329" state="CLOSED" />
+      <routeOutputTurnout systemName="NT425" state="THROWN" />
+      <routeOutputTurnout systemName="NT492" state="CLOSED" />
+      <routeOutputTurnout systemName="NT493" state="THROWN" />
+      <routeOutputTurnout systemName="NT494" state="CLOSED" />
+      <routeOutputTurnout systemName="NT508" state="CLOSED" />
+      <routeOutputTurnout systemName="NT509" state="THROWN" />
+      <routeOutputTurnout systemName="NT550" state="CLOSED" />
+      <routeOutputTurnout systemName="NT575" state="THROWN" />
+      <routeOutputTurnout systemName="NT600" state="THROWN" />
+      <routeOutputTurnout systemName="NT601" state="CLOSED" />
+      <routeOutputTurnout systemName="NT648" state="CLOSED" />
+      <routeOutputTurnout systemName="NT649" state="THROWN" />
+      <routeOutputTurnout systemName="NT650" state="THROWN" />
+      <routeOutputTurnout systemName="NT670" state="THROWN" />
+      <routeOutputTurnout systemName="NT671" state="THROWN" />
+      <routeOutputTurnout systemName="NT701" state="THROWN" />
+      <routeOutputTurnout systemName="NT702" state="THROWN" />
+      <routeOutputTurnout systemName="NT703" state="THROWN" />
+      <routeOutputTurnout systemName="NT726" state="THROWN" />
+      <routeOutputTurnout systemName="NT727" state="CLOSED" />
+      <routeOutputTurnout systemName="NT728" state="CLOSED" />
+      <routeOutputTurnout systemName="NT729" state="THROWN" />
+      <routeOutputTurnout systemName="NT750" state="CLOSED" />
+      <routeOutputTurnout systemName="NT752" state="THROWN" />
     </route>
   </routes>
   <signalmastlogics class="jmri.managers.configurexml.DefaultSignalMastLogicManagerXml">
@@ -2684,104 +2875,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Fri Aug 19 20:18:20 PDT 2022</date>
-      <filename>JMRI program</filename>
+      <date>Fri May 17 19:37:53 PDT 2024</date>
+      <filename>PanelPro (v5.7.4)</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Fri Aug 19 20:18:30 PDT 2022</date>
-      <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
+      <date>Fri May 17 19:37:56 PDT 2024</date>
+      <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Fri Aug 19 19:33:41 PDT 2022</date>
-          <filename>JMRI program</filename>
+          <date>Sun May 05 09:49:19 PDT 2024</date>
+          <filename>PanelPro (v5.7.4)</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Fri Aug 19 19:33:52 PDT 2022</date>
-          <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
+          <date>Sun May 05 09:49:21 PDT 2024</date>
+          <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Fri Jul 29 18:22:23 PDT 2022</date>
-              <filename>JMRI program</filename>
+              <date>Fri Apr 26 13:07:53 PDT 2024</date>
+              <filename>PanelPro (v5.7.4)</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Fri Jul 29 18:22:35 PDT 2022</date>
-              <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
+              <date>Fri Apr 26 13:07:55 PDT 2024</date>
+              <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Fri Jun 24 17:54:36 PDT 2022</date>
-                  <filename>JMRI program</filename>
+                  <date>Fri Apr 19 19:08:01 PDT 2024</date>
+                  <filename>PanelPro (v5.7.4)</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Fri Jun 24 17:54:44 PDT 2022</date>
-                  <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
+                  <date>Fri Apr 19 19:08:02 PDT 2024</date>
+                  <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Fri Apr 01 17:57:31 PDT 2022</date>
-                      <filename>JMRI program</filename>
+                      <date>Sat Mar 23 14:51:23 PDT 2024</date>
+                      <filename>PanelPro (v5.7.4)</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Fri Apr 01 17:57:38 PDT 2022</date>
-                      <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
+                      <date>Sat Mar 23 14:51:25 PDT 2024</date>
+                      <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Sat Feb 26 09:22:19 PST 2022</date>
-                          <filename>JMRI program</filename>
+                          <date>Sat Mar 23 09:14:00 PDT 2024</date>
+                          <filename>PanelPro (v5.7.4)</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Sat Feb 26 09:22:33 PST 2022</date>
-                          <filename>/Users/svl/svl-panel-server/static/svl-config.xml</filename>
+                          <date>Sat Mar 23 09:14:02 PDT 2024</date>
+                          <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Sat Feb 26 15:14:02 PST 2022</date>
-                          <filename />
+                          <date>Sat Mar 23 14:46:27 PDT 2024</date>
+                          <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Fri Apr 01 20:34:15 PDT 2022</date>
-                      <filename />
+                      <date>Sat Mar 23 15:37:15 PDT 2024</date>
+                      <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Fri Jun 24 22:25:05 PDT 2022</date>
-                  <filename />
+                  <date>Fri Apr 19 22:06:37 PDT 2024</date>
+                  <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Fri Jul 29 22:21:41 PDT 2022</date>
-              <filename />
+              <date>Fri Apr 26 21:59:52 PDT 2024</date>
+              <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Fri Aug 19 20:14:23 PDT 2022</date>
-          <filename />
+          <date>Fri May 10 20:25:10 PDT 2024</date>
+          <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Aug 19 20:34:12 PDT 2022</date>
-      <filename />
+      <date>Fri May 17 21:33:06 PDT 2024</date>
+      <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
     </operation>
   </filehistory>
-  <!--Written by JMRI version 4.22+R4c4384d74 on Fri Aug 19 20:34:12 PDT 2022-->
+  <!--Written by JMRI version 5.7.4+Rb028ee0124 on Fri May 17 21:33:06 PDT 2024-->
 </layout-config>

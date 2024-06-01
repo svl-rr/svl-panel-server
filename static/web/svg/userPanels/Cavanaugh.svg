@@ -16,17 +16,26 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"><title
-     id="title1">Cavanaugh</title><script
+     id="title1">Cavanaugh</title>
+     <script
      xlink:href="/web/svg/core/ServerComms.js"
-     id="script3331" /><script
+     id="script3331" />
+     <script
      xlink:href="/socket.io/socket.io.js"
-     id="script5" /><script
+     id="script5" />
+     <script
      xlink:href="/web/svg/core/PanelCommon.js"
      id="script_common"
-     type="application/ecmascript" /><script
+     type="application/ecmascript" />
+     <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     type="application/ecmascript"
+     id="field_panel_common" />
+     <script
      xlink:href="Cavanaugh.js"
      id="script_panelSpecific"
-     type="application/ecmascript" /><defs
+     type="application/ecmascript" />
+     <defs
      id="defs4"><linearGradient
        inkscape:collect="always"
        id="linearGradient1280"><stop
@@ -819,6 +828,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        d="m 120,374.0945 h 40"
        id="path4255"
+       class="sensor BayshoreSingle"
        inkscape:connector-curvature="0" /><g
        style="display:inline"
        id="g3528"
@@ -841,6 +851,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4393"
+       class="sensor BayshoreSingle"
        d="M 200,374.0945 H 160"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" /></g><g

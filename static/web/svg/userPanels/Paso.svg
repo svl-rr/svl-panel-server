@@ -26,6 +26,10 @@
      xlink:href="/web/svg/core/PanelCommon.js"
      id="script_common"
      type="application/ecmascript" />
+      <script
+     xlink:href="/web/svg/core/FieldPanelCommon.js"
+     id="field_panel_common"
+     type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
@@ -720,6 +724,7 @@
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO550.N"
+         class="sensor PasoMain"
          d="m 520,534.0945 h 40"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
@@ -828,12 +833,14 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 220,174.0945 H 160"
        id="path5619"
+       class="sensor PasoMain"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path5621"
+       class="sensor PasoMain"
        d="M 900,174.0945 H 260"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />

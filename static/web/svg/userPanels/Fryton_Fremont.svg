@@ -771,6 +771,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path3332"
+       class="sensor Greeley"
        d="m 60,174.0945 h 40"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
@@ -832,6 +833,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="block174"
+       class="sensor FrytonMain"
        d="M 800,174.0945 H 200"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
@@ -839,6 +841,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="block178"
+       class="sensor Greeley"
        d="M 160,174.0945 H 100"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
@@ -847,13 +850,15 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 440,133.97975 280,134.0945"
        id="block177"
+       class="sensor FrytonSiding"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        onclick="FrytonSidingLeftPath()" />
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
-       id="path3581"
+       id="block177"
+       class="sensor FrytonSiding"
        d="m 800,154.0945 -20,-20 H 640"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
@@ -861,14 +866,16 @@
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 200,154.0945 20,-20 h 20"
-       id="path3591"
+       id="block177"
+       class="sensor FrytonSiding"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <path
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 600,133.97975 H 440"
-       id="path501"
+       id="block177"
+       class="sensor FrytonSiding"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        onclick="FrytonSidingRightPath()" />

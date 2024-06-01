@@ -104,12 +104,17 @@ function initNodeSocketInstance()
     // not all elements will necessarily be on this panel
     nodeSocket.on('update', function(data)
     {
-        var msgObj = JSON.parse(data);
-                
-        if((msgObj != null) && (msgObj != undefined))
-            handleSocketDataResponse(handleJSONMessage(msgObj));
-        else
-            alert("bad node update: " + data);
+        var msgObj;
+        try {
+            msgObj = JSON.parse(data);
+                    
+            if((msgObj != null) && (msgObj != undefined))
+                handleSocketDataResponse(handleJSONMessage(msgObj));
+            else
+                alert("bad node update: " + data);
+        } catch (e) {
+            debugger;
+        }
     });
     
     nodeSocket.on('nodeJMRISocketStatus', function(data)

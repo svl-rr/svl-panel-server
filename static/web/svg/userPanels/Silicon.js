@@ -44,7 +44,7 @@ function IdealCement1LeftPath()
 
 function FrontRunaroundLeftPath()
 {
-    executePathArray(["TO631.R", "TO632.R"]);
+    executePathArray(["TO631.R", "TO632.R", "TO638.R"]);
 }
 
 function SiliconMainRightPath()
@@ -95,4 +95,9 @@ function BagHouse2Path()
 function BagHouse1Path()
 {
     executePathArray(["TO637.N", "TO636B.R"]);
+}
+
+function HillPropane()
+{
+    executePathArray(["TO638.N"]);
 }

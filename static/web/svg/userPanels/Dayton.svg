@@ -1431,6 +1431,7 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        d="M 980,334.0945 H 940"
        id="path3233"
+       class="sensor BayshoreSingle"
        inkscape:connector-curvature="0" />
     <path
        inkscape:connector-curvature="0"
@@ -1458,6 +1459,7 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 940,334.0945 H 900"
        id="path4066"
+       class="sensor BayshoreSingle"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        onclick="arrivalMain2Path()" />
