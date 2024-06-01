@@ -107,19 +107,6 @@
       <userName>openhouse_loop_sensor</userName>
     </sensor>
   </sensors>
-  <turnouts class="jmri.jmrix.openlcb.configurexml.OlcbTurnoutManagerXml">
-    <operations automate="false">
-      <operation name="NoFeedback" class="jmri.configurexml.turnoutoperations.NoFeedbackTurnoutOperationXml" interval="750" maxtries="5" />
-      <operation name="Raw" class="jmri.configurexml.turnoutoperations.RawTurnoutOperationXml" interval="300" maxtries="1" />
-      <operation name="Sensor" class="jmri.configurexml.turnoutoperations.SensorTurnoutOperationXml" interval="300" maxtries="3" />
-    </operations>
-    <defaultclosedspeed>Normal</defaultclosedspeed>
-    <defaultthrownspeed>Normal</defaultthrownspeed>
-    <turnout feedback="MONITORING" inverted="false" automate="Off">
-      <systemName>MT00.00.00.00.00.00.00.11;00.00.00.00.00.00.00.12</systemName>
-      <userName>NT999</userName>
-    </turnout>
-  </turnouts>
   <turnouts class="jmri.jmrix.nce.configurexml.NceTurnoutManagerXml">
     <operations automate="false">
       <operation name="NoFeedback" class="jmri.configurexml.turnoutoperations.NoFeedbackTurnoutOperationXml" interval="750" maxtries="5" />
@@ -1423,7 +1410,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA726</systemName>
     </memory>
-    <memory value="2:53 PM">
+    <memory value="2:56 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="17">
@@ -2887,104 +2874,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Sat Jun 01 09:26:10 PDT 2024</date>
+      <date>Sat Jun 01 14:53:59 PDT 2024</date>
       <filename>PanelPro (v5.7.4)</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Sat Jun 01 09:26:11 PDT 2024</date>
+      <date>Sat Jun 01 14:54:00 PDT 2024</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Fri May 31 20:41:47 PDT 2024</date>
+          <date>Sat Jun 01 09:26:10 PDT 2024</date>
           <filename>PanelPro (v5.7.4)</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Fri May 31 20:41:48 PDT 2024</date>
+          <date>Sat Jun 01 09:26:11 PDT 2024</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Fri May 17 19:37:53 PDT 2024</date>
+              <date>Fri May 31 20:41:47 PDT 2024</date>
               <filename>PanelPro (v5.7.4)</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Fri May 17 19:37:56 PDT 2024</date>
-              <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
+              <date>Fri May 31 20:41:48 PDT 2024</date>
+              <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Sun May 05 09:49:19 PDT 2024</date>
+                  <date>Fri May 17 19:37:53 PDT 2024</date>
                   <filename>PanelPro (v5.7.4)</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Sun May 05 09:49:21 PDT 2024</date>
+                  <date>Fri May 17 19:37:56 PDT 2024</date>
                   <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Fri Apr 26 13:07:53 PDT 2024</date>
+                      <date>Sun May 05 09:49:19 PDT 2024</date>
                       <filename>PanelPro (v5.7.4)</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Fri Apr 26 13:07:55 PDT 2024</date>
+                      <date>Sun May 05 09:49:21 PDT 2024</date>
                       <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Fri Apr 19 19:08:01 PDT 2024</date>
+                          <date>Fri Apr 26 13:07:53 PDT 2024</date>
                           <filename>PanelPro (v5.7.4)</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Fri Apr 19 19:08:02 PDT 2024</date>
+                          <date>Fri Apr 26 13:07:55 PDT 2024</date>
                           <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Fri Apr 19 22:06:37 PDT 2024</date>
+                          <date>Fri Apr 26 21:59:52 PDT 2024</date>
                           <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Fri Apr 26 21:59:52 PDT 2024</date>
+                      <date>Fri May 10 20:25:10 PDT 2024</date>
                       <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Fri May 10 20:25:10 PDT 2024</date>
+                  <date>Fri May 17 21:33:06 PDT 2024</date>
                   <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Fri May 17 21:33:06 PDT 2024</date>
-              <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
+              <date>Sat Jun 01 09:25:48 PDT 2024</date>
+              <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Sat Jun 01 09:25:48 PDT 2024</date>
+          <date>Sat Jun 01 14:53:26 PDT 2024</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Sat Jun 01 14:53:26 PDT 2024</date>
+      <date>Sat Jun 01 14:56:29 PDT 2024</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
     </operation>
   </filehistory>
-  <!--Written by JMRI version 5.7.4+Rb028ee0124 on Sat Jun 01 14:53:26 PDT 2024-->
+  <!--Written by JMRI version 5.7.4+Rb028ee0124 on Sat Jun 01 14:56:29 PDT 2024-->
 </layout-config>
