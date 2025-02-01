@@ -3,8 +3,8 @@
 <layout-config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://jmri.org/xml/schema/layout-5-5-5.xsd">
   <jmriversion>
     <major>5</major>
-    <minor>7</minor>
-    <test>4</test>
+    <minor>11</minor>
+    <test>2</test>
     <modifier />
   </jmriversion>
   <sensors class="jmri.jmrix.openlcb.configurexml.OlcbSensorManagerXml">
@@ -482,7 +482,7 @@
     <turnout feedback="DIRECT" inverted="false" automate="Default">
       <systemName>NT235</systemName>
     </turnout>
-    <turnout feedback="DIRECT" inverted="false" automate="Default">
+    <turnout feedback="DIRECT" inverted="true" automate="Default">
       <systemName>NT236</systemName>
     </turnout>
     <turnout feedback="DIRECT" inverted="false" automate="Default">
@@ -1290,7 +1290,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA179</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Occupied OOS:UNAUTHORIZED TRAIN!">
       <systemName>IMBA202</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1302,13 +1302,13 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA252</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Occupied OOS:UNAUTHORIZED TRAIN!">
       <systemName>IMBA253</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA277</systemName>
     </memory>
-    <memory value="N/A:Occupied SB:9998xVICBAY">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA278</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1410,7 +1410,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA726</systemName>
     </memory>
-    <memory value="2:56 PM">
+    <memory value="7:32 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="17">
@@ -1419,7 +1419,7 @@
     <memory value="false">
       <systemName>IMMAINLINE_LOCKED</systemName>
     </memory>
-    <memory value="N3">
+    <memory value="O3">
       <systemName>IMMIRRORED_TRAIN_SELECTION</systemName>
     </memory>
     <memory value="">
@@ -1446,7 +1446,7 @@
     <memory value="">
       <systemName>IMN8</systemName>
     </memory>
-    <memory value="">
+    <memory value="dispatch">
       <systemName>IMO1</systemName>
     </memory>
     <memory value="">
@@ -1464,10 +1464,10 @@
     <memory value="">
       <systemName>IMO6</systemName>
     </memory>
-    <memory value="NOWHERES">
+    <memory value="">
       <systemName>IMO7</systemName>
     </memory>
-    <memory value="DISPATCH">
+    <memory value="">
       <systemName>IMO8</systemName>
     </memory>
     <memory value="1.0">
@@ -1503,7 +1503,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_BRANCH_TO_DAYTON</systemName>
     </memory>
     <memory value="RED">
@@ -1512,7 +1512,7 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_DAYTON_MAIN_TO_EAGLE</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_DAYTON_SIDING_TO_EAGLE_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1551,7 +1551,7 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_EBBETS</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_GREELEY</systemName>
     </memory>
     <memory value="RED">
@@ -1572,7 +1572,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1584,22 +1584,22 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_HEMET_DWARF</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_SB_MAIN</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_UPPER</systemName>
     </memory>
     <memory value="GREEN">
@@ -1617,28 +1617,28 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_SIDING_TO_IGO_DWARF</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_FRONT</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_LOWER</systemName>
     </memory>
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_LOWER</systemName>
     </memory>
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JASPER_DWARF</systemName>
     </memory>
     <memory value="RED">
@@ -1647,22 +1647,22 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_NB_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_FRONT</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1674,19 +1674,19 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_KALAMAZOO_FRONT_TO_JERICO_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_FRONT</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_FRONT_TO_KAOS_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_LOOP_FRONT_TO_KAOS_UPPER</systemName>
     </memory>
     <memory value="YELLOW">
@@ -1701,10 +1701,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_UPPER</systemName>
     </memory>
     <memory value="AMTK 161">
@@ -1995,7 +1995,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA493</systemName>
     </memory>
-    <memory value="N:Authorized NB:299BAKWIN">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA494A</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -2059,6 +2059,9 @@
       <systemName>IMWTVIDEOURL:123</systemName>
     </memory>
     <memory value="">
+      <systemName>IMWTVIDEOURL:135</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:161</systemName>
     </memory>
     <memory value="">
@@ -2086,6 +2089,9 @@
       <systemName>IMWTVIDEOURL:564</systemName>
     </memory>
     <memory value="">
+      <systemName>IMWTVIDEOURL:565</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:621</systemName>
     </memory>
     <memory>
@@ -2099,6 +2105,9 @@
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:715</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:725</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:727</systemName>
@@ -2129,6 +2138,15 @@
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:911</systemName>
+    </memory>
+    <memory value="http://layout.siliconvalleylines.com:30003/stream/video.mjpeg">
+      <systemName>IMWTVIDEOURL:912</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:998</systemName>
+    </memory>
+    <memory>
+      <systemName>IMWTVIDEOURL:999</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:1003</systemName>
@@ -2174,6 +2192,9 @@
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:2399</systemName>
+    </memory>
+    <memory value="http://layout.siliconvalleylines.com:30008/stream/video.mjpeg">
+      <systemName>IMWTVIDEOURL:2437</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:2438</systemName>
@@ -2221,10 +2242,19 @@
       <systemName>IMWTVIDEOURL:4321</systemName>
     </memory>
     <memory value="">
+      <systemName>IMWTVIDEOURL:4349</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:4402</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:4429</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:4449</systemName>
+    </memory>
+    <memory value="">
+      <systemName>IMWTVIDEOURL:4603</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:4802</systemName>
@@ -2262,7 +2292,7 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:5944</systemName>
     </memory>
-    <memory value="">
+    <memory value="http://layout.siliconvalleylines.com:30005/stream/video.mjpeg">
       <systemName>IMWTVIDEOURL:6006</systemName>
     </memory>
     <memory value="">
@@ -2274,7 +2304,7 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:6504</systemName>
     </memory>
-    <memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:6574</systemName>
     </memory>
     <memory value="">
@@ -2292,7 +2322,10 @@
     <memory>
       <systemName>IMWTVIDEOURL:7805</systemName>
     </memory>
-    <memory value="http://layout.siliconvalleylines.com:30007/stream/video.mjpeg">
+    <memory>
+      <systemName>IMWTVIDEOURL:8101</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:8671</systemName>
     </memory>
     <memory value="">
@@ -2874,104 +2907,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Sat Jun 01 14:53:59 PDT 2024</date>
-      <filename>PanelPro (v5.7.4)</filename>
+      <date>Fri Jan 31 16:31:51 PST 2025</date>
+      <filename>PanelPro (v5.11.2)</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Sat Jun 01 14:54:00 PDT 2024</date>
+      <date>Fri Jan 31 16:31:54 PST 2025</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Sat Jun 01 09:26:10 PDT 2024</date>
-          <filename>PanelPro (v5.7.4)</filename>
+          <date>Fri Nov 08 20:34:47 PST 2024</date>
+          <filename>PanelPro (v5.9.4)</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Sat Jun 01 09:26:11 PDT 2024</date>
+          <date>Fri Nov 08 20:34:48 PST 2024</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Fri May 31 20:41:47 PDT 2024</date>
-              <filename>PanelPro (v5.7.4)</filename>
+              <date>Fri Oct 25 18:15:55 PDT 2024</date>
+              <filename>PanelPro (v5.9.4)</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Fri May 31 20:41:48 PDT 2024</date>
+              <date>Fri Oct 25 18:15:57 PDT 2024</date>
               <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Fri May 17 19:37:53 PDT 2024</date>
-                  <filename>PanelPro (v5.7.4)</filename>
+                  <date>Fri Sep 27 18:49:49 PDT 2024</date>
+                  <filename>PanelPro (v5.9.4)</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Fri May 17 19:37:56 PDT 2024</date>
-                  <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
+                  <date>Fri Sep 27 18:49:51 PDT 2024</date>
+                  <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Sun May 05 09:49:19 PDT 2024</date>
-                      <filename>PanelPro (v5.7.4)</filename>
+                      <date>Fri Sep 27 17:43:39 PDT 2024</date>
+                      <filename>PanelPro (v5.9.4)</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Sun May 05 09:49:21 PDT 2024</date>
-                      <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
+                      <date>Fri Sep 27 17:43:44 PDT 2024</date>
+                      <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Fri Apr 26 13:07:53 PDT 2024</date>
-                          <filename>PanelPro (v5.7.4)</filename>
+                          <date>Sat Aug 24 09:31:36 PDT 2024</date>
+                          <filename>PanelPro (v5.8.0)</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Fri Apr 26 13:07:55 PDT 2024</date>
-                          <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
+                          <date>Sat Aug 24 09:31:37 PDT 2024</date>
+                          <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Fri Apr 26 21:59:52 PDT 2024</date>
-                          <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
+                          <date>Sat Aug 24 15:24:59 PDT 2024</date>
+                          <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Fri May 10 20:25:10 PDT 2024</date>
-                      <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
+                      <date>Fri Sep 27 18:48:57 PDT 2024</date>
+                      <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Fri May 17 21:33:06 PDT 2024</date>
-                  <filename>/Users/svl/Library/CloudStorage/GoogleDrive-jamesbrassill@siliconvalleylines.com/Shared drives/SVL Shared Drive/SLVConfig/svl-config.xml</filename>
+                  <date>Fri Sep 27 22:47:40 PDT 2024</date>
+                  <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Sat Jun 01 09:25:48 PDT 2024</date>
+              <date>Fri Oct 25 22:28:17 PDT 2024</date>
               <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Sat Jun 01 14:53:26 PDT 2024</date>
+          <date>Sat Nov 09 15:31:39 PST 2024</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Sat Jun 01 14:56:29 PDT 2024</date>
+      <date>Fri Jan 31 19:32:38 PST 2025</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
     </operation>
   </filehistory>
-  <!--Written by JMRI version 5.7.4+Rb028ee0124 on Sat Jun 01 14:56:29 PDT 2024-->
+  <!--Written by JMRI version 5.11.2+R741bb1427e on Fri Jan 31 19:32:38 PST 2025-->
 </layout-config>
