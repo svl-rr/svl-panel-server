@@ -637,6 +637,7 @@
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 380,314.0945 -120,-120"
        id="path4578"
+       class="sensor PasoIndustrialLead"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc" />
     <path
@@ -718,6 +719,7 @@
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 520,514.0945 20,20 h 20"
          id="TO550.R"
+          class="sensor PasoIndustrialLeadSwitch"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
