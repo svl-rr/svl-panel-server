@@ -2285,7 +2285,7 @@
         <path
            inkscape:label="#path4221"
            style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="m 290,554.0945 20,20"
+           d="m 310,574.0945 -20,-20"
            id="TO129.N"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cc"
@@ -2294,7 +2294,7 @@
            sodipodi:nodetypes="cc"
            inkscape:connector-curvature="0"
            id="TO129.R"
-           d="m 280,574.0945 h 30"
+           d="M 310,574.0945 H 280"
            style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            inkscape:label="#path4221"
            onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -2305,7 +2305,7 @@
         <path
            inkscape:label="#path4221"
            style="display:inline;opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           d="M 310,574.0945 H 280"
+           d="m 280,574.0945 h 30"
            id="TO128.N"
            inkscape:connector-curvature="0"
            sodipodi:nodetypes="cc"
@@ -2314,7 +2314,7 @@
            sodipodi:nodetypes="cc"
            inkscape:connector-curvature="0"
            id="TO128.R"
-           d="m 310,574.0945 -20,-20"
+           d="m 290,554.0945 20,20"
            style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            inkscape:label="#path4221"
            onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
