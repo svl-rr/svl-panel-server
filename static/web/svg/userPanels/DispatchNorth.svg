@@ -3118,6 +3118,7 @@
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="BLOCK574B"
+       class="sensor PasoMain"
        d="M 960,354.094 H 840"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        onclick="userClickChangeToNextState(evt.target.id);">
