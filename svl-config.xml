@@ -25,6 +25,10 @@
       <userName>BayshoreSingle</userName>
     </sensor>
     <sensor inverted="false">
+      <systemName>MS02.01.57.40.00.EB.00.36;02.01.57.40.00.EB.00.37</systemName>
+      <userName>PasoMain</userName>
+    </sensor>
+    <sensor inverted="false">
       <systemName>MS05.01.01.01.47.02.00.40;05.01.01.01.47.02.00.41</systemName>
       <userName>IgoNB</userName>
     </sensor>
@@ -1261,7 +1265,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA102</systemName>
     </memory>
-    <memory value="N/A:Authorized NB:801BAYNOW">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA130</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1282,7 +1286,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA173</systemName>
     </memory>
-    <memory value="N/A:Occupied NB:801BAYNOW">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA174</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1312,7 +1316,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA277</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:808WINBAK">
+    <memory value="N/A:Occupied SB:808WINBAK">
       <systemName>IMBA278</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1336,10 +1340,10 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA332</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:444SILNOWJAS">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA335</systemName>
     </memory>
-    <memory value="N/A:Authorized SB:444SILNOWJAS">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA448</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1414,7 +1418,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA726</systemName>
     </memory>
-    <memory value="10:35 PM">
+    <memory value="3:28 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="17">
@@ -1423,46 +1427,46 @@
     <memory value="false">
       <systemName>IMMAINLINE_LOCKED</systemName>
     </memory>
-    <memory value="S3">
+    <memory value="S4">
       <systemName>IMMIRRORED_TRAIN_SELECTION</systemName>
     </memory>
-    <memory value="299BAKWIN">
+    <memory value="255BAYKLM">
       <systemName>IMN1</systemName>
     </memory>
-    <memory value="443JASWIN">
+    <memory value="">
       <systemName>IMN2</systemName>
     </memory>
     <memory value="">
       <systemName>IMN3</systemName>
     </memory>
-    <memory value="1209BAYKLM">
+    <memory value="801BAYNOW">
       <systemName>IMN4</systemName>
     </memory>
     <memory value="">
       <systemName>IMN5</systemName>
     </memory>
-    <memory value="1205BAYWIN">
+    <memory value="443JASNOWSIL">
       <systemName>IMN6</systemName>
     </memory>
-    <memory value="801BAYNOW">
+    <memory value="631BAKKLM">
       <systemName>IMN7</systemName>
     </memory>
     <memory value="">
       <systemName>IMN8</systemName>
     </memory>
-    <memory value="">
+    <memory value="dispatch">
       <systemName>IMO1</systemName>
     </memory>
-    <memory value="444">
+    <memory value="750">
       <systemName>IMO2</systemName>
     </memory>
-    <memory value="">
+    <memory value="BYS">
       <systemName>IMO3</systemName>
     </memory>
-    <memory value="">
+    <memory value="692">
       <systemName>IMO4</systemName>
     </memory>
-    <memory value="">
+    <memory value="4089">
       <systemName>IMO5</systemName>
     </memory>
     <memory value="">
@@ -1477,34 +1481,34 @@
     <memory value="1.0">
       <systemName>IMRATEFACTOR</systemName>
     </memory>
-    <memory value="">
+    <memory value="222WINNOWJAS">
       <systemName>IMS1</systemName>
     </memory>
-    <memory value="236NOWJAS">
+    <memory value="278WINNIW">
       <systemName>IMS2</systemName>
     </memory>
-    <memory value="444SILNOWJAS">
+    <memory value="">
       <systemName>IMS3</systemName>
     </memory>
-    <memory value="802NOWBAY">
+    <memory value="">
       <systemName>IMS4</systemName>
     </memory>
-    <memory value="">
+    <memory value="444WINJAS">
       <systemName>IMS5</systemName>
     </memory>
-    <memory value="">
+    <memory value="216NOWBAK">
       <systemName>IMS6</systemName>
     </memory>
-    <memory value="">
+    <memory value="236NOWJAS">
       <systemName>IMS7</systemName>
     </memory>
     <memory value="">
       <systemName>IMS8</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="DARK">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="DARK">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1594,7 +1598,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_HEMET_DWARF</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN</systemName>
     </memory>
     <memory value="RED">
@@ -1708,7 +1712,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_UPPER</systemName>
     </memory>
     <memory value="AMTK 161">
@@ -1927,13 +1931,13 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA100B</systemName>
     </memory>
-    <memory value="N:Authorized NB:801BAYNOW">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA101</systemName>
     </memory>
-    <memory value="N:Authorized NB:801BAYNOW">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA125</systemName>
     </memory>
-    <memory value="N:Authorized NB:801BAYNOW">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA126</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1945,7 +1949,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA129</systemName>
     </memory>
-    <memory value="N:Authorized NB:801BAYNOW">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA175</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1984,13 +1988,13 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA326</systemName>
     </memory>
-    <memory value="N:Authorized SB:444SILNOWJAS">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA327</systemName>
     </memory>
-    <memory value="R:Authorized SB:444SILNOWJAS">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA328</systemName>
     </memory>
-    <memory value="R:Authorized SB:444SILNOWJAS">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA329</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -2125,7 +2129,7 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:751</systemName>
     </memory>
-    <memory value="http://layout.siliconvalleylines.com:30008/stream/video.mjpeg">
+    <memory value="">
       <systemName>IMWTVIDEOURL:759</systemName>
     </memory>
     <memory value="">
@@ -2167,7 +2171,10 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:1325</systemName>
     </memory>
-    <memory value="">
+    <memory value="http://layout.siliconvalleylines.com:30007/stream/video.mjpeg">
+      <systemName>IMWTVIDEOURL:1505</systemName>
+    </memory>
+    <memory value="http://layout.siliconvalleylines.com:30003/stream/video.mjpeg">
       <systemName>IMWTVIDEOURL:1507</systemName>
     </memory>
     <memory value="">
@@ -2212,13 +2219,13 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:2800</systemName>
     </memory>
-    <memory value="">
+    <memory value="http://layout.siliconvalleylines.com:30003/stream/video.mjpeg">
       <systemName>IMWTVIDEOURL:2916</systemName>
     </memory>
     <memory value="">
       <systemName>IMWTVIDEOURL:3014</systemName>
     </memory>
-    <memory value="http://layout.siliconvalleylines.com:30005/stream/video.mjpeg">
+    <memory value="">
       <systemName>IMWTVIDEOURL:3068</systemName>
     </memory>
     <memory value="">
@@ -2248,7 +2255,7 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:4106</systemName>
     </memory>
-    <memory value="http://layout.siliconvalleylines.com:30008/stream/video.mjpeg">
+    <memory value="">
       <systemName>IMWTVIDEOURL:4321</systemName>
     </memory>
     <memory value="">
@@ -2335,10 +2342,13 @@
     <memory>
       <systemName>IMWTVIDEOURL:7805</systemName>
     </memory>
+    <memory value="http://layout.siliconvalleylines.com:30003/stream/video.mjpeg">
+      <systemName>IMWTVIDEOURL:8078</systemName>
+    </memory>
     <memory>
       <systemName>IMWTVIDEOURL:8101</systemName>
     </memory>
-    <memory value="">
+    <memory value="http://layout.siliconvalleylines.com:30008/stream/video.mjpeg">
       <systemName>IMWTVIDEOURL:8671</systemName>
     </memory>
     <memory value="">
@@ -2917,104 +2927,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Fri Feb 28 17:34:46 PST 2025</date>
+      <date>Sat Apr 05 09:13:55 PDT 2025</date>
       <filename>PanelPro (v5.8.0)</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Fri Feb 28 17:34:49 PST 2025</date>
+      <date>Sat Apr 05 09:13:57 PDT 2025</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Fri Feb 07 18:46:24 PST 2025</date>
-          <filename>PanelPro (v5.10.0)</filename>
+          <date>Fri Feb 28 17:34:46 PST 2025</date>
+          <filename>PanelPro (v5.8.0)</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Fri Feb 07 18:46:28 PST 2025</date>
+          <date>Fri Feb 28 17:34:49 PST 2025</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Fri Jan 31 19:33:08 PST 2025</date>
+              <date>Fri Feb 07 18:46:24 PST 2025</date>
               <filename>PanelPro (v5.10.0)</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Fri Jan 31 19:33:09 PST 2025</date>
+              <date>Fri Feb 07 18:46:28 PST 2025</date>
               <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Fri Jan 31 16:31:51 PST 2025</date>
-                  <filename>PanelPro (v5.11.2)</filename>
+                  <date>Fri Jan 31 19:33:08 PST 2025</date>
+                  <filename>PanelPro (v5.10.0)</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Fri Jan 31 16:31:54 PST 2025</date>
+                  <date>Fri Jan 31 19:33:09 PST 2025</date>
                   <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Fri Nov 08 20:34:47 PST 2024</date>
-                      <filename>PanelPro (v5.9.4)</filename>
+                      <date>Fri Jan 31 16:31:51 PST 2025</date>
+                      <filename>PanelPro (v5.11.2)</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Fri Nov 08 20:34:48 PST 2024</date>
+                      <date>Fri Jan 31 16:31:54 PST 2025</date>
                       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Fri Oct 25 18:15:55 PDT 2024</date>
+                          <date>Fri Nov 08 20:34:47 PST 2024</date>
                           <filename>PanelPro (v5.9.4)</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Fri Oct 25 18:15:57 PDT 2024</date>
+                          <date>Fri Nov 08 20:34:48 PST 2024</date>
                           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Fri Oct 25 22:28:17 PDT 2024</date>
+                          <date>Sat Nov 09 15:31:39 PST 2024</date>
                           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Sat Nov 09 15:31:39 PST 2024</date>
+                      <date>Fri Jan 31 19:32:38 PST 2025</date>
                       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Fri Jan 31 19:32:38 PST 2025</date>
+                  <date>Fri Jan 31 23:16:05 PST 2025</date>
                   <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Fri Jan 31 23:16:05 PST 2025</date>
+              <date>Mon Feb 10 18:31:34 PST 2025</date>
               <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Mon Feb 10 18:31:34 PST 2025</date>
+          <date>Fri Feb 28 22:35:17 PST 2025</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Feb 28 22:35:17 PST 2025</date>
+      <date>Sat Apr 05 15:28:43 PDT 2025</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
     </operation>
   </filehistory>
-  <!--Written by JMRI version 5.8+Rbc21ce2ce7 on Fri Feb 28 22:35:17 PST 2025-->
+  <!--Written by JMRI version 5.8+Rbc21ce2ce7 on Sat Apr 05 15:28:43 PDT 2025-->
 </layout-config>
