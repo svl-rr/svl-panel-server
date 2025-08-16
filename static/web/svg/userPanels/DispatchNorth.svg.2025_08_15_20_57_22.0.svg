@@ -6,7 +6,7 @@
    height="800.11426"
    id="svg2"
    version="1.1"
-   inkscape:version="1.3 (0e150ed, 2023-07-21)"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
    sodipodi:docname="DispatchNorth.svg"
    onload="init(evt)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -290,16 +290,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.9983453"
-     inkscape:cx="607.50524"
+     inkscape:cx="888.97098"
      inkscape:cy="421.19695"
      inkscape:document-units="px"
-     inkscape:current-layer="backgroundLayer"
+     inkscape:current-layer="trainListsLayer"
      showgrid="true"
-     inkscape:window-width="1920"
-     inkscape:window-height="938"
-     inkscape:window-x="1080"
+     inkscape:window-width="1792"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
      inkscape:window-y="25"
-     inkscape:window-maximized="1"
+     inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
      inkscape:snap-bbox="false"
@@ -359,29 +359,6 @@
        height="800.11426"
        x="0"
        y="312.24738" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:none"
-       x="624.94141"
-       y="609.45679"
-       id="text4070-9-7"
-       inkscape:label="#text4498"><tspan
-         sodipodi:role="line"
-         x="624.94141"
-         y="609.45679"
-         style="font-size:16px;line-height:1.25"
-         id="tspan1-9">CP</tspan><tspan
-         sodipodi:role="line"
-         x="624.94141"
-         y="629.45679"
-         style="font-size:16px;line-height:1.25"
-         id="tspan2-3">Showers</tspan></text>
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       id="path4046-7"
-       d="m 650.31678,643.09277 v 60"
-       style="display:inline;opacity:0.5;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 2;stroke-dashoffset:0;stroke-opacity:1" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -2640,15 +2617,13 @@
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 560,534.0945 h -20 l -20,-20"
          id="TO600.N"
-         class="sensor CPShowers"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
          id="TO600.R"
-         class="sensor CPShowers"
-         d="M 570,534.20876 520,534.0945"
+         d="M 560,534.0945 H 520"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          inkscape:label="#path4221"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
@@ -2838,7 +2813,6 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path3858"
-       class="sensor PasoMain"
        onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title4246">Unauthorized</title>
@@ -3106,12 +3080,11 @@
     </path>
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 800,354.094 650,353.97977"
+       d="m 800,354.094 -160,1e-5"
        id="BLOCK599"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
-       class="sensor RavineMain"
        onclick="userClickChangeToNextState(evt.target.id);">
       <title
          id="title3209">Unauthorized</title>

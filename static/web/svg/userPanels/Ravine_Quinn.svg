@@ -6,7 +6,7 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
    sodipodi:docname="Ravine_Quinn.svg"
    onload="init(evt)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -26,7 +26,7 @@
      xlink:href="/web/svg/core/PanelCommon.js"
      id="script_common"
      type="application/ecmascript" />
-      <script
+  <script
      xlink:href="/web/svg/core/FieldPanelCommon.js"
      id="field_panel_common"
      type="application/ecmascript" />
@@ -286,16 +286,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.0364676"
-     inkscape:cx="562.24808"
-     inkscape:cy="265.9016"
+     inkscape:zoom="1.0182338"
+     inkscape:cx="646.21701"
+     inkscape:cy="448.32533"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlinePanelLinkLayer"
+     inkscape:current-layer="textLayer"
      showgrid="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1027"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:window-height="938"
+     inkscape:window-x="1081"
+     inkscape:window-y="90"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -326,7 +326,8 @@
        spacingx="10"
        spacingy="10"
        originx="0"
-       originy="0" />
+       originy="0"
+       units="px" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -352,6 +353,31 @@
        height="690.11475"
        x="0"
        y="312.24738" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="1019.8229"
+       y="86.441948"
+       id="text4824-2"
+       transform="rotate(45)"><tspan
+         id="tspan4826-4"
+         sodipodi:role="line"
+         x="1019.8229"
+         y="86.441948"
+         style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:0.1">Control Point</tspan><tspan
+         sodipodi:role="line"
+         x="1019.8229"
+         y="106.44195"
+         style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle;stroke-width:0.1"
+         id="tspan1">Showers</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4798-7"
+       class="sensor CPShowers"
+       d="M 659.74822,832.10672 560,732.24738"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:label="#path4221" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -359,6 +385,12 @@
      inkscape:label="Text"
      transform="translate(0,-3.9797589)"
      style="display:inline">
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path4046-7"
+       d="m 584.11611,400.47687 -48.23223,47.00579"
+       style="display:inline;opacity:0.5;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 2;stroke-dashoffset:0;stroke-opacity:1" />
     <a
        xlink:href="Greeley_Gotham.svg"
        id="a3251">
@@ -518,6 +550,7 @@
     <path
        inkscape:connector-curvature="0"
        id="path5607"
+       class="sensor PasoMain"
        d="m 250,174.0945 h 40"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
@@ -526,14 +559,15 @@
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        d="m 689.74822,553.8391 -30,-30"
        id="path3240"
+       class="sensor CPShowers"
        inkscape:connector-curvature="0" />
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
        id="path4798"
-       class="sensor RavineMain"
-       d="m 659.93056,524.02506 -330,-330"
-       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       class="sensor PasoMain"
+       d="M 560,423.97976 329.99707,193.97943"
+       style="display:inline;fill:none;stroke:#ffffff;stroke-width:9.99532;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path4221" />
     <g
        style="display:inline"
@@ -553,7 +587,7 @@
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          d="m 520,514.0945 20,20 h 20"
          id="TO575.R"
-         class="sensor RavineMain"
+         class="sensor PasoMain"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
     </g>
@@ -664,14 +698,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="806.18292"
-       y="-113.05591"
+       x="572.94897"
+       y="-114.34544"
        id="text4824"
        transform="rotate(45)"><tspan
          id="tspan4826"
          sodipodi:role="line"
-         x="806.18292"
-         y="-113.05591"
+         x="572.94897"
+         y="-114.34544"
          style="font-size:16px;line-height:1.25;stroke-width:0.1">Ravine</tspan></text>
     <text
        transform="rotate(45)"

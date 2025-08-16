@@ -6,7 +6,7 @@
    height="690.11475"
    id="svg2"
    version="1.1"
-   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
    sodipodi:docname="Victoria.svg"
    onload="init(evt)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -283,16 +283,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.89571167"
-     inkscape:cx="370.65499"
+     inkscape:cx="370.09677"
      inkscape:cy="332.13813"
      inkscape:document-units="px"
      inkscape:current-layer="trackNameLayer"
      showgrid="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1001"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
+     inkscape:window-height="1080"
+     inkscape:window-x="1080"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
      inkscape:snap-bbox="false"
@@ -320,7 +320,10 @@
        snapvisiblegridlinesonly="true"
        dotted="false"
        spacingx="10px"
-       spacingy="10px" />
+       spacingy="10px"
+       originx="0"
+       originy="0"
+       units="px" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -708,6 +711,14 @@
        d="m 90,374.0945 30,-30"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
        sodipodi:nodetypes="cc" />
+    <path
+       inkscape:label="#path4221"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 600,154.0945 H 480"
+       id="path1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       onclick="TeamTrackPath()" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -922,13 +933,18 @@
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="410"
-       y="140.11481"
+       y="120.11481"
        id="text3543"><tspan
          id="tspan3545"
          sodipodi:role="line"
          x="410"
+         y="120.11481"
+         style="font-size:16px;line-height:1.25">Goodenough</tspan><tspan
+         sodipodi:role="line"
+         x="410"
          y="140.11481"
-         style="font-size:16px;line-height:1.25">Ice Plant</tspan></text>
+         style="font-size:16px;line-height:1.25"
+         id="tspan2">  Groceries</tspan></text>
     <text
        id="text3547"
        y="240.11481"
@@ -973,5 +989,16 @@
          x="800"
          y="240.11481"
          style="font-size:16px;line-height:1.25">Old Main Line</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="534"
+       y="140.11481"
+       id="text1"><tspan
+         id="tspan1"
+         sodipodi:role="line"
+         x="534"
+         y="140.11481"
+         style="font-size:16px;line-height:1.25">Ice Plant</tspan></text>
   </g>
 </svg>
