@@ -20,10 +20,10 @@
   <title
      id="title1">Nowheres Hump (Marshall)</title>
   <script
-     xlink:href="/web/svg/core/ServerComms.js"
+     xlink:href="../core/ServerComms.js"
      id="script3331" />
   <script
-     xlink:href="/web/svg/core/PanelCommon.js"
+     xlink:href="../core/PanelCommon.js"
      type="application/ecmascript"
      id="script_common" />
   <script
@@ -522,14 +522,14 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 440,414.0945 -20,0 -20,-20"
-         id="TO439.N"
+         id="TO439.R"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
       <path
          onclick="turnoutSegmentClicked(evt.currentTarget.id)"
          sodipodi:nodetypes="cc"
          inkscape:connector-curvature="0"
-         id="TO439.R"
+         id="TO439.N"
          d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221" />
@@ -1077,14 +1077,14 @@
          inkscape:label="#path4221"
          style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          d="m 440,434.0945 c -13.33334,-13.33333 -26.66667,-26.66667 -40,-40"
-         id="TO441.R"
+         id="TO441.N"
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="cc"
          onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
       <path
          sodipodi:nodetypes="ccc"
          inkscape:connector-curvature="0"
-         id="TO441.N"
+         id="TO441.R"
          d="m 440,414.0945 -20,0 -20,-20"
          style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
          inkscape:label="#path4221"

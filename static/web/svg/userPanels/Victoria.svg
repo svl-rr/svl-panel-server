@@ -20,10 +20,10 @@
   <title
      id="title1">Victoria</title>
   <script
-     xlink:href="/web/svg/core/ServerComms.js"
+     xlink:href="../core/ServerComms.js"
      id="script3331" />
   <script
-     xlink:href="/web/svg/core/PanelCommon.js"
+     xlink:href="../core/PanelCommon.js"
      type="application/ecmascript"
      id="script_common" />
   <script
@@ -283,15 +283,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.89571167"
-     inkscape:cx="370.09677"
-     inkscape:cy="332.13813"
+     inkscape:cx="370.65499"
+     inkscape:cy="331.57992"
      inkscape:document-units="px"
-     inkscape:current-layer="trackNameLayer"
+     inkscape:current-layer="backgroundLayer"
      showgrid="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1080"
+     inkscape:window-height="927"
      inkscape:window-x="1080"
-     inkscape:window-y="0"
+     inkscape:window-y="31"
      inkscape:window-maximized="0"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
@@ -919,17 +919,6 @@
      transform="translate(0,-5.8839113e-5)"
      style="display:inline">
     <text
-       id="text3302"
-       y="140.11481"
-       x="200"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         y="140.11481"
-         x="200"
-         sodipodi:role="line"
-         id="tspan3304"
-         style="font-size:16px;line-height:1.25">Rosner Rock &amp; Coal</tspan></text>
-    <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        x="410"
@@ -945,6 +934,33 @@
          y="140.11481"
          style="font-size:16px;line-height:1.25"
          id="tspan2">  Groceries</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="560.95233"
+       y="119.57349"
+       id="text1"><tspan
+         id="tspan1"
+         sodipodi:role="line"
+         x="560.95233"
+         y="119.57349"
+         style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle">Dagone' </tspan><tspan
+         sodipodi:role="line"
+         x="560.95233"
+         y="139.57349"
+         style="font-size:16px;line-height:1.25;text-align:center;text-anchor:middle"
+         id="tspan3">Corporation</tspan></text>
+    <text
+       id="text3302"
+       y="140.11481"
+       x="200"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         y="140.11481"
+         x="200"
+         sodipodi:role="line"
+         id="tspan3304"
+         style="font-size:16px;line-height:1.25">Rosner Rock &amp; Coal</tspan></text>
     <text
        id="text3547"
        y="240.11481"
@@ -989,16 +1005,5 @@
          x="800"
          y="240.11481"
          style="font-size:16px;line-height:1.25">Old Main Line</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="534"
-       y="140.11481"
-       id="text1"><tspan
-         id="tspan1"
-         sodipodi:role="line"
-         x="534"
-         y="140.11481"
-         style="font-size:16px;line-height:1.25">Ice Plant</tspan></text>
   </g>
 </svg>

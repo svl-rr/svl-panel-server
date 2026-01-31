@@ -6,8 +6,8 @@ var socketStatus = SOCKET_DISCONNECTED;
 var jmriSocket = null;
 var nodeSocket = null;
 
-var NODE_SOCKET_PORT = 3000;
-var JMRI_SOCKET_PORT = 12080;
+var NODE_SOCKET_PORT = 3000; 
+var JMRI_SOCKET_PORT = 3000;
 
 // Object types we can send to the server
 var SERVER_TYPE_TURNOUT = "turnout";
@@ -41,10 +41,10 @@ function initSocketInstance()
 {
 	if(socketStatus == SOCKET_DISCONNECTED)
 	{
-		if(window.location.href.search(NODE_SOCKET_PORT) != -1)
-			initNodeSocketInstance();
-		else if(window.location.href.search(JMRI_SOCKET_PORT) != -1)
+		if(window.location.href.search(JMRI_SOCKET_PORT) != -1)
 			initJMRISocketInstance();
+		else if(window.location.href.search(NODE_SOCKET_PORT) != -1)
+			initNodeSocketInstance();
 		else
 			setPanelError("Could not identify server type during socket initialization.");
 	}

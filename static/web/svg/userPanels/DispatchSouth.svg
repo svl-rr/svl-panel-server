@@ -20,19 +20,19 @@
   <title
      id="title1">Dispatch South</title>
   <script
-     xlink:href="/web/svg/core/DispatchCommon.js"
+     xlink:href="../core/DispatchCommon.js"
      id="script3268" />
   <script
      xlink:href="DispatchSouth.js"
      id="script3225" />
   <script
-     xlink:href="/web/svg/core/ServerComms.js"
+     xlink:href="../core/ServerComms.js"
      id="script3094" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
-     xlink:href="/web/svg/core/PanelCommon.js"
+     xlink:href="../core/PanelCommon.js"
      type="application/ecmascript"
      id="script_common" />
   <script

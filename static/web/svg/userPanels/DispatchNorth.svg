@@ -26,10 +26,10 @@
      xlink:href="DispatchNorth.js"
      id="script3184" />
   <script
-     xlink:href="/web/svg/core/ServerComms.js"
+     xlink:href="../core/ServerComms.js"
      id="script3094" />
   <script
-     xlink:href="/web/svg/core/PanelCommon.js"
+     xlink:href="../core/PanelCommon.js"
      id="script_common"
      type="application/ecmascript" />
   <script
@@ -37,7 +37,7 @@
      id="script_panelSpecific"
      type="application/ecmascript" />
   <script
-     xlink:href="/web/svg/core/DispatchCommon.js"
+     xlink:href="../core/DispatchCommon.js"
      id="script3208"
      type="application/ecmascript" />
   <defs
