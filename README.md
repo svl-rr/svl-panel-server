@@ -1,25 +1,10 @@
 #svl-panel-server
 
-A web-based control panel server which allows multiple simultaneous web clients to work with [JMRI][]. At this point the server is used only to provide support to 1st gen iPads, which can not communicate with JMRI directly via websockets.
+A web-based control panel server which allows multiple simultaneous web clients to work with [JMRI][]. This webserver is no longer a server, JMRI hosts the files and you update the panels SVG files via Inkscape and VS Code.
 
-_NOTE: The panels are designed to work only at the [Silicon Valley Lines Model Railroad Club][]. You can replace the files in userPanels with your own to control your own layout (building upon the format as described in the docs directory)._
+_NOTE: The panels are designed to work only at the [Silicon Valley Lines Model Railroad Club][]. You can replace the files in userPanels with your own to control your own layout (building upon the format as described in the docs directory). Place these files in your JMRI prefs folder so they do not get wiped out during updates on Mac and Linux.
 
-##How Does it work?
-svl-panel-server is built upon [connect][] and [socket.io][], and relays [JSON][] messages to the [JMRI][] miniWebServer via WebSockets.
-Server-side and client-side JavaScript is used to glue everything together.
-
-Each client establishes a [socket.io][] connection to this server. The client sends  messages via the connection to either look up or manipulate the layout state. Whenever the state of the layout changes, each connected client receives update message to keep the user interfaces in synch everywhere.
-
-##Installing the Software
-* Install [JMRI][]
-* Install [nodejs][]
-* Download The Sources
-* Install required modules with "npm install"
-
-##Running the Server
-Launch JMRI and start the miniWebServer before running via:
-
-	node app.js
+How to use: Coming shortly.
 
 ##Software License
 
