@@ -4,8 +4,8 @@
   <jmriversion>
     <major>5</major>
     <minor>15</minor>
-    <test>1</test>
-    <modifier />
+    <test>3</test>
+    <modifier>plus</modifier>
   </jmriversion>
   <sensors class="jmri.jmrix.internal.configurexml.InternalSensorManagerXml">
     <defaultInitialState>unknown</defaultInitialState>
@@ -19,12 +19,20 @@
   </sensors>
   <sensors class="jmri.jmrix.openlcb.configurexml.OlcbSensorManagerXml">
     <sensor inverted="false">
-      <systemName>MS02.01.2C.06.0E.00.00.67;02.01.2C.06.0E.00.00.66</systemName>
+      <systemName>MS00.09.00.99.00.19.00.06;00.09.00.99.00.19.00.07</systemName>
       <userName>SiliconMain</userName>
     </sensor>
     <sensor inverted="false">
-      <systemName>MS02.01.2C.06.0E.00.00.7F;02.01.2C.06.0E.00.00.7E</systemName>
+      <systemName>MS00.09.00.99.00.19.00.0C;00.09.00.99.00.19.00.0D</systemName>
       <userName>SiliconSiding</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS02.01.2C.06.0E.00.00.67;02.01.2C.06.0E.00.00.66</systemName>
+      <userName>SiliconMain (Not used 2/13/26 for Block8 Testing)</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS02.01.2C.06.0E.00.00.7F;02.01.2C.06.0E.00.00.7E</systemName>
+      <userName>SiliconSiding (Not used 2/13/26 for Block8 Testing)</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>MS02.01.2C.06.0E.00.00.97;02.01.2C.06.0E.00.00.96</systemName>
@@ -1430,7 +1438,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA726</systemName>
     </memory>
-    <memory value="9:09 PM">
+    <memory value="9:18 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="17">
@@ -1517,13 +1525,13 @@
     <memory value="">
       <systemName>IMS8</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_LOWER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_BRANCH_TO_DAYTON</systemName>
     </memory>
     <memory value="RED">
@@ -1589,10 +1597,10 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="FLASHING_GREEN">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1601,25 +1609,25 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_HEMET_DWARF</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_SB_MAIN</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_UPPER</systemName>
     </memory>
     <memory value="GREEN">
@@ -1637,22 +1645,22 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_SIDING_TO_IGO_DWARF</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_FRONT</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_LOWER</systemName>
     </memory>
     <memory value="YELLOW">
@@ -1667,22 +1675,22 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_NB_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_FRONT</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1694,13 +1702,13 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_KALAMAZOO_FRONT_TO_JERICO_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_FRONT</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_KALAMAZOO_TO_KAOS_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1718,10 +1726,10 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_LOWER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="GREEN">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -2873,6 +2881,10 @@
       <logixConditional systemName="IX:AUTO:0005C3" order="2" />
       <logixConditional systemName="IX:AUTO:0005C4" order="3" />
     </logix>
+    <logix userName="System Logix" enabled="yes">
+      <systemName>IX:SYS</systemName>
+      <userName>System Logix</userName>
+    </logix>
   </logixs>
   <conditionals class="jmri.managers.configurexml.DefaultConditionalManagerXml">
     <conditional systemName="IX:AUTO:0001C1" userName="set_green_green" antecedent="R1" logicType="1" triggerOnChange="yes">
@@ -2990,104 +3002,104 @@
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Fri Feb 06 17:14:10 PST 2026</date>
-      <filename>PanelPro (v5.15.1)</filename>
+      <date>Fri Feb 13 17:39:03 PST 2026</date>
+      <filename>PanelPro (v5.15.3)</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Fri Feb 06 17:14:12 PST 2026</date>
+      <date>Fri Feb 13 17:39:04 PST 2026</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Sat Dec 27 12:45:41 PST 2025</date>
+          <date>Fri Feb 06 17:14:10 PST 2026</date>
           <filename>PanelPro (v5.15.1)</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Sat Dec 27 12:45:43 PST 2025</date>
+          <date>Fri Feb 06 17:14:12 PST 2026</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Fri Aug 15 18:10:15 PDT 2025</date>
-              <filename>PanelPro (v5.12.0)</filename>
+              <date>Sat Dec 27 12:45:41 PST 2025</date>
+              <filename>PanelPro (v5.15.1)</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Fri Aug 15 18:10:17 PDT 2025</date>
+              <date>Sat Dec 27 12:45:43 PST 2025</date>
               <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Fri Aug 08 21:33:41 PDT 2025</date>
+                  <date>Fri Aug 15 18:10:15 PDT 2025</date>
                   <filename>PanelPro (v5.12.0)</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Fri Aug 08 21:33:42 PDT 2025</date>
+                  <date>Fri Aug 15 18:10:17 PDT 2025</date>
                   <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Sat Jul 26 09:31:14 PDT 2025</date>
-                      <filename>PanelPro (v5.8.0)</filename>
+                      <date>Fri Aug 08 21:33:41 PDT 2025</date>
+                      <filename>PanelPro (v5.12.0)</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Sat Jul 26 09:31:15 PDT 2025</date>
+                      <date>Fri Aug 08 21:33:42 PDT 2025</date>
                       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Fri Jun 20 19:13:18 PDT 2025</date>
+                          <date>Sat Jul 26 09:31:14 PDT 2025</date>
                           <filename>PanelPro (v5.8.0)</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Fri Jun 20 19:13:20 PDT 2025</date>
+                          <date>Sat Jul 26 09:31:15 PDT 2025</date>
                           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Fri Jun 20 21:02:26 PDT 2025</date>
+                          <date>Sat Jul 26 14:51:46 PDT 2025</date>
                           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Sat Jul 26 14:51:46 PDT 2025</date>
+                      <date>Fri Aug 08 21:59:56 PDT 2025</date>
                       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Fri Aug 08 21:59:56 PDT 2025</date>
+                  <date>Fri Aug 15 21:43:01 PDT 2025</date>
                   <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Fri Aug 15 21:43:01 PDT 2025</date>
+              <date>Sat Dec 27 12:53:14 PST 2025</date>
               <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Sat Dec 27 12:53:14 PST 2025</date>
+          <date>Fri Feb 06 21:09:44 PST 2026</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Feb 06 21:09:44 PST 2026</date>
+      <date>Fri Feb 13 21:18:27 PST 2026</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
     </operation>
   </filehistory>
-  <!--Written by JMRI version 5.15.1+R2bffbbee04 on Fri Feb 06 21:09:44 PST 2026-->
+  <!--Written by JMRI version 5.15.3plus+jenkins+20260206T1724Z+Rda16b99fa59 on Fri Feb 13 21:18:27 PST 2026-->
 </layout-config>
