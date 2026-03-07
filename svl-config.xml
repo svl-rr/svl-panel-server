@@ -4,7 +4,7 @@
   <jmriversion>
     <major>5</major>
     <minor>15</minor>
-    <test>3</test>
+    <test>4</test>
     <modifier>plus</modifier>
   </jmriversion>
   <sensors class="jmri.jmrix.internal.configurexml.InternalSensorManagerXml">
@@ -25,6 +25,30 @@
     <sensor inverted="false">
       <systemName>MS00.09.00.99.00.19.00.0C;00.09.00.99.00.19.00.0D</systemName>
       <userName>SiliconSiding</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS00.09.00.99.00.19.00.12;00.09.00.99.00.19.00.13</systemName>
+      <userName>SiliconIdealCement2</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS00.09.00.99.00.19.00.18;00.09.00.99.00.19.00.19</systemName>
+      <userName>SiliconIdealCement1</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS00.09.00.99.00.19.00.1E;00.09.00.99.00.19.00.1F</systemName>
+      <userName>SiliconStorage</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS00.09.00.99.00.19.00.24;00.09.00.99.00.19.00.25</systemName>
+      <userName>SiliconRunAround</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS00.09.00.99.00.19.00.2A;00.09.00.99.00.19.00.2B</systemName>
+      <userName>SiliconReeds</userName>
+    </sensor>
+    <sensor inverted="false">
+      <systemName>MS00.09.00.99.00.19.00.30;00.09.00.99.00.19.00.31</systemName>
+      <userName>SiliconBagHouse</userName>
     </sensor>
     <sensor inverted="false">
       <systemName>MS02.01.2C.06.0E.00.00.67;02.01.2C.06.0E.00.00.66</systemName>
@@ -1263,6 +1287,40 @@
       <userName>LoopToMtMarvellOuter2</userName>
     </turnout>
   </turnouts>
+  <reporters class="jmri.jmrix.openlcb.configurexml.OlcbReporterManagerXml">
+    <reporter>
+      <systemName>MR06.89.00.90.01.90.00.00</systemName>
+      <userName>Silicon</userName>
+    </reporter>
+    <reporter>
+      <systemName>MR06.89.00.90.01.91.00.00</systemName>
+      <userName>Silicon1</userName>
+    </reporter>
+    <reporter>
+      <systemName>MR06.89.00.90.01.92.00.00</systemName>
+      <userName>Silicon2</userName>
+    </reporter>
+    <reporter>
+      <systemName>MR06.89.00.90.01.93.00.00</systemName>
+      <userName>Silicon3</userName>
+    </reporter>
+    <reporter>
+      <systemName>MR06.89.00.90.01.94.00.00</systemName>
+      <userName>Silicon4</userName>
+    </reporter>
+    <reporter>
+      <systemName>MR06.89.00.90.01.95.00.00</systemName>
+      <userName>SiliconRunAround</userName>
+    </reporter>
+    <reporter>
+      <systemName>MR06.89.00.90.01.96.00.00</systemName>
+      <userName>SiliconReeds</userName>
+    </reporter>
+    <reporter>
+      <systemName>MR06.89.00.90.01.97.00.00</systemName>
+      <userName>SiliconBagHouse</userName>
+    </reporter>
+  </reporters>
   <memories class="jmri.managers.configurexml.DefaultMemoryManagerXml">
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA16</systemName>
@@ -1282,10 +1340,10 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA99</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized SB:220HALBAY">
       <systemName>IMBA102</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized SB:220HALBAY">
       <systemName>IMBA130</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1300,19 +1358,19 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA134</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized SB:220HALBAY">
       <systemName>IMBA150</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized SB:220HALBAY">
       <systemName>IMBA173</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized SB:220HALBAY">
       <systemName>IMBA174</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA177</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N/A:Authorized SB:220HALBAY">
       <systemName>IMBA178</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1336,7 +1394,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA277</systemName>
     </memory>
-    <memory value="N/A:Occupied SB:102WINNOWBAY">
+    <memory value="N/A:Authorized SB:802NOWBAY">
       <systemName>IMBA278</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1399,7 +1457,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA599</systemName>
     </memory>
-    <memory value="N/A:Occupied OOS:UNAUTHORIZED TRAIN!">
+    <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA602</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1438,7 +1496,7 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMBA726</systemName>
     </memory>
-    <memory value="9:18 PM">
+    <memory value="9:46 PM">
       <systemName>IMCURRENTTIME</systemName>
     </memory>
     <memory value="17">
@@ -1447,7 +1505,7 @@
     <memory value="false">
       <systemName>IMMAINLINE_LOCKED</systemName>
     </memory>
-    <memory value="S4">
+    <memory value="S1">
       <systemName>IMMIRRORED_TRAIN_SELECTION</systemName>
     </memory>
     <memory value="">
@@ -1462,7 +1520,7 @@
     <memory value="">
       <systemName>IMN4</systemName>
     </memory>
-    <memory value="220BAYHAL">
+    <memory value="">
       <systemName>IMN5</systemName>
     </memory>
     <memory value="">
@@ -1501,7 +1559,7 @@
     <memory value="1.0">
       <systemName>IMRATEFACTOR</systemName>
     </memory>
-    <memory value="">
+    <memory value="220HALBAY">
       <systemName>IMS1</systemName>
     </memory>
     <memory value="">
@@ -1510,7 +1568,7 @@
     <memory value="">
       <systemName>IMS3</systemName>
     </memory>
-    <memory value="802NOWBAY">
+    <memory value="">
       <systemName>IMS4</systemName>
     </memory>
     <memory value="">
@@ -1525,19 +1583,19 @@
     <memory value="">
       <systemName>IMS8</systemName>
     </memory>
-    <memory value="FLASHING_RED">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_LOWER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_BAKERSFIELD_TO_EAGLE_UPPER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_BRANCH_TO_DAYTON</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_DAYTON_INTERCHANGE_TO_EAGLE</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_DAYTON_MAIN_TO_EAGLE</systemName>
     </memory>
     <memory value="RED">
@@ -1546,28 +1604,28 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_DAYTON_SIDING_TO_EAGLE_UPPER</systemName>
     </memory>
-    <memory value="RED">
+    <memory value="DARK">
       <systemName>IMSIGNALHEAD_EAGLE_TO_DAYTON_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="DARK">
       <systemName>IMSIGNALHEAD_EAGLE_TO_DAYTON_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_EAGLE_TO_EBBETTS_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETS_TO_FRYTON_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETS_TO_FRYTON_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_EBBETTS_TO_EAGLE_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_EBBETTS_TO_EAGLE_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1576,10 +1634,10 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_NB_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="FLASHING_YELLOW">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_EBBETS</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_FRYTON_MAIN_TO_GREELEY</systemName>
     </memory>
     <memory value="RED">
@@ -1597,10 +1655,10 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_GREELEY_TO_FRYTON_UPPER</systemName>
     </memory>
-    <memory value="FLASHING_GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_GREELEY_TO_HALLELUJAH_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1609,7 +1667,7 @@
     <memory value="GREEN">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_GREELEY_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_HALLELUJAH_TO_IGO_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1621,13 +1679,13 @@
     <memory value="FLASHING_RED">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_NB_MAIN</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_HALLELUJAH_SB_MAIN</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_FRONT_UPPER</systemName>
     </memory>
     <memory value="GREEN">
@@ -1636,7 +1694,7 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_IGO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1645,25 +1703,25 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_SIDING_TO_IGO_DWARF</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_FRONT</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_IGO_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_FRONT_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_LOWER</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JACKSONVILLE_TO_JERICHO_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1675,19 +1733,19 @@
     <memory value="YELLOW">
       <systemName>IMSIGNALHEAD_JERICHO_NB_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_FRONT</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_JACKSONVILLE_REAR_UPPER</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_LOWER</systemName>
     </memory>
-    <memory value="FLASHING_YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_JERICHO_TO_KAOS_FRONT_UPPER</systemName>
     </memory>
     <memory value="RED">
@@ -1720,16 +1778,16 @@
     <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_INNER_TO_MTMARVELL</systemName>
     </memory>
-    <memory value="YELLOW">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_OUTER_TO_MTMARVELL</systemName>
     </memory>
     <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_LOWER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_LOOP_REAR_TO_KAOS_UPPER</systemName>
     </memory>
-    <memory value="GREEN">
+    <memory value="RED">
       <systemName>IMSIGNALHEAD_MTMARVELL_TO_LOOP_LOWER</systemName>
     </memory>
     <memory value="RED">
@@ -1936,7 +1994,7 @@
     <memory>
       <systemName>IMSVLVIDEOURL:HVSFS</systemName>
     </memory>
-    <memory value="no">
+    <memory value="yes">
       <systemName>IMSVL_DISPATCH_SIGNALING</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1951,13 +2009,13 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA100B</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="R:Authorized SB:220HALBAY">
       <systemName>IMTA101</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N:Authorized SB:220HALBAY">
       <systemName>IMTA125</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N:Authorized SB:220HALBAY">
       <systemName>IMTA126</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -1969,10 +2027,10 @@
     <memory value="N/A:Unauthorized:Unauthorized">
       <systemName>IMTA129</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="N:Authorized SB:220HALBAY">
       <systemName>IMTA175</systemName>
     </memory>
-    <memory value="N/A:Unauthorized:Unauthorized">
+    <memory value="R:Authorized SB:220HALBAY">
       <systemName>IMTA176</systemName>
     </memory>
     <memory value="N/A:Unauthorized:Unauthorized">
@@ -2095,7 +2153,7 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:161</systemName>
     </memory>
-    <memory value="http://layout.siliconvalleylines.com:30008/stream/video.mjpeg">
+    <memory value="">
       <systemName>IMWTVIDEOURL:217</systemName>
     </memory>
     <memory value="">
@@ -2185,7 +2243,10 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:912</systemName>
     </memory>
-    <memory value="http://layout.siliconvalleylines.com:30007/stream/video.mjpeg">
+    <memory value="">
+      <systemName>IMWTVIDEOURL:918</systemName>
+    </memory>
+    <memory value="">
       <systemName>IMWTVIDEOURL:943</systemName>
     </memory>
     <memory value="">
@@ -2221,7 +2282,7 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:1667</systemName>
     </memory>
-    <memory value="">
+    <memory value="http://layout.siliconvalleylines.com:30008/stream/video.mjpeg">
       <systemName>IMWTVIDEOURL:1753</systemName>
     </memory>
     <memory value="">
@@ -2251,7 +2312,7 @@
     <memory value="">
       <systemName>IMWTVIDEOURL:2752</systemName>
     </memory>
-    <memory value="http://layout.siliconvalleylines.com:30007/stream/video.mjpeg">
+    <memory value="">
       <systemName>IMWTVIDEOURL:2790</systemName>
     </memory>
     <memory value="">
@@ -2410,7 +2471,7 @@
     <memory>
       <systemName>IMWTVIDEOURL:7805</systemName>
     </memory>
-    <memory value="http://layout.siliconvalleylines.com:30005/stream/video.mjpeg">
+    <memory value="">
       <systemName>IMWTVIDEOURL:8078</systemName>
     </memory>
     <memory>
@@ -2999,107 +3060,135 @@
     </conditional>
   </conditionals>
   <timebase class="jmri.jmrit.simpleclock.configurexml.SimpleTimebaseXml" time="Fri Jul 20 19:39:02 PDT 2012" rate="1.0" startrate="1.0" run="yes" master="yes" sync="no" correct="no" display="no" startstopped="no" startrunning="yes" startsettime="no" startclockoption="0" showbutton="no" startsetrate="yes" />
+  <LayoutEditor class="jmri.jmrit.display.layoutEditor.configurexml.LayoutEditorXml" name="My Layout" x="0" y="30" windowheight="953" windowwidth="1920" panelheight="960" panelwidth="1901" sliders="no" scrollable="none" editable="yes" positionable="yes" controlling="yes" animating="yes" showhelpbar="no" drawgrid="yes" snaponadd="no" snaponmove="no" antialiasing="no" turnoutcircles="no" tooltipsnotedit="no" tooltipsinedit="yes" mainlinetrackwidth="4" xscale="1.0" yscale="1.0" sidetrackwidth="2" defaulttrackcolor="darkGray" defaultoccupiedtrackcolor="red" defaultalternativetrackcolor="white" defaulttextcolor="black" turnoutcirclecolor="black" turnoutcirclesize="4" turnoutdrawunselectedleg="yes" turnoutbx="20.0" turnoutcx="20.0" turnoutwid="10.0" xoverlong="30.0" xoverhwid="10.0" xovershort="10.0" autoblkgenerate="no" redBackground="192" greenBackground="192" blueBackground="192" gridSize="10" gridSize2nd="10" openDispatcher="no" useDirectTurnoutControl="no">
+    <layoutTrackDrawingOptions name="My Layout" class="jmri.jmrit.display.layoutEditor.configurexml.LayoutTrackDrawingOptionsXml">
+      <mainBallastColor>#000000</mainBallastColor>
+      <mainBallastWidth>0</mainBallastWidth>
+      <mainBlockLineDashPercentageX10>0</mainBlockLineDashPercentageX10>
+      <mainBlockLineWidth>4</mainBlockLineWidth>
+      <mainRailColor>#404040</mainRailColor>
+      <mainRailCount>1</mainRailCount>
+      <mainRailGap>0</mainRailGap>
+      <mainRailWidth>2</mainRailWidth>
+      <mainTieColor>#000000</mainTieColor>
+      <mainTieGap>0</mainTieGap>
+      <mainTieLength>0</mainTieLength>
+      <mainTieWidth>0</mainTieWidth>
+      <sideBallastColor>#000000</sideBallastColor>
+      <sideBallastWidth>0</sideBallastWidth>
+      <sideBlockLineDashPercentageX10>0</sideBlockLineDashPercentageX10>
+      <sideBlockLineWidth>2</sideBlockLineWidth>
+      <sideRailColor>#404040</sideRailColor>
+      <sideRailCount>1</sideRailCount>
+      <sideRailGap>0</sideRailGap>
+      <sideRailWidth>1</sideRailWidth>
+      <sideTieColor>#000000</sideTieColor>
+      <sideTieGap>0</sideTieGap>
+      <sideTieLength>0</sideTieLength>
+      <sideTieWidth>0</sideTieWidth>
+    </layoutTrackDrawingOptions>
+  </LayoutEditor>
   <filehistory>
     <operation>
       <type>app</type>
-      <date>Fri Feb 13 17:39:03 PST 2026</date>
-      <filename>PanelPro (v5.15.3)</filename>
+      <date>Fri Mar 06 16:57:16 PST 2026</date>
+      <filename>PanelPro (v5.15.4)</filename>
     </operation>
     <operation>
       <type>Load OK</type>
-      <date>Fri Feb 13 17:39:04 PST 2026</date>
+      <date>Fri Mar 06 16:57:17 PST 2026</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
       <filehistory>
         <operation>
           <type>app</type>
-          <date>Fri Feb 06 17:14:10 PST 2026</date>
-          <filename>PanelPro (v5.15.1)</filename>
+          <date>Sat Feb 28 09:54:40 PST 2026</date>
+          <filename>PanelPro (v5.15.3)</filename>
         </operation>
         <operation>
           <type>Load OK</type>
-          <date>Fri Feb 06 17:14:12 PST 2026</date>
+          <date>Sat Feb 28 09:54:41 PST 2026</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
           <filehistory>
             <operation>
               <type>app</type>
-              <date>Sat Dec 27 12:45:41 PST 2025</date>
-              <filename>PanelPro (v5.15.1)</filename>
+              <date>Fri Feb 27 18:27:44 PST 2026</date>
+              <filename>PanelPro (v5.15.3)</filename>
             </operation>
             <operation>
               <type>Load OK</type>
-              <date>Sat Dec 27 12:45:43 PST 2025</date>
+              <date>Fri Feb 27 18:27:46 PST 2026</date>
               <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
               <filehistory>
                 <operation>
                   <type>app</type>
-                  <date>Fri Aug 15 18:10:15 PDT 2025</date>
-                  <filename>PanelPro (v5.12.0)</filename>
+                  <date>Fri Feb 20 18:15:47 PST 2026</date>
+                  <filename>PanelPro (v5.15.3)</filename>
                 </operation>
                 <operation>
                   <type>Load OK</type>
-                  <date>Fri Aug 15 18:10:17 PDT 2025</date>
+                  <date>Fri Feb 20 18:15:48 PST 2026</date>
                   <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                   <filehistory>
                     <operation>
                       <type>app</type>
-                      <date>Fri Aug 08 21:33:41 PDT 2025</date>
-                      <filename>PanelPro (v5.12.0)</filename>
+                      <date>Fri Feb 13 17:39:03 PST 2026</date>
+                      <filename>PanelPro (v5.15.3)</filename>
                     </operation>
                     <operation>
                       <type>Load OK</type>
-                      <date>Fri Aug 08 21:33:42 PDT 2025</date>
+                      <date>Fri Feb 13 17:39:04 PST 2026</date>
                       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                       <filehistory>
                         <operation>
                           <type>app</type>
-                          <date>Sat Jul 26 09:31:14 PDT 2025</date>
-                          <filename>PanelPro (v5.8.0)</filename>
+                          <date>Fri Feb 06 17:14:10 PST 2026</date>
+                          <filename>PanelPro (v5.15.1)</filename>
                         </operation>
                         <operation>
                           <type>Load OK</type>
-                          <date>Sat Jul 26 09:31:15 PDT 2025</date>
+                          <date>Fri Feb 06 17:14:12 PST 2026</date>
                           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                         </operation>
                         <operation>
                           <type>Store</type>
-                          <date>Sat Jul 26 14:51:46 PDT 2025</date>
+                          <date>Fri Feb 06 21:09:44 PST 2026</date>
                           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                         </operation>
                       </filehistory>
                     </operation>
                     <operation>
                       <type>Store</type>
-                      <date>Fri Aug 08 21:59:56 PDT 2025</date>
+                      <date>Fri Feb 13 21:18:27 PST 2026</date>
                       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                     </operation>
                   </filehistory>
                 </operation>
                 <operation>
                   <type>Store</type>
-                  <date>Fri Aug 15 21:43:01 PDT 2025</date>
+                  <date>Fri Feb 20 20:58:38 PST 2026</date>
                   <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
                 </operation>
               </filehistory>
             </operation>
             <operation>
               <type>Store</type>
-              <date>Sat Dec 27 12:53:14 PST 2025</date>
+              <date>Fri Feb 27 19:58:59 PST 2026</date>
               <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
             </operation>
           </filehistory>
         </operation>
         <operation>
           <type>Store</type>
-          <date>Fri Feb 06 21:09:44 PST 2026</date>
+          <date>Sat Feb 28 15:41:47 PST 2026</date>
           <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
         </operation>
       </filehistory>
     </operation>
     <operation>
       <type>Store</type>
-      <date>Fri Feb 13 21:18:27 PST 2026</date>
+      <date>Fri Mar 06 21:46:21 PST 2026</date>
       <filename>/Users/svl/Documents/GitHub/svl-panel-server/svl-config.xml</filename>
     </operation>
   </filehistory>
-  <!--Written by JMRI version 5.15.3plus+jenkins+20260206T1724Z+Rda16b99fa59 on Fri Feb 13 21:18:27 PST 2026-->
+  <!--Written by JMRI version 5.15.4plus+jenkins+20260306T1945Z+Rec7d1f1fd75 on Fri Mar 06 21:46:21 PST 2026-->
 </layout-config>
