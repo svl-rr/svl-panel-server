@@ -36,6 +36,21 @@ var UNAUTHORIZED_COLOR = "white";
 
 var alwaysShowTrainID = true;
 
+// ── Unauthorized Occupancy Alarm ───────────────────────────────────────────
+// Sentinel train ID written when a block/turnout is occupied without an
+// authorization (see setDispatchSensorState). The alarm engine keys off it.
+var UNAUTHORIZED_TRAIN_LABEL = "UNAUTHORIZED TRAIN!";
+
+var ALARM_SOUND_ENABLED = true;          // set false to disable the audible beep
+var ALARM_FLASH_COLOR = "#ffff00";       // bright flash alternated with OCCUPIED_COLOR
+var ALARM_FLASH_MS = 500;                // flash half-period
+
+var activeAlarms = {};                   // auth name (e.g. "BA252") -> block/turnout number
+var alarmFlashTimerID = null;
+var alarmFlashOn = false;
+var alarmAcknowledged = false;           // banner click silences the beep until a new alarm
+var alarmAudioCtx = null;
+
 /* dispatchInit([Event] evt)
  * Called by PanelCommon.js to initialize dispatching separately
  */
@@ -189,12 +204,12 @@ function setDispatchSensorState(authName, currentAuthState, sensorID, sensorStat
 				var panelInstance = getPanelTurnoutFromDCCAddr(getDCCAddr(authName));
 		
 				if(panelInstance != null)
-					updateServerAuthorizationState(authName, panelInstance.getSVGState(), OCCUPIED_OOS_STATE, "UNAUTHORIZED TRAIN!");
+					updateServerAuthorizationState(authName, panelInstance.getSVGState(), OCCUPIED_OOS_STATE, UNAUTHORIZED_TRAIN_LABEL);
 				else
-					updateServerAuthorizationState(authName, "N", OCCUPIED_OOS_STATE, "UNAUTHORIZED TRAIN!");
+					updateServerAuthorizationState(authName, "N", OCCUPIED_OOS_STATE, UNAUTHORIZED_TRAIN_LABEL);
 			}
 			else
-				updateServerAuthorizationState(authName, null, OCCUPIED_OOS_STATE, "UNAUTHORIZED TRAIN!");
+				updateServerAuthorizationState(authName, null, OCCUPIED_OOS_STATE, UNAUTHORIZED_TRAIN_LABEL);
 		}
 	}
 	else if(sensorState == JMRI_SENSOR_INACTIVE)
@@ -453,6 +468,215 @@ function setDispatchAuthorization(name, route, state, trainID)
             success = setDispatchSVGLowLevel(DISPATCHSEGMENT_OBJID_PREFIX + blockNum + nextSubBlock);
         }
     }
+
+    // Re-evaluate the unauthorized-occupancy alarm for this object after its
+    // state has been applied. Guarded inside evaluateAlarm so it can never
+    // disrupt dispatch rendering.
+    evaluateAlarm(name);
+}
+
+// ── Unauthorized Occupancy Alarm engine ────────────────────────────────────
+
+/* evaluateAlarm([String] name)
+ * Adds/removes the dispatch object (block "BA###" or turnout "TA###") from the
+ * active-alarm set based on whether its stored train ID is the unauthorized
+ * sentinel, then refreshes the alarm UI.
+ */
+function evaluateAlarm(name)
+{
+    try
+    {
+        var auth = getDispatchLocalAuthorization(name);
+        var inAlarm = (auth != null) && (auth.trainID == UNAUTHORIZED_TRAIN_LABEL);
+        var was = activeAlarms.hasOwnProperty(name);
+
+        if(inAlarm && !was)
+        {
+            activeAlarms[name] = getDCCAddr(name);
+            alarmAcknowledged = false;          // re-arm the audible alert for a new alarm
+            updateAlarmUI(true);
+        }
+        else if(!inAlarm && was)
+        {
+            // Restore the cleared object to its non-flashing rendered state.
+            var num = activeAlarms[name];
+            delete activeAlarms[name];
+            restoreAlarmStyling(num);
+            updateAlarmUI(false);
+        }
+    }
+    catch(e)
+    {
+        console.log("evaluateAlarm error for " + name + ": " + e);
+    }
+}
+
+/* alarmBlockElements([String] num) -> [Array of SVGElement]
+ * The block segment + its A/B/... sub-segments for a block number.
+ */
+function alarmBlockElements(num)
+{
+    var els = [];
+    var base = svgDocument.getElementById(DISPATCHSEGMENT_OBJID_PREFIX + num);
+    if(base != null) els.push(base);
+    var suffix = 'A';
+    var seg = svgDocument.getElementById(DISPATCHSEGMENT_OBJID_PREFIX + num + suffix);
+    while(seg != null)
+    {
+        els.push(seg);
+        suffix = String.fromCharCode(suffix.charCodeAt(0) + 1);
+        seg = svgDocument.getElementById(DISPATCHSEGMENT_OBJID_PREFIX + num + suffix);
+    }
+    return els;
+}
+
+/* restoreAlarmStyling([String] num)
+ * Re-renders a block from its authoritative state so flash styling doesn't
+ * linger after the alarm clears.
+ */
+function restoreAlarmStyling(num)
+{
+    try
+    {
+        var els = alarmBlockElements(num);
+        for(var i = 0; i < els.length; i++)
+        {
+            removeStyleSubAttribute(els[i], "stroke-width");
+            setDispatchSVGLowLevel(els[i].id);
+        }
+    }
+    catch(e) { /* non-fatal */ }
+}
+
+/* alarmLabel([String] num) -> [String]
+ * Human-readable block label using the shared block-names.js when present.
+ */
+function alarmLabel(num)
+{
+    if(typeof window != "undefined" && window.SVL_BLOCK_NAMES && window.SVL_BLOCK_NAMES[num])
+        return window.SVL_BLOCK_NAMES[num] + " (" + num + ")";
+    return "Block " + num;
+}
+
+/* updateAlarmUI([Boolean] isNewAlarm)
+ * Shows/hides the alarm banner, sets its text, and starts/stops the flash
+ * timer. Beeps when a new alarm appears. Null-guarded for panels without the
+ * banner element.
+ */
+function updateAlarmUI(isNewAlarm)
+{
+    try
+    {
+        var names = Object.keys(activeAlarms);
+        var banner = (typeof svgDocument != "undefined") ? svgDocument.getElementById("alarmBanner") : null;
+
+        if(names.length > 0)
+        {
+            if(banner != null)
+            {
+                var labels = [];
+                for(var i = 0; i < names.length; i++) labels.push(alarmLabel(activeAlarms[names[i]]));
+                setSVGText("alarmBannerText", "⚠ UNAUTHORIZED OCCUPANCY: " + labels.join(", "));
+                banner.setAttribute("visibility", "visible");
+            }
+            if(alarmFlashTimerID == null)
+                flashAlarms();
+            if(isNewAlarm && ALARM_SOUND_ENABLED && !alarmAcknowledged)
+                beep();
+        }
+        else
+        {
+            if(banner != null) banner.setAttribute("visibility", "hidden");
+            if(alarmFlashTimerID != null)
+            {
+                window.clearTimeout(alarmFlashTimerID);
+                alarmFlashTimerID = null;
+            }
+            alarmFlashOn = false;
+        }
+    }
+    catch(e)
+    {
+        console.log("updateAlarmUI error: " + e);
+    }
+}
+
+/* flashAlarms()
+ * Recursive timer (mirrors handleFlashingSignals) that alternates the stroke of
+ * every alarmed block between OCCUPIED_COLOR and ALARM_FLASH_COLOR while any
+ * alarm is active, and pulses the banner.
+ */
+function flashAlarms()
+{
+    try
+    {
+        var names = Object.keys(activeAlarms);
+        if(names.length == 0)
+        {
+            alarmFlashTimerID = null;
+            return;
+        }
+
+        alarmFlashOn = !alarmFlashOn;
+        var color = alarmFlashOn ? ALARM_FLASH_COLOR : OCCUPIED_COLOR;
+
+        for(var i = 0; i < names.length; i++)
+        {
+            var els = alarmBlockElements(activeAlarms[names[i]]);
+            for(var j = 0; j < els.length; j++)
+            {
+                setStyleSubAttribute(els[j], "stroke", color);
+                setStyleSubAttribute(els[j], "stroke-width", alarmFlashOn ? "12" : "8");
+            }
+        }
+
+        var banner = svgDocument.getElementById("alarmBanner");
+        if(banner != null) banner.setAttribute("opacity", alarmFlashOn ? "1" : "0.55");
+
+        alarmFlashTimerID = window.setTimeout("flashAlarms()", ALARM_FLASH_MS);
+    }
+    catch(e)
+    {
+        alarmFlashTimerID = null;
+        console.log("flashAlarms error: " + e);
+    }
+}
+
+/* beep()
+ * Short Web Audio tone — no external asset. Silent on failure (audio may need a
+ * prior user gesture).
+ */
+function beep()
+{
+    try
+    {
+        if(alarmAudioCtx == null)
+        {
+            var Ctx = window.AudioContext || window.webkitAudioContext;
+            if(!Ctx) return;
+            alarmAudioCtx = new Ctx();
+        }
+        var osc = alarmAudioCtx.createOscillator();
+        var gain = alarmAudioCtx.createGain();
+        osc.type = "square";
+        osc.frequency.value = 880;
+        gain.gain.value = 0.12;
+        osc.connect(gain);
+        gain.connect(alarmAudioCtx.destination);
+        var t = alarmAudioCtx.currentTime;
+        osc.start(t);
+        osc.stop(t + 0.25);
+    }
+    catch(e) { /* audio is best-effort */ }
+}
+
+/* acknowledgeAlarms()
+ * Bound to the banner onclick. Silences the beep until a new alarm appears; the
+ * visual flashing continues until the condition clears.
+ */
+function acknowledgeAlarms()
+{
+    alarmAcknowledged = true;
 }
 
 function setDispatchSVGLowLevel(elemID)

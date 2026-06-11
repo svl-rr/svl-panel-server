@@ -37,6 +37,10 @@
      id="script_panelSpecific"
      type="application/ecmascript" />
   <script
+     xlink:href="../block-names.js"
+     id="script_blockNames"
+     type="application/ecmascript" />
+  <script
      xlink:href="../core/DispatchCommon.js"
      id="script3208"
      type="application/ecmascript" />
@@ -3629,5 +3633,23 @@
          x="90"
          y="80.114334"
          style="font-size:16px;line-height:1.25">Lock Mainline</tspan></text>
+  </g>
+  <g
+     id="alarmBanner"
+     visibility="hidden"
+     onclick="acknowledgeAlarms()"
+     style="cursor:pointer">
+    <rect
+       id="alarmBannerRect"
+       x="0"
+       y="0"
+       width="1047.9579"
+       height="44"
+       style="fill:#cc0000;fill-opacity:1;stroke:#ffff00;stroke-width:3" />
+    <text
+       id="alarmBannerText"
+       x="523.97895"
+       y="30"
+       style="font-family:'Trebuchet MS';font-weight:bold;font-size:24px;text-anchor:middle;fill:#ffffff">⚠ UNAUTHORIZED OCCUPANCY</text>
   </g>
 </svg>

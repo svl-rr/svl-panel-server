@@ -20,6 +20,10 @@
   <title
      id="title1">Dispatch South</title>
   <script
+     xlink:href="../block-names.js"
+     id="script_blockNames"
+     type="application/ecmascript" />
+  <script
      xlink:href="../core/DispatchCommon.js"
      id="script3268" />
   <script
@@ -5911,5 +5915,23 @@
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
     </g>
+  </g>
+  <g
+     id="alarmBanner"
+     visibility="hidden"
+     onclick="acknowledgeAlarms()"
+     style="cursor:pointer">
+    <rect
+       id="alarmBannerRect"
+       x="0"
+       y="0"
+       width="1047.9579"
+       height="44"
+       style="fill:#cc0000;fill-opacity:1;stroke:#ffff00;stroke-width:3" />
+    <text
+       id="alarmBannerText"
+       x="523.97895"
+       y="30"
+       style="font-family:'Trebuchet MS';font-weight:bold;font-size:24px;text-anchor:middle;fill:#ffffff">⚠ UNAUTHORIZED OCCUPANCY</text>
   </g>
 </svg>
