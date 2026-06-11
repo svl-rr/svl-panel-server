@@ -14,6 +14,12 @@ var mainLockTimebase = Math.PI*2/mainLockMod;
 var SERVER_NAME_DISPATCH_SIGNALING_ENABLED = "SVL_DISPATCH_SIGNALING";
 var dispatchSignalingEnabled = false;
 
+// When enabled, field/station panels surface the dispatcher's unauthorized
+// occupancy alarm. Shared flag (memory variable) toggled from the dispatch
+// panels, read by every panel — same mechanism as SVL_DISPATCH_SIGNALING.
+var SERVER_NAME_FIELD_AUTH_ALARM = "SVL_FIELD_AUTH_ALARM";
+var fieldAuthAlarmEnabled = false;
+
 // Constant id prefix for turnout objects
 var PANEL_TURNOUT_OBJID_PREFIX = "TO";
 var JMRI_TURNOUT_OBJID_PREFIX = "NT";
@@ -638,6 +644,17 @@ function handleSocketDataResponse(dataArray)
                     setStyleSubAttribute(bigButtonResults[btnIdx], 'fill', dispatchSignalingEnabled ? 'lime' : 'gray');
                 }
             }
+            else if((dataArray[i].type == SERVER_TYPE_DISPATCH) && (dataArray[i].name == SERVER_NAME_FIELD_AUTH_ALARM))
+            {
+                fieldAuthAlarmEnabled = (dataArray[i].value == 'yes');
+                var fieldBtnResults = svgDocument.getElementsByClassName(SERVER_NAME_FIELD_AUTH_ALARM);
+                for (var fbIdx = 0; fbIdx < fieldBtnResults.length; fbIdx++) {
+                    setStyleSubAttribute(fieldBtnResults[fbIdx], 'fill', fieldAuthAlarmEnabled ? 'lime' : 'gray');
+                }
+                // Let a field panel re-render its alarms when the flag flips.
+                if(typeof onFieldAuthAlarmToggled == 'function')
+                    onFieldAuthAlarmToggled();
+            }
             else if (dataArray[i].type == SERVER_TYPE_DISPATCH && dataArray[i].name.indexOf("IMSIGNALHEAD") != 0) {
                 // Transform "FLASHING_RED" to "red".
                 var value = dataArray[i].value.replace("FLASHING_", "").toLowerCase();
@@ -849,6 +866,9 @@ function getPanelObjectsToUpdate()
 
     // And the signaling mode
     serverGetArray.push(new ServerObject(SERVER_NAME_DISPATCH_SIGNALING_ENABLED, SERVER_TYPE_DISPATCH));
+
+    // And the field-panel unauthorized-occupancy alarm mode
+    serverGetArray.push(new ServerObject(SERVER_NAME_FIELD_AUTH_ALARM, SERVER_TYPE_DISPATCH));
 
     // Get dispatching items if this is a dispatching panel
     if(typeof getCommonDispatchStates == 'function')
@@ -1362,11 +1382,20 @@ function toggleDispatchSignaling()
 {
     // Create new empty array
     var panelChangeRequests = new Array();
-    
+
     // Add inverted mainline lock to array
     panelChangeRequests.push(new ServerObject(SERVER_NAME_DISPATCH_SIGNALING_ENABLED, SERVER_TYPE_DISPATCH, dispatchSignalingEnabled ? 'no' : 'yes'));
-    
+
     // Perform update
+    executePanelStateChangeRequestsLowLevel(panelChangeRequests, false);
+}
+
+function toggleFieldAuthAlarm()
+{
+    var panelChangeRequests = new Array();
+
+    panelChangeRequests.push(new ServerObject(SERVER_NAME_FIELD_AUTH_ALARM, SERVER_TYPE_DISPATCH, fieldAuthAlarmEnabled ? 'no' : 'yes'));
+
     executePanelStateChangeRequestsLowLevel(panelChangeRequests, false);
 }
 

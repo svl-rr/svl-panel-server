@@ -3633,6 +3633,23 @@
          x="90"
          y="80.114334"
          style="font-size:16px;line-height:1.25">Lock Mainline</tspan></text>
+    <g
+       id="fieldAuthAlarmButton"
+       onclick="toggleFieldAuthAlarm()"
+       style="cursor:pointer">
+      <rect
+         class="SVL_FIELD_AUTH_ALARM"
+         x="48"
+         y="100"
+         width="16"
+         height="16"
+         rx="2"
+         style="fill:gray;stroke:#ffffff;stroke-width:1" />
+      <text
+         x="70"
+         y="113"
+         style="font-family:'Trebuchet MS';font-size:14px;text-anchor:start;fill:#ffffff">Field Alarms</text>
+    </g>
   </g>
   <g
      id="alarmBanner"
