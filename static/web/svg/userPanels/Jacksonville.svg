@@ -2147,6 +2147,8 @@
        id="alarmBannerText"
        x="523.97895"
        y="30"
-       style="font-family:'Trebuchet MS';font-weight:bold;font-size:24px;text-anchor:middle;fill:#ffffff">⚠ UNAUTHORIZED TRAIN!</text>
+       style="font-family:'Trebuchet MS';font-weight:bold;font-size:24px;text-anchor:middle;fill:#ffffff"><tspan
+         x="523.97895"
+         y="30">&#9888; UNAUTHORIZED TRAIN!</tspan></text>
   </g>
 </svg>

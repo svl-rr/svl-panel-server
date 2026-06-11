@@ -3821,16 +3821,18 @@
        style="cursor:pointer">
       <rect
          class="SVL_FIELD_AUTH_ALARM"
-         x="40"
-         y="100"
+         x="20"
+         y="120"
          width="16"
          height="16"
          rx="2"
          style="fill:gray;stroke:#ffffff;stroke-width:1" />
       <text
-         x="62"
-         y="113"
-         style="font-family:'Trebuchet MS';font-size:14px;text-anchor:start;fill:#ffffff">Field Alarms</text>
+         x="44"
+         y="133"
+         style="font-family:'Trebuchet MS';font-size:14px;text-anchor:start;fill:#ffffff"><tspan
+           x="44"
+           y="133">Field Alarms</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -5949,6 +5951,8 @@
        id="alarmBannerText"
        x="523.97895"
        y="30"
-       style="font-family:'Trebuchet MS';font-weight:bold;font-size:24px;text-anchor:middle;fill:#ffffff">⚠ UNAUTHORIZED OCCUPANCY</text>
+       style="font-family:'Trebuchet MS';font-weight:bold;font-size:24px;text-anchor:middle;fill:#ffffff"><tspan
+         x="523.97895"
+         y="30">&#9888; UNAUTHORIZED OCCUPANCY</tspan></text>
   </g>
 </svg>
