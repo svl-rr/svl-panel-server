@@ -2834,7 +2834,7 @@
     <path
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 270,374.094 -20,20 -30,3e-5"
-       id="BLOCK653"
+       id="BLOCK653" blockname="Tracy Depot"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path3858"
@@ -2894,7 +2894,7 @@
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
-       id="BLOCK598C"
+       id="BLOCK598C" blockname="Quinn"
        d="m 800,374.094 -20,20 h -60"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        onclick="userClickChangeToNextState(evt.target.id);"
@@ -2923,7 +2923,7 @@
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK708"
+       id="BLOCK708" blockname="Upton Intermodal"
        d="m 510,254.09403 -110,-3e-5"
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path5261"
@@ -2940,7 +2940,7 @@
     <path
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 800,254.094 -120,3e-5"
-       id="BLOCK707"
+       id="BLOCK707" blockname="Quinn Main"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path5269"
@@ -2951,7 +2951,7 @@
     <path
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 960,254.094 H 880"
-       id="BLOCK654A"
+       id="BLOCK654A" blockname="Tracy Depot"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path5275"
@@ -2962,7 +2962,7 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 820,174.094 h -50 l -20,20"
-       id="BLOCK598A"
+       id="BLOCK598A" blockname="Quinn"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path5281"
@@ -2973,7 +2973,7 @@
     <path
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
-       id="BLOCK598B"
+       id="BLOCK598B" blockname="Quinn"
        d="m 860,174.094 h 40 l 20,20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        onclick="userClickChangeToNextState(evt.target.id);"
@@ -2984,7 +2984,7 @@
     <path
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 320,254.094 H 240"
-       id="BLOCK709"
+       id="BLOCK709" blockname="Windsor Industrial"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path5293"
@@ -2995,7 +2995,7 @@
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK726"
+       id="BLOCK726" blockname="Victoria"
        d="m 320,214.094 -180,3e-5"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        inkscape:label="#path3893"
@@ -3006,7 +3006,7 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 640,214.094 H 470"
-       id="BLOCK705"
+       id="BLOCK705" blockname="Upton"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
@@ -3017,7 +3017,7 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
        d="m 640,194.094 -20,-20 H 490 l -20,20"
-       id="BLOCK706"
+       id="BLOCK706" blockname="Upton Siding"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc"
        inkscape:label="#path3921"
@@ -3029,7 +3029,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK704B"
+       id="BLOCK704B" blockname="Ravine"
        d="M 710,214.094 H 680"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        onclick="userClickChangeToNextState(evt.target.id);">
@@ -3040,7 +3040,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK704A"
+       id="BLOCK704A" blockname="Ravine"
        d="M 800,214.094 H 750"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        onclick="userClickChangeToNextState(evt.target.id);">
@@ -3050,7 +3050,7 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 920,214.094 H 880"
-       id="BLOCK652B"
+       id="BLOCK652B" blockname="Tracy Main"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
@@ -3062,7 +3062,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK652A"
+       id="BLOCK652A" blockname="Tracy Main"
        d="M 270,354.094 H 40"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        onclick="userClickChangeToNextState(evt.target.id);">
@@ -3073,7 +3073,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK649"
+       id="BLOCK649" blockname="Tracy Siding"
        d="M 380,354.094 H 310"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        onclick="userClickChangeToNextState(evt.target.id);">
@@ -3085,7 +3085,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK602"
+       id="BLOCK602" blockname="Silicon"
        class="sensor SiliconMain"
        d="m 600,354.094 -180,4.8e-4"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
@@ -3095,7 +3095,7 @@
     <path
        sodipodi:nodetypes="cccc"
        inkscape:connector-curvature="0"
-       id="BLOCK603"
+       id="BLOCK603" blockname="Silicon Siding"
        class="sensor SiliconSiding"
        d="m 600,374.094 -20,20 H 440 l -20,-20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3107,7 +3107,7 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 800,354.094 650,353.97977"
-       id="BLOCK599"
+       id="BLOCK599" blockname="Quinn Siding"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
@@ -3120,7 +3120,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK574B"
+       id="BLOCK574B" blockname="Paso"
        class="sensor PasoMain"
        d="M 960,354.094 H 840"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3131,7 +3131,7 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 80,534.094 H 40"
-       id="BLOCK574A"
+       id="BLOCK574A" blockname="Paso"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
@@ -3144,7 +3144,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK500"
+       id="BLOCK500" blockname="Nowheres Main NB"
        d="m 400,534.094 -240,4.8e-4"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -3152,7 +3152,7 @@
     </path>
     <path
        inkscape:connector-curvature="0"
-       id="BLOCK501"
+       id="BLOCK501" blockname="Nowheres Main SB"
        d="m 440,554.09403 -20,20 H 200"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        sodipodi:nodetypes="ccc"
@@ -3165,7 +3165,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK450"
+       id="BLOCK450" blockname="Mt. Marvel"
        class="sensor MtMarvell"
        d="M 670,534.09403 H 520"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3176,7 +3176,7 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none"
        d="M 920,534.09403 H 710"
-       id="BLOCK449"
+       id="BLOCK449" blockname="Loop NB Upper"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858"
@@ -3188,7 +3188,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
-       id="BLOCK448"
+       id="BLOCK448" blockname="Loop SB Upper"
        d="M 920,574.09403 H 731.18421 l -21.18421,-20"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:none"
        onclick="userClickChangeToNextState(evt.target.id);">
@@ -3198,7 +3198,7 @@
     <path
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:none"
        d="M 960,574.094 H 930"
-       id="BLOCK332"
+       id="BLOCK332" blockname="Loop SB Lower"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cc"
        inkscape:label="#path3858">
@@ -3209,7 +3209,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK331"
+       id="BLOCK331" blockname="Loop NB Lower"
        d="M 960,534.094 H 930"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:none;marker-end:none">
       <title
@@ -3220,7 +3220,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
-       id="BLOCK654B"
+       id="BLOCK654B" blockname="Tracy Depot"
        d="m 70,394.09403 -30,3e-5"
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -3243,7 +3243,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
-       id="BLOCK550"
+       id="BLOCK550" blockname="Nowheres South"
        d="m 480,554.09403 -60,60 -20,3e-5"
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -3252,7 +3252,7 @@
     <path
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 240,614.09403 h -20 l -20,-20"
-       id="BLOCK552"
+       id="BLOCK552" blockname="Nowheres Yard"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path3858"
@@ -3271,7 +3271,7 @@
        inkscape:label="#path3858"
        sodipodi:nodetypes="ccc"
        inkscape:connector-curvature="0"
-       id="BLOCK554"
+       id="BLOCK554" blockname="Nowheres West"
        d="m 160,494.09403 h -20 l -20,20"
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
@@ -3280,7 +3280,7 @@
     <path
        style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 400,514.09403 -20,-20 h -20"
-       id="BLOCK553"
+       id="BLOCK553" blockname="Nowheres Passenger"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        inkscape:label="#path3858"

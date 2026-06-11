@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Block Labels — SVL Dispatch Panels</title>
+<style>
+  :root {
+    --yellow:#fde133; --green:#008000; --dark:#231f20; --darker:#161314;
+    --mid:#2e292a; --border:#3d3638; --muted:#8a8080; --text:#ede8e0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background:#333; color:var(--text); font-family:system-ui,-apple-system,sans-serif; }
+  header {
+    display:flex; align-items:center; gap:14px; flex-wrap:wrap;
+    padding:12px 18px; background:var(--darker); border-bottom:2px solid var(--yellow);
+  }
+  header h1 { font-size:0.95rem; color:var(--yellow); margin-right:6px; }
+  select, .btn {
+    background:var(--mid); border:1px solid var(--border); color:var(--text);
+    font-size:0.8rem; font-family:inherit; padding:6px 12px; border-radius:6px; cursor:pointer;
+  }
+  select:focus, .btn:hover { outline:none; border-color:var(--yellow); color:var(--yellow); }
+  .btn.on { background:var(--yellow); color:var(--dark); border-color:var(--yellow); font-weight:700; }
+  .note { font-size:0.72rem; color:var(--muted); margin-left:auto; }
+  .home { font-size:0.78rem; color:var(--muted); text-decoration:none; padding:6px 12px; border:1px solid var(--border); border-radius:6px; }
+  .home:hover { color:var(--yellow); border-color:var(--yellow); }
+  #wrap { position:relative; margin:18px auto; max-width:1400px; line-height:0; }
+  #wrap svg { display:block; width:100%; height:auto; }
+  .blabel {
+    position:absolute; transform:translate(-50%,-50%); pointer-events:none;
+    background:rgba(22,19,20,0.92); border:1.5px solid var(--yellow); border-radius:4px;
+    color:var(--yellow); font-family:monospace; font-weight:700;
+    padding:.1em .4em; white-space:nowrap; line-height:1.3;
+    text-align:center; z-index:5;
+  }
+  .blabel .bn { display:block; color:var(--muted); font-weight:500; font-size:0.82em; }
+  .blabels-hidden .blabel { display:none; }
+  #status { padding:0 18px 18px; font-size:0.78rem; color:var(--muted); }
+</style>
+</head>
+<body class="blabels-hidden">
+<header>
+  <h1>Block Labels</h1>
+  <select id="panelSel"></select>
+  <button class="btn" id="toggle">Show Labels</button>
+  <span class="note" id="count"></span>
+  <a class="home" href="http://localhost:3000/prefs/svg/home.html">&#8592; Layout Control</a>
+</header>
+<div id="wrap"></div>
+<div id="status">Loading…</div>
+
+<script src="../block-names.js"></script>
+<script>
+(function () {
+  'use strict';
+  var NAMES = window.SVL_BLOCK_NAMES || {};
+  var PANELS = ['DispatchNorth', 'DispatchSouth'];
+  var wrap = document.getElementById('wrap');
+  var statusEl = document.getElementById('status');
+  var sel = document.getElementById('panelSel');
+  var labels = [];   // [{el, blocks:[nums]}]
+
+  PANELS.forEach(function (p) {
+    var o = document.createElement('option');
+    o.value = p; o.textContent = p.replace('Dispatch', 'Dispatch ');
+    sel.appendChild(o);
+  });
+
+  function loadPanel(name) {
+    statusEl.textContent = 'Loading ' + name + '…';
+    wrap.innerHTML = '';
+    labels = [];
+    fetch(name + '.svg').then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.text();
+    }).then(function (text) {
+      var svg = new DOMParser().parseFromString(text, 'image/svg+xml').documentElement;
+      // Make it inert: strip scripts and event handlers so it can't talk to JMRI.
+      svg.querySelectorAll('script').forEach(function (s) { s.remove(); });
+      svg.removeAttribute('onload');
+      svg.querySelectorAll('[onclick]').forEach(function (el) { el.removeAttribute('onclick'); });
+      var w = parseFloat(svg.getAttribute('width')) || 1000;
+      var h = parseFloat(svg.getAttribute('height')) || 800;
+      if (!svg.getAttribute('viewBox')) svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h);
+      svg.setAttribute('width', '100%');
+      svg.removeAttribute('height');
+      wrap.appendChild(document.importNode(svg, true));
+      buildLabels();
+    }).catch(function (e) {
+      statusEl.textContent = 'Could not load ' + name + '.svg (' + e.message + ')';
+    });
+  }
+
+  function buildLabels() {
+    // Group BLOCK<n><suffix> track elements by base block number.
+    var groups = {};   // num -> [elements]
+    wrap.querySelectorAll('[id^="BLOCK"]').forEach(function (el) {
+      var m = el.id.match(/^BLOCK(\d+)[A-Za-z]*$/);
+      if (!m) return;                       // skips BLOCK###TrainLabel etc.
+      (groups[m[1]] = groups[m[1]] || []).push(el);
+    });
+
+    var named = 0, total = 0;
+    Object.keys(groups).forEach(function (num) {
+      total++;
+      var lab = document.createElement('div');
+      lab.className = 'blabel';
+      var nm = NAMES[num];
+      if (nm) named++;
+      lab.innerHTML = (nm ? nm : 'Block') + '<span class="bn">' + num + '</span>';
+      lab.dataset.blocks = num;
+      wrap.appendChild(lab);
+      labels.push({ el: lab, group: groups[num] });
+    });
+    position();
+    statusEl.textContent = named + ' of ' + total + ' blocks named' +
+      (named < total ? ' — unnamed blocks show only their number (add to block-names.js)' : '');
+    document.getElementById('count').textContent = total + ' blocks';
+  }
+
+  // Position each label at the averaged center of its track segments, using the
+  // browser-computed screen rects (handles nested group + Y-flip transforms).
+  function position() {
+    var host = wrap.getBoundingClientRect();
+    var svgEl = wrap.querySelector('svg');
+    if (!svgEl) return;
+    var scale = host.width / (svgEl.viewBox.baseVal.width || host.width);
+    labels.forEach(function (L) {
+      var sx = 0, sy = 0, n = 0;
+      L.group.forEach(function (seg) {
+        var r = seg.getBoundingClientRect();
+        sx += (r.left + r.right) / 2 - host.left;
+        sy += (r.top + r.bottom) / 2 - host.top;
+        n++;
+      });
+      if (!n) return;
+      L.el.style.left = (sx / n) + 'px';
+      L.el.style.top = (sy / n) + 'px';
+      L.el.style.fontSize = Math.max(8, 11 * scale) + 'px';
+    });
+  }
+
+  document.getElementById('toggle').addEventListener('click', function () {
+    var hidden = document.body.classList.toggle('blabels-hidden');
+    this.classList.toggle('on', !hidden);
+    this.textContent = hidden ? 'Show Labels' : 'Hide Labels';
+    if (!hidden) position();
+  });
+  sel.addEventListener('change', function () { loadPanel(sel.value); });
+  window.addEventListener('resize', position);
+
+  if (!window.SVL_BLOCK_NAMES) statusEl.textContent = 'block-names.js not loaded — labels will show numbers only.';
+  loadPanel(PANELS[0]);
+})();
+</script>
+</body>
+</html>
