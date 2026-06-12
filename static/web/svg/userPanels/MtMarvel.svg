@@ -20,21 +20,21 @@
   <title
      id="title1">Mt. Marvel</title>
   <script
-     xlink:href="../core/ServerComms.js?v=1"
+     xlink:href="../core/ServerComms.js?v=2"
      id="script3331" />
   <script
-     xlink:href="../core/PanelCommon.js?v=1"
+     xlink:href="../core/PanelCommon.js?v=2"
      type="application/ecmascript"
      id="script_common" />
   <script
-     xlink:href="../core/FieldPanelCommon.js?v=1"
+     xlink:href="../core/FieldPanelCommon.js?v=2"
      type="application/ecmascript"
      id="script1990" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
-     xlink:href="MtMarvel.js?v=1"
+     xlink:href="MtMarvel.js?v=2"
      type="application/ecmascript"
      id="script_panelSpecific" />
   <defs

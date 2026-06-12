@@ -4,7 +4,60 @@ A web-based control panel server which allows multiple simultaneous web clients 
 
 _NOTE: The panels are designed to work only at the [Silicon Valley Lines Model Railroad Club][]. You can replace the files in userPanels with your own to control your own layout (building upon the format as described in the docs directory). Place these files in your JMRI prefs folder so they do not get wiped out during updates on Mac and Linux.
 
-How to use: Coming shortly.
+## Deploying panel changes
+
+JMRI serves the panels from a copy in its preferences folder, **not** from this
+repo. So after editing files here you must copy them into the JMRI `svg` folder
+and reload the panel in the browser. On this machine that folder is:
+
+```
+~/Library/Preferences/JMRI/My_JMRI_Railroad.jmri/svg
+```
+
+### Step 1 — bust the browser cache (only when a `.js` changed)
+
+SVG panels load their JavaScript with `xlink:href`, which browsers cache very
+aggressively — a redeploy will keep running the **old** code until the cache is
+cleared. To avoid that, every panel's local script reference carries a `?v=<n>`
+query (e.g. `../core/PanelCommon.js?v=2`). Bumping that number makes each new
+version a distinct URL the browser is forced to refetch.
+
+Run this after changing **any** panel script (it rewrites all panel SVGs and
+auto-increments the version):
+
+```bash
+cd static/web/svg/core
+python3 bump_cache_version.py            # ?v=2 -> ?v=3 across all panel SVGs
+# or pin an explicit version: python3 bump_cache_version.py --version 7
+```
+
+External scripts (socket.io, absolute/remote URLs) are left untouched.
+
+> If you changed only an `.svg` (no script edits), you can skip the bump — but
+> bumping is always safe.
+
+### Step 2 — copy the files into JMRI
+
+Because the bump rewrites **every** panel SVG, copy all the panel files (static
+files, so copying the whole set is the simplest reliable approach):
+
+```bash
+JM="$HOME/Library/Preferences/JMRI/My_JMRI_Railroad.jmri/svg"
+REPO="$(pwd)/static/web/svg"          # run from the repo root
+
+cp "$REPO"/userPanels/*.svg "$JM/userPanels/"
+cp "$REPO"/userPanels/*.js  "$JM/userPanels/"
+cp "$REPO"/core/*.js        "$JM/core/"
+cp "$REPO"/core/*.svg       "$JM/core/"
+```
+
+To deploy a single file instead, copy just that file plus the bumped SVGs that
+reference it.
+
+### Step 3 — reload
+
+Hard-refresh the panel in the browser (**Cmd-Shift-R**). Thanks to the `?v=`
+bump, a normal reload will also pick up the new scripts.
 
 ##Software License
 

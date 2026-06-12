@@ -20,17 +20,17 @@
   <title
      id="title1">Bakersfield</title>
   <script
-     xlink:href="../core/ServerComms.js?v=1"
+     xlink:href="../core/ServerComms.js?v=2"
      id="script3331" />
   <script
-     xlink:href="../core/PanelCommon.js?v=1"
+     xlink:href="../core/PanelCommon.js?v=2"
      type="application/ecmascript"
      id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
-     xlink:href="Bakersfield.js?v=1"
+     xlink:href="Bakersfield.js?v=2"
      id="script_panelSpecific"
      type="application/ecmascript" />
   <defs

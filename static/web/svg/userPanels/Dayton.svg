@@ -18,13 +18,13 @@
   <title
      id="title1">Dayton</title>
   <script
-     xlink:href="../core/ServerComms.js?v=1"
+     xlink:href="../core/ServerComms.js?v=2"
      id="script3331" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script5" />
   <script
-     xlink:href="../core/PanelCommon.js?v=1"
+     xlink:href="../core/PanelCommon.js?v=2"
      id="script_common"
      type="application/ecmascript" />
   <script
@@ -32,7 +32,7 @@
      type="application/ecmascript"
      id="field_panel_common" />
   <script
-     xlink:href="Dayton.js?v=1"
+     xlink:href="Dayton.js?v=2"
      id="script_panelSpecific"
      type="application/ecmascript" />
   <defs
