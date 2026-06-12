@@ -30,27 +30,27 @@
     }
   </style>
   <script
-     xlink:href="../block-names.js"
+     xlink:href="../block-names.js?v=1"
      id="script_blockNames"
      type="application/ecmascript" />
   <script
-     xlink:href="../core/DispatchCommon.js"
+     xlink:href="../core/DispatchCommon.js?v=1"
      id="script3268" />
   <script
-     xlink:href="DispatchSouth.js"
+     xlink:href="DispatchSouth.js?v=1"
      id="script3225" />
   <script
-     xlink:href="../core/ServerComms.js"
+     xlink:href="../core/ServerComms.js?v=1"
      id="script3094" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
-     xlink:href="../core/PanelCommon.js"
+     xlink:href="../core/PanelCommon.js?v=1"
      type="application/ecmascript"
      id="script_common" />
   <script
-     xlink:href="DispatchSouthRedirect.js"
+     xlink:href="DispatchSouthRedirect.js?v=1"
      id="script_panelSpecific"
      type="application/ecmascript" />
   <defs

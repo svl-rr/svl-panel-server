@@ -20,17 +20,17 @@
   <title
      id="title1">Nowheres Hump (Marshall)</title>
   <script
-     xlink:href="../core/ServerComms.js"
+     xlink:href="../core/ServerComms.js?v=1"
      id="script3331" />
   <script
-     xlink:href="../core/PanelCommon.js"
+     xlink:href="../core/PanelCommon.js?v=1"
      type="application/ecmascript"
      id="script_common" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
-     xlink:href="NowheresHump.js"
+     xlink:href="NowheresHump.js?v=1"
      type="application/ecmascript"
      id="script_panelSpecific" />
   <defs

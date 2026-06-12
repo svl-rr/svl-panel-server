@@ -22,17 +22,17 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/"><title
      id="title1">Silicon</title><script
-     xlink:href="../core/ServerComms.js"
+     xlink:href="../core/ServerComms.js?v=1"
      id="script3331" /><script
-     xlink:href="../core/PanelCommon.js"
+     xlink:href="../core/PanelCommon.js?v=1"
      id="script_common"
      type="application/ecmascript" /><script
-     xlink:href="../core/FieldPanelCommon.js"
+     xlink:href="../core/FieldPanelCommon.js?v=1"
      id="field_panel_common"
      type="application/ecmascript" /><script
      xlink:href="/socket.io/socket.io.js"
      id="script6" /><script
-     xlink:href="Silicon.js"
+     xlink:href="Silicon.js?v=1"
      id="script_panelSpecific"
      type="application/ecmascript" /><defs
      id="defs4"><marker

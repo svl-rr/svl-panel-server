@@ -18,13 +18,13 @@
    xmlns:dc="http://purl.org/dc/elements/1.1/"><title
      id="title1">Cavanaugh</title>
      <script
-     xlink:href="../core/ServerComms.js"
+     xlink:href="../core/ServerComms.js?v=1"
      id="script3331" />
      <script
      xlink:href="/socket.io/socket.io.js"
      id="script5" />
      <script
-     xlink:href="../core/PanelCommon.js"
+     xlink:href="../core/PanelCommon.js?v=1"
      id="script_common"
      type="application/ecmascript" />
      <script
@@ -32,7 +32,7 @@
      type="application/ecmascript"
      id="field_panel_common" />
      <script
-     xlink:href="Cavanaugh.js"
+     xlink:href="Cavanaugh.js?v=1"
      id="script_panelSpecific"
      type="application/ecmascript" />
      <defs

@@ -20,21 +20,21 @@
   <title
      id="title1">Ebbetts Pass-Eagle/Escape</title>
   <script
-     xlink:href="../core/ServerComms.js"
+     xlink:href="../core/ServerComms.js?v=1"
      id="script3331" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script5" />
   <script
-     xlink:href="../core/PanelCommon.js"
+     xlink:href="../core/PanelCommon.js?v=1"
      id="script_common"
      type="application/ecmascript" />
   <script
-     xlink:href="../core/FieldPanelCommon.js"
+     xlink:href="../core/FieldPanelCommon.js?v=1"
      id="script919"
      type="application/ecmascript" />
   <script
-     xlink:href="EbbettsEagle_Escape.js"
+     xlink:href="EbbettsEagle_Escape.js?v=1"
      id="script_panelSpecific"
      type="application/ecmascript" />
   <defs
