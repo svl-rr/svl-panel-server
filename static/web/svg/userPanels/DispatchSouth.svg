@@ -19,6 +19,16 @@
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
      id="title1">Dispatch South</title>
+  <style
+     id="alarmStyle"
+     type="text/css">
+    /* Slow, gentle pulse for blocks occupied without authorization. */
+    .dispatchAlarmPulse { animation: dispatchAlarmPulse 1.8s ease-in-out infinite; }
+    @keyframes dispatchAlarmPulse {
+      0%, 100% { stroke:#ff0000; stroke-width:8;  }
+      50%      { stroke:#ff8a8a; stroke-width:15; }
+    }
+  </style>
   <script
      xlink:href="../block-names.js"
      id="script_blockNames"
@@ -3815,24 +3825,22 @@
          id="tspan4604"
          sodipodi:role="line"
          style="font-size:16px;line-height:1.25">Lock Mainline</tspan></text>
-    <g
-       id="fieldAuthAlarmButton"
-       onclick="toggleFieldAuthAlarm()"
-       style="cursor:pointer">
+    <g id="fieldAuthAlarmButton">
       <rect
          class="SVL_FIELD_AUTH_ALARM"
+         onclick="toggleFieldAuthAlarm()"
          x="20"
-         y="120"
-         width="16"
-         height="16"
-         rx="2"
-         style="fill:gray;stroke:#ffffff;stroke-width:1" />
+         y="126"
+         width="104"
+         height="20"
+         rx="4"
+         style="fill:gray;stroke:#ffffff;stroke-width:1;cursor:pointer" />
       <text
-         x="44"
-         y="133"
-         style="font-family:'Trebuchet MS';font-size:14px;text-anchor:start;fill:#ffffff"><tspan
-           x="44"
-           y="133">Field Alarms</tspan></text>
+         x="72"
+         y="140"
+         style="font-family:'Trebuchet MS';font-size:13px;text-anchor:middle;fill:#000000;pointer-events:none"><tspan
+           x="72"
+           y="140">Field Alarms</tspan></text>
     </g>
     <text
        xml:space="preserve"
@@ -5934,25 +5942,5 @@
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
     </g>
-  </g>
-  <g
-     id="alarmBanner"
-     visibility="hidden"
-     onclick="acknowledgeAlarms()"
-     style="cursor:pointer">
-    <rect
-       id="alarmBannerRect"
-       x="0"
-       y="0"
-       width="1047.9579"
-       height="44"
-       style="fill:#cc0000;fill-opacity:1;stroke:#ffff00;stroke-width:3" />
-    <text
-       id="alarmBannerText"
-       x="523.97895"
-       y="30"
-       style="font-family:'Trebuchet MS';font-weight:bold;font-size:24px;text-anchor:middle;fill:#ffffff"><tspan
-         x="523.97895"
-         y="30">&#9888; UNAUTHORIZED OCCUPANCY</tspan></text>
   </g>
 </svg>

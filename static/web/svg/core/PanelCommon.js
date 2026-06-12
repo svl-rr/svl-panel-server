@@ -1392,10 +1392,18 @@ function toggleDispatchSignaling()
 
 function toggleFieldAuthAlarm()
 {
+    // Optimistic local update so the button responds immediately, even before
+    // (or without) a server echo. Cross-panel propagation still relies on the
+    // shared SVL_FIELD_AUTH_ALARM memory variable.
+    fieldAuthAlarmEnabled = !fieldAuthAlarmEnabled;
+    var btns = svgDocument.getElementsByClassName(SERVER_NAME_FIELD_AUTH_ALARM);
+    for(var i = 0; i < btns.length; i++)
+        setStyleSubAttribute(btns[i], 'fill', fieldAuthAlarmEnabled ? 'lime' : 'gray');
+    if(typeof onFieldAuthAlarmToggled == 'function')
+        onFieldAuthAlarmToggled();
+
     var panelChangeRequests = new Array();
-
-    panelChangeRequests.push(new ServerObject(SERVER_NAME_FIELD_AUTH_ALARM, SERVER_TYPE_DISPATCH, fieldAuthAlarmEnabled ? 'no' : 'yes'));
-
+    panelChangeRequests.push(new ServerObject(SERVER_NAME_FIELD_AUTH_ALARM, SERVER_TYPE_DISPATCH, fieldAuthAlarmEnabled ? 'yes' : 'no'));
     executePanelStateChangeRequestsLowLevel(panelChangeRequests, false);
 }
 
