@@ -51,8 +51,9 @@ function getPanelSpecificStates()
 
     states.push(new ServerObject(JMRI_LASTBAYSHORETURNTABLETRACK, SERVER_TYPE_DISPATCH));
 
-    // Also subscribe to this panel's block authorization for the field alarm.
-    return states.concat(fieldAlarmSubscriptions());
+    // Also subscribe to this panel's block authorization for the field alarm
+    // (guarded: this panel doesn't load FieldPanelCommon and has no alarm blocks).
+    return states.concat(typeof fieldAlarmSubscriptions == 'function' ? fieldAlarmSubscriptions() : []);
 }
 
 function addTurntableStateChangeRequest(id)
@@ -87,8 +88,9 @@ function getTrackNumFromAddr(addr)
 
 function setPanelSpecificState(serverObject)
 {
-    // Field unauthorized-occupancy alarm takes the block-authorization objects.
-    if(fieldAlarmHandle(serverObject))
+    // Field unauthorized-occupancy alarm takes the block-authorization objects
+    // (guarded: FieldPanelCommon isn't loaded on this panel).
+    if((typeof fieldAlarmHandle == 'function') && fieldAlarmHandle(serverObject))
         return true;
 
     if((serverObject.type == SERVER_TYPE_TURNOUT) && (serverObject.name.search(JMRI_TURNTABLE_OBJID_PREFIX) == 0))
