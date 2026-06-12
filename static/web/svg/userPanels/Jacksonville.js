@@ -30,7 +30,9 @@ function getPanelSpecificStates()
 
 // Consume block authorization updates; flag a block when its train id is the
 // unauthorized sentinel. Returns true when handled (so PanelCommon stops).
-function panelSpecificSetState(obj)
+// NB: PanelCommon calls this hook "setPanelSpecificState" (see its
+// handleSocketDataResponse) — the name must match exactly.
+function setPanelSpecificState(obj)
 {
     if(obj == null || obj.type != SERVER_TYPE_DISPATCH)
         return false;
