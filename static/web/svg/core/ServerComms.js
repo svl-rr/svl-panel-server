@@ -202,11 +202,11 @@ function handleJSONObject(msgObj)
                     
                     if(spaceLoc != -1)
                     {
-                        var type = reducedMsg.substr(0, spaceLoc);
-                        var name = reducedMsg.substr(spaceLoc + 1);
-                        
+                        var type = reducedMsg.substring(0, spaceLoc);
+                        var name = reducedMsg.substring(spaceLoc + 1);
+
                         if(name.charAt(name.length - 1) == ".")
-                            name = name.substr(0, name.length - 1);
+                            name = name.slice(0, -1);
                         
                         var jsonObj = {"type":type, "data":{"name":name}};
                     }
@@ -248,7 +248,7 @@ function handleJSONObject(msgObj)
             console.log("server memory message: " + humanReadableMessage);
             
             if(msgObj.data.name.indexOf('IM') == 0)
-                serverObj = new ServerObject(msgObj.data.name.substr(2), SERVER_TYPE_DISPATCH, msgObj.data.value);
+                serverObj = new ServerObject(msgObj.data.name.substring(2), SERVER_TYPE_DISPATCH, msgObj.data.value);
             else
                 serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_DISPATCH, msgObj.data.value);
         }

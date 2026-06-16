@@ -13,14 +13,14 @@
 function createTableRowForCookie(cookieNum)
 {
     var cVal = cookiesDefined[cookieNum].getCookie();
-    
-    document.write("<tr>");
-    document.write("<td>" + cookiesDefined[cookieNum].name + "</td>");
-    document.write("<td>" + (cVal == "" ? ">>null<<" : cVal) + "</td>");
-    document.write((cVal == "" ? "<td colspan=" + '"2">' : "<td>") + createCreateCookieButton(cookieNum) + "</td>");
-    document.write((cVal == "" ? "" : "<td>" + createDeleteCookieButton(cookieNum) + "</td>"));
-    document.write("<td>" + cookiesDefined[cookieNum].explanation + "</td>");
-    document.write("</tr>");
+    var row = "<tr>";
+    row += "<td>" + cookiesDefined[cookieNum].name + "</td>";
+    row += "<td>" + (cVal == "" ? ">>null<<" : cVal) + "</td>";
+    row += (cVal == "" ? "<td colspan=" + '"2">' : "<td>") + createCreateCookieButton(cookieNum) + "</td>";
+    row += (cVal == "" ? "" : "<td>" + createDeleteCookieButton(cookieNum) + "</td>");
+    row += "<td>" + cookiesDefined[cookieNum].explanation + "</td>";
+    row += "</tr>";
+    return row;
 }
 
 function createCreateCookieButton(cookieNum)
@@ -54,13 +54,14 @@ This page is used to set up device specific preferences through the use of brows
 <th colspan="2">Actions</th>
 <th>Use</th>
 </tr>
-<script>
-    for(var i = 0; i < cookiesDefined.length; i++)
-    {
-        createTableRowForCookie(i);
-    }
-</script>
+<tbody id="cookieTableBody"></tbody>
 </table>
+<script>
+    var rows = "";
+    for(var i = 0; i < cookiesDefined.length; i++)
+        rows += createTableRowForCookie(i);
+    document.getElementById("cookieTableBody").insertAdjacentHTML("beforeend", rows);
+</script>
 
 <P>
 <a href="/">Return to Top</a>

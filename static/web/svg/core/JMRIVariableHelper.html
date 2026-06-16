@@ -193,18 +193,11 @@ function processValidObjects()
     
     docStr += '</table>';
     
-    document.open("text/html","replace");
-    document.write('<H1>JMRI SVG Variable Helper</H1>');
-    document.write('This page is used to help identify unused or unmatched variables specified in the static JMRI tables.<P>');
-    
+    var resultEl = document.getElementById("result");
     if(addrArray.length == 0)
-        document.write('Although this page connected to the JMRI server, no variables were found.<p>')
+        resultEl.innerHTML = 'Although this page connected to the JMRI server, no variables were found.<p>';
     else
-        document.write(docStr);
-        
-    document.write('<a href="/web/svg/">Return to Top</a>');
-    document.close();
-    document.title = "JMRI SVG Variable Helper";
+        resultEl.innerHTML = docStr;
 }
 
 function undefinedCheck(x)
@@ -263,7 +256,7 @@ var cookiesDefined = [];
 
 <H1>JMRI SVG Variable Helper</H1>
 This page is used to help identify unused or unmatched variables specified in the static JMRI tables.<P>
-The script has not been able to connect to the JMRI server.<P>
+<div id="result">The script has not been able to connect to the JMRI server.</div><P>
 <a href="/web/svg/">Return to Top</a>
 
 </body>
