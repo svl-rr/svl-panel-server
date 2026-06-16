@@ -115,29 +115,6 @@ function setSensorState(sensorID, sensorState)
 		return false;
 	}
 
-	// Could be that sensorID is a userName.
-	// If so, convert that userName into a sensorID
-	// that the dispatch panel expects.
-	var potentialUserName = sensorID;
-	var matchedElements = svgDocument.getElementsByClassName(sensorID);
-	for (var mIdx = 0; mIdx < matchedElements.length; mIdx++) {
-		var elem = matchedElements[mIdx];
-		var classesStr = elem.getAttribute("class");
-        var classes = classesStr.split(" ");
-        for (var cIdx in classes) {
-            if (classes[cIdx] == 'sensor') {
-            	// `elem` has an element ID like "BLOCK174".
-            	var elementId = elem.id;
-				// sensorID.search(...) below is looking for that suffix number (174)
-				// prefixed with JMRI_SENSOR_OBJID_PREFIX.
-
-				sensorID = JMRI_SENSOR_OBJID_PREFIX + elementId.replace(DISPATCHSEGMENT_OBJID_PREFIX, '');
-				console.log('Mapped sensor', potentialUserName, 'to element ID', elementId, 'to hacky sensorID', sensorID);
-				// TODO: remove hacky mapping once all loconet sensors are gone.
-            }
-        }
-    }
-
 	if(sensorID.search(JMRI_SENSOR_OBJID_PREFIX) == 0)
 	{
 		var blockAuthorization = getDispatchLocalAuthorization(BLOCK_AUTH + getDCCAddr(sensorID));         // will be null if a turnout
