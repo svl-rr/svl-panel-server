@@ -30,6 +30,10 @@ var JMRI_SENSOR_OBJID_PREFIX = "LS";
 var JMRI_SENSOR_ACTIVE = "on";
 var JMRI_SENSOR_INACTIVE = "off";
 
+// DCC addressing limits (NMRA/JMRI accessory ranges)
+var MAX_TURNOUT_DCC_ADDR = 2044;
+var MAX_SENSOR_DCC_ADDR = 4089;
+
 // ??
 var SIGNALHEADS = {};
 
@@ -100,83 +104,154 @@ function isDispatchPanel()
 /* PanelTurnout([String] id, [boolean] flipBit)
  * PanelTurnout object to contain id and flipbit, which is used to invert the graphic status
  */
-function PanelTurnout(normalRouteID, divergingRouteID)
+class PanelTurnout
 {
-    this.normalRouteID = normalRouteID;
-    this.divergingRouteID = divergingRouteID;
-	
-	this.getInstanceID=getInstanceID;
-    this.getDCCID=getDCCID;
-    this.getAsServerObject= getAsServerTurnoutObject;
-    this.getSVGState=getSVGState;
-    this.setSVGState=setSVGState;
-    this.doesTurnoutAllowMultipleAuthorizations=doesTurnoutAllowMultipleAuthorizations;
-    this.allowMultipleNormalAuthorizations = false;
-    this.allowMultipleReverseAuthorizations = false;
-    
-    this.successfullyCreated = false;
-    
-    var normalElem = svgDocument.getElementById(normalRouteID);
-	
-	if(normalElem == null)
+	constructor(normalRouteID, divergingRouteID)
 	{
-		alert("Attempted to create a PanelTurnout object with ID " + normalRouteID + " but no SVG object with that ID was found.");
-		return;
-	}
-    
-    var divergingElem = svgDocument.getElementById(divergingRouteID);
-	
-	if(divergingElem == null)
-	{
-		alert("Attempted to create a PanelTurnout object with ID " + divergingRouteID + " but no SVG object with that ID was found.");
-		return;
-	}
-    
-    if(normalElem.parentNode != divergingElem.parentNode)
-	{
-		alert("Attempted to create a PanelTurnout object with ID " + getDCCAddrAndMotorSubAddr(normalRouteID) + " but parent nodes did not match.");
-		return;
-	}
-    
-    if(normalElem.parentNode.childElementCount != 2)
-    {
-        alert("Attempted to create a PanelTurnout object with ID " + getDCCAddrAndMotorSubAddr(normalRouteID) + " but object did not appear to be grouped properly.");
-		return;
-    }
-    
-    this.successfullyCreated = true;
-    
-    checkTurnoutOnClick(normalElem);
-    checkTurnoutOnClick(divergingElem);
-    checkOpacity(normalElem.parentNode);
-    
-    // Make sure title element matches the object ID
-    addElementTitle(normalRouteID, normalRouteID);
-    addElementTitle(divergingRouteID, divergingRouteID);
-        
-    for(var i in turnoutsOnPanel)
-    {
-        var prevPanel = turnoutsOnPanel[i];
-        
-        if(prevPanel.getDCCID() == this.getDCCID())
-        {
-            var lec = svgDocument.getElementById(prevPanel.divergingRouteID).parentNode.lastElementChild;
-            if(getDCCAddrRoute(divergingElem.parentNode.lastElementChild.id) != getDCCAddrRoute(lec.id))
-                alert("Multiple turnout instances with DCC addr " + getDCCAddr(divergingRouteID) + " do not have consistent initial conditions. This has been updated during runtime but should be fixed in svg file. ")
-        }
-    }
-    
-    /*if(console != undefined)
-    {
-        console.log("Created turnout: " + id);
-        console.warn("Krikey: a warning: " + id);
-        console.error("jeepers an error");
-    }*/
-}
+		this.normalRouteID = normalRouteID;
+		this.divergingRouteID = divergingRouteID;
 
-function doesTurnoutAllowMultipleAuthorizations(elemID)
-{
-    return (getDCCAddrRoute(elemID) == 'R' ? this.allowMultipleReverseAuthorizations : this.allowMultipleNormalAuthorizations);
+		this.allowMultipleNormalAuthorizations = false;
+		this.allowMultipleReverseAuthorizations = false;
+
+		this.successfullyCreated = false;
+
+		var normalElem = svgDocument.getElementById(normalRouteID);
+
+		if(normalElem == null)
+		{
+			alert("Attempted to create a PanelTurnout object with ID " + normalRouteID + " but no SVG object with that ID was found.");
+			return;
+		}
+
+		var divergingElem = svgDocument.getElementById(divergingRouteID);
+
+		if(divergingElem == null)
+		{
+			alert("Attempted to create a PanelTurnout object with ID " + divergingRouteID + " but no SVG object with that ID was found.");
+			return;
+		}
+
+		if(normalElem.parentNode != divergingElem.parentNode)
+		{
+			alert("Attempted to create a PanelTurnout object with ID " + getDCCAddrAndMotorSubAddr(normalRouteID) + " but parent nodes did not match.");
+			return;
+		}
+
+		if(normalElem.parentNode.childElementCount != 2)
+		{
+			alert("Attempted to create a PanelTurnout object with ID " + getDCCAddrAndMotorSubAddr(normalRouteID) + " but object did not appear to be grouped properly.");
+			return;
+		}
+
+		this.successfullyCreated = true;
+
+		checkTurnoutOnClick(normalElem);
+		checkTurnoutOnClick(divergingElem);
+		checkOpacity(normalElem.parentNode);
+
+		// Make sure title element matches the object ID
+		addElementTitle(normalRouteID, normalRouteID);
+		addElementTitle(divergingRouteID, divergingRouteID);
+
+		for(var i in turnoutsOnPanel)
+		{
+			var prevPanel = turnoutsOnPanel[i];
+
+			if(prevPanel.getDCCID() == this.getDCCID())
+			{
+				var lec = svgDocument.getElementById(prevPanel.divergingRouteID).parentNode.lastElementChild;
+				if(getDCCAddrRoute(divergingElem.parentNode.lastElementChild.id) != getDCCAddrRoute(lec.id))
+					alert("Multiple turnout instances with DCC addr " + getDCCAddr(divergingRouteID) + " do not have consistent initial conditions. This has been updated during runtime but should be fixed in svg file. ")
+			}
+		}
+	}
+
+	doesTurnoutAllowMultipleAuthorizations(elemID)
+	{
+		return (getDCCAddrRoute(elemID) == 'R' ? this.allowMultipleReverseAuthorizations : this.allowMultipleNormalAuthorizations);
+	}
+
+	getSVGState()
+	{
+		var normalElem = svgDocument.getElementById(this.normalRouteID);
+
+		if(normalElem != null)
+		{
+			var parent = normalElem.parentNode;
+
+			if(parent.lastElementChild.id == this.normalRouteID)
+				return 'N';
+			else if(parent.lastElementChild.id == this.divergingRouteID)
+				return 'R';
+		}
+
+		return null;
+	}
+
+	setSVGState(newRoute)
+	{
+		var normalElem = svgDocument.getElementById(this.normalRouteID);
+		var divergingElem = svgDocument.getElementById(this.divergingRouteID);
+
+		if((normalElem != null) && (divergingElem != null))
+		{
+			var parent = normalElem.parentNode;
+			var newSelElem = null;
+			var nonSelElem = null;
+
+			if((newRoute == 'N') || (newRoute == 'n'))
+			{
+				newSelElem = normalElem;
+				nonSelElem = divergingElem;
+			}
+			else if((newRoute == 'R') || (newRoute == 'r'))
+			{
+				newSelElem = divergingElem;
+				nonSelElem = normalElem;
+			}
+			else
+			{
+				alert("Bad route passed to setSVGState on turnout instance " + this.getInstanceID());
+				return;
+			}
+
+			// Set selected route to full opacity
+			setStyleSubAttribute(newSelElem, "opacity", "1.0");
+			// Set non selected route to reduced opacity
+			setStyleSubAttribute(nonSelElem, "opacity", "0.25");
+
+			newSelElem.setAttribute("pointer-events", "none");
+			nonSelElem.setAttribute("pointer-events", "none");
+			parent.appendChild(nonSelElem);
+			parent.appendChild(newSelElem);
+			newSelElem.setAttribute("pointer-events", "visiblePainted");
+			nonSelElem.setAttribute("pointer-events", "visiblePainted");
+		}
+	}
+
+	/* [String] getInstanceID()
+	 * Return id field of PanelTurnout
+	 */
+	getInstanceID()
+	{
+		return getDCCAddrAndMotorSubAddr(this.normalRouteID);
+	}
+
+	getDCCID()
+	{
+		return getDCCAddr(this.normalRouteID);
+	}
+
+	/* [ServerObject] getAsServerObject()
+	 * Return PanelTurnout as a server object, preset as a get (null state)
+	 */
+	getAsServerObject()
+	{
+		var turnoutAddr = this.getDCCID();
+
+		return new ServerObject(JMRI_TURNOUT_OBJID_PREFIX + turnoutAddr, SERVER_TYPE_TURNOUT, getTurnoutState(turnoutAddr));
+	}
 }
 
 function checkTurnoutOnClick(elem)
@@ -227,64 +302,6 @@ function checkOpacity(parentElem)
     }
 }
 
-function getSVGState()
-{
-	var normalElem = svgDocument.getElementById(this.normalRouteID);
-    
-    if(normalElem != null)
-    {
-        var parent = normalElem.parentNode;
-        
-        if(parent.lastElementChild.id == this.normalRouteID)
-            return 'N';
-        else if(parent.lastElementChild.id == this.divergingRouteID)
-            return 'R';
-    }
-    
-    return null;
-}
-
-function setSVGState(newRoute)
-{    
-    var normalElem = svgDocument.getElementById(this.normalRouteID);
-    var divergingElem = svgDocument.getElementById(this.divergingRouteID);
-    
-    if((normalElem != null) && (divergingElem != null))
-    {
-        var parent = normalElem.parentNode;
-        var newSelElem = null;
-        var nonSelElem = null;
-        
-        if((newRoute == 'N') || (newRoute == 'n'))
-        {
-            newSelElem = normalElem;
-            nonSelElem = divergingElem;
-        }
-        else if((newRoute == 'R') || (newRoute == 'r'))
-        {
-            newSelElem = divergingElem;
-            nonSelElem = normalElem;
-        }
-        else
-        {
-            alert("Bad route passed to setSVGState on turnout instance " + this.getInstanceID());
-            return;
-        }
-        
-        // Set selected route to full opacity
-        setStyleSubAttribute(newSelElem, "opacity", "1.0");
-        // Set non selected route to reduced opacity
-        setStyleSubAttribute(nonSelElem, "opacity", "0.25");
-        
-        newSelElem.setAttribute("pointer-events", "none");
-        nonSelElem.setAttribute("pointer-events", "none");
-        parent.appendChild(nonSelElem);
-        parent.appendChild(newSelElem);
-        newSelElem.setAttribute("pointer-events", "visiblePainted");
-        nonSelElem.setAttribute("pointer-events", "visiblePainted");
-    }
-}
-
 function getPanelTurnoutFromElemID(elemID)
 {
     for(var i in turnoutsOnPanel)
@@ -311,29 +328,6 @@ function getPanelTurnoutFromDCCAddr(dccAddr)
     return null;
 }
 
-/* [String] getInstanceID()
- * Return id field of PanelTurnout
- */
-function getInstanceID()
-{
-	return getDCCAddrAndMotorSubAddr(this.normalRouteID);
-}
-
-function getDCCID()
-{
-	return getDCCAddr(this.normalRouteID);
-}
-
-/* [ServerObject] getAsServerTurnoutObject()
- * Return PanelTurnout as a server object, preset as a get (null state)
- */
-function getAsServerTurnoutObject()
-{
-    var turnoutAddr = this.getDCCID();
-    
-    return new ServerObject(JMRI_TURNOUT_OBJID_PREFIX + turnoutAddr, SERVER_TYPE_TURNOUT, getTurnoutState(turnoutAddr));
-}
-
 function isPhysicalTurnout(turnoutName)
 {
     var deviceAddr = getDCCAddr(turnoutName);
@@ -345,26 +339,17 @@ function isPhysicalTurnout(turnoutName)
  * BlockSensor object to contain JMRI block suffixed `id`
        (e.g. "188", without JMRI_SENSOR_OBJID_PREFIX).
  */
-function BlockSensor(id)
+class BlockSensor
 {
-	this.id=id;
-	
-    this.getAsServerObject=getAsServerSensorObject;
-        
-    // Make sure title element matches the object ID
-    //addElementTitle(id, id);
-    
-    /*if(console != undefined)
-    {
-        console.log("Created turnout: " + id);
-        console.warn("Krikey: a warning: " + id);
-        console.error("jeepers an error");
-    }*/
-}
+	constructor(id)
+	{
+		this.id = id;
+	}
 
-function getAsServerSensorObject()
-{    
-    return new ServerObject(JMRI_SENSOR_OBJID_PREFIX + this.id, SERVER_TYPE_SENSOR, null);
+	getAsServerObject()
+	{
+		return new ServerObject(JMRI_SENSOR_OBJID_PREFIX + this.id, SERVER_TYPE_SENSOR, null);
+	}
 }
 
 /* createPanelTurnout([String] normalRouteElemID, [String] divergingRouteElemID)
@@ -562,7 +547,7 @@ function init(evt)
 	    
 	setPanelStatus("Panel Ready");
 
-    window.setTimeout("handleFlashingSignals(true)", 1000);
+    window.setTimeout(() => handleFlashingSignals(true), 1000);
 }
 
 function handleFlashingSignals(flashOn) {
@@ -576,9 +561,9 @@ function handleFlashingSignals(flashOn) {
         }
     }
     if (flashOn) {
-        window.setTimeout("handleFlashingSignals(false)", 1000);
+        window.setTimeout(() => handleFlashingSignals(false), 1000);
     } else {
-        window.setTimeout("handleFlashingSignals(true)", 1000);
+        window.setTimeout(() => handleFlashingSignals(true), 1000);
     }
 }
 
@@ -614,132 +599,148 @@ function handleSocketDataResponse(dataArray)
         alert("null dataArray in handleSocketDataResponse");
         return;
     }
-    
-    var undefinedItemsToUpdate = [];
 
+    var undefinedItemsToUpdate = [];
 
     for(var i in dataArray)
     {
         if(dataArray[i].value != undefined)
-        {
-            if((typeof setPanelSpecificState == 'function') && setPanelSpecificState(dataArray[i]))
-            {
-                // do nothing if panelSpecificSetState returned true (i.e. it handled the object)
-            }
-            else if((typeof setDispatchObject == 'function') && setDispatchObject(dataArray[i]))
-            {
-                // do nothing if setDispatchObject returned true (i.e. it handled the object)
-                
-                //console.log(dataArray[i].name + " is being set to '" + dataArray[i].value + "'");
-            }
-            else if((dataArray[i].type == SERVER_TYPE_DISPATCH) && (dataArray[i].name == SERVER_NAME_MAINLINELOCKED))
-            {
-                mainlineLocked = (dataArray[i].value == 'true');
-            }
-            else if((dataArray[i].type == SERVER_TYPE_DISPATCH) && (dataArray[i].name == SERVER_NAME_DISPATCH_SIGNALING_ENABLED))
-            {
-                dispatchSignalingEnabled = (dataArray[i].value == 'yes');
-                var bigButtonResults = svgDocument.getElementsByClassName(SERVER_NAME_DISPATCH_SIGNALING_ENABLED);
-                for (var btnIdx = 0; btnIdx < bigButtonResults.length; btnIdx++) {
-                    setStyleSubAttribute(bigButtonResults[btnIdx], 'fill', dispatchSignalingEnabled ? 'lime' : 'gray');
-                }
-            }
-            else if((dataArray[i].type == SERVER_TYPE_DISPATCH) && (dataArray[i].name == SERVER_NAME_FIELD_AUTH_ALARM))
-            {
-                fieldAuthAlarmEnabled = (dataArray[i].value == 'yes');
-                var fieldBtnResults = svgDocument.getElementsByClassName(SERVER_NAME_FIELD_AUTH_ALARM);
-                for (var fbIdx = 0; fbIdx < fieldBtnResults.length; fbIdx++) {
-                    setStyleSubAttribute(fieldBtnResults[fbIdx], 'fill', fieldAuthAlarmEnabled ? 'lime' : 'gray');
-                }
-                // Let a field panel re-render its alarms when the flag flips.
-                if(typeof onFieldAuthAlarmToggled == 'function')
-                    onFieldAuthAlarmToggled();
-            }
-            else if (dataArray[i].type == SERVER_TYPE_DISPATCH && dataArray[i].name.indexOf("IMSIGNALHEAD") != 0) {
-                // Transform "FLASHING_RED" to "red".
-                var value = dataArray[i].value.replace("FLASHING_", "").toLowerCase();
-                if (value == "dark") {
-                    value = "black";
-                } else if (value == "green") {
-                    value = "lime";
-                }
-
-                var memoryVarName = dataArray[i].name;
-                var headElements = svgDocument.getElementsByClassName(memoryVarName);
-                for (var headIdx = 0; headIdx < headElements.length; headIdx++) {
-                    var headElement = headElements[headIdx];
-                    setStyleSubAttribute(headElement, "fill", value);
-                    var classesStr = headElement.getAttribute("class");
-                    if (dataArray[i].value.indexOf("FLASHING_") == 0) {
-                        headElement.setAttribute("class", classesStr + " flashing");
-                    } else {
-                        // If it was in the middle of a flash, the head may have display=none.
-                        setStyleSubAttribute(headElement, "display", "");
-                        headElement.setAttribute("class", classesStr.replace(" flashing", ""));
-                    }
-                }
-            }
-            else if((dataArray[i].type == SERVER_TYPE_TURNOUT) && isPhysicalTurnout(dataArray[i].name))
-            {
-                setTurnoutState(dataArray[i].name, dataArray[i].value);
-            }
-            else if((dataArray[i].type == SERVER_TYPE_SENSOR) && (typeof setSensorState == 'function'))
-            {
-                //console.log(dataArray[i]);
-                var trySystemName = true;
-                if (dataArray[i].userName != null && dataArray[i].userName != '') {
-                    trySystemName = !setSensorState(dataArray[i].userName, dataArray[i].value);
-                }
-                if (trySystemName) {
-                    setSensorState(dataArray[i].name, dataArray[i].value);                    
-                }
-            }
-            else
-            {
-                console.log("Not sure what to do with data: ", dataArray[i]);
-                // do nothing with object since we don't know what it is
-            }
-        }
+            applyDefinedServerValue(dataArray[i]);
         else
-        {
-            if((typeof getPanelSpecificState == 'function') && (getPanelSpecificState(dataArray[i]) != undefined))
-            {
-                undefinedItemsToUpdate.push(getPanelSpecificState(dataArray[i]));
-            }
-            else if((dataArray[i].type == SERVER_TYPE_TURNOUT) && isPhysicalTurnout(dataArray[i].name))
-            {
-                var localState = getTurnoutState(dataArray[i].name);
-                
-                if(localState != null)
-                    undefinedItemsToUpdate.push(new ServerObject(dataArray[i].name, SERVER_TYPE_TURNOUT, localState));
-            }
-            else if(dataArray[i].type == SERVER_TYPE_DISPATCH)
-            {
-                if(dataArray[i].name == SERVER_NAME_MAINLINELOCKED)
-                    undefinedItemsToUpdate.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, mainlineLocked ? 'true' : 'false'));
-                else if(typeof getDispatchObject == 'function')
-                {
-                    var dispatchState = getDispatchObject(dataArray[i]);
-                                        
-                    //console.log(dataArray[i].name + " is undefined and will be set to default value of '" + dispatchState.value + "'");
-                    
-                    if(dispatchState != undefined)
-                        undefinedItemsToUpdate.push(dispatchState);
-                }
-            }
-            else if(dataArray[i].type == SERVER_TYPE_SENSOR)
-            {
-                // do nothing since a sensor is a read-only object (i.e. property of the layout)
-            }
-        }
+            collectUndefinedServerValue(dataArray[i], undefinedItemsToUpdate);
     }
-    
+
     if(undefinedItemsToUpdate.length > 0)
         executePanelStateChangeRequestsLowLevel(undefinedItemsToUpdate, false);
-    
+
     updateMainlineStatus();
-        
+
     setPanelStatus("Panel Updated");
+}
+
+/* applyDefinedServerValue([ServerCommsObject] item)
+ * Applies a single server-reported value to the panel. Checked in priority order: panel-specific
+ * hook, dispatch-specific hook, then the built-in dispatch/turnout/sensor handling.
+ */
+function applyDefinedServerValue(item)
+{
+    if((typeof setPanelSpecificState == 'function') && setPanelSpecificState(item))
+    {
+        // do nothing if setPanelSpecificState returned true (i.e. it handled the object)
+    }
+    else if((typeof setDispatchObject == 'function') && setDispatchObject(item))
+    {
+        // do nothing if setDispatchObject returned true (i.e. it handled the object)
+    }
+    else if((item.type == SERVER_TYPE_DISPATCH) && (item.name == SERVER_NAME_MAINLINELOCKED))
+    {
+        mainlineLocked = (item.value == 'true');
+    }
+    else if((item.type == SERVER_TYPE_DISPATCH) && (item.name == SERVER_NAME_DISPATCH_SIGNALING_ENABLED))
+    {
+        dispatchSignalingEnabled = (item.value == 'yes');
+        var bigButtonResults = svgDocument.getElementsByClassName(SERVER_NAME_DISPATCH_SIGNALING_ENABLED);
+        for (var btnIdx = 0; btnIdx < bigButtonResults.length; btnIdx++) {
+            setStyleSubAttribute(bigButtonResults[btnIdx], 'fill', dispatchSignalingEnabled ? 'lime' : 'gray');
+        }
+    }
+    else if((item.type == SERVER_TYPE_DISPATCH) && (item.name == SERVER_NAME_FIELD_AUTH_ALARM))
+    {
+        fieldAuthAlarmEnabled = (item.value == 'yes');
+        var fieldBtnResults = svgDocument.getElementsByClassName(SERVER_NAME_FIELD_AUTH_ALARM);
+        for (var fbIdx = 0; fbIdx < fieldBtnResults.length; fbIdx++) {
+            setStyleSubAttribute(fieldBtnResults[fbIdx], 'fill', fieldAuthAlarmEnabled ? 'lime' : 'gray');
+        }
+        // Let a field panel re-render its alarms when the flag flips.
+        if(typeof onFieldAuthAlarmToggled == 'function')
+            onFieldAuthAlarmToggled();
+    }
+    else if (item.type == SERVER_TYPE_DISPATCH && item.name.indexOf("IMSIGNALHEAD") != 0) {
+        applySignalHeadValue(item);
+    }
+    else if((item.type == SERVER_TYPE_TURNOUT) && isPhysicalTurnout(item.name))
+    {
+        setTurnoutState(item.name, item.value);
+    }
+    else if((item.type == SERVER_TYPE_SENSOR) && (typeof setSensorState == 'function'))
+    {
+        var trySystemName = true;
+        if (item.userName != null && item.userName != '') {
+            trySystemName = !setSensorState(item.userName, item.value);
+        }
+        if (trySystemName) {
+            setSensorState(item.name, item.value);
+        }
+    }
+    else
+    {
+        console.log("Not sure what to do with data: ", item);
+        // do nothing with object since we don't know what it is
+    }
+}
+
+/* applySignalHeadValue([ServerCommsObject] item)
+ * Updates a signal head's fill color and flashing state from a server memory value
+ * (e.g. "FLASHING_RED" -> red fill + flashing class).
+ */
+function applySignalHeadValue(item)
+{
+    var value = item.value.replace("FLASHING_", "").toLowerCase();
+    if (value == "dark") {
+        value = "black";
+    } else if (value == "green") {
+        value = "lime";
+    }
+
+    var memoryVarName = item.name;
+    var headElements = svgDocument.getElementsByClassName(memoryVarName);
+    for (var headIdx = 0; headIdx < headElements.length; headIdx++) {
+        var headElement = headElements[headIdx];
+        setStyleSubAttribute(headElement, "fill", value);
+        var classesStr = headElement.getAttribute("class");
+        if (item.value.indexOf("FLASHING_") == 0) {
+            headElement.setAttribute("class", classesStr + " flashing");
+        } else {
+            // If it was in the middle of a flash, the head may have display=none.
+            setStyleSubAttribute(headElement, "display", "");
+            headElement.setAttribute("class", classesStr.replace(" flashing", ""));
+        }
+    }
+}
+
+/* collectUndefinedServerValue([ServerCommsObject] item, [Array] undefinedItemsToUpdate)
+ * The server has no recorded state for this object; push the panel's current local state for it
+ * into undefinedItemsToUpdate so it gets pushed back up to initialize the server.
+ */
+function collectUndefinedServerValue(item, undefinedItemsToUpdate)
+{
+    if((typeof getPanelSpecificState == 'function') && (getPanelSpecificState(item) != undefined))
+    {
+        undefinedItemsToUpdate.push(getPanelSpecificState(item));
+    }
+    else if((item.type == SERVER_TYPE_TURNOUT) && isPhysicalTurnout(item.name))
+    {
+        var localState = getTurnoutState(item.name);
+
+        if(localState != null)
+            undefinedItemsToUpdate.push(new ServerObject(item.name, SERVER_TYPE_TURNOUT, localState));
+    }
+    else if(item.type == SERVER_TYPE_DISPATCH)
+    {
+        if(item.name == SERVER_NAME_MAINLINELOCKED)
+            undefinedItemsToUpdate.push(new ServerObject(SERVER_NAME_MAINLINELOCKED, SERVER_TYPE_DISPATCH, mainlineLocked ? 'true' : 'false'));
+        else if(typeof getDispatchObject == 'function')
+        {
+            var dispatchState = getDispatchObject(item);
+
+            if(dispatchState != undefined)
+                undefinedItemsToUpdate.push(dispatchState);
+        }
+    }
+    else if(item.type == SERVER_TYPE_SENSOR)
+    {
+        // do nothing since a sensor is a read-only object (i.e. property of the layout)
+    }
 }
 
 
@@ -1069,6 +1070,21 @@ function setStyleSubAttribute(elem, subAttribName, subAttribValue)
     elem.setAttribute("style", newStyle);
 }
 
+/* toggleCSSClass([SVGElement] elem, [String] cls, [Boolean] on)
+ * Adds cls to elem's class attribute if on is true and it isn't already present;
+ * removes it if on is false and it is present.
+ */
+function toggleCSSClass(elem, cls, on)
+{
+    var currentClass = elem.getAttribute("class") || "";
+    var has = (" " + currentClass + " ").indexOf(" " + cls + " ") >= 0;
+
+    if(on && !has)
+        elem.setAttribute("class", currentClass + " " + cls);
+    else if(!on && has)
+        elem.setAttribute("class", (" " + currentClass + " ").replace(" " + cls + " ", " ").replace(/^\s+|\s+$/g, ""));
+}
+
 /* getStyleSubAttribute([SVGElement] elem, [String] subAttribName)
  * Returns subattribute value from the delimited list of styles in the style attribute of an SVG element
  */
@@ -1120,7 +1136,7 @@ function setPanelStatus(text)
 	if(textItem != null)
 	{
 		if(debugStringTimerOn && (text != "Panel Ready"))
-			window.setTimeout("setPanelStatus(\"Panel Ready\")",2000)
+			window.setTimeout(() => setPanelStatus("Panel Ready"), 2000)
 	
         setSVGText("panelStatus", text + " (" + socketStatus + ")");
 	}
@@ -1350,7 +1366,7 @@ function updateMainlineLockGroup()
 		
         // If timer isn't currently set, set it now to start animation
         if(mainLockTimerID == null)
-            mainLockTimerID = window.setInterval("updateMainlineLockGroup()", 75);
+            mainLockTimerID = window.setInterval(() => updateMainlineLockGroup(), 75);
 	}
     else
     {
@@ -1439,12 +1455,81 @@ function isOnMainlineLayer(obj)
  */
 function getPanelObjType(objID)
 {
-	var position = objID.search("[0-9]");
-	
-	if(position != -1)
-		return objID.substring(0, position);
-	
-	return null;
+	return parseDCCObjID(objID).type;
+}
+
+/* [Object] parseDCCObjID([String] objID)
+ * Parses an object ID once into its component parts. ID is assumed to be of the form: ttt###aaa[.r],
+ * where
+ *     t is the object type, ### are numeric characters, aaa is an optional alphabetic submotor address,
+ *     and r is an optional route character (R/N/T) following a dot, or trailing directly on aaa (R/N only).
+ * Returns { type, addrAndMotor, addr, motor, route }, each null if not present. This consolidates logic
+ * previously duplicated across getPanelObjType/getDCCAddrAndMotorSubAddr/getDCCAddrRoute/getDCCAddr/getMotorSubAddr.
+ */
+function parseDCCObjID(objID)
+{
+	var digitPos = objID.search("[0-9]");
+	var dotPos = objID.search("[.]");
+
+	var type = (digitPos != -1) ? objID.substring(0, digitPos) : null;
+
+	var addrAndMotor = null;
+	if((digitPos != -1) && (dotPos == -1))
+	{
+		var lastChar = objID.substring(objID.length-1);
+		if((lastChar == 'R') || (lastChar == 'r') || (lastChar == 'N') || (lastChar == 'n'))
+			addrAndMotor = objID.substring(digitPos, objID.length-1);
+		else
+			addrAndMotor = objID.substring(digitPos);
+	}
+	else if((digitPos != -1) && (dotPos != -1))
+	{
+		addrAndMotor = objID.substring(digitPos, dotPos);
+	}
+
+	var route = null;
+	if(dotPos != -1)
+	{
+		var routeChar = objID.substring(dotPos+1);
+		if((routeChar == 'R') || (routeChar == 'r'))
+			route = 'R';
+		else if((routeChar == 'N') || (routeChar == 'n'))
+			route = 'N';
+		else if((routeChar == 'T') || (routeChar == 't'))
+			route = 'T';
+	}
+	else if(addrAndMotor != null)
+	{
+		var addrPos = objID.search(addrAndMotor);
+		if(addrPos != -1)
+		{
+			var routeChar = objID.substring(addrPos + addrAndMotor.length);
+			if((routeChar == 'R') || (routeChar == 'r'))
+				route = 'R';
+			else if((routeChar == 'N') || (routeChar == 'n'))
+				route = 'N';
+			else if((routeChar == 'T') || (routeChar == 't'))
+				route = 't';
+		}
+	}
+
+	var addr = null;
+	var motor = null;
+	if(addrAndMotor != null)
+	{
+		var nonDigitPos = addrAndMotor.search("\\D");
+		if(nonDigitPos != -1)
+		{
+			addr = addrAndMotor.substring(0, nonDigitPos);
+			motor = addrAndMotor.substring(nonDigitPos);
+		}
+		else
+		{
+			addr = addrAndMotor;
+		}
+	}
+
+	return { type: type, addrAndMotor: addrAndMotor, addr: addr, motor: motor, route: route };
 }
 
 /* [String] getDCCAddrAndMotorSubAddr([String] objID)
@@ -1455,66 +1540,12 @@ function getPanelObjType(objID)
  */
 function getDCCAddrAndMotorSubAddr(objID)
 {
-	var position = objID.search("[0-9]");
-	var positionOfDot = objID.search("[.]");
-    
-	if((position != -1) && (positionOfDot == -1))
-    {
-        var lastChar = objID.substring(objID.length-1);
-        if((lastChar == 'R') || (lastChar == 'r') || (lastChar == 'N') || (lastChar == 'n'))
-            return objID.substring(position, objID.length-1);
-        
-		return objID.substring(position);
-    }
-    
-	if((position != -1) && (positionOfDot != -1))
-        return objID.substring(position, positionOfDot);
-	
-	return null;
+	return parseDCCObjID(objID).addrAndMotor;
 }
 
 function getDCCAddrRoute(objID)
 {
-	var positionOfDot = objID.search("[.]");
-    
-    if(positionOfDot != -1)
-    {
-        var route = objID.substring(positionOfDot+1);
-        
-        if((route == 'R') || (route == 'r'))
-            return 'R';
-        
-        if((route == 'N') || (route == 'n'))
-            return 'N';
-        
-        if((route == 'T') || (route == 't'))
-            return 'T';
-    }
-    else
-    {
-        var dccMotorAddr = getDCCAddrAndMotorSubAddr(objID);
-        
-        if(dccMotorAddr != null)
-        {
-            var position = objID.search(dccMotorAddr);
-        
-            if(position != -1)
-            {
-                var route = objID.substring(position + dccMotorAddr.length);
-                
-                if((route == 'R') || (route == 'r'))
-                    return 'R';
-                
-                if((route == 'N') || (route == 'n'))
-                    return 'N';
-                
-                if((route == 'T') || (route == 't'))
-                    return 't';
-            }
-        }
-    }
-	
-	return null;
+	return parseDCCObjID(objID).route;
 }
 
 /* [String] getDCCAddr([String] objID)
@@ -1525,23 +1556,14 @@ function getDCCAddrRoute(objID)
  */
 function getDCCAddr(objID)
 {
-	var dccMotorAddr = getDCCAddrAndMotorSubAddr(objID);
-	
-    if(dccMotorAddr != null)
-    {
-        var position = dccMotorAddr.search("\\D");
-	
-        if(position != -1)
-            return dccMotorAddr.substring(0, position);
-	
-        return dccMotorAddr;
-    }
-    else
-    {
-        console.log(objID + " was not a valid dcc address and moter sub address.");
-    }
-    
-    return null;
+	var parsed = parseDCCObjID(objID);
+
+	if(parsed.addrAndMotor != null)
+		return parsed.addr;
+
+	console.log(objID + " was not a valid dcc address and moter sub address.");
+
+	return null;
 }
 
 /* [String] getMotorSubAddr([String] objID)
@@ -1552,17 +1574,7 @@ function getDCCAddr(objID)
  */
 function getMotorSubAddr(objID)
 {
-	var dccMotorAddr = getDCCAddrAndMotorSubAddr(objID);
-	
-	if(dccMotorAddr != null)
-	{
-		var position = dccMotorAddr.search("\\D");
-		
-		if(position != -1)
-			return dccMotorAddr.substring(position);
-	}
-	
-	return null;
+	return parseDCCObjID(objID).motor;
 }
 
 /* [boolean] turnoutHasMultipleMotors([String] objID)
@@ -1577,51 +1589,48 @@ function turnoutHasMultipleMotors(objID)
 }
 
 /* Cookies */
-function Cookie(cname, defaultValue, explanation)
+class Cookie
 {
-    var cpath = "/";
+	constructor(cname, defaultValue, explanation)
+	{
+		var cpath = "/";
 
-    this.name = cname;
-    this.defaultValue = defaultValue;
-    this.explanation = explanation;
-    this.path = "path=" + cpath;
-    
-    this.getCookie = getCookie;
-    this.setCookie = setCookie;
-    this.deleteCookie = deleteCookie;
-    
-    this.isSet = isSet;
-}
+		this.name = cname;
+		this.defaultValue = defaultValue;
+		this.explanation = explanation;
+		this.path = "path=" + cpath;
+	}
 
-function isSet()
-{
-    return this.getCookie() == this.defaultValue;
-}
+	isSet()
+	{
+		return this.getCookie() == this.defaultValue;
+	}
 
-function getCookie()
-{
-    if (document.cookie == undefined) {
-        return "";
-    }
-    var cname = this.name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++)
-    {
-        var c = ca[i].trim();
-        if (c.indexOf(cname)==0) return c.substring(cname.length,c.length);
-    }
-    return "";
-}
+	getCookie()
+	{
+		if (document.cookie == undefined) {
+			return "";
+		}
+		var cname = this.name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++)
+		{
+			var c = ca[i].trim();
+			if (c.indexOf(cname)==0) return c.substring(cname.length,c.length);
+		}
+		return "";
+	}
 
-function setCookie(exdays)
-{
-    var d = new Date();
-    d.setTime(d.getTime()+(exdays*24*60*60*1000));
-    var expires = "expires="+d.toGMTString();
-    document.cookie = this.name + "=" + this.defaultValue + "; " + expires + "; " + this.path;
-}
+	setCookie(exdays)
+	{
+		var d = new Date();
+		d.setTime(d.getTime()+(exdays*24*60*60*1000));
+		var expires = "expires="+d.toGMTString();
+		document.cookie = this.name + "=" + this.defaultValue + "; " + expires + "; " + this.path;
+	}
 
-function deleteCookie()
-{
-    this.setCookie(-1);
+	deleteCookie()
+	{
+		this.setCookie(-1);
+	}
 }

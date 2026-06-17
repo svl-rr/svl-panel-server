@@ -191,12 +191,7 @@ function fieldAlarmHandle(obj)
 
 function fieldSetFlash(el, on)
 {
-    var cls = el.getAttribute("class") || "";
-    var has = (" " + cls + " ").indexOf(" fieldAlarmFlash ") >= 0;
-    if(on && !has)
-        el.setAttribute("class", cls + " fieldAlarmFlash");
-    else if(!on && has)
-        el.setAttribute("class", (" " + cls + " ").replace(" fieldAlarmFlash ", " ").replace(/^\s+|\s+$/g, ""));
+    toggleCSSClass(el, "fieldAlarmFlash", on);
 }
 
 function renderFieldAlarms()

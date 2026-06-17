@@ -70,7 +70,7 @@ function setCurrentAddress(state)
 
     var updateMessage = "";
 
-    if((addr > 0) && (addr < 2044))
+    if((addr > 0) && (addr < MAX_TURNOUT_DCC_ADDR))
     {
     	addTurnoutStateChangeRequest(addr, state);
     	executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
@@ -105,8 +105,8 @@ function validateAddrRange(inAddr)
 {
     if(inAddr < 1)
         return 1;
-    else if(inAddr > 2044)
-        return 2044;
+    else if(inAddr > MAX_TURNOUT_DCC_ADDR)
+        return MAX_TURNOUT_DCC_ADDR;
     else
         return inAddr;
 }

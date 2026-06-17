@@ -270,65 +270,24 @@ function UserNameServerObject(objectUserName, objectType) {
     return so
 }
 
-function ServerObject(objectName, objectType)
+class ServerObject
 {
-	this.name=objectName;
-    this.useUserName = false;
-    this.type=objectType;
-	
-    this.getName=getName;
-	this.getType=getType;
-	this.getValue=getValue;
-	
-	this.setName=setName;
-	this.setType=setType;
-	this.setValue=setValue;
-}
+	constructor(objectName, objectType, objectValue = null)
+	{
+		this.name = objectName;
+		this.useUserName = false;
+		this.type = objectType;
+		this.value = objectValue;
+	}
 
-function ServerObject(objectName, objectType, objectValue)
-{
-	this.name=objectName;
-    this.useUserName = false;
-    this.type=objectType;
-	this.value=objectValue;
-	
-    this.getName=getName;
-	this.getType=getType;
-	this.getValue=getValue;
-	
-	this.setName=setName;
-	this.setType=setType;
-	this.setValue=setValue;
-}
+	getName() { return this.name; }
+	setName(objectName) { this.name = objectName; }
 
-function getName()
-{
-	return this.name;
-}
+	getType() { return this.type; }
+	setType(objectType) { this.type = objectType; }
 
-function setName(objectName)
-{
-	this.name=objectName;
-}
-
-function getType()
-{
-	return this.type;
-}
-
-function setType(objectType)
-{
-	this.type=objectType;
-}
-
-function getValue()
-{
-	return this.value;
-}
-
-function setValue(objectValue)
-{
-	this.value=objectValue;
+	getValue() { return this.value; }
+	setValue(objectValue) { this.value = objectValue; }
 }
 
 function getJMRIObjects()

@@ -129,8 +129,8 @@ function validateAddrRange(inAddr)
 {
     if(inAddr < 1)
         return 1;
-    else if(inAddr > 2044)
-        return 2044;
+    else if(inAddr > MAX_TURNOUT_DCC_ADDR)
+        return MAX_TURNOUT_DCC_ADDR;
     else
         return inAddr;
 }

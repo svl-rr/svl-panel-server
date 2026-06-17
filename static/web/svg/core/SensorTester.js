@@ -41,7 +41,7 @@ function getPanelSpecificStates()
 
 function autoFillAddressRange()
 {
-    var newAddr = promptForAddress("Enter start of address range:", "1", 4089);
+    var newAddr = promptForAddress("Enter start of address range:", "1", MAX_SENSOR_DCC_ADDR);
 
     if(newAddr != null)
     {
