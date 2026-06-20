@@ -8,108 +8,31 @@ function mainSouthPath()
     executePathArray(["TO24.R"]);
 }
 
-function cabooseTrkPath()
-{
-    executePathArray(["TO23.N"]);
-}
-
-function arrivalSubLeadPath()
-{
-    executePathArray(["TO35.N"]);
-}
-
-function arrivalLeadPath()
-{
-    executePathArray(["TO35.N", "TO38.R", "TO23.R"]);
-}
-
 function arrivalNorthPath()
 {
     arrivalLeadPath();
     executePathArray(["TO24.N"]);
 }
 
-function arrivalSouthPath()
-{
-    executePathArray(["TO34.R"]);
-}
-
-function class1NorthPath()
-{
-    executePathArray(["TO35.N", "TO38.N"]);
-}
-
-function class1SouthPath()
-{
-    executePathArray(["TO34.N", "TO33.N"]);
-}
-
-function class2NorthPath()
-{
-    executePathArray(["TO35.R", "TO36.N"]);
-}
-
-function class2SouthPath()
-{
-    executePathArray(["TO34.N", "TO33.R", "TO32.N"]);	
-}
-
-function class3NorthPath()
-{
-    executePathArray(["TO35.R", "TO36.R"]);
-}
-
-function class3SouthPath()
-{
-    executePathArray(["TO34.N", "TO33.R", "TO32.R", "TO31.N"]);
-}
-
-function class4NorthPath()
-{
-    executePathArray(["TO39.R", "TO40.R"]);
-}
-
-function class4SouthPath()
-{
-    executePathArray(["TO34.N", "TO33.R", "TO32.R", "TO31.R", "TO30.N"]);
-}
-
-function class5NorthPath()
-{
-    executePathArray(["TO39.R", "TO40.N", "TO41.N"]);
-}
-
-function class5SouthPath()
-{
-    executePathArray(["TO34.N", "TO33.R", "TO32.R", "TO31.R", "TO30.R", "TO29.N", "TO28.R"]);
-}
-
-function class6NorthPath()
-{
-    executePathArray(["TO39.R", "TO40.N", "TO41.R", "TO42.N"]);
-}
-
-function class6SouthPath()
-{
-    executePathArray(["TO27B.R", "TO34.N", "TO33.R", "TO32.R", "TO31.R", "TO30.R", "TO29.R", "TO28.N"]);
-}
-
-function departureNorthPath()
-{
-    executePathArray(["TO39.R", "TO40.N", "TO41.R", "TO42.R"]);
-}
-
-function departureSouthPath()
-{
-    executePathArray(["TO26B.R"]);
-}
-
-function mainNorthLeadPath()
-{
-    executePathArray(["TO39.N", "TO25.N"]);	
-}
-
-function hardestyIndustriesPath()
-{
-    executePathArray(["TO25.R"]);	
-}
+registerPathFunctions({
+    cabooseTrkPath: ["TO23.N"],
+    arrivalSubLeadPath: ["TO35.N"],
+    arrivalLeadPath: ["TO35.N", "TO38.R", "TO23.R"],
+    arrivalSouthPath: ["TO34.R"],
+    class1NorthPath: ["TO35.N", "TO38.N"],
+    class1SouthPath: ["TO34.N", "TO33.N"],
+    class2NorthPath: ["TO35.R", "TO36.N"],
+    class2SouthPath: ["TO34.N", "TO33.R", "TO32.N"],
+    class3NorthPath: ["TO35.R", "TO36.R"],
+    class3SouthPath: ["TO34.N", "TO33.R", "TO32.R", "TO31.N"],
+    class4NorthPath: ["TO39.R", "TO40.R"],
+    class4SouthPath: ["TO34.N", "TO33.R", "TO32.R", "TO31.R", "TO30.N"],
+    class5NorthPath: ["TO39.R", "TO40.N", "TO41.N"],
+    class5SouthPath: ["TO34.N", "TO33.R", "TO32.R", "TO31.R", "TO30.R", "TO29.N", "TO28.R"],
+    class6NorthPath: ["TO39.R", "TO40.N", "TO41.R", "TO42.N"],
+    class6SouthPath: ["TO27B.R", "TO34.N", "TO33.R", "TO32.R", "TO31.R", "TO30.R", "TO29.R", "TO28.N"],
+    departureNorthPath: ["TO39.R", "TO40.N", "TO41.R", "TO42.R"],
+    departureSouthPath: ["TO26B.R"],
+    mainNorthLeadPath: ["TO39.N", "TO25.N"],
+    hardestyIndustriesPath: ["TO25.R"]
+});

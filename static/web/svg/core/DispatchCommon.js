@@ -36,6 +36,31 @@ var UNAUTHORIZED_COLOR = "white";
 
 var alwaysShowTrainID = true;
 
+/* configureCrossoverAuthorizations([String] normalCrossoverPathArray, [String] reverseCrossoverPathArray)
+ * Marks the given crossover turnouts as allowing multiple simultaneous
+ * authorizations in their normal/reverse direction, respectively. Called
+ * once per dispatch panel (North/South) during panelInitPreSocket with that
+ * panel's own crossover turnout lists.
+ */
+function configureCrossoverAuthorizations(normalCrossoverPathArray, reverseCrossoverPathArray)
+{
+    for(var i in normalCrossoverPathArray)
+    {
+        var panelTurnout = getPanelTurnoutFromElemID(normalCrossoverPathArray[i]);
+
+        if(panelTurnout != null)
+            panelTurnout.allowMultipleNormalAuthorizations = true;
+    }
+
+    for(var i in reverseCrossoverPathArray)
+    {
+        var panelTurnout = getPanelTurnoutFromElemID(reverseCrossoverPathArray[i]);
+
+        if(panelTurnout != null)
+            panelTurnout.allowMultipleReverseAuthorizations = true;
+    }
+}
+
 /* dispatchInit([Event] evt)
  * Called by PanelCommon.js to initialize dispatching separately
  */

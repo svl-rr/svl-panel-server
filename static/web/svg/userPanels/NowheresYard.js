@@ -14,26 +14,6 @@ function lineNorthMainsForPassenger()
 	addTurnoutStateChangeRequest("TO509", 'N');
 }
 
-function main1SouthPath()
-{
-	executePathArray(["TO494A.N", "TO493.R", "TO492.N"]);
-}
-
-function main1NorthPath()
-{
-	executePathArray(["TO508.N", "TO509.R"]);
-}
-
-function main2SouthPath()
-{
-	executePathArray(["TO494A.N", "TO493.N"]);
-}
-
-function main2NorthPath()
-{
-	executePathArray(["TO507.N", "TO508.R", "TO509.R"]);
-}
-
 function pass1SouthPath()
 {
 	lineSouthMainsForPassenger();
@@ -106,41 +86,6 @@ function pass4SwitchLeadPath()
 	executePanelStateChangeRequests();
 }
 
-function dinerServicePath()
-{
-	executePathArray(["TO470.R", "TO472.R", "TO474.R", "TO475.N"]);
-}
-
-function commissary2Path()
-{
-	executePathArray(["TO468.N", "TO470.N", "TO472.R", "TO474.R", "TO475.N"]);
-}
-
-function commissary1Path()
-{
-	executePathArray(["TO467.N", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"]);
-}
-
-function coachServicePath()
-{									
-	executePathArray(["TO467.R", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"]);
-}
-
-function coachYard3Path()
-{
-	executePathArray(["TO472.N", "TO474.R", "TO475.N"]);
-}
-
-function coachYard2Path()
-{
-	executePathArray(["TO474.N", "TO475.N"]);
-}
-
-function coachYard1Path()
-{	
-	executePathArray(["TO475.R"]);
-}
-
 function pass123NorthPathToggle()
 {
 	lineNorthMainsForPassenger();
@@ -163,73 +108,6 @@ function switchLeadPath()
 	executePanelStateChangeRequests();
 }
 
-function reaFacilityPath()
-{
-	executePathArray(["TO514B.N"]);
-}
-
-
-
-function arrDep1NorthPath()
-{
-	executePathArray(["TO506.N"]);
-}
-
-function arrDep1SouthPath()
-{	
-	executePathArray(["TO495.R"]);
-}
-
-function pfeNorthPath()
-{
-	executePathArray(["TO503.N", "TO512.N"]);
-}
-
-function pfeSouthPath()
-{	
-	executePathArray(["TO478.N", "TO495.N", "TO496.N"]);
-}
-
-function arrDep2NorthPath()
-{
-	executePathArray(["TO503.N", "TO512.R"]);
-}
-
-function arrDep2SouthPath()
-{
-	executePathArray(["TO478.R", "TO495.N", "TO496.N"]);
-}
-
-function arrDep3NorthPath()
-{
-	executePathArray(["TO503.R", "TO502.N"]);
-}
-
-function arrDep3SouthPath()
-{
-    executePathArray(["TO495.N", "TO496.R", "TO497.N"]);
-}
-
-function arrDep4NorthPath()
-{
-	executePathArray(["TO503.R", "TO502.R", "TO501.N"]);
-}
-
-function arrDep4SouthPath()
-{
-	executePathArray(["TO495.N", "TO496.R", "TO497.R", "TO498A.N"]);
-}
-
-function pwrReadyNorthPath()
-{
-    executePathArray(["TO503.R", "TO502.R", "TO501.R", "TO500.N"]);
-}
-
-function pwrReadySouthPath()
-{	
-	executePathArray(["TO476.R"]);
-}
-
 function powerReadyFuelLeadPath()
 {
     if(getTurnoutState("TO498B") == 'R')
@@ -245,127 +123,54 @@ function powerReadyFuelLeadPath()
     executePanelStateChangeRequests();
 }
 
-function cabooseTrkNorthPath()
-{
-	executePathArray(["TO503.R", "TO502.R", "TO501.R", "TO500.R", "TO499.N"]);
-}
-
-function cabooseTrkSouthPath()
-{	
-	executePathArray(["TO476.N"]);
-}
-
-function classLeadPath()
-{
-	executePathArray(["TO503.R", "TO502.R", "TO501.R", "TO500.R", "TO499.R", "TO490.N"]);
-}
-
-function class1Path()
-{
-	executePathArray(["TO489.R", "TO488.N", "TO485.R", "TO484.R"]);
-}
-
-function class2Path()
-{    	
-	executePathArray(["TO489.R", "TO488.N", "TO485.R", "TO484.N"]);
-}
-
-function class3Path()
-{
-	executePathArray(["TO489.R", "TO488.N", "TO485.N"]);
-}
-
-function class4Path()
-{
-	executePathArray(["TO489.R", "TO488.R"]);
-}
-
-function class5Path()
-{    	
-	executePathArray(["TO489.N", "TO487.N"]);
-}
-
-function class6Path()
-{
-	executePathArray(["TO489.N", "TO487.R", "TO486.N"]);
-}
-
-function class7Path()
-{
-	executePathArray(["TO489.N", "TO487.R", "TO486.R"]);
-}
-
-function drillLeadPath()
-{
-	executePathArray(["TO504A.T"]);
-}
-
-function classRunaroundNorthPath()
-{
-	executePathArray(["TO504B.R"]);
-}
-
-function classRunaroundSouthPath()
-{
-    executePathArray(["TO491.N", "TO490.R"]);
-}
-
-function runoffSpurPath()
-{
-	executePathArray(["TO491.R", "TO490.R"]);
-}
-
-function fuel1Path()
-{	
-	executePathArray(["TO466.R"]);
-}
-
-function fuel2NorthPath()
-{
-	executePathArray(["TO466.N", "TO465.N"]);
-}
-
-function fuel2SouthPath()
-{
-	executePathArray(["TO483.N", "TO463B.R"]);
-}
-
-function fuel3NorthPath()
-{
-	executePathArray(["TO466.N", "TO465.R"]);
-}
-
-function fuel3SouthPath()
-{
-	executePathArray(["TO483.R"]);
-}
-
-function engine1Path()
-{
-    executePathArray(["TO482.R", "TO479.R"]);
-}
-
-function engine2Path()
-{
-    executePathArray(["TO482.R", "TO479.N"]);
-}
-
-function engine3Path()
-{
-	executePathArray(["TO482.N", "TO480.R"]);
-}
-
-function engine4Path()
-{
-	executePathArray(["TO482.N", "TO480.N"]);
-}
-
-function sandUnloadPath()
-{
-	executePathArray(["TO463A.R", "TO481.R"]);
-}
-
-function fuelUnloadPath()
-{
-	executePathArray(["TO463A.R", "TO481.N"]);
-}
+registerPathFunctions({
+    main1SouthPath: ["TO494A.N", "TO493.R", "TO492.N"],
+    main1NorthPath: ["TO508.N", "TO509.R"],
+    main2SouthPath: ["TO494A.N", "TO493.N"],
+    main2NorthPath: ["TO507.N", "TO508.R", "TO509.R"],
+    dinerServicePath: ["TO470.R", "TO472.R", "TO474.R", "TO475.N"],
+    commissary2Path: ["TO468.N", "TO470.N", "TO472.R", "TO474.R", "TO475.N"],
+    commissary1Path: ["TO467.N", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"],
+    coachServicePath: ["TO467.R", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"],
+    coachYard3Path: ["TO472.N", "TO474.R", "TO475.N"],
+    coachYard2Path: ["TO474.N", "TO475.N"],
+    coachYard1Path: ["TO475.R"],
+    reaFacilityPath: ["TO514B.N"],
+    arrDep1NorthPath: ["TO506.N"],
+    arrDep1SouthPath: ["TO495.R"],
+    pfeNorthPath: ["TO503.N", "TO512.N"],
+    pfeSouthPath: ["TO478.N", "TO495.N", "TO496.N"],
+    arrDep2NorthPath: ["TO503.N", "TO512.R"],
+    arrDep2SouthPath: ["TO478.R", "TO495.N", "TO496.N"],
+    arrDep3NorthPath: ["TO503.R", "TO502.N"],
+    arrDep3SouthPath: ["TO495.N", "TO496.R", "TO497.N"],
+    arrDep4NorthPath: ["TO503.R", "TO502.R", "TO501.N"],
+    arrDep4SouthPath: ["TO495.N", "TO496.R", "TO497.R", "TO498A.N"],
+    pwrReadyNorthPath: ["TO503.R", "TO502.R", "TO501.R", "TO500.N"],
+    pwrReadySouthPath: ["TO476.R"],
+    cabooseTrkNorthPath: ["TO503.R", "TO502.R", "TO501.R", "TO500.R", "TO499.N"],
+    cabooseTrkSouthPath: ["TO476.N"],
+    classLeadPath: ["TO503.R", "TO502.R", "TO501.R", "TO500.R", "TO499.R", "TO490.N"],
+    class1Path: ["TO489.R", "TO488.N", "TO485.R", "TO484.R"],
+    class2Path: ["TO489.R", "TO488.N", "TO485.R", "TO484.N"],
+    class3Path: ["TO489.R", "TO488.N", "TO485.N"],
+    class4Path: ["TO489.R", "TO488.R"],
+    class5Path: ["TO489.N", "TO487.N"],
+    class6Path: ["TO489.N", "TO487.R", "TO486.N"],
+    class7Path: ["TO489.N", "TO487.R", "TO486.R"],
+    drillLeadPath: ["TO504A.T"],
+    classRunaroundNorthPath: ["TO504B.R"],
+    classRunaroundSouthPath: ["TO491.N", "TO490.R"],
+    runoffSpurPath: ["TO491.R", "TO490.R"],
+    fuel1Path: ["TO466.R"],
+    fuel2NorthPath: ["TO466.N", "TO465.N"],
+    fuel2SouthPath: ["TO483.N", "TO463B.R"],
+    fuel3NorthPath: ["TO466.N", "TO465.R"],
+    fuel3SouthPath: ["TO483.R"],
+    engine1Path: ["TO482.R", "TO479.R"],
+    engine2Path: ["TO482.R", "TO479.N"],
+    engine3Path: ["TO482.N", "TO480.R"],
+    engine4Path: ["TO482.N", "TO480.N"],
+    sandUnloadPath: ["TO463A.R", "TO481.R"],
+    fuelUnloadPath: ["TO463A.R", "TO481.N"]
+});

@@ -2,67 +2,18 @@ function panelInitPreSocket(evt)
 {
 }
 
-function Track1Path()
-{
-	executePathArray(["TO393.R", "TO394.N", "TO396.R", "TO399.N", "TO375.R"]);
-}
-
-function Track2Path()
-{
-	executePathArray(["TO393.N", "TO394.N", "TO396.R", "TO399.N", "TO375.R"]);
-}
-
-function Track3Path()
-{
-	executePathArray(["TO394.R", "TO396.R", "TO399.N", "TO375.R"]);
-}
-
-function Track4Path()
-{
-	executePathArray(["TO395.N", "TO396.N", "TO399.N", "TO375.R"]);
-}
-
-function Track5Path()
-{
-	executePathArray(["TO395.R", "TO396.N", "TO399.N", "TO375.R"]);
-}
-
-function Track6Path()
-{
-	executePathArray(["TO398.R", "TO399.R", "TO375.R"]);
-}
-
-function Track7Path()
-{
-	executePathArray(["TO397.R", "TO398.N", "TO399.R", "TO375.R"]);
-}
-
-function Track8Path()
-{
-	executePathArray(["TO397.N", "TO398.N", "TO399.R", "TO375.R"]);
-}
-
-function KlamathMainJasperPath()
-{
-	executePathArray(["TO377.N"]);
-}
-
-function KlamathSidingJasperPath()
-{
-	executePathArray(["TO377.R"]);
-}
-
-function KlamathMainKalamazooPath()
-{
-	executePathArray(["TO376.N", "TO375.N"]);
-}
-
-function KlamathSidingKalamazooPath()
-{
-	executePathArray(["TO376.R", "TO375.N"]);
-}
-
-function JasperKlamathPath()
-{
-	executePathArray(["TO330.R"]);
-}
+registerPathFunctions({
+    Track1Path: ["TO393.R", "TO394.N", "TO396.R", "TO399.N", "TO375.R"],
+    Track2Path: ["TO393.N", "TO394.N", "TO396.R", "TO399.N", "TO375.R"],
+    Track3Path: ["TO394.R", "TO396.R", "TO399.N", "TO375.R"],
+    Track4Path: ["TO395.N", "TO396.N", "TO399.N", "TO375.R"],
+    Track5Path: ["TO395.R", "TO396.N", "TO399.N", "TO375.R"],
+    Track6Path: ["TO398.R", "TO399.R", "TO375.R"],
+    Track7Path: ["TO397.R", "TO398.N", "TO399.R", "TO375.R"],
+    Track8Path: ["TO397.N", "TO398.N", "TO399.R", "TO375.R"],
+    KlamathMainJasperPath: ["TO377.N"],
+    KlamathSidingJasperPath: ["TO377.R"],
+    KlamathMainKalamazooPath: ["TO376.N", "TO375.N"],
+    KlamathSidingKalamazooPath: ["TO376.R", "TO375.N"],
+    JasperKlamathPath: ["TO330.R"]
+});

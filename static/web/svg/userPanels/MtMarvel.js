@@ -2,36 +2,6 @@ function panelInitPreSocket(evt)
 {
 }
 
-function LumberMill1Path()
-{
-	executePathArray(["TO444.N"]);
-}
-
-function LumberMill2Path()
-{
-	executePathArray(["TO444.R"]);
-}
-
-function EngineHousePath()
-{
-	executePathArray(["TO445.R", "TO446.N"]);
-}
-
-function RIPTrackPath()
-{
-	executePathArray(["TO445.R", "TO446.R"]);
-}
-
-function OutboundPath()
-{
-	executePathArray(["TO447.N", "TO449.N"]);
-}
-
-function InboundPath()
-{
-	executePathArray(["TO449.R"]);
-}
-
 function SwitchLeadPath()
 {
     var turnout = getPanelTurnoutFromElemID("TO425B.R");
@@ -47,22 +17,15 @@ function SwitchLeadPath()
         alert("SwitchLeadPath failed to find proper turnout");
 }
 
-function MtMarvelLeadPath()
-{
-	executePathArray(["TO425A.T"]);
-}
-
-function MtMarvelMainPath()
-{
-	executePathArray(["TO425A.R"]);
-}
-
-function LoopNBPath()
-{
-    executePathArray(["TO329.N"]);
-}
-
-function LoopSBPath()
-{
-	executePathArray(["TO329.R"]);
-}
+registerPathFunctions({
+    LumberMill1Path: ["TO444.N"],
+    LumberMill2Path: ["TO444.R"],
+    EngineHousePath: ["TO445.R", "TO446.N"],
+    RIPTrackPath: ["TO445.R", "TO446.R"],
+    OutboundPath: ["TO447.N", "TO449.N"],
+    InboundPath: ["TO449.R"],
+    MtMarvelLeadPath: ["TO425A.T"],
+    MtMarvelMainPath: ["TO425A.R"],
+    LoopNBPath: ["TO329.N"],
+    LoopSBPath: ["TO329.R"]
+});

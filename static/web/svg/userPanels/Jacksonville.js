@@ -20,61 +20,6 @@ function AshgroveQuarry1Path()
 	AshgroveQuarryLeadPath();
 }
 
-function AshgroveQuarryLeadPath()
-{
-	executePathArray(["TO297.R"]);
-}
-
-function AQXchangeLeadPath()
-{
-	executePathArray(["TO297.N"]);
-}
-
-function AQXchange2Path()
-{
-	executePathArray(["TO296.N", "TO295.R"]);
-}
-
-function AQXchange1Path()
-{
-	executePathArray(["TO296.R", "TO295.N"]);
-}
-
-function Igo3Path()
-{
-	executePathArray(["TO273.R"]);
-}
-
-function Igo2Path()
-{
-	executePathArray(["TO273.N", "TO274.N"]);
-}
-
-function Igo1Path()
-{
-	executePathArray(["TO273.N", "TO274.R"]);
-}
-
-function KawValleyPlasticsPath()
-{
-	executePathArray(["TO320.N", "TO319.R"]);
-}
-
-function GulfportGrain2Path()
-{
-	executePathArray(["TO321.N", "TO320.R", "TO319.R"]);
-}
-
-function GulfportGrain1Path()
-{
-	executePathArray(["TO321.R", "TO320.R", "TO319.R"]);
-}
-
-function JacksonvilleSidingPath()
-{
-	executePathArray(["TO319.N"]);
-}
-
 function UniversalExportsPath()
 {
 	executePathArray(["TO323.R", "TO322.N"]);
@@ -93,12 +38,18 @@ function UnionCoal1Path()
     UnionCoalUniversalExportsPreLeadPath();
 }
 
-function UnionCoalUniversalExportsPreLeadPath()
-{
-	executePathArray(["TO322.N"]);
-}
-
-function UnionCoalRampPath()
-{
-	executePathArray(["TO322.R"]);
-}
+registerPathFunctions({
+    AshgroveQuarryLeadPath: ["TO297.R"],
+    AQXchangeLeadPath: ["TO297.N"],
+    AQXchange2Path: ["TO296.N", "TO295.R"],
+    AQXchange1Path: ["TO296.R", "TO295.N"],
+    Igo3Path: ["TO273.R"],
+    Igo2Path: ["TO273.N", "TO274.N"],
+    Igo1Path: ["TO273.N", "TO274.R"],
+    KawValleyPlasticsPath: ["TO320.N", "TO319.R"],
+    GulfportGrain2Path: ["TO321.N", "TO320.R", "TO319.R"],
+    GulfportGrain1Path: ["TO321.R", "TO320.R", "TO319.R"],
+    JacksonvilleSidingPath: ["TO319.N"],
+    UnionCoalUniversalExportsPreLeadPath: ["TO322.N"],
+    UnionCoalRampPath: ["TO322.R"]
+});

@@ -4,14 +4,14 @@ function panelInitPreSocket(evt)
 
 function oneAtATimeStartClick()
 {
-    promptAndSetField("oneAtATimeStart");
-    
+    promptAndSetField("oneAtATimeStart", "Enter a turnout number:", validateAddrRange);
+
     setSVGText("oneAtATimeCurrent", getDCCAddr(getSVGText("oneAtATimeStart")));
 }
 
 function oneAtATimeEndClick()
 {
-    promptAndSetField("oneAtATimeEnd");
+    promptAndSetField("oneAtATimeEnd", "Enter a turnout number:", validateAddrRange);
 }
 
 function oneAtATimeNextClick()
@@ -70,12 +70,12 @@ function oneAtATime(state)
 
 function setAllStartClick()
 {
-    promptAndSetField("setAllStart");
+    promptAndSetField("setAllStart", "Enter a turnout number:", validateAddrRange);
 }
 
 function setAllEndClick()
 {
-    promptAndSetField("setAllEnd");
+    promptAndSetField("setAllEnd", "Enter a turnout number:", validateAddrRange);
 }
 
 function setAllNClick()
@@ -109,28 +109,4 @@ function setAll(state)
     
     executePanelStateChangeRequestsLowLevel(stateChangeRequests, false);
 	setPanelStatus("Done");
-}
-
-
-function promptAndSetField(whichObj)
-{
-    var currentText = getSVGText(whichObj);
-    
-    var newText = prompt("Enter a turnout number:", currentText);
-        
-    var value = Number(getDCCAddr(newText));
-    
-    value = validateAddrRange(value);
-    
-    setSVGText(whichObj, "" + value);
-}
-
-function validateAddrRange(inAddr)
-{
-    if(inAddr < 1)
-        return 1;
-    else if(inAddr > 2044)
-        return 2044;
-    else
-        return inAddr;
 }

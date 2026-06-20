@@ -36,9 +36,17 @@
      type="application/ecmascript"
      id="script_common" />
   <script
-     xlink:href="DispatchSouthRedirect.js"
      id="script_panelSpecific"
-     type="application/ecmascript" />
+     type="application/ecmascript">
+<![CDATA[
+// This function just redirects the init process into another file so that
+// the north and south files can both be loaded and used by the all panel.
+function panelInitPreSocket(evt)
+{
+	panelInitPreSocketSouth(evt);
+}
+]]>
+  </script>
   <defs
      id="defs4">
     <marker

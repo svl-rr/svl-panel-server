@@ -12,15 +12,5 @@
   "repository": {
     "url": ""
   },
-  "dependencies": {
-    "connect": "3.x.x",
-    "serve-index": "^1.9.1",
-    "serve-static": "^1.15.0",
-    "socket.io": "^4.7.1",
-    "xml2js": "^0.6.1"
-  },
-  "license": "MIT",
-  "engines": {
-    "node": "v18.16.0"
-  }
+  "license": "MIT"
 }

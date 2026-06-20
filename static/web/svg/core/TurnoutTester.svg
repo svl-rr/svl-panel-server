@@ -30,6 +30,10 @@
      type="application/ecmascript"
      id="script_common" />
   <script
+     xlink:href="/web/svg/core/TesterCommon.js"
+     type="application/ecmascript"
+     id="script_testerCommon" />
+  <script
      xlink:href="TurnoutTester.js"
      id="script_panelSpecific"
      type="application/ecmascript" />

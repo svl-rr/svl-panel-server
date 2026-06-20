@@ -32,6 +32,10 @@
      xlink:href="/web/svg/core/PanelCommon.js"
      type="application/ecmascript"
      id="script_common" />
+  <script
+     xlink:href="/web/svg/core/TesterCommon.js"
+     type="application/ecmascript"
+     id="script_testerCommon" />
   <defs
      id="defs4">
     <linearGradient

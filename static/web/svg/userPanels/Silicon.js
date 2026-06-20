@@ -2,102 +2,25 @@ function panelInitPreSocket(evt)
 {
 }
 
-function IdealCementSidingLeftPath()
-{
-    executePathArray(["TO648.R"]);
-}
-
-function SiliconMainMidLeftPath()
-{
-    executePathArray(["TO648.N"]);
-}
-
-function IdealCementSidingRightPath()
-{
-    executePathArray(["TO649.N"]);
-}
-
-function SiliconMainMidRightPath()
-{
-    executePathArray(["TO649.R"]);
-}
-
-function SiliconMainLeftPath()
-{
-    executePathArray(["TO600.R"]);
-}
-
-function SiliconSidingLeftPath()
-{
-    executePathArray(["TO600.N", "TO630.N"]);
-}
-
-function IdealCement2LeftPath()
-{
-    executePathArray(["TO631.N"]);
-}
-
-function IdealCement1LeftPath()
-{
-    executePathArray(["TO631.R", "TO632.N"]);
-}
-
-function FrontRunaroundLeftPath()
-{
-    executePathArray(["TO631.R", "TO632.R", "TO638.R"]);
-}
-
-function SiliconMainRightPath()
-{
-    executePathArray(["TO601.N"]);
-}
-
-function SiliconSidingMidPath()
-{
-    executePathArray(["TO633.N"]);
-}
-
-function SiliconSidingRightPath()
-{
-    executePathArray(["TO601.R"]);
-}
-
-function IdealCement2RightPath()
-{
-    executePathArray(["TO634.N", "TO633.R"]);
-}
-
-function IdealCement1RightPath()
-{
-    executePathArray(["TO635A.N", "TO634.R", "TO633.R"]);
-}
-
-function FrontRunaroundRightPath()
-{
-    executePathArray(["TO635A.R", "TO634.R", "TO633.R"]);
-}
-
-function TeamTrackPath()
-{
-    executePathArray(["TO635A.N", "TO636A.R"]);
-}
-
-function QMPath()
-{
-    executePathArray(["TO636A.T"]);
-}
-
-function BagHouse2Path()
-{
-    executePathArray(["TO637.R", "TO636B.R"]);
-}
-
-function BagHouse1Path()
-{
-    executePathArray(["TO637.N", "TO636B.R"]);
-}
-
-function HillPropane()
-{
-    executePathArray(["TO638.N"]);
-}
+registerPathFunctions({
+    IdealCementSidingLeftPath: ["TO648.R"],
+    SiliconMainMidLeftPath: ["TO648.N"],
+    IdealCementSidingRightPath: ["TO649.N"],
+    SiliconMainMidRightPath: ["TO649.R"],
+    SiliconMainLeftPath: ["TO600.R"],
+    SiliconSidingLeftPath: ["TO600.N", "TO630.N"],
+    IdealCement2LeftPath: ["TO631.N"],
+    IdealCement1LeftPath: ["TO631.R", "TO632.N"],
+    FrontRunaroundLeftPath: ["TO631.R", "TO632.R", "TO638.R"],
+    SiliconMainRightPath: ["TO601.N"],
+    SiliconSidingMidPath: ["TO633.N"],
+    SiliconSidingRightPath: ["TO601.R"],
+    IdealCement2RightPath: ["TO634.N", "TO633.R"],
+    IdealCement1RightPath: ["TO635A.N", "TO634.R", "TO633.R"],
+    FrontRunaroundRightPath: ["TO635A.R", "TO634.R", "TO633.R"],
+    TeamTrackPath: ["TO635A.N", "TO636A.R"],
+    QMPath: ["TO636A.T"],
+    BagHouse2Path: ["TO637.R", "TO636B.R"],
+    BagHouse1Path: ["TO637.N", "TO636B.R"],
+    HillPropane: ["TO638.N"]
+});

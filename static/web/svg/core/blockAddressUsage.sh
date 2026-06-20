@@ -1,5 +1,6 @@
 #!/bin/bash
 cd ../userPanels
+mkdir -p reports
 grep 'id="BLOCK' *.svg > blockAddressList.tmp
 #remove closing xml tags
 perl -p -i -e 's/ \/>//g' blockAddressList.tmp
@@ -27,30 +28,30 @@ mv blockAddressList3.tmp blockAddressList.tmp
 sort -d blockAddressList.tmp > blockAddressList2.tmp
 mv blockAddressList2.tmp blockAddressList.tmp
 #remove duplicates
-perl -ne 'print unless $seen{$_}++' blockAddressList.tmp > blockAddressSegmentsByPanel.txt
+perl -ne 'print unless $seen{$_}++' blockAddressList.tmp > reports/blockAddressSegmentsByPanel.txt
 rm blockAddressList.tmp
 #find unique addresses
-cp blockAddressSegmentsByPanel.txt blockAddressByPanel.tmp
+cp reports/blockAddressSegmentsByPanel.txt blockAddressByPanel.tmp
 perl -p -i -e 's/[A-Z]$//g' blockAddressByPanel.tmp
 #remove duplicates
-perl -ne 'print unless $seen{$_}++' blockAddressByPanel.tmp > blockAddressUniqueByPanel.txt
+perl -ne 'print unless $seen{$_}++' blockAddressByPanel.tmp > reports/blockAddressUniqueByPanel.txt
 rm blockAddressByPanel.tmp
 #find layout unique
-cp blockAddressUniqueByPanel.txt blockAddressLayoutUnique.txt
-perl -p -i -e 's/^\w+\sBLOCK//g' blockAddressLayoutUnique.txt
-sort -g blockAddressLayoutUnique.txt > blockAddressLayoutUnique.tmp
-perl -ne 'print unless $seen{$_}++' blockAddressLayoutUnique.tmp > blockAddressLayoutUnique.txt
+cp reports/blockAddressUniqueByPanel.txt reports/blockAddressLayoutUnique.txt
+perl -p -i -e 's/^\w+\sBLOCK//g' reports/blockAddressLayoutUnique.txt
+sort -g reports/blockAddressLayoutUnique.txt > blockAddressLayoutUnique.tmp
+perl -ne 'print unless $seen{$_}++' blockAddressLayoutUnique.tmp > reports/blockAddressLayoutUnique.txt
 rm blockAddressLayoutUnique.tmp
-cp blockAddressLayoutUnique.txt dispatchBlocks.txt
+cp reports/blockAddressLayoutUnique.txt reports/dispatchBlocks.txt
 #make JMRI config file entries for each turnout found
-#cp blockAddressLayoutUnique.txt turnouts.xml
+#cp reports/blockAddressLayoutUnique.txt turnouts.xml
 #perl -p -i -e 's/^r\d+\n//g' turnouts.xml
 #perl -p -i -e 's/(\d+)/<turnout systemName=\"NT$1\" feedback=\"DIRECT\" inverted=\"false\" automate=\"Default\">\n\t<systemName>NT$1<\/systemName>\n<\/turnout>/g' turnouts.xml
-#more blockAddressSegmentsByPanel.txt
-#more blockAddressUniqueByPanel.txt
-#more blockAddressLayoutUnique.txt
-wc -l blockAddressSegmentsByPanel.txt
-wc -l blockAddressUniqueByPanel.txt
-wc -l blockAddressLayoutUnique.txt
-wc -l dispatchBlocks.txt
+#more reports/blockAddressSegmentsByPanel.txt
+#more reports/blockAddressUniqueByPanel.txt
+#more reports/blockAddressLayoutUnique.txt
+wc -l reports/blockAddressSegmentsByPanel.txt
+wc -l reports/blockAddressUniqueByPanel.txt
+wc -l reports/blockAddressLayoutUnique.txt
+wc -l reports/dispatchBlocks.txt
 cd ../core

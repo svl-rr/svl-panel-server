@@ -14,26 +14,6 @@ function lineNorthMainsForPassenger()
 	addTurnoutStateChangeRequest("TO509", 'N');
 }
 
-function main1SouthPath()
-{
-	executePathArray(["TO494A.N", "TO493.R", "TO492.N"]);
-}
-
-function main1NorthPath()
-{
-	executePathArray(["TO508.N", "TO509.R"]);
-}
-
-function main2SouthPath()
-{
-	executePathArray(["TO494A.N", "TO493.N"]);
-}
-
-function main2NorthPath()
-{
-	executePathArray(["TO507.N", "TO508.R", "TO509.R"]);
-}
-
 function pass1SouthPath()
 {
 	lineSouthMainsForPassenger();
@@ -106,41 +86,6 @@ function pass4SwitchLeadPath()
 	executePanelStateChangeRequests();
 }
 
-function dinerServicePath()
-{
-	executePathArray(["TO470.R", "TO472.R", "TO474.R", "TO475.N"]);
-}
-
-function commissary2Path()
-{
-	executePathArray(["TO468.N", "TO470.N", "TO472.R", "TO474.R", "TO475.N"]);
-}
-
-function commissary1Path()
-{
-	executePathArray(["TO467.N", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"]);
-}
-
-function coachServicePath()
-{
-	executePathArray(["TO467.R", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"]);
-}
-
-function coachYard3Path()
-{
-	executePathArray(["TO472.N", "TO474.R", "TO475.N"]);
-}
-
-function coachYard2Path()
-{
-	executePathArray(["TO474.N", "TO475.N"]);
-}
-
-function coachYard1Path()
-{
-	executePathArray(["TO475.R"]);
-}
-
 function pass123NorthPathToggle()
 {
 	lineNorthMainsForPassenger();
@@ -163,7 +108,17 @@ function switchLeadPath()
 	executePanelStateChangeRequests();
 }
 
-function reaFacilityPath()
-{
-	executePathArray(["TO514B.N"]);
-}
+registerPathFunctions({
+    main1SouthPath: ["TO494A.N", "TO493.R", "TO492.N"],
+    main1NorthPath: ["TO508.N", "TO509.R"],
+    main2SouthPath: ["TO494A.N", "TO493.N"],
+    main2NorthPath: ["TO507.N", "TO508.R", "TO509.R"],
+    dinerServicePath: ["TO470.R", "TO472.R", "TO474.R", "TO475.N"],
+    commissary2Path: ["TO468.N", "TO470.N", "TO472.R", "TO474.R", "TO475.N"],
+    commissary1Path: ["TO467.N", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"],
+    coachServicePath: ["TO467.R", "TO468.R", "TO470.N", "TO472.R", "TO474.R", "TO475.N"],
+    coachYard3Path: ["TO472.N", "TO474.R", "TO475.N"],
+    coachYard2Path: ["TO474.N", "TO475.N"],
+    coachYard1Path: ["TO475.R"],
+    reaFacilityPath: ["TO514B.N"]
+});

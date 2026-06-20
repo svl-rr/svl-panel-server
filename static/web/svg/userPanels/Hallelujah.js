@@ -14,31 +14,6 @@ function IgoLNG2Path()
 	//executePathArray(["TO252.N"]);  // Main
 }
 
-function HallelujahIndLeadPath()
-{
-	executePathArray(["TO246.N"]);
-}
-
-function HellenbegoneLeadPath()
-{
-	executePathArray(["TO247.N"]);
-}
-
-function ContinuousRunLoopPath()
-{
-	executePathArray(["TO248.R"]);
-}
-
-function HellenbegoneMine2Path()
-{
-	executePathArray(["TO248.N", "TO249.N"]);
-}
-
-function HellenbegoneMine1Path()
-{
-	executePathArray(["TO248.N", "TO249.R"]);
-}
-
 function PaperPlantInboundPath()
 {
 	executePathArray(["TO232.N", "TO231.N", "TO230.N"]);    //lower lead
@@ -67,60 +42,10 @@ function PaperPlantMainPath()
 	executePathArray(["TO247.N"]);  //CRL
 }
 
-function PaperPlantDoors4Thru7Path()
-{
-	executePathArray(["TO237.N", "TO235.R", "TO234.N"]);
-}
-
-function PaperPlantChemUnloadPowerStationPath()
-{
-	executePathArray(["TO233.R"]);
-}
-
-function PaperPlantRecycledPaperPath()
-{
-	executePathArray(["TO228.R", "TO229.R"]);
-}
-
-function PaperPlantWoodchipsPath()
-{
-	executePathArray(["TO228.R", "TO229.N"]);
-}
-
-function PaperPlantPulpPath()
-{
-	executePathArray(["TO228.N"]);
-}
-
-function HemetGrowersPath()
-{
-	executePathArray(["TO246.R"]);
-}
-
-function HemetDillLumberPath()
-{
-	executePathArray(["TO241.R", "TO240.R", "TO239.N"]);
-}
-
 function HemetWalnutStephensGrocPath()
 {
 	executePathArray(["TO243A.R"]);
     HemetWalnutStephensGrocPreLeadPath();
-}
-
-function HemetWalnutStephensGrocPreLeadPath()
-{
-	executePathArray(["TO241.N", "TO240.R", "TO239.N"]);
-}
-
-function HemetCACoop2Path()
-{
-	executePathArray(["TO244.R"]);
-}
-
-function HemetCACoop1Path()
-{
-	executePathArray(["TO244.N"]);
 }
 
 function HemetCACoop2PreLeadPath()
@@ -136,7 +61,21 @@ function HemetTeamTrackPath()
     HemetTeamTrackPreLeadPath();
 }
 
-function HemetTeamTrackPreLeadPath()
-{
-	executePathArray(["TO239.R"]);
-}
+registerPathFunctions({
+    HallelujahIndLeadPath: ["TO246.N"],
+    HellenbegoneLeadPath: ["TO247.N"],
+    ContinuousRunLoopPath: ["TO248.R"],
+    HellenbegoneMine2Path: ["TO248.N", "TO249.N"],
+    HellenbegoneMine1Path: ["TO248.N", "TO249.R"],
+    PaperPlantDoors4Thru7Path: ["TO237.N", "TO235.R", "TO234.N"],
+    PaperPlantChemUnloadPowerStationPath: ["TO233.R"],
+    PaperPlantRecycledPaperPath: ["TO228.R", "TO229.R"],
+    PaperPlantWoodchipsPath: ["TO228.R", "TO229.N"],
+    PaperPlantPulpPath: ["TO228.N"],
+    HemetGrowersPath: ["TO246.R"],
+    HemetDillLumberPath: ["TO241.R", "TO240.R", "TO239.N"],
+    HemetWalnutStephensGrocPreLeadPath: ["TO241.N", "TO240.R", "TO239.N"],
+    HemetCACoop2Path: ["TO244.R"],
+    HemetCACoop1Path: ["TO244.N"],
+    HemetTeamTrackPreLeadPath: ["TO239.R"]
+});

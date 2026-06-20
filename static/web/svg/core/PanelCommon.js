@@ -376,6 +376,24 @@ function createPanelTurnout(normalRouteElemID, divergingRouteElemID)
  * Executes a (hardcoded) path where each array element is assumed to be a string that has same formatting as turnout segment IDs (TOxx[A-Z].R|N)
  */
 
+/* registerPathFunctions({String: [String]} pathMap)
+ * Defines one global function per pathMap entry, each of which calls
+ * executePathArray with that entry's turnout array. Lets userPanel files
+ * declare paths as data (onclick="trackXPath()" in the SVG still works
+ * unchanged) instead of one executePathArray-calling function per path.
+ */
+function registerPathFunctions(pathMap)
+{
+    for (var pathName in pathMap)
+    {
+        (function(name, turnoutArray) {
+            window[name] = function() {
+                executePathArray(turnoutArray);
+            };
+        })(pathName, pathMap[pathName]);
+    }
+}
+
 function executePathArray(pathArray)
 {
     if(pathArray != null)

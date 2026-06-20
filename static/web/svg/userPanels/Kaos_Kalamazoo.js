@@ -20,7 +20,6 @@ function RailExLeadPath()
 	//executePathArray(["TO373.N"]);  // CRL to Kalamazoo Main (Klamath)
 }
 
-function KalamazooTeamTrackPath()
-{
-	executePathArray(["TO374A.N"]);
-}
+registerPathFunctions({
+    KalamazooTeamTrackPath: ["TO374A.N"]
+});
