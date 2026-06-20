@@ -20,17 +20,17 @@
   <title
      id="title1">Nowheres Yard</title>
   <script
-     xlink:href="../core/ServerComms.js?v=2"
+     xlink:href="../core/ServerComms.js?v=3"
      id="script3331" />
   <script
-     xlink:href="../core/PanelCommon.js?v=2"
+     xlink:href="../core/PanelCommon.js?v=3"
      id="script_common"
      type="application/ecmascript" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script6" />
   <script
-     xlink:href="NowheresYard.js?v=2"
+     xlink:href="NowheresYard.js?v=3"
      type="application/ecmascript"
      id="script_panelSpecific" />
   <defs

@@ -20,21 +20,21 @@
   <title
      id="title1">Jacksonville</title>
   <script
-     xlink:href="../core/ServerComms.js?v=2"
+     xlink:href="../core/ServerComms.js?v=3"
      id="script3331" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script5" />
   <script
-     xlink:href="../core/PanelCommon.js?v=2"
+     xlink:href="../core/PanelCommon.js?v=3"
      type="application/ecmascript"
      id="script_common" />
   <script
-     xlink:href="../core/FieldPanelCommon.js?v=2"
+     xlink:href="../core/FieldPanelCommon.js?v=3"
      id="field_panel_common"
      type="application/ecmascript" />
   <script
-     xlink:href="Jacksonville.js?v=2"
+     xlink:href="Jacksonville.js?v=3"
      id="script_panelSpecific"
      type="application/ecmascript" />
   <defs

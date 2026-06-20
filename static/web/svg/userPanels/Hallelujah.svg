@@ -18,21 +18,21 @@
   <title
      id="title1">Hallelujah</title>
   <script
-     xlink:href="../core/ServerComms.js?v=2"
+     xlink:href="../core/ServerComms.js?v=3"
      id="script3331" />
   <script
      xlink:href="/socket.io/socket.io.js"
      id="script5" />
   <script
-     xlink:href="../core/PanelCommon.js?v=2"
+     xlink:href="../core/PanelCommon.js?v=3"
      id="script_common"
      type="application/ecmascript" />
   <script
-     xlink:href="../core/FieldPanelCommon.js?v=2"
+     xlink:href="../core/FieldPanelCommon.js?v=3"
      id="script497"
      type="application/ecmascript" />
   <script
-     xlink:href="Hallelujah.js?v=2"
+     xlink:href="Hallelujah.js?v=3"
      type="application/ecmascript"
      id="script_panelSpecific" />
   <defs
