@@ -2343,7 +2343,7 @@
       <rect
          id="dispatchMainlineLockedLED"
          onclick="toggleMainlineLock()"
-         x="20"
+         x="40"
          y="52"
          width="110"
          height="20"
@@ -2352,29 +2352,29 @@
         <title id="title3869">Click to prevent field panels from throwing mainline turnouts</title>
       </rect>
       <text
-         x="75"
+         x="95"
          y="66"
          style="font-family:'Trebuchet MS';font-size:13px;text-anchor:middle;fill:#000000;pointer-events:none"><tspan
-           x="75"
+           x="95"
            y="66">Lock Mainline</tspan></text>
     </g>
     <g id="dispatchSignalingButton">
       <rect
          class="SVL_DISPATCH_SIGNALING"
          onclick="toggleDispatchSignaling()"
-         x="811"
+         x="830"
          y="44"
          width="130"
          height="36"
          rx="4"
          style="fill:gray;stroke:#ffffff;stroke-width:1;cursor:pointer" />
       <text
-         x="876"
+         x="895"
          y="58"
          style="font-family:'Trebuchet MS';font-size:13px;text-anchor:middle;fill:#000000;pointer-events:none"><tspan
-           x="876"
+           x="895"
            y="58">Dispatcher Controls</tspan><tspan
-           x="876"
+           x="895"
            y="73">Signal System</tspan></text>
     </g>
   </g>
@@ -3534,17 +3534,17 @@
       <rect
          class="SVL_FIELD_AUTH_ALARM"
          onclick="toggleFieldAuthAlarm()"
-         x="20"
+         x="40"
          y="78"
          width="110"
          height="20"
          rx="4"
          style="fill:gray;stroke:#ffffff;stroke-width:1;cursor:pointer" />
       <text
-         x="75"
+         x="95"
          y="92"
          style="font-family:'Trebuchet MS';font-size:13px;text-anchor:middle;fill:#000000;pointer-events:none"><tspan
-           x="75"
+           x="95"
            y="92">Field Alarms</tspan></text>
     </g>
   </g>
