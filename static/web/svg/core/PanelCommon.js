@@ -58,6 +58,53 @@ var SERVER_NAME_MAINLINELOCKED = "MAINLINE_LOCKED";
 
 var connectedBackgroundColor = null;
 
+/* Cookies */
+class Cookie
+{
+	constructor(cname, defaultValue, explanation)
+	{
+		var cpath = "/";
+
+		this.name = cname;
+		this.defaultValue = defaultValue;
+		this.explanation = explanation;
+		this.path = "path=" + cpath;
+	}
+
+	isSet()
+	{
+		return this.getCookie() == this.defaultValue;
+	}
+
+	getCookie()
+	{
+		if (document.cookie == undefined) {
+			return "";
+		}
+		var cname = this.name + "=";
+		var ca = document.cookie.split(';');
+		for(var i=0; i<ca.length; i++)
+		{
+			var c = ca[i].trim();
+			if (c.indexOf(cname)==0) return c.substring(cname.length,c.length);
+		}
+		return "";
+	}
+
+	setCookie(exdays)
+	{
+		var d = new Date();
+		d.setTime(d.getTime()+(exdays*24*60*60*1000));
+		var expires = "expires="+d.toGMTString();
+		document.cookie = this.name + "=" + this.defaultValue + "; " + expires + "; " + this.path;
+	}
+
+	deleteCookie()
+	{
+		this.setCookie(-1);
+	}
+}
+
 var cookiesDefined = [
     new Cookie("disableMainlinePanelLinks", "true", "If set, this field will disable panel links on the mainline link layer of a panel. It is to be used for panels affixed to a particular location of a layout and adjacent panel browsing is not desired."),
     new Cookie("disableIndustrialPanelLinks", "true", "If set, this field will disable panel links on the industry link layer of a panel. It is to be used for panels affixed to a particular location of a layout and adjacent panel browsing is not desired."),
@@ -1586,51 +1633,4 @@ function getMotorSubAddr(objID)
 function turnoutHasMultipleMotors(objID)
 {
 	return (getMotorSubAddr(objID) != null);
-}
-
-/* Cookies */
-class Cookie
-{
-	constructor(cname, defaultValue, explanation)
-	{
-		var cpath = "/";
-
-		this.name = cname;
-		this.defaultValue = defaultValue;
-		this.explanation = explanation;
-		this.path = "path=" + cpath;
-	}
-
-	isSet()
-	{
-		return this.getCookie() == this.defaultValue;
-	}
-
-	getCookie()
-	{
-		if (document.cookie == undefined) {
-			return "";
-		}
-		var cname = this.name + "=";
-		var ca = document.cookie.split(';');
-		for(var i=0; i<ca.length; i++)
-		{
-			var c = ca[i].trim();
-			if (c.indexOf(cname)==0) return c.substring(cname.length,c.length);
-		}
-		return "";
-	}
-
-	setCookie(exdays)
-	{
-		var d = new Date();
-		d.setTime(d.getTime()+(exdays*24*60*60*1000));
-		var expires = "expires="+d.toGMTString();
-		document.cookie = this.name + "=" + this.defaultValue + "; " + expires + "; " + this.path;
-	}
-
-	deleteCookie()
-	{
-		this.setCookie(-1);
-	}
 }
