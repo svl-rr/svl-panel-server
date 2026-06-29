@@ -336,6 +336,19 @@ function panelInitPreSocket(evt)
        fx="55"
        fy="75.114258"
        r="15" />
+    <filter
+       id="modernButtonShadow"
+       x="-20%"
+       y="-40%"
+       width="140%"
+       height="180%">
+      <feDropShadow
+         dx="0"
+         dy="2"
+         stdDeviation="2"
+         flood-color="#000000"
+         flood-opacity="0.4" />
+    </filter>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -1996,279 +2009,49 @@ function panelInitPreSocket(evt)
          x="0" />
     </g>
     <g
-       style="display:inline"
-       id="LEDHolder"
-       transform="translate(0,49.752792)"
-       onclick="toggleMainlineLock()">
-      <title
-         id="title3870">Click to prevent field panels from throwing mainline turnouts</title>
-      <circle
-         transform="matrix(0,-0.90760272,0.96613997,0,13.240045,106.58183)"
-         id="path4666"
-         style="fill:#000000;fill-opacity:1;stroke:none"
-         cx="55"
-         cy="75.114258"
-         r="15" />
-      <circle
-         transform="rotate(90,79.497149,81.504402)"
-         id="path4668"
-         style="fill:none;stroke:url(#linearGradient4253);stroke-opacity:1"
-         cx="55"
-         cy="75.114258"
-         r="15" />
-      <circle
-         style="fill:none;stroke:#000000;stroke-opacity:1;filter:url(#filter4608)"
-         id="path4670"
-         transform="matrix(0.98931645,0,0,0.96265966,31.548099,-14.840681)"
-         cx="55"
-         cy="75.114258"
-         r="15" />
-      <circle
-         style="fill:none;stroke:url(#linearGradient4255);stroke-opacity:1"
-         id="path4674"
-         transform="matrix(0,-0.92796351,0.96613997,0,13.240045,108.00708)"
-         cx="55"
-         cy="75.114258"
-         r="15" />
-      <path
-         sodipodi:type="arc"
-         style="fill:none;stroke:#ffffff;stroke-opacity:1;filter:url(#filter4524)"
-         id="path4676"
-         sodipodi:cx="55"
-         sodipodi:cy="75.114258"
-         sodipodi:rx="15"
-         sodipodi:ry="15"
-         d="m 47.5,62.123877 a 15,15 0 0 1 1.160727,-0.604236"
-         transform="matrix(0,0.98931645,-0.96265966,0,158.42394,1.966759)"
-         sodipodi:start="4.1887902"
-         sodipodi:end="4.2760567"
-         sodipodi:open="true"
-         sodipodi:arc-type="arc" />
-      <path
-         sodipodi:open="true"
-         sodipodi:end="0.43633229"
-         sodipodi:start="6.1959188"
-         sodipodi:type="arc"
-         style="fill:none;stroke:#ffffff;stroke-opacity:1;filter:url(#filter4524)"
-         id="path4678"
-         sodipodi:cx="55"
-         sodipodi:cy="75.114258"
-         sodipodi:rx="15"
-         sodipodi:ry="15"
-         d="m 69.94292,73.806921 a 15,15 0 0 1 -1.348303,7.64661"
-         transform="matrix(0,0.98931645,-0.96265966,0,158.27124,1.89027)"
-         sodipodi:arc-type="arc" />
-      <path
-         sodipodi:open="true"
-         sodipodi:end="2.0071286"
-         sodipodi:start="1.7453293"
-         sodipodi:type="arc"
-         style="fill:none;stroke:#ffffff;stroke-opacity:1;filter:url(#filter4524)"
-         id="path4680"
-         sodipodi:cx="55"
-         sodipodi:cy="75.114258"
-         sodipodi:rx="15"
-         sodipodi:ry="15"
-         d="m 52.395277,89.886374 a 15,15 0 0 1 -3.73455,-1.177499"
-         transform="matrix(0,0.98931645,-0.96265966,0,157.96649,2.196348)"
-         sodipodi:arc-type="arc" />
-      <path
-         transform="matrix(0,0.98931645,-0.96265966,0,158.42393,2.34849)"
-         d="M 40.05708,76.421594 A 15,15 0 0 1 43.509334,65.472443"
-         sodipodi:ry="15"
-         sodipodi:rx="15"
-         sodipodi:cy="75.114258"
-         sodipodi:cx="55"
-         id="path4682"
-         style="fill:none;stroke:#ffffff;stroke-opacity:1;filter:url(#filter4524)"
-         sodipodi:type="arc"
-         sodipodi:start="3.0543262"
-         sodipodi:end="3.8397244"
-         sodipodi:open="true"
-         sodipodi:arc-type="arc" />
-    </g>
-    <circle
-       transform="matrix(0,-0.83246189,0.83581074,0,22.935872,152.16374)"
-       id="dispatchMainlineLockedLED"
-       style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.87323;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.831373"
+       id="mainlineLockButton"
+       transform="translate(95,45)"
        onclick="toggleMainlineLock()"
-       cx="55"
-       cy="75.114258"
-       r="15">
+       style="cursor:pointer">
       <title
          id="title3867">Click to prevent field panels from throwing mainline turnouts</title>
-    </circle>
-    <g
-       style="display:inline"
-       id="g5078"
-       transform="translate(0,49.752792)"
-       onclick="toggleMainlineLock()">
-      <title
-         id="title3868">Click to prevent field panels from throwing mainline turnouts</title>
-      <circle
-         style="fill:url(#radialGradient4247);fill-opacity:1;stroke:none"
-         id="whiteSpecular"
-         transform="matrix(-0.3770403,0.35042269,-0.21177505,-0.19682454,118.12346,47.250077)"
-         cx="55"
-         cy="75.114258"
-         r="15" />
-      <circle
-         transform="matrix(-0.36941213,0.21328019,-0.11979469,-0.20749048,118.65747,66.891788)"
-         id="antiSpecular2"
-         style="fill:url(#radialGradient4249);fill-opacity:1;stroke:none"
-         cx="55"
-         cy="75.114258"
-         r="15" />
-      <circle
-         style="fill:url(#radialGradient4251);fill-opacity:1;stroke:none"
-         id="antiSpecular1"
-         transform="matrix(-0.21328019,0.36941213,-0.20749048,-0.11979469,119.25285,49.198242)"
-         cx="55"
-         cy="75.114258"
-         r="15" />
-      <circle
-         transform="matrix(0,-0.81774044,0.81852823,0,24.195619,101.75394)"
-         id="blackRing"
-         style="fill:none;stroke:#000000;stroke-width:0.831304;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         cx="55"
-         cy="75.114258"
-         r="15" />
+      <rect
+         id="dispatchMainlineLockedLED"
+         x="-75"
+         y="-17"
+         width="150"
+         height="34"
+         rx="10"
+         ry="10"
+         style="fill:#808080;fill-opacity:1;stroke:#2b2b2b;stroke-width:2;stroke-opacity:1;filter:url(#modernButtonShadow)" />
+      <text
+         x="0"
+         y="5"
+         text-anchor="middle"
+         style="font-family:'Trebuchet MS',sans-serif;font-size:14px;font-weight:bold;fill:#ffffff;pointer-events:none">LOCK MAINLINE</text>
     </g>
     <g
-       onclick="toggleMainlineLock()"
-       transform="translate(766.50375,7.3263856)"
-       id="g8938"
-       style="display:inline">
+       id="dispatchSignalingButton"
+       transform="translate(953,45)"
+       onclick="toggleDispatchSignaling()"
+       style="cursor:pointer">
       <title
-         id="title8920">Click to prevent field panels from throwing mainline turnouts</title>
-      <circle
-         r="15"
-         cy="75.114258"
-         cx="55"
-         style="fill:#000000;fill-opacity:1;stroke:none"
-         id="circle8922"
-         transform="matrix(0,-0.90760272,0.96613997,0,13.240045,106.58183)" />
-      <circle
-         r="15"
-         cy="75.114258"
-         cx="55"
-         style="fill:none;stroke:url(#linearGradient8956);stroke-opacity:1"
-         id="circle8924"
-         transform="rotate(90,79.497149,81.504402)" />
-      <circle
-         r="15"
-         cy="75.114258"
-         cx="55"
-         transform="matrix(0.98931645,0,0,0.96265966,31.548099,-14.840681)"
-         id="circle8926"
-         style="fill:none;stroke:#000000;stroke-opacity:1;filter:url(#filter4608)" />
-      <circle
-         r="15"
-         cy="75.114258"
-         cx="55"
-         transform="matrix(0,-0.92796351,0.96613997,0,13.240045,108.00708)"
-         id="circle8928"
-         style="fill:none;stroke:url(#linearGradient8958);stroke-opacity:1" />
-      <path
-         sodipodi:open="true"
-         sodipodi:end="4.2760567"
-         sodipodi:start="4.1887902"
-         transform="matrix(0,0.98931645,-0.96265966,0,158.42394,1.966759)"
-         d="m 47.5,62.123877 a 15,15 0 0 1 1.160727,-0.604236"
-         sodipodi:ry="15"
-         sodipodi:rx="15"
-         sodipodi:cy="75.114258"
-         sodipodi:cx="55"
-         id="path8930"
-         style="fill:none;stroke:#ffffff;stroke-opacity:1;filter:url(#filter4524)"
-         sodipodi:type="arc"
-         sodipodi:arc-type="arc" />
-      <path
-         transform="matrix(0,0.98931645,-0.96265966,0,158.27124,1.89027)"
-         d="m 69.94292,73.806921 a 15,15 0 0 1 -1.348303,7.64661"
-         sodipodi:ry="15"
-         sodipodi:rx="15"
-         sodipodi:cy="75.114258"
-         sodipodi:cx="55"
-         id="path8932"
-         style="fill:none;stroke:#ffffff;stroke-opacity:1;filter:url(#filter4524)"
-         sodipodi:type="arc"
-         sodipodi:start="6.1959188"
-         sodipodi:end="0.43633229"
-         sodipodi:open="true"
-         sodipodi:arc-type="arc" />
-      <path
-         transform="matrix(0,0.98931645,-0.96265966,0,157.96649,2.196348)"
-         d="m 52.395277,89.886374 a 15,15 0 0 1 -3.73455,-1.177499"
-         sodipodi:ry="15"
-         sodipodi:rx="15"
-         sodipodi:cy="75.114258"
-         sodipodi:cx="55"
-         id="path8934"
-         style="fill:none;stroke:#ffffff;stroke-opacity:1;filter:url(#filter4524)"
-         sodipodi:type="arc"
-         sodipodi:start="1.7453293"
-         sodipodi:end="2.0071286"
-         sodipodi:open="true"
-         sodipodi:arc-type="arc" />
-      <path
-         sodipodi:open="true"
-         sodipodi:end="3.8397244"
-         sodipodi:start="3.0543262"
-         sodipodi:type="arc"
-         style="fill:none;stroke:#ffffff;stroke-opacity:1;filter:url(#filter4524)"
-         id="path8936"
-         sodipodi:cx="55"
-         sodipodi:cy="75.114258"
-         sodipodi:rx="15"
-         sodipodi:ry="15"
-         d="M 40.05708,76.421594 A 15,15 0 0 1 43.509334,65.472443"
-         transform="matrix(0,0.98931645,-0.96265966,0,158.42393,2.34849)"
-         sodipodi:arc-type="arc" />
-    </g>
-    <ellipse
-       cy="852.22089"
-       cx="-63.951931"
-       onclick="toggleDispatchSignaling()"
-       style="display:inline;fill:#808080;fill-opacity:1;stroke:#808080;stroke-width:2.39666;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.831373"
-       id="circle8942"
-       class="SVL_DISPATCH_SIGNALING"
-       transform="rotate(-90)"
-       rx="12.486928"
-       ry="12.537161" />
-    <g
-       onclick="toggleDispatchSignaling()"
-       transform="translate(766.50375,7.3263856)"
-       id="g8954"
-       style="display:inline">
-      <circle
-         r="15"
-         cy="75.114258"
-         cx="55"
-         transform="matrix(-0.3770403,0.35042269,-0.21177505,-0.19682454,118.12346,47.250077)"
-         id="circle8946"
-         style="fill:url(#radialGradient8960);fill-opacity:1;stroke:none" />
-      <circle
-         r="15"
-         cy="75.114258"
-         cx="55"
-         style="fill:url(#radialGradient8962);fill-opacity:1;stroke:none"
-         id="circle8948"
-         transform="matrix(-0.36941213,0.21328019,-0.11979469,-0.20749048,118.65747,66.891788)" />
-      <circle
-         r="15"
-         cy="75.114258"
-         cx="55"
-         transform="matrix(-0.21328019,0.36941213,-0.20749048,-0.11979469,119.25285,49.198242)"
-         id="circle8950"
-         style="fill:url(#radialGradient8964);fill-opacity:1;stroke:none" />
-      <circle
-         r="15"
-         cy="75.114258"
-         cx="55"
-         style="fill:none;stroke:#000000;stroke-width:0.831304;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         id="circle8952"
-         transform="matrix(0,-0.81774044,0.81852823,0,24.195619,101.75394)" />
+         id="title8920">Click to enable/disable automatic dispatch signaling</title>
+      <rect
+         id="circle8942"
+         class="SVL_DISPATCH_SIGNALING"
+         x="-75"
+         y="-17"
+         width="150"
+         height="34"
+         rx="10"
+         ry="10"
+         style="fill:#808080;fill-opacity:1;stroke:#2b2b2b;stroke-width:2;stroke-opacity:1;filter:url(#modernButtonShadow)" />
+      <text
+         x="0"
+         y="5"
+         text-anchor="middle"
+         style="font-family:'Trebuchet MS',sans-serif;font-size:14px;font-weight:bold;fill:#ffffff;pointer-events:none">DISPATCH SIGNALING</text>
     </g>
   </g>
   <g
@@ -3807,19 +3590,6 @@ function panelInitPreSocket(evt)
          y="520.11432"
          style="font-size:16px;line-height:1.25">_</tspan></text>
     <text
-       inkscape:label="#text4498"
-       onclick=""
-       id="text4602"
-       y="80.114334"
-       x="40"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         y="80.114334"
-         x="40"
-         id="tspan4604"
-         sodipodi:role="line"
-         style="font-size:16px;line-height:1.25">Lock Mainline</tspan></text>
-    <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffff00;fill-opacity:1;stroke:none"
        x="500"
@@ -4369,24 +4139,6 @@ function panelInitPreSocket(evt)
          style="fill:#030303;fill-opacity:1;stroke:#727272;stroke-width:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          transform="matrix(0.99971998,-0.02366339,-9.4944025e-4,0.99999955,0,0)" />
     </g>
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="874.38599"
-       y="56.072701"
-       id="text8910"
-       onclick=""
-       inkscape:label="#text4498"><tspan
-         style="font-size:16px;line-height:1.25"
-         sodipodi:role="line"
-         id="tspan8908"
-         x="874.38599"
-         y="56.072701">Dispatcher Controls</tspan><tspan
-         style="font-size:16px;line-height:1.25"
-         sodipodi:role="line"
-         x="874.38599"
-         y="76.072701"
-         id="tspan8918">Signal System</tspan></text>
     <g
        id="g746"
        transform="rotate(-1.0020748,-642.63608,543.32505)">
