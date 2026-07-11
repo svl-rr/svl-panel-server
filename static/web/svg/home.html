@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silicon Valley Lines — Layout Control</title>
+  <link rel="stylesheet" href="svl-theme.css">
+  <style>
+    main {
+      flex: 1;
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 56px 28px 72px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      align-content: start;
+    }
+    .route-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      padding: 10px 14px;
+      background: var(--darker);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: border-color 0.15s, background 0.15s;
+      text-align: left;
+    }
+    .route-btn:hover { border-color: var(--green); background: rgba(0,128,0,0.1); }
+    .route-btn svg {
+      width: 14px; height: 14px; flex-shrink: 0;
+      stroke: var(--green); fill: none;
+      stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round;
+    }
+    .route-btn.running { color: var(--muted); pointer-events: none; }
+    .route-btn.success { border-color: #4caf50; color: #4caf50; }
+    .route-btn.error   { border-color: #ff6666; color: #ff6666; }
+    .card.routes-card:hover { transform: none; box-shadow: none; border-color: var(--border); }
+    .card.routes-card:hover::before { transform: scaleX(0); }
+
+    /* ── JMRI status bar ─────────────────────────────────────── */
+    #jmri-bar {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 18px 28px 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+    }
+    #jmri-bar .jmri-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--border); flex-shrink: 0;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    #jmri-bar.connected   { color: #4caf50; }
+    #jmri-bar.connected   .jmri-dot { background: #4caf50; box-shadow: 0 0 6px rgba(76,175,80,0.5); }
+    #jmri-bar.disconnected { color: #ff6666; }
+    #jmri-bar.disconnected .jmri-dot { background: #ff6666; }
+
+    /* ── Service status dots (top-right of each card) ────────── */
+    .svc-dot {
+      position: absolute;
+      top: 14px; right: 14px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--border);
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .svc-dot.up   { background: #4caf50; box-shadow: 0 0 5px rgba(76,175,80,0.5); }
+    .svc-dot.down { background: #ff6666; }
+
+    /* ── Active route ────────────────────────────────────────── */
+    .route-btn.route-active {
+      border-color: var(--yellow);
+      background: rgba(253,225,51,0.07);
+      color: var(--yellow);
+    }
+    .route-btn.route-active svg { stroke: var(--yellow); }
+    .route-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .route-btn:disabled:hover { border-color: var(--border); background: var(--darker); }
+    .route-active-time {
+      margin-left: auto;
+      font-size: 0.68rem;
+      font-weight: 500;
+      opacity: 0.85;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .route-warning {
+      font-size: 0.68rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 8px;
+      line-height: 1.5;
+      opacity: 0.75;
+    }
+    @keyframes warning-pulse {
+      0%, 100% { color: #ff6666; opacity: 0.5; }
+      50%      { color: #ff6666; opacity: 1; }
+    }
+    .route-warning.flash { animation: warning-pulse 0.8s ease-in-out 6; }
+
+    /* ── Live train counts ───────────────────────────────────── */
+    .train-stats {
+      display: flex;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 20px;
+    }
+    .train-stat {
+      flex: 1;
+      background: var(--darker);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 6px;
+      text-align: center;
+    }
+    .ts-num {
+      font-size: 1.9rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+    .train-stat.nb .ts-num { color: var(--green); }
+    .train-stat.sb .ts-num { color: var(--yellow); }
+    .train-stat.ot .ts-num { color: var(--muted); }
+    .ts-lbl {
+      font-size: 0.6rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 5px;
+    }
+    .ts-updated {
+      font-size: 0.65rem;
+      color: var(--muted);
+      margin-top: 8px;
+      text-align: right;
+      min-height: 1em;
+    }
+    /* ── Block occupancy mini-map ─────────────────────────────────── */
+    .card.blockmap-card { grid-column: 1 / -1; cursor: default; }
+    .card.blockmap-card:hover { transform: none; border-color: var(--border); }
+    .card.blockmap-card:hover::before { transform: scaleX(0); }
+    .bmap { display: flex; flex-direction: column; gap: 5px; margin-top: 10px; }
+    .bzone { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+    .bzone-lbl {
+      font-size: 0.58rem; color: var(--muted); text-transform: uppercase;
+      letter-spacing: 0.05em; min-width: 68px; text-align: right;
+      flex-shrink: 0; padding-right: 6px; border-right: 1px solid var(--border);
+    }
+    .bblock {
+      font-size: 0.63rem; font-weight: 600; padding: 2px 7px;
+      border-radius: 4px; background: var(--darker); border: 1px solid var(--border);
+      color: var(--muted); white-space: nowrap; cursor: default;
+      transition: background 0.3s, color 0.3s, border-color 0.3s;
+    }
+    .bblock.occ { background: var(--yellow); color: var(--dark); border-color: var(--yellow); }
+    .bblock .btrain { font-size: 0.55rem; margin-left: 4px; opacity: 0.7; }
+    .bblock:not(.occ) .btrain { display: none; }
+    .bmap-footer { font-size: 0.62rem; color: var(--muted); margin-top: 6px; text-align: right; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="svl-logo.svg" alt="Silicon Valley Lines">
+  <div class="header-text">
+    <h1>Layout Control Center</h1>
+    <p>Silicon Valley Lines &mdash; JMRI</p>
+  </div>
+</header>
+
+<div class="track-stripe"></div>
+
+<div id="jmri-bar">
+  <span class="jmri-dot"></span>
+  <span id="jmri-label">Checking JMRI…</span>
+</div>
+
+<main>
+
+  <div class="card routes-card">
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+    </div>
+    <h2>Routes</h2>
+    <p>Activate a layout route to configure turnouts and signals for an operating session.</p>
+    <div style="margin-top: auto; padding-top: 20px; display: flex; flex-direction: column; gap: 8px;">
+      <button class="route-btn" data-route="IO:AUTO:0002" onclick="activateRoute('IO:AUTO:0002', this)">
+        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
+        Ops Startup
+        <span class="route-active-time"></span>
+      </button>
+      <button class="route-btn" data-route="IO:AUTO:0001" onclick="activateRoute('IO:AUTO:0001', this)">
+        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21"/></svg>
+        Open House Loop
+        <span class="route-active-time"></span>
+      </button>
+    </div>
+    <p class="route-warning">&#9888; Route status reflects when last set and may not match current layout state.</p>
+  </div>
+
+  <a class="card" id="card-jmri-link" href="http://localhost:3000/prefs/svg/userPanels/index.svg" target="_blank">
+    <span class="svc-dot" id="dot-jmri" title="JMRI"></span>
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24">
+        <rect x="2" y="3" width="20" height="13" rx="2"/>
+        <polyline points="7 22 12 17 17 22"/>
+        <line x1="12" y1="17" x2="12" y2="13"/>
+      </svg>
+    </div>
+    <h2>Panel Server</h2>
+    <p>View and interact with your layout panels, track diagrams, and dispatcher controls.</p>
+    <div class="card-footer">
+      <span class="card-url" id="card-jmri-url">localhost:3000</span>
+      <span class="card-arrow">Open <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </div>
+  </a>
+
+  <div class="card">
+    <span class="svc-dot" id="dot-cam" title="Cab Cam Assignment"></span>
+    <a id="card-cam-link" href="http://localhost:8080" target="_blank" style="text-decoration:none;color:inherit;display:flex;flex-direction:column;flex:1">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M23 7l-7 5 7 5V7z"/>
+          <rect x="1" y="5" width="15" height="14" rx="2"/>
+        </svg>
+      </div>
+      <h2>Cab Cam Assignment</h2>
+      <p>Assign MJPEG camera streams to locomotives in the roster. Manage camera car connections.</p>
+      <div class="card-footer">
+        <span class="card-url" id="card-cam-url">localhost:8080</span>
+        <span class="card-arrow">Open <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </div>
+    </a>
+    <a class="card-footer" id="card-cam-operators-link" href="http://localhost:8080/operators" target="_blank" style="text-decoration:none;color:inherit;margin-top:10px;padding-top:14px">
+      <span class="card-url">Engineers Directory</span>
+      <span class="card-arrow">Open <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </a>
+    <button class="card-footer" type="button" onclick="resetEngineersDirectoryPassword(event)"
+            style="width:100%;background:none;border:none;cursor:pointer;font:inherit;margin-top:6px;padding-top:0">
+      <span class="card-url">Reset Engineers Directory Password</span>
+      <span class="card-arrow">Reset <svg viewBox="0 0 24 24"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg></span>
+    </button>
+  </div>
+
+  <a class="card" href="http://localhost:5057/" target="_blank">
+    <span class="svc-dot" id="dot-signal" title="Signal Editor"></span>
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24">
+        <rect x="9" y="2" width="6" height="20" rx="2"/>
+        <circle cx="12" cy="7"  r="1.5" fill="#231f20" stroke="none"/>
+        <circle cx="12" cy="12" r="1.5" fill="#231f20" stroke="none"/>
+        <circle cx="12" cy="17" r="1.5" fill="#231f20" stroke="none"/>
+        <line x1="12" y1="2"  x2="12" y2="4.5"/>
+        <line x1="12" y1="19.5" x2="12" y2="22"/>
+      </svg>
+    </div>
+    <h2>Signal Editor</h2>
+    <p>Configure layout signals, aspects, mast logic, and signal group definitions.</p>
+    <div class="card-footer">
+      <span class="card-url">localhost:5057</span>
+      <span class="card-arrow">Open <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </div>
+  </a>
+
+  <a class="card" href="train-status/web/train-status.html">
+    <span class="svc-dot" id="dot-train" title="Train Status (JMRI)"></span>
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9"/>
+        <polyline points="12 7 12 12 15 15"/>
+        <line x1="2" y1="12" x2="4" y2="12"/>
+        <line x1="20" y1="12" x2="22" y2="12"/>
+      </svg>
+    </div>
+    <h2>Train Status</h2>
+    <p>Live dispatch board with each train's current named block, zone occupancy, event log, and replay.</p>
+    <div class="train-stats">
+      <div class="train-stat nb">
+        <div class="ts-num" id="cnt-nb">—</div>
+        <div class="ts-lbl">Northbound</div>
+      </div>
+      <div class="train-stat sb">
+        <div class="ts-num" id="cnt-sb">—</div>
+        <div class="ts-lbl">Southbound</div>
+      </div>
+      <div class="train-stat ot">
+        <div class="ts-num" id="cnt-ot">—</div>
+        <div class="ts-lbl">Other</div>
+      </div>
+    </div>
+    <div class="ts-updated" id="trains-updated"></div>
+    <div class="card-footer">
+      <span class="card-url">train-status/web/train-status.html</span>
+      <span class="card-arrow">Open <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </div>
+  </a>
+
+  <a class="card" href="node-reg/web/node-registry.html">
+    <span class="svc-dot" id="dot-nodereg" title="LCC Node Registry"></span>
+    <div class="card-icon">
+      <svg viewBox="0 0 24 24">
+        <circle cx="12" cy="5" r="3"/>
+        <circle cx="5" cy="19" r="3"/>
+        <circle cx="19" cy="19" r="3"/>
+        <line x1="12" y1="8" x2="5" y2="16"/>
+        <line x1="12" y1="8" x2="19" y2="16"/>
+      </svg>
+    </div>
+    <h2>LCC Node Registry</h2>
+    <p>Browse all OpenLCB nodes on the layout — signal drivers, event IDs, and board locations.</p>
+    <div class="card-footer">
+      <span class="card-url">node-reg/web/node-registry.html</span>
+      <span class="card-arrow">Open <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+    </div>
+  </a>
+
+
+  <div class="card blockmap-card">
+    <h3 class="card-title">Block Occupancy</h3>
+    <div class="bmap">
+      <div class="bzone">
+        <span class="bzone-lbl">N. Main</span>
+        <span class="bblock" data-block="726" title="Victoria">Victoria<span class="btrain"></span></span>
+        <span class="bblock" data-block="705" title="Upton">Upton<span class="btrain"></span></span>
+        <span class="bblock" data-block="706" title="Upton Siding">Upton Sdg<span class="btrain"></span></span>
+        <span class="bblock" data-block="708" title="Upton Intermodal">Upton Intm<span class="btrain"></span></span>
+        <span class="bblock" data-block="709" title="Windsor Industrial">Windsor Ind<span class="btrain"></span></span>
+        <span class="bblock" data-block="704" title="Ravine">Ravine<span class="btrain"></span></span>
+        <span class="bblock" data-block="598" title="Quinn">Quinn<span class="btrain"></span></span>
+        <span class="bblock" data-block="599" title="Quinn Siding">Quinn Sdg<span class="btrain"></span></span>
+        <span class="bblock" data-block="707" title="Quinn Main">Quinn Main<span class="btrain"></span></span>
+      </div>
+      <div class="bzone">
+        <span class="bzone-lbl">Tracy</span>
+        <span class="bblock" data-block="654" title="Tracy Depot (654)">Tracy Depot<span class="btrain"></span></span>
+        <span class="bblock" data-block="653" title="Tracy Depot (653)">Tracy Depot·2<span class="btrain"></span></span>
+        <span class="bblock" data-block="652" title="Tracy Main">Tracy Main<span class="btrain"></span></span>
+        <span class="bblock" data-block="649" title="Tracy Siding">Tracy Sdg<span class="btrain"></span></span>
+        <span class="bblock" data-block="603" title="Silicon Siding">Silicon Sdg<span class="btrain"></span></span>
+        <span class="bblock" data-block="602" title="Silicon">Silicon<span class="btrain"></span></span>
+        <span class="bblock" data-block="574" title="Paso">Paso<span class="btrain"></span></span>
+      </div>
+      <div class="bzone">
+        <span class="bzone-lbl">Nowheres</span>
+        <span class="bblock" data-block="554" title="Nowheres West">NW West<span class="btrain"></span></span>
+        <span class="bblock" data-block="500" title="Nowheres Main NB">NW NB<span class="btrain"></span></span>
+        <span class="bblock" data-block="553" title="Nowheres Passenger">NW Pass.<span class="btrain"></span></span>
+        <span class="bblock" data-block="552" title="Nowheres Yard">NW Yard<span class="btrain"></span></span>
+        <span class="bblock" data-block="550" title="Nowheres South">NW South<span class="btrain"></span></span>
+        <span class="bblock" data-block="501" title="Nowheres Main SB">NW SB<span class="btrain"></span></span>
+      </div>
+      <div class="bzone">
+        <span class="bzone-lbl">Loop</span>
+        <span class="bblock" data-block="449" title="Loop NB Upper">Loop NB&#x2191;<span class="btrain"></span></span>
+        <span class="bblock" data-block="331" title="Loop NB Lower">Loop NB&#x2193;<span class="btrain"></span></span>
+        <span class="bblock" data-block="450" title="Mt. Marvel">Mt. Marvel<span class="btrain"></span></span>
+        <span class="bblock" data-block="448" title="Loop SB Upper">Loop SB&#x2191;<span class="btrain"></span></span>
+        <span class="bblock" data-block="332" title="Loop SB Lower">Loop SB&#x2193;<span class="btrain"></span></span>
+      </div>
+      <div class="bzone">
+        <span class="bzone-lbl">Upper S.</span>
+        <span class="bblock" data-block="335" title="Jasper">Jasper<span class="btrain"></span></span>
+        <span class="bblock" data-block="330" title="Kaos">Kaos<span class="btrain"></span></span>
+        <span class="bblock" data-block="302" title="Kalamazoo">Kalamazoo<span class="btrain"></span></span>
+        <span class="bblock" data-block="303" title="Kalamazoo Industrial">Kzoo Ind<span class="btrain"></span></span>
+        <span class="bblock" data-block="300" title="Jericho NB">Jericho NB<span class="btrain"></span></span>
+        <span class="bblock" data-block="301" title="Jericho SB">Jericho SB<span class="btrain"></span></span>
+        <span class="bblock" data-block="278" title="Jacksonville NB (278)">Jax NB&sup2;<span class="btrain"></span></span>
+        <span class="bblock" data-block="202" title="Jacksonville NB">Jax NB<span class="btrain"></span></span>
+        <span class="bblock" data-block="203" title="Jacksonville SB">Jax SB<span class="btrain"></span></span>
+      </div>
+      <div class="bzone">
+        <span class="bzone-lbl">Mid S.</span>
+        <span class="bblock" data-block="249" title="Hallelujah Industrial">Hal. Ind<span class="btrain"></span></span>
+        <span class="bblock" data-block="179" title="Hallelujah">Hallelujah<span class="btrain"></span></span>
+        <span class="bblock" data-block="178" title="Greeley">Greeley<span class="btrain"></span></span>
+        <span class="bblock" data-block="252" title="Igo NB">Igo NB<span class="btrain"></span></span>
+        <span class="bblock" data-block="253" title="Igo SB">Igo SB<span class="btrain"></span></span>
+        <span class="bblock" data-block="177" title="Igo Siding">Igo Sdg<span class="btrain"></span></span>
+      </div>
+      <div class="bzone">
+        <span class="bzone-lbl">Lower S.</span>
+        <span class="bblock" data-block="173" title="Ebbetts">Ebbetts<span class="btrain"></span></span>
+        <span class="bblock" data-block="150" title="Eagle">Eagle<span class="btrain"></span></span>
+        <span class="bblock" data-block="174" title="Fryton">Fryton<span class="btrain"></span></span>
+        <span class="bblock" data-block="134" title="Fryton Industrial">Fryton Ind<span class="btrain"></span></span>
+        <span class="bblock" data-block="132" title="Fryton South">Fryton S.<span class="btrain"></span></span>
+        <span class="bblock" data-block="131" title="Interchange">Interchange<span class="btrain"></span></span>
+        <span class="bblock" data-block="20" title="Interchange South">Intcng S.<span class="btrain"></span></span>
+        <span class="bblock" data-block="133" title="Branch">Branch<span class="btrain"></span></span>
+        <span class="bblock" data-block="130" title="Dayton">Dayton<span class="btrain"></span></span>
+      </div>
+      <div class="bzone">
+        <span class="bzone-lbl">Bayshore</span>
+        <span class="bblock" data-block="102" title="Cavanaugh Main">Cav. Main<span class="btrain"></span></span>
+        <span class="bblock" data-block="98" title="Cavanaugh NB">Cav. NB<span class="btrain"></span></span>
+        <span class="bblock" data-block="99" title="Cavanaugh SB">Cav. SB<span class="btrain"></span></span>
+        <span class="bblock" data-block="19" title="Cavanaugh Siding">Cav. Sdg<span class="btrain"></span></span>
+        <span class="bblock" data-block="17" title="Dodge">Dodge<span class="btrain"></span></span>
+        <span class="bblock" data-block="16" title="Carlsbad">Carlsbad<span class="btrain"></span></span>
+      </div>
+    </div>
+    <div class="bmap-footer" id="bmap-updated"></div>
+  </div>
+
+</main>
+
+<footer>Silicon Valley Lines &mdash; Layout Control Center</footer>
+
+<script>
+// Use the hostname the page was actually loaded with, so status checks and
+// links work whether you're on this machine or another one on the LAN.
+var HOST = window.location.hostname;
+var JMRI = 'http://' + HOST + ':3000';
+var CAM  = 'http://' + HOST + ':8080';
+var NODEREG = 'http://' + HOST + ':5059';
+var ROUTE_KEY = 'svl_active_route';
+var jmriOnline = false;
+
+function abortAfter(ms) {
+  var ctrl = new AbortController();
+  setTimeout(function() { ctrl.abort(); }, ms);
+  return ctrl.signal;
+}
+
+function resetEngineersDirectoryPassword(event) {
+  event.preventDefault();
+  if (!confirm('Generate a new Engineers Directory password?\n\nThe old password will stop working for new logins (anyone already signed in stays signed in).')) return;
+  fetch(CAM + '/api/operators/reset-password', { method: 'POST' })
+    .then(function(r) { return r.json(); })
+    .then(function(res) {
+      if (!res.ok) throw new Error(res.error || 'Unknown error');
+      prompt('New Engineers Directory password (copy it now — it will not be shown again):', res.password);
+    })
+    .catch(function(e) {
+      alert('Failed to reset password:\n\n' + e.message + '\n\nIs the Cab Cam Assignment server (port 8080) running?');
+    });
+}
+
+// ── Service status dots ───────────────────────────────────────────────────
+
+function setDot(id, state) {
+  var el = document.getElementById(id);
+  if (el) el.className = 'svc-dot ' + state;
+}
+
+function checkService(dotId, url) {
+  fetch(url, { mode: 'no-cors', signal: abortAfter(2500) })
+    .then(function() { setDot(dotId, 'up'); })
+    .catch(function() { setDot(dotId, 'down'); });
+}
+
+// ── JMRI status bar ───────────────────────────────────────────────────────
+
+function setJmriBar(online) {
+  var wasOffline = !jmriOnline;
+  jmriOnline = online;
+  var bar = document.getElementById('jmri-bar');
+  var label = document.getElementById('jmri-label');
+  bar.className = online ? 'connected' : 'disconnected';
+  label.textContent = online ? 'JMRI Connected' : 'JMRI Unreachable';
+  setDot('dot-jmri',  online ? 'up' : 'down');
+  setDot('dot-train', online ? 'up' : 'down');
+  document.querySelectorAll('.route-btn').forEach(function(btn) {
+    if (!btn.classList.contains('running')) btn.disabled = !online;
+  });
+  if (online && wasOffline) { checkRoutes(); checkTrainCounts(); updateBlockMap(); }
+}
+
+function checkJMRI() {
+  fetch(JMRI + '/json/', { signal: abortAfter(2500) })
+    .then(function(r) { setJmriBar(r.ok); })
+    .catch(function() { setJmriBar(false); });
+}
+
+// ── Live train counts ─────────────────────────────────────────────────────
+
+function fetchMemory(name) {
+  return fetch(JMRI + '/json/memory/' + name, { signal: abortAfter(3000) })
+    .then(function(r) { return r.json(); })
+    .then(function(d) { return d && d.data && d.data.value; })
+    .catch(function() { return null; });
+}
+
+function checkTrainCounts() {
+  if (!jmriOnline) return;
+  var nb = ['IMN1','IMN2','IMN3','IMN4','IMN5','IMN6','IMN7','IMN8'];
+  var sb = ['IMS1','IMS2','IMS3','IMS4','IMS5','IMS6','IMS7','IMS8'];
+  var ot = ['IMO1','IMO2','IMO3','IMO4','IMO5','IMO6','IMO7','IMO8'];
+  Promise.all(nb.concat(sb).concat(ot).map(fetchMemory)).then(function(vals) {
+    function count(slice) { return slice.filter(function(v) { return v && v.toString().trim(); }).length; }
+    document.getElementById('cnt-nb').textContent = count(vals.slice(0, 8));
+    document.getElementById('cnt-sb').textContent = count(vals.slice(8, 16));
+    document.getElementById('cnt-ot').textContent = count(vals.slice(16, 24));
+    document.getElementById('trains-updated').textContent =
+      'Updated ' + new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  });
+}
+
+// ── Read route state from JMRI ────────────────────────────────────────────
+
+function checkRoutes() {
+  if (!jmriOnline) return;
+  [
+    { name: 'IO:AUTO:0002', label: 'Ops Startup' },
+    { name: 'IO:AUTO:0001', label: 'Open House Loop' }
+  ].forEach(function(r) {
+    fetch(JMRI + '/json/route/' + r.name, { signal: abortAfter(2500) })
+      .then(function(resp) { return resp.json(); })
+      .then(function(data) {
+        var state = data && data.data && data.data.state;
+        if (state === 2) setActiveRoute(r.name, r.label);
+      })
+      .catch(function() {});
+  });
+}
+
+// ── Active route tracking (localStorage) ─────────────────────────────────
+
+function getActiveRoute() {
+  try {
+    var raw = localStorage.getItem(ROUTE_KEY);
+    if (!raw) return null;
+    var data = JSON.parse(raw);
+    if (Date.now() - data.time > 8 * 60 * 60 * 1000) {
+      localStorage.removeItem(ROUTE_KEY);
+      return null;
+    }
+    return data;
+  } catch (e) { return null; }
+}
+
+function setActiveRoute(routeName, routeLabel) {
+  localStorage.setItem(ROUTE_KEY, JSON.stringify({
+    name: routeName, label: routeLabel, time: Date.now()
+  }));
+  updateRouteUI();
+}
+
+function formatTime(ts) {
+  return new Date(ts).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+}
+
+function updateRouteUI() {
+  var active = getActiveRoute();
+  document.querySelectorAll('.route-btn').forEach(function(btn) {
+    if (btn.classList.contains('running')) return;
+    var isActive = active && btn.dataset.route === active.name;
+    btn.classList.toggle('route-active', isActive);
+    var timeSpan = btn.querySelector('.route-active-time');
+    if (timeSpan) timeSpan.textContent = isActive ? 'Activated at ' + formatTime(active.time) : '';
+  });
+}
+
+// ── Route activation ──────────────────────────────────────────────────────
+
+function activateRoute(routeName, btn) {
+  if (btn.classList.contains('running') || btn.disabled) return;
+  var timeSpan = btn.querySelector('.route-active-time');
+  if (timeSpan) timeSpan.textContent = '';
+  var origHTML = btn.innerHTML;
+  var routeLabel = btn.textContent.trim();
+  btn.classList.remove('route-active');
+  btn.classList.add('running');
+  btn.disabled = true;
+  btn.innerHTML = 'Setting…';
+
+  fetch(JMRI + '/json/route/' + routeName, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ name: routeName, state: 2 }),
+    signal: abortAfter(5000)
+  })
+  .then(function(r) {
+    if (!r.ok) throw new Error(r.status);
+    btn.className = 'route-btn success';
+    btn.innerHTML = 'Done ✓';
+    setActiveRoute(routeName, routeLabel);
+    var w = document.querySelector('.route-warning');
+    if (w) { w.classList.remove('flash'); void w.offsetWidth; w.classList.add('flash'); }
+  })
+  .catch(function() {
+    btn.className = 'route-btn error';
+    btn.innerHTML = 'Failed ✗';
+  })
+  .finally(function() {
+    setTimeout(function() {
+      btn.className = 'route-btn';
+      btn.innerHTML = origHTML;
+      btn.disabled = !jmriOnline;
+      updateRouteUI();
+    }, 2500);
+  });
+}
+
+// ── Block occupancy mini-map ──────────────────────────────────────────────
+
+function updateBlockMap() {
+  if (!jmriOnline) return;
+  fetch(JMRI + '/json/memory', { signal: abortAfter(5000) })
+    .then(function(r) { return r.json(); })
+    .then(function(all) {
+      all.forEach(function(item) {
+        var name = item.data && item.data.name;
+        var val  = (item.data && item.data.value) || '';
+        if (!name || name.indexOf('IMBA') !== 0) return;
+        var num = name.slice(4);
+        var el = document.querySelector('.bblock[data-block="' + num + '"]');
+        if (!el) return;
+        var occ = val.indexOf(':Occupied ') >= 0;
+        var trainEl = el.querySelector('.btrain');
+        if (occ) {
+          var m = val.match(/:Occupied [A-Z]+:(.+)$/);
+          if (trainEl) trainEl.textContent = m ? m[1] : '';
+          el.classList.add('occ');
+        } else {
+          if (trainEl) trainEl.textContent = '';
+          el.classList.remove('occ');
+        }
+      });
+      var upd = document.getElementById('bmap-updated');
+      if (upd) upd.textContent = 'Updated ' + new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', second: '2-digit' });
+    })
+    .catch(function() {});
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────
+
+function init() {
+  // Panel Server / Cab Cam links and labels follow whatever host this page
+  // was loaded from. The Signal Editor stays pinned to localhost — it only
+  // ever binds to 127.0.0.1 and is intentionally not reachable remotely.
+  document.getElementById('card-jmri-link').href = JMRI + '/prefs/svg/userPanels/index.svg';
+  document.getElementById('card-jmri-url').textContent = HOST + ':3000';
+  document.getElementById('card-cam-link').href = CAM;
+  document.getElementById('card-cam-url').textContent = HOST + ':8080';
+  document.getElementById('card-cam-operators-link').href = CAM + '/operators';
+
+  checkJMRI();
+  checkService('dot-cam',    CAM);
+  checkService('dot-signal', 'http://localhost:5057');
+  checkService('dot-nodereg',NODEREG);
+  updateRouteUI();
+  setInterval(checkJMRI, 15000);
+  setInterval(checkRoutes, 10000);
+  setInterval(checkTrainCounts, 15000);
+  setInterval(updateBlockMap, 10000);
+  setInterval(function() {
+    checkService('dot-cam',    CAM);
+    checkService('dot-signal', 'http://localhost:5057');
+    checkService('dot-nodereg',NODEREG);
+  }, 30000);
+}
+
+window.addEventListener('load', init);
+</script>
+
+</body>
+</html>

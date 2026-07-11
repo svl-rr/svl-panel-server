@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  SVL Layout Control Center — macOS LaunchAgent
+
+  Install:
+    1. Edit the paths below to match your machine
+    2. cp com.svl.layout-control.plist ~/Library/LaunchAgents/
+    3. launchctl load ~/Library/LaunchAgents/com.svl.layout-control.plist
+
+  Uninstall:
+    launchctl unload ~/Library/LaunchAgents/com.svl.layout-control.plist
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.svl.layout-control</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <!-- UPDATE THIS PATH to where start-services.sh lives on your machine -->
+        <string>/Users/svl/Documents/GitHub/svl-panel-server/static/web/svg/layout-control-webgui/start-services.sh</string>
+    </array>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <!-- UPDATE THIS PATH to your signal_config.yaml location -->
+        <key>SVL_CONFIG_PATH</key>
+        <string>/Users/svl/Documents/GitHub/svl-signal-server/signal_config.yaml</string>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/opt/homebrew/bin</string>
+    </dict>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>StandardOutPath</key>
+    <string>/tmp/svl-layout-control.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/svl-layout-control.log</string>
+</dict>
+</plist>
