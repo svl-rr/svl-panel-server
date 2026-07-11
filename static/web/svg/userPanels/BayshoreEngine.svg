@@ -6,7 +6,7 @@
    height="816.58087"
    id="svg2"
    version="1.1"
-   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
    sodipodi:docname="BayshoreEngine.svg"
    onload="init(evt)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -35,6 +35,12 @@
      type="application/ecmascript" />
   <defs
      id="defs4">
+    <rect
+       x="630"
+       y="410"
+       width="96.341068"
+       height="18.995456"
+       id="rect4" />
     <marker
        inkscape:stockid="StopS"
        orient="auto"
@@ -283,15 +289,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.2680787"
-     inkscape:cx="350.92459"
-     inkscape:cy="492.87162"
+     inkscape:cx="350.53029"
+     inkscape:cy="430.17835"
      inkscape:document-units="px"
-     inkscape:current-layer="industrialTrackLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
-     inkscape:window-width="1272"
-     inkscape:window-height="1026"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
+     inkscape:window-width="1920"
+     inkscape:window-height="1080"
+     inkscape:window-x="1080"
+     inkscape:window-y="0"
      inkscape:window-maximized="0"
      inkscape:object-paths="true"
      inkscape:snap-intersection-paths="false"
@@ -317,7 +323,9 @@
      inkscape:snap-smooth-nodes="false"
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:snap-text-baseline="false"
-     inkscape:pagecheckerboard="0">
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        type="xygrid"
        id="grid3900"
@@ -327,12 +335,15 @@
        snapvisiblegridlinesonly="true"
        dotted="false"
        spacingx="10px"
-       spacingy="10px" />
+       spacingy="10px"
+       originx="0"
+       originy="0"
+       units="px" />
     <inkscape:grid
        type="xygrid"
        id="grid3365"
        empspacing="1"
-       visible="false"
+       visible="true"
        enabled="false"
        snapvisiblegridlinesonly="true"
        spacingx="5px"
@@ -340,7 +351,10 @@
        color="#ff00ff"
        opacity="0.1254902"
        empcolor="#ff00ff"
-       empopacity="0.25098039" />
+       empopacity="0.25098039"
+       originx="0"
+       originy="0"
+       units="px" />
   </sodipodi:namedview>
   <metadata
      id="metadata7">
@@ -3047,8 +3061,7 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.8839113e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3085,8 +3098,8 @@
          y="-69.580231"
          x="778.10406"
          sodipodi:role="line"
-         id="tspan4502"
-         style="font-size:16px;line-height:1.25">Oil Track</tspan></text>
+         style="font-size:16px;line-height:1.25"
+         id="tspan3">Oil &amp; Sand</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -3168,14 +3181,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       x="39.266148"
-       y="637.96429"
+       x="34.393063"
+       y="634.65912"
        id="text3282"><tspan
          id="tspan3284"
-         sodipodi:role="line"
-         x="39.266148"
-         y="637.96429"
-         style="font-size:16px;line-height:1.25">Caboose Trk</tspan></text>
+         x="34.393063"
+         y="634.65912"
+         style="font-size:16px;line-height:1.25"
+         sodipodi:role="line">Caboose Trk</tspan></text>
     <text
        inkscape:transform-center-y="44.199212"
        id="text3326"
@@ -3377,7 +3390,7 @@
          style="font-size:11.25px;line-height:1.25">Note: </tspan><tspan
          id="tspan3866"
          y="31.440147"
-         x="825.35956"
+         x="825.36505"
          sodipodi:role="line"
          style="font-size:11.25px;line-height:1.25"> </tspan></text>
     <text
@@ -3404,5 +3417,32 @@
          sodipodi:role="line"
          id="tspan1171"
          style="font-size:16px;line-height:1.25">Coal Tipple</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="translate(0,5.8839113e-5)"
+       id="text4"
+       style="font-size:16.0551px;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS, Normal';text-align:center;white-space:pre;shape-inside:url(#rect4);fill:#000000" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="614.33282"
+       y="419.75476"
+       id="text5"><tspan
+         id="tspan5"
+         x="614.33282"
+         y="419.75476"
+         style="font-size:16px;line-height:1.25"
+         sodipodi:role="line">Ash Loading</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="534.33282"
+       y="181.84694"
+       id="text1"><tspan
+         id="tspan1"
+         x="534.33282"
+         y="181.84694"
+         style="font-size:16px;line-height:1.25"
+         sodipodi:role="line">MoW Train Siding</tspan></text>
   </g>
 </svg>

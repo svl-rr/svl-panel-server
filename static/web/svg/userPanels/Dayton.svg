@@ -301,16 +301,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4096164"
-     inkscape:cx="180.54557"
+     inkscape:cx="613.28742"
      inkscape:cy="342.2917"
      inkscape:document-units="px"
-     inkscape:current-layer="mainlineTrackLayer"
+     inkscape:current-layer="trackNameLayer"
      showgrid="true"
-     inkscape:window-width="1088"
-     inkscape:window-height="1212"
-     inkscape:window-x="0"
-     inkscape:window-y="25"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="928"
+     inkscape:window-x="1080"
+     inkscape:window-y="30"
+     inkscape:window-maximized="1"
      inkscape:object-paths="false"
      inkscape:snap-intersection-paths="false"
      inkscape:snap-bbox="false"
@@ -365,8 +365,7 @@
      inkscape:groupmode="layer"
      id="backgroundLayer"
      transform="translate(0,-312.24738)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <rect
        style="fill:#007040;fill-opacity:1;fill-rule:evenodd;stroke:none"
        id="panelBackground"
@@ -380,8 +379,7 @@
      id="textLayer"
      inkscape:label="Text"
      transform="translate(0,-3.9797544)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="Upton.svg"
        id="a4522">
@@ -773,8 +771,7 @@
      id="industrialTrackLayer"
      inkscape:label="Industrial Track"
      transform="translate(0,-3.9797544)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <path
        sodipodi:nodetypes="cc"
        inkscape:connector-curvature="0"
@@ -1399,8 +1396,7 @@
      id="mainlineTrackLayer"
      inkscape:label="Mainline Track"
      transform="translate(0,-3.9797544)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <path
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1653,8 +1649,7 @@
      id="mainlinePanelLinkLayer"
      inkscape:label="Mainline Panel Links"
      transform="translate(0,-5.4327394e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
        id="daytonIndustrialLink"
@@ -1712,8 +1707,7 @@
      id="industrialPanelLinkLayer"
      inkscape:label="Industrial Panel Links"
      transform="translate(0,-5.0432739e-4)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <a
        xlink:href="EbbettsEagle_Escape.svg"
        transform="translate(-120,204.0005)"
@@ -1775,8 +1769,7 @@
      id="trackNameLayer"
      inkscape:label="Track Names"
      transform="translate(0,-5.4327394e-5)"
-     style="display:inline"
-     sodipodi:insensitive="true">
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1831,7 +1824,12 @@
          y="110.1148"
          x="570"
          sodipodi:role="line"
-         style="font-size:16px;line-height:1.25">Scranton Elect.</tspan></text>
+         style="font-size:16px;line-height:1.25">Swift </tspan><tspan
+         y="130.11481"
+         x="570"
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25"
+         id="tspan2">Meats</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -1959,5 +1957,21 @@
        height="103.57428"
        x="764.03766"
        y="190.12271" />
+    <text
+       id="text1"
+       y="110.1148"
+       x="623.58514"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan1"
+         y="110.1148"
+         x="623.58514"
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25">Scranton </tspan><tspan
+         y="130.11481"
+         x="623.58514"
+         sodipodi:role="line"
+         style="font-size:16px;line-height:1.25"
+         id="tspan3"> Electric</tspan></text>
   </g>
 </svg>
