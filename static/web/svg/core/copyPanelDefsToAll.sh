@@ -1,4 +1,6 @@
 #!/bin/bash
+cd "$(dirname "$0")"
+
 inputLib="PanelDefs.svg"
 
 if [ -f "$inputLib" ]
@@ -16,7 +18,6 @@ then
 		then
 			echo "Processing file $f"
 						
-			cp "$f" "$f.orig"
 			awk '(NR==1),/<defs/' "$f" > /tmp/f1.tmp
 			awk '/<\/defs>/,NevERMatcHthiS' "$f" > /tmp/f2.tmp
 			

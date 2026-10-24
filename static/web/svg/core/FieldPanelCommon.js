@@ -47,7 +47,7 @@ function setSensorState(sensorID, sensorState)
 
 	// Search for any blocks with this as the ID.
 	console.log("Trying", sensorID, "as an element ID");
-	blockElement = svgDocument.getElementById(sensorID);
+	var blockElement = svgDocument.getElementById(sensorID);
 
 	if (blockElement == null) {
 		return;
