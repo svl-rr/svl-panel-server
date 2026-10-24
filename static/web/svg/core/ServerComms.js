@@ -41,7 +41,9 @@ function initSocketInstance()
 {
 	if(socketStatus == SOCKET_DISCONNECTED)
 	{
-		if(window.location.href.search(JMRI_SOCKET_PORT) != -1)
+		// Through the remote-access gateway (https on 443) the URL has no
+		// port in it, but it's still JMRI behind the gateway.
+		if(window.location.protocol == "https:" || window.location.href.search(JMRI_SOCKET_PORT) != -1)
 			initJMRISocketInstance();
 		else if(window.location.href.search(NODE_SOCKET_PORT) != -1)
 			initNodeSocketInstance();
@@ -52,7 +54,12 @@ function initSocketInstance()
 
 function initJMRISocketInstance()
 {
-    jmriSocket = new WebSocket("ws://" + window.location.hostname + ":" + JMRI_SOCKET_PORT + "/json/");
+    // The gateway passes /json/ on to JMRI, so connect back to it over wss on
+    // the page's own host and port; a browser won't open ws:// from https.
+    if(window.location.protocol == "https:")
+        jmriSocket = new WebSocket("wss://" + window.location.host + "/json/");
+    else
+        jmriSocket = new WebSocket("ws://" + window.location.hostname + ":" + JMRI_SOCKET_PORT + "/json/");
     
     jmriSocket.onopen = function ()
     {
