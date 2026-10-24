@@ -27,71 +27,126 @@ var onSensorStateMap = {"jmri":"2","svg":"on"};
 var offSensorStateMap = {"jmri":"4","svg":"off"};
 
 var nodeJMRISocketReady;
+var pingTimer = null;
+var reconnectTimer = null;
+var reconnectDelay = 2000;
+var MAX_RECONNECT_DELAY = 10000;
+
+function getWebSocketURL()
+{
+    var protocol = (window.location.protocol === "https:") ? "wss://" : "ws://";
+    var host = window.location.host;
+    if (!host || host === "" || window.location.protocol === "file:") {
+        host = "localhost:" + JMRI_SOCKET_PORT;
+    }
+    return protocol + host + "/json/";
+}
 
 function initSocketToServer(panelName)
 {
     document.title = "JMRI SVG Panel: " + panelName;
 	
 	initSocketInstance();
-	
-	setInterval(initSocketInstance, 10000);
+}
+
+function scheduleReconnect()
+{
+    if (reconnectTimer) {
+        clearTimeout(reconnectTimer);
+    }
+    reconnectTimer = setTimeout(function() {
+        reconnectTimer = null;
+        initSocketInstance();
+    }, reconnectDelay);
+
+    // Exponential backoff up to MAX_RECONNECT_DELAY
+    reconnectDelay = Math.min(Math.round(reconnectDelay * 1.5), MAX_RECONNECT_DELAY);
 }
 
 function initSocketInstance()
 {
-	if(socketStatus == SOCKET_DISCONNECTED)
-	{
-		// Through the remote-access gateway (https on 443) the URL has no
-		// port in it, but it's still JMRI behind the gateway.
-		if(window.location.protocol == "https:" || window.location.href.search(JMRI_SOCKET_PORT) != -1)
-			initJMRISocketInstance();
-		else if(window.location.href.search(NODE_SOCKET_PORT) != -1)
-			initNodeSocketInstance();
-		else
-			setPanelError("Could not identify server type during socket initialization.");
-	}
+    // Avoid creating duplicate sockets if one is already connecting or connected
+    if (jmriSocket && (jmriSocket.readyState === WebSocket.CONNECTING || jmriSocket.readyState === WebSocket.OPEN)) {
+        return;
+    }
+
+    if (socketStatus == SOCKET_DISCONNECTED)
+    {
+        // Check for explicit legacy Node socket mode, otherwise default to JMRI WebSocket
+        if (typeof io !== "undefined" && window.location.search.indexOf("useNode") !== -1) {
+            initNodeSocketInstance();
+        } else {
+            initJMRISocketInstance();
+        }
+    }
 }
 
 function initJMRISocketInstance()
 {
-    // The gateway passes /json/ on to JMRI, so connect back to it over wss on
-    // the page's own host and port; a browser won't open ws:// from https.
-    if(window.location.protocol == "https:")
-        jmriSocket = new WebSocket("wss://" + window.location.host + "/json/");
-    else
-        jmriSocket = new WebSocket("ws://" + window.location.hostname + ":" + JMRI_SOCKET_PORT + "/json/");
+    var wsUrl = getWebSocketURL();
+    console.log("connecting to JMRI WebSocket at " + wsUrl);
+
+    try {
+        jmriSocket = new WebSocket(wsUrl);
+    } catch (err) {
+        console.error("Failed to create WebSocket:", err);
+        socketStatus = SOCKET_DISCONNECTED;
+        handleSocketDisconnect();
+        scheduleReconnect();
+        return;
+    }
     
     jmriSocket.onopen = function ()
     {
         console.log("connected via JMRI Socket!");
 
-        // Set up ping to maintain connection
-        setInterval(function() { jmriSocket.send('{"type":"ping"}'); }, 10000);
-
         socketStatus = SOCKET_CONNECTED;
+        reconnectDelay = 2000;
+        if (reconnectTimer) {
+            clearTimeout(reconnectTimer);
+            reconnectTimer = null;
+        }
+
+        // Set up ping to maintain connection (clear any previous timer)
+        if (pingTimer) {
+            clearInterval(pingTimer);
+        }
+        pingTimer = setInterval(function() {
+            if (jmriSocket && jmriSocket.readyState === WebSocket.OPEN) {
+                jmriSocket.send('{"type":"ping"}');
+            }
+        }, 10000);
         
         handleSocketConnect();
     };
 
     jmriSocket.onmessage = function(msg)
     {
-        var msgObj = JSON.parse(msg.data);
-        handleSocketDataResponse(handleJSONMessage(msgObj));
+        try {
+            var msgObj = JSON.parse(msg.data);
+            handleSocketDataResponse(handleJSONMessage(msgObj));
+        } catch (e) {
+            console.error("Error parsing WebSocket message:", e, msg.data);
+        }
     };
     
     jmriSocket.onerror = function (e)
     {
-        console.log("web socket error: " + e);
-        setPanelStatus("web socket error: " + e);
+        console.warn("web socket error: ", e);
     };
 
     jmriSocket.onclose = function (e)
     {
-        console.log("disconnected from JMRI socket "+ e.code);
+        console.log("disconnected from JMRI socket (code " + e.code + ")");
         
         socketStatus = SOCKET_DISCONNECTED;
+        if (pingTimer) {
+            clearInterval(pingTimer);
+            pingTimer = null;
+        }
         
-        handleSocketDisconnect();        
+        handleSocketDisconnect();
+        scheduleReconnect();
     };   
 }
 
@@ -277,21 +332,6 @@ function UserNameServerObject(objectUserName, objectType) {
     return so
 }
 
-function ServerObject(objectName, objectType)
-{
-	this.name=objectName;
-    this.useUserName = false;
-    this.type=objectType;
-	
-    this.getName=getName;
-	this.getType=getType;
-	this.getValue=getValue;
-	
-	this.setName=setName;
-	this.setType=setType;
-	this.setValue=setValue;
-}
-
 function ServerObject(objectName, objectType, objectValue)
 {
 	this.name=objectName;
@@ -402,7 +442,7 @@ function serverSendRawJSON(jsonStr, action)
 	{
 		if(jsonStr != null)
 		{
-			if(jmriSocket != null)
+			if(jmriSocket != null && jmriSocket.readyState === WebSocket.OPEN)
 			{
 				jmriSocket.send(jsonStr);
 				return;

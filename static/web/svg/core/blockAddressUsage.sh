@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ../userPanels
+cd "$(dirname "$0")/../userPanels"
 grep 'id="BLOCK' *.svg > blockAddressList.tmp
 #remove closing xml tags
 perl -p -i -e 's/ \/>//g' blockAddressList.tmp

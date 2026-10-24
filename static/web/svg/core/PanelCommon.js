@@ -156,7 +156,7 @@ function PanelTurnout(normalRouteID, divergingRouteID)
         {
             var lec = svgDocument.getElementById(prevPanel.divergingRouteID).parentNode.lastElementChild;
             if(getDCCAddrRoute(divergingElem.parentNode.lastElementChild.id) != getDCCAddrRoute(lec.id))
-                alert("Multiple turnout instances with DCC addr " + getDCCAddr(divergingRouteID) + " do not have consistent initial conditions. This has been updated during runtime but should be fixed in svg file. ")
+                console.warn("Multiple turnout instances with DCC addr " + getDCCAddr(divergingRouteID) + " do not have consistent initial conditions. This has been updated during runtime but should be fixed in svg file. ");
         }
     }
     
@@ -177,14 +177,14 @@ function checkTurnoutOnClick(elem)
 {    
     if(elem == null)
     {
-        alert("Bad element passed to checkTurnoutOnClick");
+        console.warn("Bad element passed to checkTurnoutOnClick");
         return;
     }
     
     var attrib = elem.getAttribute("onclick");
     if((attrib == null) || (attrib != turnoutOnclickScript))
     {
-        alert("Element " + elem.id + " does not have a proper onclick setting. This has been updated during runtime but should be fixed in svg file.");
+        console.warn("Element " + elem.id + " does not have a proper onclick setting. This has been updated during runtime but should be fixed in svg file.");
         elem.setAttribute("onclick", turnoutOnclickScript);
     }
     
@@ -195,29 +195,29 @@ function checkOpacity(parentElem)
 {
     if((parentElem == null) || (parentElem.firstElementChild == null) || (parentElem.lastElementChild == null))
     {
-        alert("checkOpacity was passed a null parent element or an element without the two expected children elements.");
+        console.warn("checkOpacity was passed a null parent element or an element without the two expected children elements.");
         return;
     }
     
     var attrib = getStyleSubAttribute(parentElem.firstElementChild, "opacity");
     
     if((attrib == null) || (attrib == "1"))
-{
-        alert("Element " + parentElem.firstElementChild.id + " is first element in turnout but does not have a proper opacity setting of 0.25 (was " + attrib + "). The element order of the .R and .N segments may be reversed. This has been updated during runtime but should be fixed in svg file.");
-}
+    {
+        console.warn("Element " + parentElem.firstElementChild.id + " is first element in turnout but does not have a proper opacity setting of 0.25 (was " + attrib + "). The element order of the .R and .N segments may be reversed. This has been updated during runtime but should be fixed in svg file.");
+    }
 	else if(attrib != "0.25")
     {
-        alert("Element " + parentElem.firstElementChild.id + " is first element in turnout but does not have a proper opacity setting of 0.25 (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
+        console.warn("Element " + parentElem.firstElementChild.id + " is first element in turnout but does not have a proper opacity setting of 0.25 (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
     }
     
     attrib = getStyleSubAttribute(parentElem.lastElementChild, "opacity");
     
     if((attrib != null) && (attrib != "1"))
     {
-	if(attrib == "0.25")
-	        alert("Element " + parentElem.lastElementChild.id + " is last element in turnout but does not have a proper opacity setting of 1/null (was " + attrib + "). The element order of the .R and .N segments may be reversed. This has been updated during runtime but should be fixed in svg file.");
-	else
-		alert("Element " + parentElem.lastElementChild.id + " is last element in turnout but does not have a proper opacity setting of 1/null (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
+        if(attrib == "0.25")
+            console.warn("Element " + parentElem.lastElementChild.id + " is last element in turnout but does not have a proper opacity setting of 1/null (was " + attrib + "). The element order of the .R and .N segments may be reversed. This has been updated during runtime but should be fixed in svg file.");
+        else
+            console.warn("Element " + parentElem.lastElementChild.id + " is last element in turnout but does not have a proper opacity setting of 1/null (was " + attrib + "). This has been updated during runtime but should be fixed in svg file.");
     }
 }
 
@@ -556,7 +556,7 @@ function init(evt)
 	    
 	setPanelStatus("Panel Ready");
 
-    window.setTimeout("handleFlashingSignals(true)", 1000);
+    window.setTimeout(function() { handleFlashingSignals(true); }, 1000);
 }
 
 function handleFlashingSignals(flashOn) {
@@ -569,11 +569,7 @@ function handleFlashingSignals(flashOn) {
             setStyleSubAttribute(headElement, "display", "");
         }
     }
-    if (flashOn) {
-        window.setTimeout("handleFlashingSignals(false)", 1000);
-    } else {
-        window.setTimeout("handleFlashingSignals(true)", 1000);
-    }
+    window.setTimeout(function() { handleFlashingSignals(!flashOn); }, 1000);
 }
 
 /* handleSocketConnect()
@@ -740,7 +736,7 @@ function handleSocketDisconnect()
 {
     updatePanelBackground();
 
-    setPanelStatus("Panel Ready");
+    setPanelStatus("Disconnected from server - reconnecting...");
 }
 
 function updatePanelBackground()
@@ -1099,13 +1095,20 @@ function setPanelStatus(text)
 	var textItem = svgDocument.getElementById("panelStatus");
 	if(textItem != null)
 	{
-		if(debugStringTimerOn && (text != "Panel Ready"))
-			window.setTimeout("setPanelStatus(\"Panel Ready\")",2000)
+		if(debugStringTimerOn && (text != "Panel Ready") && (socketStatus == SOCKET_CONNECTED))
+		{
+			window.setTimeout(function() {
+				if(socketStatus == SOCKET_CONNECTED)
+					setPanelStatus("Panel Ready");
+			}, 2000);
+		}
 	
         setSVGText("panelStatus", text + " (" + socketStatus + ")");
 	}
 	else
-		alert("setPanelStatus(...) failed to update string to " + text);
+	{
+		console.warn("setPanelStatus failed to update string to: " + text);
+	}
 }
 
 /* setPanelError([String] text)
