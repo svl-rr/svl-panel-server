@@ -17,7 +17,6 @@ node_modules
 .tmp.driveupload/28152
 .tmp.driveupload/28156
 .tmp.driveupload/28158
-svl-config_old.xml
 
 # Everything else in static/web/svg is deployed here from layout-control-webgui
 # (see its deploy.sh) and belongs to that repo. Only these paths are tracked here.
@@ -28,3 +27,7 @@ svl-config_old.xml
 !/static/web/svg/train-log/
 !/static/web/svg/userPanels/
 !/static/web/svg/index.html
+
+static/web/svg/cam-assignment-gui/cam-assignment-gui/__pycache__/camera_store.cpython-311.pyc
+static/web/svg/cam-assignment-gui/__pycache__/server.cpython-311.pyc
+svl-config_old.xml
