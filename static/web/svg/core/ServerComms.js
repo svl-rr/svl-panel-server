@@ -23,6 +23,48 @@ var SERVER_GET = 'get';
 var undefinedStateMap = {"jmri":"0"};
 var normalTurnoutStateMap = {"jmri":"2","svg":"N"};
 var reverseTurnoutStateMap = {"jmri":"4","svg":"R"};
+
+// JMRI names LCC turnouts by their DCC accessory events ("NT<thrown event>;<closed event>"),
+// but panels address turnouts as "NT" + DCC address.  Names are translated here, at the
+// server boundary, so that panel code only ever sees the "NT" + DCC address form.
+var LCC_ACCESSORY_EVENT_PREFIX = "01.01.02.00.00.FF.";
+var LCC_ACCESSORY_ADDR_OFFSET = 3;
+var MIN_LCC_ACCESSORY_ADDR = 1;
+var MAX_LCC_ACCESSORY_ADDR = 2044;
+
+function getLCCAccessoryEvent(eventOffset)
+{
+    var hex = ("000" + eventOffset.toString(16).toUpperCase()).slice(-4);
+
+    return LCC_ACCESSORY_EVENT_PREFIX + hex.substr(0, 2) + "." + hex.substr(2, 2);
+}
+
+function getJMRITurnoutName(panelTurnoutName)
+{
+    var match = panelTurnoutName.match(/^NT(\d+)$/);
+
+    if(match == null)
+        return panelTurnoutName;
+
+    var dccAddr = Number(match[1]);
+
+    if((dccAddr < MIN_LCC_ACCESSORY_ADDR) || (dccAddr > MAX_LCC_ACCESSORY_ADDR))
+        return panelTurnoutName;
+
+    var thrownEventOffset = (dccAddr + LCC_ACCESSORY_ADDR_OFFSET) * 2;
+
+    return "NT" + getLCCAccessoryEvent(thrownEventOffset) + ";" + getLCCAccessoryEvent(thrownEventOffset + 1);
+}
+
+function getPanelTurnoutName(jmriTurnoutName)
+{
+    var match = jmriTurnoutName.match(/^NT01\.?01\.?02\.?00\.?00\.?FF\.?([0-9A-F]{2})\.?([0-9A-F]{2});/i);
+
+    if(match == null)
+        return jmriTurnoutName;
+
+    return "NT" + (parseInt(match[1] + match[2], 16) / 2 - LCC_ACCESSORY_ADDR_OFFSET);
+}
 var onSensorStateMap = {"jmri":"2","svg":"on"};
 var offSensorStateMap = {"jmri":"4","svg":"off"};
 
@@ -224,15 +266,16 @@ function handleJSONObject(msgObj)
         }
         else if(msgObj.type == "turnout")
         {
-            humanReadableMessage = msgObj.data.name + " has state " + msgObj.data.state;
+            var turnoutName = getPanelTurnoutName(msgObj.data.name);
+            humanReadableMessage = turnoutName + " has state " + msgObj.data.state;
             console.log("server turnout message: " + humanReadableMessage);
 
             if(msgObj.data.state == undefinedStateMap.jmri)
-                serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_TURNOUT);
+                serverObj = new ServerObject(turnoutName, SERVER_TYPE_TURNOUT);
             else if(msgObj.data.state == normalTurnoutStateMap.jmri)
-                serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_TURNOUT, normalTurnoutStateMap.svg);
+                serverObj = new ServerObject(turnoutName, SERVER_TYPE_TURNOUT, normalTurnoutStateMap.svg);
             else if (msgObj.data.state == reverseTurnoutStateMap.jmri)
-                serverObj = new ServerObject(msgObj.data.name, SERVER_TYPE_TURNOUT, reverseTurnoutStateMap.svg);
+                serverObj = new ServerObject(turnoutName, SERVER_TYPE_TURNOUT, reverseTurnoutStateMap.svg);
         }
         else if(msgObj.type == "sensor")
         {
@@ -431,7 +474,7 @@ function getAsSetJSONString(serverObj)
         else
             jmriState = undefinedStateMap.jmri;
     
-        return '{"type":"turnout","data":{"name":"' + serverObj.name + '","state":"' + jmriState + '"}, "method":"post"}';
+        return '{"type":"turnout","data":{"name":"' + getJMRITurnoutName(serverObj.name) + '","state":"' + jmriState + '"}, "method":"post"}';
     }
     else if (serverObj.type == SERVER_TYPE_SENSOR) {
         var nameField = serverObj.useUserName ? "userName" : "name";
@@ -446,7 +489,7 @@ function getAsSetJSONString(serverObj)
 function getAsGetJSONString(serverObj)
 {
     if(serverObj.type == SERVER_TYPE_TURNOUT)
-        return '{"type":"turnout","data":{"name":"' + serverObj.name + '"}, "method":"get"}';
+        return '{"type":"turnout","data":{"name":"' + getJMRITurnoutName(serverObj.name) + '"}, "method":"get"}';
     else if(serverObj.type == SERVER_TYPE_SENSOR)
         return '{"type":"sensor","data":{"name":"' + serverObj.name + '"}, "method":"get"}';
     else if(serverObj.type == SERVER_TYPE_DISPATCH)
