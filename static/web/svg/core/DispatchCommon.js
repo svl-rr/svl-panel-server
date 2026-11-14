@@ -599,13 +599,24 @@ function clickTrainListLabel(elemID)
 
 function clickClearTrainID(target)
 {
-    var trainIDElemID = target.parentNode.id.replace("ClearTrainID", "Train");
-	
+    // Walk up from the clicked shape to the "<prefix>ClearTrainID" group itself,
+    // rather than assuming it's exactly target.parentNode -- a click that lands
+    // on a shape nested deeper (or on the group itself) still resolves correctly.
+    var clearGroup = target.closest('[id$="ClearTrainID"]');
+
+    if(clearGroup == null)
+    {
+        alert("Unsupported clear-train click target " + (target.id || target.tagName) + " in clickClearTrainID() -- no enclosing ClearTrainID group found!");
+        return;
+    }
+
+    var trainIDElemID = clearGroup.id.replace("ClearTrainID", "Train");
+
 	var trainIDElem = svgDocument.getElementById(trainIDElemID);
-	
+
 	if(trainIDElem == null)
 	{
-		alert("Unsupported train ID element ID " + trainIDElem + " in clearTrainID()!");
+		alert("Unsupported train ID element ID " + trainIDElemID + " in clearTrainID()!");
 		return;
 	}
 	else
