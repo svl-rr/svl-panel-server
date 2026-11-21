@@ -2472,6 +2472,36 @@
      transform="translate(0,-3.9797725)"
      style="display:inline">
     <g
+       id="g_TO648"
+       transform="matrix(-1,0,0,1,980,-180)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 520,514.0945 20,20 h 20"
+         id="TO648.R" />
+      <path
+         id="TO648.N"
+         class="sensor SiliconMain"
+         d="m 520,534.0945 h 40"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <g
+       id="g_TO649"
+       transform="translate(40,-180)">
+      <path
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 520,514.0945 20,20 h 20"
+         id="TO649.N" />
+      <path
+         id="TO649.R"
+         class="sensor SiliconMain"
+         d="m 520,534.0945 h 40"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <g
        id="g3355"
        transform="translate(-80,-150.00047)">
       <path
@@ -3087,7 +3117,7 @@
        inkscape:connector-curvature="0"
        id="BLOCK602"
        class="sensor SiliconMain"
-       d="m 600,354.094 -180,4.8e-4"
+       d="M 560,354.094 H 460"
        style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
       <title
          id="title3213">Unauthorized</title>
@@ -3497,6 +3527,30 @@
          id="tspan4014"
          sodipodi:role="line"
          style="font-size:16px;line-height:1.25">Silicon</tspan></text>
+    <text
+       inkscape:label="#text4498"
+       id="ic2Label1"
+       y="336.11432"
+       x="444"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="336.11432"
+         x="444"
+         id="ic2Tspan1"
+         sodipodi:role="line"
+         style="font-size:10px;line-height:1.25">IC2</tspan></text>
+    <text
+       inkscape:label="#text4498"
+       id="ic2Label2"
+       y="336.11432"
+       x="576"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="336.11432"
+         x="576"
+         id="ic2Tspan2"
+         sodipodi:role="line"
+         style="font-size:10px;line-height:1.25">IC2</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none"
