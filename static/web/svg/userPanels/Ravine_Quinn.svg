@@ -473,6 +473,16 @@
          y="0"
          x="0" />
     </g>
+    <path
+       id="backdropLine"
+       d="M 815,79.5 C 725,115 700,175 700,255 V 375 C 700,455 725,515 815,539"
+       style="display:inline;opacity:0.5;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:4, 2;stroke-dashoffset:0;stroke-opacity:1" />
+    <text
+       id="backdropLabel"
+       x="830"
+       y="95"
+       xml:space="preserve"
+       style="font-style:italic;font-weight:normal;font-size:16px;line-height:1.25;font-family:'Trebuchet MS';text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:none;opacity:0.7">Backdrop</text>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -511,18 +521,6 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc"
        onclick="QuinnReturnLoopPath()" />
-    <path
-       sodipodi:nodetypes="cc"
-       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
-       d="M 790,454.0945 H 750"
-       id="path4808"
-       inkscape:connector-curvature="0" />
-    <path
-       inkscape:connector-curvature="0"
-       id="path4800"
-       d="M 790,174.0945 H 750"
-       style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
-       sodipodi:nodetypes="cc" />
     <path
        inkscape:label="#path4221"
        style="display:inline;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -591,6 +589,55 @@
          inkscape:connector-curvature="0"
          sodipodi:nodetypes="ccc" />
     </g>
+    <g
+       id="g_TO701"
+       transform="matrix(1,0,0,-1,230,708.189)"
+       style="display:inline">
+      <path
+         id="TO701.N"
+         d="m 520,534.0945 h 40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         class="sensor QuinnBypass"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         id="TO701.R"
+         d="m 520,514.0945 20,20 h 20"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         class="sensor TracyMain"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <g
+       id="g_TO651"
+       transform="translate(230,-80)"
+       style="display:inline">
+      <path
+         id="TO651.N"
+         d="m 520,534.0945 h 40"
+         style="opacity:0.25;fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         class="sensor QuinnWyeAR"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+      <path
+         id="TO651.R"
+         d="m 520,514.0945 20,20 h 20"
+         style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         class="sensor TracyMain"
+         onclick="turnoutSegmentClicked(evt.currentTarget.id)" />
+    </g>
+    <path
+       id="quinnUptonTracyMain"
+       d="M 751,191.0945 V 437.0945"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       class="sensor TracyMain" />
+    <path
+       id="quinnUptonToe"
+       d="M 895,174.0945 H 790"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
+       class="sensor UptonMain" />
+    <path
+       id="quinnTracyToe"
+       d="M 895,454.0945 H 790"
+       style="fill:none;stroke:#ffffff;stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#TriangleInM)"
+       class="sensor TracyMain" />
   </g>
   <g
      inkscape:groupmode="layer"
@@ -645,7 +692,7 @@
        xlink:href="Upton.svg"
        style="display:inline"
        id="a4802"
-       transform="translate(602,56.000504)">
+       transform="translate(715,56.000504)">
       <text
          id="text4804"
          y="120.11475"
@@ -661,7 +708,7 @@
     </a>
     <a
        xlink:href="Tracy.svg"
-       transform="translate(602,336.0005)"
+       transform="translate(715,336.0005)"
        id="a4810"
        style="display:inline">
       <text
